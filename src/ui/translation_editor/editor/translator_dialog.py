@@ -54,9 +54,6 @@ class TranslatorDialog(QWidget):
     __current_string: String
 
     __info_label: QLabel
-    __edid_label: QLabel
-    __type_label: QLabel
-    __index_label: QLabel
 
     __original_entry: QPlainTextEdit
     __translated_entry: QPlainTextEdit | SpellCheckEdit
@@ -68,7 +65,7 @@ class TranslatorDialog(QWidget):
         app_config: AppConfig,
         user_config: UserConfig,
         translator: Translator,
-    ):
+    ) -> None:
         super().__init__(QApplication.activeModalWidget())
 
         self.app_config = app_config
@@ -95,7 +92,7 @@ class TranslatorDialog(QWidget):
 
         prev_button = ShortcutButton(
             IconProvider.get_qta_icon("fa5s.chevron-left"),
-            self.tr("Go to previous String"),
+            self.tr("Go to previous string"),
         )
         prev_button.clicked.connect(self.goto_prev)
         prev_button.setShortcut(QKeySequence("Alt+Left"))
@@ -106,7 +103,7 @@ class TranslatorDialog(QWidget):
 
         next_button = ShortcutButton(
             IconProvider.get_qta_icon("fa5s.chevron-right"),
-            self.tr("Go to next String"),
+            self.tr("Go to next string"),
         )
         next_button.clicked.connect(self.goto_next)
         next_button.setShortcut(QKeySequence("Alt+Right"))
@@ -140,7 +137,7 @@ class TranslatorDialog(QWidget):
         translate_button.setShortcut(QKeySequence("Ctrl+F5"))
         btn_vlayout.addWidget(translate_button)
 
-        reset_button = ShortcutButton(self.tr("Reset String"))
+        reset_button = ShortcutButton(self.tr("Reset string"))
         reset_button.setIcon(IconProvider.get_qta_icon("ri.arrow-go-back-line"))
         reset_button.clicked.connect(self.__reset_translation)
         reset_button.setShortcut(QKeySequence("F4"))
@@ -177,10 +174,9 @@ class TranslatorDialog(QWidget):
 
         hint_label = QLabel(
             self.tr(
-                "Press F1 (Translation complete), "
-                "F2 (Translation incomplete/Work in Progress) "
-                "or F3 (No translation required) "
-                "to finalize the string and go to the next one."
+                "Press F1 (translation complete), F2 (translation incomplete/work in "
+                "progress) or F3 (no translation required) to finalize the string and "
+                "go to the next one."
             )
         )
         hint_label.setWordWrap(True)
@@ -299,7 +295,8 @@ class TranslatorDialog(QWidget):
             message_box.setWindowTitle(self.tr("String was modified"))
             message_box.setText(
                 self.tr(
-                    "String was modified. Do you want to save it before switching to another string?"
+                    "String was modified. Do you want to save it before switching to "
+                    "another string?"
                 )
             )
             message_box.setStandardButtons(
@@ -348,7 +345,8 @@ class TranslatorDialog(QWidget):
 
         Args:
             finalize_with_status (Status, optional):
-                The status to finalize the current string with. Defaults to TranslationComplete.
+                The status to finalize the current string with. Defaults to
+                TranslationComplete.
         """
 
         visible_strings_count: int = self.__parent.get_visible_string_count()
@@ -400,7 +398,8 @@ class TranslatorDialog(QWidget):
 
         Args:
             status (Status, optional):
-                The status to finalize the current string with. Defaults to TranslationComplete.
+                The status to finalize the current string with. Defaults to
+                TranslationComplete.
         """
 
         self.__current_string.status = status

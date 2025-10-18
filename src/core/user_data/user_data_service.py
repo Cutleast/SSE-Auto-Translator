@@ -76,7 +76,7 @@ class UserDataService(SingletonQObject):
         database = self.__load_database(user_config.language, ldialog)
 
         if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading modinstance..."))
+            ldialog.updateProgress(text1=self.tr("Loading modlist..."))
 
         modinstance = self.__load_modinstance(user_config, ldialog)
 

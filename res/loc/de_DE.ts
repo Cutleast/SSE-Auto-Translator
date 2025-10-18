@@ -34,38 +34,38 @@
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="62"/>
-        <source>Click here to login to Nexus Mods via Browser</source>
-        <translation>Hier klicken um im Browser bei Nexus Mods anzumelden</translation>
+        <source>Click here to login to Nexus Mods via browser</source>
+        <translation>Hier klicken, um dich im Browser bei Nexus Mods anzumelden</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/api_setup.py" line="75"/>
+        <source>Single-Sign-On (browser)</source>
+        <translation>Single-Sign-On (Browser)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/api_setup.py" line="83"/>
+        <source>Insert your API key</source>
+        <translation>API-Schlüssel eingeben</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/api_setup.py" line="87"/>
+        <source>Check API key</source>
+        <translation>API-Schlüssel überprüfen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/api_setup.py" line="100"/>
+        <source>API key is valid!</source>
+        <translation>API-Schlüssel ist ungültig!</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/api_setup.py" line="105"/>
+        <source>API key is invalid!</source>
+        <translation>Der API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="68"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation>Erfolgreich bei Nexus Mods angemeldet</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/api_setup.py" line="75"/>
-        <source>Single-Sign-On (Browser)</source>
-        <translation>Single-Sign-On (Browser)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/api_setup.py" line="83"/>
-        <source>Insert your API Key</source>
-        <translation>API-Schlüssel eingeben</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/api_setup.py" line="87"/>
-        <source>Check API Key</source>
-        <translation>API-Schlüssel überprüfen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/api_setup.py" line="100"/>
-        <source>API Key is valid!</source>
-        <translation>API-Schlüssel ist gültig!</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/api_setup.py" line="105"/>
-        <source>API Key is invalid!</source>
-        <translation>API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="109"/>
@@ -118,7 +118,6 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="112"/>
-        <location filename="src/ui/settings/app_settings.py" line="108"/>
         <source>Log Level</source>
         <translation>Loglevel</translation>
     </message>
@@ -150,26 +149,13 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="126"/>
-        <location filename="src/ui/settings/app_settings.py" line="131"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="217"/>
-        <source>Language Detector Confidence</source>
-        <translation>Spracherkennungs-Empfindlichkeit</translation>
-    </message>
-    <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="97"/>
-        <location filename="src/ui/settings/app_settings.py" line="81"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende App Einstellungen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="135"/>
-        <location filename="src/ui/settings/app_settings.py" line="318"/>
-        <source>Clear Cache (This will reset all mod file states and delete cached API requests!)</source>
-        <translation>Cache leeren (Das löscht alle Moddatei-Zustände und zwischengespeicherte API-Anfragen)</translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="151"/>
@@ -178,86 +164,105 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="159"/>
-        <location filename="src/ui/settings/app_settings.py" line="174"/>
+        <location filename="src/ui/settings/app_settings.py" line="171"/>
         <source>Default: </source>
         <translation>Standard: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
-        <source>Path for Output Mod</source>
-        <translation>Pfad für Output-Mod</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
-        <source> (No Restart Required)</source>
-        <translation> (Kein Neustart erforderlich)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="180"/>
-        <source>Path for Temporary Folder</source>
-        <translation>Pfad für temporären Ordner</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="182"/>
+        <location filename="src/ui/settings/app_settings.py" line="179"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>(für temporäre Dateien, wird nach Beenden geleert!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="189"/>
-        <source>Defaults to Temporary Folder configured above</source>
-        <translation>Standardmäßig der oben konfigurierte temporäre Ordner</translation>
-    </message>
-    <message>
         <location filename="src/ui/settings/app_settings.py" line="198"/>
-        <source>Downloads Path</source>
-        <translation>Downloads-Ordner</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="201"/>
         <source>Behavior Settings</source>
         <translation>Verhaltenseinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="233"/>
-        <source>Number of concurrent downloads
-Warning: The app could become unresponsive but downloads will be completed faster.</source>
-        <translation>Anzahl gleichzeitiger Downloads
-Warnung: Die Oberfläche könnte unresponsiv werden, aber die Downloads werden schneller fertig.</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="242"/>
-        <source>Automatically bind to &quot;Mod Manager Download&quot; Buttons on Nexus Mods on Startup</source>
-        <translation>Automatisch beim Start mit &quot;Mod Manager Download&quot; Buttons auf Nexus Mods verknüpfen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="246"/>
+        <location filename="src/ui/settings/app_settings.py" line="243"/>
         <source>[EXPERIMENTAL]</source>
         <translation>[EXPERIMENTELL]</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="250"/>
+        <location filename="src/ui/settings/app_settings.py" line="247"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation>Dies verknüpft SSE-AT automatisch mit Mod Manager Downloads beim Start und hebt die Verknüpfung auf, wenn SSE-AT geschlossen wird.
 Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern könnte, dass die Verknüpfung korrekt aufgehoben wird.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="266"/>
-        <source>Enable Spell Checking in Translation Editor (Warning: could be slow)</source>
-        <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren (Warnung: könnte langsam sein)</translation>
+        <location filename="src/ui/settings/app_settings.py" line="81"/>
+        <source>General App Settings</source>
+        <translation>Allgemeine Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="276"/>
+        <location filename="src/ui/settings/app_settings.py" line="108"/>
+        <source>Log level</source>
+        <translation>Logging-Level</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="131"/>
+        <source>Accent color</source>
+        <translation>Akzentfarbe</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="135"/>
+        <location filename="src/ui/settings/app_settings.py" line="313"/>
+        <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
+        <translation>Cache leeren (Das setzt alle Moddatei-Zustände zurück und löscht zwischengespeicherte API-Anfragen und weitere temporäre Daten!)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <source>Path for output mod</source>
+        <translation>Pfad zur Output-Mod</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="177"/>
+        <source>Path for temporary folder</source>
+        <translation>Pfad für temporäre Dateien</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="186"/>
+        <source>Defaults to temporary folder configured above</source>
+        <translation>Liegt standardmäßig im oben konfigurierten Ordner für temporäre Dateien</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="195"/>
+        <source>Downloads path</source>
+        <translation>Downloads-Pfad</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="214"/>
+        <source>Language detector confidence</source>
+        <translation>Genauigkeit der Spracherkennung</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="230"/>
+        <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
+        <translation>Anzahl der gleichzeitigen Downloads (eine Erhöhung ist nur dann empfohlen, wenn du Nexus Mods Premium hast)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="239"/>
+        <source>Automatically bind to &quot;Mod Manager Download&quot; buttons on Nexus Mods on startup</source>
+        <translation>Automatisch mit &quot;Mod Manager Download&quot; Buttons auf Nexus Mods beim Start von SSE-AT verknüpfen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="262"/>
+        <source>Enable spell checking in translation editor</source>
+        <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="271"/>
         <source>Automatically import installed translations into the database</source>
         <translation>Automatisch installierte Übersetzungen in die Datenbank importieren</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="288"/>
+        <location filename="src/ui/settings/app_settings.py" line="283"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>Automatisch Übersetzungen für Moddateien erstellen, die vollständig von installierten Übersetzungen abgedeckt sind</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="302"/>
+        <location filename="src/ui/settings/app_settings.py" line="297"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>Bei einem Doppelklick auf eine Mod oder eine Moddatei in der Modliste oder einer Übersetzung im &quot;Übersetzungen&quot; Tab dessen Strings anzeigen</translation>
     </message>
@@ -285,14 +290,18 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="71"/>
+        <source>Add author...</source>
+        <translation>Autor hinzufügen...</translation>
+    </message>
+    <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="75"/>
         <source>Add Author...</source>
         <translation>Autor hinzufügen...</translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="76"/>
-        <source>Enter Author Name:</source>
-        <translation>Name eines Autoren eingeben:</translation>
+        <source>Enter author name (case-insensitive):</source>
+        <translation>Name eines Autoren eingeben (Groß-/Kleinschreibung wird nicht beachtet):</translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="78"/>
@@ -492,13 +501,13 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     <name>DownloadsToolbar</name>
     <message>
         <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="42"/>
-        <source>Handle Nexus Mods Downloads</source>
-        <translation>Mit Nexus Mods Downloads verknüpfen</translation>
+        <source>[Experimental]</source>
+        <translation>[Experimentell]</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="42"/>
-        <source>[Experimental]</source>
-        <translation>[Experimentell]</translation>
+        <source>Handle Nexus Mods downloads</source>
+        <translation>Mit Nexus Mods Downloads verknüpfen</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="81"/>
@@ -528,8 +537,8 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/help_dialog.py" line="37"/>
-        <source>Below is an overview of the various states a string can have:</source>
-        <translation>Strings können diese Markierungen aufweisen:</translation>
+        <source>Below is an overview of the states a string can have:</source>
+        <translation>Mögliche String-Markierungen:</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/help_dialog.py" line="66"/>
@@ -551,17 +560,17 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_menu.py" line="66"/>
-        <source>Edit String...</source>
+        <source>Edit string...</source>
         <translation>String bearbeiten...</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_menu.py" line="71"/>
-        <source>Copy String</source>
+        <source>Copy string</source>
         <translation>String kopieren</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_menu.py" line="78"/>
-        <source>Reset selected String(s)</source>
+        <source>Reset selected string(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
@@ -601,9 +610,23 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Strings</translation>
     </message>
     <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="222"/>
+        <source>DSD file</source>
+        <translation>DSD-Datei</translation>
+    </message>
+    <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="223"/>
-        <source>Import pre-v1.1 Translation...</source>
+        <source>Import pre-v1.1 translation...</source>
         <translation>Pre-v1.1 Übersetzung importieren...</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="385"/>
+        <source>Translated %n string from database.</source>
+        <comment>Translated %n strings from database.</comment>
+        <translation>
+            <numerusform>%n String wurde mithilfe der Datenbank übersetzt.</numerusform>
+            <numerusform>%n Strings wurden mithilfe der Datenbank übersetzt.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="399"/>
@@ -611,40 +634,43 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Suchen und Ersetzen</translation>
     </message>
     <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="413"/>
+        <source>Case sensitive</source>
+        <translation>Groß-/Kleinschreibung beachten</translation>
+    </message>
+    <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="452"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
+    <message numerus="yes">
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="459"/>
+        <source>Are you sure you want to translate %n string via translator API?
+Depending on the translator API this can raise unexpected costs.</source>
+        <comment>Are you sure you want to translate %n strings via translator API?
+Depending on the translator API this can raise unexpected costs.</comment>
+        <translation>
+            <numerusform>Bist du sicher, dass du %n String mit der Übersetzer-API übersetzen möchtest?
+Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</numerusform>
+            <numerusform>Bist du sicher, dass du %n Strings mit der Übersetzer-API übersetzen möchtest?
+Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="506"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>Übersetzung exportieren (nur DSD-Format)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="541"/>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="542"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="222"/>
-        <source>DSD File (*.json)</source>
-        <translation>DSD Datei (*.json)</translation>
-    </message>
-    <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="382"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="519"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="520"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="385"/>
-        <source>Translated %n String with database.</source>
-        <comment>Translated %n Strings with database.</comment>
-        <translation>
-            <numerusform>%n String wurde mit der Datenbank übersetzt.</numerusform>
-            <numerusform>%n Strings wurden mit der Datenbank übersetzt.</numerusform>
-        </translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="408"/>
@@ -657,52 +683,43 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="413"/>
-        <source>Case Sensitive</source>
-        <translation>Groß-/Kleinschreibung beachten</translation>
-    </message>
-    <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="423"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
         <source>Apply</source>
         <translation>Übernehmen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="428"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="479"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
-    <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="459"/>
-        <source>Are you sure you want to translate %n String via Translator API?
-Depending on the Translator API this can raise unexpected costs.</source>
-        <comment>Are you sure you want to translate %n Strings via Translator API?
-Depending on the Translator API this can raise unexpected costs.</comment>
-        <translation>
-            <numerusform>Bist du sicher, dass du einen String mit der konfigurierten Übersetzer-API übersetzen möchtest?
-Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform>
-            <numerusform>Bist du sicher, dass du %n Strings mit der konfigurierten Übersetzer-API übersetzen möchtest?
-Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform>
-        </translation>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="478"/>
+        <source>Continue</source>
+        <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
         <source>Don&apos;t show again</source>
         <translation>Nicht erneut zeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="520"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="521"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="547"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="544"/>
+        <source>Are you sure you want to reset the selected string(s)?</source>
+        <translation>Bist du sicher, dass du die ausgewählten String(s) zurücksetzen möchtest?</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="550"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="548"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -710,29 +727,29 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>EditorToolbar</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="83"/>
-        <source>Filter Options</source>
-        <translation>Filteroptionen</translation>
-    </message>
-    <message>
         <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="92"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="83"/>
+        <source>Filter options</source>
+        <translation>Filteroptionen</translation>
+    </message>
+    <message>
         <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="101"/>
-        <source>Import pre-v1.1 Translation...</source>
+        <source>Import pre-v1.1 translation...</source>
         <translation>Pre-v1.1 Übersetzung importieren...</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="107"/>
-        <source>Apply Database to untranslated Strings</source>
+        <source>Apply database to untranslated strings</source>
         <translation>Unübersetzte Strings mithilfe der Datenbank übersetzen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="112"/>
-        <source>Search and Replace</source>
-        <translation>Suchen und Ersetzen</translation>
+        <source>Search and replace</source>
+        <translation>Suchen und ersetzen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="120"/>
@@ -805,27 +822,27 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Übersetzung exportieren</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="55"/>
-        <source>Select the format the translation should be exported with:</source>
-        <translation>Bitte wähle das Format aus, in dem die Übersetzung exportiert werden soll:</translation>
+        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="56"/>
+        <source>Select the format the translation should be exported with (this only affects plugin files (.esm, .esp, .esl)):</source>
+        <translation>Bitte wähle das Format, in dem die Übersetzung exportiert werden soll (das betrifft nur Plugin-Dateien (.esm, .esp, .esl)):</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="64"/>
-        <source>DSD Files</source>
+        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="67"/>
+        <source>DSD files</source>
         <translation>DSD-Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="71"/>
-        <source>Plugin Files</source>
-        <translation>Plugin-Dateien</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="71"/>
+        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="74"/>
         <source> [Experimental]</source>
         <translation> [Experimentell]</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="77"/>
+        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="74"/>
+        <source>Plugin files</source>
+        <translation>Plugin-Dateien</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/export_dialog.py" line="80"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
@@ -876,20 +893,20 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     </message>
     <message>
         <location filename="src/ui/startup_dialog/instance_page.py" line="41"/>
-        <source>Mod Instance</source>
-        <translation>Modinstanz</translation>
+        <source>Modlist</source>
+        <translation>Modliste</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/instance_page.py" line="46"/>
-        <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
-        <translation>Auf dieser Seite wählst du eine Modinstanz aus, die von einem Mod Manager geladen werden soll. Du kannst die ausgewählte Modinstanz und den Mod-Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
+        <source>On this page you select a modlist to load from a mod manager. You can always change the selected modlist and mod manager under Settings &gt; User Settings.</source>
+        <translation>Auf dieser Seite wählst du aus, welche Modliste du von einem Mod Manager laden möchtest. Du kannst die ausgewählte Modliste und den Mod Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
     </message>
 </context>
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
         <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="88"/>
-        <source>Mod Manager:</source>
+        <source>Mod manager:</source>
         <translation>Mod Manager:</translation>
     </message>
 </context>
@@ -907,28 +924,28 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     </message>
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="36"/>
-        <source>This Guide will help you setting up this Tool for your modlist.</source>
-        <translation>Diese Einführung soll dir helfen, das Tool für deine Modliste einzurichten.</translation>
+        <source>This guide will help you setting up this tool for your modlist.</source>
+        <translation>Diese Einführung wird dir bei der Einrichtung dieses Tools für deine Modlist helfen.</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
-        <source>Open Documentation</source>
-        <translation>Dokumentation (nur Englisch) öffnen</translation>
+        <source>Open documentation</source>
+        <translation>Dokumentation öffnen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="59"/>
+        <source>Fix Windows path limit</source>
+        <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
+        <source>The path limit is already disabled.</source>
+        <translation>Die Pfadlängenbegrenzung ist bereits deaktiviert.</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="52"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows hat eine Begrenzung von 255 Zeichen auf Pfade. Unten klicken, Administratorrechte gewähren und neustarten, um diese Begrenzung zu deaktivieren.</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="59"/>
-        <source>Fix Windows Path Limit</source>
-        <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
-        <source>Path Limit is already disabled.</source>
-        <translation>Pfadlängenbegrenzung ist bereits deaktiviert.</translation>
     </message>
 </context>
 <context>
@@ -1026,50 +1043,51 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Es sind keine Übersetzungen zum Herunterladen verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="424"/>
-        <source>Created output mod at: </source>
-        <translation>Output-Mod hier erstellt: </translation>
+        <location filename="src/ui/main_page/main_page.py" line="426"/>
+        <source>The output mod was successfully built at:
+{0}
+
+Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic String Distributor is installed and both mods are enabled!</source>
+        <translation>Die Output-Mod wurde erfolgreich an diesem Pfad erstellt:
+{0}
+
+Bitte ziehe diesen Ordner in deine Modliste in MO2 oder Vortex und stelle sicher, dass der Dynamic String Distributor installiert ist und beide Mods aktiviert sind!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="430"/>
+        <location filename="src/ui/main_page/main_page.py" line="436"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="432"/>
+        <location filename="src/ui/main_page/main_page.py" line="438"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="435"/>
+        <location filename="src/ui/main_page/main_page.py" line="441"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="480"/>
+        <location filename="src/ui/main_page/main_page.py" line="486"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="485"/>
+        <location filename="src/ui/main_page/main_page.py" line="491"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="487"/>
+        <location filename="src/ui/main_page/main_page.py" line="493"/>
         <source>Did not find any strings matching the given filter!
-Click on &quot;Show Details&quot; to view used filter.</source>
-        <translation>Keine passenden Strings für den angegebenen Filter gefunden!
-Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</translation>
+Click on &quot;Show details&quot; to view used filter.</source>
+        <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
+Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
 </context>
 <context>
     <name>MainToolBar</name>
-    <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="94"/>
-        <source>Filter Options</source>
-        <translation>Filteroptionen</translation>
-    </message>
     <message>
         <location filename="src/ui/main_page/main_toolbar.py" line="104"/>
         <source>Open ignore list</source>
@@ -1086,8 +1104,13 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Modliste scannen...</translation>
     </message>
     <message>
+        <location filename="src/ui/main_page/main_toolbar.py" line="94"/>
+        <source>Filter options</source>
+        <translation>Filteroptionen</translation>
+    </message>
+    <message>
         <location filename="src/ui/main_page/main_toolbar.py" line="124"/>
-        <source>Scan Online for available translations...</source>
+        <source>Scan online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
@@ -1192,19 +1215,19 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="75"/>
-        <source>Show Documentation...</source>
-        <translation>Öffne Dokumentation...</translation>
-    </message>
-    <message>
         <location filename="src/ui/menubar.py" line="80"/>
         <source>Check for updates...</source>
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
+        <location filename="src/ui/menubar.py" line="75"/>
+        <source>Show documentation...</source>
+        <translation>Dokumentation öffnen...</translation>
+    </message>
+    <message>
         <location filename="src/ui/menubar.py" line="88"/>
-        <source>Fix Windows Path Limit...</source>
-        <translation>Windows-Pfadlängenbegrenzung deaktivieren...</translation>
+        <source>Fix Windows path limit...</source>
+        <translation>Windows-Pfadlängenbegrenzung beheben...</translation>
     </message>
     <message>
         <location filename="src/ui/menubar.py" line="96"/>
@@ -1241,8 +1264,8 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
     <message>
         <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="37"/>
-        <source>Below is an overview of the various states a mod file can have:</source>
-        <translation>Das sind die Markierungen, die eine Moddatei haben kann:</translation>
+        <source>Below is an overview of the states a mod file can have:</source>
+        <translation>Mögliche Moddatei-Markierungen:</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="66"/>
@@ -1762,34 +1785,34 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SetupPage</name>
     <message>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="56"/>
+        <source>Game language</source>
+        <translation>Sprache des Spiels</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="68"/>
+        <source>Translation source</source>
+        <translation>Quelle der Übersetzungen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="81"/>
+        <source>Use global masterlist from GitHub repository (recommended)</source>
+        <translation>Globale Masterlist aus dem GitHub Repository verwenden (empfohlen)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="89"/>
+        <source>Nexus Mods API key</source>
+        <translation>Nexus Mods API-Schlüssel</translation>
+    </message>
+    <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="106"/>
         <source>Initial Setup</source>
         <translation>Erste Einrichtung</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="110"/>
-        <source>On this page you setup basic settings.</source>
-        <translation>Auf dieser Seite stellst du grundlegende Einstellungen ein.</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="56"/>
-        <source>Choose Game Language:</source>
-        <translation>Sprache des Spiels auswählen:</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="68"/>
-        <source>Source</source>
-        <translation>Quelle</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="81"/>
-        <source>Use global Masterlist from GitHub Repository (recommended)</source>
-        <translation>Globale Masterlist von GitHub verwenden (empfohlen)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="89"/>
-        <source>Nexus Mods API Key</source>
-        <translation>Nexus Mods API-Schlüssel</translation>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="111"/>
+        <source>On this page you configure what translations to download from where for which language.</source>
+        <translation>Auf dieser Seite legst du fest, welche Übersetzungen von wo für welche Sprache heruntergeladen werden.</translation>
     </message>
 </context>
 <context>
@@ -1867,11 +1890,11 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <name>StringListDialog</name>
     <message numerus="yes">
         <location filename="src/ui/widgets/string_list/string_list_dialog.py" line="26"/>
-        <source> (%n Strings)</source>
-        <comment> (%n String)</comment>
+        <source> (%n string)</source>
+        <comment> (%n strings)</comment>
         <translation>
-            <numerusform> (%n Strings)</numerusform>
             <numerusform> (%n String)</numerusform>
+            <numerusform> (%n Strings)</numerusform>
         </translation>
     </message>
 </context>
@@ -1903,7 +1926,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <name>StringListToolbar</name>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_toolbar.py" line="52"/>
-        <source>Filter Options</source>
+        <source>Filter options</source>
         <translation>Filteroptionen</translation>
     </message>
 </context>
@@ -1945,7 +1968,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/widgets/string_search_dialog.py" line="57"/>
         <source>ID</source>
-        <translation type="unfinished">ID</translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_search_dialog.py" line="68"/>
@@ -2155,19 +2178,19 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/main_page/database/translations/translations_tab.py" line="179"/>
         <source>Did not find any strings matching the given filter!
-Click on &quot;Show Details&quot; to view used filter.</source>
-        <translation>Keine passenden Strings für den angegebenen Filter gefunden!
-Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</translation>
+Click on &quot;Show details&quot; to view used filter.</source>
+        <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
+Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/translations/translations_tab.py" line="201"/>
-        <source>Mod Archive (*.7z *.rar *.zip)</source>
-        <translation>Mod-Archiv (*.7z *.rar *.zip)</translation>
+        <source>Mod archive</source>
+        <translation>Modarchiv</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/translations/translations_tab.py" line="202"/>
-        <source>Skyrim SE Plugin (*.esp *.esm *.esl)</source>
-        <translation>Skyrim SE Plugin (*.esp *.esm *.esl)</translation>
+        <source>Skyrim SE plugin</source>
+        <translation>Skyrim SE Plugin</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/translations/translations_tab.py" line="205"/>
@@ -2332,73 +2355,73 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="98"/>
-        <source>Go to previous String</source>
-        <translation>Zum vorherigen String gehen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="109"/>
-        <source>Go to next String</source>
-        <translation>Zum nächsten String gehen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="137"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="134"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="143"/>
-        <source>Reset String</source>
-        <translation>String zurücksetzen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="171"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="260"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="168"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="256"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="180"/>
-        <source>Press F1 (Translation complete), F2 (Translation incomplete/Work in Progress) or F3 (No translation required) to finalize the string and go to the next one.</source>
-        <translation>F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/in Arbeit) oder F3 (Keine Übersetzung erforderlich) drücken, um den String zu finalisieren und zum nächsten zu gehen.</translation>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="95"/>
+        <source>Go to previous string</source>
+        <translation>Zum vorherigen String gehen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="192"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="106"/>
+        <source>Go to next string</source>
+        <translation>Zum nächsten String gehen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="140"/>
+        <source>Reset string</source>
+        <translation>String zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="177"/>
+        <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
+        <translation>F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/in Arbeit) oder F3 (keine Übersetzung erforderlich) drücken, um den String zu finalisieren und zum nächsten zu gehen.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="188"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="262"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="258"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="268"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="264"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="269"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="265"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="299"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="295"/>
         <source>String was modified</source>
         <translation>String wurde verändert</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="302"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="298"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="310"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="307"/>
         <source>Don&apos;t save and continue</source>
         <translation>Nicht speichern und fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="313"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="310"/>
         <source>Save and continue</source>
         <translation>Speichern und fortfahren</translation>
     </message>
@@ -2406,17 +2429,17 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="47"/>
+        <location filename="src/ui/settings/translator_settings.py" line="50"/>
         <source>Translator API</source>
         <translation>Übersetzer-API</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="49"/>
-        <source>Translator API Key</source>
-        <translation>Übersetzer-API-Schlüssel</translation>
+        <location filename="src/ui/settings/translator_settings.py" line="52"/>
+        <source>Translator API key</source>
+        <translation>Übersetzer API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="68"/>
+        <location filename="src/ui/settings/translator_settings.py" line="71"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
         <translation>Nach Bestätigung fragen, bevor eine Massenübersetzung gestartet wird</translation>
     </message>
@@ -2499,7 +2522,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
     <message>
         <location filename="src/core/user_data/user_data_service.py" line="79"/>
-        <source>Loading modinstance...</source>
+        <source>Loading modlist...</source>
         <translation>Modliste wird geladen...</translation>
     </message>
     <message>
@@ -2516,63 +2539,67 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="81"/>
-        <source>Choose Game Language:</source>
-        <translation>Sprache des Spiels auswählen:</translation>
-    </message>
-    <message>
         <location filename="src/ui/settings/user_settings.py" line="66"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="84"/>
-        <source>Source:</source>
-        <translation>Quelle:</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="112"/>
-        <source>Start API Setup</source>
-        <translation>API-Einrichtung starten</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="116"/>
-        <location filename="src/ui/settings/user_settings.py" line="188"/>
+        <location filename="src/ui/settings/user_settings.py" line="114"/>
         <source>Nexus Mods API Key</source>
         <translation>Nexus Mods API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="121"/>
-        <source>Use global Masterlist from GitHub Repository (recommended)</source>
-        <translation>Globale Masterlist von GitHub verwenden (empfohlen)</translation>
+        <location filename="src/ui/settings/user_settings.py" line="80"/>
+        <source>Game language</source>
+        <translation>Sprache des Spiels</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="127"/>
-        <source>Open Masterlist (in Browser)</source>
+        <location filename="src/ui/settings/user_settings.py" line="82"/>
+        <source>Translation source</source>
+        <translation>Quelle der Übersetzungen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="110"/>
+        <source>Start API setup...</source>
+        <translation>API-Einrichtung starten...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="119"/>
+        <source>Use global masterlist from GitHub repository (recommended)</source>
+        <translation>Globale Masterlist aus dem GitHub Repository verwenden (empfohlen)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="125"/>
+        <source>Open masterlist (in browser)</source>
         <translation>Masterlist (im Browser) öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="132"/>
-        <source>Open Translation Author Blacklist...</source>
+        <location filename="src/ui/settings/user_settings.py" line="130"/>
+        <source>Open translation author blacklist...</source>
         <translation>Ignorierliste für Übersetzungsautoren öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="138"/>
-        <source>Modinstance</source>
-        <translation>Modinstanz</translation>
+        <location filename="src/ui/settings/user_settings.py" line="136"/>
+        <source>Modlist</source>
+        <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="153"/>
+        <location filename="src/ui/settings/user_settings.py" line="151"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>BSA-Archive parsen (Dies kann den Start der App, je nach Größe deiner Modliste, verlangsamen!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="202"/>
+        <location filename="src/ui/settings/user_settings.py" line="186"/>
+        <source>Nexus Mods API key</source>
+        <translation>Nexus Mods API-Schlüssel</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="200"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="215"/>
+        <location filename="src/ui/settings/user_settings.py" line="213"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>

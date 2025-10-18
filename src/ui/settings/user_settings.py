@@ -77,11 +77,9 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__lang_box.currentValueChanged.connect(
             lambda _: self.restart_required_signal.emit()
         )
-        translations_flayout.addRow(
-            "*" + self.tr("Choose Game Language:"), self.__lang_box
-        )
+        translations_flayout.addRow("*" + self.tr("Game language"), self.__lang_box)
 
-        self.__source_label = QLabel("*" + self.tr("Source:"))
+        self.__source_label = QLabel("*" + self.tr("Translation source"))
         self.__source_label.setEnabled(
             self._initial_config.language == GameLanguage.French
         )
@@ -109,7 +107,7 @@ class UserSettings(SettingsPage[UserConfig]):
             lambda _: self.restart_required_signal.emit()
         )
         api_key_hlayout.addWidget(self.__api_key_entry, 1)
-        api_setup_button = QPushButton(self.tr("Start API Setup"))
+        api_setup_button = QPushButton(self.tr("Start API setup..."))
         api_setup_button.clicked.connect(self.__start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
         translations_flayout.addRow(
@@ -118,24 +116,24 @@ class UserSettings(SettingsPage[UserConfig]):
 
         self.__masterlist_box = QCheckBox()
         self.__masterlist_box.setText(
-            self.tr("Use global Masterlist from GitHub Repository (recommended)")
+            self.tr("Use global masterlist from GitHub repository (recommended)")
         )
         self.__masterlist_box.setChecked(self._initial_config.use_masterlist)
         self.__masterlist_box.stateChanged.connect(lambda _: self.changed_signal.emit())
         open_masterlist_button = LinkButton(
             "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists",
-            self.tr("Open Masterlist (in Browser)"),
+            self.tr("Open masterlist (in browser)"),
         )
         translations_flayout.addRow(self.__masterlist_box, open_masterlist_button)
 
         author_blacklist_button = QPushButton(
-            self.tr("Open Translation Author Blacklist...")
+            self.tr("Open translation author blacklist...")
         )
         author_blacklist_button.clicked.connect(self.__open_author_blacklist)
         translations_flayout.addRow(author_blacklist_button)
 
     def __init_instance_settings(self) -> None:
-        instance_group = QGroupBox("*" + self.tr("Modinstance"))
+        instance_group = QGroupBox("*" + self.tr("Modlist"))
         self.__vlayout.addWidget(instance_group)
         instance_vlayout = QVBoxLayout()
         instance_group.setLayout(instance_vlayout)
@@ -185,7 +183,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
     def __start_api_setup(self) -> None:
         dialog = QDialog(QApplication.activeModalWidget())
-        dialog.setWindowTitle(self.tr("Nexus Mods API Key"))
+        dialog.setWindowTitle(self.tr("Nexus Mods API key"))
         dialog.setMinimumSize(800, 400)
 
         vlayout = QVBoxLayout()

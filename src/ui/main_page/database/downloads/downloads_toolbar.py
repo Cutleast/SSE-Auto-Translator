@@ -39,7 +39,7 @@ class DownloadsToolbar(QToolBar):
     def __init_actions(self) -> None:
         self.__handle_nxm_action = self.addAction(
             IconProvider.get_qta_icon("fa5s.link"),
-            self.tr("Handle Nexus Mods Downloads") + " " + self.tr("[Experimental]"),
+            self.tr("Handle Nexus Mods downloads") + " " + self.tr("[Experimental]"),
         )
         self.__handle_nxm_action.setCheckable(True)
         self.__handle_nxm_action.triggered.connect(

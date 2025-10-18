@@ -72,7 +72,7 @@ class MenuBar(QMenuBar):
         self.addMenu(help_menu)
 
         documentation_action: QAction = help_menu.addAction(
-            self.tr("Show Documentation...")
+            self.tr("Show documentation...")
         )
         documentation_action.setIcon(IconProvider.get_qta_icon("mdi6.note-text"))
         documentation_action.triggered.connect(self.docs_requested.emit)
@@ -85,7 +85,7 @@ class MenuBar(QMenuBar):
         help_menu.addSeparator()
 
         path_limit_action: QAction = help_menu.addAction(
-            self.tr("Fix Windows Path Limit...")
+            self.tr("Fix Windows path limit...")
         )
         path_limit_action.setIcon(IconProvider.get_qta_icon("mdi6.bug-check"))
         path_limit_action.triggered.connect(self.path_limit_fix_requested.emit)

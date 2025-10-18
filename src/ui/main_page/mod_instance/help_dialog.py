@@ -34,7 +34,7 @@ class ModInstanceHelpDialog(QDialog):
         self.setLayout(vlayout)
 
         help_label = QLabel(
-            self.tr("Below is an overview of the various states a mod file can have:")
+            self.tr("Below is an overview of the states a mod file can have:")
         )
         help_label.setObjectName("h2")
         help_label.setWordWrap(True)

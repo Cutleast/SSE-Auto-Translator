@@ -80,7 +80,7 @@ class EditorToolbar(QToolBar):
             self.__filter_items[status] = filter_box
 
         filter_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter Options")
+            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter options")
         )
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(
@@ -98,18 +98,18 @@ class EditorToolbar(QToolBar):
     def __init_actions(self) -> None:
         import_legacy_action: QAction = self.addAction(
             IconProvider.get_qta_icon("ri.inbox-archive-fill"),
-            self.tr("Import pre-v1.1 Translation..."),
+            self.tr("Import pre-v1.1 translation..."),
         )
         import_legacy_action.triggered.connect(self.legacy_import_requested.emit)
 
         apply_database_action: QAction = self.addAction(
             IconProvider.get_qta_icon("mdi6.database-refresh-outline"),
-            self.tr("Apply Database to untranslated Strings"),
+            self.tr("Apply database to untranslated strings"),
         )
         apply_database_action.triggered.connect(self.apply_database_requested.emit)
 
         self.__search_and_replace_action = self.addAction(
-            IconProvider.get_qta_icon("msc.replace"), self.tr("Search and Replace")
+            IconProvider.get_qta_icon("msc.replace"), self.tr("Search and replace")
         )
         self.__search_and_replace_action.triggered.connect(
             self.search_and_replace_requested.emit

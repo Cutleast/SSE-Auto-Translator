@@ -49,7 +49,7 @@ class StringListToolbar(QToolBar):
             self.__filter_items[status] = filter_box
 
         filter_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter Options")
+            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter options")
         )
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(

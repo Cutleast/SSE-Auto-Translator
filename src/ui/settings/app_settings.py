@@ -78,7 +78,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__init_behavior_settings()
 
     def __init_basic_settings(self) -> None:
-        basic_group = QGroupBox(self.tr("Basic App Settings"))
+        basic_group = QGroupBox(self.tr("General App Settings"))
         self.__vlayout.addWidget(basic_group)
         basic_flayout = QFormLayout()
         basic_group.setLayout(basic_flayout)
@@ -105,7 +105,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__log_level_box.currentValueChanged.connect(
             lambda _: self.restart_required_signal.emit()
         )
-        basic_flayout.addRow("*" + self.tr("Log Level"), self.__log_level_box)
+        basic_flayout.addRow("*" + self.tr("Log level"), self.__log_level_box)
 
         self.__app_lang_box = EnumDropdown(Language, self._initial_config.language)
         self.__app_lang_box.installEventFilter(self)
@@ -128,12 +128,12 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__accent_color_entry.textChanged.connect(
             lambda _: self.restart_required_signal.emit()
         )
-        basic_flayout.addRow("*" + self.tr("Accent Color"), self.__accent_color_entry)
+        basic_flayout.addRow("*" + self.tr("Accent color"), self.__accent_color_entry)
 
         self.__clear_cache_button = QPushButton(
             self.tr(
-                "Clear Cache (This will reset all mod file states "
-                "and delete cached API requests!)"
+                "Clear cache (This will reset all mod file states and delete cached API "
+                "requests and more temporary data!)"
             )
         )
         self.__clear_cache_button.clicked.connect(self.__clear_cache)
@@ -163,10 +163,7 @@ class AppSettings(SettingsPage[AppConfig]):
             lambda _: self.changed_signal.emit()
         )
         self.__output_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        path_flayout.addRow(
-            self.tr("Path for Output Mod") + self.tr(" (No Restart Required)"),
-            self.__output_path_entry,
-        )
+        path_flayout.addRow(self.tr("Path for output mod"), self.__output_path_entry)
 
         # Temp path
         self.__temp_path_entry = BrowseLineEdit()
@@ -177,7 +174,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__temp_path_entry.textChanged.connect(lambda _: self.changed_signal.emit())
         self.__temp_path_entry.setFileMode(QFileDialog.FileMode.Directory)
         path_flayout.addRow(
-            self.tr("Path for Temporary Folder")
+            self.tr("Path for temporary folder")
             + "\n"
             + self.tr("(for temporary files, will be wiped after exit!)"),
             self.__temp_path_entry,
@@ -186,7 +183,7 @@ class AppSettings(SettingsPage[AppConfig]):
         # Downloads path
         self.__downloads_path_entry = BrowseLineEdit()
         self.__downloads_path_entry.setPlaceholderText(
-            self.tr("Defaults to Temporary Folder configured above")
+            self.tr("Defaults to temporary folder configured above")
         )
         self.__downloads_path_entry.setText(
             str(self._initial_config.downloads_path or "")
@@ -195,7 +192,7 @@ class AppSettings(SettingsPage[AppConfig]):
             lambda _: self.changed_signal.emit()
         )
         self.__downloads_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        path_flayout.addRow(self.tr("Downloads Path"), self.__downloads_path_entry)
+        path_flayout.addRow(self.tr("Downloads path"), self.__downloads_path_entry)
 
     def __init_behavior_settings(self) -> None:
         behavior_group = QGroupBox(self.tr("Behavior Settings"))
@@ -214,7 +211,7 @@ class AppSettings(SettingsPage[AppConfig]):
             lambda _: self.restart_required_signal.emit()
         )
         behavior_flayout.addRow(
-            "*" + self.tr("Language Detector Confidence"), self.__confidence_box
+            "*" + self.tr("Language detector confidence"), self.__confidence_box
         )
 
         self.__download_threads_box = QSpinBox()
@@ -230,8 +227,8 @@ class AppSettings(SettingsPage[AppConfig]):
         behavior_flayout.addRow(
             "*"
             + self.tr(
-                "Number of concurrent downloads\nWarning: The app could become "
-                "unresponsive but downloads will be completed faster."
+                "Number of concurrent downloads (only recommended to increase if you "
+                "have Nexus Mods Premium)"
             ),
             self.__download_threads_box,
         )
@@ -240,7 +237,7 @@ class AppSettings(SettingsPage[AppConfig]):
             "*"
             + self.tr(
                 'Automatically bind to "Mod Manager Download" '
-                "Buttons on Nexus Mods on Startup"
+                "buttons on Nexus Mods on startup"
             )
             + " "
             + self.tr("[EXPERIMENTAL]")
@@ -262,9 +259,7 @@ class AppSettings(SettingsPage[AppConfig]):
         behavior_flayout.addRow(self.__bind_nxm_checkbox)
 
         self.__use_spell_check_checkbox = QCheckBox(
-            self.tr(
-                "Enable Spell Checking in Translation Editor (Warning: could be slow)"
-            )
+            self.tr("Enable spell checking in translation editor")
         )
         self.__use_spell_check_checkbox.setChecked(self._initial_config.use_spell_check)
         self.__use_spell_check_checkbox.stateChanged.connect(
@@ -315,8 +310,8 @@ class AppSettings(SettingsPage[AppConfig]):
         self.cache.clear_caches()
         self.__clear_cache_button.setText(
             self.tr(
-                "Clear Cache (This will reset all mod file states "
-                "and delete cached API requests!)"
+                "Clear cache (This will reset all mod file states and delete cached API "
+                "requests and more temporary data!)"
             )
         )
         self.__clear_cache_button.setEnabled(False)

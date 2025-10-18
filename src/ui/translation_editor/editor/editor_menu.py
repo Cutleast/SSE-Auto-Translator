@@ -63,19 +63,19 @@ class EditorMenu(Menu):
 
     def __init_actions(self) -> None:
         edit_string_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.rename"), self.tr("Edit String...")
+            IconProvider.get_qta_icon("mdi6.rename"), self.tr("Edit string...")
         )
         edit_string_action.triggered.connect(self.edit_string_requested.emit)
 
         copy_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy String")
+            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy string")
         )
         copy_action.setIconVisibleInMenu(True)
         copy_action.triggered.connect(self.copy_string_requested.emit)
 
         reset_string_action: QAction = self.addAction(
             IconProvider.get_qta_icon("ri.arrow-go-back-line"),
-            self.tr("Reset selected String(s)"),
+            self.tr("Reset selected string(s)"),
         )
         reset_string_action.setShortcut(QKeySequence("F4"))
         reset_string_action.triggered.connect(self.reset_translation_requested.emit)

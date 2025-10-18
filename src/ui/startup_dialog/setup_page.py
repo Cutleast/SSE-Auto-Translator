@@ -53,7 +53,7 @@ class SetupPage(Page):
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        lang_label = QLabel(self.tr("Choose Game Language:"))
+        lang_label = QLabel(self.tr("Game language"))
         hlayout.addWidget(lang_label)
         self.__lang_dropdown = EnumPlaceholderDropdown(GameLanguage)
         self.__lang_dropdown.installEventFilter(self)
@@ -65,7 +65,7 @@ class SetupPage(Page):
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        self.__source_label = QLabel(self.tr("Source"))
+        self.__source_label = QLabel(self.tr("Translation source"))
         self.__source_label.setDisabled(True)
         hlayout.addWidget(self.__source_label)
         self.__source_dropdown = EnumPlaceholderDropdown(
@@ -78,7 +78,7 @@ class SetupPage(Page):
 
         # Masterlist
         self.__masterlist_box = QCheckBox(
-            self.tr("Use global Masterlist from GitHub Repository (recommended)")
+            self.tr("Use global masterlist from GitHub repository (recommended)")
         )
         self.__masterlist_box.setChecked(True)
         vlayout.addWidget(self.__masterlist_box)
@@ -86,7 +86,7 @@ class SetupPage(Page):
         vlayout.addSpacing(5)
 
         # API Setup Widget
-        api_groupbox = QGroupBox(self.tr("Nexus Mods API Key"))
+        api_groupbox = QGroupBox(self.tr("Nexus Mods API key"))
         vlayout.addWidget(api_groupbox)
         api_vlayout = QVBoxLayout()
         api_groupbox.setLayout(api_vlayout)
@@ -107,7 +107,10 @@ class SetupPage(Page):
 
     @override
     def _get_description(self) -> str:
-        return self.tr("On this page you setup basic settings.")
+        return self.tr(
+            "On this page you configure what translations to download from where for "
+            "which language."
+        )
 
     def __on_lang_change(self, lang: str) -> None:
         self.__source_label.setEnabled(lang == "French")

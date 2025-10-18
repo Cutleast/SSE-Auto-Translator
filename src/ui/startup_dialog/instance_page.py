@@ -38,14 +38,14 @@ class InstancePage(Page):
 
     @override
     def _get_title(self) -> str:
-        return self.tr("Mod Instance")
+        return self.tr("Modlist")
 
     @override
     def _get_description(self) -> str:
         return self.tr(
-            "On this page you select a Modinstance to load from a Mod Manager. "
-            "You can always change the selected modinstance and mod manager "
-            "under Settings > User Settings."
+            "On this page you select a modlist to load from a mod manager. You can "
+            "always change the selected modlist and mod manager under Settings > User "
+            "Settings."
         )
 
     @override

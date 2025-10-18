@@ -68,12 +68,12 @@ class BlacklistDialog(QDialog):
         remove_button.clicked.connect(remove_selected)
         hlayout.addWidget(remove_button)
 
-        add_button = QPushButton(self.tr("Add Author..."))
+        add_button = QPushButton(self.tr("Add author..."))
 
         def add_author() -> None:
             dialog = QInputDialog(self)
             dialog.setWindowTitle(self.tr("Add Author..."))
-            dialog.setLabelText(self.tr("Enter Author Name:"))
+            dialog.setLabelText(self.tr("Enter author name (case-insensitive):"))
             dialog.setInputMode(QInputDialog.InputMode.TextInput)
             dialog.setOkButtonText(self.tr("Ok"))
             dialog.setCancelButtonText(self.tr("Cancel"))

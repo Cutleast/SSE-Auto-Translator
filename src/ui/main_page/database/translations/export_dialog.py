@@ -52,7 +52,10 @@ class ExportDialog(QDialog):
         vlayout.addSpacing(15)
 
         text_label = QLabel(
-            self.tr("Select the format the translation should be exported with:")
+            self.tr(
+                "Select the format the translation should be exported with (this only "
+                "affects plugin files (.esm, .esp, .esl)):"
+            )
         )
         vlayout.addWidget(text_label)
 
@@ -61,14 +64,14 @@ class ExportDialog(QDialog):
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        dsd_button = QPushButton(self.tr("DSD Files"))
+        dsd_button = QPushButton(self.tr("DSD files"))
         dsd_button.setDefault(True)
         dsd_button.clicked.connect(
             lambda: self.__exit_with_value(ExportDialog.ExportFormat.DSD)
         )
         hlayout.addWidget(dsd_button)
 
-        esp_button = QPushButton(self.tr("Plugin Files") + self.tr(" [Experimental]"))
+        esp_button = QPushButton(self.tr("Plugin files") + self.tr(" [Experimental]"))
         esp_button.clicked.connect(
             lambda: self.__exit_with_value(ExportDialog.ExportFormat.ESP)
         )

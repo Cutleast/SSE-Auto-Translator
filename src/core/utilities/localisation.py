@@ -20,8 +20,8 @@ class Language(Enum):
     System = "System"
     German = "de_DE"
     English = "en_US"
-    Russian = "ru_RU"
-    Chinese = "zh_CN"
+    # Russian = "ru_RU"
+    # Chinese = "zh_CN"
 
 
 class LocalisationUtils:

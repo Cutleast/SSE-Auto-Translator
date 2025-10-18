@@ -421,7 +421,13 @@ class MainPageWidget(QWidget):
 
         message_box = QMessageBox()
         message_box.setWindowTitle(self.tr("Success!"))
-        message_box.setText(self.tr("Created output mod at: ") + str(output_path))
+        message_box.setText(
+            self.tr(
+                "The output mod was successfully built at:\n{0}\n\nPlease drag this "
+                "folder to your modlist in MO2 or Vortex and ensure that Dynamic String "
+                "Distributor is installed and both mods are enabled!"
+            ).format(str(output_path))
+        )
         message_box.setStandardButtons(
             QMessageBox.StandardButton.Ok
             | QMessageBox.StandardButton.Help
@@ -485,7 +491,7 @@ class MainPageWidget(QWidget):
                     title=self.tr("No strings found!"),
                     text=self.tr(
                         "Did not find any strings matching the given filter!\n"
-                        'Click on "Show Details" to view used filter.'
+                        'Click on "Show details" to view used filter.'
                     ),
                     details=str(filter),
                     yesno=False,

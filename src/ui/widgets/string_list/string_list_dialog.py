@@ -23,8 +23,8 @@ class StringListDialog(StringListWidget):
         self.setWindowTitle(
             name
             + self.tr(
-                " (%n Strings)",
-                " (%n String)",
+                " (%n string)",
+                " (%n strings)",
                 self.get_visible_item_count(),
             )
         )

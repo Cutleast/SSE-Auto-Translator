@@ -85,7 +85,7 @@ class InstanceSelectorWidget(QWidget):
         glayout.setColumnStretch(1, 3)
         self.__vlayout.addLayout(glayout)
 
-        mod_manager_label = QLabel(self.tr("Mod Manager:"))
+        mod_manager_label = QLabel(self.tr("Mod manager:"))
         glayout.addWidget(mod_manager_label, 1, 0)
 
         self.__mod_manager_dropdown = EnumPlaceholderDropdown(ModManager)

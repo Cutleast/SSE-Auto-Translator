@@ -5,8 +5,9 @@ Copyright (c) Cutleast
 from typing import override
 
 from cutleast_core_lib.ui.settings.settings_page import SettingsPage
-from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.enum_radiobutton_widget import EnumRadiobuttonsWidget
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QCheckBox, QFormLayout, QLabel, QWidget
 
 from core.config.translator_config import TranslatorConfig
@@ -20,7 +21,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
     __flayout: QFormLayout
 
-    __translator_box: EnumDropdown[TranslatorApi]
+    __api_selector: EnumRadiobuttonsWidget[TranslatorApi]
     __api_key_entry: KeyLineEdit
 
     __show_confirmations_box: QCheckBox
@@ -38,15 +39,17 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__init_confirmation_box()
 
     def __init_api_settings(self) -> None:
-        self.__translator_box = EnumDropdown(
-            TranslatorApi, self._initial_config.translator
+        self.__api_selector = EnumRadiobuttonsWidget(
+            TranslatorApi,
+            self._initial_config.translator,
+            orientation=Qt.Orientation.Horizontal,
         )
-        self.__translator_box.currentValueChanged.connect(
+        self.__api_selector.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
         )
-        self.__flayout.addRow(self.tr("Translator API"), self.__translator_box)
+        self.__flayout.addRow(self.tr("Translator API"), self.__api_selector)
 
-        api_key_label = QLabel(self.tr("Translator API Key"))
+        api_key_label = QLabel(self.tr("Translator API key"))
         self.__api_key_entry = KeyLineEdit()
         if self._initial_config.api_key:
             self.__api_key_entry.setText(self._initial_config.api_key)
@@ -56,7 +59,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__flayout.addRow(api_key_label, self.__api_key_entry)
 
         # TODO: Make this dynamic depending on the selected translator
-        self.__translator_box.currentValueChanged.connect(
+        self.__api_selector.currentValueChanged.connect(
             lambda translator_api: (
                 self.__api_key_entry.setEnabled(translator_api == TranslatorApi.DeepL),
                 api_key_label.setEnabled(translator_api == TranslatorApi.DeepL),
@@ -77,6 +80,6 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
     @override
     def apply(self, config: TranslatorConfig) -> None:
-        config.translator = self.__translator_box.getCurrentValue()
+        config.translator = self.__api_selector.getCurrentValue()
         config.api_key = self.__api_key_entry.text().strip() or None
         config.show_confirmation_dialogs = self.__show_confirmations_box.isChecked()

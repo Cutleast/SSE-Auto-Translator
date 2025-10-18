@@ -33,14 +33,14 @@ class IntroductionPage(Page):
     @override
     def _get_description(self) -> str:
         return self.tr(
-            "This Guide will help you setting up this Tool for your modlist."
+            "This guide will help you setting up this tool for your modlist."
         )
 
     @override
     def _init_form(self) -> None:
         from app import App
 
-        documentation_button = QPushButton(self.tr("Open Documentation"))
+        documentation_button = QPushButton(self.tr("Open documentation"))
         documentation_button.clicked.connect(App.get().open_documentation)
         self._vlayout.addWidget(documentation_button)
 
@@ -56,7 +56,7 @@ class IntroductionPage(Page):
         path_limit_label.setWordWrap(True)
         self._vlayout.addWidget(path_limit_label)
 
-        fix_button = QPushButton(self.tr("Fix Windows Path Limit"))
+        fix_button = QPushButton(self.tr("Fix Windows path limit"))
         fix_button.clicked.connect(
             lambda: PathLimitFixer.disable_path_limit(App.get().res_path)
         )
@@ -65,7 +65,7 @@ class IntroductionPage(Page):
         if not PathLimitFixer.is_path_limit_enabled():
             fix_button.setDisabled(True)
             self._vlayout.addWidget(
-                QLabel(self.tr("Path Limit is already disabled.")),
+                QLabel(self.tr("The path limit is already disabled.")),
                 alignment=Qt.AlignmentFlag.AlignHCenter,
             )
 

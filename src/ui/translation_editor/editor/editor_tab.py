@@ -219,8 +219,8 @@ class EditorTab(QWidget):
 
         fdialog = QFileDialog()
         fdialog.setFileMode(QFileDialog.FileMode.ExistingFile)
-        fdialog.setNameFilters([self.tr("DSD File (*.json)")])
-        fdialog.setWindowTitle(self.tr("Import pre-v1.1 Translation..."))
+        fdialog.setNameFilters([self.tr("DSD file") + " (*.json)"])
+        fdialog.setWindowTitle(self.tr("Import pre-v1.1 translation..."))
 
         if fdialog.exec() == QFileDialog.DialogCode.Rejected:
             return
@@ -382,8 +382,8 @@ class EditorTab(QWidget):
         messagebox.setWindowTitle(self.tr("Success!"))
         messagebox.setText(
             self.tr(
-                "Translated %n String with database.",
-                "Translated %n Strings with database.",
+                "Translated %n string from database.",
+                "Translated %n strings from database.",
                 modified_strings,
             )
         )
@@ -410,7 +410,7 @@ class EditorTab(QWidget):
         replace_entry = QLineEdit()
         flayout.addRow(self.tr("Replace"), replace_entry)
 
-        case_sensitivity_checkbox = QCheckBox(self.tr("Case Sensitive"))
+        case_sensitivity_checkbox = QCheckBox(self.tr("Case sensitive"))
         flayout.addRow(case_sensitivity_checkbox)
 
         vlayout.addStretch()
@@ -456,10 +456,10 @@ class EditorTab(QWidget):
 
             label = QLabel(
                 self.tr(
-                    "Are you sure you want to translate %n String via Translator API?\n"
-                    "Depending on the Translator API this can raise unexpected costs.",
-                    "Are you sure you want to translate %n Strings via Translator API?\n"
-                    "Depending on the Translator API this can raise unexpected costs.",
+                    "Are you sure you want to translate %n string via translator API?\n"
+                    "Depending on the translator API this can raise unexpected costs.",
+                    "Are you sure you want to translate %n strings via translator API?\n"
+                    "Depending on the translator API this can raise unexpected costs.",
                     len(self.__strings_widget.get_selected_strings()),
                 )
             )
@@ -472,16 +472,17 @@ class EditorTab(QWidget):
 
             hlayout.addStretch()
 
-            apply_button = QPushButton(self.tr("Apply"))
-            apply_button.clicked.connect(dialog.accept)
-            hlayout.addWidget(apply_button)
+            do_not_show_again_checkbox = QCheckBox(self.tr("Don't show again"))
+            hlayout.addWidget(do_not_show_again_checkbox)
+
+            confirm_button = QPushButton(self.tr("Continue"))
+            confirm_button.clicked.connect(dialog.accept)
+            confirm_button.setDefault(True)
+            hlayout.addWidget(confirm_button)
 
             cancel_button = QPushButton(self.tr("Cancel"))
             cancel_button.clicked.connect(dialog.reject)
             hlayout.addWidget(cancel_button)
-
-            do_not_show_again_checkbox = QCheckBox(self.tr("Don't show again"))
-            hlayout.addWidget(do_not_show_again_checkbox)
 
             if dialog.exec() == QDialog.DialogCode.Accepted:
                 if do_not_show_again_checkbox.isChecked():
@@ -539,7 +540,9 @@ class EditorTab(QWidget):
 
         message_box = QMessageBox(QApplication.activeModalWidget())
         message_box.setWindowTitle(self.tr("Reset selected String(s)"))
-        message_box.setText(self.tr("Reset selected String(s)"))
+        message_box.setText(
+            self.tr("Are you sure you want to reset the selected string(s)?")
+        )
         message_box.setStandardButtons(
             QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
         )

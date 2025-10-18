@@ -177,7 +177,7 @@ class TranslationsTab(QWidget):
                     title=self.tr("No strings found!"),
                     text=self.tr(
                         "Did not find any strings matching the given filter!\n"
-                        'Click on "Show Details" to view used filter.'
+                        'Click on "Show details" to view used filter.'
                     ),
                     details=str(filter),
                     yesno=False,
@@ -198,8 +198,8 @@ class TranslationsTab(QWidget):
             fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
             fdialog.setNameFilters(
                 [
-                    self.tr("Mod Archive (*.7z *.rar *.zip)"),
-                    self.tr("Skyrim SE Plugin (*.esp *.esm *.esl)"),
+                    self.tr("Mod archive") + " (*.7z *.rar *.zip)",
+                    self.tr("Skyrim SE plugin") + " (*.esp *.esm *.esl)",
                 ]
             )
             fdialog.setWindowTitle(self.tr("Import Translation..."))
