@@ -6,28 +6,27 @@ from pathlib import Path
 
 import pytest
 
-from core.database.importer import Importer
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string import StringList
+from core.string.string_extractor import StringExtractor
 from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 
 from ..core_test import CoreTest
 
 
-class TestImporter(CoreTest):
+class TestStringExtractor(CoreTest):
     """
-    Tests `core.database.importer.Importer`.
+    Tests `core.string.string_extractor.StringExtractor`.
     """
 
-    def test_import_mod_as_translation(self, user_data: UserData) -> None:
+    def test_map_strings_from_mods(self, user_data: UserData) -> None:
         """
-        Tests `core.database.importer.Importer.import_mod_as_translation()`.
+        Tests `StringExtractor.map_strings_from_mods()`.
         """
 
         # given
-        importer = Importer()
         original_mod: Mod = self.get_mod_by_name(
             "Wet and Cold SE", user_data.modinstance
         )
@@ -37,7 +36,7 @@ class TestImporter(CoreTest):
 
         # when
         translation_strings: dict[Path, StringList] = (
-            importer.import_mod_as_translation(translation_mod, original_mod)
+            StringExtractor.map_strings_from_mods(translation_mod, original_mod)
         )
 
         # then
@@ -50,11 +49,11 @@ class TestImporter(CoreTest):
         self, data_folder: Path, user_data: UserData
     ) -> None:
         """
-        Tests `core.database.importer.Importer.extract_strings_from_archive()`.
+        Tests `StringExtractor.extract_strings_from_archive()`.
         """
 
         # given
-        importer: Importer = Importer()
+        extractor = StringExtractor()
         modinstance: ModInstance = user_data.modinstance
         language: GameLanguage = user_data.user_config.language
         test_file_path: Path = data_folder / "Wet and Cold SE - German.7z"
@@ -63,10 +62,8 @@ class TestImporter(CoreTest):
         modinstance.mods.remove(  # Remove mod so that it doesn't conflict with the imported mod
             self.get_mod_by_name("Wet and Cold SE - German", modinstance)
         )
-        imported_strings: dict[Path, StringList] = (
-            importer.extract_strings_from_archive(
-                test_file_path, modinstance, self.tmp_folder(), language
-            )
+        imported_strings: dict[Path, StringList] = extractor.extract_strings(
+            test_file_path, modinstance, language
         )
 
         # then

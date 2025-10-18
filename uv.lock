@@ -1404,15 +1404,15 @@ dev = [
 
 [[package]]
 name = "sse-bsa"
-version = "1.0.2"
+version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "lz4" },
     { name = "virtual-glob" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/18/dcd802946ac66057486b25c07395089e59251a9ce94a7401a971e570ab9b/sse_bsa-1.0.2.tar.gz", hash = "sha256:00ddf879d2ee145bdd33bca6018990512c3159a67f23758f726a87de8c452a07", size = 1069152, upload-time = "2025-01-26T19:49:04.104Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/d0/6932badd71d68b45b36615a1accc29adee5d54381fae1c574a2d71136161/sse_bsa-1.1.0.tar.gz", hash = "sha256:9f7329dd3894588687229cfa5e22023154e54a548f76797a384626ea2d588004", size = 2123559, upload-time = "2025-10-16T19:47:28.456Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/b2/36981cfb8690f510394f65b874be07017c0eba214ba1a10c3f13a66aad20/sse_bsa-1.0.2-py3-none-any.whl", hash = "sha256:e07004e185d58dab2624675e4340d6030de55a4d140503a9aa099585bf5a0888", size = 15653, upload-time = "2025-01-26T19:48:59.938Z" },
+    { url = "https://files.pythonhosted.org/packages/32/c0/0a9932c38391d6e887156fb3ded29efaf201e54d7c74e4c8ecc348553f5c/sse_bsa-1.1.0-py3-none-any.whl", hash = "sha256:b433b06ac43cc51b6b519f3164c63732efd2ace0d05555cbdc73852521260755", size = 16030, upload-time = "2025-10-16T19:47:24.464Z" },
 ]
 
 [[package]]

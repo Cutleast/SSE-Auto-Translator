@@ -67,9 +67,7 @@ class StringsWidget(QTreeWidget):
     def __init_header(self) -> None:
         self.setHeaderLabels(
             [
-                self.tr("Type"),
-                self.tr("Form ID"),
-                self.tr("Editor ID"),
+                self.tr("ID"),
                 self.tr("Original"),
                 self.tr("String"),
             ]
@@ -103,18 +101,16 @@ class StringsWidget(QTreeWidget):
 
         self.expandAll()
         self.resizeColumnToContents(0)
-        self.resizeColumnToContents(1)
-        self.header().resizeSection(3, 500)
+        # self.resizeColumnToContents(1)
+        # self.header().resizeSection(3, 500)
         self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
-        self.sortByColumn(1, Qt.SortOrder.AscendingOrder)
+        # self.sortByColumn(1, Qt.SortOrder.AscendingOrder)
         self.update()
 
     def __create_string_item(self, string: String) -> StringItem:
         item = StringItem(
             [
-                string.type,
-                string.form_id,
-                string.editor_id if string.editor_id is not None else "",
+                string.id,
                 trim_string(string.original),
                 trim_string(string.string or string.original),
             ]
@@ -122,8 +118,6 @@ class StringsWidget(QTreeWidget):
         item.set_string(string)
 
         item.setFont(0, QFont("Consolas"))
-        item.setFont(1, QFont("Consolas"))
-        item.setFont(2, QFont("Consolas"))
 
         return item
 
@@ -149,12 +143,10 @@ class StringsWidget(QTreeWidget):
         )
 
         for string, item in self.__string_items.items():
-            item.setText(3, trim_string(string.original))
-            item.setText(4, trim_string(string.string or string.original))
+            item.setText(1, trim_string(string.original))
+            item.setText(2, trim_string(string.string or string.original))
 
-            string_text: str = string.type + string.original + string.form_id
-            if string.editor_id is not None:
-                string_text += string.editor_id
+            string_text: str = string.id + string.original
             if string.string is not None:
                 string_text += string.string
 

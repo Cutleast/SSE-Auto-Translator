@@ -28,7 +28,7 @@ class InstallationFailedError(LocalizedException):
         return QApplication.translate("exceptions", "Installation failed!")
 
 
-class MappingFailedError(InstallationFailedError):
+class NoStringsExtractedError(InstallationFailedError):
     """
     Exception when the translation could not be mapped to the original mod.
     """
@@ -37,7 +37,8 @@ class MappingFailedError(InstallationFailedError):
     def getLocalizedMessage(self) -> str:
         return QApplication.translate(
             "exceptions",
-            "Mapping failed! Translation does not contain any matching strings!",
+            "No strings extracted! Translation is either incompatible or there are no "
+            "original mod files in need of a translation.",
         )
 
 

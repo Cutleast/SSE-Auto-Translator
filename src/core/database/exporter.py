@@ -20,7 +20,7 @@ from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.plugin_interface import plugin as esp
+from core.plugin_interface.plugin import Plugin
 from core.string import StringList
 
 
@@ -217,12 +217,12 @@ class Exporter(QObject):
             cls.log.debug(f"Applying translation to plugin {plugin_file!r}...")
 
             original_path: Path = plugin.full_path
-            esp_plugin: esp.Plugin = esp.Plugin(original_path)
+            esp_plugin = Plugin(original_path)
             esp_plugin.replace_strings(plugin_strings)
 
             output_file: Path = path / plugin_file
-            with output_file.open("wb") as file:
-                file.write(esp_plugin.dump())
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            output_file.write_bytes(esp_plugin.dump())
 
         cls.log.info("Export complete.")
 

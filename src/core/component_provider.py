@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import subprocess
+import time
 from typing import Optional
 
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
@@ -17,6 +18,7 @@ from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
+from core.utilities.temp_folder_provider import TempFolderProvider
 
 
 class ComponentProvider(Singleton):
@@ -32,6 +34,7 @@ class ComponentProvider(Singleton):
     __state_service: Optional[StateService] = None
     __scanner: Optional[Scanner] = None
     __download_manager: Optional[DownloadManager] = None
+    __temp_folder_provider: Optional[TempFolderProvider] = None
 
     log: logging.Logger = logging.getLogger("ComponentProvider")
 
@@ -78,6 +81,11 @@ class ComponentProvider(Singleton):
             self.__app_config,
             self.__user_data.user_config,
             self.__user_data.masterlist,
+        )
+
+        self.__temp_folder_provider = TempFolderProvider(
+            folder_name=f"SSE-AT_temp-{time.strftime('%Y-%m-%d_%H-%M-%S')}",
+            base_path=self.__app_config.temp_path,
         )
 
         self.log.info("Initialization complete.")
@@ -151,3 +159,17 @@ class ComponentProvider(Singleton):
             raise ValueError("Download manager is not yet initialized.")
 
         return self.__download_manager
+
+    def get_temp_folder_provider(self) -> TempFolderProvider:
+        """
+        Returns:
+            TempFolderProvider: Temp folder provider.
+
+        Raises:
+            ValueError: When the temp folder provider is not yet initialized.
+        """
+
+        if self.__temp_folder_provider is None:
+            raise ValueError("Temp folder provider is not yet initialized.")
+
+        return self.__temp_folder_provider

@@ -2,90 +2,73 @@
 Copyright (c) Cutleast
 """
 
-import hashlib
-import tempfile
 from pathlib import Path
-from typing import BinaryIO, Optional, override
+from typing import BinaryIO, cast, override
 
+from cutleast_core_lib.core.archive.archive import Archive
 from cutleast_core_lib.core.cache.function_cache import FunctionCache
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
 from sse_bsa import BSAArchive
 
-from core.utilities.filesystem import split_path_with_bsa
-
-from .file_source import FileSource
+from core.file_source.archive_file_source import ArchiveFileSource
 
 
-class BsaFileSource(FileSource):
+class BsaFileSource(ArchiveFileSource):
     """
     File source for files that are in BSA archives.
     """
 
-    __bsa_archive: BSAArchive
+    class BsaWrapper(Archive):
+        """
+        Class wrapping the `sse_bsa.BSAArchive` class in the
+        `cutleast_core_lib.core.archive.archive.Archive` interface.
+        """
 
-    __bsa_archive_path: Path
-    """Path to the BSA archive."""
+        __bsa_archive: BSAArchive
 
-    __bsa_file_path: Path
-    """Relative path to the file within the BSA archive."""
+        def __init__(self, path: Path) -> None:
+            super().__init__(path)
 
-    def __init__(self, file_path: Path) -> None:
-        super().__init__(file_path)
+            self.__bsa_archive = BsaFileSource.BsaWrapper.__init_bsa(path)
 
-        bsa_archive_path: Optional[Path]
-        bsa_file_path: Optional[Path]
+        @property
+        @override
+        def files(self) -> list[str]:
+            return list(map(str, self.__bsa_archive.files))
 
-        bsa_archive_path, bsa_file_path = split_path_with_bsa(file_path)
+        @override
+        def extract_all(self, dest: Path, full_paths: bool = True) -> None:
+            self.__bsa_archive.extract(dest)
 
-        if bsa_archive_path is None or bsa_file_path is None:
-            raise ValueError(f"File {file_path} is not in a BSA archive!")
+        @override
+        def extract(self, filename: str, dest: Path, full_paths: bool = True) -> None:
+            self.__bsa_archive.extract_file(filename, dest)
 
-        self.__bsa_archive = BSAArchive(bsa_archive_path)
-        self.__bsa_archive_path = bsa_archive_path
-        self.__bsa_file_path = bsa_file_path
+        @override
+        def extract_files(
+            self, filenames: list[str], dest: Path, full_paths: bool = True
+        ) -> None:
+            for file in filenames:
+                self.__bsa_archive.extract_file(file, dest)
+
+        def get_file_stream(self, filename: Path) -> BinaryIO:
+            return self.__bsa_archive.get_file_stream(filename)
+
+        @staticmethod
+        @FunctionCache.cache
+        def __init_bsa(path: Path) -> BSAArchive:
+            return BSAArchive(path)
+
+    @override
+    def _init_archive(self) -> Archive:
+        return BsaFileSource.BsaWrapper(self._archive_path)
 
     @override
     def get_file_stream(self) -> BinaryIO:
-        return self.__bsa_archive.get_file_stream(self.__bsa_file_path)
-
-    @override
-    @FunctionCache.cache
-    def get_real_file(self) -> Path:
-        tempdir = Path(tempfile.mkdtemp(prefix="SSE-AT_file_source-"))
-        self.__bsa_archive.extract_file(self.__bsa_file_path, tempdir)
-
-        return tempdir / self.__bsa_file_path
-
-    @override
-    def is_real_file(self) -> bool:
-        return False
-
-    @override
-    def get_file_identifier(self) -> str:
-        # we need to include the file path, because the base identifier of the BSA would
-        # apply to all files within
-        base_id = int(get_file_identifier(self.__bsa_file_path), base=16)
-        file_id = int(
-            hashlib.blake2b(
-                str(self.__bsa_file_path).encode(), digest_size=8
-            ).hexdigest()[:8],
-            base=16,
+        return cast(BsaFileSource.BsaWrapper, self._archive).get_file_stream(
+            self._file_path
         )
-
-        return hex(base_id + file_id)[2:11]
-
-    def get_bsa_path(self) -> Path:
-        """
-        Returns:
-            Path: Path to the BSA archive.
-        """
-
-        return self.__bsa_archive_path
 
     @override
     @classmethod
-    def can_handle(cls, file_path: Path) -> bool:
-        bsa_archive_path: Optional[Path]
-        bsa_archive_path, _ = split_path_with_bsa(file_path)
-
-        return bsa_archive_path is not None and bsa_archive_path.is_file()
+    def get_supported_suffixes(cls) -> list[str]:
+        return [".bsa"]

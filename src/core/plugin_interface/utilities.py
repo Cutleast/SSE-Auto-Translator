@@ -3,16 +3,16 @@ Copyright (c) Cutleast
 """
 
 import hashlib
-from io import BufferedReader, BytesIO
+from io import BytesIO
 from pathlib import Path
-from typing import TypeAlias
+from typing import BinaryIO, TypeAlias
 
 import jstyleson as json
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 
-Stream: TypeAlias = BufferedReader | BytesIO
+Stream: TypeAlias = BinaryIO
 """
-Type alias for `BufferedReader` and `BytesIO`.
+Type alias for a stream of bytes.
 """
 
 # Load file that defines which records contain subrecords that are strings
@@ -118,7 +118,7 @@ def is_valid_string(text: str) -> bool:
     return all(char.isprintable() or char in CHAR_WHITELIST for char in text)
 
 
-def get_stream(data: BytesIO | BufferedReader | bytes) -> Stream:
+def get_stream(data: Stream | bytes) -> Stream:
     if isinstance(data, bytes):
         return BytesIO(data)
 

@@ -14,7 +14,6 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
-from core.database.importer import Importer
 from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
@@ -24,6 +23,7 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string import String, StringList
 from core.string.search_filter import SearchFilter, matches_filter
+from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.translation_provider.mod_id import ModId
@@ -551,7 +551,9 @@ class Scanner(QObject):
             )
 
             translation_strings: dict[Path, StringList] = (
-                Importer.import_mod_as_translation(installed_translation, original_mod)
+                StringExtractor.map_strings_from_mods(
+                    installed_translation, original_mod
+                )
             )
 
             new_translations.append(

@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 from core.plugin_interface.plugin import Plugin
+from core.string import StringList
 from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
 
@@ -18,7 +19,7 @@ class TestPlugin(CoreTest):
     Tests `core.plugin_interface.plugin.Plugin`.
     """
 
-    EXTRACT_STRINGS_DATA: list[tuple[Path, list[PluginString], int]] = [
+    EXTRACT_STRINGS_DATA: list[tuple[Path, StringList, int]] = [
         (
             Path("Obsidian Weathers and Seasons") / "Obsidian Weathers.esp",
             [
@@ -160,7 +161,7 @@ class TestPlugin(CoreTest):
     def test_extract_strings(
         self,
         plugin_file: Path,
-        expected_strings: list[PluginString],
+        expected_strings: StringList,
         expected_num_strings: int,
         data_folder: Path,
     ) -> None:
@@ -170,7 +171,7 @@ class TestPlugin(CoreTest):
         Args:
             plugin_file (Path):
                 Path to the plugin file, relative to the test mod instance's mods folder.
-            expected_strings (list[PluginString]):
+            expected_strings (StringList):
                 List of strings that are expected to be extracted. This list is not
                 exclusive.
             expected_num_strings (int):
@@ -181,7 +182,7 @@ class TestPlugin(CoreTest):
         plugin_file = data_folder / "mod_instance" / "mods" / plugin_file
 
         # when
-        actual_strings: list[PluginString] = Plugin(plugin_file).extract_strings(
+        actual_strings: StringList = Plugin(plugin_file).extract_strings(
             unfiltered=True
         )
 

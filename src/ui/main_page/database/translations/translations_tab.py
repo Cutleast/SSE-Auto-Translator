@@ -9,6 +9,7 @@ from typing import Optional
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QApplication,
@@ -24,7 +25,6 @@ from PySide6.QtWidgets import (
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
-from core.database.importer import Importer
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadListEntries, DownloadManager
 from core.mod_file.mod_file import ModFile
@@ -35,6 +35,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.string import StringList
 from core.string.search_filter import SearchFilter
+from core.string.string_extractor import StringExtractor
 from core.translation_provider.provider import Provider
 from ui.downloader.download_list_window import DownloadListWindow
 from ui.widgets.string_list.string_list_dialog import StringListDialog
@@ -212,16 +213,14 @@ class TranslationsTab(QWidget):
         strings: dict[Path, StringList]
         for file in files:
             if file.suffix.lower() in [".7z", ".rar", ".zip"]:
-                strings = LoadingDialog.run_callable(
-                    QApplication.activeModalWidget(),
-                    lambda ldialog: Importer().extract_strings_from_archive(
-                        archive_path=file,
+                strings = ProgressDialog(
+                    lambda pdialog: StringExtractor().extract_strings(
+                        file,
                         mod_instance=self.mod_instance,
-                        tmp_dir=self.app_config.get_tmp_dir(),
                         language=self.database.language,
-                        ldialog=ldialog,
-                    ),
-                )
+                        pdialog=pdialog,
+                    )
+                ).run()
 
                 if strings:
                     translation = DatabaseService.create_blank_translation(
@@ -241,7 +240,7 @@ class TranslationsTab(QWidget):
 
                 if original_plugin is not None:
                     strings = {
-                        original_plugin.path: Importer.map_translation_strings(
+                        original_plugin.path: StringExtractor.map_translation_strings(
                             PluginFile(file.name, file), original_plugin
                         )
                     }

@@ -4,7 +4,8 @@ Copyright (c) Cutleast
 
 from typing import Optional, TypedDict
 
-from .plugin_string import PluginString
+from core.string import String
+from core.string.plugin_string import PluginString
 
 
 class SearchFilter(TypedDict, total=False):
@@ -19,13 +20,13 @@ class SearchFilter(TypedDict, total=False):
     string: str
 
 
-def matches_filter(filter: SearchFilter, string: PluginString) -> bool:
+def matches_filter(filter: SearchFilter, string: String) -> bool:
     """
     Checks if a string matches a filter.
 
     Args:
         filter (SearchFilter): The filter to check.
-        string (PluginString): The string to check.
+        string (String): The string to check.
 
     Returns:
         bool: True if the string matches the filter, False otherwise.
@@ -39,15 +40,20 @@ def matches_filter(filter: SearchFilter, string: PluginString) -> bool:
 
     matching: bool = True
 
-    if type_filter:
+    if isinstance(string, PluginString) and type_filter:
         matching = type_filter.lower() in string.type.lower()
 
-    if form_id_filter and matching:
+    if isinstance(string, PluginString) and form_id_filter and matching:
         matching = form_id_filter.lower() in (string.form_id or "").lower()
 
-    if editor_id_filter and matching and string.editor_id is not None:
+    if (
+        isinstance(string, PluginString)
+        and editor_id_filter
+        and matching
+        and string.editor_id is not None
+    ):
         matching = editor_id_filter.lower() in string.editor_id.lower()
-    elif editor_id_filter:
+    elif isinstance(string, PluginString) and editor_id_filter:
         matching = False
 
     if original_filter and matching:

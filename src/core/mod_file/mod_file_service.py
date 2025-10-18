@@ -10,6 +10,7 @@ from cutleast_core_lib.core.utilities.filesystem import glob
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
+from core.mod_file.interface_file import InterfaceFile
 from core.mod_instance.mod import Mod
 from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.game_language import GameLanguage
@@ -19,6 +20,7 @@ from .plugin_file import PluginFile
 
 MODFILE_TYPES: list[type[ModFile]] = [
     PluginFile,
+    InterfaceFile,
 ]
 """List of supported mod file types."""
 
@@ -60,12 +62,12 @@ class ModFileService(QObject):
                     modfiles.append(file_type(path.name, mod.path / path))
 
         if include_bsas:
-            for bsa_file in glob("*.bsa", mod.files):
+            for bsa_file in mod.path.glob("*.bsa"):
                 modfiles.extend(
                     self.get_modfiles_from_bsa(mod.path / bsa_file, language)
                 )
 
-        self.log.info(f"Found {len(modfiles)} mod files.")
+        self.log.info(f"Found {len(modfiles)} mod file(s) in '{mod.name}'.")
 
         return modfiles
 

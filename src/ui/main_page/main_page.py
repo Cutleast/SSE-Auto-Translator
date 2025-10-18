@@ -6,7 +6,7 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, TypeVar, cast
+from typing import Optional, cast
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
@@ -43,6 +43,7 @@ from core.string.search_filter import SearchFilter
 from core.translation_provider.provider import Provider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
+from core.utilities.temp_folder_provider import TempFolderProvider
 from ui.downloader.download_list_window import DownloadListWindow
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
@@ -54,8 +55,6 @@ from .database.database_widget import DatabaseWidget
 from .main_toolbar import MainToolBar
 from .mod_instance.mod_instance import ModInstanceWidget
 from .result_dialog import ResultDialog
-
-T = TypeVar("T")
 
 
 class MainPageWidget(QWidget):
@@ -416,7 +415,7 @@ class MainPageWidget(QWidget):
                 self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
                 self.mod_instance,
                 self.user_data.database.user_translations,
-                self.app_config.get_tmp_dir(),
+                TempFolderProvider.get().get_temp_folder(),
                 self.user_data.user_config,
                 ldialog,
             ),

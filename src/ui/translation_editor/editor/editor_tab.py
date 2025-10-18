@@ -32,6 +32,7 @@ from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
 from core.string import String, StringList
+from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
@@ -559,9 +560,10 @@ class EditorTab(QWidget):
 
         clipboard_text = ""
         for string in selected_strings:
-            clipboard_text += f"{string.type}\t"
-            clipboard_text += f"{string.form_id}\t"
-            clipboard_text += f"{string.editor_id}\t"
+            if isinstance(string, PluginString):
+                clipboard_text += f"{string.type}\t"
+                clipboard_text += f"{string.form_id}\t"
+                clipboard_text += f"{string.editor_id}\t"
             clipboard_text += f"{string.original}\t"
             clipboard_text += f"{string.string}"
             clipboard_text += "\n"

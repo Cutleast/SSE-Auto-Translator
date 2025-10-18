@@ -67,6 +67,8 @@ class PluginString(BaseString):
 
         return info.strip("\n")
 
+    # this method is redefined here so that Pyright sees the class as hashable
+    # see this issue for more info: https://github.com/microsoft/pyright/issues/7344
     @override
     def __hash__(self) -> int:
         return hash((self.id, self.original, self.string, self.status))

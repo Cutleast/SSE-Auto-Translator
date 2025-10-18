@@ -69,19 +69,13 @@ class StringListWidget(QWidget):
         self.__translation_mode = translation_mode
         if translation_mode:
             self.__columns = [
-                self.tr("Type"),
-                self.tr("Form ID"),
-                self.tr("Editor ID"),
-                self.tr("Index"),
+                self.tr("ID"),
                 self.tr("Original"),
                 self.tr("String"),
             ]
         else:
             self.__columns = [
-                self.tr("Type"),
-                self.tr("Form ID"),
-                self.tr("Editor ID"),
-                self.tr("Index"),
+                self.tr("ID"),
                 self.tr("String"),
             ]
 
@@ -159,9 +153,7 @@ class StringListWidget(QWidget):
         )
 
         for string, item in self.__string_items.items():
-            string_text: str = string.type + string.original + string.form_id
-            if string.editor_id is not None:
-                string_text += string.editor_id
+            string_text: str = string.id + string.original
             if string.string is not None:
                 string_text += string.string
 
@@ -197,10 +189,7 @@ class StringListWidget(QWidget):
 
         # TODO: Add info box with details about the string
         dialog = QDialog(self)
-        if string.editor_id:
-            dialog.setWindowTitle(f"{string.editor_id} ({string.type})")
-        else:
-            dialog.setWindowTitle(f"{string.form_id} ({string.type})")
+        dialog.setWindowTitle(string.id)
         dialog.setMinimumSize(800, 500)
 
         vlayout = QVBoxLayout()
@@ -266,21 +255,15 @@ class StringListWidget(QWidget):
     def __create_string_item(self, string: String) -> QTreeWidgetItem:
         item = QTreeWidgetItem(
             [
-                string.type,
-                string.form_id,
-                string.editor_id if string.editor_id is not None else "",
-                str(string.index) if string.index is not None else "",
+                string.id,
                 trim_string(string.original),
                 trim_string(string.string or string.original),
             ]
         )
 
-        item.setToolTip(0, string.type)
-        item.setToolTip(1, string.form_id)
-        if string.editor_id is not None:
-            item.setToolTip(2, string.editor_id)
-        item.setToolTip(4, string.original)
-        item.setToolTip(5, string.string or string.original)
+        item.setToolTip(0, string.id)
+        item.setToolTip(1, string.original)
+        item.setToolTip(2, string.string or string.original)
 
         if self.__translation_mode:
             color: Optional[QColor] = StringStatus.get_color(string.status)
@@ -289,9 +272,6 @@ class StringListWidget(QWidget):
                     item.setForeground(c, color)
 
         item.setFont(0, QFont("Consolas"))
-        item.setFont(1, QFont("Consolas"))
-        item.setFont(2, QFont("Consolas"))
-        item.setFont(3, QFont("Consolas"))
 
         return item
 

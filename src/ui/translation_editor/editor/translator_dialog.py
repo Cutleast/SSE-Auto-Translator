@@ -53,7 +53,7 @@ class TranslatorDialog(QWidget):
 
     __current_string: String
 
-    __formid_label: QLabel
+    __info_label: QLabel
     __edid_label: QLabel
     __type_label: QLabel
     __index_label: QLabel
@@ -120,41 +120,14 @@ class TranslatorDialog(QWidget):
         label_vlayout = QVBoxLayout()
         hlayout.addLayout(label_vlayout)
 
-        self.__formid_label = QLabel()
-        self.__formid_label.setFont(QFont("Consolas"))
-        self.__formid_label.setTextInteractionFlags(
+        self.__info_label = QLabel()
+        self.__info_label.setFont(QFont("Consolas"))
+        self.__info_label.setTextInteractionFlags(
             Qt.TextInteractionFlag.TextSelectableByMouse
         )
-        self.__formid_label.setCursor(Qt.CursorShape.IBeamCursor)
-        self.__formid_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(self.__formid_label)
-
-        self.__edid_label = QLabel()
-        self.__edid_label.setFont(QFont("Consolas"))
-        self.__edid_label.setTextInteractionFlags(
-            Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        self.__edid_label.setCursor(Qt.CursorShape.IBeamCursor)
-        self.__edid_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(self.__edid_label)
-
-        self.__type_label = QLabel()
-        self.__type_label.setFont(QFont("Consolas"))
-        self.__type_label.setTextInteractionFlags(
-            Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        self.__type_label.setCursor(Qt.CursorShape.IBeamCursor)
-        self.__type_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(self.__type_label)
-
-        self.__index_label = QLabel()
-        self.__index_label.setFont(QFont("Consolas"))
-        self.__index_label.setTextInteractionFlags(
-            Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        self.__index_label.setCursor(Qt.CursorShape.IBeamCursor)
-        self.__index_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(self.__index_label)
+        self.__info_label.setCursor(Qt.CursorShape.IBeamCursor)
+        self.__info_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(self.__info_label)
 
         hlayout.addStretch()
 
@@ -241,16 +214,13 @@ class TranslatorDialog(QWidget):
         visible_string_count: int = self.__parent.get_visible_string_count()
         current_index: int = self.__parent.get_index(self.__current_string)
 
+        title: str = (
+            f"{self.__current_string.id} ({current_index + 1}/{visible_string_count})"
+        )
         if self.changes_pending:
-            self.setWindowTitle(
-                f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index + 1}/{visible_string_count})*"
-            )
-        else:
-            self.setWindowTitle(
-                f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index + 1}/{visible_string_count})"
-            )
+            title += "*"
+
+        self.setWindowTitle(title)
 
     def __on_change(self) -> None:
         new_text: str = self.__translated_entry.toPlainText()
@@ -353,16 +323,7 @@ class TranslatorDialog(QWidget):
                 return
 
         self.__current_string = string
-
-        self.__formid_label.setText(
-            f"{self.tr('Form ID')}: {self.__current_string.form_id}"
-        )
-        self.__edid_label.setText(
-            f"{self.tr('Editor ID')}: {self.__current_string.editor_id}"
-        )
-        self.__type_label.setText(f"{self.tr('Type')}: {self.__current_string.type}")
-        self.__index_label.setText(f"{self.tr('Index')}: {self.__current_string.index}")
-
+        self.__info_label.setText(self.__current_string.get_localized_info())
         self.__original_entry.setPlainText(self.__current_string.original)
         try:
             self.__translated_entry.textChanged.disconnect(self.changes_signal.emit)

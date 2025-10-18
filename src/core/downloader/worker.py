@@ -13,21 +13,22 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
-from core.database.importer import Importer
 from core.database.translation import Translation
 from core.downloader.downloader import Downloader
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string import StringList
+from core.string.string_extractor import StringExtractor
 from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (
     DownloadFailedError,
     InstallationFailedError,
-    MappingFailedError,
     NoOriginalModFound,
+    NoStringsExtractedError,
 )
 from core.utilities.progress_update import ProgressCallback, ProgressUpdate
+from core.utilities.temp_folder_provider import TempFolderProvider
 
 from .file_download import FileDownload
 
@@ -120,8 +121,9 @@ class Worker(QThread):
         self.waiting = False
 
         downloads_folder: Path = (
-            self.app_config.downloads_path or self.app_config.get_tmp_dir()
+            self.app_config.downloads_path or TempFolderProvider.get().get_temp_folder()
         )
+        downloads_folder.mkdir(parents=True, exist_ok=True)
         mod_file: Path = downloads_folder / file_name
 
         if not mod_file.is_file():
@@ -155,17 +157,14 @@ class Worker(QThread):
         progress_callback(ProgressUpdate(0, 0, self.tr("Installing translation...")))
 
         try:
-            strings: dict[Path, StringList] = Importer().extract_strings_from_archive(
-                downloaded_file,
-                self.mod_instance,
-                self.app_config.get_tmp_dir(),
-                self.database.language,
+            strings: dict[Path, StringList] = StringExtractor().extract_strings(
+                downloaded_file, self.mod_instance, self.database.language
             )
         except Exception as ex:
             raise InstallationFailedError from ex
 
         if not strings:
-            raise MappingFailedError
+            raise NoStringsExtractedError
 
         # TODO: Improve this to work with modfiles from multiple original mods or to get at least the original mod with the most mod files
         modfile: Path = list(strings.keys())[0]
@@ -198,14 +197,6 @@ class Worker(QThread):
         translation.strings = strings
         translation.save()
         DatabaseService.add_translation(translation, self.database)
-
-        Importer().extract_additional_files(
-            archive_path=downloaded_file,
-            original_mod=original_mod,
-            translation_path=translation.path,
-            tmp_dir=self.app_config.get_tmp_dir(),
-            user_config=self.user_config,
-        )
 
     @override
     def run(self) -> None:

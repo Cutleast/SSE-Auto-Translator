@@ -15,6 +15,7 @@ from PySide6.QtCore import QObject, Signal
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.string import String, StringList
+from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from core.utilities.game_language import GameLanguage
@@ -326,7 +327,8 @@ class Editor(QObject):
                 matching_string.string = translated
 
                 if (
-                    legacy_string.get("type") == matching_string.type
+                    isinstance(matching_string, PluginString)
+                    and legacy_string.get("type") == matching_string.type
                     and legacy_string.get("editor_id") == matching_string.editor_id
                     and legacy_string.get("index") == matching_string.index
                 ):

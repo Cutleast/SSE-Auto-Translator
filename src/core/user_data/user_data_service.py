@@ -120,20 +120,14 @@ class UserDataService(SingletonQObject):
     def __load_modinstance(
         self, user_config: UserConfig, ldialog: Optional[LoadingDialog[UserData]] = None
     ) -> ModInstance:
-        include_bsas: bool = any(
-            (
-                user_config.enable_interface_files,
-                user_config.enable_scripts,
-                user_config.enable_textures,
-                user_config.enable_sound_files,
-            )
-        )
-
         if user_config.modinstance is not None:
             self.log.info("Loading modinstance...")
 
             return ModInstanceLoader().load_instance(
-                user_config.modinstance, user_config.language, include_bsas, ldialog
+                instance_info=user_config.modinstance,
+                language=user_config.language,
+                include_bsas=user_config.parse_bsa_archives,
+                ldialog=ldialog,
             )
 
         self.log.info("No modinstance configured. Creating empty modinstance...")

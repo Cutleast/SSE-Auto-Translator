@@ -3,11 +3,13 @@ Copyright (c) Cutleast
 """
 
 import logging
+from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from typing import Optional
 
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
+from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
@@ -95,13 +97,32 @@ class ModInstanceLoader(QObject):
 
         mod_file_service = ModFileService()
 
-        for mod in mods:
-            if mod.mod_type != Mod.Type.Regular:
-                continue
+        futures: dict[Future[list[ModFile]], Mod] = {}
+        with ThreadPoolExecutor(
+            thread_name_prefix="ModInstanceLoaderThread"
+        ) as executor:
+            for mod in mods:
+                if mod.mod_type != Mod.Type.Regular:
+                    continue
 
-            mod.files  # Trigger lazy loading
-            mod.modfiles = mod_file_service.get_modfiles_from_mod(
-                mod, language, include_bsas, ldialog
-            )
+                future: Future[list[ModFile]] = executor.submit(
+                    mod_file_service.get_modfiles_from_mod,
+                    mod=mod,
+                    language=language,
+                    include_bsas=include_bsas,
+                    ldialog=ldialog,
+                )
+                futures[future] = mod
+
+        for future in as_completed(futures):
+            mod = futures[future]
+
+            try:
+                mod.modfiles = future.result()
+            except Exception as ex:
+                self.log.error(
+                    f"Error loading mod files for mod '{mod.name}': {ex}", exc_info=ex
+                )
+                mod.modfiles = []
 
         self.log.info("Mod file index built.")

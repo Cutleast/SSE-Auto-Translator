@@ -157,7 +157,6 @@ class ModOrganizerApi(ModManagerApi[Mo2InstanceInfo]):
                     else Mod.Type.Regular
                 ),
             )
-            mod.files  # build cache for mod files
             mods.append(mod)
 
         self.log.info(

@@ -47,6 +47,9 @@ def relative_data_path(file: str) -> str:
         str: Relative path to data folder.
     """
 
+    if Path(file).suffix.lower() in [".esm", ".esp", ".esl"]:
+        return Path(file).name
+
     file = file.replace("\\", "/")
 
     filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
@@ -57,43 +60,6 @@ def relative_data_path(file: str) -> str:
             return file[index + 1 :]
 
     return file
-
-
-def parse_path(path: Path) -> tuple[Optional[Path], Optional[Path]]:
-    """
-    Parses path and returns tuple with two components:
-    bsa path and file path
-
-    Examples:
-        ```python
-            path = 'C:/Modding/RaceMenu/RaceMenu.bsa/interface/racesex_menu.swf'
-            => (
-                'C:/Modding/RaceMenu/RaceMenu.bsa',
-                'interface/racesex_menu.swf'
-            )
-        ```
-
-    Args:
-        path (Path): Path to parse.
-
-    Returns:
-        tuple[Optional[Path], Optional[Path]]: Tuple with bsa path and file path.
-    """
-
-    bsa_path = file_path = None
-
-    parts: list[str] = []
-
-    for part in path.parts:
-        parts.append(part)
-
-        if part.endswith(".bsa"):
-            bsa_path = Path("/".join(parts))
-            parts.clear()
-    if parts:
-        file_path = Path("/".join(parts))
-
-    return (bsa_path, file_path)
 
 
 def split_path_with_bsa(path: Path) -> tuple[Optional[Path], Optional[Path]]:

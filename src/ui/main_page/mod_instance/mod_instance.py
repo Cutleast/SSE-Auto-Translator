@@ -27,7 +27,6 @@ from PySide6.QtWidgets import (
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
-from core.database.importer import Importer
 from core.database.translation import Translation
 from core.file_source.bsa_file_source import BsaFileSource
 from core.file_source.file_source import FileSource
@@ -39,6 +38,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.plugin_interface import plugin as esp
 from core.string import StringList
+from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
@@ -282,10 +282,10 @@ class ModInstanceWidget(QTreeWidget):
 
     @staticmethod
     def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
-        display_name: str = str(modfile.path)
+        display_name: str = str(modfile.path).replace("\\", "/")
         file_source: FileSource = FileSource.from_file(modfile.full_path)
         if isinstance(file_source, BsaFileSource):
-            display_name = f"{file_source.get_bsa_path().name}/{display_name}"
+            display_name = f"{file_source.get_archive_path().name}/{display_name}"
 
         modfile_item = QTreeWidgetItem(
             [
@@ -598,7 +598,9 @@ class ModInstanceWidget(QTreeWidget):
 
                 if original_mod is not None:
                     strings: dict[Path, StringList] = (
-                        Importer.import_mod_as_translation(current_item, original_mod)
+                        StringExtractor.map_strings_from_mods(
+                            current_item, original_mod
+                        )
                     )
                     DatabaseService.create_translation_from_mod(
                         current_item, original_mod, strings, self.database

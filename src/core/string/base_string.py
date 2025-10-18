@@ -46,7 +46,8 @@ class BaseString(BaseModel, ABC):
     @abstractmethod
     def id(self) -> str:
         """
-        Generates a unique ID for the string. Intended only for internal use.
+        Generates an ID for the string. It is used to uniquely identify a string within
+        its mod file.
         """
 
     @abstractmethod

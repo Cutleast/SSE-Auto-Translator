@@ -38,3 +38,25 @@ class PluginFile(ModFile):
     @override
     def _extract_strings(self) -> StringList:
         return Plugin(self.full_path).extract_strings(unfiltered=True)
+
+    @override
+    def dump_strings(
+        self,
+        strings: StringList,
+        output_folder: Path,
+        use_dsd_format: bool,
+        output_mod: bool = False,
+    ) -> None:
+        from core.database.exporter import Exporter
+
+        if use_dsd_format:
+            Exporter.export_strings_to_dsd(
+                strings, self.path, output_folder, output_mod=output_mod
+            )
+        else:
+            plugin = Plugin(self.full_path)
+            plugin.replace_strings(strings)
+
+            output_file: Path = output_folder / self.path
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            output_file.write_bytes(plugin.dump())

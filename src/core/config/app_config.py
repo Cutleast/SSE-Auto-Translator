@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import tempfile
 from pathlib import Path
 from typing import Optional, override
 
@@ -67,23 +66,6 @@ class AppConfig(BaseAppConfig):
     Whether to show strings when a mod or mod file is double clicked in the modlist or a
     translation in the "Translations" tab.
     """
-
-    _tmp_dir: Optional[Path] = None
-
-    def get_tmp_dir(self) -> Path:
-        """
-        Returns the path to the temporary directory. Creates one if it doesn't exist.
-
-        Returns:
-            Path: Path to the temporary directory
-        """
-
-        if self._tmp_dir is None:
-            self._tmp_dir = Path(
-                tempfile.mkdtemp(prefix="SSE-AT_temp-", dir=self.temp_path)
-            )
-
-        return self._tmp_dir
 
     @override
     @staticmethod

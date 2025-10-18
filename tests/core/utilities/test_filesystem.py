@@ -7,7 +7,7 @@ from typing import Optional, TypeVar
 
 import pytest
 
-from core.utilities.filesystem import parse_path
+from core.utilities.filesystem import split_path_with_bsa
 
 T = TypeVar("T")
 
@@ -17,7 +17,7 @@ class TestFilesystem:
     Tests `core.utilities.filesystem`.
     """
 
-    TEST_PARSE_PATH_DATA: list[tuple[Path, Optional[Path], Optional[Path]]] = [
+    TEST_SPLIT_BSA_PATH_DATA: list[tuple[Path, Optional[Path], Optional[Path]]] = [
         (
             Path("C:\\Modding\\Test.bsa\\Test.txt"),
             Path("C:\\Modding\\Test.bsa"),
@@ -33,22 +33,22 @@ class TestFilesystem:
     ]
 
     @pytest.mark.parametrize(
-        "input_path, expected_bsa_path, expected_file_path", TEST_PARSE_PATH_DATA
+        "input_path, expected_bsa_path, expected_file_path", TEST_SPLIT_BSA_PATH_DATA
     )
-    def test_parse_path(
+    def test_split_path_with_bsa(
         self,
         input_path: Path,
         expected_bsa_path: Optional[Path],
         expected_file_path: Optional[Path],
     ) -> None:
         """
-        Tests `core.utilities.filesystem.parse_path()`.
+        Tests `core.utilities.filesystem.split_path_with_bsa()`.
         """
 
         # when
         real_bsa_path: Optional[Path]
         real_file_path: Optional[Path]
-        real_bsa_path, real_file_path = parse_path(input_path)
+        real_bsa_path, real_file_path = split_path_with_bsa(input_path)
 
         # then
         assert real_bsa_path == expected_bsa_path

@@ -8,8 +8,6 @@ from abc import ABCMeta, abstractmethod
 from pathlib import Path
 from typing import BinaryIO, override
 
-from cutleast_core_lib.core.cache.function_cache import FunctionCache
-
 
 class FileSource(metaclass=ABCMeta):
     """
@@ -82,7 +80,6 @@ class FileSource(metaclass=ABCMeta):
         """
 
     @staticmethod
-    @FunctionCache.cache
     def from_file(file_path: Path) -> FileSource:
         """
         Returns a file source suited for accessing a given file.
@@ -94,10 +91,13 @@ class FileSource(metaclass=ABCMeta):
             FileSource: File source for the file.
         """
 
+        from .archive_file_source import ArchiveFileSource
         from .bsa_file_source import BsaFileSource
         from .local_file_source import LocalFileSource
 
         if BsaFileSource.can_handle(file_path):
             return BsaFileSource(file_path)
+        elif ArchiveFileSource.can_handle(file_path):
+            return ArchiveFileSource(file_path)
 
         return LocalFileSource(file_path)

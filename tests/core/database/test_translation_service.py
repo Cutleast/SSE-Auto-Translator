@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 
 from core.database.translation_service import TranslationService
-from core.string import StringList
+from core.string import String, StringList
 from core.string.plugin_string import PluginString
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
@@ -98,9 +98,9 @@ class TestTranslationService(CoreTest):
     )
     def test_update_string(
         self,
-        string_to_update: PluginString,
+        string_to_update: String,
         existing_strings: StringList,
-        expected_string: PluginString,
+        expected_string: String,
     ) -> None:
         """
         Tests `TranslationService.update_string()`.
@@ -114,10 +114,10 @@ class TestTranslationService(CoreTest):
         # given
         input_hash: int = CoreTest.calc_unique_string_hash(string_to_update)
         expected_hash: int = CoreTest.calc_unique_string_hash(expected_string)
-        existing_strings_by_id: dict[str, PluginString] = {
+        existing_strings_by_id: dict[str, String] = {
             string.id: string for string in existing_strings
         }
-        existing_strings_by_original: dict[str, PluginString] = {
+        existing_strings_by_original: dict[str, String] = {
             string.original: string for string in existing_strings
         }
 

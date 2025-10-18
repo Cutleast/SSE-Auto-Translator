@@ -3,7 +3,6 @@ Copyright (c) Cutleast
 """
 
 import os
-import shutil
 import subprocess
 import webbrowser
 from argparse import Namespace
@@ -266,11 +265,14 @@ class App(BaseApp, Singleton):
         if self.__component_provider is not None:
             self.__component_provider.get_download_manager().stop()
 
+            try:
+                self.__component_provider.get_temp_folder_provider().clean_temp_folder()
+            except Exception as ex:
+                self.log.error(f"Failed to clean temp folder: {ex}", exc_info=ex)
+
         if NXMHandler.has_instance() and NXMHandler.get().is_bound():
             NXMHandler.get().unbind()
             self.log.info("Unbound Nexus Mods Links.")
-
-        shutil.rmtree(cast(AppConfig, self.app_config).get_tmp_dir())
 
     def get_execution_command(self) -> str:
         """

@@ -6,13 +6,13 @@ from pathlib import Path
 
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
-from core.database.importer import Importer
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.string import StringList
 from core.string.plugin_string import PluginString
+from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
@@ -118,7 +118,7 @@ class TestDatabaseService(CoreTest):
 
         # when
         translation_strings: dict[Path, StringList] = (
-            Importer.import_mod_as_translation(translated_mod, original_mod)
+            StringExtractor.map_strings_from_mods(translated_mod, original_mod)
         )
         created_translation: Translation = DatabaseService.create_translation_from_mod(
             translated_mod,

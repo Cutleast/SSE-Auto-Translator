@@ -17,7 +17,7 @@ from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.constants import DSD_FILE_PATTERN
-from core.utilities.filesystem import parse_path
+from core.utilities.filesystem import split_path_with_bsa
 
 
 class Mod(BaseModel):
@@ -68,7 +68,8 @@ class Mod(BaseModel):
         """
 
         return [
-            str(parse_path(file)[1]).lower().replace("\\", "/") for file in self.files
+            str(split_path_with_bsa(file)[1]).lower().replace("\\", "/")
+            for file in self.files
         ]
 
     @property

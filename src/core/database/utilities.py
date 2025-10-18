@@ -46,9 +46,7 @@ class Utilities(QObject):
 
         matching_files: list[str] = []
 
-        lang: str = user_config.language.id
         PATTERNS: dict[str, bool] = {
-            f"**/interface/**/*_{lang}.txt": user_config.enable_interface_files,
             "**/scripts/*.pex": user_config.enable_scripts,
             "**/textures/**/*.dds": user_config.enable_textures,
             "**/textures/**/*.png": user_config.enable_textures,

@@ -6,6 +6,8 @@ import logging
 from pathlib import Path
 from typing import Optional, override
 
+from core.file_source.file_source import FileSource
+from core.string import StringList
 from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
 
@@ -49,7 +51,7 @@ class Plugin:
         return self.__repr__()
 
     def load(self) -> None:
-        with self.path.open("rb") as stream:
+        with FileSource.from_file(self.path).get_file_stream() as stream:
             self.parse(stream)
 
     def parse(self, stream: Stream) -> None:
@@ -84,6 +86,9 @@ class Plugin:
         return data
 
     def save(self) -> None:
+        if not FileSource.from_file(self.path).is_real_file():
+            raise ValueError(f"File '{self.path}' is not real!")
+
         self.path.write_bytes(self.dump())
 
     @staticmethod
@@ -165,17 +170,17 @@ class Plugin:
 
     def extract_strings(
         self, extract_localized: bool = False, unfiltered: bool = False
-    ) -> list[PluginString]:
+    ) -> StringList:
         """
         Extracts strings from parsed plugin.
 
         Only returns strings that pass a filter if `unfiltered` is False.
         """
 
-        strings: list[PluginString] = []
+        strings: StringList = []
 
         for group in self.groups:
-            current_group: list[PluginString] = list(
+            current_group: StringList = list(
                 self.extract_group_strings(group, extract_localized, unfiltered).keys()
             )
             strings += current_group
@@ -213,12 +218,15 @@ class Plugin:
 
         return string_subrecord
 
-    def replace_strings(self, strings: list[PluginString]) -> None:
+    def replace_strings(self, strings: StringList) -> None:
         """
         Replaces strings in plugin by `strings`.
         """
 
         for string in strings:
+            if not isinstance(string, PluginString):
+                continue
+
             subrecord = self.find_string_subrecord(
                 string.form_id, string.type, string.original, string.index
             )

@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import traceback
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.truncate import truncate_string
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
@@ -126,8 +127,12 @@ class ProgressWidget(QWidget):
         self.__status_label.setWordWrap(True)
 
         if isinstance(exception, LocalizedException):
-            self.__status_label.setText(exception.getLocalizedMessage())
+            self.__status_label.setText(
+                truncate_string(exception.getLocalizedMessage(), 50)
+            )
         else:
-            self.__status_label.setText(traceback.format_exception(exception)[-1])
+            self.__status_label.setText(
+                truncate_string(traceback.format_exception(exception)[-1], 50)
+            )
 
         self.setToolTip("".join(traceback.format_exception(exception)))

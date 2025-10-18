@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from __future__ import annotations
+
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 from pathlib import Path
@@ -99,4 +101,24 @@ class ModFile(metaclass=ABCMeta):
 
         Returns:
             StringList: List of all strings from this file.
+        """
+
+    @abstractmethod
+    def dump_strings(
+        self,
+        strings: StringList,
+        output_folder: Path,
+        use_dsd_format: bool,
+        output_mod: bool = False,
+    ) -> None:
+        """
+        Creates a copy of this mod file at a output folder with its strings replaced.
+
+        Args:
+            strings (StringList): Strings to insert into the file.
+            output_folder (Path): Folder to output the file to.
+            use_dsd_format (bool): Whether to use the Dynamic String Distributor format.
+            output_mod (bool, optional):
+                Whether the export is used in the output mod. May affect filenames.
+                Defaults to False.
         """

@@ -36,6 +36,11 @@ class UserConfig(BaseConfig):
     provider_preference: ProviderPreference = ProviderPreference.OnlyNexusMods
     """Preferred translation provider."""
 
+    use_dynamic_string_distributor: bool = True
+    """
+    Whether to export strings from plugin files in the DynamicStringDistributor format.
+    """
+
     enable_interface_files: bool = True
     """Whether to include interface files when importing translations."""
 

@@ -6,9 +6,10 @@ from typing import TypeAlias, TypeVar
 
 from pydantic import TypeAdapter
 
+from .interface_string import InterfaceString
 from .plugin_string import PluginString
 
-String: TypeAlias = PluginString
+String: TypeAlias = PluginString | InterfaceString
 """Type alias for strings."""
 
 StringType = TypeVar("StringType", bound=String)
