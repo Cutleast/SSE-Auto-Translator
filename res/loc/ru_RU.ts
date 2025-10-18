@@ -1931,43 +1931,33 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StringSearchDialog</name>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="44"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="42"/>
         <source>Search for a string...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="59"/>
-        <source>Type</source>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="57"/>
+        <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="70"/>
-        <source>Form ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="81"/>
-        <source>Editor ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="92"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="68"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="102"/>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="104"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="78"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="80"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="116"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="92"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="123"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="99"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>

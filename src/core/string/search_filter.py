@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 from typing import Optional, TypedDict
 
 from core.string import String
-from core.string.plugin_string import PluginString
 
 
 class SearchFilter(TypedDict, total=False):
@@ -13,9 +12,7 @@ class SearchFilter(TypedDict, total=False):
     Typed dictionary for search filters.
     """
 
-    type: str
-    form_id: str
-    editor_id: str
+    id: str
     original: str
     string: str
 
@@ -32,29 +29,14 @@ def matches_filter(filter: SearchFilter, string: String) -> bool:
         bool: True if the string matches the filter, False otherwise.
     """
 
-    type_filter: Optional[str] = filter.get("type")
-    form_id_filter: Optional[str] = filter.get("form_id")
-    editor_id_filter: Optional[str] = filter.get("editor_id")
+    id_filter: Optional[str] = filter.get("id")
     original_filter: Optional[str] = filter.get("original")
     string_filter: Optional[str] = filter.get("string")
 
     matching: bool = True
 
-    if isinstance(string, PluginString) and type_filter:
-        matching = type_filter.lower() in string.type.lower()
-
-    if isinstance(string, PluginString) and form_id_filter and matching:
-        matching = form_id_filter.lower() in (string.form_id or "").lower()
-
-    if (
-        isinstance(string, PluginString)
-        and editor_id_filter
-        and matching
-        and string.editor_id is not None
-    ):
-        matching = editor_id_filter.lower() in string.editor_id.lower()
-    elif isinstance(string, PluginString) and editor_id_filter:
-        matching = False
+    if id_filter and matching:
+        matching = id_filter in string.display_id
 
     if original_filter and matching:
         matching = original_filter.lower() in string.original.lower()

@@ -29,10 +29,8 @@ class StringSearchDialog(QDialog):
 
     __translations: bool
 
-    __type_box: QCheckBox
-    __type_entry: QLineEdit
-    __formid_box: QCheckBox
-    __formid_entry: QLineEdit
+    __id_box: QCheckBox
+    __id_entry: QLineEdit
     __original_box: QRadioButton
     __original_entry: QLineEdit
     __string_box: QRadioButton | QCheckBox
@@ -56,38 +54,16 @@ class StringSearchDialog(QDialog):
         flayout = QFormLayout()
         self.setLayout(flayout)
 
-        self.__type_box = QCheckBox(self.tr("Type"))
-        self.__type_entry = QLineEdit()
-        self.__type_entry.setDisabled(True)
-        self.__type_box.stateChanged.connect(
-            lambda state: self.__type_entry.setEnabled(
+        self.__id_box = QCheckBox(self.tr("ID"))
+        self.__id_entry = QLineEdit()
+        self.__id_entry.setDisabled(True)
+        self.__id_box.stateChanged.connect(
+            lambda state: self.__id_entry.setEnabled(
                 state == Qt.CheckState.Checked.value
             )
         )
-        self.__type_box.clicked.connect(self.__type_entry.setFocus)
-        flayout.addRow(self.__type_box, self.__type_entry)
-
-        self.__formid_box = QCheckBox(self.tr("Form ID"))
-        self.__formid_entry = QLineEdit()
-        self.__formid_entry.setDisabled(True)
-        self.__formid_box.stateChanged.connect(
-            lambda state: self.__formid_entry.setEnabled(
-                state == Qt.CheckState.Checked.value
-            )
-        )
-        self.__formid_box.clicked.connect(self.__formid_entry.setFocus)
-        flayout.addRow(self.__formid_box, self.__formid_entry)
-
-        self.__edid_box = QCheckBox(self.tr("Editor ID"))
-        self.__edid_entry = QLineEdit()
-        self.__edid_entry.setDisabled(True)
-        self.__edid_box.stateChanged.connect(
-            lambda state: self.__edid_entry.setEnabled(
-                state == Qt.CheckState.Checked.value
-            )
-        )
-        self.__edid_box.clicked.connect(self.__edid_entry.setFocus)
-        flayout.addRow(self.__edid_box, self.__edid_entry)
+        self.__id_box.clicked.connect(self.__id_entry.setFocus)
+        flayout.addRow(self.__id_box, self.__id_entry)
 
         self.__original_box = QRadioButton(self.tr("Original"))
         self.__original_entry = QLineEdit()
@@ -139,14 +115,8 @@ class StringSearchDialog(QDialog):
 
         filter: SearchFilter = {}
 
-        if self.__type_box.isChecked():
-            filter["type"] = self.__type_entry.text()
-
-        if self.__formid_box.isChecked():
-            filter["form_id"] = self.__formid_entry.text()
-
-        if self.__edid_box.isChecked():
-            filter["editor_id"] = self.__edid_entry.text()
+        if self.__id_box.isChecked():
+            filter["id"] = self.__id_entry.text()
 
         if (
             self.__original_box.isChecked()

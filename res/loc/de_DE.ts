@@ -1938,43 +1938,33 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringSearchDialog</name>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="44"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="42"/>
         <source>Search for a string...</source>
         <translation>Nach String suchen...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="59"/>
-        <source>Type</source>
-        <translation>Typ</translation>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="57"/>
+        <source>ID</source>
+        <translation type="unfinished">ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="70"/>
-        <source>Form ID</source>
-        <translation>Form ID</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="81"/>
-        <source>Editor ID</source>
-        <translation>Editor ID</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="92"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="68"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="102"/>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="104"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="78"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="80"/>
         <source>String</source>
         <translation>String</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="116"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="92"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_search_dialog.py" line="123"/>
+        <location filename="src/ui/widgets/string_search_dialog.py" line="99"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
