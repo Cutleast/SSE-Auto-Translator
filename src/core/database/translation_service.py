@@ -46,10 +46,12 @@ class TranslationService:
                 )
 
         # then load the entire translation at once
-        json_files: list[Path] = list(translation_folder.glob("*.json"))
+        json_files: list[Path] = list(translation_folder.rglob("*.json"))
         strings: dict[Path, StringList] = {}
         for json_file in json_files:
-            modfile_path = Path(json_file.stem)
+            modfile_path = json_file.with_name(json_file.stem).relative_to(
+                translation_folder
+            )
             try:
                 strings[modfile_path] = StringLoader.load_strings_from_json_file(
                     json_file
