@@ -50,6 +50,13 @@ class BaseString(BaseModel, ABC):
         its mod file.
         """
 
+    @property
+    @abstractmethod
+    def display_id(self) -> str:
+        """
+        A formatted variant of the ID property to be displayed to the user.
+        """
+
     @abstractmethod
     def get_localized_info(self) -> str:
         """

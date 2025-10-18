@@ -1459,22 +1459,22 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="56"/>
+        <location filename="src/core/string/plugin_string.py" line="72"/>
         <source>Form ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="60"/>
+        <location filename="src/core/string/plugin_string.py" line="76"/>
         <source>Editor ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="63"/>
+        <location filename="src/core/string/plugin_string.py" line="79"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="65"/>
+        <location filename="src/core/string/plugin_string.py" line="81"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2358,7 +2358,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="171"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="259"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="260"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2373,37 +2373,37 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="261"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="262"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="267"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="268"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="268"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="269"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="298"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="299"/>
         <source>String was modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="301"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="302"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="309"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="310"/>
         <source>Don&apos;t save and continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="312"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="313"/>
         <source>Save and continue</source>
         <translation type="unfinished"></translation>
     </message>

@@ -50,6 +50,22 @@ class PluginString(BaseString):
 
         return f"{self.form_id[2:].lower()}###{self.editor_id}###{self.type}###{self.index}"
 
+    @property
+    @override
+    def display_id(self) -> str:
+        fields: list[str] = []
+        fields.append(self.form_id)
+
+        if self.editor_id is not None:
+            fields.append(self.editor_id)
+
+        fields.append(self.type)
+
+        if self.index is not None:
+            fields.append(str(self.index))
+
+        return " - ".join(fields)
+
     @override
     def get_localized_info(self) -> str:
         info: str = ""

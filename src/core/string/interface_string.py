@@ -21,6 +21,11 @@ class InterfaceString(BaseString):
     def id(self) -> str:
         return self.mcm_id
 
+    @property
+    @override
+    def display_id(self) -> str:
+        return self.mcm_id
+
     @override
     def get_localized_info(self) -> str:
         return f"ID: {self.mcm_id}"

@@ -1467,22 +1467,22 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="56"/>
+        <location filename="src/core/string/plugin_string.py" line="72"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="60"/>
+        <location filename="src/core/string/plugin_string.py" line="76"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="63"/>
+        <location filename="src/core/string/plugin_string.py" line="79"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="65"/>
+        <location filename="src/core/string/plugin_string.py" line="81"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -2363,7 +2363,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="171"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="259"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="260"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
@@ -2378,37 +2378,37 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="261"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="262"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="267"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="268"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="268"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="269"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="298"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="299"/>
         <source>String was modified</source>
         <translation>String wurde verändert</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="301"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="302"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="309"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="310"/>
         <source>Don&apos;t save and continue</source>
         <translation>Nicht speichern und fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="312"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="313"/>
         <source>Save and continue</source>
         <translation>Speichern und fortfahren</translation>
     </message>

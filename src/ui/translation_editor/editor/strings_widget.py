@@ -110,7 +110,7 @@ class StringsWidget(QTreeWidget):
     def __create_string_item(self, string: String) -> StringItem:
         item = StringItem(
             [
-                string.id,
+                string.display_id,
                 trim_string(string.original),
                 trim_string(string.string or string.original),
             ]
@@ -146,7 +146,7 @@ class StringsWidget(QTreeWidget):
             item.setText(1, trim_string(string.original))
             item.setText(2, trim_string(string.string or string.original))
 
-            string_text: str = string.id + string.original
+            string_text: str = string.display_id + string.original
             if string.string is not None:
                 string_text += string.string
 

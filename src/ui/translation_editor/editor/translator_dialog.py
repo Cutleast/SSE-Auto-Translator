@@ -215,7 +215,8 @@ class TranslatorDialog(QWidget):
         current_index: int = self.__parent.get_index(self.__current_string)
 
         title: str = (
-            f"{self.__current_string.id} ({current_index + 1}/{visible_string_count})"
+            f"{self.__current_string.display_id} ({current_index + 1}/"
+            f"{visible_string_count})"
         )
         if self.changes_pending:
             title += "*"

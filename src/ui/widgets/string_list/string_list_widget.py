@@ -153,7 +153,7 @@ class StringListWidget(QWidget):
         )
 
         for string, item in self.__string_items.items():
-            string_text: str = string.id + string.original
+            string_text: str = string.display_id + string.original
             if string.string is not None:
                 string_text += string.string
 
@@ -189,7 +189,7 @@ class StringListWidget(QWidget):
 
         # TODO: Add info box with details about the string
         dialog = QDialog(self)
-        dialog.setWindowTitle(string.id)
+        dialog.setWindowTitle(string.display_id)
         dialog.setMinimumSize(800, 500)
 
         vlayout = QVBoxLayout()
@@ -255,13 +255,13 @@ class StringListWidget(QWidget):
     def __create_string_item(self, string: String) -> QTreeWidgetItem:
         item = QTreeWidgetItem(
             [
-                string.id,
+                string.display_id,
                 trim_string(string.original),
                 trim_string(string.string or string.original),
             ]
         )
 
-        item.setToolTip(0, string.id)
+        item.setToolTip(0, string.display_id)
         item.setToolTip(1, string.original)
         item.setToolTip(2, string.string or string.original)
 
