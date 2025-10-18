@@ -41,18 +41,6 @@ class UserConfig(BaseConfig):
     Whether to export strings from plugin files in the DynamicStringDistributor format.
     """
 
-    enable_interface_files: bool = True
-    """Whether to include interface files when importing translations."""
-
-    enable_scripts: bool = False
-    """Whether to include scripts when importing translations."""
-
-    enable_textures: bool = False
-    """Whether to include textures when importing translations."""
-
-    enable_sound_files: bool = False
-    """Whether to include sound files when importing translations."""
-
     author_blacklist: list[str] = []
     """List of authors to ignore when scanning for translations."""
 

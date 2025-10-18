@@ -3,12 +3,13 @@ Copyright (c) Cutleast
 """
 
 import logging
+import os
 import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 from pathlib import Path
 from typing import NoReturn, Optional, override
 
-from core.database.exporter import Exporter
+from core.database.translation_service import TranslationService
 from core.plugin_interface.plugin import Plugin
 from core.string import StringList
 from core.string.string_utils import StringUtils
@@ -185,11 +186,25 @@ class Esp2Dsd(Utility):
             original_strings, translated_strings
         )
 
-        output_file_path: Path = Exporter.export_strings_to_dsd(
-            mapped_strings,
-            Path(original_plugin_path.name),
-            output_path or Path("esp2dsd Output"),
+        if output_path is None:
+            output_path = Path("esp2dsd Output")
+
+        plugin_folder: Path = (
+            output_path
+            / "SKSE"
+            / "Plugins"
+            / "DynamicStringDistributor"
+            / original_plugin_path.name
         )
+        plugin_folder.mkdir(parents=True, exist_ok=True)
+
+        output_file_path: Path = (
+            plugin_folder / f"{len(os.listdir(plugin_folder))}.json"
+        )
+        TranslationService.save_strings_to_json_file(
+            output_file_path, mapped_strings, indent=4
+        )
+
         self.log.debug(f"Created output file at '{output_file_path}'.")
 
         return output_file_path

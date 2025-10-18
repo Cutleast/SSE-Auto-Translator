@@ -58,7 +58,7 @@ class ModFileService(QObject):
         modfiles: list[ModFile] = []
         for file_type in MODFILE_TYPES:
             for pattern in file_type.get_glob_patterns(language.id):
-                for path in map(Path, mod.glob(pattern)):
+                for path in mod.path.glob(pattern):
                     modfiles.append(file_type(path.name, mod.path / path))
 
         if include_bsas:
@@ -92,7 +92,7 @@ class ModFileService(QObject):
 
         self.log.info(f"Scanning '{bsa_file}' for mod files...")
 
-        bsa_files: list[Path] = BsaFileProvider.get_file_list(bsa_file)
+        bsa_files: list[Path] = BsaFileProvider.get_cached_file_list(bsa_file)
 
         modfiles: list[ModFile] = []
         for file_type in MODFILE_TYPES:
@@ -103,38 +103,6 @@ class ModFileService(QObject):
                 for path_str in glob(pattern, bsa_files):
                     path = Path(path_str)
                     modfiles.append(file_type(path.name, bsa_file / path))
-
-        self.log.info(f"Found {len(modfiles)} mod files.")
-
-        return modfiles
-
-    def get_modfiles_from_archive(
-        self,
-        archive_file: Path,
-        language: GameLanguage,
-        ldialog: Optional[LoadingDialog] = None,
-    ) -> list[ModFile]:
-        """
-        Scans the specified archive recursively and returns all mod files.
-
-        Args:
-            archive_file (Path): Path to archive.
-            language (GameLanguage): Language to filter for.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
-
-        Returns:
-            list[ModFile]: List of mod files.
-        """
-
-        self.log.info(f"Scanning '{archive_file}' for mod files...")
-
-        modfiles: list[ModFile] = []
-        for file_type in MODFILE_TYPES:
-            for pattern in file_type.get_glob_patterns(language.id):
-                for path_str in BsaFileProvider.glob("**/" + pattern, archive_file):
-                    path = Path(path_str)
-                    modfiles.append(file_type(path.name, archive_file / path))
 
         self.log.info(f"Found {len(modfiles)} mod files.")
 

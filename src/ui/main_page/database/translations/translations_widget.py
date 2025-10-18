@@ -471,11 +471,12 @@ class TranslationsWidget(QTreeWidget):
         selected_folder: str = os.path.normpath(file_dialog.selectedFiles()[0])
         folder = Path(selected_folder)
 
-        match export_format:
-            case ExportDialog.ExportFormat.DSD:
-                Exporter.export_translation_dsd(current_item, folder)
-            case ExportDialog.ExportFormat.ESP:
-                Exporter.export_translation_esp(current_item, folder, self.mod_instance)
+        Exporter.export_translation(
+            translation=current_item,
+            mod_instance=self.mod_instance,
+            output_path=folder,
+            use_dsd_format=export_format == ExportDialog.ExportFormat.DSD,
+        )
 
         QMessageBox.information(
             QApplication.activeModalWidget() or self,

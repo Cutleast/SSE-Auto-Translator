@@ -44,11 +44,7 @@ class UserSettings(SettingsPage[UserConfig]):
     __masterlist_box: QCheckBox
 
     __modinstance_selector: InstanceSelectorWidget
-
-    __enable_interface_files_box: QCheckBox
-    __enable_scripts_box: QCheckBox
-    __enable_textures_box: QCheckBox
-    __enable_sound_files_box: QCheckBox
+    __parse_bsas_checkbox: QCheckBox
 
     __author_blacklist: list[str]
 
@@ -63,7 +59,6 @@ class UserSettings(SettingsPage[UserConfig]):
 
         self.__init_translations_settings()
         self.__init_instance_settings()
-        self.__init_file_type_settings()
 
         self.__author_blacklist = self._initial_config.author_blacklist.copy()
 
@@ -153,57 +148,20 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__modinstance_selector.changed.connect(self.restart_required_signal.emit)
         instance_vlayout.addWidget(self.__modinstance_selector)
 
-    def __init_file_type_settings(self) -> None:
-        filetypes_group = QGroupBox(self.tr("Enabled File Types"))
-        self.__vlayout.addWidget(filetypes_group)
-        filetypes_vlayout = QVBoxLayout()
-        filetypes_group.setLayout(filetypes_vlayout)
-
-        self.__enable_interface_files_box = QCheckBox(
-            self.tr("Enable Interface Files (Data/Interface/*.txt)")
+        self.__parse_bsas_checkbox = QCheckBox(
+            self.tr(
+                "Parse BSA archives (This may slow down app startup depending on the "
+                "size of your modlist!)"
+            )
         )
-        self.__enable_interface_files_box.setChecked(
-            self._initial_config.enable_interface_files
-        )
-        self.__enable_interface_files_box.stateChanged.connect(
+        self.__parse_bsas_checkbox.setChecked(self._initial_config.parse_bsa_archives)
+        self.__parse_bsas_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
-        filetypes_vlayout.addWidget(self.__enable_interface_files_box)
-
-        self.__enable_scripts_box = QCheckBox(
-            self.tr("Enable Scripts (Data/Scripts/*.pex)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
+        self.__parse_bsas_checkbox.stateChanged.connect(
+            lambda _: self.restart_required_signal.emit()
         )
-        self.__enable_scripts_box.setChecked(self._initial_config.enable_scripts)
-        self.__enable_scripts_box.stateChanged.connect(
-            lambda _: self.changed_signal.emit()
-        )
-        filetypes_vlayout.addWidget(self.__enable_scripts_box)
-
-        self.__enable_textures_box = QCheckBox(
-            self.tr("Enable Textures (Data/Textures/*)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
-        )
-        self.__enable_textures_box.setChecked(self._initial_config.enable_textures)
-        self.__enable_textures_box.stateChanged.connect(
-            lambda _: self.changed_signal.emit()
-        )
-        filetypes_vlayout.addWidget(self.__enable_textures_box)
-
-        self.__enable_sound_files_box = QCheckBox(
-            self.tr("Enable Sound Files (Data/Sound/*)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
-        )
-        self.__enable_sound_files_box.setChecked(
-            self._initial_config.enable_sound_files
-        )
-        self.__enable_sound_files_box.stateChanged.connect(
-            lambda _: self.changed_signal.emit()
-        )
-        filetypes_vlayout.addWidget(self.__enable_sound_files_box)
+        instance_vlayout.addWidget(self.__parse_bsas_checkbox)
 
     def __on_lang_change(self, lang: GameLanguage) -> None:
         self.__source_label.setEnabled(lang == GameLanguage.French)
@@ -268,7 +226,4 @@ class UserSettings(SettingsPage[UserConfig]):
         config.use_masterlist = self.__masterlist_box.isChecked()
         config.provider_preference = self.__source_box.getCurrentValue()
         config.author_blacklist = self.__author_blacklist
-        config.enable_interface_files = self.__enable_interface_files_box.isChecked()
-        config.enable_scripts = self.__enable_scripts_box.isChecked()
-        config.enable_textures = self.__enable_textures_box.isChecked()
-        config.enable_sound_files = self.__enable_sound_files_box.isChecked()
+        config.parse_bsa_archives = self.__parse_bsas_checkbox.isChecked()

@@ -41,17 +41,6 @@ class TestUserSettings(BaseTest):
         InstanceSelectorWidget,
     )
 
-    ENABLE_INTERFACE_FILES_BOX: tuple[str, type[QCheckBox]] = (
-        "enable_interface_files_box",
-        QCheckBox,
-    )
-    ENABLE_SCRIPTS_BOX: tuple[str, type[QCheckBox]] = "enable_scripts_box", QCheckBox
-    ENABLE_TEXTURES_BOX: tuple[str, type[QCheckBox]] = "enable_textures_box", QCheckBox
-    ENABLE_SOUND_FILES_BOX: tuple[str, type[QCheckBox]] = (
-        "enable_sound_files_box",
-        QCheckBox,
-    )
-
     @pytest.fixture
     def user_settings(self, user_data: UserData, qtbot: QtBot) -> UserSettings:
         """
@@ -84,19 +73,6 @@ class TestUserSettings(BaseTest):
             user_settings, *TestUserSettings.MASTERLIST_BOX
         )
 
-        enable_interface_files_box: QCheckBox = Utils.get_private_field(
-            user_settings, *TestUserSettings.ENABLE_INTERFACE_FILES_BOX
-        )
-        enable_scripts_box: QCheckBox = Utils.get_private_field(
-            user_settings, *TestUserSettings.ENABLE_SCRIPTS_BOX
-        )
-        enable_textures_box: QCheckBox = Utils.get_private_field(
-            user_settings, *TestUserSettings.ENABLE_TEXTURES_BOX
-        )
-        enable_sound_files_box: QCheckBox = Utils.get_private_field(
-            user_settings, *TestUserSettings.ENABLE_SOUND_FILES_BOX
-        )
-
         # then
         assert lang_box.getCurrentValue() == user_config.language
         assert source_label.isEnabled() == (user_config.language == GameLanguage.French)
@@ -104,13 +80,6 @@ class TestUserSettings(BaseTest):
         assert source_box.getCurrentValue() == user_config.provider_preference
         assert api_key_entry.text() == user_config.api_key
         assert masterlist_box.isChecked() == user_config.use_masterlist
-
-        assert (
-            enable_interface_files_box.isChecked() == user_config.enable_interface_files
-        )
-        assert enable_scripts_box.isChecked() == user_config.enable_scripts
-        assert enable_textures_box.isChecked() == user_config.enable_textures
-        assert enable_sound_files_box.isChecked() == user_config.enable_sound_files
 
     def test_apply(self, user_settings: UserSettings, user_data: UserData) -> None:
         """

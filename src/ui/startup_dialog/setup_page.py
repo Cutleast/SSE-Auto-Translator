@@ -36,11 +36,6 @@ class SetupPage(Page):
     __masterlist_box: QCheckBox
     __api_setup: ApiSetup
 
-    __interface_files_box: QCheckBox
-    __scripts_box: QCheckBox
-    __textures_box: QCheckBox
-    __sound_files_box: QCheckBox
-
     @override
     def _init_form(self) -> None:
         # TODO: Move the scroll area to the Page class
@@ -87,44 +82,6 @@ class SetupPage(Page):
         )
         self.__masterlist_box.setChecked(True)
         vlayout.addWidget(self.__masterlist_box)
-
-        vlayout.addSpacing(5)
-
-        # Enabled File Types
-        filetypes_groupbox = QGroupBox(self.tr("Enabled File Types"))
-        vlayout.addWidget(filetypes_groupbox)
-        filetypes_vlayout = QVBoxLayout()
-        filetypes_groupbox.setLayout(filetypes_vlayout)
-
-        self.__interface_files_box = QCheckBox(
-            self.tr("Enable Interface Files (Data/Interface/*.txt)")
-        )
-        self.__interface_files_box.setChecked(True)
-        filetypes_vlayout.addWidget(self.__interface_files_box)
-
-        self.__scripts_box = QCheckBox(
-            self.tr("Enable Papyrus Scripts (Data/Scripts/*.pex)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
-        )
-        self.__scripts_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.__scripts_box)
-
-        self.__textures_box = QCheckBox(
-            self.tr("Enable Textures (Data/Textures/*)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
-        )
-        self.__textures_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.__textures_box)
-
-        self.__sound_files_box = QCheckBox(
-            self.tr("Enable Sound Files (Data/Sound/*)")
-            + " "
-            + self.tr("[EXPERIMENTAL]")
-        )
-        self.__sound_files_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.__sound_files_box)
 
         vlayout.addSpacing(5)
 
@@ -186,7 +143,3 @@ class SetupPage(Page):
         config.provider_preference = source
         config.api_key = self.__api_setup.api_key
         config.use_masterlist = self.__masterlist_box.isChecked()
-        config.enable_interface_files = self.__interface_files_box.isChecked()
-        config.enable_scripts = self.__scripts_box.isChecked()
-        config.enable_textures = self.__textures_box.isChecked()
-        config.enable_sound_files = self.__sound_files_box.isChecked()

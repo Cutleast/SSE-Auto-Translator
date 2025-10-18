@@ -43,7 +43,6 @@ from core.string.search_filter import SearchFilter
 from core.translation_provider.provider import Provider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
-from core.utilities.temp_folder_provider import TempFolderProvider
 from ui.downloader.download_list_window import DownloadListWindow
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
@@ -415,7 +414,6 @@ class MainPageWidget(QWidget):
                 self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
                 self.mod_instance,
                 self.user_data.database.user_translations,
-                TempFolderProvider.get().get_temp_folder(),
                 self.user_data.user_config,
                 ldialog,
             ),
