@@ -443,11 +443,24 @@ class StringExtractor(QObject):
             )
 
         # Get strings from DSD files
-        dsd_files: list[str] = translated_mod.dsd_files
+        dsd_files: list[Path] = translated_mod.dsd_files
+        original_modfiles: list[Path] = [
+            modfile.path
+            for modfile in original_mod.modfiles
+            if modfile.status not in ignore_status
+        ]
 
         cls.log.debug(f"Extracting strings from {len(dsd_files)} DSD file(s)...")
         for dsd_file in dsd_files:
             dsd_path: Path = translated_mod.path / dsd_file
+            mod_file = Path(dsd_path.parent.name)
+
+            if mod_file not in original_modfiles:
+                cls.log.debug(
+                    f"Skipped DSD file '{dsd_file}' due to missing original mod file "
+                    f"'{mod_file}'."
+                )
+                continue
 
             try:
                 plugin_strings: StringList = StringLoader.load_strings_from_json_file(
@@ -455,7 +468,7 @@ class StringExtractor(QObject):
                 )
 
                 if len(plugin_strings):
-                    strings.setdefault(Path(dsd_path.parent), []).extend(plugin_strings)
+                    strings.setdefault(mod_file, []).extend(plugin_strings)
             except Exception as ex:
                 cls.log.error(f"Failed to extract from '{dsd_path}': {ex}", exc_info=ex)
 
