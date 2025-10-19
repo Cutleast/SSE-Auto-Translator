@@ -3,14 +3,14 @@ Copyright (c) Cutleast
 """
 
 import logging
-from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.archive.archive import Archive
 from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
-from cutleast_core_lib.core.utilities.progress_thread_pool_executor import (
-    ProgressThreadPoolExecutor,
+from cutleast_core_lib.core.utilities.progress_executor import (
+    ProgressExecutor,
 )
 from cutleast_core_lib.ui.widgets.progress_dialog import (
     ProgressDialog,
@@ -120,53 +120,33 @@ class StringExtractor(QObject):
 
         result: dict[Path, StringList] = {}
 
-        if pdialog is not None:
-            with ProgressThreadPoolExecutor(pdialog) as executor:
-                executor.set_main_progress_text(
-                    self.tr("Extracting strings from '{0}'...").format(input)
+        with ProgressExecutor(pdialog) as executor:
+            executor.set_main_progress_text(
+                self.tr("Extracting strings from '{0}'...").format(input)
+            )
+
+            tasks: dict[Future[StringList], Path] = {}
+            for modfile, original_modfile in original_modfiles.items():
+                future: Future[StringList] = executor.submit(
+                    # necessary as this lambda gets an update callable as first
+                    # positional argument
+                    lambda ucb, mf=modfile, omf=original_modfile: self.process_mod_file(
+                        mf, omf, ucb
+                    ),
+                    modfile,
+                    original_modfile,
                 )
+                tasks[future] = modfile.path
 
-                tasks: dict[Future[StringList], Path] = {}
-                for modfile, original_modfile in original_modfiles.items():
-                    future: Future[StringList] = executor.submit(
-                        # necessary as this lambda gets an update callable as first
-                        # positional argument
-                        lambda ucb,
-                        mf=modfile,
-                        omf=original_modfile: self.process_mod_file(mf, omf, ucb),
-                        modfile,
-                        original_modfile,
+            for future in as_completed(tasks):
+                modfile_path: Path = tasks[future]
+                try:
+                    modfile_strings: StringList = future.result()
+                    result[modfile_path] = modfile_strings
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to process '{modfile_path}': {ex}", exc_info=ex
                     )
-                    tasks[future] = modfile.path
-
-                for future in as_completed(tasks):
-                    modfile_path: Path = tasks[future]
-                    try:
-                        modfile_strings: StringList = future.result()
-                        result[modfile_path] = modfile_strings
-                    except Exception as ex:
-                        self.log.error(
-                            f"Failed to process '{modfile_path}': {ex}", exc_info=ex
-                        )
-
-        else:
-            with ThreadPoolExecutor() as executor:
-                tasks: dict[Future[StringList], Path] = {}
-                for modfile, original_modfile in original_modfiles.items():
-                    future: Future[StringList] = executor.submit(
-                        self.process_mod_file, modfile, original_modfile
-                    )
-                    tasks[future] = modfile.path
-
-                for future in as_completed(tasks):
-                    modfile_path: Path = tasks[future]
-                    try:
-                        modfile_strings: StringList = future.result()
-                        result[modfile_path] = modfile_strings
-                    except Exception as ex:
-                        self.log.error(
-                            f"Failed to process '{modfile_path}': {ex}", exc_info=ex
-                        )
 
         if include_dsd_files:
             result.update(self.extract_dsd_strings(input, mod_instance))
