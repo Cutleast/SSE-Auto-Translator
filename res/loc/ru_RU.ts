@@ -2063,7 +2063,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ToastNotifier</name>
     <message>
-        <location filename="src/ui/toast_notifier.py" line="31"/>
+        <location filename="src/ui/toast_notifier.py" line="32"/>
         <source>All downloads finished!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2281,47 +2281,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="256"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="257"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="427"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="428"/>
         <source>Rename translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="428"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="429"/>
         <source>Enter new translation name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="431"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="432"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="432"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="433"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="465"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="466"/>
         <source>Export translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="483"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="484"/>
         <source>Export successful!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="484"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="485"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="495"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="496"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation type="unfinished">
@@ -2331,7 +2331,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="502"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="503"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation type="unfinished">
@@ -2341,12 +2341,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="511"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="512"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="512"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="513"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

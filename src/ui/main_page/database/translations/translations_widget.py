@@ -188,6 +188,7 @@ class TranslationsWidget(QTreeWidget):
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
+        self.resizeColumnToContents(3)
         self.update_translations()
 
     def update_translations(self) -> None:
