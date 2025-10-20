@@ -100,11 +100,10 @@ class StringsWidget(QTreeWidget):
             modfile_item.setFirstColumnSpanned(True)
 
         self.expandAll()
-        self.resizeColumnToContents(0)
-        # self.resizeColumnToContents(1)
-        # self.header().resizeSection(3, 500)
+        self.header().resizeSection(0, 500)
+        self.header().resizeSection(1, 400)
+        self.header().resizeSection(2, 400)
         self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
-        # self.sortByColumn(1, Qt.SortOrder.AscendingOrder)
         self.update()
 
     def __create_string_item(self, string: String) -> StringItem:
