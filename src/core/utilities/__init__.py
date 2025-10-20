@@ -46,7 +46,7 @@ def trim_string(text: str, max_length: int = 100) -> str:
         str: Trimmed string
     """
 
-    if len(text) > max_length:
+    if len(text) > max_length and max_length > 3:
         trimmed_text = text[: max_length - 3] + "..."
         return f"{trimmed_text!r}"[1:-1]
 

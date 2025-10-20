@@ -256,8 +256,8 @@ class StringListWidget(QWidget):
         item = QTreeWidgetItem(
             [
                 string.display_id,
-                trim_string(string.original),
-                trim_string(string.string or string.original),
+                trim_string(string.original, max_length=-1),
+                trim_string(string.string or string.original, max_length=-1),
             ]
         )
 
