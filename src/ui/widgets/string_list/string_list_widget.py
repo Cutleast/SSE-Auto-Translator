@@ -233,15 +233,13 @@ class StringListWidget(QWidget):
 
         self.expandAll()
 
-        self.__strings_widget.header().resizeSection(0, 130)
-        self.__strings_widget.resizeColumnToContents(1)
-        self.__strings_widget.header().resizeSection(2, 200)
-
         if self.__translation_mode:
-            self.__strings_widget.header().resizeSection(4, 300)
-            self.__strings_widget.header().resizeSection(5, 300)
+            self.__strings_widget.header().resizeSection(0, 500)
+            self.__strings_widget.header().resizeSection(1, 400)
+            self.__strings_widget.header().resizeSection(2, 400)
         else:
-            self.__strings_widget.header().resizeSection(4, 600)
+            self.__strings_widget.header().resizeSection(0, 650)
+            self.__strings_widget.header().resizeSection(1, 650)
 
         if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
             self.collapseAll()
