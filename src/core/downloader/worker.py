@@ -158,7 +158,10 @@ class Worker(QThread):
 
         try:
             strings: dict[Path, StringList] = StringExtractor().extract_strings(
-                downloaded_file, self.mod_instance, self.database.language
+                input=downloaded_file,
+                mod_instance=self.mod_instance,
+                language=self.database.language,
+                max_workers=self.app_config.worker_thread_num,
             )
         except Exception as ex:
             raise InstallationFailedError from ex

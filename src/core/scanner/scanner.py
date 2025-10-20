@@ -3,11 +3,18 @@ Copyright (c) Cutleast
 """
 
 import logging
+from concurrent.futures import Future, as_completed
 from copy import copy
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.progress_executor import ProgressExecutor
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.progress_dialog import (
+    ProgressDialog,
+    UpdateCallback,
+    update,
+)
 from PySide6.QtCore import QObject
 
 from core.config.app_config import AppConfig
@@ -200,20 +207,31 @@ class Scanner(QObject):
         return status
 
     def run_online_scan(
-        self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
+        self, items: dict[Mod, list[ModFile]], pdialog: Optional[ProgressDialog] = None
     ) -> dict[Mod, dict[ModFile, TranslationStatus]]:
         """
         Scans online for available translations.
 
         Args:
             items (dict[Mod, list[ModFile]]): The items to scan.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
+            pdialog (Optional[ProgressDialog], optional):
+                Optional progress dialog. Defaults to None.
 
         Returns:
             dict[Mod, dict[ModFile, TranslationStatus]]:
                 A dictionary of mods, their mod files and their status.
         """
+
+        if pdialog is not None:
+            pdialog.updateMainProgress(
+                ProgressDialog.UpdatePayload(
+                    status_text=self.tr(
+                        "Scanning online for available translations..."
+                    ),
+                    progress_value=0,
+                    progress_max=0,
+                )
+            )
 
         relevant_items: dict[Mod, list[ModFile]] = {
             mod: [
@@ -236,43 +254,59 @@ class Scanner(QObject):
         )
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
-        for m, (mod, modfiles) in enumerate(relevant_items.items()):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    text1=self.tr("Scanning online...")
-                    + f" ({m}/{len(relevant_items.items())})",
-                    value1=m,
-                    max1=len(relevant_items.items()),
-                )
+        with ProgressExecutor(
+            pdialog, max_workers=self.app_config.worker_thread_num
+        ) as executor:
+            executor.set_main_progress_text(
+                self.tr("Scanning online for available translations...")
+            )
 
-            self.log.info(f"Scanning for {mod.name!r}...")
-            scan_result[mod] = self.__online_scan_mod(mod, modfiles, ldialog)
+            tasks: dict[Future[dict[ModFile, TranslationStatus]], Mod] = {}
+            for mod, modfiles in relevant_items.items():
+                future: Future[dict[ModFile, TranslationStatus]] = executor.submit(
+                    # this lambda is necessary as it gets an update callable as first
+                    # positional argument
+                    lambda ucb, m=mod, mfs=modfiles: self.__online_scan_mod(m, mfs, ucb)
+                )
+                tasks[future] = mod
+
+            for future in as_completed(tasks):
+                mod: Mod = tasks[future]
+                try:
+                    mod_scan_result: dict[ModFile, TranslationStatus] = future.result()
+                    scan_result[mod] = mod_scan_result
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to scan for '{mod.name}': {ex}", exc_info=ex
+                    )
 
         self.log.info("Online scan complete.")
 
         return scan_result
 
     def __online_scan_mod(
-        self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
+        self,
+        mod: Mod,
+        modfiles: list[ModFile],
+        update_callback: Optional[UpdateCallback] = None,
     ) -> dict[ModFile, TranslationStatus]:
         if mod.mod_id is None:
             return {}
 
         result: dict[ModFile, TranslationStatus] = {}
         for m, modfile in enumerate(modfiles):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    show2=True,
-                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
-                    value2=m,
-                    max2=len(modfiles),
-                )
+            update(
+                update_callback,
+                ProgressDialog.UpdatePayload(
+                    status_text=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    progress_value=m,
+                    progress_max=len(modfiles),
+                ),
+            )
 
             self.log.info(f"Scanning for {mod.name!r} > {modfile.name!r}...")
             try:
-                result[modfile] = self.__online_scan_modfile(
-                    mod.mod_id, modfile, ldialog
-                )
+                result[modfile] = self.__online_scan_modfile(mod.mod_id, modfile)
             except Exception as ex:
                 self.log.error(
                     f"Failed to scan for {mod.name!r} > {modfile.name!r}: {ex}",
@@ -282,7 +316,7 @@ class Scanner(QObject):
         return result
 
     def __online_scan_modfile(
-        self, mod_id: ModId, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
+        self, mod_id: ModId, modfile: ModFile
     ) -> TranslationStatus:
         available_translations: dict[Source, list[ModId]] = (
             self.provider.get_translations(

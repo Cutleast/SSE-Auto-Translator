@@ -218,6 +218,7 @@ class TranslationsTab(QWidget):
                         file,
                         mod_instance=self.mod_instance,
                         language=self.database.language,
+                        max_workers=self.app_config.worker_thread_num,
                         pdialog=pdialog,
                     )
                 ).run()

@@ -51,6 +51,7 @@ class StringExtractor(QObject):
         mod_instance: ModInstance,
         language: GameLanguage,
         include_dsd_files: bool = True,
+        max_workers: int = 4,
         pdialog: Optional[ProgressDialog] = None,
     ) -> dict[Path, StringList]:
         """
@@ -64,6 +65,8 @@ class StringExtractor(QObject):
             language (GameLanguage): Language to extract strings for.
             include_dsd_files (bool, optional):
                 Whether to include DSD files. Defaults to True.
+            max_workers (int, optional):
+                Maximum number of threads to use. Defaults to 4.
             pdialog (Optional[ProgressDialog], optional):
                 Optional progress dialog. Defaults to None.
 
@@ -120,7 +123,7 @@ class StringExtractor(QObject):
 
         result: dict[Path, StringList] = {}
 
-        with ProgressExecutor(pdialog) as executor:
+        with ProgressExecutor(pdialog, max_workers) as executor:
             executor.set_main_progress_text(
                 self.tr("Extracting strings from '{0}'...").format(input)
             )

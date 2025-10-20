@@ -52,12 +52,13 @@ class AppSettings(SettingsPage[AppConfig]):
     __downloads_path_entry: BrowseLineEdit
 
     __confidence_box: QDoubleSpinBox
+    __download_threads_box: QSpinBox
+    __worker_threads_box: QSpinBox
     __bind_nxm_checkbox: QCheckBox
     __use_spell_check_checkbox: QCheckBox
     __auto_import_checkbox: QCheckBox
     __auto_create_db_translations_checkbox: QCheckBox
     __double_click_strings: QCheckBox
-    __download_threads_box: QSpinBox
 
     def __init__(self, initial_config: AppConfig, cache: Cache) -> None:
         self.cache = cache
@@ -233,6 +234,18 @@ class AppSettings(SettingsPage[AppConfig]):
             self.__download_threads_box,
         )
 
+        self.__worker_threads_box = QSpinBox()
+        self.__worker_threads_box.installEventFilter(self)
+        self.__worker_threads_box.setMinimum(1)
+        self.__worker_threads_box.setValue(self._initial_config.worker_thread_num)
+        self.__worker_threads_box.valueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
+        behavior_flayout.addRow(
+            self.tr("Number of maximum worker threads for some IO tasks"),
+            self.__worker_threads_box,
+        )
+
         self.__bind_nxm_checkbox = QCheckBox(
             "*"
             + self.tr(
@@ -324,6 +337,7 @@ class AppSettings(SettingsPage[AppConfig]):
         config.accent_color = self.__accent_color_entry.text()
         config.detector_confidence = self.__confidence_box.value()
         config.download_thread_num = self.__download_threads_box.value()
+        config.worker_thread_num = self.__worker_threads_box.value()
         config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
         config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
         config.auto_import_translations = self.__auto_import_checkbox.isChecked()

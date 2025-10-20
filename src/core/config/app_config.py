@@ -31,6 +31,9 @@ class AppConfig(BaseAppConfig):
     download_thread_num: int = 1
     """Number of threads to use for downloading translation archives."""
 
+    worker_thread_num: int = 4
+    """Maximum number of worker threads for some IO tasks."""
+
     auto_bind_nxm: bool = False
     """Automatically bind to "Mod Manager Download" Buttons on Nexus Mods on Startup"""
 

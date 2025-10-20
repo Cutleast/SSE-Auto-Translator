@@ -13,6 +13,7 @@ from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor
@@ -350,10 +351,11 @@ class MainPageWidget(QWidget):
             modfiles = self.__modinstance_widget.get_selected_modfiles()
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
-            *LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_online_scan(modfiles, ldialog),
-            ).values()
+            *ProgressDialog(
+                lambda pdialog: self.scanner.run_online_scan(modfiles, pdialog)
+            )
+            .run()
+            .values()
         )
         self.state_service.set_modfile_states(scan_result)
 
