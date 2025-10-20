@@ -28,7 +28,9 @@ class ToastNotifier(QObject):
         """
 
         self.__download_manager = download_manager
-        self.__downloads_finished_toast = Toast(self.tr("All downloads finished!"))
+        self.__downloads_finished_toast = Toast(
+            self.tr("All downloads finished!"), duration=5
+        )
         self.__downloads_finished_toast.setIcon(QApplication.windowIcon())
         self.__download_manager.finished.connect(self.__downloads_finished_toast.show)
         self.__download_manager.finished.connect(lambda: print("SHOWING TOAST..."))
