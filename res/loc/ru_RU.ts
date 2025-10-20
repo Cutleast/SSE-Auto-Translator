@@ -581,22 +581,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>EditorPage</name>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="162"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="164"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="164"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="166"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="170"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="172"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="171"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="173"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

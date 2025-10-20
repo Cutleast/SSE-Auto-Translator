@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.ui.utilities.tree_widget import calculate_required_width
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QHeaderView,
@@ -16,6 +17,7 @@ from PySide6.QtWidgets import (
     QStackedWidget,
     QTreeWidget,
     QTreeWidgetItem,
+    QWidget,
 )
 
 from core.config.app_config import AppConfig
@@ -193,8 +195,6 @@ class EditorPage(QSplitter):
         Opens `translation` in new tab.
         """
 
-        set_width = not self.__tabs
-
         # Create new tab if translation is not already open
         if translation not in self.__tabs:
             translation_item = QTreeWidgetItem([translation.name])
@@ -228,13 +228,12 @@ class EditorPage(QSplitter):
         # Switch to Tab
         self.__set_tab(self.tabs[-1])
 
-        if set_width:
-            self.setSizes(
-                [
-                    int(0.25 * (self.parentWidget() or self).width()),
-                    int(0.75 * (self.parentWidget() or self).width()),
-                ]
-            )
+        # Resize tab list to fit all translation and mod file names
+        new_width: int = calculate_required_width(self.__tab_list_widget, 0)
+        new_width += 100  # for the indentation and second column
+        parent: Optional[QWidget] = self.parentWidget()
+        total_width: int = parent.width() if parent else self.width()
+        self.setSizes([new_width, total_width - new_width])
 
         self.tab_count_updated.emit(len(self.tabs))
         self.update()

@@ -587,22 +587,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>EditorPage</name>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="162"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="164"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="164"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="166"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
         <translation>Bist du sicher, dass du den Tab schließen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="170"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="172"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="171"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="173"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
