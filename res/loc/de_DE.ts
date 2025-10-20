@@ -1637,7 +1637,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="572"/>
+        <location filename="src/core/scanner/scanner.py" line="578"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
@@ -1653,37 +1653,37 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="229"/>
-        <location filename="src/core/scanner/scanner.py" line="261"/>
+        <location filename="src/core/scanner/scanner.py" line="266"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="371"/>
+        <location filename="src/core/scanner/scanner.py" line="377"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="429"/>
+        <location filename="src/core/scanner/scanner.py" line="435"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="496"/>
+        <location filename="src/core/scanner/scanner.py" line="502"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="622"/>
+        <location filename="src/core/scanner/scanner.py" line="628"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="671"/>
+        <location filename="src/core/scanner/scanner.py" line="677"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="769"/>
+        <location filename="src/core/scanner/scanner.py" line="775"/>
         <source>Checking for translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
     </message>

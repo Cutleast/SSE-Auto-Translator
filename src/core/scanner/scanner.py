@@ -233,27 +233,32 @@ class Scanner(QObject):
                 )
             )
 
-        relevant_items: dict[Mod, list[ModFile]] = {
-            mod: [
+        scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
+
+        relevant_items: dict[Mod, list[ModFile]] = {}
+        for mod, modfiles in items.items():
+            relevant_modfiles: list[ModFile] = [
                 modfile
                 for modfile in modfiles
                 if modfile.status == TranslationStatus.RequiresTranslation
             ]
-            for mod, modfiles in items.items()
-            if any(
-                modfile.status == TranslationStatus.RequiresTranslation
-                for modfile in modfiles
-            )
-            and mod.mod_id is not None
-            and self.provider.is_mod_id_valid(mod.mod_id, check_online=False)
-        }
+            if mod.mod_id is not None and self.provider.is_mod_id_valid(
+                mod.mod_id, check_online=False
+            ):
+                relevant_items[mod] = relevant_modfiles
+
+            # mod's source is unknown => no translation available
+            else:
+                scan_result[mod] = {
+                    modfile: TranslationStatus.NoTranslationAvailable
+                    for modfile in modfiles
+                }
 
         self.log.info(
             "Scanning online for available translations "
             f"for {len(relevant_items)} mod(s)..."
         )
 
-        scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
         with ProgressExecutor(
             pdialog, max_workers=self.app_config.worker_thread_num
         ) as executor:
@@ -312,6 +317,7 @@ class Scanner(QObject):
                     f"Failed to scan for {mod.name!r} > {modfile.name!r}: {ex}",
                     exc_info=ex,
                 )
+                result[modfile] = TranslationStatus.NoTranslationAvailable
 
         return result
 

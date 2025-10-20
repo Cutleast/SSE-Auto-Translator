@@ -1627,7 +1627,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="572"/>
+        <location filename="src/core/scanner/scanner.py" line="578"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1643,37 +1643,37 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="229"/>
-        <location filename="src/core/scanner/scanner.py" line="261"/>
+        <location filename="src/core/scanner/scanner.py" line="266"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="371"/>
+        <location filename="src/core/scanner/scanner.py" line="377"/>
         <source>Running deep scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="429"/>
+        <location filename="src/core/scanner/scanner.py" line="435"/>
         <source>Scanning strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="496"/>
+        <location filename="src/core/scanner/scanner.py" line="502"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="622"/>
+        <location filename="src/core/scanner/scanner.py" line="628"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="671"/>
+        <location filename="src/core/scanner/scanner.py" line="677"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="769"/>
+        <location filename="src/core/scanner/scanner.py" line="775"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
