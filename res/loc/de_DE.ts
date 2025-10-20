@@ -910,7 +910,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
-        <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="88"/>
+        <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="89"/>
         <source>Mod manager:</source>
         <translation>Mod Manager:</translation>
     </message>

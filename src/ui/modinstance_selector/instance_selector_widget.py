@@ -72,6 +72,7 @@ class InstanceSelectorWidget(QWidget):
         self.setObjectName("transparent")
 
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(0, 0, 0, 0)
         self.__vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.setLayout(self.__vlayout)
 

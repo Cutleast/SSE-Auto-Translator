@@ -900,7 +900,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
-        <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="88"/>
+        <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="89"/>
         <source>Mod manager:</source>
         <translation type="unfinished"></translation>
     </message>
