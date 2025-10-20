@@ -44,7 +44,7 @@ class StartupDialog(QDialog):
         # Configure window
         self.setWindowFlag(Qt.WindowType.Window, True)
         self.setWindowTitle(self.tr("Welcome!"))
-        self.setFixedSize(900, 610)
+        self.setFixedSize(900, 625)
 
         self.__init_ui()
 
