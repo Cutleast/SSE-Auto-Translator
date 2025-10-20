@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QPushButton,
+    QSizePolicy,
     QTabWidget,
     QVBoxLayout,
     QWidget,
@@ -36,6 +37,7 @@ class ApiSetup(QWidget):
         vlayout = QVBoxLayout()
         vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.setLayout(vlayout)
+        self.setMinimumWidth(600)
 
         api_help_label = QLabel(
             self.tr(
@@ -52,7 +54,7 @@ class ApiSetup(QWidget):
         tab_widget = QTabWidget()
         tab_widget.tabBar().setExpanding(True)
         tab_widget.setObjectName("centered_tab")
-        vlayout.addWidget(tab_widget)
+        vlayout.addWidget(tab_widget, stretch=1)
 
         sso_box = QWidget()
         sso_box.setObjectName("transparent")
@@ -60,6 +62,9 @@ class ApiSetup(QWidget):
         sso_box.setLayout(sso_vlayout)
         sso_button = QPushButton(
             self.tr("Click here to login to Nexus Mods via browser")
+        )
+        sso_button.setSizePolicy(
+            QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding
         )
 
         def start_sso() -> None:

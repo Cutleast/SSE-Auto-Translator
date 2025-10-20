@@ -23,7 +23,6 @@ class ApiSetupDialog(QDialog):
         super().__init__()
 
         self.setWindowTitle(self.tr("Setup Nexus Mods API key..."))
-        self.setMinimumSize(800, 400)
 
         self.__init_ui()
 
@@ -43,7 +42,7 @@ class ApiSetupDialog(QDialog):
 
     def __init_setup(self) -> None:
         self.__api_setup = ApiSetup()
-        self.__vlayout.addWidget(self.__api_setup)
+        self.__vlayout.addWidget(self.__api_setup, stretch=1)
 
     def __init_footer(self) -> None:
         hlayout = QHBoxLayout()

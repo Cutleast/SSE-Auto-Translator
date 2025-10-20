@@ -28,47 +28,47 @@
 <context>
     <name>ApiSetup</name>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="42"/>
+        <location filename="src/ui/widgets/api_setup.py" line="44"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
         <translation>Um Übersetzungen von Nexus Mods herunterladen zu können, benötigt dieses Tool Zugang zur Nexus Mods API. Du kannst diesen Zugang auf zwei Weisen einrichten: API-Schlüssel manuell eingeben oder über Anmeldung im Browser (Single-Sign-On).</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="62"/>
+        <location filename="src/ui/widgets/api_setup.py" line="64"/>
         <source>Click here to login to Nexus Mods via browser</source>
         <translation>Hier klicken, um dich im Browser bei Nexus Mods anzumelden</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="75"/>
+        <location filename="src/ui/widgets/api_setup.py" line="80"/>
         <source>Single-Sign-On (browser)</source>
         <translation>Single-Sign-On (Browser)</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="83"/>
+        <location filename="src/ui/widgets/api_setup.py" line="88"/>
         <source>Insert your API key</source>
         <translation>API-Schlüssel eingeben</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="87"/>
+        <location filename="src/ui/widgets/api_setup.py" line="92"/>
         <source>Check API key</source>
         <translation>API-Schlüssel überprüfen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="100"/>
+        <location filename="src/ui/widgets/api_setup.py" line="105"/>
         <source>API key is valid!</source>
         <translation>API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="105"/>
+        <location filename="src/ui/widgets/api_setup.py" line="110"/>
         <source>API key is invalid!</source>
         <translation>Der API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="68"/>
+        <location filename="src/ui/widgets/api_setup.py" line="73"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation>Erfolgreich bei Nexus Mods angemeldet</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="109"/>
+        <location filename="src/ui/widgets/api_setup.py" line="114"/>
         <source>Manual Setup</source>
         <translation>Manuelle Einrichtung</translation>
     </message>
@@ -2593,21 +2593,6 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <location filename="src/ui/settings/user_settings.py" line="151"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>BSA-Archive parsen (Dies kann den Start der App, je nach Größe deiner Modliste, verlangsamen!)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="186"/>
-        <source>Nexus Mods API key</source>
-        <translation>Nexus Mods API-Schlüssel</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="200"/>
-        <source>Save</source>
-        <translation>Speichern</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="213"/>
-        <source>Cancel</source>
-        <translation>Abbrechen</translation>
     </message>
 </context>
 <context>

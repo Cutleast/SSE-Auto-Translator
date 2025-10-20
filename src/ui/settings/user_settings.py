@@ -25,7 +25,7 @@ from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
 from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
-from ui.widgets.api_setup import ApiSetup
+from ui.widgets.api_setup_dialog import ApiSetupDialog
 
 from .blacklist_dialog import BlacklistDialog
 
@@ -182,39 +182,10 @@ class UserSettings(SettingsPage[UserConfig]):
             self.changed_signal.emit()
 
     def __start_api_setup(self) -> None:
-        dialog = QDialog(QApplication.activeModalWidget())
-        dialog.setWindowTitle(self.tr("Nexus Mods API key"))
-        dialog.setMinimumSize(800, 400)
+        dialog = ApiSetupDialog()
 
-        vlayout = QVBoxLayout()
-        dialog.setLayout(vlayout)
-
-        api_setup = ApiSetup()
-        vlayout.addWidget(api_setup)
-
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
-
-        hlayout.addStretch()
-
-        save_button = QPushButton(self.tr("Save"))
-        save_button.setDefault(True)
-        save_button.setDisabled(True)
-        api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
-
-        def save() -> None:
-            if api_setup.api_key is not None:
-                self.__api_key_entry.setText(api_setup.api_key)
-                dialog.accept()
-
-        save_button.clicked.connect(save)
-        hlayout.addWidget(save_button)
-
-        cancel_button = QPushButton(self.tr("Cancel"))
-        cancel_button.clicked.connect(dialog.reject)
-        hlayout.addWidget(cancel_button)
-
-        dialog.exec()
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.__api_key_entry.setText(dialog.get_api_key())
 
     @override
     def apply(self, config: UserConfig) -> None:
