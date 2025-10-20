@@ -43,6 +43,7 @@ class Page(QWidget):
     """
 
     _vlayout: QVBoxLayout
+    _title_label: QLabel
     _back_button: QPushButton
     _next_button: QPushButton
 
@@ -61,10 +62,10 @@ class Page(QWidget):
         self.__init_footer()
 
     def __init_header(self) -> None:
-        title_label = QLabel(self._get_title())
-        title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        title_label.setObjectName("h1")
-        self._vlayout.addWidget(title_label, 0, Qt.AlignmentFlag.AlignHCenter)
+        self._title_label = QLabel(self._get_title())
+        self._title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        self._title_label.setObjectName("h1")
+        self._vlayout.addWidget(self._title_label, 0, Qt.AlignmentFlag.AlignHCenter)
         self._vlayout.addSpacing(25)
 
         help_label = QLabel(self._get_description())

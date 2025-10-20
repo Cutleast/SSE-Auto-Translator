@@ -7,11 +7,14 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
+from cutleast_core_lib.ui.utilities.rotated_icon import rotated_icon
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QLabel, QPushButton, QWidget
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QWidget
 
 from core.config.user_config import UserConfig
 from ui.startup_dialog.page import Page
+from ui.utilities.icon_provider import IconProvider
 
 
 class IntroductionPage(Page):
@@ -24,7 +27,41 @@ class IntroductionPage(Page):
         super().__init__(parent)
 
         self._back_button.setText(self.tr("Exit"))
+        self._back_button.setIcon(
+            rotated_icon(IconProvider.get_icon("exit"), angle=180)
+        )
         self.valid_signal.emit(True)
+
+        self.__init_header()
+
+    def __init_header(self) -> None:
+        hlayout = QHBoxLayout()
+        self._vlayout.insertLayout(0, hlayout)
+
+        hlayout.addStretch()
+
+        icon_label = QLabel()
+        icon_label.setPixmap(QApplication.windowIcon().pixmap(96, 96))
+        hlayout.addWidget(icon_label)
+
+        hlayout.addSpacing(15)
+
+        title_label = QLabel("SSE Auto Translator".upper())
+        font = title_label.font()
+        font.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 10)
+        title_label.setFont(font)
+        title_label.setObjectName("h1")
+        hlayout.addWidget(title_label)
+
+        hlayout.addStretch()
+
+        self._vlayout.insertSpacing(0, 25)
+        self._title_label.setObjectName("h2")
+        self._title_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
+        self._vlayout.insertWidget(
+            2, self._title_label, alignment=Qt.AlignmentFlag.AlignLeft
+        )
+        self._vlayout.insertSpacing(2, 25)
 
     @override
     def _get_title(self) -> str:

@@ -81,12 +81,12 @@
         <translation>Nexus Mods API-Key einrichten...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup_dialog.py" line="53"/>
+        <location filename="src/ui/widgets/api_setup_dialog.py" line="52"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup_dialog.py" line="58"/>
+        <location filename="src/ui/widgets/api_setup_dialog.py" line="57"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
@@ -918,37 +918,37 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="26"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="29"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="31"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
         <source>Welcome!</source>
-        <translation>Willkommen!</translation>
+        <translation type="unfinished">Willkommen!</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="36"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="73"/>
         <source>This guide will help you setting up this tool for your modlist.</source>
         <translation>Diese Einführung wird dir bei der Einrichtung dieses Tools für deine Modliste helfen.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="80"/>
         <source>Open documentation</source>
         <translation>Dokumentation öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="59"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="96"/>
         <source>Fix Windows path limit</source>
         <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="105"/>
         <source>The path limit is already disabled.</source>
         <translation>Die Pfadlängenbegrenzung ist bereits deaktiviert.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="52"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="89"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows hat eine Begrenzung von 255 Zeichen auf Pfade. Unten klicken, Administratorrechte gewähren und neustarten, um diese Begrenzung zu deaktivieren.</translation>
     </message>
@@ -1474,12 +1474,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="90"/>
+        <location filename="src/ui/startup_dialog/page.py" line="91"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="97"/>
+        <location filename="src/ui/startup_dialog/page.py" line="98"/>
         <source>Next</source>
         <translation>Weiter</translation>
     </message>

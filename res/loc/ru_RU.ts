@@ -81,12 +81,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup_dialog.py" line="53"/>
+        <location filename="src/ui/widgets/api_setup_dialog.py" line="52"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup_dialog.py" line="58"/>
+        <location filename="src/ui/widgets/api_setup_dialog.py" line="57"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -912,37 +912,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="26"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="29"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="31"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="36"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="73"/>
         <source>This guide will help you setting up this tool for your modlist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="80"/>
         <source>Open documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="59"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="96"/>
         <source>Fix Windows path limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="105"/>
         <source>The path limit is already disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="52"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="89"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1464,12 +1464,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="90"/>
+        <location filename="src/ui/startup_dialog/page.py" line="91"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="97"/>
+        <location filename="src/ui/startup_dialog/page.py" line="98"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>

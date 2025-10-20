@@ -1,4 +1,7 @@
 /* Headers */
+IntroductionPage #h1 {
+    font-size: 52px;
+}
 #h1 {
     font-size: 34px;
 }
