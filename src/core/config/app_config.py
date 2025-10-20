@@ -37,7 +37,7 @@ class AppConfig(BaseAppConfig):
     auto_bind_nxm: bool = False
     """Automatically bind to "Mod Manager Download" Buttons on Nexus Mods on Startup"""
 
-    use_spell_check: bool = False
+    use_spell_check: bool = True
     """Use spell checker in translation editor"""
 
     output_path: Optional[Path] = None
