@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import os
 from pathlib import Path
 from typing import override
 
@@ -86,7 +85,7 @@ class PluginFile(ModFile):
         if output_mod:
             # the output mod uses a different naming scheme to prevent it from being
             # imported again by SSE-AT
-            json_filename = f"{len(os.listdir(plugin_folder))}_SSEAT.json"
+            json_filename = "SSE-AT_output.json"
         else:
             json_filename = "SSE-AT_exported.json"
 

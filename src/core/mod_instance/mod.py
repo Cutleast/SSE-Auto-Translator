@@ -67,9 +67,10 @@ class Mod(BaseModel):
         return [
             file.relative_to(self.path)
             for file in self.path.glob(DSD_FILE_PATTERN)
-            if not fnmatch(
-                file.name, "*_SSEAT.json"
-            )  # Do not import DSD files from generated Output mod
+            if (  # Do not import DSD files from generated Output mod
+                not fnmatch(file.name, "*_SSEAT.json")
+                and file.stem.lower() != "sse-at_output"
+            )
         ]
 
     @override
