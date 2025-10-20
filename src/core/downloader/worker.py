@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+import time
 from pathlib import Path
 from queue import Empty, Queue
 from typing import Optional, override
@@ -212,7 +213,7 @@ class Worker(QThread):
                 self.running = False
 
                 while self.paused:
-                    pass
+                    time.sleep(0.01)
 
                 self.running = True
                 self.log.info("Thread continued.")
