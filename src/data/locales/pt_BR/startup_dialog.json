@@ -1,0 +1,10 @@
+{
+  "choose_lang": "Escolha o Idioma do Jogo:",
+  "instance_help": "Nesta página você seleciona uma Modinstance para carregar a partir de um Mod Manager.\nVocê sempre pode alterar a modinstance e o gerenciador de mods selecionados em Configurações > Configurações do Usuário.",
+  "instance_title": "Seleção de Modinstance",
+  "introduction": "Este guia ajudará você a configurar esta ferramenta para sua modlist.",
+  "path_limit": "O Windows possui um limite de 255 caracteres para caminhos. Clique abaixo, conceda direitos de administrador e reinicie para desativá-lo.",
+  "setup_help": "Nesta página você configura as definições básicas.",
+  "setup_title": "Configuração Inicial",
+  "startup": "Bem-vindo!"
+}
