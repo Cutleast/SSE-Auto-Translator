@@ -364,7 +364,11 @@ class ModInstanceWidget(QTreeWidget):
                 0,
                 TranslationStatus.get_color(
                     max(
-                        [modfile.status for modfile in mod.modfiles],
+                        [
+                            modfile.status
+                            for modfile in mod.modfiles
+                            if not self.user_data.masterlist.is_ignored(modfile.name)
+                        ],
                         default=TranslationStatus.NoneStatus,
                     )
                 )
