@@ -1551,27 +1551,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="298"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="300"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="351"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="353"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="354"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="356"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="362"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="364"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="365"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
