@@ -529,11 +529,9 @@ class NexusModsApi(ProviderApi):
             get_url_identifier(url) + ".cache"
         )
 
-        cached: Optional[req.Response] = None
-        try:
-            cached = Cache.get_from_cache(cache_file_path)
-        except FileNotFoundError:
-            pass
+        cached: Optional[req.Response] = Cache.get_from_cache(
+            cache_file_path, default=None
+        )
 
         res: req.Response
         if cached is None:
@@ -545,12 +543,11 @@ class NexusModsApi(ProviderApi):
             }
 
             res = self.__scraper.get(url, headers=headers)
+            self.handle_status_code(url, res.status_code)
             Cache.save_to_cache(cache_file_path, res)
         else:
             res = cached
             self.log.debug(f"Got cached Web response for {url!r}")
-
-        self.handle_status_code(url, res.status_code)
 
         html: str = res.content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
