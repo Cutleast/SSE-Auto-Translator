@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="238"/>
+        <location filename="src/app.py" line="237"/>
         <source>Path Limit Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="240"/>
+        <location filename="src/app.py" line="239"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>

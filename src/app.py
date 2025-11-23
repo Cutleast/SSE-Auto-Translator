@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import os
 import subprocess
 import webbrowser
 from argparse import Namespace
@@ -296,9 +295,9 @@ class App(BaseApp, Singleton):
         Restarts the application.
         """
 
-        exe_path: str = self.get_execution_command()
-        if os.path.isfile(exe_path):
-            os.startfile(exe_path)
+        subprocess.Popen(
+            self.executable, cwd=Path.cwd(), creationflags=subprocess.DETACHED_PROCESS
+        )
         self.exit()
 
     @override
