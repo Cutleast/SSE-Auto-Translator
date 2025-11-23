@@ -1404,23 +1404,23 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="548"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="556"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="552"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="560"/>
         <source>Creating translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="584"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="616"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="620"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="618"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="622"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>

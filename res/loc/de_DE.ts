@@ -1414,23 +1414,23 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="548"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="556"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="552"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="560"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="584"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="616"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="620"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="618"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="622"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
