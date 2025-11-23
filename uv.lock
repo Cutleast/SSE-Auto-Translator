@@ -1333,7 +1333,7 @@ wheels = [
 
 [[package]]
 name = "sse-auto-translator"
-version = "3.0.0a1"
+version = "3.0.0a2"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
