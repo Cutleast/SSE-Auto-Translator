@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.filesystem import open_in_explorer
+from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import Qt, Signal
@@ -707,18 +708,12 @@ class ModInstanceWidget(QTreeWidget):
             Optional[Mod | ModFile]: Current item or None
         """
 
-        item: Optional[Mod | ModFile] = None
+        items: dict[QTreeWidgetItem, Mod | ModFile] = {}
+        items.update(reverse_dict(self.__mod_items))
+        for modfile_items in self.__modfile_items.values():
+            items.update(reverse_dict(modfile_items))
 
-        for mod in self.__mod_items:
-            if self.__mod_items[mod].isSelected():
-                item = mod
-                break
-            for modfile, modfile_item in self.__modfile_items.get(mod, {}).items():
-                if modfile_item.isSelected():
-                    item = modfile
-                    break
-
-        return item
+        return items.get(self.currentItem(), None)
 
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
