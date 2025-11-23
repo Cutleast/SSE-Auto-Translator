@@ -1389,38 +1389,38 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="192"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="193"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="193"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="194"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="194"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="195"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="552"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="560"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="553"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="561"/>
         <source>Creating translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="584"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="585"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="620"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="621"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="622"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="623"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>
