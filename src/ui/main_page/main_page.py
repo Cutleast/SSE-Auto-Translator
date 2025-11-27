@@ -106,6 +106,8 @@ class MainPageWidget(QWidget):
     ) -> None:
         super().__init__()
 
+        self.setObjectName("root")
+
         self.mod_instance = user_data.modinstance
         self.app_config = app_config
         self.user_data = user_data

@@ -28,47 +28,47 @@
 <context>
     <name>ApiSetup</name>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="44"/>
+        <location filename="src/ui/widgets/api_setup.py" line="45"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="64"/>
+        <location filename="src/ui/widgets/api_setup.py" line="67"/>
         <source>Click here to login to Nexus Mods via browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="80"/>
+        <location filename="src/ui/widgets/api_setup.py" line="83"/>
         <source>Single-Sign-On (browser)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="88"/>
+        <location filename="src/ui/widgets/api_setup.py" line="93"/>
         <source>Insert your API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="92"/>
+        <location filename="src/ui/widgets/api_setup.py" line="97"/>
         <source>Check API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="105"/>
+        <location filename="src/ui/widgets/api_setup.py" line="110"/>
         <source>API key is valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="110"/>
+        <location filename="src/ui/widgets/api_setup.py" line="115"/>
         <source>API key is invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="73"/>
+        <location filename="src/ui/widgets/api_setup.py" line="76"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="114"/>
+        <location filename="src/ui/widgets/api_setup.py" line="119"/>
         <source>Manual Setup</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1012,37 +1012,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="166"/>
+        <location filename="src/ui/main_page/main_page.py" line="168"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="425"/>
+        <location filename="src/ui/main_page/main_page.py" line="427"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="172"/>
+        <location filename="src/ui/main_page/main_page.py" line="174"/>
         <source>Translatable files:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="191"/>
+        <location filename="src/ui/main_page/main_page.py" line="193"/>
         <source>Support me on Ko-fi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="404"/>
+        <location filename="src/ui/main_page/main_page.py" line="406"/>
         <source>No translation downloads available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="405"/>
+        <location filename="src/ui/main_page/main_page.py" line="407"/>
         <source>There are no translations available to download.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="428"/>
+        <location filename="src/ui/main_page/main_page.py" line="430"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1050,32 +1050,32 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="438"/>
+        <location filename="src/ui/main_page/main_page.py" line="440"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="440"/>
+        <location filename="src/ui/main_page/main_page.py" line="442"/>
         <source>Open output mod in Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="443"/>
+        <location filename="src/ui/main_page/main_page.py" line="445"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="488"/>
+        <location filename="src/ui/main_page/main_page.py" line="490"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="493"/>
+        <location filename="src/ui/main_page/main_page.py" line="495"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="495"/>
+        <location filename="src/ui/main_page/main_page.py" line="497"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
@@ -2360,7 +2360,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="168"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="256"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="258"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2390,37 +2390,37 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="258"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="260"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="264"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="266"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="265"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="267"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="295"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="297"/>
         <source>String was modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="298"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="300"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="307"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="309"/>
         <source>Don&apos;t save and continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="310"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="312"/>
         <source>Save and continue</source>
         <translation type="unfinished"></translation>
     </message>

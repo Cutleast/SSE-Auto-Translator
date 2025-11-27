@@ -57,9 +57,24 @@
         <file>loc/zh_CN.qm</file>
 
         <!-- Stylesheets -->
-        <file alias="base_stylesheet.qss">../core-res/base_stylesheet.qss</file>
-        <file alias="dark_stylesheet.qss">../core-res/dark_stylesheet.qss</file>
-        <file alias="light_stylesheet.qss">../core-res/light_stylesheet.qss</file>
+        <file alias="styles/base.qss">../core-res/styles/base.qss</file>
+        <file alias="styles/area.qss">../core-res/styles/area.qss</file>
+        <file alias="styles/buttons.qss">../core-res/styles/buttons.qss</file>
+        <file alias="styles/inputs.qss">../core-res/styles/inputs.qss</file>
+        <file alias="styles/menu.qss">../core-res/styles/menu.qss</file>
+        <file alias="styles/popup.qss">../core-res/styles/popup.qss</file>
+        <file alias="styles/progress.qss">../core-res/styles/progress.qss</file>
+        <file alias="styles/scroll.qss">../core-res/styles/scroll.qss</file>
+        <file alias="styles/splitter.qss">../core-res/styles/splitter.qss</file>
+        <file alias="styles/statusbar.qss">../core-res/styles/statusbar.qss</file>
+        <file alias="styles/tab.qss">../core-res/styles/tab.qss</file>
+        <file alias="styles/toolbar.qss">../core-res/styles/toolbar.qss</file>
+        <file alias="styles/view.qss">../core-res/styles/view.qss</file>
+        <file alias="qss.json">../core-res/qss.json</file>
+
+        <!-- Themes -->
+        <file alias="dark_theme.json">../core-res/dark_theme.json</file>
+        <file alias="light_theme.json">../core-res/light_theme.json</file>
 
         <!-- Other -->
         <file>string_records.json</file>

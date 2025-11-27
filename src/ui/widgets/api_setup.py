@@ -35,6 +35,7 @@ class ApiSetup(QWidget):
         super().__init__()
 
         vlayout = QVBoxLayout()
+        vlayout.setContentsMargins(0, 0, 0, 0)
         vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.setLayout(vlayout)
         self.setMinimumWidth(600)
@@ -57,8 +58,10 @@ class ApiSetup(QWidget):
         vlayout.addWidget(tab_widget, stretch=1)
 
         sso_box = QWidget()
+        sso_box.setContentsMargins(0, 0, 0, 0)
         sso_box.setObjectName("transparent")
         sso_vlayout = QVBoxLayout()
+        sso_vlayout.setContentsMargins(0, 0, 0, 0)
         sso_box.setLayout(sso_vlayout)
         sso_button = QPushButton(
             self.tr("Click here to login to Nexus Mods via browser")
@@ -80,8 +83,10 @@ class ApiSetup(QWidget):
         tab_widget.addTab(sso_box, self.tr("Single-Sign-On (browser)"))
 
         api_key_box = QWidget()
+        api_key_box.setContentsMargins(0, 0, 0, 0)
         api_key_box.setObjectName("transparent")
         api_key_vlayout = QVBoxLayout()
+        api_key_vlayout.setContentsMargins(0, 0, 0, 0)
         api_key_box.setLayout(api_key_vlayout)
         api_key_hlayout = QHBoxLayout()
         api_key_vlayout.addLayout(api_key_hlayout)

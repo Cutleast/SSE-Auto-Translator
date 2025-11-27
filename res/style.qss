@@ -1,15 +1,6 @@
-/* Headers */
+/* Introduction header */
 IntroductionPage #h1 {
     font-size: 52px;
-}
-#h1 {
-    font-size: 34px;
-}
-#h2 {
-    font-size: 28px;
-}
-#h3 {
-    font-size: 22px;
 }
 
 /* Error text colors */
@@ -20,28 +11,13 @@ IntroductionPage #h1 {
     color: #ffd12525;
 }
 
-
 /* Buttons */
-#primary, [default=true] {
-    color: #000000;
-}
-ShortcutButton {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-ShortcutButton QLabel {
-    margin: 0px;
-}
-ShortcutButton#primary QLabel,
-ShortcutButton[default=true] QLabel {
-    color: #000000;
-}
 QPushButton#download_button {
     background: transparent;
     border-color: transparent;
 }
 QPushButton#download_button:hover {
-    background: #15ffffff;
+    background: @highlighted_bg_color;
 }
 QPushButton#list_close_button {
     padding: 0px;
@@ -50,102 +26,13 @@ QPushButton#list_close_button {
     border-color: transparent;
 }
 QPushButton#list_close_button:hover {
-    background: #15ffffff;
-    border-color: #15ffffff;
+    background: @highlighted_bg_color;
+    border-color: @highlighted_bg_color;
 }
-
-
-/* Dropdowns */
-QComboBox QAbstractItemView#completer_popup {
-    border-radius: 4px;
-    border: 1px solid #303030;
-    background-color: #292929;
-    padding: 4px;
-}
-QComboBox QAbstractItemView#completer_popup::item {
-    background-color: transparent;
-    border-radius: 4px;
-    margin: 2px;
-    padding: 4px;
-}
-QComboBox QAbstractItemView#completer_popup::item:selected {
-    background: #15ffffff;
-    color: <accent_color>;
-}
-
-
-/* List Widget */
-QListWidget#side_menu {
-    padding: 4px;
-}
-
-
-/* Download List Widget */
-DownloadListWidget QHeaderView::section {
-    font-style: bold;
-}
-DownloadListWidget QTreeView::item {
-    height: 30px;
-}
-DownloadListWidget Dropdown {
-    padding: 3px;
-}
-DownloadListWidget QTreeView QPushButton {
-    background: transparent;
-    border-color: transparent;
-}
-DownloadListWidget QTreeView QPushButton:hover {
-    background: #15ffffff;
-    border-color: #15ffffff;
-}
-DownloadListWidget QTreeView QCheckBox::indicator {
-    width: 12px;
-    height: 12px;
-}
-
-
-/* StackedBar */
-StackedBar {
-    margin: 0px;
-    padding: 0px;
-    spacing: 0px;
-
-    background: transparent;
-}
-
 
 /* ProgressWidget */
 ProgressWidget QToolTip {
     font-family: Consolas;
-}
-
-/* Progressbar */
-ProgressWidget QProgressBar#error::chunk {
-    background: #d74343;
-}
-
-/* Toolbars */
-QToolBar {
-    background: #08ffffff;
-    border-radius: 8px;
-}
-
-QToolBar QToolButton {
-    background: transparent;
-    margin: 0px;
-}
-
-QToolBar QToolButton#highlighted {
-    border-bottom-color: <accent_color>;
-}
-
-QToolButton::menu-button:hover,
-QToolButton::menu-button:selected,
-QToolButton::menu-button:pressed {
-    background: #0cffffff;
-}
-QToolButton::menu-arrow {
-    image: url(:/icons/dark/arrow_down.svg);
 }
 
 /* Main Tabbar */
@@ -154,14 +41,13 @@ QMainWindow > QTabWidget > QTabBar {
     border-bottom-right-radius: 0px;
 }
 
-/* Statusbar */
+/* Main Statusbar */
 QStatusBar {
-    background: #08ffffff;
-    border-radius: 0;
+    background-color: @secondary_bg_color;
+    border: 0px;
+    border-radius: 0px;
 }
 
-/* Checkbox */
-QCheckBox::indicator:checked {
-    /* default accent color is relatively bright, so we need a black icon */
-    image: url(:/icons/light/checkmark.svg);
+QStatusBar QAbstractButton {
+    background-color: @secondary_bg_color;
 }

@@ -42,7 +42,7 @@ class StatusBar(QStatusBar):
 
     def __init_ui(self) -> None:
         self.status_label = QLabel()
-        self.status_label.setObjectName("protocol")
+        self.status_label.setObjectName("monospace")
         self.status_label.setTextFormat(Qt.TextFormat.PlainText)
         self.log_signal.connect(
             lambda text: self.status_label.setText(

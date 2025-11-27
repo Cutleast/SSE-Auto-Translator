@@ -206,6 +206,8 @@ class TranslatorDialog(QWidget):
             lambda: self.goto_next(StringStatus.NoTranslationRequired)
         )
 
+        self.setStyleSheet(ThemeManager.get_stylesheet() or "")
+
     def __update_title(self) -> None:
         visible_string_count: int = self.__parent.get_visible_string_count()
         current_index: int = self.__parent.get_index(self.__current_string)
