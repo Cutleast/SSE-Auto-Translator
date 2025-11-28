@@ -10,8 +10,10 @@ from pathlib import Path
 from typing import Any, NoReturn, Optional, override
 
 from sse_bsa import BSAArchive
+from sse_plugin_interface.plugin import SSEPlugin as Plugin
+from sse_plugin_interface.plugin_string import PluginString
 
-from core.plugin_interface.plugin import Plugin
+from core.mod_file.plugin_file import PluginFile
 from core.string.base_string import BaseString
 from core.string_table_parser.string_table import StringTable
 from core.string_table_parser.string_table_parser import StringTableParser
@@ -424,12 +426,11 @@ class DbGen(Utility):
 
         self.log.info(f"Extracting string ids from {plugin_path.name!r}...")
 
-        plugin = Plugin(plugin_path)
+        plugin = Plugin.from_file(plugin_path)
+        strings: list[PluginString] = plugin.extract_strings(extract_localized=True)
         string_ids: dict[int, BaseString] = {
             int(string.original): string
-            for string in plugin.extract_strings(
-                extract_localized=True, unfiltered=True
-            )
+            for string in PluginFile.convert_sse_plugin_strings(strings)
         }
 
         self.log.info(f"Extracted {len(string_ids)} string(s).")

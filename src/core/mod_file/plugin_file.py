@@ -5,9 +5,14 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import override
 
+from sse_plugin_interface.plugin import SSEPlugin
+from sse_plugin_interface.plugin_string import PluginString as SSEPluginString
+from sse_plugin_interface.utilities import is_valid_string
+
 from core.database.translation_service import TranslationService
-from core.plugin_interface.plugin import Plugin
-from core.string import StringList
+from core.file_source.file_source import FileSource
+from core.string import PluginString, StringList
+from core.string.string_status import StringStatus
 
 from .mod_file import ModFile
 
@@ -38,7 +43,47 @@ class PluginFile(ModFile):
 
     @override
     def _extract_strings(self) -> StringList:
-        return Plugin(self.full_path).extract_strings(unfiltered=True)
+        plugin = SSEPlugin.from_stream(
+            FileSource.from_file(self.full_path).get_file_stream(), self.name
+        )
+
+        raw_strings: list[SSEPluginString] = plugin.extract_strings()
+
+        return PluginFile.convert_sse_plugin_strings(raw_strings)
+
+    @staticmethod
+    def convert_sse_plugin_strings(raw_strings: list[SSEPluginString]) -> StringList:
+        """
+        Converts a list of raw extracted plugin strings to the translatable objects used
+        by SSE-AT. Also filters out blank strings.
+
+        Args:
+            raw_strings (list[SSEPluginString]): List of raw strings.
+
+        Returns:
+            StringList: List of translatable strings.
+        """
+
+        strings: StringList = []
+        for raw_string in raw_strings:
+            if not raw_string.string.strip():
+                continue
+
+            string = PluginString(
+                editor_id=raw_string.editor_id,
+                form_id=raw_string.form_id,
+                index=raw_string.index,
+                type=raw_string.type,
+                original=raw_string.string,
+                status=(
+                    StringStatus.TranslationRequired
+                    if is_valid_string(raw_string.string)
+                    else StringStatus.NoTranslationRequired
+                ),
+            )
+            strings.append(string)
+
+        return strings
 
     @override
     def dump_strings(
@@ -51,8 +96,25 @@ class PluginFile(ModFile):
         if use_dsd_format:
             self.__export_strings_to_dsd(strings, output_folder, output_mod)
         else:
-            plugin = Plugin(self.full_path)
-            plugin.replace_strings(strings)
+            plugin = SSEPlugin.from_stream(
+                FileSource.from_file(self.full_path).get_file_stream(), self.name
+            )
+
+            replacement_strings: list[SSEPluginString] = []
+            for string in strings:
+                if not isinstance(string, PluginString):
+                    continue
+
+                replacement_string = SSEPluginString(
+                    editor_id=string.editor_id,
+                    form_id=string.form_id,
+                    index=string.index,
+                    type=string.type,
+                    string=string.string or string.original,
+                )
+                replacement_strings.append(replacement_string)
+
+            plugin.replace_strings(replacement_strings)
 
             output_file: Path = output_folder / self.path
             output_file.parent.mkdir(parents=True, exist_ok=True)

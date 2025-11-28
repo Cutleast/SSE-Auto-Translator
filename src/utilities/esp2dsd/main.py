@@ -9,8 +9,10 @@ from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignor
 from pathlib import Path
 from typing import NoReturn, Optional, override
 
+from sse_plugin_interface.plugin import SSEPlugin as Plugin
+
 from core.database.translation_service import TranslationService
-from core.plugin_interface.plugin import Plugin
+from core.mod_file.plugin_file import PluginFile
 from core.string import StringList
 from core.string.string_utils import StringUtils
 from utilities.utility import Utility
@@ -177,10 +179,14 @@ class Esp2Dsd(Utility):
             f"Converting '{translated_plugin_path}' for '{original_plugin_path}' to DSD..."
         )
 
-        translated_plugin = Plugin(translated_plugin_path)
-        translated_strings: StringList = translated_plugin.extract_strings()
-        original_plugin = Plugin(original_plugin_path)
-        original_strings: StringList = original_plugin.extract_strings()
+        translated_plugin = Plugin.from_file(translated_plugin_path)
+        translated_strings: StringList = PluginFile.convert_sse_plugin_strings(
+            translated_plugin.extract_strings()
+        )
+        original_plugin = Plugin.from_file(original_plugin_path)
+        original_strings: StringList = PluginFile.convert_sse_plugin_strings(
+            original_plugin.extract_strings()
+        )
 
         mapped_strings: StringList = StringUtils.map_strings(
             original_strings, translated_strings

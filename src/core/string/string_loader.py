@@ -6,7 +6,9 @@ import logging
 from pathlib import Path
 from types import ModuleType
 
-from core import plugin_interface, utilities
+import sse_plugin_interface
+
+from core import utilities
 from core.string.string_status import StringStatus
 from core.utilities.alias_unpickler import AliasUnpickler
 
@@ -23,11 +25,11 @@ class StringLoader:
 
     MODULE_ALIASES: dict[str, ModuleType] = {
         "core.database.string": legacy_string,
-        "plugin_parser": plugin_interface,
+        "plugin_parser": sse_plugin_interface,
         "plugin_parser.string": legacy_string,
         "utilities": utilities,
         "utilities.string": legacy_string,
-        "plugin_interface": plugin_interface,
+        "plugin_interface": sse_plugin_interface,
     }
     """Dict of module aliases required for deserialization of older translations."""
 

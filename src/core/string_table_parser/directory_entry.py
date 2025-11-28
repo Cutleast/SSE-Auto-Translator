@@ -2,8 +2,8 @@
 Copyright (c) Cutleast
 """
 
-from core.plugin_interface.datatypes import Integer
-from core.plugin_interface.utilities import Stream
+from sse_plugin_interface.datatypes import Integer
+from sse_plugin_interface.utilities import Stream
 
 from .datatypes import String
 

@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import os
 
-from core.plugin_interface.datatypes import Stream
+from sse_plugin_interface.utilities import Stream
 
 
 def get_stream_size(stream: Stream) -> int:

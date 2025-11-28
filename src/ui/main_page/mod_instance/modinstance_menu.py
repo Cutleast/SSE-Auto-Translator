@@ -10,7 +10,6 @@ from PySide6.QtGui import QAction, QCursor
 
 from core.file_source.file_source import FileSource
 from core.mod_file.mod_file import ModFile
-from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
@@ -63,9 +62,6 @@ class ModInstanceMenu(Menu):
     create_translation_requested = Signal()
     """Signal emitted when the user clicks on the create translation action."""
 
-    show_plugin_structure_requested = Signal()
-    """Signal emitted when the user clicks on the show plugin structure action."""
-
     add_to_ignore_list_requested = Signal()
     """Signal emitted when the user clicks on the add to ignore list action."""
 
@@ -100,7 +96,6 @@ class ModInstanceMenu(Menu):
     __check_action: QAction
     __show_strings_action: QAction
     __import_as_translation_action: QAction
-    __show_structure_action: QAction
     __open_modpage_action: QAction
     __open_in_explorer_action: QAction
 
@@ -223,14 +218,6 @@ class ModInstanceMenu(Menu):
             self.create_translation_requested.emit
         )
 
-        self.__show_structure_action = self.__modfile_menu.addAction(
-            IconProvider.get_qta_icon("ph.tree-structure"),
-            self.tr("Show Plugin Structure... (Warning: this may take a while)"),
-        )
-        self.__show_structure_action.triggered.connect(
-            self.show_plugin_structure_requested.emit
-        )
-
         add_to_ignore_list_action: QAction = self.__modfile_menu.addAction(
             IconProvider.get_qta_icon("mdi.playlist-remove"),
             self.tr("Add mod file to ignore list"),
@@ -297,7 +284,6 @@ class ModInstanceMenu(Menu):
                 TranslationStatus.TranslationIncomplete,
             ]
         )
-        self.__show_structure_action.setVisible(isinstance(current_item, PluginFile))
 
         self.__show_strings_action.setVisible(
             isinstance(current_item, ModFile)

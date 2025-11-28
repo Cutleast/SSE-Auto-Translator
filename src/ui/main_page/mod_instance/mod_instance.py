@@ -16,13 +16,10 @@ from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QApplication,
-    QDialog,
     QHeaderView,
     QMessageBox,
-    QPlainTextEdit,
     QTreeWidget,
     QTreeWidgetItem,
-    QVBoxLayout,
 )
 
 from core.config.app_config import AppConfig
@@ -32,12 +29,10 @@ from core.database.translation import Translation
 from core.file_source.bsa_file_source import BsaFileSource
 from core.file_source.file_source import FileSource
 from core.mod_file.mod_file import ModFile
-from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
-from core.plugin_interface import plugin as esp
 from core.string import StringList
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
@@ -163,9 +158,6 @@ class ModInstanceWidget(QTreeWidget):
         )
         self.__menu.edit_translation_requested.connect(self.__edit_translation)
         self.__menu.create_translation_requested.connect(self.__create_translation)
-        self.__menu.show_plugin_structure_requested.connect(
-            self.__show_plugin_structure
-        )
         self.__menu.add_to_ignore_list_requested.connect(self.__add_to_ignore_list)
         self.__menu.open_requested.connect(self.__open_modfile)
         self.__menu.show_strings_requested.connect(self.__show_strings)
@@ -398,41 +390,6 @@ class ModInstanceWidget(QTreeWidget):
 
             dialog = StringListDialog(current_item.name, strings)
             dialog.show()
-
-    def __show_plugin_structure(self) -> None:
-        # TODO: Overhaul this
-        current_item: Optional[Mod | ModFile] = self.__get_current_item()
-
-        if isinstance(current_item, PluginFile):
-            plugin = esp.Plugin(current_item.full_path)
-
-            text = str(plugin)
-            self.log.debug(f"Text Length: {len(text)}")
-
-            with open("debug.txt", "w", encoding="utf8") as file:
-                file.write(text)
-
-            self.log.debug("Written to 'debug.txt'.")
-
-            dialog = QDialog(QApplication.activeModalWidget())
-            dialog.setWindowTitle(current_item.name)
-            dialog.setMinimumSize(1400, 800)
-
-            vlayout = QVBoxLayout()
-            dialog.setLayout(vlayout)
-
-            textbox = QPlainTextEdit()
-            textbox.setFont(QFont("Consolas"))
-            textbox.setReadOnly(True)
-            textbox.setPlainText(text)
-            textbox.setTextInteractionFlags(
-                Qt.TextInteractionFlag.TextSelectableByMouse
-            )
-            textbox.setCursor(Qt.CursorShape.IBeamCursor)
-            textbox.setFocus()
-            vlayout.addWidget(textbox)
-
-            dialog.exec()
 
     def __check_selected(self) -> None:
         for item in self.selectedItems():

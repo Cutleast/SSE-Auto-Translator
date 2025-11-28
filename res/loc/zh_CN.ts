@@ -1267,117 +1267,112 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceMenu</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="119"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="114"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="125"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="120"/>
         <source>Collapse all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="141"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="136"/>
         <source>Actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="146"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="141"/>
         <source>Basic scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="152"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="147"/>
         <source>Online scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="158"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="153"/>
         <source>Download available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="163"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="158"/>
         <source>Deep scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="179"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="174"/>
         <source>Translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="185"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="180"/>
         <source>Show untranslated strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="192"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="187"/>
         <source>Show translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="198"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="193"/>
         <source>Show translation strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="206"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="201"/>
         <source>Edit translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="236"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="223"/>
         <source>Add mod file to ignore list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="220"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="215"/>
         <source>Create new translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="129"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="124"/>
         <source>Uncheck selected mod file(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="133"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="128"/>
         <source>Check selected mod file(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="171"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="166"/>
         <source>Import as translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="214"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="209"/>
         <source>Mod files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="228"/>
-        <source>Show Plugin Structure... (Warning: this may take a while)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="243"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="230"/>
         <source>Open...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="252"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="239"/>
         <source>Show strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="258"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="245"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="263"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="250"/>
         <source>Open in Explorer...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1385,38 +1380,38 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="193"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="185"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="194"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="186"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="195"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="187"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="553"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="561"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="510"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="518"/>
         <source>Creating translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="585"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="542"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="621"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="578"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="623"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>
