@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
-from core.plugin_interface.datatypes import Stream
+from sse_plugin_interface.utilities import Stream
 
 from .string_table import StringTable
 

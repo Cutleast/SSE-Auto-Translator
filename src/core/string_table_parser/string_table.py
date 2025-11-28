@@ -2,7 +2,8 @@
 Copyright (c) Cutleast
 """
 
-from core.plugin_interface.datatypes import Stream
+from sse_plugin_interface.utilities import Stream
+
 from core.string_table_parser.utilities import get_stream_size
 
 from .datatypes import Integer
