@@ -197,7 +197,9 @@ class ModInstanceWidget(QTreeWidget):
         self.customContextMenuRequested.connect(self.__open_context_menu)
 
     def __open_context_menu(self) -> None:
-        self.__menu.open(self.__get_current_item(), self.get_selected_items()[1])
+        self.__menu.open(
+            self.__get_current_item(), self.get_selected_items()[1], self.database
+        )
 
     def __load_mod_instance(self) -> None:
         """
