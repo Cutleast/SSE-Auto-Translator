@@ -380,12 +380,11 @@ class MainPageWidget(QWidget):
         else:
             items = self.__modinstance_widget.get_selected_modfiles()
 
-        download_entries: DownloadListEntries = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.download_manager.collect_available_downloads(
-                items, ldialog
+        download_entries: DownloadListEntries = ProgressDialog(
+            lambda pdialog: self.download_manager.collect_available_downloads(
+                items, pdialog
             ),
-        )
+        ).run()
         if download_entries:
             download_list_window = DownloadListWindow(download_entries, self.provider)
             download_list_window.downloads_started.connect(
