@@ -3,11 +3,18 @@ Copyright (c) Cutleast
 """
 
 import logging
+from concurrent.futures import Future, as_completed
 from pathlib import Path
 from queue import Queue
 from typing import Optional, TypeAlias
 
+from cutleast_core_lib.core.utilities.progress_executor import ProgressExecutor
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.progress_dialog import (
+    ProgressDialog,
+    UpdateCallback,
+    update,
+)
 from PySide6.QtCore import QObject, Signal
 
 from core.config.app_config import AppConfig
@@ -260,14 +267,14 @@ class DownloadManager(QObject):
         download.stale = True
 
     def collect_available_downloads(
-        self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
+        self, items: dict[Mod, list[ModFile]], pdialog: Optional[ProgressDialog] = None
     ) -> DownloadListEntries:
         """
         Collects downloads for required translations that are available online.
 
         Args:
             items (dict[Mod, list[ModFile]]): The items to collect downloads for.
-            ldialog (Optional[LoadingDialog], optional):
+            pdialog (Optional[ProgressDialog], optional):
                 Optional Loading dialog. Defaults to None.
 
         Returns:
@@ -277,8 +284,12 @@ class DownloadManager(QObject):
 
         self.log.info("Getting downloads for required translations...")
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Collecting available downloads..."))
+        if pdialog is not None:
+            pdialog.updateMainProgress(
+                ProgressDialog.UpdatePayload(
+                    status_text=self.tr("Collecting available downloads...")
+                )
+            )
 
         # Filter items for mod files that have an available translation
         items = {
@@ -292,47 +303,74 @@ class DownloadManager(QObject):
         items = {mod: modfiles for mod, modfiles in items.items() if modfiles}
 
         translation_downloads: DownloadListEntries = {}
-        for m, (mod, modfiles) in enumerate(items.items()):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    text1=self.tr("Collecting available downloads...")
-                    + f" ({m}/{len(items)})",
-                    value1=m,
-                    max1=len(items),
+        with ProgressExecutor(
+            pdialog, max_workers=self.app_config.worker_thread_num
+        ) as executor:
+            executor.set_main_progress_text(
+                self.tr("Collecting available downloads...")
+            )
+
+            tasks: dict[Future[dict[Path, list[TranslationDownload]]], Mod] = {}
+            for mod, modfiles in items.items():
+                future: Future[dict[Path, list[TranslationDownload]]] = executor.submit(
+                    # this lambda is necessary as it gets an update callable as first
+                    # positional argument
+                    lambda ucb, m=mod, mfs=modfiles: self.__collect_downloads_for_mod(
+                        m, mfs, ucb
+                    )
                 )
+                tasks[future] = mod
 
-            mod_info = ModInfo(
-                display_name=mod.name + f" [{mod.version}]",
-                mod_id=mod.mod_id,
-                source=Source.NexusMods if mod.mod_id is not None else Source.Local,
-            )
+            for future in as_completed(tasks):
+                mod: Mod = tasks[future]
+                try:
+                    mod_info = ModInfo(
+                        display_name=mod.name + f" [{mod.version}]",
+                        mod_id=mod.mod_id,
+                        source=(
+                            Source.NexusMods if mod.mod_id is not None else Source.Local
+                        ),
+                    )
 
-            download_units: dict[Path, list[TranslationDownload]] = (
-                self.__collect_downloads_for_mod(mod, modfiles, ldialog)
-            )
+                    download_units: dict[Path, list[TranslationDownload]] = (
+                        future.result()
+                    )
 
-            for modfile, downloads in download_units.items():
-                if downloads:
-                    translation_downloads.setdefault(mod_info, {})[modfile] = downloads
+                    for modfile, downloads in download_units.items():
+                        if downloads:
+                            translation_downloads.setdefault(mod_info, {})[modfile] = (
+                                downloads
+                            )
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to collect downloads for {mod.name}: {ex}", exc_info=ex
+                    )
+                    continue
+
+        self.log.info("Download collection complete.")
 
         return translation_downloads
 
     def __collect_downloads_for_mod(
-        self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
+        self,
+        mod: Mod,
+        modfiles: list[ModFile],
+        update_callback: Optional[UpdateCallback] = None,
     ) -> dict[Path, list[TranslationDownload]]:
         download_units: dict[Path, list[TranslationDownload]] = {}
         for m, modfile in enumerate(modfiles):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    show2=True,
-                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
-                    value2=m,
-                    max2=len(modfiles),
-                )
+            update(
+                update_callback,
+                ProgressDialog.UpdatePayload(
+                    status_text=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    progress_value=m,
+                    progress_max=len(modfiles),
+                ),
+            )
 
             try:
                 modfile_downloads: list[TranslationDownload] = (
-                    self.__collect_downloads_for_modfile(mod, modfile, ldialog)
+                    self.__collect_downloads_for_modfile(mod, modfile)
                 )
                 if modfile_downloads:
                     download_units[modfile.path] = modfile_downloads
@@ -346,7 +384,7 @@ class DownloadManager(QObject):
         return download_units
 
     def __collect_downloads_for_modfile(
-        self, mod: Mod, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
+        self, mod: Mod, modfile: ModFile
     ) -> list[TranslationDownload]:
         if mod.mod_id is None:
             return []

@@ -454,13 +454,13 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="281"/>
-        <location filename="src/core/downloader/download_manager.py" line="298"/>
+        <location filename="src/core/downloader/download_manager.py" line="290"/>
+        <location filename="src/core/downloader/download_manager.py" line="310"/>
         <source>Collecting available downloads...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="426"/>
+        <location filename="src/core/downloader/download_manager.py" line="464"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1013,7 +1013,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="427"/>
+        <location filename="src/ui/main_page/main_page.py" line="426"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1028,17 +1028,17 @@ Depending on the translator API this can raise unexpected costs.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="406"/>
+        <location filename="src/ui/main_page/main_page.py" line="405"/>
         <source>No translation downloads available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="407"/>
+        <location filename="src/ui/main_page/main_page.py" line="406"/>
         <source>There are no translations available to download.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="430"/>
+        <location filename="src/ui/main_page/main_page.py" line="429"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1046,32 +1046,32 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="440"/>
+        <location filename="src/ui/main_page/main_page.py" line="439"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="442"/>
+        <location filename="src/ui/main_page/main_page.py" line="441"/>
         <source>Open output mod in Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="445"/>
+        <location filename="src/ui/main_page/main_page.py" line="444"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="490"/>
+        <location filename="src/ui/main_page/main_page.py" line="489"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="495"/>
+        <location filename="src/ui/main_page/main_page.py" line="494"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="497"/>
+        <location filename="src/ui/main_page/main_page.py" line="496"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
