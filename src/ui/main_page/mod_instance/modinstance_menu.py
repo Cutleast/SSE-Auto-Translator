@@ -8,6 +8,7 @@ from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
+from core.database.database import TranslationDatabase
 from core.file_source.file_source import FileSource
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
@@ -92,10 +93,23 @@ class ModInstanceMenu(Menu):
     Submenu for mod file-related actions.
     """
 
+    # General actions
     __uncheck_action: QAction
     __check_action: QAction
     __show_strings_action: QAction
+
+    # Translation-related actions
+    # Installed translations
+    __show_untranslated_strings_action: QAction
+    __show_translation_action: QAction
+    __show_translation_strings_action: QAction
+    __edit_translation_action: QAction
+
+    # New translations
+    __create_translation_action: QAction
     __import_as_translation_action: QAction
+
+    # "Open" actions
     __open_modpage_action: QAction
     __open_in_explorer_action: QAction
 
@@ -159,48 +173,60 @@ class ModInstanceMenu(Menu):
         )
         deep_scan_action.triggered.connect(self.deep_scan_requested.emit)
 
-        self.__action_menu.addSeparator()
-
-        self.__import_as_translation_action = self.__action_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.database-import-outline"),
-            self.tr("Import as translation..."),
-        )
-        self.__import_as_translation_action.triggered.connect(
-            self.import_as_translation_requested.emit
-        )
-
     def __init_translation_actions(self) -> None:
         self.__translation_menu = Menu(
             IconProvider.get_qta_icon("mdi6.translate"), self.tr("Translation")
         )
         self.addMenu(self.__translation_menu)
 
-        show_untranslated_strings_action: QAction = self.__translation_menu.addAction(
+        self.__show_untranslated_strings_action = self.__translation_menu.addAction(
             IconProvider.get_qta_icon("mdi6.book-alert-outline"),
             self.tr("Show untranslated strings..."),
         )
-        show_untranslated_strings_action.triggered.connect(
+        self.__show_untranslated_strings_action.triggered.connect(
             self.show_untranslated_strings_requested.emit
         )
 
-        show_translation_action: QAction = self.__translation_menu.addAction(
+        self.__show_translation_action = self.__translation_menu.addAction(
             IconProvider.get_qta_icon("mdi6.translate"), self.tr("Show translation...")
         )
-        show_translation_action.triggered.connect(self.show_translation_requested.emit)
+        self.__show_translation_action.triggered.connect(
+            self.show_translation_requested.emit
+        )
 
-        show_translation_strings_action: QAction = self.__translation_menu.addAction(
+        self.__show_translation_strings_action = self.__translation_menu.addAction(
             IconProvider.get_qta_icon("mdi6.book-open-outline"),
             self.tr("Show translation strings..."),
         )
-        show_translation_strings_action.triggered.connect(
+        self.__show_translation_strings_action.triggered.connect(
             self.show_translation_strings_requested.emit
         )
 
-        edit_translation_action: QAction = self.__translation_menu.addAction(
+        self.__edit_translation_action = self.__translation_menu.addAction(
             IconProvider.get_qta_icon("mdi6.text-box-edit"),
             self.tr("Edit translation..."),
         )
-        edit_translation_action.triggered.connect(self.edit_translation_requested.emit)
+        self.__edit_translation_action.triggered.connect(
+            self.edit_translation_requested.emit
+        )
+
+        self.__translation_menu.addSeparator()
+
+        self.__create_translation_action: QAction = self.__translation_menu.addAction(
+            IconProvider.get_qta_icon("mdi6.passport-plus"),
+            self.tr("Create new translation..."),
+        )
+        self.__create_translation_action.triggered.connect(
+            self.create_translation_requested.emit
+        )
+
+        self.__import_as_translation_action = self.__translation_menu.addAction(
+            IconProvider.get_qta_icon("mdi6.database-import-outline"),
+            self.tr("Import as translation..."),
+        )
+        self.__import_as_translation_action.triggered.connect(
+            self.import_as_translation_requested.emit
+        )
 
         self.addSeparator()
 
@@ -209,14 +235,6 @@ class ModInstanceMenu(Menu):
             IconProvider.get_res_icon(ResourceIcon.Plugin), self.tr("Mod files")
         )
         self.addMenu(self.__modfile_menu)
-
-        create_translation_action: QAction = self.__modfile_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.passport-plus"),
-            self.tr("Create new translation..."),
-        )
-        create_translation_action.triggered.connect(
-            self.create_translation_requested.emit
-        )
 
         add_to_ignore_list_action: QAction = self.__modfile_menu.addAction(
             IconProvider.get_qta_icon("mdi.playlist-remove"),
@@ -254,7 +272,10 @@ class ModInstanceMenu(Menu):
         )
 
     def open(
-        self, current_item: Optional[Mod | ModFile], selected_modfiles: list[ModFile]
+        self,
+        current_item: Optional[Mod | ModFile],
+        selected_modfiles: list[ModFile],
+        database: TranslationDatabase,
     ) -> None:
         """
         Opens the context menu at the current cursor position.
@@ -262,29 +283,68 @@ class ModInstanceMenu(Menu):
         Args:
             current_item (Optional[Mod | ModFile]): The current item in the tree view.
             selected_modfiles (list[ModFile]): The selected mod files in the tree view.
+            database (TranslationDatabase):
+                The database containing the installed translations.
         """
 
+        # check actions only visible if at least one mod file is selected
         self.__uncheck_action.setVisible(len(selected_modfiles) > 0)
         self.__check_action.setVisible(len(selected_modfiles) > 0)
 
-        self.__action_menu.menuAction().setVisible(isinstance(current_item, Mod))
-        self.__import_as_translation_action.setVisible(
-            isinstance(current_item, Mod)
-            and any(
-                modfile.status == TranslationStatus.IsTranslated
-                for modfile in current_item.modfiles
-            )
-        )
-        self.__modfile_menu.menuAction().setVisible(isinstance(current_item, ModFile))
-        self.__translation_menu.menuAction().setVisible(
-            isinstance(current_item, ModFile)
-            and current_item.status
-            in [
-                TranslationStatus.TranslationInstalled,
-                TranslationStatus.TranslationIncomplete,
-            ]
+        translation_installed: bool = (
+            ModInstanceMenu.__is_translation_installed(current_item)
+            if current_item is not None
+            else False
         )
 
+        # translation-related actions only visible if a translation is installed
+        self.__show_untranslated_strings_action.setVisible(translation_installed)
+        self.__show_translation_action.setVisible(translation_installed)
+        self.__show_translation_strings_action.setVisible(translation_installed)
+        self.__edit_translation_action.setVisible(translation_installed)
+
+        # import action only visible if current item is a mod with at
+        # least one translated mod file and no translation is installed
+        self.__import_as_translation_action.setVisible(
+            (
+                (
+                    isinstance(current_item, ModFile)
+                    and current_item.status == TranslationStatus.IsTranslated
+                    and not database.get_translation_by_modfile_path(current_item.path)
+                )
+                or (
+                    isinstance(current_item, Mod)
+                    and any(
+                        modfile.status == TranslationStatus.IsTranslated
+                        and not database.get_translation_by_modfile_path(modfile.path)
+                        for modfile in current_item.modfiles
+                    )
+                )
+            )
+            and not translation_installed
+        )
+
+        # create action only visible if no translation is installed but required
+        self.__create_translation_action.setVisible(
+            current_item is not None
+            and not translation_installed
+            and ModInstanceMenu.__is_translation_required(current_item)
+        )
+
+        # translation menu only visible if one of its actions is visible
+        self.__translation_menu.menuAction().setVisible(
+            self.__show_untranslated_strings_action.isVisible()
+            or self.__show_translation_action.isVisible()
+            or self.__show_translation_strings_action.isVisible()
+            or self.__edit_translation_action.isVisible()
+            or self.__import_as_translation_action.isVisible()
+            or self.__create_translation_action.isVisible()
+        )
+
+        # mod file-related actions only visible if the current item is a mod file
+        self.__modfile_menu.menuAction().setVisible(isinstance(current_item, ModFile))
+
+        # show strings action only visible if the current item has strings
         self.__show_strings_action.setVisible(
             isinstance(current_item, ModFile)
             or (
@@ -296,6 +356,7 @@ class ModInstanceMenu(Menu):
             )
         )
 
+        # open in explorer action only visible if the current item is a mod file
         self.__open_in_explorer_action.setVisible(
             current_item is not None
             and not (
@@ -303,8 +364,56 @@ class ModInstanceMenu(Menu):
                 and not FileSource.from_file(current_item.full_path).is_real_file()
             )
         )
+
+        # open mod page action only visible if the current item is a mod and has a mod id
         self.__open_modpage_action.setVisible(
             isinstance(current_item, Mod) and current_item.mod_id is not None
         )
 
         self.exec(QCursor.pos())
+
+    @staticmethod
+    def __is_translation_installed(item: Mod | ModFile) -> bool:
+        """
+        Checks if a translation for a mod file or a mod is installed.
+
+        Args:
+            item (Mod | ModFile): The item to check.
+
+        Returns:
+            bool: Whether a translation is installed.
+        """
+
+        valid_states: list[TranslationStatus] = [
+            TranslationStatus.TranslationInstalled,
+            TranslationStatus.TranslationIncomplete,
+        ]
+
+        if isinstance(item, ModFile):
+            return item.status in valid_states
+
+        return any(modfile.status in valid_states for modfile in item.modfiles)
+
+    @staticmethod
+    def __is_translation_required(item: Mod | ModFile) -> bool:
+        """
+        Checks if a translation for a mod file or a mod is required.
+
+        Args:
+            item (Mod | ModFile): The item to check.
+
+        Returns:
+            bool: Whether a translation is required.
+        """
+
+        valid_states: list[TranslationStatus] = [
+            TranslationStatus.RequiresTranslation,
+            TranslationStatus.NoTranslationAvailable,
+            TranslationStatus.TranslationAvailableInDatabase,
+            TranslationStatus.TranslationAvailableOnline,
+        ]
+
+        if isinstance(item, ModFile):
+            return item.status in valid_states
+
+        return any(modfile.status in valid_states for modfile in item.modfiles)

@@ -163,11 +163,17 @@ class TranslationsMenu(Menu):
             and current_item.status == Translation.Status.UpdateAvailable
         )
 
-        self.__show_strings_action.setVisible(current_item is not None)
-        self.__edit_translation_action.setVisible(current_item is not None)
-        self.__rename_translation_action.setVisible(current_item is not None)
-        self.__export_translation_action.setVisible(current_item is not None)
-        self.__delete_translation_action.setVisible(current_item is not None)
-        self.__open_in_explorer_action.setVisible(current_item is not None)
+        self.__show_strings_action.setVisible(isinstance(current_item, Translation))
+        self.__edit_translation_action.setVisible(isinstance(current_item, Translation))
+        self.__rename_translation_action.setVisible(
+            isinstance(current_item, Translation)
+        )
+        self.__export_translation_action.setVisible(
+            isinstance(current_item, Translation)
+        )
+        self.__delete_translation_action.setVisible(
+            isinstance(current_item, Translation)
+        )
+        self.__open_in_explorer_action.setVisible(isinstance(current_item, Translation))
 
         self.exec(QCursor.pos())
