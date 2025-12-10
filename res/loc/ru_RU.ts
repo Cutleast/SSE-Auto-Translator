@@ -336,7 +336,7 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DownloadItem</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/download_item.py" line="63"/>
+        <location filename="src/ui/main_page/database/downloads/download_item.py" line="64"/>
         <source>Non-premium download...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -455,12 +455,12 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
     <name>DownloadManager</name>
     <message>
         <location filename="src/core/downloader/download_manager.py" line="290"/>
-        <location filename="src/core/downloader/download_manager.py" line="310"/>
+        <location filename="src/core/downloader/download_manager.py" line="309"/>
         <source>Collecting available downloads...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="464"/>
+        <location filename="src/core/downloader/download_manager.py" line="463"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1611,64 +1611,64 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="101"/>
+        <location filename="src/core/scanner/scanner.py" line="102"/>
         <source>Loading database...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="113"/>
-        <location filename="src/core/scanner/scanner.py" line="119"/>
+        <location filename="src/core/scanner/scanner.py" line="114"/>
+        <location filename="src/core/scanner/scanner.py" line="120"/>
         <source>Scanning modlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="578"/>
+        <location filename="src/core/scanner/scanner.py" line="579"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="172"/>
+        <location filename="src/core/scanner/scanner.py" line="173"/>
         <source>Extracting strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="185"/>
+        <location filename="src/core/scanner/scanner.py" line="186"/>
         <source>Detecting language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="229"/>
-        <location filename="src/core/scanner/scanner.py" line="266"/>
+        <location filename="src/core/scanner/scanner.py" line="230"/>
+        <location filename="src/core/scanner/scanner.py" line="267"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="377"/>
+        <location filename="src/core/scanner/scanner.py" line="378"/>
         <source>Running deep scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="435"/>
+        <location filename="src/core/scanner/scanner.py" line="436"/>
         <source>Scanning strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="502"/>
+        <location filename="src/core/scanner/scanner.py" line="503"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="628"/>
+        <location filename="src/core/scanner/scanner.py" line="629"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="677"/>
+        <location filename="src/core/scanner/scanner.py" line="678"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="775"/>
+        <location filename="src/core/scanner/scanner.py" line="776"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1866,13 +1866,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringExtractor</name>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="89"/>
-        <location filename="src/core/string/string_extractor.py" line="128"/>
+        <location filename="src/core/string/string_extractor.py" line="88"/>
+        <location filename="src/core/string/string_extractor.py" line="127"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="225"/>
+        <location filename="src/core/string/string_extractor.py" line="224"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>

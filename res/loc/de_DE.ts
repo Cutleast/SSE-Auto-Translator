@@ -341,7 +341,7 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadItem</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/download_item.py" line="63"/>
+        <location filename="src/ui/main_page/database/downloads/download_item.py" line="64"/>
         <source>Non-premium download...</source>
         <translation>Nicht-Premium Download...</translation>
     </message>
@@ -461,12 +461,12 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     <name>DownloadManager</name>
     <message>
         <location filename="src/core/downloader/download_manager.py" line="290"/>
-        <location filename="src/core/downloader/download_manager.py" line="310"/>
+        <location filename="src/core/downloader/download_manager.py" line="309"/>
         <source>Collecting available downloads...</source>
         <translation>Verfügbare Übersetzungen werden gesammelt...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="464"/>
+        <location filename="src/core/downloader/download_manager.py" line="463"/>
         <source>Collecting available translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesammelt...</translation>
     </message>
@@ -1621,64 +1621,64 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="101"/>
+        <location filename="src/core/scanner/scanner.py" line="102"/>
         <source>Loading database...</source>
         <translation>Datenbank wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="113"/>
-        <location filename="src/core/scanner/scanner.py" line="119"/>
+        <location filename="src/core/scanner/scanner.py" line="114"/>
+        <location filename="src/core/scanner/scanner.py" line="120"/>
         <source>Scanning modlist...</source>
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="578"/>
+        <location filename="src/core/scanner/scanner.py" line="579"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="172"/>
+        <location filename="src/core/scanner/scanner.py" line="173"/>
         <source>Extracting strings...</source>
         <translation>Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="185"/>
+        <location filename="src/core/scanner/scanner.py" line="186"/>
         <source>Detecting language...</source>
         <translation>Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="229"/>
-        <location filename="src/core/scanner/scanner.py" line="266"/>
+        <location filename="src/core/scanner/scanner.py" line="230"/>
+        <location filename="src/core/scanner/scanner.py" line="267"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="377"/>
+        <location filename="src/core/scanner/scanner.py" line="378"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="435"/>
+        <location filename="src/core/scanner/scanner.py" line="436"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="502"/>
+        <location filename="src/core/scanner/scanner.py" line="503"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="628"/>
+        <location filename="src/core/scanner/scanner.py" line="629"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="677"/>
+        <location filename="src/core/scanner/scanner.py" line="678"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="775"/>
+        <location filename="src/core/scanner/scanner.py" line="776"/>
         <source>Checking for translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
     </message>
@@ -1876,13 +1876,13 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringExtractor</name>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="89"/>
-        <location filename="src/core/string/string_extractor.py" line="128"/>
+        <location filename="src/core/string/string_extractor.py" line="88"/>
+        <location filename="src/core/string/string_extractor.py" line="127"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation>Strings werden extrahiert aus &apos;{0}&apos;...</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="225"/>
+        <location filename="src/core/string/string_extractor.py" line="224"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation>&apos;{0}&apos; wird verarbeitet...</translation>
     </message>

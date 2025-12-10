@@ -51,6 +51,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
         )
 
         self.setText(0, self.download.mod_details.display_name)
+        self.setIcon(0, self.download.source.get_icon())  # pyright: ignore[reportArgumentType] (source can't be Local here)
 
     def __show_download_button(self) -> None:
         if isinstance(self.current_widget, QPushButton):
