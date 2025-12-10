@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.core.utilities.filesystem import glob
+from cutleast_core_lib.core.filesystem.utils import glob
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 

@@ -8,13 +8,14 @@ from copy import copy
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.core.utilities.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
-from cutleast_core_lib.ui.widgets.progress_dialog import (
-    ProgressDialog,
+from cutleast_core_lib.core.multithreading.progress import (
+    ProgressUpdate,
     UpdateCallback,
     update,
 )
+from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import QObject
 
 from core.config.app_config import AppConfig
@@ -224,12 +225,12 @@ class Scanner(QObject):
 
         if pdialog is not None:
             pdialog.updateMainProgress(
-                ProgressDialog.UpdatePayload(
+                ProgressUpdate(
                     status_text=self.tr(
                         "Scanning online for available translations..."
                     ),
-                    progress_value=0,
-                    progress_max=0,
+                    value=0,
+                    maximum=0,
                 )
             )
 
@@ -302,10 +303,10 @@ class Scanner(QObject):
         for m, modfile in enumerate(modfiles):
             update(
                 update_callback,
-                ProgressDialog.UpdatePayload(
+                ProgressUpdate(
                     status_text=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
-                    progress_value=m,
-                    progress_max=len(modfiles),
+                    value=m,
+                    maximum=len(modfiles),
                 ),
             )
 

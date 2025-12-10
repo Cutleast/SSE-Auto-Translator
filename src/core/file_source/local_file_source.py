@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import BinaryIO, override
 
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
+from cutleast_core_lib.core.filesystem.utils import get_file_identifier
 
 from .file_source import FileSource
 

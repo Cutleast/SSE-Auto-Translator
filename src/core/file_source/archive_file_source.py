@@ -9,7 +9,7 @@ from typing import BinaryIO, Optional, override
 
 from cutleast_core_lib.core.archive.archive import Archive
 from cutleast_core_lib.core.cache.function_cache import FunctionCache
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
+from cutleast_core_lib.core.filesystem.utils import get_file_identifier
 
 from core.utilities.temp_folder_provider import TempFolderProvider
 

@@ -7,8 +7,8 @@ from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
-from cutleast_core_lib.core.utilities.filesystem import get_folder_size
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.scale import scale_value
 from cutleast_core_lib.ui.settings.settings_page import SettingsPage
@@ -142,7 +142,7 @@ class AppSettings(SettingsPage[AppConfig]):
         if self.cache.path.is_dir():
             self.__clear_cache_button.setText(
                 self.__clear_cache_button.text()
-                + f" ({scale_value(get_folder_size(self.cache.path))})"
+                + f" ({scale_value(DirectoryScanner.get_folder_size(self.cache.path))})"
             )
         basic_flayout.addRow(self.__clear_cache_button)
 

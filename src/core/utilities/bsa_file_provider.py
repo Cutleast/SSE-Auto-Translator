@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from pathlib import Path
 
 from cutleast_core_lib.core.cache.cache import Cache
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
+from cutleast_core_lib.core.filesystem.utils import get_file_identifier
 from sse_bsa import BSAArchive
 
 

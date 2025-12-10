@@ -8,15 +8,14 @@ from pathlib import Path
 from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.archive.archive import Archive
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
-from cutleast_core_lib.core.utilities.progress_executor import (
-    ProgressExecutor,
-)
-from cutleast_core_lib.ui.widgets.progress_dialog import (
-    ProgressDialog,
+from cutleast_core_lib.core.filesystem.utils import get_file_identifier
+from cutleast_core_lib.core.multithreading.progress import (
+    ProgressUpdate,
     UpdateCallback,
     update,
 )
+from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import QObject
 
 from core.file_source.archive_file_source import ArchiveFileSource
@@ -85,11 +84,11 @@ class StringExtractor(QObject):
 
         if pdialog is not None:
             pdialog.updateMainProgress(
-                ProgressDialog.UpdatePayload(
+                ProgressUpdate(
                     status_text=self.tr("Extracting strings from '{0}'...").format(
                         input
                     ),
-                    progress_max=0,
+                    maximum=0,
                 )
             )
 
@@ -221,11 +220,11 @@ class StringExtractor(QObject):
 
         update(
             update_callback,
-            ProgressDialog.UpdatePayload(
+            ProgressUpdate(
                 status_text=self.tr("Processing '{0}'...").format(
                     translated_modfile.full_path
                 ),
-                progress_max=0,
+                maximum=0,
             ),
         )
 

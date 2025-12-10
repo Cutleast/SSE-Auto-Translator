@@ -9,7 +9,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional, override
 
-from cutleast_core_lib.core.utilities.filesystem import get_folder_size
+from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from pydantic import BaseModel, Field
 from PySide6.QtWidgets import QApplication
@@ -245,7 +245,7 @@ class Translation(BaseModel):
             int: Size of the translation in bytes.
         """
 
-        return get_folder_size(self.path)
+        return DirectoryScanner.get_folder_size(self.path)
 
     @property
     def size(self) -> int:

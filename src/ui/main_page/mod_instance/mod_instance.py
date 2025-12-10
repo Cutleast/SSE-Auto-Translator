@@ -8,7 +8,7 @@ import webbrowser
 from pathlib import Path
 from typing import Optional, override
 
-from cutleast_core_lib.core.utilities.filesystem import open_in_explorer
+from cutleast_core_lib.core.filesystem.utils import open_in_explorer
 from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
