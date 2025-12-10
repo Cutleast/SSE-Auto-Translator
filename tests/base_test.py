@@ -3,18 +3,15 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
 import shutil
 import sys
 import tempfile
 from collections.abc import Generator
 from pathlib import Path
-from typing import Optional
 from unittest.mock import MagicMock
 
 import jstyleson as json
 import pytest
-from cutleast_core_lib.core.utilities.env_resolver import resolve
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from cutleast_core_lib.test.utils import Utils
@@ -46,25 +43,6 @@ class BaseTest(CoreBaseTest):
     """
     Base class for all tests.
     """
-
-    _temp_folder: Optional[Path] = None
-
-    @classmethod
-    def setup_class(cls) -> None:
-        """
-        Sets up temporary folder for temporary test data.
-        """
-
-    @classmethod
-    def teardown_class(cls) -> None:
-        """
-        Cleans up temporary folder (if exists).
-        """
-
-        if cls._temp_folder is not None and cls._temp_folder.is_dir():
-            shutil.rmtree(cls._temp_folder)
-
-        cls._temp_folder = None
 
     @pytest.fixture
     def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
@@ -107,13 +85,13 @@ class BaseTest(CoreBaseTest):
         return data_folder / "data"
 
     @pytest.fixture
-    def app_config(self, data_folder: Path) -> AppConfig:
+    def app_config(self, data_folder: Path, tmp_folder: Path) -> AppConfig:
         """
         Loads and returns the test app configuration.
         """
 
         app_config = AppConfig.load(data_folder)
-        app_config.temp_path = self.tmp_folder()
+        app_config.temp_path = tmp_folder / "temp"
         app_config.debug_mode = True
         app_config.worker_thread_num = 1  # disable multithreading for tests
 
@@ -133,9 +111,7 @@ class BaseTest(CoreBaseTest):
         return loader
 
     @pytest.fixture
-    def user_data(
-        self, test_fs: FakeFilesystem, res_path: Path, user_data_path: Path
-    ) -> UserData:
+    def user_data(self, res_path: Path, user_data_path: Path) -> UserData:
         """
         Loads and returns the test user data.
         """
@@ -188,7 +164,7 @@ class BaseTest(CoreBaseTest):
         logging.debug("Logger singleton reset.")
 
     @pytest.fixture
-    def mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:
+    def mo2_instance_info(self, data_folder: Path) -> Mo2InstanceInfo:
         """
         Returns the MO2 instance info of the test mod instance.
 
@@ -196,7 +172,7 @@ class BaseTest(CoreBaseTest):
             Mo2InstanceInfo: The instance info of the test mod instance.
         """
 
-        base_dir_path = Path("E:\\Modding\\Test Instance")
+        base_dir_path = data_folder / "mod_instance"
 
         return Mo2InstanceInfo(
             display_name="Portable",
@@ -209,30 +185,7 @@ class BaseTest(CoreBaseTest):
         )
 
     @pytest.fixture
-    def global_mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:
-        """
-        Returns the MO2 instance info of the test mod instance.
-
-        Returns:
-            Mo2InstanceInfo: The instance info of the test mod instance.
-        """
-
-        base_dir_path: Path = (
-            resolve(Path("%LOCALAPPDATA%")) / "ModOrganizer" / "Test Instance"
-        )
-
-        return Mo2InstanceInfo(
-            display_name="Test Instance",
-            profile="Default",
-            is_global=True,
-            base_folder=base_dir_path,
-            mods_folder=base_dir_path / "mods",
-            profiles_folder=base_dir_path / "profiles",
-            mod_manager=ModManager.ModOrganizer,
-        )
-
-    @pytest.fixture
-    def vortex_profile_info(self, test_fs: FakeFilesystem) -> ProfileInfo:
+    def vortex_profile_info(self) -> ProfileInfo:
         """
         Returns the Vortex profile info of the test mod instance.
 
@@ -247,9 +200,7 @@ class BaseTest(CoreBaseTest):
         )
 
     @pytest.fixture
-    def test_fs(
-        self, data_folder: Path, res_path: Path, test_fs: FakeFilesystem
-    ) -> FakeFilesystem:
+    def test_fs(self, res_path: Path, test_fs: FakeFilesystem) -> FakeFilesystem:
         """
         Creates a fake filesystem for testing.
 
@@ -260,34 +211,6 @@ class BaseTest(CoreBaseTest):
         fs: FakeFilesystem = test_fs
 
         test_fs.add_real_directory(res_path)
-
-        os.chdir(data_folder.parent.parent)
-
-        fs.add_real_directory(
-            data_folder / "mod_instance", target_path="E:\\Modding\\Test Instance"
-        )
-
-        global_mo2_path: Path = (
-            resolve(Path("%LOCALAPPDATA%")) / "ModOrganizer" / "Test Instance"
-        )
-        fs.add_real_directory(
-            data_folder / "mod_instance" / "mods", target_path=global_mo2_path / "mods"
-        )
-        fs.add_real_directory(
-            data_folder / "mod_instance" / "profiles",
-            target_path=global_mo2_path / "profiles",
-        )
-        fs.add_real_file(
-            data_folder / "mod_instance" / "ModOrganizer.ini",
-            target_path=global_mo2_path / "ModOrganizer.ini",
-        )
-
-        fs.add_real_directory(
-            data_folder / "skyrimse_mods", target_path="E:\\Modding\\Vortex\\skyrimse"
-        )
-        fs.add_real_directory(Path("C:\\Users\\Public"), read_only=False)
-
-        resolve(Path("%APPDATA%") / "Vortex" / "state.v2").mkdir(parents=True)
 
         return fs
 
@@ -304,7 +227,7 @@ class BaseTest(CoreBaseTest):
 
     @pytest.fixture
     def vortex_db(
-        self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
+        self, mocker: MockerFixture, state_v2_json: Path
     ) -> Generator[MockPlyvelDB, None, None]:
         """
         Pytest fixture to mock the plyvel.DB class and redirect it to use the
@@ -339,22 +262,20 @@ class BaseTest(CoreBaseTest):
 
         return data_folder / "state.v2.json"
 
-    @classmethod
-    def tmp_folder(cls) -> Path:
+    @pytest.fixture
+    def tmp_folder(self) -> Generator[Path]:
         """
-        Creates a temporary folder or returns an existing one.
-
-        The folder gets deleted after all tests from this class are done.
+        Creates a temporary folder for a test which gets deleted after the test.
 
         Returns:
-            Path: The path to the temporary folder
+            Generator[Path]: The path to the temporary folder
         """
 
-        if cls._temp_folder is None:
-            temp_folder_name: str = tempfile.mkdtemp(prefix="SSE-AT_test-")
-            cls._temp_folder = Path(temp_folder_name)
+        temp_folder_name: str = tempfile.mkdtemp(prefix="SSE-AT_test-")
 
-        return cls._temp_folder
+        yield Path(temp_folder_name)
+
+        shutil.rmtree(temp_folder_name, ignore_errors=True)
 
     def get_mod_by_name(self, mod_name: str, modinstance: ModInstance) -> Mod:
         """

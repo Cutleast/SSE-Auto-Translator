@@ -314,7 +314,7 @@
             "confirmPurge": true,
             "installPathMode": "userData",
             "installPath": {
-                "skyrimse": "E:\\Modding\\Vortex\\{game}"
+                "skyrimse": "tests\\data\\{game}_mods"
             },
             "installerSandbox": true,
             "showDropzone": true,

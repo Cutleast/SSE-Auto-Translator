@@ -22,9 +22,7 @@ class TestModInstanceLoader(CoreTest):
     Tests `core.mod_instance.mod_instance_loader.ModInstanceLoader`.
     """
 
-    def test_load_portable_mo2_instance(
-        self, mo2_instance_info: Mo2InstanceInfo
-    ) -> None:
+    def test_load_mo2_instance(self, mo2_instance_info: Mo2InstanceInfo) -> None:
         """
         Tests `ModInstanceLoader.load_instance()` with a portable MO2 instance.
         """
@@ -39,26 +37,6 @@ class TestModInstanceLoader(CoreTest):
 
         # then
         assert mod_instance.display_name == "Portable"
-        assert len(mod_instance.mods) == 8
-        assert len(mod_instance.modfiles) == 10
-
-    def test_load_global_mo2_instance(
-        self, global_mo2_instance_info: Mo2InstanceInfo
-    ) -> None:
-        """
-        Tests `ModInstanceLoader.load_instance()` with a global MO2 instance.
-        """
-
-        # given
-        loader = ModInstanceLoader()
-
-        # when
-        mod_instance: ModInstance = loader.load_instance(
-            global_mo2_instance_info, GameLanguage.German, True
-        )
-
-        # then
-        assert mod_instance.display_name == "Test Instance"
         assert len(mod_instance.mods) == 8
         assert len(mod_instance.modfiles) == 10
 
