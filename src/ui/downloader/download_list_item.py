@@ -72,8 +72,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         for d, download in enumerate(translation_downloads):
             self.__translations_combobox.addItem(download.mod_info.display_name)
             icon: Optional[QIcon] = download.mod_info.source.get_icon()
-            if icon is not None:
-                self.__translations_combobox.setItemIcon(d, icon)
+            self.__translations_combobox.setItemIcon(d, icon)  # pyright: ignore[reportArgumentType] (source can't be Local here)
 
         self.__translations_combobox.setEnabled(
             self.__translations_combobox.count() > 1

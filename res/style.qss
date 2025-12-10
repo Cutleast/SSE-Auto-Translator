@@ -51,3 +51,13 @@ QStatusBar {
 QStatusBar QAbstractButton {
     background-color: @secondary_bg_color;
 }
+
+/* Download List Widget */
+DownloadListWidget QTreeWidget QComboBox,
+DownloadListWidget QTreeWidget QPushButton {
+    background-color: transparent;
+}
+DownloadListWidget QTreeWidget QComboBox:hover:!disabled,
+DownloadListWidget QTreeWidget QPushButton:hover:!disabled:!pressed {
+    background-color: @highlighted_bg_color;
+}
