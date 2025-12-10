@@ -47,8 +47,7 @@ class TestEsp2Dsd(BaseTest):
         original_plugin_path: Path = data_path / "orig" / "WetandCold.esp"
 
         expected_output_path: Path = (
-            temp_path
-            / "SKSE/Plugins/DynamicStringDistributor/WetandCold.esp/SSE-AT_exported.json"
+            temp_path / "SKSE/Plugins/DynamicStringDistributor/WetandCold.esp/0.json"
         )
 
         # when
