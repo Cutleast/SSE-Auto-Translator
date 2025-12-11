@@ -15,6 +15,7 @@ dependencies = [
     "googletrans==3.1.0a0",
     "lingua-language-detector",
     "lz4",
+    "mod-manager-lib",
     "plyvel-ci",
     "pytz",
     "pyuac",
@@ -43,10 +44,12 @@ dev = [
 [tool.uv.workspace]
 members = [
     "core-lib",
+    "mod-manager-lib",
 ]
 
 [tool.uv.sources]
 cutleast-core-lib = { workspace = true }
+mod-manager-lib = { workspace = true }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

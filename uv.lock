@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 [manifest]
 members = [
     "cutleast-core-lib",
+    "mod-manager-lib",
     "sse-auto-translator",
 ]
 
@@ -615,6 +616,45 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/4c/c4/2a458039645fcc6324ece731d4d1361c5daf960b553d1fcb4261ba07d51c/lz4-4.4.4-cp313-cp313-win32.whl", hash = "sha256:e9ec5d45ea43684f87c316542af061ef5febc6a6b322928f059ce1fb289c298a", size = 88289, upload-time = "2025-04-01T22:55:47.601Z" },
     { url = "https://files.pythonhosted.org/packages/00/96/b8e24ea7537ab418074c226279acfcaa470e1ea8271003e24909b6db942b/lz4-4.4.4-cp313-cp313-win_amd64.whl", hash = "sha256:a760a175b46325b2bb33b1f2bbfb8aa21b48e1b9653e29c10b6834f9bb44ead4", size = 99925, upload-time = "2025-04-01T22:55:48.463Z" },
     { url = "https://files.pythonhosted.org/packages/a5/a5/f9838fe6aa132cfd22733ed2729d0592259fff074cefb80f19aa0607367b/lz4-4.4.4-cp313-cp313-win_arm64.whl", hash = "sha256:f4c21648d81e0dda38b4720dccc9006ae33b0e9e7ffe88af6bf7d4ec124e2fba", size = 89743, upload-time = "2025-04-01T22:55:49.716Z" },
+]
+
+[[package]]
+name = "mod-manager-lib"
+version = "1.0.0"
+source = { editable = "mod-manager-lib" }
+dependencies = [
+    { name = "cutleast-core-lib" },
+    { name = "plyvel-ci" },
+    { name = "pyuac" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pyfakefs" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "pytest-qt" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cutleast-core-lib", editable = "core-lib" },
+    { name = "plyvel-ci" },
+    { name = "pyuac" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pyfakefs" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "pytest-qt" },
+    { name = "ruff" },
 ]
 
 [[package]]
@@ -1344,6 +1384,7 @@ dependencies = [
     { name = "googletrans" },
     { name = "lingua-language-detector" },
     { name = "lz4" },
+    { name = "mod-manager-lib" },
     { name = "plyvel-ci" },
     { name = "pytz" },
     { name = "pyuac" },
@@ -1379,6 +1420,7 @@ requires-dist = [
     { name = "googletrans", specifier = "==3.1.0a0" },
     { name = "lingua-language-detector" },
     { name = "lz4" },
+    { name = "mod-manager-lib", editable = "mod-manager-lib" },
     { name = "plyvel-ci" },
     { name = "pytz" },
     { name = "pyuac" },
