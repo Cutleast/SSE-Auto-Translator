@@ -110,7 +110,9 @@ class PluginFile(ModFile):
                     form_id=string.form_id,
                     index=string.index,
                     type=string.type,
-                    string=string.string or string.original,
+                    string=(
+                        string.string if string.string is not None else string.original
+                    ),
                 )
                 replacement_strings.append(replacement_string)
 

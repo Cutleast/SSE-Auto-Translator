@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
 
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QCloseEvent, QFont, QKeySequence, QShortcut
@@ -29,6 +29,9 @@ from ui.utilities.icon_provider import IconProvider
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
+
+if TYPE_CHECKING:
+    from .editor_tab import EditorTab
 
 
 class TranslatorDialog(QWidget):
@@ -330,7 +333,9 @@ class TranslatorDialog(QWidget):
         except RuntimeError:
             pass
         self.__translated_entry.setPlainText(
-            self.__current_string.string or self.__current_string.original
+            self.__current_string.string
+            if self.__current_string.string is not None
+            else self.__current_string.original
         )
         self.__translated_entry.textChanged.connect(self.changes_signal.emit)
         self.__prev_text = self.__translated_entry.toPlainText()
@@ -413,9 +418,13 @@ class TranslatorDialog(QWidget):
             self.__current_string.string = self.__current_string.original
 
         if status == StringStatus.TranslationComplete:
+            string: str = (
+                self.__current_string.string
+                if self.__current_string.string is not None
+                else self.__current_string.original
+            )
             self.__parent.update_matching_strings(
-                self.__current_string.original,
-                self.__current_string.string or self.__current_string.original,
+                self.__current_string.original, string
             )
 
         self.changes_pending = False
@@ -428,7 +437,3 @@ class TranslatorDialog(QWidget):
 
         self.finalize_string()
         self.close()
-
-
-if __name__ == "__main__":
-    from .editor_tab import EditorTab
