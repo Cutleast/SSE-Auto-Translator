@@ -65,8 +65,8 @@ class ModInstance:
     ) -> Optional[ModFile]:
         """
         Get a mod file by its name or None if it doesn't exist.
-        Returns the mod file with the highest index if there are
-        multiple mod files with the same name.
+        Returns the mod file with the highest index if there are multiple mod files with
+        the same name.
 
         Args:
             modfile (Path): Path of the mod file, relative to the game's "Data" folder.
@@ -113,19 +113,26 @@ class ModInstance:
     def get_mod(self, mod_id: ModId) -> Optional[Mod]:
         """
         Get a mod by its id or None if it doesn't exist.
-        Returns the mod with the highest index if there are
-        multiple mods with the same id.
+        Returns the mod with the highest index if there are multiple mods with the same
+        id.
 
         Args:
             mod_id (int): Mod identifier.
-            file_id (Optional[int], optional): File id. Defaults to None.
 
         Returns:
             Optional[Mod]: Mod or None
         """
 
         mods: list[Mod] = unique(
-            mod for mod in filter(lambda m: (m.mod_id == mod_id), self.mods)
+            mod
+            for mod in filter(
+                lambda m: (
+                    m.metadata.mod_id == mod_id.mod_id
+                    and m.metadata.file_id == mod_id.file_id
+                    and m.metadata.game_id == mod_id.nm_game_id
+                ),
+                self.mods,
+            )
         )
 
         # Get the mod with the highest modlist index
@@ -139,8 +146,8 @@ class ModInstance:
     ) -> Optional[Mod]:
         """
         Get a mod that has the specified mod file or None if it doesn't exist.
-        Returns the mod with the highest index if there are
-        multiple mods with the same mod file.
+        Returns the mod with the highest index if there are multiple mods with the same
+        mod file.
 
         Args:
             modfile_name (Path):

@@ -17,8 +17,10 @@ from cutleast_core_lib.core.utilities.exe_info import (
 )
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
+from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QTranslator
 from PySide6.QtWidgets import (
     QApplication,
@@ -83,6 +85,8 @@ class App(BaseApp, Singleton):
 
         Cache(self.cache_path, App.APP_VERSION)
         self.__user_data_service = UserDataService(self.res_path, self.data_path)
+
+        GameService(read_resource(":/skyrimse.json"))
 
         super().__init__(args)
 

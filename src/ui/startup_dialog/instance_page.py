@@ -6,10 +6,14 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import override
 
+from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
+    InstanceSelectorWidget,
+)
 from PySide6.QtWidgets import QCheckBox
 
 from core.config.user_config import UserConfig
-from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
+from core.utilities.constants import GAME_ID
 from ui.startup_dialog.page import Page
 
 
@@ -24,6 +28,7 @@ class InstancePage(Page):
     @override
     def _init_form(self) -> None:
         self.__modinstance_selector = InstanceSelectorWidget()
+        self.__modinstance_selector.set_cur_game(GameService.get_game_by_id(GAME_ID))
         self.__modinstance_selector.instance_valid.connect(self.valid_signal.emit)
         self._vlayout.addWidget(self.__modinstance_selector)
 

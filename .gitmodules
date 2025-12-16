@@ -6,3 +6,7 @@
 	path = core-res
 	url = https://github.com/Cutleast/cutleast-core-res.git
 	branch = master
+[submodule "mod-manager-lib"]
+	path = mod-manager-lib
+	url = https://github.com/Cutleast/mod-manager-lib.git
+	branch = master

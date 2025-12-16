@@ -1,0 +1,19 @@
+[
+    {
+        "id": "skyrimse",
+        "display_name": "Skyrim Special Edition",
+        "short_name": "SkyrimSE",
+        "nexus_id": "skyrimspecialedition",
+        "inidir": "%DOCUMENTS%\\My Games\\Skyrim Special Edition",
+        "inifiles": [
+            "Skyrim.ini",
+            "SkyrimPrefs.ini",
+            "SkyrimCustom.ini"
+        ],
+        "mods_folder": "Data",
+        "additional_files": [
+            "loadorder.txt",
+            "plugins.txt"
+        ]
+    }
+]

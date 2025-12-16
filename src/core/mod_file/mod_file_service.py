@@ -8,10 +8,10 @@ from typing import Optional
 
 from cutleast_core_lib.core.filesystem.utils import glob
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from mod_manager_lib.core.instance.mod import Mod
 from PySide6.QtCore import QObject
 
 from core.mod_file.interface_file import InterfaceFile
-from core.mod_instance.mod import Mod
 from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.game_language import GameLanguage
 
@@ -53,7 +53,7 @@ class ModFileService(QObject):
             list[ModFile]: List of mod files.
         """
 
-        self.log.info(f"Scanning '{mod.name}' for mod files...")
+        self.log.info(f"Scanning '{mod.display_name}' for mod files...")
 
         modfiles: list[ModFile] = []
         for file_type in MODFILE_TYPES:
@@ -68,7 +68,7 @@ class ModFileService(QObject):
                     self.get_modfiles_from_bsa(mod.path / bsa_file, language)
                 )
 
-        self.log.info(f"Found {len(modfiles)} mod file(s) in '{mod.name}'.")
+        self.log.info(f"Found {len(modfiles)} mod file(s) in '{mod.display_name}'.")
 
         return modfiles
 

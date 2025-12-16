@@ -6,10 +6,12 @@ from pathlib import Path
 from typing import Annotated, Optional, override
 
 from cutleast_core_lib.core.config.base_config import BaseConfig
+from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+    MO2InstanceInfo,
+)
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from pydantic import Field
 
-from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
-from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
 
@@ -25,7 +27,7 @@ class UserConfig(BaseConfig):
     api_key: Annotated[str, BaseConfig.PropertyMarker.ExcludeFromLogging]
     """API key for Nexus Mods."""
 
-    modinstance: Optional[Mo2InstanceInfo | ProfileInfo] = Field(
+    modinstance: Optional[MO2InstanceInfo | ProfileInfo] = Field(
         default=None, discriminator="mod_manager"
     )
     """Mod instance to load."""

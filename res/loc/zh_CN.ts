@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="237"/>
+        <location filename="src/app.py" line="241"/>
         <source>Path Limit Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="239"/>
+        <location filename="src/app.py" line="243"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -460,7 +460,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="463"/>
+        <location filename="src/core/downloader/download_manager.py" line="466"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -880,19 +880,32 @@ Depending on the translator API this can raise unexpected costs.</comment>
     </message>
 </context>
 <context>
+    <name>InstanceCreatorWidget</name>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="75"/>
+        <source>Mod Manager:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="81"/>
+        <source>Please select...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="32"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="37"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="41"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="46"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="46"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="51"/>
         <source>On this page you select a modlist to load from a mod manager. You can always change the selected modlist and mod manager under Settings &gt; User Settings.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -900,7 +913,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
-        <location filename="src/ui/modinstance_selector/instance_selector_widget.py" line="89"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="101"/>
         <source>Mod manager:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1417,37 +1430,131 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
-    <name>ModOrganizerApi</name>
+    <name>ModOrganizer</name>
     <message>
-        <location filename="src/core/mod_managers/modorganizer/modorganizer_api.py" line="77"/>
-        <location filename="src/core/mod_managers/modorganizer/modorganizer_api.py" line="106"/>
-        <location filename="src/core/mod_managers/modorganizer/modorganizer_api.py" line="129"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="152"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="208"/>
         <source>Loading mods from {0} &gt; {1}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="165"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="469"/>
+        <source>Loading tools from {0} &gt; {1}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="239"/>
+        <source>Loading mods from {0} &gt; {1}: {2}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="301"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="420"/>
+        <source>Processing mod conflicts...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="435"/>
+        <source>Processing single file conflicts...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="656"/>
+        <source>Downloading and installing ModOrganizer...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="689"/>
+        <source>Extracting archive...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ModOrganizerCreatorWidget</name>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="58"/>
+        <source>Instance name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="62"/>
+        <source>eg. My Migrated Instance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="70"/>
+        <source>Instance type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="77"/>
+        <source>Portable instance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="81"/>
+        <source>Global instance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="86"/>
+        <source>Instance path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="90"/>
+        <source>eg. C:\Modding\My Migrated Instance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="99"/>
+        <source>Mods path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="103"/>
+        <source>eg. C:\Modding\My Migrated Instance\mods</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="111"/>
+        <source>Install Mod Organizer 2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="118"/>
+        <source>Use Root Builder plugin:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/modorganizer_creator_widget.py" line="123"/>
+        <source>If enabled, mod files for the game&apos;s root folder will be moved to a &quot;Root&quot; subfolder in their mod instead of copied to the game&apos;s root folder.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ModOrganizerSelectorWidget</name>
     <message>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="44"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="47"/>
         <source>Instance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="49"/>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="77"/>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="87"/>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="110"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="52"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="80"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="90"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="113"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="60"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="63"/>
         <source>Portable path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="72"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="75"/>
         <source>Profile:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1468,6 +1575,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>PlaceholderDropdown</name>
     <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/placeholder_dropdown.py" line="28"/>
         <location filename="src/ui/widgets/placeholder_dropdown.py" line="27"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
@@ -1659,12 +1767,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="678"/>
+        <location filename="src/core/scanner/scanner.py" line="680"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="776"/>
+        <location filename="src/core/scanner/scanner.py" line="778"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2521,81 +2629,92 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="66"/>
+        <location filename="src/ui/settings/user_settings.py" line="70"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="114"/>
+        <location filename="src/ui/settings/user_settings.py" line="118"/>
         <source>Nexus Mods API Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="80"/>
+        <location filename="src/ui/settings/user_settings.py" line="84"/>
         <source>Game language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="82"/>
+        <location filename="src/ui/settings/user_settings.py" line="86"/>
         <source>Translation source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="110"/>
+        <location filename="src/ui/settings/user_settings.py" line="114"/>
         <source>Start API setup...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="119"/>
+        <location filename="src/ui/settings/user_settings.py" line="123"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="125"/>
+        <location filename="src/ui/settings/user_settings.py" line="129"/>
         <source>Open masterlist (in browser)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="130"/>
+        <location filename="src/ui/settings/user_settings.py" line="134"/>
         <source>Open translation author blacklist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="136"/>
+        <location filename="src/ui/settings/user_settings.py" line="140"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="151"/>
+        <location filename="src/ui/settings/user_settings.py" line="156"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>VortexApi</name>
+    <name>Vortex</name>
     <message>
-        <location filename="src/core/mod_managers/vortex/vortex_api.py" line="85"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="145"/>
         <source>Loading profile {0}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/mod_managers/vortex/vortex_api.py" line="106"/>
-        <location filename="src/core/mod_managers/vortex/vortex_api.py" line="135"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="184"/>
         <source>Loading mods from profile {0}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="226"/>
+        <source>Loading mods from profile {0}: {1}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="431"/>
+        <source>Loading tools from Vortex...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VortexCreatorWidget</name>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/vortex_creator_widget.py" line="39"/>
+        <source>Profile name:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>VortexSelectorWidget</name>
     <message>
-        <location filename="src/ui/modinstance_selector/vortex_selector_widget.py" line="40"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/vortex_selector_widget.py" line="42"/>
         <source>Profile:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/modinstance_selector/vortex_selector_widget.py" line="45"/>
-        <location filename="src/ui/modinstance_selector/vortex_selector_widget.py" line="55"/>
-        <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2698,18 +2817,60 @@ Response: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/mod_managers/exceptions.py" line="18"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/exceptions.py" line="18"/>
         <source>A mod manager error occured!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/mod_managers/exceptions.py" line="31"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/exceptions.py" line="31"/>
         <source>The mod instance {0} could not be found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/mod_managers/vortex/exceptions.py" line="19"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/exceptions.py" line="43"/>
+        <source>The mod instance could not be created!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/exceptions.py" line="19"/>
         <source>Vortex is running and blocking its database. Close Vortex and try again!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/exceptions.py" line="33"/>
+        <source>Migration cannot continue while Vortex is deployed!
+Open Vortex and purge the game directory.
+Then click &apos;Continue&apos; to complete the migration process.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/exceptions.py" line="48"/>
+        <source>Vortex is not installed or fully setup.
+Follow these steps and try again:
+1. Install Vortex
+2. Start Vortex and enable the mod management for the game.
+3. Enable profile management in Vortex&apos; settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/exceptions.py" line="64"/>
+        <source>The overwrite folder of MO2 is not supported by Vortex!
+Please create a separate mod from the overwrite folder and restart the migration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/exceptions.py" line="18"/>
+        <source>The installation folder for the selected game could not be found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/exceptions.py" line="20"/>
+        <source>Invalid global instance path! The path must not be outside of the %LOCALAPPDATA%\ModOrganizer folder when choosing the global instance type!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/exceptions.py" line="36"/>
+        <source>Cannot install MO2 when a global instance is selected as destination!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
