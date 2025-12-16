@@ -29,6 +29,7 @@ from PySide6.QtWidgets import (
 from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
+from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
@@ -246,7 +247,9 @@ class StringListWidget(QWidget):
         if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
             self.collapseAll()
 
-        self.__search_bar.setLiveMode(len(self.__string_items) < 1000)
+        self.__search_bar.setLiveMode(
+            len(self.__string_items) <= STRING_AUTO_SEARCH_THRESHOLD
+        )
         self.__strings_num_label.setDigitCount(
             max((len(str(len(self.__string_items))), 4))
         )

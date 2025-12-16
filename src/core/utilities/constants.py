@@ -2,6 +2,12 @@
 Copyright (c) Cutleast
 """
 
+STRING_AUTO_SEARCH_THRESHOLD: int = 10_000
+"""
+If the total number of strings is above this threshold, the auto search feature is
+disabled.
+"""
+
 GAME_ID: str = "skyrimse"
 
 # Vanilla Plugins

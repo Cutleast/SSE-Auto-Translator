@@ -36,6 +36,7 @@ from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
+from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.stacked_bar import StackedBar
@@ -115,6 +116,10 @@ class EditorTab(QWidget):
         self.__init_strings_widget()
         self.__init_context_menu()
         self.update()
+
+        self.__search_bar.setLiveMode(
+            len(self.__editor.all_strings) <= STRING_AUTO_SEARCH_THRESHOLD
+        )
 
     def __init_header(self) -> None:
         hlayout = QHBoxLayout()
