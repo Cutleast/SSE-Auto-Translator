@@ -200,7 +200,9 @@ class StringListWidget(QWidget):
         if column == self.tr("Original"):
             textbox.setPlainText(string.original)
         else:
-            textbox.setPlainText(string.string or string.original)
+            textbox.setPlainText(
+                string.string if string.string is not None else string.original
+            )
         textbox.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         textbox.setCursor(Qt.CursorShape.IBeamCursor)
         textbox.setFocus()
@@ -255,13 +257,18 @@ class StringListWidget(QWidget):
             [
                 string.display_id,
                 trim_string(string.original, max_length=-1),
-                trim_string(string.string or string.original, max_length=-1),
+                trim_string(
+                    string.string if string.string is not None else string.original,
+                    max_length=-1,
+                ),
             ]
         )
 
         item.setToolTip(0, string.display_id)
         item.setToolTip(1, string.original)
-        item.setToolTip(2, string.string or string.original)
+        item.setToolTip(
+            2, string.string if string.string is not None else string.original
+        )
 
         if self.__translation_mode:
             color: Optional[QColor] = StringStatus.get_color(string.status)

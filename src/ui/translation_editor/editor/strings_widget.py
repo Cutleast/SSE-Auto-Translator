@@ -111,7 +111,9 @@ class StringsWidget(QTreeWidget):
             [
                 string.display_id,
                 trim_string(string.original),
-                trim_string(string.string or string.original),
+                trim_string(
+                    string.string if string.string is not None else string.original
+                ),
             ]
         )
         item.set_string(string)
@@ -143,7 +145,12 @@ class StringsWidget(QTreeWidget):
 
         for string, item in self.__string_items.items():
             item.setText(1, trim_string(string.original))
-            item.setText(2, trim_string(string.string or string.original))
+            item.setText(
+                2,
+                trim_string(
+                    string.string if string.string is not None else string.original
+                ),
+            )
 
             string_text: str = string.display_id + string.original
             if string.string is not None:

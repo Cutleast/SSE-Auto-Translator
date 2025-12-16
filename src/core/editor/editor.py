@@ -194,7 +194,7 @@ class Editor(QObject):
 
         modified_strings: int = 0
         for string in strings:
-            src: str = string.string or string.original
+            src: str = string.string if string.string is not None else string.original
             res: str = pattern.sub(replace_text, src)
             string.string = res
 
