@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+GAME_ID: str = "skyrimse"
+
 # Vanilla Plugins
 BASE_GAME_PLUGINS = [
     "skyrim.esm",

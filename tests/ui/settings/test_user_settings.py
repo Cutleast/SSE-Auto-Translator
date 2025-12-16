@@ -7,6 +7,9 @@ from copy import copy
 import pytest
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
+    InstanceSelectorWidget,
+)
 from PySide6.QtWidgets import QCheckBox, QLabel, QLineEdit
 from pytestqt.qtbot import QtBot
 
@@ -15,7 +18,6 @@ from core.translation_provider.provider_preference import ProviderPreference
 from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 from tests.base_test import BaseTest
-from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
 from ui.settings.user_settings import UserSettings
 
 

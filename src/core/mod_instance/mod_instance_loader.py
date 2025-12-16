@@ -7,18 +7,25 @@ from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from typing import Optional
 
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from mod_manager_lib.core.instance.instance import Instance
+from mod_manager_lib.core.instance.mod import Mod as BaseMod
+from mod_manager_lib.core.mod_manager.instance_info import InstanceInfo
+from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+    MO2InstanceInfo,
+)
+from mod_manager_lib.core.mod_manager.modorganizer.modorganizer import (
+    ModOrganizer,
+)
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
+from mod_manager_lib.core.mod_manager.vortex.vortex import Vortex
 from PySide6.QtCore import QObject
 
 from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import ModFileService
-from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_managers.instance_info import InstanceInfo
-from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
-from core.mod_managers.modorganizer.modorganizer_api import ModOrganizerApi
-from core.mod_managers.vortex.profile_info import ProfileInfo
-from core.mod_managers.vortex.vortex_api import VortexApi
 from core.utilities.game_language import GameLanguage
+
+from .mod import Mod
 
 
 class ModInstanceLoader(QObject):
@@ -55,33 +62,42 @@ class ModInstanceLoader(QObject):
 
         self.log.info(f"Loading mod instance '{instance_info.display_name}'...")
 
-        instance: ModInstance
+        instance: Instance
         match instance_info:
-            case Mo2InstanceInfo():
-                mod_manager_api = ModOrganizerApi()
+            case MO2InstanceInfo():
+                mod_manager_api = ModOrganizer()
                 instance = mod_manager_api.load_instance(instance_info)
             case ProfileInfo():
-                mod_manager_api = VortexApi()
+                mod_manager_api = Vortex()
                 instance = mod_manager_api.load_instance(instance_info)
             case default:
                 raise ValueError(f"Unknown mod instance type: {default}")
 
-        self.build_modfile_index(instance.mods, language, include_bsas, ldialog)
-
-        self.log.info(
-            f"Loaded mod instance with {len(instance.mods)} mod(s) and "
-            f"{len(instance.modfiles)} mod file(s)."
+        modfile_index: dict[BaseMod, list[ModFile]] = self.build_modfile_index(
+            instance.mods, language, include_bsas, ldialog
         )
 
-        return instance
+        mods: list[Mod] = [
+            Mod.from_mml_mod(mml_mod, modfile_index.get(mml_mod, []))
+            for mml_mod in instance.mods
+        ]
+
+        mod_instance = ModInstance(instance.display_name, mods)
+
+        self.log.info(
+            f"Loaded mod instance with {len(mod_instance.mods)} mod(s) and "
+            f"{len(mod_instance.modfiles)} mod file(s)."
+        )
+
+        return mod_instance
 
     def build_modfile_index(
         self,
-        mods: list[Mod],
+        mods: list[BaseMod],
         language: GameLanguage,
         include_bsas: bool,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> None:
+    ) -> dict[BaseMod, list[ModFile]]:
         """
         Builds the mod file index for the given list of mods.
 
@@ -91,18 +107,24 @@ class ModInstanceLoader(QObject):
             include_bsas (bool): Whether to include BSAs in the index.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
+
+        Returns:
+            dict[Mod, list[ModFile]]: The mod file index.
         """
 
         self.log.info(f"Building mod file index for {len(mods)} mod(s)...")
 
         mod_file_service = ModFileService()
 
-        futures: dict[Future[list[ModFile]], Mod] = {}
+        result: dict[BaseMod, list[ModFile]] = {}
+
+        futures: dict[Future[list[ModFile]], BaseMod] = {}
         with ThreadPoolExecutor(
             thread_name_prefix="ModInstanceLoaderThread"
         ) as executor:
             for mod in mods:
-                if mod.mod_type != Mod.Type.Regular:
+                if mod.mod_type != BaseMod.Type.Regular:
+                    result[mod] = []
                     continue
 
                 future: Future[list[ModFile]] = executor.submit(
@@ -118,11 +140,14 @@ class ModInstanceLoader(QObject):
             mod = futures[future]
 
             try:
-                mod.modfiles = future.result()
+                result[mod] = future.result()
             except Exception as ex:
                 self.log.error(
-                    f"Error loading mod files for mod '{mod.name}': {ex}", exc_info=ex
+                    f"Error loading mod files for mod '{mod.display_name}': {ex}",
+                    exc_info=ex,
                 )
-                mod.modfiles = []
+                result[mod] = []
 
         self.log.info("Mod file index built.")
+
+        return result

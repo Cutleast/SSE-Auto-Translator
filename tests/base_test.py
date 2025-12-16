@@ -16,8 +16,15 @@ import jstyleson as json
 import pytest
 from cutleast_core_lib.core.utilities.env_resolver import resolve
 from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from cutleast_core_lib.test.utils import Utils
+from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.core.mod_manager.mod_manager import ModManager
+from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+    MO2InstanceInfo,
+)
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from pyfakefs.fake_filesystem import FakeFilesystem
 from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
@@ -28,11 +35,9 @@ from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_managers.mod_manager import ModManager
-from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
-from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
+from core.utilities.constants import GAME_ID
 from core.utilities.leveldb import LevelDB
 
 from .setup.mock_plyvel import MockPlyvelDB
@@ -150,19 +155,34 @@ class BaseTest(CoreBaseTest):
         Utils.reset_singleton(Logger)
         logging.debug("Logger singleton reset.")
 
+    @pytest.fixture(autouse=True)
+    def game_service(self) -> Generator[GameService, None, None]:
+        """
+        Returns a game service instance for testing.
+
+        Yields:
+            GameService: The game service instance
+        """
+
+        yield GameService(read_resource(":/skyrimse.json"))
+
+        Utils.reset_singleton(GameService)
+        logging.debug("GameService singleton reset.")
+
     @pytest.fixture
-    def mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:
+    def mo2_instance_info(self, test_fs: FakeFilesystem) -> MO2InstanceInfo:
         """
         Returns the MO2 instance info of the test mod instance.
 
         Returns:
-            Mo2InstanceInfo: The instance info of the test mod instance.
+            MO2InstanceInfo: The instance info of the test mod instance.
         """
 
         base_dir_path = Path("E:\\Modding\\Test Instance")
 
-        return Mo2InstanceInfo(
+        return MO2InstanceInfo(
             display_name="Portable",
+            game=GameService.get_game_by_id(GAME_ID),
             profile="Default",
             is_global=False,
             base_folder=base_dir_path,
@@ -172,20 +192,21 @@ class BaseTest(CoreBaseTest):
         )
 
     @pytest.fixture
-    def global_mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:
+    def global_mo2_instance_info(self, test_fs: FakeFilesystem) -> MO2InstanceInfo:
         """
         Returns the MO2 instance info of the test mod instance.
 
         Returns:
-            Mo2InstanceInfo: The instance info of the test mod instance.
+            MO2InstanceInfo: The instance info of the test mod instance.
         """
 
         base_dir_path: Path = (
             resolve(Path("%LOCALAPPDATA%")) / "ModOrganizer" / "Test Instance"
         )
 
-        return Mo2InstanceInfo(
+        return MO2InstanceInfo(
             display_name="Test Instance",
+            game=GameService.get_game_by_id(GAME_ID),
             profile="Default",
             is_global=True,
             base_folder=base_dir_path,
@@ -205,6 +226,7 @@ class BaseTest(CoreBaseTest):
 
         return ProfileInfo(
             display_name="Test Instance (1a2b3c4d)",
+            game=GameService.get_game_by_id("skyrimse"),
             id="1a2b3c4d",
             mod_manager=ModManager.Vortex,
         )

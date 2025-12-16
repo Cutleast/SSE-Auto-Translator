@@ -8,6 +8,10 @@ from cutleast_core_lib.ui.settings.settings_page import SettingsPage
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
+from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
+    InstanceSelectorWidget,
+)
 from PySide6.QtWidgets import (
     QApplication,
     QCheckBox,
@@ -23,8 +27,8 @@ from PySide6.QtWidgets import (
 
 from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
+from core.utilities.constants import GAME_ID
 from core.utilities.game_language import GameLanguage
-from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
 from ui.widgets.api_setup_dialog import ApiSetupDialog
 
 from .blacklist_dialog import BlacklistDialog
@@ -139,6 +143,7 @@ class UserSettings(SettingsPage[UserConfig]):
         instance_group.setLayout(instance_vlayout)
 
         self.__modinstance_selector = InstanceSelectorWidget()
+        self.__modinstance_selector.set_cur_game(GameService.get_game_by_id(GAME_ID))
         self.__modinstance_selector.set_cur_instance_data(
             self._initial_config.modinstance
         )

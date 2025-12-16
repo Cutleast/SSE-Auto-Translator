@@ -4,58 +4,57 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from enum import Enum, auto
 from fnmatch import fnmatch
 from functools import cache
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional, Self, override
 
-from pydantic import BaseModel
+from mod_manager_lib.core.instance.mod import Mod as BaseMod
 
 from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.utilities.constants import DSD_FILE_PATTERN
 
 
-class Mod(BaseModel):
+class Mod(BaseMod):
     """
     Class for mods, their mod files and their metadata.
     """
 
-    name: str
-    """Display name of the mod."""
-
-    path: Path
-    """Path to the mod's folder."""
-
     modfiles: list[ModFile]
     """List of translatable files in mod."""
 
-    mod_id: Optional[ModId]
-    """Identifier of this mod at its source."""
+    @classmethod
+    def from_mml_mod(cls, mml_mod: BaseMod, modfiles: list[ModFile]) -> Self:
+        """Constructs a mod from the base model."""
 
-    version: str
-    """Local version of the mod."""
+        return cls(**mml_mod.model_dump(), modfiles=modfiles)
 
-    class Type(Enum):
-        """
-        Type of the mod.
-        """
+    @property
+    def name(self) -> str:
+        """The mod's display name."""
 
-        Regular = auto()
-        """
-        The mod is a regular mod.
-        """
+        return self.display_name
 
-        Separator = auto()
-        """
-        The mod is a separator.
-        """
+    @property
+    @cache
+    def mod_id(self) -> Optional[ModId]:
+        """The mod id of the mod identifying it at its source."""
 
-    mod_type: Type = Type.Regular
-    """
-    Type of the mod.
-    """
+        if self.metadata.mod_id:
+            return ModId(
+                mod_id=self.metadata.mod_id,
+                file_id=self.metadata.file_id,
+                nm_id=self.metadata.mod_id,
+                nm_game_id=self.metadata.game_id,
+                installation_file_name=self.metadata.file_name,
+            )
+
+    @property
+    def version(self) -> str:
+        """The mod's version."""
+
+        return self.metadata.version
 
     @property
     @cache
@@ -75,4 +74,4 @@ class Mod(BaseModel):
 
     @override
     def __hash__(self) -> int:
-        return hash((self.name, self.path, self.mod_id))
+        return hash((self.display_name, self.path, self.metadata))

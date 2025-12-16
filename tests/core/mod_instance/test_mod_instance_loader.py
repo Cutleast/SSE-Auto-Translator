@@ -5,13 +5,16 @@ Copyright (c) Cutleast
 from pathlib import Path
 
 import pytest
+from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.core.mod_manager.exceptions import InstanceNotFoundError
+from mod_manager_lib.core.mod_manager.mod_manager import ModManager
+from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+    MO2InstanceInfo,
+)
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.mod_instance_loader import ModInstanceLoader
-from core.mod_managers.exceptions import InstanceNotFoundError
-from core.mod_managers.mod_manager import ModManager
-from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
-from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.utilities.game_language import GameLanguage
 from tests.core.core_test import CoreTest
 from tests.setup.mock_plyvel import MockPlyvelDB
@@ -23,7 +26,7 @@ class TestModInstanceLoader(CoreTest):
     """
 
     def test_load_portable_mo2_instance(
-        self, mo2_instance_info: Mo2InstanceInfo
+        self, mo2_instance_info: MO2InstanceInfo
     ) -> None:
         """
         Tests `ModInstanceLoader.load_instance()` with a portable MO2 instance.
@@ -43,7 +46,7 @@ class TestModInstanceLoader(CoreTest):
         assert len(mod_instance.modfiles) == 8
 
     def test_load_global_mo2_instance(
-        self, global_mo2_instance_info: Mo2InstanceInfo
+        self, global_mo2_instance_info: MO2InstanceInfo
     ) -> None:
         """
         Tests `ModInstanceLoader.load_instance()` with a global MO2 instance.
@@ -68,8 +71,9 @@ class TestModInstanceLoader(CoreTest):
         """
 
         # given
-        instance_data = Mo2InstanceInfo(
+        instance_data = MO2InstanceInfo(
             display_name="Something",
+            game=GameService.get_game_by_id("skyrimse"),
             profile="Lol",
             is_global=False,
             base_folder=data_folder / "lol",
@@ -112,7 +116,10 @@ class TestModInstanceLoader(CoreTest):
 
         # given
         vortex_profile_info = ProfileInfo(
-            display_name="Something", id="lol", mod_manager=ModManager.Vortex
+            display_name="Something",
+            game=GameService.get_game_by_id("skyrimse"),
+            id="lol",
+            mod_manager=ModManager.Vortex,
         )
         loader = ModInstanceLoader()
 
