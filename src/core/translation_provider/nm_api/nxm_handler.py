@@ -23,6 +23,13 @@ class NXMHandler(SingletonQObject):
     """
 
     request_signal: Signal = Signal(str)
+    """
+    Signal emitted whenever a Mod Manager download is started by the user and was
+    relayed to this app.
+
+    Args:
+        str: Full NXM Mod Manager download URL containing key and expiration timestamp
+    """
 
     __listening: bool = False
 
@@ -39,6 +46,11 @@ class NXMHandler(SingletonQObject):
     log: logging.Logger = logging.getLogger("NXMHandler")
 
     def __init__(self, executable: str) -> None:
+        """
+        Args:
+            executable (str): Full path to the app's executable.
+        """
+
         super().__init__()
 
         self.reg_value = executable + ' --download "%1"'
@@ -162,6 +174,9 @@ class NXMHandler(SingletonQObject):
     def is_bound(self) -> bool:
         """
         Checks if Registry key links to this app.
+
+        Returns:
+            bool: Whether the key links to this app
         """
 
         try:
@@ -175,7 +190,7 @@ class NXMHandler(SingletonQObject):
     @staticmethod
     def send_request(request: str) -> NoReturn:
         """
-        Sends download request to the currently running installer, if any.
+        Sends download request to the currently running app, if any.
         Exits with fitting return code.
         """
 
