@@ -604,22 +604,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="129"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="134"/>
         <source>Strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="222"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="227"/>
         <source>DSD file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="223"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="228"/>
         <source>Import pre-v1.1 translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="385"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="390"/>
         <source>Translated %n string from database.</source>
         <comment>Translated %n strings from database.</comment>
         <translation type="unfinished">
@@ -627,22 +627,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="399"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="404"/>
         <source>Search and Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="413"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
         <source>Case sensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="452"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="457"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="459"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="464"/>
         <source>Are you sure you want to translate %n string via translator API?
 Depending on the translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n strings via translator API?
@@ -652,69 +652,69 @@ Depending on the translator API this can raise unexpected costs.</comment>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="512"/>
         <source>Export Translation (DSD Format only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="542"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="547"/>
         <source>Reset selected String(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="382"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="520"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="387"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="525"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="408"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="413"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="411"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="416"/>
         <source>Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="423"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="428"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="428"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="433"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="488"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="478"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="480"/>
         <source>Don&apos;t show again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="521"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="526"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="544"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="549"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="550"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="555"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="556"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1780,13 +1780,18 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>SearchBar</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="38"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="39"/>
         <source>Search...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="52"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="64"/>
         <source>Toggle case sensitivity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="53"/>
+        <source>Live search disabled. Press Enter to search.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2027,27 +2032,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringListWidget</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="72"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="78"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="73"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="79"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="73"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="182"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="200"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="74"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="183"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="201"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="74"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="79"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="182"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="75"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="80"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="183"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="108"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="109"/>
         <source>Strings:</source>
         <translation type="unfinished"></translation>
     </message>
