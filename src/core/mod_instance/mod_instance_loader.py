@@ -6,6 +6,7 @@ import logging
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from typing import Optional
 
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from mod_manager_lib.core.instance.instance import Instance
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
@@ -62,14 +63,24 @@ class ModInstanceLoader(QObject):
 
         self.log.info(f"Loading mod instance '{instance_info.display_name}'...")
 
+        def update_callback(update: ProgressUpdate) -> None:
+            if ldialog is not None:
+                ldialog.updateProgress(
+                    text1=update.status_text, value1=update.value, max1=update.maximum
+                )
+
         instance: Instance
         match instance_info:
             case MO2InstanceInfo():
                 mod_manager_api = ModOrganizer()
-                instance = mod_manager_api.load_instance(instance_info)
+                instance = mod_manager_api.load_instance(
+                    instance_info, update_callback=update_callback
+                )
             case ProfileInfo():
                 mod_manager_api = Vortex()
-                instance = mod_manager_api.load_instance(instance_info)
+                instance = mod_manager_api.load_instance(
+                    instance_info, update_callback=update_callback
+                )
             case default:
                 raise ValueError(f"Unknown mod instance type: {default}")
 
