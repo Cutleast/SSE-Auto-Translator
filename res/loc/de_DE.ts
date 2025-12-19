@@ -1453,7 +1453,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="165"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="469"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="471"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>Tools von {0} &gt; {1} werden geladen...</translation>
     </message>
@@ -1463,23 +1463,23 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Mods von {0} &gt; {1} werden geladen: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="301"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="420"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="302"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="422"/>
         <source>Processing mod conflicts...</source>
         <translation>Modkonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="435"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="437"/>
         <source>Processing single file conflicts...</source>
         <translation>Einzelne Dateikonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="656"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="658"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>ModOrganizer wird heruntergeladen und installiert...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="689"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="691"/>
         <source>Extracting archive...</source>
         <translation>Archiv wird extrahiert...</translation>
     </message>
@@ -2721,7 +2721,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Mods aus Profil {0} werden geladen: {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="431"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="433"/>
         <source>Loading tools from Vortex...</source>
         <translation>Tools werden aus Vortex geladen...</translation>
     </message>
