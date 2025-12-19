@@ -28,7 +28,10 @@ class Mod(BaseMod):
     def from_mml_mod(cls, mml_mod: BaseMod, modfiles: list[ModFile]) -> Self:
         """Constructs a mod from the base model."""
 
-        return cls(**mml_mod.model_dump(), modfiles=modfiles)
+        return cls(
+            **mml_mod.model_dump(exclude={"mod_conflicts", "file_conflicts"}),
+            modfiles=modfiles,
+        )
 
     @property
     def name(self) -> str:
