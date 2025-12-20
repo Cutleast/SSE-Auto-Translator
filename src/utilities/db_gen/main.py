@@ -9,6 +9,7 @@ from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignor
 from pathlib import Path
 from typing import Any, NoReturn, Optional, override
 
+from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from sse_bsa import BSAArchive
 from sse_plugin_interface.plugin import SSEPlugin as Plugin
 from sse_plugin_interface.plugin_string import PluginString
@@ -290,6 +291,7 @@ class DbGen(Utility):
         return database
 
     @staticmethod
+    @FunctionCache.cache
     def map_strings_files(
         input_folder_path: Path, strings_folder_path: Path
     ) -> dict[Path, list[Path]]:
@@ -351,6 +353,7 @@ class DbGen(Utility):
         return result
 
     @staticmethod
+    @FunctionCache.cache
     def get_strings_files_from_bsa(bsa_file_path: Path, plugin_stem: str) -> list[str]:
         """
         Gets a list of strings files for the specified plugin name from the
@@ -369,6 +372,7 @@ class DbGen(Utility):
 
         return files
 
+    @FunctionCache.cache
     def extract_string_tables(
         self, strings_files: list[Path], language: str
     ) -> dict[int, str]:
@@ -413,6 +417,7 @@ class DbGen(Utility):
 
         return string_tables
 
+    @FunctionCache.cache
     def extract_string_ids(self, plugin_path: Path) -> dict[int, BaseString]:
         """
         Parses and extracts string ids from the specified plugin.
