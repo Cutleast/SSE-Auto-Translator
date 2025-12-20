@@ -172,7 +172,7 @@ class DbGen(Utility):
                 f"Writing {len(plugin_strings)} string(s) to '{output_file_path}'..."
             )
             with output_file_path.open("w", encoding="utf-8") as output_file:
-                json.dump(plugin_strings, output_file, indent=4, ensure_ascii=False)
+                json.dump(plugin_strings, output_file, ensure_ascii=False)
 
         self.log.info(f"Database generation completed for {len(database)} plugin(s).")
 
@@ -278,11 +278,10 @@ class DbGen(Utility):
                     continue
 
                 string_data: dict[str, str | int | None] = string.model_dump(
-                    mode="json"
+                    mode="json", exclude={"status"}, exclude_defaults=True
                 )
                 string_data["original"] = original_string_table[string_id]
                 string_data["string"] = translated_string_table[string_id]
-                string_data.pop("status")  # Don't store status in database
                 plugin_strings.append(string_data)
 
             if plugin_strings:
