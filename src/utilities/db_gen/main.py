@@ -9,6 +9,7 @@ from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignor
 from pathlib import Path
 from typing import Any, NoReturn, Optional, override
 
+from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from sse_bsa import BSAArchive
 from sse_plugin_interface.plugin import SSEPlugin as Plugin
 from sse_plugin_interface.plugin_string import PluginString
@@ -171,7 +172,7 @@ class DbGen(Utility):
                 f"Writing {len(plugin_strings)} string(s) to '{output_file_path}'..."
             )
             with output_file_path.open("w", encoding="utf-8") as output_file:
-                json.dump(plugin_strings, output_file, indent=4, ensure_ascii=False)
+                json.dump(plugin_strings, output_file, ensure_ascii=False)
 
         self.log.info(f"Database generation completed for {len(database)} plugin(s).")
 
@@ -277,11 +278,10 @@ class DbGen(Utility):
                     continue
 
                 string_data: dict[str, str | int | None] = string.model_dump(
-                    mode="json"
+                    mode="json", exclude={"status"}, exclude_defaults=True
                 )
                 string_data["original"] = original_string_table[string_id]
                 string_data["string"] = translated_string_table[string_id]
-                string_data.pop("status")  # Don't store status in database
                 plugin_strings.append(string_data)
 
             if plugin_strings:
@@ -290,6 +290,7 @@ class DbGen(Utility):
         return database
 
     @staticmethod
+    @FunctionCache.cache
     def map_strings_files(
         input_folder_path: Path, strings_folder_path: Path
     ) -> dict[Path, list[Path]]:
@@ -351,6 +352,7 @@ class DbGen(Utility):
         return result
 
     @staticmethod
+    @FunctionCache.cache
     def get_strings_files_from_bsa(bsa_file_path: Path, plugin_stem: str) -> list[str]:
         """
         Gets a list of strings files for the specified plugin name from the
@@ -369,6 +371,7 @@ class DbGen(Utility):
 
         return files
 
+    @FunctionCache.cache
     def extract_string_tables(
         self, strings_files: list[Path], language: str
     ) -> dict[int, str]:
@@ -413,6 +416,7 @@ class DbGen(Utility):
 
         return string_tables
 
+    @FunctionCache.cache
     def extract_string_ids(self, plugin_path: Path) -> dict[int, BaseString]:
         """
         Parses and extracts string ids from the specified plugin.
