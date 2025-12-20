@@ -1766,17 +1766,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="629"/>
+        <location filename="src/core/scanner/scanner.py" line="635"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="678"/>
+        <location filename="src/core/scanner/scanner.py" line="684"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="776"/>
+        <location filename="src/core/scanner/scanner.py" line="782"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>

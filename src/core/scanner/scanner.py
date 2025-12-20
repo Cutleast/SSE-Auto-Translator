@@ -597,6 +597,12 @@ class Scanner(QObject):
                 )
             )
 
+            if not translation_strings:
+                self.log.info(
+                    f"No additional strings from {installed_translation.name!r}."
+                )
+                continue
+
             new_translations.append(
                 DatabaseService.create_translation_from_mod(
                     mod=installed_translation,
