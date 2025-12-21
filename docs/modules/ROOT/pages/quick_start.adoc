@@ -3,7 +3,7 @@
 Follow these steps to translate a mod list with all translations that are either Vanilla or available online (link:https://www.nexusmods.com[Nexus Mods] or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
 
 . Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
-. Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. `C:\Modding\Tools\SSE-AT`, so that the _SSE-AT.exe_ is located at `C:\Modding\Tools\SSE-AT\SSE-AT.exe`.
+. Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. [.nowrap]#`C:\Modding\Tools\SSE-AT`#, so that the _SSE-AT.exe_ is located at [.nowrap]#`C:\Modding\Tools\SSE-AT\SSE-AT.exe`#.
 . Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
 . A setup window will now appear. On the first page, click on "Fix Windows Path Length Limit" to disable the path length limit, as it will otherwise cause problems later on. Then restart your PC and run _SSE-AT.exe_ again. The button should now be grayed out with a message indicating that the limit has been disabled.
 +
