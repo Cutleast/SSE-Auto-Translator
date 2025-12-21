@@ -1,0 +1,38 @@
+= Frequently Asked Questions (FAQs)
+
+These are some frequently asked questions and often encountered issues.
+
+== Do I have to edit any ini files?
+
+Yes, make sure to set *[General]* > *sLanguage* in *Skyrim.ini* to your desired language (for eg. *GERMAN*).
+
+Because voice files are not supported by SSE-AT, I also recommend switching to the English voice files in the same ini file. Just go to *[Archive]* and under *sResourceArchiveList2 replace Voices_xx0.bsa* with *Voices_en0.bsa*
+
+== SSE-AT detected a mod file (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
+
+You can add it to the ignore list like this: Right click on the mod file(s) > *Add to Ignore List*. This prevents SSE-AT from including it at all.
+The ignore list can be viewed via the "*Ignore List*" button right next to the filter button at the top.
+
+== There are still untranslated strings in my game. I thought SSE-AT fixes this?
+
+SSE-AT can only download translations that are available on Nexus Mods and automatically create translations for mods that are entirely covered by already installed translations (including vanilla strings).
+Depending on your desired language, there are more or less available translations at Nexus Mods.
+
+== I found untranslated strings from a mod that has a translation installed.
+
+Please ensure that the original translation works and that it's a problem with SSE-AT before opening a Bug report or Issue.
+
+== What languages are supported?
+
+* Every language that is supported by the game is supported by SSE-AT. These languages are supported:
+** Chinese
+** French
+** German
+** Italian
+** Japanese
+** Polish
+** Russian
+** Spanish
+* These languages are also supported by SSE-AT but not by the game. A database is not included for them.
+** Korean
+** Portuguese

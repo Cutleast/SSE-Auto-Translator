@@ -1,0 +1,33 @@
+= Quick Start & Basic Usage
+
+Follow these steps to translate a mod list with all translations that are either Vanilla or available online (link:https://www.nexusmods.com[Nexus Mods] or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
+
+. Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
+. Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. `C:\Modding\Tools\SSE-AT`, so that the _SSE-AT.exe_ is located at `C:\Modding\Tools\SSE-AT\SSE-AT.exe`.
+. Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
+. A setup window will now appear. On the first page, click on "Fix Windows Path Length Limit" to disable the path length limit, as it will otherwise cause problems later on. Then restart your PC and run _SSE-AT.exe_ again. The button should now be grayed out with a message indicating that the limit has been disabled.
++
+.Path limit and the fix button are disabled and the "Next" button is enabled.
+image::setup_introduction.png[]
+
+. Click on _Next_ to continue. On the second page, you choose the language that you want your game to have. Then you setup your Nexus Mods API key which you can do in two ways: You can login to Nexus Mods via your Browser or enter your API key manually in case the Browser method somehow fails.
++
+.The second page contains the language selection and the translation provider setup.
+image::setup_initial_setup.png[]
++
+.The Nexus Mods API key is successfully setup and the "Next" button is enabled.
+image::setup_initial_setup_done.png[]
+
+. When you are done, the _Next_ button should be active. Click on it to continue to the next page. The last page is for selecting the mod list that you want to translate.
++
+.The last page contains the selection of the target mod list.
+image::setup_modlist.png[]
++
+SSE-AT will now load your mod list which can take a couple of minutes, depending on its size and whether you enabled BSA parsing.
+.This dialog will appear more often throughout SSE-AT and displays the progress and status of the current running process.
+image::loading_modlist.png[]
++ 
+You should now see this window:
++
+.The main page of SSE-AT displays your mod list and your installed translations.
+image::initial_main_page.png[]
