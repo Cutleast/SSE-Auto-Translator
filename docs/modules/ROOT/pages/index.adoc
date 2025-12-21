@@ -1,0 +1,3 @@
+= SSE Auto Translator Documentation
+
+This is the documentation of SSE Auto Translator.

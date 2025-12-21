@@ -1,0 +1,5 @@
+name: sse-at
+title: SSE Auto Translator
+version: ~
+nav:
+  - docs/modules/ROOT/nav.adoc
