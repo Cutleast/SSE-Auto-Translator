@@ -1,4 +1,4 @@
-= SSE Auto Translator
+= Introduction
 
 image::header_transparent.png[]
 
