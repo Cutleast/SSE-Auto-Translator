@@ -8,7 +8,7 @@ Yes, make sure to set *[General]* > *sLanguage* in *Skyrim.ini* to your desired 
 
 Because voice files are not supported by SSE-AT, I also recommend switching to the English voice files in the same ini file. Just go to *[Archive]* and under *sResourceArchiveList2 replace Voices_xx0.bsa* with *Voices_en0.bsa*
 
-== SSE-AT detected a mod file (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
+== SSE-AT detected a mod file (or multiple) as _Translation Required_ although it contains no visible strings. What can I do to prevent it from detecting it again?
 
 You can add it to the ignore list like this: Right click on the mod file(s) > *Add to Ignore List*. This prevents SSE-AT from including it at all.
 The ignore list can be viewed via the "*Ignore List*" button right next to the filter button at the top.
