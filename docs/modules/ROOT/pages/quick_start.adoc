@@ -24,6 +24,7 @@ image::setup_initial_setup_done.png[]
 image::setup_modlist.png[]
 +
 SSE-AT will now load your mod list which can take a couple of minutes, depending on its size and whether you enabled BSA parsing.
++
 .This dialog will appear more often throughout SSE-AT and displays the progress and status of the current running process.
 image::loading_modlist.png[]
 + 
