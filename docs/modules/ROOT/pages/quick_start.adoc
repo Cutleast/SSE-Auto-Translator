@@ -33,7 +33,4 @@ You should now see this window:
 .The main page of SSE-AT displays your mod list and your installed translations.
 image::initial_main_page.png[]
 
-. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on this button in the tool bar in the top left area of the window:
-+
-.This button scans your modlist for required and installed translations.
-image::detect_lang.svg[width=2rem,height=2rem]
+. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
