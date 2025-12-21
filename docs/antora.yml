@@ -2,4 +2,4 @@ name: sse-at
 title: SSE Auto Translator
 version: ~
 nav:
-  - docs/modules/ROOT/nav.adoc
+  - modules/ROOT/nav.adoc
