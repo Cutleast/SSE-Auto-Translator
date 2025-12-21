@@ -33,4 +33,35 @@ You should now see this window:
 .The main page of SSE-AT displays your mod list and your installed translations.
 image::initial_main_page.png[]
 
-. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
+. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the highlighted image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
++
+.SSE-AT now scans your mod list for required and installed translations. This can take a couple of minutes depending on the size of your mod list.
+image::scanning_modlist.png[]
++
+After the scan is finished, this popup will appear displaying the scan result:
++
+image::modlist_scan_result.png[]
++
+You can close the popup by clicking on _Ok_.
+Returning to the main window, we can now see that SSE-AT automatically generated translations for all xref:glossary.adoc#_mod_file[mod files] that only had xref:glossary.adoc#_string[strings] from the Vanilla game - these auto-generated translations are the so-called __database translations__.
++
+.The "Translations" panel on the right-hand side now displays a whole list of automatically generated translations.
+image::modlist_scan_main_page.png[]
+
+. SSE-AT now knows which mods require a translation. We now want to search online (as previously mentioned on Nexus Mods (and CDT for French translations)) for translations that are available to download and we can do this by clicking on the now highlighted image:scan_online.svg[width=24px,height=24px] _Scan Online_ button in the same tool bar right next to the _Modlist Scan_ button we previously clicked.
++
+.Lean back and relax, the online scan can take up to 20 minutes, once again depending on the size of your mod list.
+image::scanning_online.png[]
++
+Again, after the scan is finished, the scan result is displayed as before:
++
+image::online_scan_result.png[]
++
+When we now return to the main window, we can see that all mod files with strings are now marked in green, blue or red:
+
+** [.green]#*Green*# means that a *translation is installed* for the mod file.
+** [.blue]#*Blue*# means that a *translation is available* for the mod file.
+** [.red]#*Red*# means that there is *no translation available* for the mod file.
+
+[start=9]
+. Now that we know which mods have translations available, we want to select and download them. Do this by clicking on the now highlighted image:download_translations.svg[width=24px,height=24px] _Download available translations_ button once again in the very same tool bar.
