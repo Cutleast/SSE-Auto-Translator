@@ -2,6 +2,12 @@
 
 image::header_transparent.png[]
 
+[.text-center]
+image:get_it_on_nexus_mods.png[width=193,height=60,link=https://www.nexusmods.com/skyrimspecialedition/mods/111491]
+image:view_source_code_on_github.png[width=193,height=60,link=https://www.nexusmods.com/skyrimspecialedition/mods/111491]
+image:view_roadmap_on_trello.png[width=193,height=60,link=https://trello.com/b/AA2KwhH8/sse-auto-translator]
+image:support_me_on_kofi.png[width=193,height=60,link=https://ko-fi.com/Cutleast]
+
 == Description
 
 SSE Auto Translator is an independent Windows app that allows you to translate entire mod lists with a high degree of automation.
@@ -43,3 +49,8 @@ In addition, SSE Auto Translator offers an integrated editor that can be used to
 ** If you're interested in maintaining a masterlist for your language, contact us (@cutleast or @wuerfhust) on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server]
 * Vortex: SSE-AT and Vortex must not be run at the same time!
 ** This is a limitation of Vortex's database which only allows one app to access it at a time
+
+[TIP]
+====
+If you have further questions regarding SSE-AT or this documentation, please do not hesitate to ask them on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
+====
