@@ -1,4 +1,5 @@
 * xref:index.adoc[]
 * xref:quick_start.adoc[]
+* xref:main_page.adoc[]
 * xref:faqs.adoc[]
 * xref:glossary.adoc[]
