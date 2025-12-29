@@ -114,7 +114,7 @@ This is expected and unavoidable for large mod lists. You can try to rerun the _
 
 . *Optional:* Run a mod list scan again to automatically create translations for some mod files that are now covered by the downloaded translations. +
 This step is optional because the generated output mod would override them anyways when injected by DSD.
-. Build the output mod by clicking on the now highlighted image:build_output_mod.png[width=24px,height=24px] _Build output mod_ button.
+. Build the output mod by clicking on the now highlighted image:build_output_mod.svg[width=24px,height=24px] _Build output mod_ button.
 +
 .SSE-AT is now building the output mod with all installed required translations for your mod list.
 image::building_output_mod.png[]
