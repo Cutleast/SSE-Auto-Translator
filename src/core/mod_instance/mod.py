@@ -48,7 +48,6 @@ class Mod(BaseMod):
             return ModId(
                 mod_id=self.metadata.mod_id,
                 file_id=self.metadata.file_id,
-                nm_id=self.metadata.mod_id,
                 nm_game_id=self.metadata.game_id,
                 installation_file_name=self.metadata.file_name,
             )
