@@ -1,0 +1,43 @@
+= Translation Editor
+
+SSE-AT has an integrated translation editor for manually creating and editing translations.
+The editor can be opened either by creating a translation for a mod or mod file or by editing an installed translation.
+
+.This overview displays SSE-AT's translation editor and all of its features.
+image::translation_editor_overview.png[]
+
+.This overview displays the dialog for editing a single string.
+image::editor_dialog_overview.png[]
+
+You can edit a string by making a double click on it.
+
+TIP: Click on the images to view them in full size.
+
+[TIP]
+====
+Move your mouse over the number of strings or the colored bar beneath the search bar to get a breakdown of the translation state of your translation:
+
+image::editor_status_tooltip.png[]
+====
+
+.The context menu when right clicking on a string contains additional features and options.
+image::editor_context_menu.png[]
+
+== Create a translation
+
+To create a new translation for a mod or mod file, make a right click on the mod / mod file and click on _Create new translation..._ .
+The option is only available if the mod or mod file contains translatable strings and there is no translation already installed for it.
+
+image::create_translation_menu.png[]
+
+SSE-AT will then create a new translation for the mod or the mod file and attempt to pre-translate all strings that are covered by the installed translations.
+Exact matches (id and original string) with existing strings are marked in blue (= _Translation complete_).
+Indirect matches (just the original string) with existing strings are marked in purple (= _Translation incomplete_) and should be checked manually.
+
+== Edit a translation
+
+To edit an installed translation in the database, make a right click on it and click on _Edit translation..._ .
+
+image::edit_translation_menu.png[]
+
+The translation and all its mod files are then opened in the translation editor.

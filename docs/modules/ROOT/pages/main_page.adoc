@@ -1,0 +1,27 @@
+= Main Page Overview
+
+The main page of SSE-AT contains your mod list and your installed (and downloading) translations.
+It also houses all main features that are required to quickly translate an entire mod list via link:https://www.nexusmods.com[Nexus Mods] (or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
+
+.This overview displays SSE-AT's main page and all of its features.
+image::main_page_overview.png[]
+
+TIP: Click on the image to view it in full size.
+
+[NOTE]
+====
+SSE-AT will automatically highlight the next suggested action:
+
+image::highlighted_action.png[]
+====
+
+TIP: The search bar filters both mod list and installed translations and can be used to quickly filter for a mod or a mod file.
+
+[TIP]
+====
+Move your mouse over the number of translatable files or the colored bar beneath the search bar to get a breakdown of the translation state of your mod list:
+
+image::status_tooltip.png[]
+====
+
+TIP: The settings can be opened under _File_ > _Settings_.

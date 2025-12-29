@@ -1,0 +1,138 @@
+= Quick Start & Basic Usage
+
+Follow these steps to translate a mod list with all translations that are either Vanilla or available online (link:https://www.nexusmods.com[Nexus Mods] or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
+
+. Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
+. Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. [.nowrap]#`C:\Modding\Tools\SSE-AT`#, so that the _SSE-AT.exe_ is located at [.nowrap]#`C:\Modding\Tools\SSE-AT\SSE-AT.exe`#.
+. Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
+. A setup window will now appear. On the first page, click on "Fix Windows Path Length Limit" to disable the path length limit, as it will otherwise cause problems later on. Then restart your PC and run _SSE-AT.exe_ again. The button should now be grayed out with a message indicating that the limit has been disabled.
++
+.Path limit and the fix button are disabled and the "Next" button is enabled.
+image::setup_introduction.png[]
+
+. Click on _Next_ to continue. On the second page, you choose the language that you want your game to have. Then you setup your Nexus Mods API key which you can do in two ways: You can login to Nexus Mods via your Browser or enter your API key manually in case the Browser method somehow fails.
++
+.The second page contains the language selection and the translation provider setup.
+image::setup_initial_setup.png[]
++
+.The Nexus Mods API key is successfully setup and the "Next" button is enabled.
+image::setup_initial_setup_done.png[]
+
+. When you are done, the _Next_ button should be active. Click on it to continue to the next page. The last page is for selecting the mod list that you want to translate.
++
+.The last page contains the selection of the target mod list.
+image::setup_modlist.png[]
++
+SSE-AT will now load your mod list which can take a couple of minutes, depending on its size and whether you enabled BSA parsing.
++
+.This dialog will appear more often throughout SSE-AT and displays the progress and status of the current running process.
+image::loading_modlist.png[]
++ 
+You should now see this window:
++
+.The main page of SSE-AT displays your mod list and your installed translations.
+image::initial_main_page.png[]
+
+. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the highlighted image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
++
+.SSE-AT now scans your mod list for required and installed translations. This can take a couple of minutes depending on the size of your mod list.
+image::scanning_modlist.png[]
++
+After the scan is finished, this popup will appear displaying the scan result:
++
+image::modlist_scan_result.png[]
++
+You can close the popup by clicking on _Ok_.
+Returning to the main window, we can now see that SSE-AT automatically generated translations for all xref:glossary.adoc#_mod_file[mod files] that only had xref:glossary.adoc#_string[strings] from the Vanilla game - these auto-generated translations are the so-called __database translations__.
++
+.The "Translations" panel on the right-hand side now displays a whole list of automatically generated translations.
+image::modlist_scan_main_page.png[]
+
+. SSE-AT now knows which mods require a translation. We now want to search online (as previously mentioned on Nexus Mods (and CDT for French translations)) for translations that are available to download and we can do this by clicking on the now highlighted image:scan_online.svg[width=24px,height=24px] _Scan Online_ button in the same tool bar right next to the _Modlist Scan_ button we previously clicked.
++
+.Lean back and relax, the online scan can take up to 20 minutes, once again depending on the size of your mod list.
+image::scanning_online.png[]
++
+Again, after the scan is finished, the scan result is displayed as before:
++
+image::online_scan_result.png[]
++
+When we now return to the main window, we can see that all mod files with strings are now marked in green, blue or red:
+
+** [.green]#*Green*# means that a *translation is installed* for the mod file.
+** [.blue]#*Blue*# means that a *translation is available* for the mod file.
+** [.red]#*Red*# means that there is *no translation available* for the mod file.
+
+[start=9]
+. Now that we know which mods have translations available, we want to select and download them. Do this by clicking on the now highlighted image:download_translations.svg[width=24px,height=24px] _Download available translations_ button once again in the very same tool bar.
++
+.SSE-AT now collects all translation files and their metadata that are available to download. This can take a couple of minutes.
+image::collecting_downloads.png[]
++
+When SSE-AT is done, the available downloads are listed in a dialog looking like this:
++
+.The download list dialog lets you select which translations you want to download and install. It is recommended to select translation files with the same version as the original mod (file).
+image::download_list_dialog.png[]
+
+. Go through the displayed list carefully and choose the translation files according to these criteria (in this order):
++
+--
+* prefer translation files with the same version as the installed original
+* choose the same translation files for a mod where possible (the number in brackets at the end of its name is the file id)
+* prefer translation files without translated voice files to reduce download size (SSE-AT is not able to process them anyways)
+
+NOTE: SSE-AT automatically attempts to pre-select the best-fitting translation files but this is currently not that reliable.
+
+TIP: You can hide entries with just one option by clicking on the image:filter.svg[width=24px,height=24px] _Filter items without selection options_ button at the top left corner of the dialog.
+
+WARNING: If you *don't have Nexus Mods Premium*, you have to *link SSE-AT to the _Mod Manager Downloads_* on Nexus Mods. Do this by making sure that the checkbox _Link SSE-AT to "Mod Manager Downloads" before starting_ at the top of the window is checked. +
+The checkbox should already be checked if you don't have Premium.
+
+IMPORTANT: If you don't choose the translation files carefully, you will get multiple errors while downloading that tell you that the downloaded translation files are incompatible to the original files installed in your mod list.
+--
+
+. When you are done selecting all translation files, start the downloads by clicking on the image:download_translations.svg[width=24px,height=24px] _Start downloads_ button. +
++
+--
+SSE-AT will now start to download all selected translations. Go to the "Downloads" tab on the right-hand side to see the download progress.
+
+.. If you do not have Nexus Mods Premium, you have to start the downloads manually one by one. Do this by clicking on the respective "Non-premium download..." buttons.
+.. A browser tab with the download page on Nexus Mods will open. Click on "Start download" and the download should be started by SSE-AT.
+
+.SSE-AT is now downloading and installing all translations (if you have NM Premium).
+image::downloading_translations.png[]
+
+[NOTE]
+====
+Some downloads may still fail with this error:
+
+image::incompatible_translation_tooltip.png[]
+
+This is expected and unavoidable for large mod lists. You can try to rerun the _download translations_ process and select a different translation.
+====
+--
+
+. *Optional:* Run a mod list scan again to automatically create translations for some mod files that are now covered by the downloaded translations. +
+This step is optional because the generated output mod would override them anyways when injected by DSD.
+. Build the output mod by clicking on the now highlighted image:build_output_mod.svg[width=24px,height=24px] _Build output mod_ button.
++
+.SSE-AT is now building the output mod with all installed required translations for your mod list.
+image::building_output_mod.png[]
++
+When SSE-AT is done, this popup will appear:
++
+.The output mod was built at the configured location (defaults to where SSE-AT is).
+image::output_mod_built.png[]
+
+. Open your file explorer and go to the path mentioned in the popup (e.g. `C:\Modding\SSE-AT`).
+. Open your mod list in Vortex or MO2 if not already open.
+. Drag the folder called "SSE-AT Output" from the file explorer to Vortex or MO2 and drop it at the bottom of your mod list. The mod manager will now install the output mod into your mod list.
+. Close SSE-AT.
+. Go to this mod page link:https://www.nexusmods.com/skyrimspecialedition/mods/107676[Dynamic String Distributor (DSD)] and download the latest main file as you would do with every other mod (if DSD is not already installed).
+. Activate the "SSE-AT Output" mod and "Dynamic String Distributor". +
+Vortex will probably tell you that the "SSE-AT Output" mod has unresolved file conflicts. Set them all to overwrite the original files.
+. Set your game to your desired language by editing the _Skyrim.ini_:
+.. Set _[General]_ > _sLanguage_ to your desired language (for eg. `GERMAN`).
+.. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace `Voices_xx0.bsa` with `Voices_en0.bsa`.
+
+You now successfully translated your mod list with all available translations from Nexus Mods.
