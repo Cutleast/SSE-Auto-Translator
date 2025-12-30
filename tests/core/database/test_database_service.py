@@ -129,8 +129,11 @@ class TestDatabaseService(CoreTest):
         )
 
         # then
-        assert len(created_translation.strings) == 1
-        assert sorted(created_translation.strings.keys()) == [Path("WetandCold.esp")]
+        assert len(created_translation.strings) == 2
+        assert sorted(created_translation.strings.keys()) == [
+            Path("interface/translations/wetandcold_german.txt"),
+            Path("WetandCold.esp"),
+        ]
 
         strings: StringList = created_translation.strings[Path("WetandCold.esp")]
         string_hashes: list[int] = list(map(CoreTest.calc_unique_string_hash, strings))
