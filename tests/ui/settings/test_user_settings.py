@@ -95,5 +95,5 @@ class TestUserSettings(BaseTest):
         # when
         user_settings.apply(user_config)
 
-        # then
-        assert user_config == old_config
+        # then (we're comparing the json because direct comparison is impossible due to pyfakefs)
+        assert user_config.model_dump_json() == old_config.model_dump_json()
