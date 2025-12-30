@@ -30,6 +30,7 @@ from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
 from requests_mock import Mocker as RequestsMock
 
+import resources_rc as resources_rc
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
