@@ -662,18 +662,38 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="512"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="513"/>
+        <source>Save before export?</source>
+        <translation>Vor dem Export speichern?</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="516"/>
+        <source>Do you want to save the translation before exporting? Unsaved changes are not exported.</source>
+        <translation>Möchtest du die Übersetzung vor dem Exportieren speichern? Ungespeicherte Änderungen werden nicht exportiert.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="525"/>
+        <source>Export only</source>
+        <translation>Nur exportieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="528"/>
+        <source>Save and export</source>
+        <translation>Speichern und exportieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="538"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>Übersetzung exportieren (nur DSD-Format)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="547"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="573"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="387"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="525"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
@@ -709,22 +729,22 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         <translation>Nicht erneut zeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="526"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="552"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="549"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="575"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation>Bist du sicher, dass du die ausgewählten String(s) zurücksetzen möchtest?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="555"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="581"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="556"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="582"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
