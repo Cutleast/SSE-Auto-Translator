@@ -869,8 +869,8 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>Exporter</name>
     <message>
-        <location filename="src/core/database/exporter.py" line="119"/>
-        <location filename="src/core/database/exporter.py" line="124"/>
+        <location filename="src/core/database/exporter.py" line="120"/>
+        <location filename="src/core/database/exporter.py" line="125"/>
         <source>Building output mod...</source>
         <translation type="unfinished"></translation>
     </message>

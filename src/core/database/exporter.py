@@ -14,6 +14,7 @@ from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
+from core.utilities.constants import OUTPUT_MOD_MARKER_FILENAME
 
 
 class Exporter(QObject):
@@ -134,6 +135,8 @@ class Exporter(QObject):
                 use_dsd_format=user_config.use_dynamic_string_distributor,
                 output_mod=True,
             )
+
+        (output_path / OUTPUT_MOD_MARKER_FILENAME).touch()  # Create marker file
 
         self.log.info("Built output mod.")
 
