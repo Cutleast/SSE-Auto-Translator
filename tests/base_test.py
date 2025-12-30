@@ -275,6 +275,8 @@ class BaseTest(CoreBaseTest):
 
         resolve(Path("%APPDATA%") / "Vortex" / "state.v2").mkdir(parents=True)
 
+        logging.info("Fake filesystem initialized.")
+
         return fs
 
     @pytest.fixture(autouse=True)
