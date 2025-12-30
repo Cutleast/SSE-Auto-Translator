@@ -64,9 +64,7 @@ class ModFileService(QObject):
 
         if include_bsas:
             for bsa_file in mod.path.glob("*.bsa"):
-                modfiles.extend(
-                    self.get_modfiles_from_bsa(mod.path / bsa_file, language)
-                )
+                modfiles.extend(self.get_modfiles_from_bsa(bsa_file, language))
 
         self.log.info(f"Found {len(modfiles)} mod file(s) in '{mod.display_name}'.")
 
