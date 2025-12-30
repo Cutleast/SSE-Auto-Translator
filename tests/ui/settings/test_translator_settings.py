@@ -6,7 +6,7 @@ from copy import copy
 
 import pytest
 from cutleast_core_lib.test.utils import Utils
-from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.enum_selector import EnumSelector
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from PySide6.QtWidgets import QCheckBox
 from pytestqt.qtbot import QtBot
@@ -23,9 +23,9 @@ class TestTranslatorSettings(BaseTest):
     Tests `ui.settings.translator_settings.TranslatorSettings`.
     """
 
-    TRANSLATOR_BOX: tuple[str, type[EnumDropdown[TranslatorApi]]] = (
-        "translator_box",
-        EnumDropdown[TranslatorApi],
+    API_SELECTOR: tuple[str, type[EnumSelector[TranslatorApi]]] = (
+        "api_selector",
+        EnumSelector[TranslatorApi],
     )
     API_KEY_ENTRY: tuple[str, type[KeyLineEdit]] = "api_key_entry", KeyLineEdit
 
@@ -54,8 +54,8 @@ class TestTranslatorSettings(BaseTest):
         # given
         translator_config: TranslatorConfig = user_data.translator_config
 
-        translator_box: EnumDropdown[TranslatorApi] = Utils.get_private_field(
-            translator_settings, *TestTranslatorSettings.TRANSLATOR_BOX
+        api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_SELECTOR
         )
         api_key_entry: KeyLineEdit = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
@@ -66,7 +66,7 @@ class TestTranslatorSettings(BaseTest):
         )
 
         # then
-        assert translator_box.getCurrentValue() == translator_config.translator
+        assert api_selector.getCurrentValue() == translator_config.translator
         assert api_key_entry.isEnabled() == (
             translator_config.translator == TranslatorApi.DeepL
         )

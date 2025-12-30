@@ -30,17 +30,20 @@ from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
 from requests_mock import Mocker as RequestsMock
 
+import resources_rc as resources_rc
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.mod_instance_loader import ModInstanceLoader
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.constants import GAME_ID
 from core.utilities.leveldb import LevelDB
 
 from .setup.mock_plyvel import MockPlyvelDB
+from .setup.sync_executor import ExecutorPatcher, SynchronousExecutor
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
@@ -70,6 +73,27 @@ class BaseTest(CoreBaseTest):
         cls._temp_folder = None
 
     @pytest.fixture
+    def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
+        """
+        Replaces ThreadPoolExecutor with a synchronous implementation for the duration of a single test.
+        To patch already imported modules, use the returned `patch` function.
+        """
+
+        mock_instance = SynchronousExecutor()
+
+        mocker.patch(
+            "concurrent.futures.thread.ThreadPoolExecutor", return_value=mock_instance
+        )
+
+        def patch(obj: object) -> SynchronousExecutor:
+            mocker.patch(
+                obj.__module__ + ".ThreadPoolExecutor", return_value=mock_instance
+            )
+            return mock_instance
+
+        return patch
+
+    @pytest.fixture
     def res_path(self, real_cwd: Path) -> Path:
         """
         Returns the path to the resource folder.
@@ -81,12 +105,12 @@ class BaseTest(CoreBaseTest):
         return real_cwd / "res"
 
     @pytest.fixture
-    def user_data_path(self, data_folder: Path) -> Path:
+    def user_data_path(self, test_fs: FakeFilesystem, data_folder: Path) -> Path:
         """
         Returns the path to the user data folder.
         """
 
-        return data_folder / "data"
+        return Path(data_folder / "data")  # wrap in Path for pyfakefs
 
     @pytest.fixture
     def app_config(self, data_folder: Path) -> AppConfig:
@@ -97,8 +121,22 @@ class BaseTest(CoreBaseTest):
         app_config = AppConfig.load(data_folder)
         app_config.temp_path = self.tmp_folder()
         app_config.debug_mode = True
+        app_config.worker_thread_num = 1  # disable multithreading for tests
 
         return app_config
+
+    @pytest.fixture(autouse=True)
+    def modinstance_loader(self, sync_executor: ExecutorPatcher) -> ModInstanceLoader:
+        """
+        Returns a mod instance loader that uses a mocked ThreadPoolExecutor because
+        pyfakefs doesn't support multiple threads.
+        """
+
+        loader = ModInstanceLoader()
+
+        sync_executor(loader)
+
+        return loader
 
     @pytest.fixture
     def user_data(
@@ -273,6 +311,8 @@ class BaseTest(CoreBaseTest):
         fs.add_real_directory(Path("C:\\Users\\Public"), read_only=False)
 
         resolve(Path("%APPDATA%") / "Vortex" / "state.v2").mkdir(parents=True)
+
+        logging.info("Fake filesystem initialized.")
 
         return fs
 

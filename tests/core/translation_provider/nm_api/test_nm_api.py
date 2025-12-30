@@ -21,17 +21,20 @@ class TestNexusModsApi(CoreTest):
     @staticmethod
     def get_sort_key_stub(
         translation_timestamp: int, original_mod_timestamp: int
-    ) -> int:
+    ) -> tuple[bool, int]:
         """Stub for `NexusModsApi.__get_sort_key()`."""
 
         raise NotImplementedError
 
-    TEST_SORT_KEY_DATA: list[tuple[int, int, int]] = [
-        (0, 0, int(10e6)),
+    TEST_SORT_KEY_DATA: list[tuple[int, int, tuple[bool, int]]] = [
+        (0, 0, (False, 0)),
         (
             int(to_timestamp("01.10.2025 19:10")),
             int(to_timestamp("01.10.2025 18:00")),
-            4_200,  # 1 hour and 10 minutes
+            (
+                True,  # translation_timestamp > original_mod_timestamp
+                1759338600,  # translation_timestamp
+            ),
         ),
     ]
     """Test data for `TestNexusModsApi.test_get_sort_key"""
@@ -44,7 +47,7 @@ class TestNexusModsApi(CoreTest):
         self,
         translation_timestamp: int,
         original_mod_timestamp: int,
-        expected_output: int,
+        expected_output: tuple[bool, int],
     ) -> None:
         """
         Tests `NexusModsApi.__get_sort_key()`.
@@ -56,7 +59,9 @@ class TestNexusModsApi(CoreTest):
         )
 
         # when
-        actual_result: int = method(translation_timestamp, original_mod_timestamp)
+        actual_result: tuple[bool, int] = method(
+            translation_timestamp, original_mod_timestamp
+        )
 
         # then
         assert actual_result == expected_output

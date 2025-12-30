@@ -110,9 +110,9 @@ class TestDbGen(BaseTest):
         # then
         assert len(strings_files) == 3
         assert strings_files == [
-            "strings/_resourcepack_german.strings",
-            "strings/_resourcepack_german.ilstrings",
-            "strings/_resourcepack_german.dlstrings",
+            "strings\\_resourcepack_german.strings",
+            "strings\\_resourcepack_german.ilstrings",
+            "strings\\_resourcepack_german.dlstrings",
         ]
 
     def test_map_strings_files(self, data_folder: Path) -> None:

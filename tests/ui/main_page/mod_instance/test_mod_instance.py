@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Callable, Optional
+from typing import Optional
 
 import pytest
 from cutleast_core_lib.test.utils import Utils
@@ -49,9 +49,6 @@ class TestModInstanceWidget(BaseTest):
         list[TranslationStatus],
     )
     """Identifier for accessing the private state_filter field."""
-
-    UPDATE: tuple[str, Callable[[], None]] = "update", lambda: None
-    """Identifier for accessing the private update method."""
 
     @pytest.fixture
     def widget(
@@ -203,9 +200,6 @@ class TestModInstanceWidget(BaseTest):
         modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
-        update_method: Callable[[], None] = Utils.get_private_method(
-            widget, *TestModInstanceWidget.UPDATE
-        )
 
         test_separator: Mod = self.get_mod_by_name("Test Mods", widget.mod_instance)
         test_separator_item: QTreeWidgetItem = mod_items[test_separator]
@@ -225,7 +219,7 @@ class TestModInstanceWidget(BaseTest):
 
         # when
         test_modfile.status = TranslationStatus.IsTranslated
-        update_method()
+        widget.update()
 
         # then
         assert not test_separator_item.isHidden()
@@ -253,9 +247,6 @@ class TestModInstanceWidget(BaseTest):
         modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
-        update_method: Callable[[], None] = Utils.get_private_method(
-            widget, *TestModInstanceWidget.UPDATE
-        )
 
         test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", widget.mod_instance)
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
@@ -263,7 +254,7 @@ class TestModInstanceWidget(BaseTest):
 
         # when
         test_modfile.status = TranslationStatus.RequiresTranslation
-        update_method()
+        widget.update()
 
         # then
         assert test_modfile_item.foreground(
@@ -274,7 +265,7 @@ class TestModInstanceWidget(BaseTest):
 
         # when
         test_modfile.status = TranslationStatus.IsTranslated
-        update_method()
+        widget.update()
 
         # then
         assert test_modfile_item.foreground(
