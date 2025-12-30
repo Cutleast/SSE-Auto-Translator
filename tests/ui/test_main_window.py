@@ -50,8 +50,6 @@ class TestMainWindow(BaseTest):
 
         window.destroy(True, True)
 
-    # TODO: Fix this test when run with other tests
-    @pytest.mark.skip(reason="access violation when initializing menubar")
     def test_close_saves_states_to_cache(self, widget: MainWindow) -> None:
         """
         Tests that the main window calls `StateService.save_states_to_cache` when closed.
