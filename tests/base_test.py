@@ -105,12 +105,12 @@ class BaseTest(CoreBaseTest):
         return real_cwd / "res"
 
     @pytest.fixture
-    def user_data_path(self, data_folder: Path) -> Path:
+    def user_data_path(self, test_fs: FakeFilesystem, data_folder: Path) -> Path:
         """
         Returns the path to the user data folder.
         """
 
-        return data_folder / "data"
+        return Path(data_folder / "data")  # wrap in Path for pyfakefs
 
     @pytest.fixture
     def app_config(self, data_folder: Path) -> AppConfig:
