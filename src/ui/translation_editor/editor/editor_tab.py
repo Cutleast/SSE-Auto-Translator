@@ -508,6 +508,32 @@ class EditorTab(QWidget):
         Exports translation in DSD format to a user selected path.
         """
 
+        if self.__editor.changes_pending:
+            message_box = QMessageBox(self)
+            message_box.setWindowTitle(self.tr("Save before export?"))
+            message_box.setText(
+                self.tr(
+                    "Do you want to save the translation before exporting? Unsaved "
+                    "changes are not exported."
+                )
+            )
+            message_box.setStandardButtons(
+                QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
+            )
+            message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
+            message_box.button(QMessageBox.StandardButton.No).setText(
+                self.tr("Export only")
+            )
+            message_box.button(QMessageBox.StandardButton.Yes).setText(
+                self.tr("Save and export")
+            )
+
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+
+            if message_box.exec() == QMessageBox.StandardButton.Yes:
+                self.__save()
+
         file_dialog = QFileDialog(QApplication.activeModalWidget())
         file_dialog.setWindowTitle(self.tr("Export Translation (DSD Format only)"))
         file_dialog.setFileMode(QFileDialog.FileMode.Directory)
