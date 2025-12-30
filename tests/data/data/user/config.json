@@ -3,6 +3,7 @@
     "api_key": "...",
     "modinstance": {
         "display_name": "Portable",
+        "game": "skyrimse",
         "profile": "Default",
         "is_global": false,
         "base_folder": "E:\\Modding\\Test Instance",
