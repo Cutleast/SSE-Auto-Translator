@@ -107,3 +107,9 @@ DSD_FILE_PATTERN: str = "SKSE/Plugins/DynamicStringDistributor/*/*.json"
 """
 The glob pattern for DSD files.
 """
+
+OUTPUT_MOD_MARKER_FILENAME: str = "sse-at_ignore"
+"""
+The name of the dummy file that marks a generated output mod that is to be ignored by
+SSE-AT.
+"""

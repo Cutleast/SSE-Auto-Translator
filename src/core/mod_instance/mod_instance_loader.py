@@ -21,6 +21,7 @@ from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from mod_manager_lib.core.mod_manager.vortex.vortex import Vortex
 from PySide6.QtCore import QObject
 
+from core.database.exporter import OUTPUT_MOD_MARKER_FILENAME
 from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
@@ -134,7 +135,10 @@ class ModInstanceLoader(QObject):
             thread_name_prefix="ModInstanceLoaderThread"
         ) as executor:
             for mod in mods:
-                if mod.mod_type != BaseMod.Type.Regular:
+                if (  # skip non-regular mods and mods with an output mod marker
+                    mod.mod_type != BaseMod.Type.Regular
+                    or (mod.path / OUTPUT_MOD_MARKER_FILENAME).is_file()
+                ):
                     result[mod] = []
                     continue
 

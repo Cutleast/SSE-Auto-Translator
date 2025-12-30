@@ -875,8 +875,8 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>Exporter</name>
     <message>
-        <location filename="src/core/database/exporter.py" line="119"/>
-        <location filename="src/core/database/exporter.py" line="124"/>
+        <location filename="src/core/database/exporter.py" line="120"/>
+        <location filename="src/core/database/exporter.py" line="125"/>
         <source>Building output mod...</source>
         <translation>Output-Mod wird erstellt...</translation>
     </message>
