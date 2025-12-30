@@ -31,9 +31,9 @@ from core.config.app_config import AppConfig
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
-from core.string import String, StringList
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD

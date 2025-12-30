@@ -14,7 +14,7 @@ from sse_bsa import BSAArchive
 from sse_plugin_interface.plugin import SSEPlugin as Plugin
 from sse_plugin_interface.plugin_string import PluginString
 
-from core.mod_file.plugin_file import PluginFile
+from core.file_types.plugin.file import PluginFile
 from core.string.base_string import BaseString
 from core.string_table_parser.string_table import StringTable
 from core.string_table_parser.string_table_parser import StringTableParser

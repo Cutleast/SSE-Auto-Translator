@@ -15,8 +15,8 @@ from pydantic import BaseModel, Field
 from PySide6.QtWidgets import QApplication
 
 from core.database.translation_service import TranslationService
-from core.string import StringList
 from core.string.string_utils import StringUtils
+from core.string.types import StringList
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 

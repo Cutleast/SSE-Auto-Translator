@@ -872,6 +872,39 @@ Depending on the translator API this can raise unexpected costs.</comment>
     </message>
 </context>
 <context>
+    <name>FileType</name>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="34"/>
+        <source>Plugin File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="35"/>
+        <source>Interface File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="45"/>
+        <source>Traditional plugin files (.esp, .esm, .esl).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="48"/>
+        <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="64"/>
+        <source>Show plugin files (*.esp, *.esm, *.esl)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="67"/>
+        <source>Show interface files (*.txt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>IgnoreListDialog</name>
     <message>
         <location filename="src/ui/widgets/ignore_list_dialog.py" line="49"/>
@@ -1604,22 +1637,22 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="72"/>
+        <location filename="src/core/file_types/plugin/string.py" line="72"/>
         <source>Form ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="76"/>
+        <location filename="src/core/file_types/plugin/string.py" line="76"/>
         <source>Editor ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="79"/>
+        <location filename="src/core/file_types/plugin/string.py" line="79"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="81"/>
+        <location filename="src/core/file_types/plugin/string.py" line="81"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1995,13 +2028,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringExtractor</name>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="88"/>
-        <location filename="src/core/string/string_extractor.py" line="127"/>
+        <location filename="src/core/string/string_extractor.py" line="89"/>
+        <location filename="src/core/string/string_extractor.py" line="128"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="224"/>
+        <location filename="src/core/string/string_extractor.py" line="225"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -19,8 +19,9 @@ from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import QObject
 
 from core.file_source.archive_file_source import ArchiveFileSource
+from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
-from core.mod_file.mod_file_service import MODFILE_TYPES, ModFileService
+from core.mod_file.mod_file_service import ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
@@ -29,9 +30,9 @@ from core.utilities.filesystem import relative_data_path
 from core.utilities.game_language import GameLanguage
 from core.utilities.temp_folder_provider import TempFolderProvider
 
-from . import StringList
 from .string_loader import StringLoader
 from .string_utils import StringUtils
+from .types import StringList
 
 Source: TypeAlias = Path | Archive
 
@@ -248,8 +249,10 @@ class StringExtractor(QObject):
         """
 
         mod_files: list[Path] = []
-        for file_type in MODFILE_TYPES:
-            for pattern in file_type.get_glob_patterns(language.id):
+        for file_type in FileType:
+            file_type_cls: type[ModFile] = file_type.get_file_type_cls()
+
+            for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path in source.glob("**/" + pattern):
                     if isinstance(source, Archive):
                         # archives already return relative paths

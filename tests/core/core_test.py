@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 
-from core.string import String
+from core.string.types import String
 from tests.base_test import BaseTest
 
 

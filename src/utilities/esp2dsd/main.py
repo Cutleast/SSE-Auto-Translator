@@ -12,9 +12,9 @@ from typing import NoReturn, Optional, override
 from sse_plugin_interface.plugin import SSEPlugin as Plugin
 
 from core.database.translation_service import TranslationService
-from core.mod_file.plugin_file import PluginFile
-from core.string import StringList
+from core.file_types.plugin.file import PluginFile
 from core.string.string_utils import StringUtils
+from core.string.types import StringList
 from utilities.utility import Utility
 
 

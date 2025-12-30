@@ -7,13 +7,13 @@ from pathlib import Path
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
+from core.file_types.plugin.string import PluginString
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.string import StringList
-from core.string.plugin_string import PluginString
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 

@@ -882,6 +882,39 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
     </message>
 </context>
 <context>
+    <name>FileType</name>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="34"/>
+        <source>Plugin File</source>
+        <translation>Plugindatei</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="35"/>
+        <source>Interface File</source>
+        <translation>Interface-Datei</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="45"/>
+        <source>Traditional plugin files (.esp, .esm, .esl).</source>
+        <translation>Klassische Plugindateien (.esp, .esm, .esl).</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="48"/>
+        <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
+        <translation>Interface-Übersetzungsdateien (data/interface/translations/*_[language].txt).</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="64"/>
+        <source>Show plugin files (*.esp, *.esm, *.esl)</source>
+        <translation>Plugindateien (*.esp, *.esm, *.esl) zeigen</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="67"/>
+        <source>Show interface files (*.txt)</source>
+        <translation>Interface-Dateien (*.txt) zeigen</translation>
+    </message>
+</context>
+<context>
     <name>IgnoreListDialog</name>
     <message>
         <location filename="src/ui/widgets/ignore_list_dialog.py" line="49"/>
@@ -1618,22 +1651,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="72"/>
+        <location filename="src/core/file_types/plugin/string.py" line="72"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="76"/>
+        <location filename="src/core/file_types/plugin/string.py" line="76"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="79"/>
+        <location filename="src/core/file_types/plugin/string.py" line="79"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="81"/>
+        <location filename="src/core/file_types/plugin/string.py" line="81"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -2009,13 +2042,13 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringExtractor</name>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="88"/>
-        <location filename="src/core/string/string_extractor.py" line="127"/>
+        <location filename="src/core/string/string_extractor.py" line="89"/>
+        <location filename="src/core/string/string_extractor.py" line="128"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation>Strings werden extrahiert aus &apos;{0}&apos;...</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="224"/>
+        <location filename="src/core/string/string_extractor.py" line="225"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation>&apos;{0}&apos; wird verarbeitet...</translation>
     </message>

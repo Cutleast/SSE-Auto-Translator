@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from typing import override
 
-from .base_string import BaseString
+from core.string.base_string import BaseString
 
 
 class InterfaceString(BaseString):

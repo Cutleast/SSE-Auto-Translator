@@ -15,8 +15,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
-from core.string import String, StringList
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList
 from core.utilities import matches_filter, trim_string
 
 from .string_item import StringItem

@@ -4,10 +4,10 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
-from core.string import StringList
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 
 from ..core_test import CoreTest
 

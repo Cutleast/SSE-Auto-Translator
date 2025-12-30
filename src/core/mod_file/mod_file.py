@@ -14,7 +14,7 @@ from typing import override
 from cutleast_core_lib.core.cache.cache import Cache
 
 from core.file_source.file_source import FileSource
-from core.string import StringList
+from core.string.types import StringList
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus

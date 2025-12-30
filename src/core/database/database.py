@@ -9,9 +9,9 @@ from typing import Optional
 from PySide6.QtCore import QObject, Signal
 
 from core.mod_instance.mod import Mod
-from core.string import StringList
 from core.string.search_filter import SearchFilter, matches_filter
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 from core.translation_provider.mod_id import ModId
 from core.utilities.game_language import GameLanguage
 

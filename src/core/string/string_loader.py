@@ -9,12 +9,13 @@ from types import ModuleType
 import sse_plugin_interface
 
 from core import utilities
+from core.file_types.plugin import legacy
+from core.file_types.plugin.legacy import LegacyString
+from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.utilities.alias_unpickler import AliasUnpickler
 
-from . import StringList, StringListModel, legacy_string
-from .legacy_string import LegacyString
-from .plugin_string import PluginString
+from .types import StringList, StringListModel
 
 
 class StringLoader:
@@ -24,11 +25,11 @@ class StringLoader:
     """
 
     MODULE_ALIASES: dict[str, ModuleType] = {
-        "core.database.string": legacy_string,
+        "core.database.string": legacy,
         "plugin_parser": sse_plugin_interface,
-        "plugin_parser.string": legacy_string,
+        "plugin_parser.string": legacy,
         "utilities": utilities,
-        "utilities.string": legacy_string,
+        "utilities.string": legacy,
         "plugin_interface": sse_plugin_interface,
     }
     """Dict of module aliases required for deserialization of older translations."""

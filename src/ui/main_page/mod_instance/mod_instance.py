@@ -33,9 +33,9 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
-from core.string import StringList
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source

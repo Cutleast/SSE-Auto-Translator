@@ -8,8 +8,8 @@ import pytest
 
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.string import StringList
 from core.string.string_extractor import StringExtractor
+from core.string.types import StringList
 from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 

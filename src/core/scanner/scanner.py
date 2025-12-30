@@ -29,11 +29,11 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.string import String, StringList
 from core.string.search_filter import SearchFilter, matches_filter
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
+from core.string.types import String, StringList
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source

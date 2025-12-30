@@ -39,8 +39,8 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
-from core.string import StringList
 from core.string.search_filter import SearchFilter
+from core.string.types import StringList
 from core.translation_provider.provider import Provider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts

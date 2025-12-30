@@ -6,9 +6,9 @@ from typing import Optional
 
 import pytest
 
+from core.file_types.plugin.string import PluginString
 from core.scanner.detector import LangDetector, Language
-from core.string import String
-from core.string.plugin_string import PluginString
+from core.string.types import String
 
 
 class TestLangDetector:
