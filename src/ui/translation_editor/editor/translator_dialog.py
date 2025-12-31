@@ -21,8 +21,8 @@ from PySide6.QtWidgets import (
 
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
-from core.string import String
 from core.string.string_status import StringStatus
+from core.string.types import String
 from core.translator_api.translator import Translator
 from core.user_data.user_data_service import UserDataService
 from ui.utilities.icon_provider import IconProvider

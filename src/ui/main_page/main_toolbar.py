@@ -9,6 +9,7 @@ from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
+from core.file_types.file_type import FileType
 from core.mod_file.translation_status import TranslationStatus
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.utilities.theme_manager import ThemeManager
@@ -19,12 +20,20 @@ class MainToolBar(QToolBar):
     Toolbar for main page.
     """
 
-    filter_changed = Signal(list)
+    state_filter_changed = Signal(list)
     """
-    Signal emitted when the user changes the checked filters.
+    Signal emitted when the user changes the checked state filters.
 
     Args:
-        list[TranslationStatus]: List of checked filters
+        list[TranslationStatus]: List of checked state filters
+    """
+
+    type_filter_changed = Signal(list)
+    """
+    Signal emitted when the user changes the checked type filters.
+
+    Args:
+        list[FileType]: List of checked type filters
     """
 
     ignore_list_requested = Signal()
@@ -52,7 +61,8 @@ class MainToolBar(QToolBar):
     """Signal when the user clicks on the string search action."""
 
     __filter_menu: Menu
-    __filter_items: dict[TranslationStatus, QCheckBox]
+    __state_filter_items: dict[TranslationStatus, QCheckBox]
+    __type_filter_items: dict[FileType, QCheckBox]
 
     __modlist_scan_action: QAction
     __online_scan_action: QAction
@@ -77,18 +87,33 @@ class MainToolBar(QToolBar):
     def __init_filter_actions(self) -> None:
         self.__filter_menu = Menu()
 
-        self.__filter_items = {}
+        self.__type_filter_items = {}
+        for file_type in FileType:
+            filter_box = QCheckBox(
+                file_type.get_localized_filter_name(), self.__filter_menu
+            )
+            filter_box.setChecked(True)
+            filter_box.stateChanged.connect(self.__on_type_filter_change)
+            widget_action = QWidgetAction(self.__filter_menu)
+            widget_action.setDefaultWidget(filter_box)
+            self.__filter_menu.addAction(widget_action)
+
+            self.__type_filter_items[file_type] = filter_box
+
+        self.__filter_menu.addSeparator()
+
+        self.__state_filter_items = {}
         for status in TranslationStatus:
             filter_box = QCheckBox(
                 status.get_localized_filter_name(), self.__filter_menu
             )
             filter_box.setChecked(True)
-            filter_box.stateChanged.connect(self.__on_filter_change)
+            filter_box.stateChanged.connect(self.__on_state_filter_change)
             widget_action = QWidgetAction(self.__filter_menu)
             widget_action.setDefaultWidget(filter_box)
             self.__filter_menu.addAction(widget_action)
 
-            self.__filter_items[status] = filter_box
+            self.__state_filter_items[status] = filter_box
 
         filter_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter options")
@@ -152,11 +177,20 @@ class MainToolBar(QToolBar):
         )
         self.__string_search_action.triggered.connect(self.string_search_requested.emit)
 
-    def __on_filter_change(self, *args: Any) -> None:
-        self.filter_changed.emit(
+    def __on_state_filter_change(self, *args: Any) -> None:
+        self.state_filter_changed.emit(
             [
                 status
-                for status, checkbox in self.__filter_items.items()
+                for status, checkbox in self.__state_filter_items.items()
+                if checkbox.isChecked()
+            ]
+        )
+
+    def __on_type_filter_change(self, *args: Any) -> None:
+        self.type_filter_changed.emit(
+            [
+                file_type
+                for file_type, checkbox in self.__type_filter_items.items()
                 if checkbox.isChecked()
             ]
         )

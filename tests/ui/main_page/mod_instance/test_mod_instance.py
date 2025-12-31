@@ -14,6 +14,7 @@ from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
+from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -49,6 +50,9 @@ class TestModInstanceWidget(BaseTest):
         list[TranslationStatus],
     )
     """Identifier for accessing the private state_filter field."""
+
+    TYPE_FILTER: tuple[str, type[list[FileType]]] = "type_filter", list[FileType]
+    """Identifier for accessing the private type_filter field."""
 
     @pytest.fixture
     def widget(
@@ -106,6 +110,9 @@ class TestModInstanceWidget(BaseTest):
                 widget, *TestModInstanceWidget.STATE_FILTER
             )
         )
+        type_filter: Optional[list[FileType]] = Utils.get_private_field_optional(
+            widget, *TestModInstanceWidget.TYPE_FILTER
+        )
 
         test_separator: Mod = self.get_mod_by_name("Test Mods", widget.mod_instance)
         test_separator_item: QTreeWidgetItem = mod_items[test_separator]
@@ -122,6 +129,7 @@ class TestModInstanceWidget(BaseTest):
         self.assert_all_items_visible(widget)
         assert name_filter is None
         assert state_filter is None
+        assert type_filter is None
         assert test_mod_item.parent() is test_separator_item
         assert test_modfile_item.parent() is test_mod_item
 
@@ -234,6 +242,65 @@ class TestModInstanceWidget(BaseTest):
 
         # when
         widget.set_state_filter([status for status in TranslationStatus])
+
+        # then
+        self.assert_all_items_visible(widget)
+
+    def test_type_filter(self, widget: ModInstanceWidget) -> None:
+        """
+        Tests the filtering for file types.
+        """
+
+        # given
+        mod_items: dict[Mod, QTreeWidgetItem] = Utils.get_private_field(
+            widget, *TestModInstanceWidget.MOD_ITEMS
+        )
+        modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
+            Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
+        )
+
+        test_separator: Mod = self.get_mod_by_name("Test Mods", widget.mod_instance)
+        test_separator_item: QTreeWidgetItem = mod_items[test_separator]
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", widget.mod_instance)
+        test_mod_item: QTreeWidgetItem = mod_items[test_mod]
+        test_pluginfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
+        test_pluginfile_item: QTreeWidgetItem = modfile_items[test_mod][test_pluginfile]
+        test_interfacefile: ModFile = self.get_modfile_from_mod(
+            test_mod, "wetandcold_german.txt"
+        )
+        test_interfacefile_item: QTreeWidgetItem = modfile_items[test_mod][
+            test_interfacefile
+        ]
+
+        # then
+        self.assert_all_items_visible(widget)
+
+        # when
+        widget.set_type_filter([FileType.PluginFile])
+
+        # then
+        assert not test_separator_item.isHidden()
+        assert not test_mod_item.isHidden()
+        assert not test_pluginfile_item.isHidden()
+        assert test_interfacefile_item.isHidden()
+
+        # when
+        widget.set_type_filter([FileType.InterfaceFile])
+
+        # then
+        assert not test_separator_item.isHidden()
+        assert not test_mod_item.isHidden()
+        assert test_pluginfile_item.isHidden()
+        assert not test_interfacefile_item.isHidden()
+
+        # when
+        widget.set_type_filter([])
+
+        # then
+        self.assert_all_items_visible(widget)
+
+        # when
+        widget.set_type_filter([file_type for file_type in FileType])
 
         # then
         self.assert_all_items_visible(widget)

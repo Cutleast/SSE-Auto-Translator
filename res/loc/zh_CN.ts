@@ -872,6 +872,39 @@ Depending on the translator API this can raise unexpected costs.</comment>
     </message>
 </context>
 <context>
+    <name>FileType</name>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="34"/>
+        <source>Plugin File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="35"/>
+        <source>Interface File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="45"/>
+        <source>Traditional plugin files (.esp, .esm, .esl).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="48"/>
+        <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="64"/>
+        <source>Show plugin files (*.esp, *.esm, *.esl)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="67"/>
+        <source>Show interface files (*.txt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>IgnoreListDialog</name>
     <message>
         <location filename="src/ui/widgets/ignore_list_dialog.py" line="49"/>
@@ -1041,37 +1074,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="168"/>
+        <location filename="src/ui/main_page/main_page.py" line="170"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="426"/>
+        <location filename="src/ui/main_page/main_page.py" line="433"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="174"/>
+        <location filename="src/ui/main_page/main_page.py" line="176"/>
         <source>Translatable files:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="193"/>
+        <location filename="src/ui/main_page/main_page.py" line="195"/>
         <source>Support me on Ko-fi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="405"/>
+        <location filename="src/ui/main_page/main_page.py" line="412"/>
         <source>No translation downloads available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="406"/>
+        <location filename="src/ui/main_page/main_page.py" line="413"/>
         <source>There are no translations available to download.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="429"/>
+        <location filename="src/ui/main_page/main_page.py" line="436"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1079,32 +1112,32 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="439"/>
+        <location filename="src/ui/main_page/main_page.py" line="446"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="441"/>
+        <location filename="src/ui/main_page/main_page.py" line="448"/>
         <source>Open output mod in Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="444"/>
+        <location filename="src/ui/main_page/main_page.py" line="451"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="489"/>
+        <location filename="src/ui/main_page/main_page.py" line="496"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="494"/>
+        <location filename="src/ui/main_page/main_page.py" line="501"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="496"/>
+        <location filename="src/ui/main_page/main_page.py" line="503"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
@@ -1113,47 +1146,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>MainToolBar</name>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="104"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="129"/>
         <source>Open ignore list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="109"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="134"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="118"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="143"/>
         <source>Scan modlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="94"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="119"/>
         <source>Filter options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="124"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="149"/>
         <source>Scan online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="130"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="155"/>
         <source>Download available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="136"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="161"/>
         <source>Build output mod...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="145"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="170"/>
         <source>Scan translations for missing strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="151"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="176"/>
         <source>Search modlist for string...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1413,38 +1446,38 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="185"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="191"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="186"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="192"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="187"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="193"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="512"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="520"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="525"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="533"/>
         <source>Creating translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="544"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="557"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="593"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="582"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="595"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1604,22 +1637,22 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="72"/>
+        <location filename="src/core/file_types/plugin/string.py" line="72"/>
         <source>Form ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="76"/>
+        <location filename="src/core/file_types/plugin/string.py" line="76"/>
         <source>Editor ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="79"/>
+        <location filename="src/core/file_types/plugin/string.py" line="79"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/plugin_string.py" line="81"/>
+        <location filename="src/core/file_types/plugin/string.py" line="81"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1995,13 +2028,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringExtractor</name>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="88"/>
-        <location filename="src/core/string/string_extractor.py" line="127"/>
+        <location filename="src/core/string/string_extractor.py" line="89"/>
+        <location filename="src/core/string/string_extractor.py" line="128"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="224"/>
+        <location filename="src/core/string/string_extractor.py" line="225"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>

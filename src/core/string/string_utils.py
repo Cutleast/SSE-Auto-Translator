@@ -8,8 +8,8 @@ from copy import copy
 
 from core.utilities.container_utils import unique
 
-from . import String, StringList, StringType
 from .string_status import StringStatus
+from .types import String, StringList, StringType
 
 
 class StringUtils:

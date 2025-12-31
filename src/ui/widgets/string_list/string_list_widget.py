@@ -26,8 +26,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.string import String, StringList
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList
 from core.utilities import matches_filter, trim_string
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 

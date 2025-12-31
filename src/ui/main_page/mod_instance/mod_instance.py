@@ -28,14 +28,15 @@ from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.file_source.bsa_file_source import BsaFileSource
 from core.file_source.file_source import FileSource
+from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
-from core.string import StringList
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
@@ -118,6 +119,11 @@ class ModInstanceWidget(QTreeWidget):
     __state_filter: Optional[list[TranslationStatus]] = None
     """
     Optional list of mod file states to filter by.
+    """
+
+    __type_filter: Optional[list[FileType]] = None
+    """
+    Optional list of file types to filter by.
     """
 
     def __init__(
@@ -331,6 +337,13 @@ class ModInstanceWidget(QTreeWidget):
                     (
                         self.__state_filter is not None
                         and modfile.status not in self.__state_filter
+                    )
+                    or (
+                        self.__type_filter is not None
+                        and not any(
+                            isinstance(modfile, file_type.get_file_type_cls())
+                            for file_type in self.__type_filter
+                        )
                     )
                     or not matches_filter(
                         modfile.name, name_filter, case_sensitive or False
@@ -726,6 +739,17 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter if state_filter else None
+        self.update()
+
+    def set_type_filter(self, type_filter: list[FileType]) -> None:
+        """
+        Sets the file type filter.
+
+        Args:
+            type_filter (list[FileType]): The file types to filter by.
+        """
+
+        self.__type_filter = type_filter if type_filter else None
         self.update()
 
     def get_visible_modfiles(self, only_checked: bool = True) -> list[ModFile]:

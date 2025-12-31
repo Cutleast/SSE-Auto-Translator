@@ -6,7 +6,7 @@ from typing import Optional, override
 
 from PySide6.QtWidgets import QApplication
 
-from .base_string import BaseString
+from core.string.base_string import BaseString
 
 
 class PluginString(BaseString):

@@ -14,9 +14,9 @@ from PySide6.QtCore import QObject, Signal
 
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
-from core.string import String, StringList
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList
 from core.translator_api.translator import Translator
 from core.utilities.game_language import GameLanguage
 

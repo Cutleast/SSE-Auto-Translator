@@ -33,14 +33,15 @@ from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadListEntries, DownloadManager
 from core.downloader.file_download import FileDownload
+from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
-from core.string import StringList
 from core.string.search_filter import SearchFilter
+from core.string.types import StringList
 from core.translation_provider.provider import Provider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
@@ -118,7 +119,8 @@ class MainPageWidget(QWidget):
 
         self.__init_ui()
 
-        self.__tool_bar.filter_changed.connect(self.__on_state_filter_changed)
+        self.__tool_bar.state_filter_changed.connect(self.__on_state_filter_changed)
+        self.__tool_bar.type_filter_changed.connect(self.__on_type_filter_changed)
         self.__tool_bar.ignore_list_requested.connect(self.__open_ignore_list)
         self.__tool_bar.help_requested.connect(self.__modinstance_widget.show_help)
         self.__tool_bar.modlist_scan_requested.connect(self.__run_basic_scan)
@@ -260,6 +262,11 @@ class MainPageWidget(QWidget):
 
     def __on_state_filter_changed(self, state_filter: list[TranslationStatus]) -> None:
         self.__modinstance_widget.set_state_filter(state_filter)
+
+        self.__update()
+
+    def __on_type_filter_changed(self, type_filter: list[FileType]) -> None:
+        self.__modinstance_widget.set_type_filter(type_filter)
 
         self.__update()
 

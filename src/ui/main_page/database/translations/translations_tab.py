@@ -27,15 +27,15 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadListEntries, DownloadManager
+from core.file_types.plugin.file import PluginFile
 from core.mod_file.mod_file import ModFile
-from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
-from core.string import StringList
 from core.string.search_filter import SearchFilter
 from core.string.string_extractor import StringExtractor
+from core.string.types import StringList
 from core.translation_provider.provider import Provider
 from ui.downloader.download_list_window import DownloadListWindow
 from ui.widgets.string_list.string_list_dialog import StringListDialog

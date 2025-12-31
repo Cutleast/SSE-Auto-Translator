@@ -6,7 +6,7 @@ from typing import Optional, override
 
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
-from core.string import String
+from core.string.types import String
 
 
 class StringItem(QTreeWidgetItem):

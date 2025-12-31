@@ -6,7 +6,7 @@ from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 from PySide6.QtWidgets import QCheckBox, QWidgetAction
 
-from core.string import StringList
+from core.string.types import StringList
 from ui.utilities.icon_provider import IconProvider
 
 

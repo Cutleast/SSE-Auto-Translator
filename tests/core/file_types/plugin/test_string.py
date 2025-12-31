@@ -8,13 +8,13 @@ import pytest
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from pydantic import ValidationError
 
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 
 
 class TestPluginString:
     """
-    Tests `core.database.string.String`.
+    Tests `core.file_types.plugin.string.PluginString`.
     """
 
     def test_from_string_data_complete(self) -> None:
@@ -150,7 +150,7 @@ class TestPluginString:
     @pytest.mark.parametrize("string, expected_output", test_id_cases)
     def test_id(self, string: PluginString, expected_output: str) -> None:
         """
-        Tests `core.database.string.String.id`-property.
+        Tests `PluginString.id`-property.
         """
 
         # when
@@ -212,7 +212,7 @@ class TestPluginString:
         self, string: PluginString, expected_output: str
     ) -> None:
         """
-        Tests `String.get_localized_info()`.
+        Tests `PluginString.get_localized_info()`.
         """
 
         # when

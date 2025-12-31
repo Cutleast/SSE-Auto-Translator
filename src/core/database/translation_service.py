@@ -9,9 +9,9 @@ from typing import Optional
 
 from cutleast_core_lib.core.filesystem.utils import add_suffix
 
-from core.string import String, StringList, StringListModel
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList, StringListModel
 
 
 class TranslationService:

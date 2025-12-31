@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 

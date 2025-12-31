@@ -11,10 +11,11 @@ from sse_plugin_interface.utilities import is_valid_string
 
 from core.database.translation_service import TranslationService
 from core.file_source.file_source import FileSource
-from core.string import PluginString, StringList
+from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 
-from .mod_file import ModFile
+from .string import PluginString
 
 
 class PluginFile(ModFile):

@@ -7,10 +7,10 @@ from pathlib import Path
 import pytest
 
 from core.database.translation_service import TranslationService
-from core.string import String, StringList
-from core.string.plugin_string import PluginString
+from core.file_types.plugin.string import PluginString
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
+from core.string.types import String, StringList
 
 from ..core_test import CoreTest
 

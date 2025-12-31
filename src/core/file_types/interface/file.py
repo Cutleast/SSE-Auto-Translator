@@ -6,11 +6,11 @@ from pathlib import Path
 from typing import override
 
 from core.file_source.file_source import FileSource
-from core.string import StringList
-from core.string.interface_string import InterfaceString
+from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
+from core.string.types import StringList
 
-from .mod_file import ModFile
+from .string import InterfaceString
 
 
 class InterfaceFile(ModFile):

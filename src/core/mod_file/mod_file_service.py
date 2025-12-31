@@ -11,18 +11,11 @@ from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from mod_manager_lib.core.instance.mod import Mod
 from PySide6.QtCore import QObject
 
-from core.mod_file.interface_file import InterfaceFile
+from core.file_types.file_type import FileType
 from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.game_language import GameLanguage
 
 from .mod_file import ModFile
-from .plugin_file import PluginFile
-
-MODFILE_TYPES: list[type[ModFile]] = [
-    PluginFile,
-    InterfaceFile,
-]
-"""List of supported mod file types."""
 
 
 class ModFileService(QObject):
@@ -56,11 +49,12 @@ class ModFileService(QObject):
         self.log.info(f"Scanning '{mod.display_name}' for mod files...")
 
         modfiles: list[ModFile] = []
-        for file_type in MODFILE_TYPES:
-            for pattern in file_type.get_glob_patterns(language.id):
+        for file_type in FileType:
+            file_type_cls: type[ModFile] = file_type.get_file_type_cls()
+            for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path in mod.path.glob(pattern):
                     if path.is_file():
-                        modfiles.append(file_type(path.name, path))
+                        modfiles.append(file_type_cls(path.name, path))
 
         if include_bsas:
             for bsa_file in mod.path.glob("*.bsa"):
@@ -94,14 +88,16 @@ class ModFileService(QObject):
         bsa_files: list[Path] = BsaFileProvider.get_cached_file_list(bsa_file)
 
         modfiles: list[ModFile] = []
-        for file_type in MODFILE_TYPES:
-            if not file_type.can_be_in_bsas():
+        for file_type in FileType:
+            file_type_cls: type[ModFile] = file_type.get_file_type_cls()
+
+            if not file_type_cls.can_be_in_bsas():
                 continue
 
-            for pattern in file_type.get_glob_patterns(language.id):
+            for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path_str in glob(pattern, bsa_files):
                     path = Path(path_str)
-                    modfiles.append(file_type(path.name, bsa_file / path))
+                    modfiles.append(file_type_cls(path.name, bsa_file / path))
 
         self.log.info(f"Found {len(modfiles)} mod files.")
 
@@ -122,11 +118,13 @@ class ModFileService(QObject):
             type[ModFile]: ModFile type
         """
 
-        for file_type in MODFILE_TYPES:
+        for file_type in FileType:
+            file_type_cls: type[ModFile] = file_type.get_file_type_cls()
+
             if any(
                 p.lower().endswith(suffix.lower())
-                for p in file_type.get_glob_patterns("")
+                for p in file_type_cls.get_glob_patterns("")
             ):
-                return file_type
+                return file_type_cls
 
         raise NotImplementedError(f"File type {suffix!r} not yet supported!")
