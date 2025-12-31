@@ -172,49 +172,6 @@ class Provider:
 
         return available_translations
 
-    def is_update_available(
-        self, mod_id: ModId, timestamp: int, source: Optional[Source] = None
-    ) -> bool:
-        """
-        Checks if an update is available for the specified mod and file by comparing
-        the timestamps.
-
-        Args:
-            mod_id (ModId): Mod identifier
-            timestamp (int): Timestamp of local file
-            source (Optional[Source], optional): Source. Defaults to None.
-
-        Raises:
-            ValueError: when the Source is specified as `Source.Local`
-            ModNotFoundError: when the requested mod could not be found
-
-        Returns:
-            bool: Whether an update is available
-        """
-
-        if source is None:
-            return ProviderManager.get_default_provider().is_update_available(
-                mod_id, timestamp
-            )
-
-        else:
-            return ProviderManager.get_provider_by_source(source).is_update_available(
-                mod_id, timestamp
-            )
-
-    def get_updated_mod_id(self, mod_id: ModId) -> Optional[ModId]:
-        """
-        Gets the updated mod id for the specified mod.
-
-        Args:
-            mod_id (ModId): Mod identifier
-
-        Returns:
-            Optional[ModId]: Updated mod id or None if there is no update available
-        """
-
-        # TODO: Reimplement this
-
     def request_download(self, mod_id: ModId, source: Optional[Source] = None) -> str:
         """
         Requests a download url for a mod file from a specified source.

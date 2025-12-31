@@ -23,14 +23,6 @@ class TranslationsToolbar(QToolBar):
     local_import_requested = Signal()
     """Signal emitted when the user clicks on the local import action."""
 
-    update_check_requested = Signal()
-    """Signal emitted when the user clicks on the update check action."""
-
-    download_updates_requested = Signal()
-    """Signal emitted when the user clicks on the download updates action."""
-
-    __update_action: QAction
-
     def __init__(self) -> None:
         super().__init__()
 
@@ -60,26 +52,3 @@ class TranslationsToolbar(QToolBar):
             self.tr("Import translation from local disk"),
         )
         local_import_action.triggered.connect(self.local_import_requested.emit)
-
-        update_check_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.cloud-refresh"),
-            self.tr("Check translations for available updates")
-            + " ["
-            + self.tr("Temporarily disabled")
-            + "]",
-        )
-        update_check_action.setDisabled(True)
-        update_check_action.triggered.connect(self.update_check_requested.emit)
-
-        self.__update_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.cloud-download"),
-            self.tr("Download and install available translation updates")
-            + " ["
-            + self.tr("Temporarily disabled")
-            + "]",
-        )
-        self.__update_action.setDisabled(True)
-        self.__update_action.triggered.connect(self.download_updates_requested.emit)
-
-    def set_download_updates_enabled(self, enabled: bool) -> None:
-        self.__update_action.setEnabled(enabled)

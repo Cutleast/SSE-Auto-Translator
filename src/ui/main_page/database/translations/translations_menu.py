@@ -25,9 +25,6 @@ class TranslationsMenu(Menu):
     collapse_all_clicked = Signal()
     """Signal emitted when the user clicks on the collapse all action."""
 
-    ignore_updates_requested = Signal()
-    """Signal emitted when the user clicks on the ignore update action."""
-
     show_strings_requested = Signal()
     """Signal emitted when the user clicks on the show strings action."""
 
@@ -49,7 +46,6 @@ class TranslationsMenu(Menu):
     open_in_explorer_requested = Signal()
     """Signal emitted when the user clicks on the open in explorer action."""
 
-    __ignore_update_action: QAction
     __show_strings_action: QAction
     __edit_translation_action: QAction
     __rename_translation_action: QAction
@@ -81,14 +77,6 @@ class TranslationsMenu(Menu):
         self.addSeparator()
 
     def __init_translation_actions(self) -> None:
-        self.__ignore_update_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.cloud-alert"),
-            self.tr("Ignore translation update"),
-        )
-        self.__ignore_update_action.triggered.connect(
-            self.ignore_updates_requested.emit
-        )
-
         self.__show_strings_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.book-open-outline"),
             self.tr("Show translation strings..."),
@@ -157,11 +145,6 @@ class TranslationsMenu(Menu):
             self.__open_modpage_action.setIcon(current_item.source.get_icon())  # type: ignore[arg-type]
         else:
             self.__open_modpage_action.setVisible(False)
-
-        self.__ignore_update_action.setVisible(
-            isinstance(current_item, Translation)
-            and current_item.status == Translation.Status.UpdateAvailable
-        )
 
         self.__show_strings_action.setVisible(isinstance(current_item, Translation))
         self.__edit_translation_action.setVisible(isinstance(current_item, Translation))

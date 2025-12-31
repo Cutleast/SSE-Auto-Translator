@@ -10,9 +10,7 @@ from pathlib import Path
 from typing import Any, Optional, override
 
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
-from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from pydantic import BaseModel, Field
-from PySide6.QtWidgets import QApplication
 
 from core.database.translation_service import TranslationService
 from core.string.string_utils import StringUtils
@@ -59,48 +57,6 @@ class Translation(BaseModel):
     _strings: Optional[dict[Path, StringList]] = None
     """
     Map of mod file names to list of strings.
-    """
-
-    class Status(LocalizedEnum):
-        """
-        Enum for different Statuses
-        """
-
-        Ok = "Ok"
-        UpdateAvailable = "Update available"
-        UpdateIgnored = "Update ignored"
-
-        @override
-        def get_localized_name(self) -> str:
-            locs: dict[Translation.Status, str] = {
-                Translation.Status.Ok: QApplication.translate("Translation", "Ok"),
-                Translation.Status.UpdateAvailable: QApplication.translate(
-                    "Translation", "Update available"
-                ),
-                Translation.Status.UpdateIgnored: QApplication.translate(
-                    "Translation", "Update ignored"
-                ),
-            }
-
-            return locs[self]
-
-        @override
-        def get_localized_description(self) -> str:
-            locs: dict[Translation.Status, str] = {
-                Translation.Status.Ok: QApplication.translate("Translation", "Ok"),
-                Translation.Status.UpdateAvailable: QApplication.translate(
-                    "Translation", "An update is available for the translation."
-                ),
-                Translation.Status.UpdateIgnored: QApplication.translate(
-                    "Translation", "Available updates have been ignored."
-                ),
-            }
-
-            return locs[self]
-
-    status: Status = Status.Ok
-    """
-    The (update) status of the translation.
     """
 
     source: Source = Source.Local

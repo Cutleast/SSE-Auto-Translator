@@ -205,23 +205,6 @@ class ProviderApi(QObject):
         """
 
     @abstractmethod
-    def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
-        """
-        Checks if an update is available for the specified mod and file by comparing
-        the timestamps.
-
-        Args:
-            mod_id (ModId): Mod identifier
-            timestamp (int): Timestamp of local file
-
-        Raises:
-            ModNotFoundError: when the requested mod could not be found
-
-        Returns:
-            bool: Whether an update is available
-        """
-
-    @abstractmethod
     def request_download(self, mod_id: ModId) -> str:
         """
         Requests a download for a mod file.

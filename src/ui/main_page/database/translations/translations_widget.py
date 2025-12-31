@@ -107,7 +107,6 @@ class TranslationsWidget(QTreeWidget):
 
         self.__menu.expand_all_clicked.connect(self.expandAll)
         self.__menu.collapse_all_clicked.connect(self.collapseAll)
-        self.__menu.ignore_updates_requested.connect(self.__ignore_updates)
         self.__menu.show_strings_requested.connect(self.__show_strings)
         self.__menu.edit_translation_requested.connect(self.__edit_translation)
         self.__menu.rename_translation_requested.connect(self.__rename_translation)
@@ -212,11 +211,6 @@ class TranslationsWidget(QTreeWidget):
                 file_item.setHidden(
                     not matches_filter(str(file), name_filter, case_sensitive or False)
                 )
-
-            if translation.status == Translation.Status.UpdateAvailable:
-                translation_item.setForeground(1, Qt.GlobalColor.yellow)
-            else:
-                translation_item.setForeground(1, Qt.GlobalColor.white)
 
             translation_item.setHidden(
                 name_filter is not None
@@ -396,14 +390,6 @@ class TranslationsWidget(QTreeWidget):
         valid: bool = path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
 
         return valid
-
-    def __ignore_updates(self) -> None:
-        selected_translations: list[Translation] = self.get_selected_items()[0]
-
-        for translation in selected_translations:
-            translation.status = Translation.Status.UpdateIgnored
-
-        self.update_translations()
 
     def __show_strings(self) -> None:
         current_item: Optional[Translation | Path] = self.get_current_item()

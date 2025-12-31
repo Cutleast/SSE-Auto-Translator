@@ -8,7 +8,6 @@ from typing import Optional
 
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
@@ -17,7 +16,6 @@ from PySide6.QtWidgets import (
     QFileDialog,
     QHBoxLayout,
     QLabel,
-    QMessageBox,
     QVBoxLayout,
     QWidget,
 )
@@ -26,18 +24,16 @@ from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
-from core.downloader.download_manager import DownloadListEntries, DownloadManager
+from core.downloader.download_manager import DownloadManager
 from core.file_types.plugin.file import PluginFile
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
-from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.string.search_filter import SearchFilter
 from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
 from core.translation_provider.provider import Provider
-from ui.downloader.download_list_window import DownloadListWindow
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
@@ -97,8 +93,6 @@ class TranslationsTab(QWidget):
         )
         self.__toolbar.search_database_requested.connect(self.__search_database)
         self.__toolbar.local_import_requested.connect(self.__import_local_translation)
-        self.__toolbar.update_check_requested.connect(self.__check_for_updates)
-        self.__toolbar.download_updates_requested.connect(self.__download_updates)
 
         self.__translations_widget.edit_translation_requested.connect(
             self.edit_translation_requested.emit
@@ -254,86 +248,6 @@ class TranslationsTab(QWidget):
                         )
                         translation.save()
                         DatabaseService.add_translation(translation, self.database)
-
-    def __check_for_updates(self) -> None:
-        """
-        Checks for updates for all installed translations and updates their status.
-        """
-
-        scan_result: dict[Translation, bool] = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.scanner.check_for_translation_updates
-        )
-
-        for translation, update_available in scan_result.items():
-            if update_available:
-                translation.status = Translation.Status.UpdateAvailable
-
-        self.__translations_widget.update_translations()
-
-        available_updates_count: int = sum(scan_result.values())
-        messagebox = QMessageBox(QApplication.activeModalWidget())
-        messagebox.setWindowTitle(self.tr("Update check complete!"))
-        messagebox.setText(
-            self.tr(
-                "Found updates for %n translations.",
-                "Found an update for one translation.",
-                available_updates_count,
-            )
-        )
-        messagebox.exec()
-
-        self.__toolbar.set_download_updates_enabled(available_updates_count > 0)
-
-    def __download_updates(self) -> None:
-        translations: dict[Translation, Mod] = {}
-        for translation in filter(
-            lambda t: t.status == Translation.Status.UpdateAvailable,
-            self.database.user_translations,
-        ):
-            if translation.original_mod_id is None:
-                self.log.warning(
-                    f"Original mod for translation '{translation.name}' is unknown!"
-                )
-                continue
-
-            original_mod: Optional[Mod] = self.mod_instance.get_mod(
-                translation.original_mod_id
-            )
-
-            if original_mod is None:
-                self.log.warning(
-                    f"Original mod for translation {translation.name!r} not installed!"
-                )
-                continue
-
-            translations[translation] = original_mod
-
-        download_entries: DownloadListEntries = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.download_manager.collect_available_updates(
-                translations, ldialog
-            ),
-        )
-        if download_entries:
-            download_list_window = DownloadListWindow(download_entries, self.provider)
-            download_list_window.downloads_started.connect(
-                lambda downloads, link_nxm: list(
-                    map(self.download_manager.request_download, downloads)
-                )
-            )
-            download_list_window.downloads_started.connect(
-                lambda file_downloads, link_nxm: self.download_manager.start()
-            )
-            download_list_window.show()
-        else:
-            QMessageBox.warning(
-                QApplication.activeModalWidget() or self,
-                self.tr("No updates available!"),
-                self.tr(
-                    "There are no updates available for translations with installed "
-                    "original mods."
-                ),
-            )
 
     def __update(self) -> None:
         self.__update_translations_num()

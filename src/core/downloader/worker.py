@@ -194,7 +194,6 @@ class Worker(QThread):
             version=download.mod_details.version,
             original_mod_id=original_mod.mod_id,
             original_version=original_mod.version,
-            status=Translation.Status.Ok,
             source=download.source,
             timestamp=download.mod_details.timestamp,
         )

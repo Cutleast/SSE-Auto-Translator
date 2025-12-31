@@ -107,10 +107,6 @@ class CDTApi(ProviderApi):
             return []
 
     @override
-    def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
-        return self.get_mod_details(mod_id).timestamp > timestamp
-
-    @override
     def request_download(self, mod_id: ModId) -> str:
         if not mod_id.nm_id:
             ProviderApi.raise_mod_not_found_error(mod_id)

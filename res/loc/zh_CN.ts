@@ -454,14 +454,9 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="290"/>
-        <location filename="src/core/downloader/download_manager.py" line="309"/>
+        <location filename="src/core/downloader/download_manager.py" line="288"/>
+        <location filename="src/core/downloader/download_manager.py" line="307"/>
         <source>Collecting available downloads...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/downloader/download_manager.py" line="463"/>
-        <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1824,11 +1819,6 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="782"/>
-        <source>Checking for translation updates...</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchBar</name>
@@ -2308,101 +2298,62 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="129"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="123"/>
         <source>Translations:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="149"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="143"/>
         <source>Base Game + AE CC Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="170"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="164"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="177"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="171"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="179"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="173"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="201"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="195"/>
         <source>Mod archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="202"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="196"/>
         <source>Skyrim SE plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="205"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="199"/>
         <source>Import Translation...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="275"/>
-        <source>Update check complete!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="278"/>
-        <source>Found updates for %n translations.</source>
-        <comment>Found an update for one translation.</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="331"/>
-        <source>No updates available!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="333"/>
-        <source>There are no updates available for translations with installed original mods.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TranslationsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="45"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="37"/>
         <source>Show base game (+ AE CC content) strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="52"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="44"/>
         <source>Search database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="60"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="52"/>
         <source>Import translation from local disk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="66"/>
-        <source>Check translations for available updates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="68"/>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="78"/>
-        <source>Temporarily disabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="76"/>
-        <source>Download and install available translation updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

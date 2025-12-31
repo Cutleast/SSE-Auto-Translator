@@ -32,7 +32,6 @@ from ..exceptions import (
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
-from .models.file_update import FileUpdate
 from .models.nm_file import NmFile
 from .models.nm_files import NmFiles
 from .models.nm_mod import NmMod
@@ -400,19 +399,6 @@ class NexusModsApi(ProviderApi):
         """
 
         return (translation_timestamp > original_mod_timestamp, translation_timestamp)
-
-    @override
-    def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
-        files: NmFiles = self.__request_mod_files(
-            game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id
-        )
-        updates: dict[int, int] = NexusModsApi.__map_file_updates(files.updates)
-
-        return mod_id.file_id in updates
-
-    @staticmethod
-    def __map_file_updates(updates: list[FileUpdate]) -> dict[int, int]:
-        return {update.old_file_id: update.new_file_id for update in updates}
 
     def __request_mod_files(self, game_id: str, mod_id: int) -> NmFiles:
         """

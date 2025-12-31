@@ -14,14 +14,12 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import QObject, Signal
 
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
-from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
@@ -432,78 +430,3 @@ class DownloadManager(QObject):
 
         result: list[TranslationDownload] = list(translation_downloads.values())
         return result
-
-    def collect_available_updates(
-        self,
-        translations: dict[Translation, Mod],
-        ldialog: Optional[LoadingDialog] = None,
-    ) -> DownloadListEntries:
-        """
-        Collects available updates for the installed translations.
-
-        Args:
-            translations (dict[Translation, Mod]):
-                Map of installed translations that have an available update
-                and their original mod.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
-
-        Returns:
-            DownloadListEntries: Entries for the download list dialog.
-        """
-
-        self.log.info(
-            f"Collecting available updates for {len(translations)} translation(s)..."
-        )
-
-        downloads: DownloadListEntries = {}
-        for t, (translation, original_mod) in enumerate(translations.items()):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    text1=self.tr("Collecting available translation updates...")
-                    + f" ({t}/{len(translations)})",
-                    value1=t,
-                    max1=len(translations),
-                    show2=True,
-                    text2=translation.name,
-                    value2=0,
-                    max2=0,
-                )
-
-            downloads.update(
-                self.__collect_update_for_translation(translation, original_mod)
-            )
-
-        return downloads
-
-    def __collect_update_for_translation(
-        self, translation: Translation, original_mod: Mod
-    ) -> DownloadListEntries:
-        if translation.mod_id is None:
-            return {}
-
-        new_file_id: Optional[ModId] = self.provider.get_updated_mod_id(
-            translation.mod_id
-        )
-
-        mod_info = ModInfo(translation.name, translation.mod_id, translation.source)
-
-        if new_file_id is None:
-            return {}
-
-        downloads: DownloadListEntries = {}
-
-        for modfile in translation.strings:
-            downloads.setdefault(mod_info, {})[modfile] = [
-                TranslationDownload(
-                    mod_info=mod_info,
-                    available_downloads=[
-                        FileDownload(
-                            mod_details=self.provider.get_details(new_file_id),
-                            source=translation.source,
-                        )
-                    ],
-                )
-            ]
-
-        return downloads
