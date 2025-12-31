@@ -115,6 +115,13 @@ class DownloadsTab(QWidget):
         self.__downloads_widget.header().resizeSection(2, 300)
 
     def __add_download(self, download: FileDownload) -> None:
+        existing_downloads: list[FileDownload] = [
+            item.download for item in self.__download_items
+        ]
+
+        if download in existing_downloads:
+            return
+
         download_item = DownloadItem(download)
         download_item.finished_signal.connect(self.__remove_download_item)
         download_item.remove_signal.connect(self.__remove_download_item)

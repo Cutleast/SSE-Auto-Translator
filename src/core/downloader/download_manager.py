@@ -28,6 +28,8 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
+from core.translation_provider.nm_api.nxm_request import NxmRequest
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
 from core.utilities.progress_update import ProgressCallback
@@ -115,6 +117,9 @@ class DownloadManager(QObject):
         self.masterlist = masterlist
 
         self.finished.connect(self.stopped.emit)
+
+        if NXMHandler.has_instance():
+            NXMHandler.get().request_signal.connect(self.__on_nxm_request)
 
     def pause(self) -> None:
         """
@@ -255,6 +260,26 @@ class DownloadManager(QObject):
         """
 
         self.queue.put((download, progress_callback))
+
+    def __on_nxm_request(self, nxm_dl_url: str) -> None:
+        """
+        Handles an incoming NXM download request.
+
+        Args:
+            nxm_dl_url (str): NXM download URL.
+        """
+
+        nxm_request: NxmRequest = NxmRequest.from_url(nxm_dl_url)
+
+        file_download = FileDownload(
+            mod_details=self.provider.get_details(
+                ModId(mod_id=nxm_request.mod_id, file_id=nxm_request.file_id),
+                source=Source.NexusMods,
+            ),
+            source=Source.NexusMods,
+        )
+
+        self.request_download(file_download)
 
     def remove_download_item(self, download: FileDownload) -> None:
         """
