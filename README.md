@@ -102,20 +102,19 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 1. Install [Python 3.12](https://www.python.org/downloads/) (Make sure that you add it to PATH!)
 2. Install [uv](https://github.com/astral-sh/uv#installation)
-3. Clone repository
+3. Clone repository and all submodules with `git clone https://github.com/Cutleast/SSE-Auto-Translator --recurse-submodules`
 4. Open terminal in repository folder
-5. Run the following command to init your local environment and to install all dependencies
-   `uv sync`
+5. Run the following command to init your local environment and to install all dependencies: `uv sync`
+6. Run the following command to build SSE-AT and compile the required resource file: `build.bat`
 
 ### 2. Execute from source
 
-1. Open terminal in src folder
-2. Execute main file with uv
-   `uv run src\main.py`
+1. Open terminal in repository folder
+2. Execute main file with uv: `uv run src\main.py`
 
 ### 3. Compile and build executable
 
-1. Run `build.bat` with activated virtual environment from the root folder of this repo.
+1. Run `build.bat` from the root folder of this repo.
 2. The executable and all dependencies are built in the `dist/SSE-AT`-Folder and gets packed in a `dist/SSE-AT v[version].zip`.
 
 ## 3. Beta-Testing
