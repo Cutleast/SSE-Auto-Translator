@@ -25,3 +25,5 @@ image::status_tooltip.png[]
 ====
 
 TIP: The settings can be opened under _File_ > _Settings_.
+
+TIP: You can manually import translations by dragging their file(s) from the file explorer to the "Translations" panel on the right-hand side.
