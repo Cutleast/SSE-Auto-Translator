@@ -30,10 +30,12 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.exporter import Exporter
 from core.database.translation import Translation
+from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.utilities import matches_filter
+from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 
@@ -385,9 +387,16 @@ class TranslationsWidget(QTreeWidget):
     def is_valid_translation_file(path: Path | str) -> bool:
         path = Path(path)
 
-        SUPPORTED_EXTS = [".7z", ".rar", ".zip", ".esp", ".esm", ".esl"]
+        valid_archive: bool = path.suffix.lower() in SUPPORTED_ARCHIVE_TYPES
 
-        valid: bool = path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
+        valid_modfile: bool = False
+        try:
+            ModFileService.get_modfiletype_for_suffix(path.suffix)
+            valid_modfile = True
+        except NotImplementedError:
+            pass
+
+        valid: bool = path.is_file() and (valid_modfile or valid_archive)
 
         return valid
 

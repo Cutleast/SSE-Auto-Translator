@@ -2279,44 +2279,39 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="123"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="127"/>
         <source>Translations:</source>
         <translation>Übersetzungen:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="143"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="147"/>
         <source>Base Game + AE CC Content</source>
         <translation>Grundspiel + AE CC Inhalte</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="164"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="168"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="171"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="175"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="173"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="177"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
 Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="195"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="198"/>
         <source>Mod archive</source>
         <translation>Modarchiv</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="196"/>
-        <source>Skyrim SE plugin</source>
-        <translation>Skyrim SE Plugin</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="199"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="201"/>
         <source>Import Translation...</source>
         <translation>Übersetzung importieren...</translation>
     </message>
@@ -2342,72 +2337,72 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="136"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="138"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="137"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="139"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="138"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="140"/>
         <source>Source</source>
         <translation>Quelle</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="139"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="141"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="140"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="142"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="251"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="253"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="414"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="423"/>
         <source>Rename translation</source>
         <translation>Übersetzung unbenennen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="415"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="424"/>
         <source>Enter new translation name:</source>
         <translation>Neuen Namen der Übersetzung eingeben:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="418"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="427"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="419"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="428"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="452"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="461"/>
         <source>Export translation...</source>
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="470"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="479"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="471"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="480"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="482"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="491"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2416,7 +2411,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="489"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="498"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2425,12 +2420,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="498"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="507"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="499"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="508"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>

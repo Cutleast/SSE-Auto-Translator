@@ -96,3 +96,20 @@ class FileType(LocalizedEnum):
         }
 
         return CLASSES[self]
+
+    def get_file_dialog_filter(self) -> str:
+        """
+        Returns:
+            str: Localized file name filter for a QFileDialog.
+        """
+
+        FILTERS: dict[FileType, str] = {
+            FileType.PluginFile: (
+                FileType.PluginFile.get_localized_name() + " (*.esp *.esm *.esl)"
+            ),
+            FileType.InterfaceFile: (
+                FileType.InterfaceFile.get_localized_name() + " (*.txt)"
+            ),
+        }
+
+        return FILTERS[self]

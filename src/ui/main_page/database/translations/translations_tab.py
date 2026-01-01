@@ -25,8 +25,9 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
-from core.file_types.plugin.file import PluginFile
+from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
+from core.mod_file.mod_file_service import ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
@@ -34,6 +35,9 @@ from core.string.search_filter import SearchFilter
 from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
 from core.translation_provider.provider import Provider
+from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
+from core.utilities.exceptions import NoOriginalModFound
+from core.utilities.filesystem import relative_data_path
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
@@ -189,12 +193,10 @@ class TranslationsTab(QWidget):
 
         if files is None:
             fdialog = QFileDialog()
-            fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
+            fdialog.setFileMode(QFileDialog.FileMode.ExistingFiles)
             fdialog.setNameFilters(
-                [
-                    self.tr("Mod archive") + " (*.7z *.rar *.zip)",
-                    self.tr("Skyrim SE plugin") + " (*.esp *.esm *.esl)",
-                ]
+                [self.tr("Mod archive") + " (*.7z *.rar *.zip)"]
+                + [file_type.get_file_dialog_filter() for file_type in FileType]
             )
             fdialog.setWindowTitle(self.tr("Import Translation..."))
 
@@ -206,7 +208,7 @@ class TranslationsTab(QWidget):
         translation: Translation
         strings: dict[Path, StringList]
         for file in files:
-            if file.suffix.lower() in [".7z", ".rar", ".zip"]:
+            if file.suffix.lower() in SUPPORTED_ARCHIVE_TYPES:
                 strings = ProgressDialog(
                     lambda pdialog: StringExtractor().extract_strings(
                         file,
@@ -224,19 +226,22 @@ class TranslationsTab(QWidget):
                     translation.save()
                     DatabaseService.add_translation(translation, self.database)
 
-            elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
-                original_plugin: Optional[ModFile] = self.mod_instance.get_modfile(
-                    Path(file.name),
+            else:
+                file_type_cls: type[ModFile] = (
+                    ModFileService.get_modfiletype_for_suffix(file.suffix)
+                )
+                original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
+                    Path(relative_data_path(str(file))),
                     ignore_states=[
                         TranslationStatus.IsTranslated,
                         TranslationStatus.TranslationInstalled,
                     ],
                 )
 
-                if original_plugin is not None:
+                if original_modfile is not None:
                     strings = {
-                        original_plugin.path: StringExtractor.map_translation_strings(
-                            PluginFile(file.name, file), original_plugin
+                        original_modfile.path: StringExtractor.map_translation_strings(
+                            file_type_cls(file.name, file), original_modfile
                         )
                     }
 
@@ -248,6 +253,9 @@ class TranslationsTab(QWidget):
                         )
                         translation.save()
                         DatabaseService.add_translation(translation, self.database)
+
+                else:
+                    raise NoOriginalModFound
 
     def __update(self) -> None:
         self.__update_translations_num()
