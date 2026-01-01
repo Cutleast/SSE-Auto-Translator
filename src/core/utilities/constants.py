@@ -113,3 +113,8 @@ OUTPUT_MOD_MARKER_FILENAME: str = "sse-at_ignore"
 The name of the dummy file that marks a generated output mod that is to be ignored by
 SSE-AT.
 """
+
+SUPPORTED_ARCHIVE_TYPES = [".7z", ".rar", ".zip"]
+"""
+The list of supported archive types for importing translations into SSE-AT.
+"""
