@@ -6,10 +6,11 @@ from typing import TypeAlias, TypeVar
 
 from pydantic import TypeAdapter
 
+from core.file_types.description_framework.string import DescriptionFwString
 from core.file_types.interface.string import InterfaceString
 from core.file_types.plugin.string import PluginString
 
-String: TypeAlias = PluginString | InterfaceString
+String: TypeAlias = PluginString | InterfaceString | DescriptionFwString
 """Type alias for strings."""
 
 StringType = TypeVar("StringType", bound=String)
