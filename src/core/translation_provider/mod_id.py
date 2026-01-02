@@ -4,17 +4,15 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 
-from core.translation_provider.source import Source
+from .source import Source
 
 
-class ModId(BaseModel):
+class ModId(BaseModel, frozen=True):
     """
     Dataclass for identifying mods at their source.
     """
-
-    model_config = ConfigDict(frozen=True)
 
     mod_id: int
     """The provider specific id of the mod."""

@@ -4,30 +4,26 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from dataclasses import dataclass, field
 from typing import override
+
+from pydantic import BaseModel
 
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.source import Source
 
 
-@dataclass
-class FileDownload:
+class FileDownload(BaseModel):
     """
     Class for single file downloads.
     """
 
     mod_details: ModDetails
-    """
-    Metadata of the downloaded mod file.
-    """
+    """Metadata of the downloaded mod file."""
 
     source: Source
-    """
-    Source the download is from.
-    """
+    """Source the download is from."""
 
-    stale: bool = field(default=False)
+    stale: bool = False
     """
     Whether the download is stale and should be removed as soon as a thread picks it up.
     """

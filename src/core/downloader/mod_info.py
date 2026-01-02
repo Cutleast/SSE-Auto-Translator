@@ -4,16 +4,15 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 
 
-@dataclass(frozen=True)
-class ModInfo:
+class ModInfo(BaseModel, frozen=True):
     """
-    Dataclass for a mod's display name and its mod id.
+    Model for a mod's display name and its mod id.
     """
 
     display_name: str

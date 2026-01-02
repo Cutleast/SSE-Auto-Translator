@@ -11,6 +11,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QCheckBox, QComboBox, QPushButton, QTreeWidgetItem
 
 from core.downloader.file_download import FileDownload
+from core.downloader.mod_info import ModInfo
 from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.provider import Provider
@@ -161,6 +162,14 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
 
         return self.__checkbox.isChecked()
 
+    def get_current_translation(self) -> TranslationDownload:
+        """
+        Returns:
+            TranslationDownload: The currently selected translation.
+        """
+
+        return self.__translation_downloads[self.__translations_combobox.currentIndex()]
+
     def get_current_file_download(self) -> FileDownload:
         """
         Returns:
@@ -185,3 +194,33 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             self.__translations_combobox.count() > 1
             or self.__files_combobox.count() > 1
         )
+
+    def set_selected_download(self, translation: ModInfo, file: FileDownload) -> None:
+        """
+        Sets a specified translation and download as selected.
+
+        Args:
+            translation (ModInfo): Translation to select.
+            file (FileDownload): File to select.
+
+        Raise:
+            KeyError: Translation or file not found.
+        """
+
+        translations: dict[ModInfo, int] = {
+            download.mod_info: index
+            for index, download in enumerate(self.__translation_downloads)
+        }
+
+        try:
+            translation_index: int = translations[translation]
+            file_index: int = self.__translation_downloads[
+                translation_index
+            ].available_downloads.index(file)
+
+            self.__translations_combobox.setCurrentIndex(translation_index)
+            self.__files_combobox.setCurrentIndex(file_index)
+        except ValueError as ex:
+            raise KeyError(
+                f"Translation '{translation}' or file '{file}' not found!"
+            ) from ex
