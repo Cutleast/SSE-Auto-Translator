@@ -89,6 +89,17 @@ WARNING: If you *don't have Nexus Mods Premium*, you have to *link SSE-AT to the
 The checkbox should already be checked if you don't have Premium.
 
 IMPORTANT: If you don't choose the translation files carefully, you will get multiple errors while downloading that tell you that the downloaded translation files are incompatible to the original files installed in your mod list.
+
+[TIP]
+====
+*Importing a pre-made download list*
+
+If you are translating a *public mod list* (e.g. *Nexus Mods Collection* or *Wabbajack list*), there is a chance that someone distributed a hand-picked download list for that mod list for your language. Importing it would save you the hassle of going through the list and selecting the translations yourself. You can do this by clicking on the image:import.svg[width=24px,height=24px] _Import download list..._ button in the toolbar left of the search bar.
+
+*Exporting your download list*
+
+Vice-versa, there is an image:share.svg[width=24px,height=24px] _Export download list..._ button for exporting your own selection to a JSON file you can provide for other users that want to translate the mod list to the same language.
+====
 --
 
 . When you are done selecting all translation files, start the downloads by clicking on the image:download_translations.svg[width=24px,height=24px] _Start downloads_ button. +

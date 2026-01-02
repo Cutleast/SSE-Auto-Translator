@@ -421,7 +421,9 @@ class DownloadManager(QObject):
                     download_id, source=source
                 ).display_name
                 translation_download = TranslationDownload(
-                    mod_info=ModInfo(translation_name, download_id, source),
+                    mod_info=ModInfo(
+                        display_name=translation_name, mod_id=download_id, source=source
+                    ),
                     available_downloads=[],
                 )
                 translation_downloads.setdefault(

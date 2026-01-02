@@ -4,14 +4,13 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 from .file_download import FileDownload
 from .mod_info import ModInfo
 
 
-@dataclass(frozen=True)
-class TranslationDownload:
+class TranslationDownload(BaseModel, frozen=True):
     """
     Class for download entries in DownloadListDialog.
     """
@@ -20,6 +19,4 @@ class TranslationDownload:
     """Mod details like name and source."""
 
     available_downloads: list[FileDownload]
-    """
-    List of available downloads.
-    """
+    """List of available downloads."""

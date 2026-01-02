@@ -365,61 +365,116 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
+    <name>DownloadListToolBar</name>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="51"/>
+        <source>Filter items without selection options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="60"/>
+        <source>Import download list...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="65"/>
+        <source>Export download list...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="123"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="134"/>
         <source>Available Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="144"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="155"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="148"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="159"/>
         <source>Start downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="160"/>
-        <source>Filter items without selection options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="168"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="175"/>
         <source>Selected downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="183"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="190"/>
         <source>Mods / Mod files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="184"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
         <source>Translation mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="186"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
         <source>Translation file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="212"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="219"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="251"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="258"/>
         <source>Open mod page on Nexus Mods...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="342"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="392"/>
+        <source>SSE-AT download list file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="343"/>
+        <source>Import download list...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="375"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="381"/>
+        <source>Import complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="376"/>
+        <source>Import completed with errors! Click &apos;Ok&apos; to see details.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="382"/>
+        <source>Import completed successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="393"/>
+        <source>Export download list...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <source>Export complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <source>Export completed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1747,6 +1802,19 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <message>
         <location filename="src/core/translation_provider/provider_preference.py" line="38"/>
         <source>Prefer Confrérie des Traducteurs</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ReportDialog</name>
+    <message>
+        <location filename="src/ui/widgets/report_dialog.py" line="77"/>
+        <source>Failed items:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/report_dialog.py" line="97"/>
+        <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

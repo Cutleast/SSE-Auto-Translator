@@ -370,63 +370,118 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     </message>
 </context>
 <context>
+    <name>DownloadListToolBar</name>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="51"/>
+        <source>Filter items without selection options</source>
+        <translation>Elemente ohne Auswahlmöglichkeiten filtern</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="60"/>
+        <source>Import download list...</source>
+        <translation>Downloadliste importieren...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="65"/>
+        <source>Export download list...</source>
+        <translation>Downloadliste exportieren...</translation>
+    </message>
+</context>
+<context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="123"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="134"/>
         <source>Available Downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>Unten sind die Übersetzungen, die benötigt werden und online verfügbar sind. Wähle aus, welche Übersetzungen du herunterladen möchtest und klicke auf &quot;Downloads starten&quot;, wenn du bereit bist.
 Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manager Downloads&quot; verknüpft werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="144"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="155"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>SSE-AT vor dem Starten mit &quot;Mod Manager Downloads&quot; verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="148"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="159"/>
         <source>Start downloads</source>
         <translation>Downloads starten</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="160"/>
-        <source>Filter items without selection options</source>
-        <translation>Elemente ohne Auswahlmöglichkeiten filtern</translation>
-    </message>
-    <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="168"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="175"/>
         <source>Selected downloads:</source>
         <translation>Ausgewählte Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="183"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="190"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="184"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
         <source>Translation mod</source>
         <translation>Übersetzungsmod</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="186"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
         <source>Translation file</source>
         <translation>Übersetzungsdatei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="212"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="219"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>Elemente mit gleichem ausgewählten Download können nur gemeinsam an- oder abgewählt werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="251"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="258"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="342"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="392"/>
+        <source>SSE-AT download list file</source>
+        <translation>SSE-AT Downloadliste-Datei</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="343"/>
+        <source>Import download list...</source>
+        <translation>Downloadliste importieren...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="375"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="381"/>
+        <source>Import complete</source>
+        <translation>Import abgeschlossen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="376"/>
+        <source>Import completed with errors! Click &apos;Ok&apos; to see details.</source>
+        <translation>Der Import wurde mit Fehlern abgeschlossen! Auf &apos;Ok&apos; um die Details zu sehen.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="382"/>
+        <source>Import completed successfully!</source>
+        <translation>Der Import wurde erfolgreich abgeschlossen!</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="393"/>
+        <source>Export download list...</source>
+        <translation>Downloadliste exportieren...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <source>Export complete</source>
+        <translation>Export abgeschlossen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <source>Export completed successfully!</source>
+        <translation>Der Export wurde erfolgreich abgeschlossen!</translation>
     </message>
 </context>
 <context>
@@ -1758,6 +1813,19 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <location filename="src/core/translation_provider/provider_preference.py" line="38"/>
         <source>Prefer Confrérie des Traducteurs</source>
         <translation>Confrérie des Traducteurs bevorzugen</translation>
+    </message>
+</context>
+<context>
+    <name>ReportDialog</name>
+    <message>
+        <location filename="src/ui/widgets/report_dialog.py" line="77"/>
+        <source>Failed items:</source>
+        <translation>Fehlgeschlagene Elemente:</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/report_dialog.py" line="97"/>
+        <source>Ok</source>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>

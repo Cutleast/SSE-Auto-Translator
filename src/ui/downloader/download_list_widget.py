@@ -18,11 +18,14 @@ from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import QEvent, QObject, Qt, Signal
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
+    QApplication,
     QCheckBox,
     QComboBox,
+    QFileDialog,
     QHBoxLayout,
     QHeaderView,
     QLabel,
+    QMessageBox,
     QPushButton,
     QTreeWidget,
     QTreeWidgetItem,
@@ -30,14 +33,17 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from core.downloader.download_list import DownloadList, DownloadListItem
 from core.downloader.download_manager import DownloadListEntries
 from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import unique
+from ui.downloader.download_list_toolbar import DownloadListToolBar
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
+from ui.widgets.report_dialog import ReportDialog
 
-from .download_list_item import DownloadListItem
+from .download_list_item import DownloadListItem as DownloadListWidgetItem
 from .download_list_menu import DownloadListMenu
 
 
@@ -58,8 +64,11 @@ class DownloadListWidget(QWidget):
         bool: Whether SSE-AT should be linked to "Mod Manager Downloads" before starting.
     """
 
-    __items: dict[Path, DownloadListItem]
+    __items: dict[Path, DownloadListWidgetItem]
     provider: Provider
+
+    __filter_items: bool = False
+    """Whether to hide items with just one available download."""
 
     __name_filter: Optional[tuple[str, bool]] = None
     """Optional name filter and case-sensitivity."""
@@ -69,7 +78,7 @@ class DownloadListWidget(QWidget):
     _start_downloads_button: QPushButton
     __tree_widget: QTreeWidget
     __menu: DownloadListMenu
-    __filter_button: QPushButton
+    __tool_bar: DownloadListToolBar
     __search_bar: SearchBar
     __selected_downloads_num_label: LCDNumber
 
@@ -101,7 +110,9 @@ class DownloadListWidget(QWidget):
         self.__tree_widget.expandAll()
 
         self._start_downloads_button.clicked.connect(self._on_start_button_clicked)
-        self.__filter_button.toggled.connect(lambda checked: self.__update())
+        self.__tool_bar.filter_toggled.connect(self.__on_filter_toggled)
+        self.__tool_bar.import_requested.connect(self.__on_import_requested)
+        self.__tool_bar.export_requested.connect(self.__on_export_requested)
         self.__search_bar.searchChanged.connect(self.__on_search_changed)
 
         self.__menu.expand_all_clicked.connect(self.__tree_widget.expandAll)
@@ -155,12 +166,8 @@ class DownloadListWidget(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__filter_button = QPushButton(IconProvider.get_qta_icon("mdi6.filter"), "")
-        self.__filter_button.setToolTip(
-            self.tr("Filter items without selection options")
-        )
-        self.__filter_button.setCheckable(True)
-        hlayout.addWidget(self.__filter_button)
+        self.__tool_bar = DownloadListToolBar()
+        hlayout.addWidget(self.__tool_bar)
 
         self.__search_bar = SearchBar()
         hlayout.addWidget(self.__search_bar, stretch=1)
@@ -225,7 +232,7 @@ class DownloadListWidget(QWidget):
             self.__add_modpage_button(mod_item, modinfo)
 
             for modfile_path, downloads in modfile_entries.items():
-                modfile_item: DownloadListItem = (
+                modfile_item: DownloadListWidgetItem = (
                     DownloadListWidget._create_modfile_item(modfile_path)
                 )
                 mod_item.addChild(modfile_item)
@@ -262,16 +269,22 @@ class DownloadListWidget(QWidget):
     def _create_mod_item(modinfo: ModInfo) -> QTreeWidgetItem:
         item = QTreeWidgetItem()
         item.setText(1, modinfo.display_name)
+        item.setData(0, Qt.ItemDataRole.UserRole, modinfo)
         font = item.font(1)
         font.setBold(True)
         item.setFont(1, font)
         return item
 
     @staticmethod
-    def _create_modfile_item(modfile_path: Path) -> DownloadListItem:
-        item = DownloadListItem()
+    def _create_modfile_item(modfile_path: Path) -> DownloadListWidgetItem:
+        item = DownloadListWidgetItem()
         item.setText(1, DownloadListWidget.MODFILE_INDENTATION + str(modfile_path))
         return item
+
+    def __on_filter_toggled(self, filter_items: bool) -> None:
+        self.__filter_items = filter_items
+
+        self.__update()
 
     def _on_start_button_clicked(self) -> None:
         downloads: list[FileDownload] = unique(
@@ -285,7 +298,9 @@ class DownloadListWidget(QWidget):
 
         self.downloads_started.emit(downloads, link_nxm)
 
-    def __on_checkstate_changed(self, checked: bool, item: DownloadListItem) -> None:
+    def __on_checkstate_changed(
+        self, checked: bool, item: DownloadListWidgetItem
+    ) -> None:
         # update items with the same selected download to match the new state
         for other_item in self.__items.values():
             if (
@@ -305,12 +320,12 @@ class DownloadListWidget(QWidget):
 
     def __check_selected(self) -> None:
         for item in self.__tree_widget.selectedItems():
-            if isinstance(item, DownloadListItem):
+            if isinstance(item, DownloadListWidgetItem):
                 item.set_checked(True)
 
     def __uncheck_selected(self) -> None:
         for item in self.__tree_widget.selectedItems():
-            if isinstance(item, DownloadListItem):
+            if isinstance(item, DownloadListWidgetItem):
                 item.set_checked(False)
 
     def __on_search_changed(self, name_filter: str, case_sensitive: bool) -> None:
@@ -320,6 +335,120 @@ class DownloadListWidget(QWidget):
             self.__name_filter = None
 
         self.__update()
+
+    def __on_import_requested(self) -> None:
+        fdialog = QFileDialog()
+        fdialog.setFileMode(QFileDialog.FileMode.ExistingFile)
+        fdialog.setNameFilters([self.tr("SSE-AT download list file") + " (*.json)"])
+        fdialog.setWindowTitle(self.tr("Import download list..."))
+
+        if fdialog.exec() == QFileDialog.DialogCode.Rejected:
+            return
+
+        selected_files: list[str] = fdialog.selectedFiles()
+
+        if not selected_files:
+            return
+
+        filepath = Path(selected_files.pop(0))
+        if not filepath.is_file():
+            return
+
+        download_list: list[DownloadListItem] = DownloadList.validate_json(
+            filepath.read_bytes()
+        )
+
+        failed_items: dict[str, Exception] = {}
+        for item in download_list:
+            try:
+                tree_item: DownloadListWidgetItem = self.__resolve_item(
+                    item.mod, item.mod_file
+                )
+                tree_item.set_selected_download(item.translation, item.download)
+            except Exception as ex:
+                self.log.error(f"Failed to import '{item}': {ex}", exc_info=ex)
+                failed_items[str(item)] = ex
+
+        if failed_items:
+            QMessageBox.warning(
+                QApplication.activeWindow(),
+                self.tr("Import complete"),
+                self.tr("Import completed with errors! Click 'Ok' to see details."),
+            )
+        else:
+            QMessageBox.information(
+                QApplication.activeWindow(),
+                self.tr("Import complete"),
+                self.tr("Import completed successfully!"),
+            )
+
+        if failed_items:
+            report_dialog = ReportDialog(failed_items)
+            report_dialog.exec()
+
+    def __on_export_requested(self) -> None:
+        fdialog = QFileDialog()
+        fdialog.setFileMode(QFileDialog.FileMode.AnyFile)
+        fdialog.setNameFilters([self.tr("SSE-AT download list file") + " (*.json)"])
+        fdialog.setWindowTitle(self.tr("Export download list..."))
+
+        if fdialog.exec() == QFileDialog.DialogCode.Rejected:
+            return
+
+        selected_files: list[str] = fdialog.selectedFiles()
+
+        if not selected_files:
+            return
+
+        filepath = Path(selected_files.pop(0))
+        if not filepath.parent.is_dir():
+            raise FileNotFoundError(str(filepath.parent))
+
+        download_list: list[DownloadListItem] = []
+        for mod_item in iter_toplevel_items(self.__tree_widget):
+            mod: ModInfo = cast(ModInfo, mod_item.data(0, Qt.ItemDataRole.UserRole))
+
+            for child in iter_children(mod_item):
+                modfile_item: DownloadListWidgetItem = cast(
+                    DownloadListWidgetItem, child
+                )
+                download_list.append(
+                    DownloadListItem(
+                        mod=mod,
+                        mod_file=Path(modfile_item.text(1)),
+                        translation=modfile_item.get_current_translation().mod_info,
+                        download=modfile_item.get_current_file_download(),
+                    )
+                )
+
+        filepath.write_bytes(DownloadList.dump_json(download_list, indent=4))
+
+        QMessageBox.information(
+            self, self.tr("Export complete"), self.tr("Export completed successfully!")
+        )
+
+    def __resolve_item(self, mod: ModInfo, modfile: Path) -> DownloadListWidgetItem:
+        """
+        Attempts to resolve a download list item from a mod and mod file.
+
+        Args:
+            mod (ModInfo): Mod.
+            modfile (Path): Mod file path, relative to the game's "Data" folder.
+
+        Raises:
+            KeyError: Mod or mod file not found.
+
+        Returns:
+            DownloadListWidgetItem: Download list item.
+        """
+
+        for mod_item in iter_toplevel_items(self.__tree_widget):
+            if mod_item.data(0, Qt.ItemDataRole.UserRole) == mod:
+                for modfile_item in iter_children(mod_item):
+                    if Path(modfile_item.text(1)) == modfile:
+                        return cast(DownloadListWidgetItem, modfile_item)
+
+        raise KeyError(f"Found no item for {mod} and {modfile}!")
 
     def __update(self) -> None:
         name_filter: Optional[str] = (
@@ -333,9 +462,9 @@ class DownloadListWidget(QWidget):
             for modfile_item in iter_children(mod_item):
                 modfile_item.setHidden(
                     (
-                        self.__filter_button.isChecked()
+                        self.__filter_items
                         and not cast(
-                            DownloadListItem, modfile_item
+                            DownloadListWidgetItem, modfile_item
                         ).has_selection_options()
                     )
                     or not matches_filter(
@@ -345,7 +474,7 @@ class DownloadListWidget(QWidget):
 
             mod_item.setHidden(
                 (
-                    self.__filter_button.isChecked()
+                    self.__filter_items
                     or not matches_filter(
                         mod_item.text(1), name_filter, case_sensitive or False
                     )
