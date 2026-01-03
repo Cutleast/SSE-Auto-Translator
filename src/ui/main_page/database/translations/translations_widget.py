@@ -119,6 +119,9 @@ class TranslationsWidget(QTreeWidget):
 
         self.database.add_signal.connect(self.__on_translations_added)
         self.database.remove_signal.connect(self.__on_translations_removed)
+        self.database.rename_signal.connect(
+            lambda translation: self.update_translations()  # currently, an entire reload is required
+        )
 
         self.__load_translations()
 

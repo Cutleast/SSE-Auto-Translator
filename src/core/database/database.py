@@ -44,6 +44,14 @@ class TranslationDatabase(QObject):
         list[Translation]: The removed translations.
     """
 
+    rename_signal = Signal(Translation)
+    """
+    This signal gets emitted when a translation is renamed.
+
+    Args:
+        Translation: The renamed translation.
+    """
+
     userdb_path: Path
     """The path to the user database directory (language not included)."""
 

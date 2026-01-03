@@ -371,6 +371,7 @@ class DatabaseService:
                 Defaults to True.
 
         ## Emitted Signals:
+            `TranslationDatabase.rename_signal(translation)`: If the translation is in the database.
             `TranslationDatabase.update_signal()`: If the translation is in the database.
         """
 
@@ -386,6 +387,7 @@ class DatabaseService:
             if save:
                 cls.save_database(database)
 
+            database.rename_signal.emit(translation)
             database.update_signal.emit()
 
     @classmethod
