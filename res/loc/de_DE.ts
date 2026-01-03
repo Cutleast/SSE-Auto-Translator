@@ -934,34 +934,49 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>FileType</name>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="34"/>
+        <location filename="src/core/file_types/file_type.py" line="39"/>
         <source>Plugin File</source>
         <translation>Plugindatei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="35"/>
+        <location filename="src/core/file_types/file_type.py" line="40"/>
         <source>Interface File</source>
         <translation>Interface-Datei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="45"/>
+        <location filename="src/core/file_types/file_type.py" line="43"/>
+        <source>Papyrus Script File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="53"/>
         <source>Traditional plugin files (.esp, .esm, .esl).</source>
         <translation>Klassische Plugindateien (.esp, .esm, .esl).</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="48"/>
+        <location filename="src/core/file_types/file_type.py" line="56"/>
         <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
         <translation>Interface-Übersetzungsdateien (data/interface/translations/*_[language].txt).</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="64"/>
+        <location filename="src/core/file_types/file_type.py" line="61"/>
+        <source>Papyrus script files (.pex).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="75"/>
         <source>Show plugin files (*.esp, *.esm, *.esl)</source>
         <translation>Plugindateien (*.esp, *.esm, *.esl) zeigen</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="67"/>
+        <location filename="src/core/file_types/file_type.py" line="78"/>
         <source>Show interface files (*.txt)</source>
         <translation>Interface-Dateien (*.txt) zeigen</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="81"/>
+        <source>Show papyrus script files (*.pex)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1687,6 +1702,34 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <location filename="src/ui/startup_dialog/page.py" line="98"/>
         <source>Next</source>
         <translation>Weiter</translation>
+    </message>
+</context>
+<context>
+    <name>PapyrusString</name>
+    <message>
+        <location filename="src/core/file_types/papyrus/string.py" line="45"/>
+        <source>ID</source>
+        <translation type="unfinished">ID</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/papyrus/string.py" line="47"/>
+        <source>Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/papyrus/string.py" line="49"/>
+        <source>Line number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/papyrus/string.py" line="51"/>
+        <source>Context</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/papyrus/string.py" line="53"/>
+        <source>Safety score</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -17,6 +17,7 @@ dependencies = [
     "lz4",
     "mod-manager-lib",
     "plyvel-ci",
+    "pythonnet",
     "pytz",
     "pyuac",
     "pywin32",

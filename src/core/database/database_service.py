@@ -542,7 +542,10 @@ class DatabaseService:
         modfile_strings: StringList = modfile.get_strings()
         for string in modfile_strings:
             string.string = string.original
-            string.status = StringStatus.TranslationRequired
+
+            # ensure that every string has at least TranslationRequired status
+            if string.status == StringStatus.NoneStatus:
+                string.status = StringStatus.TranslationRequired
 
         if apply_db:
             TranslationService.update_strings(

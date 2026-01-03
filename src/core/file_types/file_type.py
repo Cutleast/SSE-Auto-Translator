@@ -13,6 +13,8 @@ from core.string.types import String
 
 from .interface.file import InterfaceFile
 from .interface.string import InterfaceString
+from .papyrus.file import PapyrusFile
+from .papyrus.string import PapyrusString
 from .plugin.file import PluginFile
 from .plugin.string import PluginString
 
@@ -28,12 +30,18 @@ class FileType(LocalizedEnum):
     InterfaceFile = auto()
     """Interface translation files (data/interface/translations/*_[language].txt)."""
 
+    PapyrusScriptFile = auto()
+    """Papyrus script files (.pex)."""
+
     @override
     def get_localized_name(self) -> str:
         LOC_NAMES: dict[FileType, str] = {
             FileType.PluginFile: QApplication.translate("FileType", "Plugin File"),
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Interface File"
+            ),
+            FileType.PapyrusScriptFile: QApplication.translate(
+                "FileType", "Papyrus Script File"
             ),
         }
 
@@ -49,6 +57,9 @@ class FileType(LocalizedEnum):
                 "FileType",
                 "Interface translation files "
                 "(data/interface/translations/*_[language].txt).",
+            ),
+            FileType.PapyrusScriptFile: QApplication.translate(
+                "FileType", "Papyrus script files (.pex)."
             ),
         }
 
@@ -67,6 +78,9 @@ class FileType(LocalizedEnum):
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Show interface files (*.txt)"
             ),
+            FileType.PapyrusScriptFile: QApplication.translate(
+                "FileType", "Show papyrus script files (*.pex)"
+            ),
         }
 
         return LOC_FILTERS[self]
@@ -80,6 +94,7 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[ModFile]] = {
             FileType.PluginFile: PluginFile,
             FileType.InterfaceFile: InterfaceFile,
+            FileType.PapyrusScriptFile: PapyrusFile,
         }
 
         return CLASSES[self]
@@ -93,6 +108,7 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[String]] = {
             FileType.PluginFile: PluginString,
             FileType.InterfaceFile: InterfaceString,
+            FileType.PapyrusScriptFile: PapyrusString,
         }
 
         return CLASSES[self]
@@ -109,6 +125,9 @@ class FileType(LocalizedEnum):
             ),
             FileType.InterfaceFile: (
                 FileType.InterfaceFile.get_localized_name() + " (*.txt)"
+            ),
+            FileType.PapyrusScriptFile: (
+                FileType.PapyrusScriptFile.get_localized_name() + "(*.pex)"
             ),
         }
 
