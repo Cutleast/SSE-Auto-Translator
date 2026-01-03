@@ -224,7 +224,7 @@ class ModInstanceWidget(QTreeWidget):
                 cur_separator = ModInstanceWidget._create_separator_item(mod, i)
                 self.__mod_items[mod] = cur_separator
                 self.addTopLevelItem(cur_separator)
-            else:
+            elif mod.mod_type == Mod.Type.Regular:
                 mod_item: QTreeWidgetItem = ModInstanceWidget._create_mod_item(mod, i)
 
                 self.__mod_items[mod] = mod_item

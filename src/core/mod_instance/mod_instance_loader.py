@@ -92,6 +92,7 @@ class ModInstanceLoader(QObject):
         mods: list[Mod] = [
             Mod.from_mml_mod(mml_mod, modfile_index.get(mml_mod, []))
             for mml_mod in instance.mods
+            if mml_mod.mod_type in [BaseMod.Type.Separator, BaseMod.Type.Regular]
         ]
 
         mod_instance = ModInstance(instance.display_name, mods)
