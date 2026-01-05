@@ -2,6 +2,8 @@
 
 Follow these steps to translate a mod list with all translations that are either Vanilla or available online (link:https://www.nexusmods.com[Nexus Mods] or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
 
+TIP: If you have encounter an issue or have a question, please do not hesitate to ask for help on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
+
 . Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
 . Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. [.nowrap]#`C:\Modding\Tools\SSE-AT`#, so that the _SSE-AT.exe_ is located at [.nowrap]#`C:\Modding\Tools\SSE-AT\SSE-AT.exe`#.
 . Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
@@ -141,7 +143,13 @@ image::output_mod_built.png[]
 . Close SSE-AT.
 . Go to this mod page link:https://www.nexusmods.com/skyrimspecialedition/mods/107676[Dynamic String Distributor (DSD)] and download the latest main file as you would do with every other mod (if DSD is not already installed).
 . Activate the "SSE-AT Output" mod and "Dynamic String Distributor". +
++
+--
 Vortex will probably tell you that the "SSE-AT Output" mod has unresolved file conflicts. Set them all to overwrite the original files.
+
+IMPORTANT: The output mod must be built and installed to your mod list every time a translation is added, changed or deleted in SSE-AT. When doing this, always *replace* the old output mod.
+--
+
 . Set your game to your desired language by editing the _Skyrim.ini_:
 .. Set _[General]_ > _sLanguage_ to your desired language (for eg. `GERMAN`).
 .. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace `Voices_xx0.bsa` with `Voices_en0.bsa`.

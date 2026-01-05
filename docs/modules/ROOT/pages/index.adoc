@@ -43,6 +43,7 @@ In addition, SSE Auto Translator offers an integrated editor that can be used to
 == Limitations
 
 * Only plugin files (.esp, .esm, .esl) and interface translations (interface/*_<language>.txt) are currently supported
+** Support for more file types, including link:https://www.nexusmods.com/skyrimspecialedition/mods/123521[Dragonborn's Bestiary], link:https://www.nexusmods.com/skyrimspecialedition/mods/105799[Description Framework] and Papyrus Scripts is planned for a future release of SSE-AT.
 * Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot automatically be found by SSE-AT unless linked in a masterlist
 ** Masterlists are a way to link to translations that are not linked from the original mod like regular translations, for eg. the german translation for link:https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files[Unofficial Skyrim Modder's Patch]
 ** They have to be maintained by volunteers but so far, there is only a small masterlist for German
@@ -50,7 +51,14 @@ In addition, SSE Auto Translator offers an integrated editor that can be used to
 * Vortex: SSE-AT and Vortex must not be run at the same time!
 ** This is a limitation of Vortex's database which only allows one app to access it at a time
 
-[TIP]
-====
-If you have further questions regarding SSE-AT or this documentation, please do not hesitate to ask them on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
-====
+== About this documentation
+
+This documentation is meant to give you all information you need to efficiently use SSE-AT to translate mod lists or to create your own translations.
+
+* If you are here to translate a mod list with relatively little effort, read xref:quick_start.adoc[].
+* If you want to create or edit translations yourself, read xref:editor.adoc[].
+* If you want to get an overview about SSE-AT's main page, read xref:main_page.adoc[].
+* If you encountered an unfamiliar term in this documentation, read xref:glossary.adoc[].
+* If you have a question, read xref:faqs.adoc[].
+
+TIP: If you have further questions regarding SSE-AT or this documentation, please do not hesitate to ask them on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].

@@ -41,3 +41,10 @@ To edit an installed translation in the database, make a right click on it and c
 image::edit_translation_menu.png[]
 
 The translation and all its mod files are then opened in the translation editor.
+
+== Update a translation after a mod update
+
+To update an installed translation for an updated mod or mod file, run a image:deep_scan[width=24px,height=24px] _Deep Scan_ from the toolbar on the xref:main_page.adoc[main page]. +
+This will check for strings that are missing in the translation and add them as untranslated strings.
+After the scan is complete, the mod files that had new strings are marked in purple (= _Translation incomplete_) in the mod list. +
+Now you can open the translation in the editor (if it is already open, you have to close it and open it again) and translate the new strings.

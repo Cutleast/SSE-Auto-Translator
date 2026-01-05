@@ -1,5 +1,9 @@
 = Glossary for frequently used terms
 
+This glossary lists terms that may be unfamiliar for beginners and tries to explain them briefly.
+
+TIP: If you encountered an unfamiliar term in this documentation that is not explained here, please do not hesitate to ask for help on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
+
 == String
 
 A _string_ is just a *piece of text* that appears *in-game*, such as a button label, item name or a dialogue line. You can think of a string as *a single "text block" that needs to be converted into another language*.
