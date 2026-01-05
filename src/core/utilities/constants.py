@@ -118,3 +118,6 @@ SUPPORTED_ARCHIVE_TYPES = [".7z", ".rar", ".zip"]
 """
 The list of supported archive types for importing translations into SSE-AT.
 """
+
+DOCS_URL: str = "https://docs.moddingforge.com/sse-at"
+"""URL to the documentation site."""

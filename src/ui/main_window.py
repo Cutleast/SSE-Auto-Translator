@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+import webbrowser
 from typing import override
 
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
@@ -19,6 +20,7 @@ from core.scanner.scanner import Scanner
 from core.translation_provider.provider import Provider
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
+from core.utilities.constants import DOCS_URL
 from core.utilities.licenses import LICENSES
 from ui.settings.settings_dialog import SettingsDialog
 from ui.utilities.theme_manager import ThemeManager
@@ -117,7 +119,7 @@ class MainWindow(QMainWindow):
         self.__menu_bar.settings_requested.connect(self.__open_settings)
         self.__menu_bar.exit_requested.connect(self.close)
         self.__menu_bar.update_check_requested.connect(self.__check_for_updates)
-        self.__menu_bar.docs_requested.connect(App.open_documentation)
+        self.__menu_bar.docs_requested.connect(lambda: webbrowser.open(DOCS_URL))
         self.__menu_bar.path_limit_fix_requested.connect(
             lambda: PathLimitFixer.disable_path_limit(App.get().res_path)
         )

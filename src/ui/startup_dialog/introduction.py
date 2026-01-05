@@ -8,11 +8,13 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.ui.utilities.rotated_icon import rotated_icon
+from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QWidget
 
 from core.config.user_config import UserConfig
+from core.utilities.constants import DOCS_URL
 from ui.startup_dialog.page import Page
 from ui.utilities.icon_provider import IconProvider
 
@@ -22,6 +24,9 @@ class IntroductionPage(Page):
     First page. Informs user about further steps
     and usage of this application.
     """
+
+    BASIC_USAGE_URL: str = DOCS_URL + "/quick_start.html"
+    """URL to the basic usage documentation page."""
 
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
@@ -77,8 +82,11 @@ class IntroductionPage(Page):
     def _init_form(self) -> None:
         from app import App
 
-        documentation_button = QPushButton(self.tr("Open documentation"))
-        documentation_button.clicked.connect(App.get().open_documentation)
+        documentation_button = LinkButton(
+            url=IntroductionPage.BASIC_USAGE_URL,
+            display_text=self.tr("Open documentation"),
+            icon=IconProvider.get_qta_icon("mdi6.file-document"),
+        )
         self._vlayout.addWidget(documentation_button)
 
         self._vlayout.addSpacing(50)
