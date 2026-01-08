@@ -6,11 +6,21 @@ TIP: If you have encounter an issue or have a question, please do not hesitate t
 
 . Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
 . Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. [.nowrap]#`C:\Modding\Tools\SSE-AT`#, so that the _SSE-AT.exe_ is located at [.nowrap]#`C:\Modding\Tools\SSE-AT\SSE-AT.exe`#.
++
+TIP: The ZIP file already contains a folder called "SSE-AT" with everything that needs to be extracted. Just open the ZIP file with the file explorer or any other app (e.g. 7-Zip) and drag the "SSE-AT" to a location on your PC.
+
 . Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
++
+CAUTION: Windows Defender may show a warning telling you that it blocked the execution of an unknown app. This warning can be ignored by clicking on "Run anyways".
++
+NOTE: *Pre-release* versions of SSE-AT are built with the console window enabled. This means that opening SSE-AT will also open a minimized console window. *DO NOT CLOSE THE CONSOLE WINDOW* as it will also kill the entire SSE-AT process.
+
 . A setup window will now appear. On the first page, click on "Fix Windows Path Length Limit" to disable the path length limit, as it will otherwise cause problems later on. Then restart your PC and run _SSE-AT.exe_ again. The button should now be grayed out with a message indicating that the limit has been disabled.
 +
 .Path limit and the fix button are disabled and the "Next" button is enabled.
 image::setup_introduction.png[]
++
+NOTE: SSE-AT is localized for your system language, it will appear it in upon the first launch. This can later be changed under _File_ > _Settings_ > _App Settings_ > _App language_.
 
 . Click on _Next_ to continue. On the second page, you choose the language that you want your game to have. Then you setup your Nexus Mods API key which you can do in two ways: You can login to Nexus Mods via your Browser or enter your API key manually in case the Browser method somehow fails.
 +
@@ -19,8 +29,27 @@ image::setup_initial_setup.png[]
 +
 .The Nexus Mods API key is successfully setup and the "Next" button is enabled.
 image::setup_initial_setup_done.png[]
++
+[NOTE]
+====
+.Read this if you have issues with the Browser method.
+[%collapsible]
+=====
+. Open link:https://www.nexusmods.com/settings/api-keys[this] page in your web browser.
+. Scroll down to *SSE Auto Translator* and click on "Request Api Key". The API is now copied to your clipboard.
+. Go back to SSE-AT and go to the "Manual Setup" tab.
+. Click on the paste button of the API key field.
+. Click on "Check API key" to validate the API key.
 
-. When you are done, the _Next_ button should be active. Click on it to continue to the next page. The last page is for selecting the mod list that you want to translate.
+image::setup_manual_api_key.png[]
+
+.The area should now be greyed-out and the button is labelled "API key is valid!".
+image::setup_manual_api_key_valid.png[]
+=====
+====
+
+. When you are done, the _Next_ button should be active. Click on it to continue to the next page.
+. The last page is for selecting the mod list that you want to translate. When you are done, click on "Next" to finish the setup.
 +
 .The last page contains the selection of the target mod list.
 image::setup_modlist.png[]
@@ -32,7 +61,7 @@ image::loading_modlist.png[]
 + 
 You should now see this window:
 +
-.The main page of SSE-AT displays your mod list and your installed translations.
+.The main page of SSE-AT displays your mod list and your installed translations. The label at the top right corner displays the total number of mod files that were found by SSE-AT.
 image::initial_main_page.png[]
 
 . The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the highlighted image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
@@ -42,6 +71,7 @@ image::scanning_modlist.png[]
 +
 After the scan is finished, this popup will appear displaying the scan result:
 +
+.As we can see here, the mod list scan categorized all mod files into four basic states.
 image::modlist_scan_result.png[]
 +
 You can close the popup by clicking on _Ok_.
@@ -57,6 +87,7 @@ image::scanning_online.png[]
 +
 Again, after the scan is finished, the scan result is displayed as before:
 +
+.As we can see in this result, the online scan further categorized the mod files that were previously marked as yellow (= requires translation) into the two states blue (= translation available online) and red (no translation available).
 image::online_scan_result.png[]
 +
 When we now return to the main window, we can see that all mod files with strings are now marked in green, blue or red:
@@ -75,6 +106,8 @@ When SSE-AT is done, the available downloads are listed in a dialog looking like
 +
 .The download list dialog lets you select which translations you want to download and install. It is recommended to select translation files with the same version as the original mod (file).
 image::download_list_dialog.png[]
++
+TIP: You can maximize the window or resize the separate columns for longer file names.
 
 . Go through the displayed list carefully and choose the translation files according to these criteria (in this order):
 +
@@ -82,6 +115,8 @@ image::download_list_dialog.png[]
 * prefer translation files with the same version as the installed original
 * choose the same translation files for a mod where possible (the number in brackets at the end of its name is the file id)
 * prefer translation files without translated voice files to reduce download size (SSE-AT is not able to process them anyways)
+* if there is no translation for your particular mod version, choose the next most recent one
+* if there are translations for multiple variants of the mod, choose the one that best fits the installed original (the name of the installed mod may give a hint about the installed variant)
 
 NOTE: SSE-AT automatically attempts to pre-select the best-fitting translation files but this is currently not that reliable.
 
@@ -151,7 +186,22 @@ IMPORTANT: The output mod must be built and installed to your mod list every tim
 --
 
 . Set your game to your desired language by editing the _Skyrim.ini_:
++
+[NOTE]
+====
+**Vortex**
+
+When the profile is deployed, you'll find the INI file at `Documents\\My Games\\Skyrim Special Edition`. Just open the file with any text editor.
+
+'''
+
+**MO2**
+
+You can edit the INI file via MO2's built-in INI editor:
+image::mo2_ini_editor.png[]
+====
+
 .. Set _[General]_ > _sLanguage_ to your desired language (for eg. `GERMAN`).
-.. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace `Voices_xx0.bsa` with `Voices_en0.bsa`.
+.. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace `Skyrim - Voices_xx0.bsa` with `Skyrim - Voices_en0.bsa`.
 
 You now successfully translated your mod list with all available translations from Nexus Mods.
