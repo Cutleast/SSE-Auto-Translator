@@ -93,6 +93,9 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         self.__open_translation_button = QPushButton(
             IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), ""
         )
+        self.__open_translation_button.setToolTip(
+            self.tr("Open translation mod page...")
+        )
         self.__open_translation_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         # self.__open_translation_button.setObjectName("transparent")
         self.treeWidget().setItemWidget(self, 3, self.__open_translation_button)
