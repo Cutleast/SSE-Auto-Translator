@@ -4,7 +4,7 @@ image::header_transparent.png[]
 
 [.text-center]
 image:get_it_on_nexus_mods.png[width=193,height=60,link=https://www.nexusmods.com/skyrimspecialedition/mods/111491]
-image:view_source_code_on_github.png[width=193,height=60,link=https://www.nexusmods.com/skyrimspecialedition/mods/111491]
+image:view_source_code_on_github.png[width=193,height=60,link=https://github.com/Cutleast/SSE-Auto-Translator]
 image:view_roadmap_on_trello.png[width=193,height=60,link=https://trello.com/b/AA2KwhH8/sse-auto-translator]
 image:support_me_on_kofi.png[width=193,height=60,link=https://ko-fi.com/Cutleast]
 
