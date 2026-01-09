@@ -482,12 +482,12 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Downloadliste exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="430"/>
         <source>Export complete</source>
         <translation>Export abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="430"/>
         <source>Export completed successfully!</source>
         <translation>Der Export wurde erfolgreich abgeschlossen!</translation>
     </message>

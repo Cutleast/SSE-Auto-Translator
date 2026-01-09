@@ -392,6 +392,8 @@ class DownloadListWidget(QWidget):
         fdialog.setAcceptMode(QFileDialog.AcceptMode.AcceptSave)
         fdialog.setNameFilters([self.tr("SSE-AT download list file") + " (*.json)"])
         fdialog.setWindowTitle(self.tr("Export download list..."))
+        fdialog.setDefaultSuffix("json")
+        fdialog.selectFile("sseat_download_list.json")
 
         if fdialog.exec() == QFileDialog.DialogCode.Rejected:
             return
