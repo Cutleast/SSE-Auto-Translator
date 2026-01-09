@@ -2,12 +2,12 @@
 
 Follow these steps to translate a mod list with all translations that are either Vanilla or available online (link:https://www.nexusmods.com[Nexus Mods] or link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations).
 
-TIP: If you have encounter an issue or have a question, please do not hesitate to ask for help on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
+TIP: If you encounter an issue or have a question, please do not hesitate to ask for help on the link:https://discord.gg/pqEHdWDf8z[Official Modding Forge Discord server].
 
 . Download the latest SSE-AT release from link:https://www.nexusmods.com/skyrimspecialedition/mods/111491[here].
 . Extract the entire content of the downloaded ZIP file to a location on your PC, e.g. [.nowrap]#`C:\Modding\Tools\SSE-AT`#, so that the _SSE-AT.exe_ is located at [.nowrap]#`C:\Modding\Tools\SSE-AT\SSE-AT.exe`#.
 +
-TIP: The ZIP file already contains a folder called "SSE-AT" with everything that needs to be extracted. Just open the ZIP file with the file explorer or any other app (e.g. 7-Zip) and drag the "SSE-AT" to a location on your PC.
+TIP: The ZIP file already contains a folder called "SSE-AT" with everything that needs to be extracted. Just open the ZIP file with the file explorer or any other app (e.g. 7-Zip) and drag the "SSE-AT" folder to a location on your PC.
 
 . Start the _SSE-AT.exe_ by doing a double click on it in the file explorer.
 +
@@ -20,7 +20,7 @@ NOTE: SSE-AT is built with the console window enabled. This means that opening S
 .Path limit and the fix button are disabled and the "Next" button is enabled.
 image::setup_introduction.png[]
 +
-NOTE: SSE-AT is localized for your system language, it will appear it in upon the first launch. This can later be changed under _File_ > _Settings_ > _App Settings_ > _App language_.
+NOTE: If SSE-AT is localized for your system language, it will appear in it upon the first launch. This can later be changed under _File_ > _Settings_ > _App Settings_ > _App language_.
 
 . Click on _Next_ to continue. On the second page, you choose the language that you want your game to have. Then you setup your Nexus Mods API key which you can do in two ways: You can login to Nexus Mods via your Browser or enter your API key manually in case the Browser method somehow fails.
 +
