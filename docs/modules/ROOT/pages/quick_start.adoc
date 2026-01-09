@@ -196,6 +196,7 @@ When the profile is deployed, you'll find the INI file at [.nowrap]#`Documents\M
 **MO2**
 
 You can edit the INI file via MO2's built-in INI editor:
+
 image::mo2_ini_editor.png[]
 ====
 
