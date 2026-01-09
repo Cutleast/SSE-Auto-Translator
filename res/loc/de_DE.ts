@@ -55,7 +55,7 @@
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="110"/>
         <source>API key is valid!</source>
-        <translation>API-Schlüssel ist ungültig!</translation>
+        <translation>API-Schlüssel ist gültig!</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="115"/>
