@@ -68,7 +68,7 @@ class NexusModsApi(ProviderApi):
     """
 
     FILE_NAME_PATTERN: re.Pattern[str] = re.compile(
-        r"^(?P<display_name>.*)-(?P<file_id>[0-9]{2,})-(?P<version>.*)-(?P<timestamp>[0-9]{9,})\.(?P<file_type>zip|rar|7z)$"
+        r"^(?P<display_name>.*)-(?P<mod_id>[0-9]{2,})-(?P<version>.*)-(?P<timestamp>[0-9]{9,})\.(?P<file_type>zip|rar|7z)$"
     )
     """
     Regex pattern for extracting mod id, version and upload timestamp from a file name,
@@ -362,21 +362,17 @@ class NexusModsApi(ProviderApi):
         """
 
         original_mod_details: ModDetails
-        try:
-            original_mod_details = self.get_mod_details(original_mod_id)
-        except Exception as ex:
-            if original_mod_id.installation_file_name is not None:
-                self.log.debug(
-                    "Falling back to installation file name for "
-                    f"{original_mod_id.mod_id}..."
-                )
+        if original_mod_id.installation_file_name is not None:
+            try:
                 original_mod_details = (
                     NexusModsApi.reconstruct_mod_details_from_file_name(
                         original_mod_id.installation_file_name
                     )
                 )
-            else:
-                raise ex
+            except ValueError:
+                original_mod_details = self.get_mod_details(original_mod_id)
+        else:
+            original_mod_details = self.get_mod_details(original_mod_id)
 
         # sort translations ascending after their timestamp difference to the original
         # mod timestamp or their upload timestamp if they're older than the original mod
