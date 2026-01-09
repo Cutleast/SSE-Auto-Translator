@@ -351,9 +351,10 @@ class NexusModsApi(ProviderApi):
         compatibility) to the installed original mod.
 
         Translation relevance is determined by the following factors in this order:
-        1. File has the "same" age as the installed mod (newer than the installed
+        1. File version vaguely matches the version of the installed original mod.
+        2. File has the "same" age as the installed mod (newer than the installed
         original but older than the original's updates (if any)).
-        2. File upload timestamp (newer first).
+        3. File upload timestamp (newer first).
 
         Args:
             available_translations (list[ModId]): List of available translations.
