@@ -171,7 +171,8 @@ Some downloads may still fail with this error:
 
 image::incompatible_translation_tooltip.png[]
 
-This is expected and unavoidable for large mod lists. You can try to rerun the _download translations_ process and select a different translation.
+This is expected and unavoidable for large mod lists. Check if the original mod is still blue or if it turned green by another translation that was downloaded. +
+If it is still blue and requires a translation, you can try to rerun the _download translations_ process and select a different translation.
 ====
 --
 
