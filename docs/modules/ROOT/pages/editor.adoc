@@ -23,6 +23,13 @@ image::editor_status_tooltip.png[]
 .The context menu when right clicking on a string contains additional features and options.
 image::editor_context_menu.png[]
 
+== Import a translation
+
+To manually import an existing translation for a mod or mod file, just drag its downloaded archive file (.zip, .rar, .7z) from the file explorer to SSE-AT and drop it on the "Translations" list.
+SSE-AT will then import the translation for all mod files that are installed in the loaded mod list and not marked as green (= _Translation installed_ / _Already in target language_).
+
+Alternatively, use the image:import.svg[width=24px,height=24px] _Import translation from local disk_ button in the toolbar right above the "Translations" list.
+
 == Create a translation
 
 To create a new translation for a mod or mod file, make a right click on the mod / mod file and click on _Create new translation..._ .
