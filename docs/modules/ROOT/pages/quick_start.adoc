@@ -191,9 +191,7 @@ IMPORTANT: The output mod must be built and installed to your mod list every tim
 ====
 **Vortex**
 
-When the profile is deployed, you'll find the INI file at `Documents\My Games\Skyrim Special Edition`. Just open the file with any text editor.
-
-'''
+When the profile is deployed, you'll find the INI file at [.nowrap]#`Documents\My Games\Skyrim Special Edition`#. Just open the file with any text editor.
 
 **MO2**
 
@@ -202,6 +200,6 @@ image::mo2_ini_editor.png[]
 ====
 
 .. Set _[General]_ > _sLanguage_ to your desired language (for eg. `GERMAN`).
-.. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace `Skyrim - Voices_xx0.bsa` with `Skyrim - Voices_en0.bsa`.
+.. Since sound is not supported it is also recommended to set the english voice files in the same ini file. Just go to _[Archive]_ and under _sResourceArchiveList2_ replace [.nowrap]#`Skyrim - Voices_xx0.bsa`# with [.nowrap]#`Skyrim - Voices_en0.bsa`#.
 
 You now successfully translated your mod list with all available translations from Nexus Mods.
