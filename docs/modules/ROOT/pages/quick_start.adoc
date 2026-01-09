@@ -191,7 +191,7 @@ IMPORTANT: The output mod must be built and installed to your mod list every tim
 ====
 **Vortex**
 
-When the profile is deployed, you'll find the INI file at `Documents\\My Games\\Skyrim Special Edition`. Just open the file with any text editor.
+When the profile is deployed, you'll find the INI file at `Documents\My Games\Skyrim Special Edition`. Just open the file with any text editor.
 
 '''
 
