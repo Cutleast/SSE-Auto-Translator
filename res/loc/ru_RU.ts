@@ -2346,33 +2346,33 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="127"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="126"/>
         <source>Translations:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="147"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="146"/>
         <source>Base Game + AE CC Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="168"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="167"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="175"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="174"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="177"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="176"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="198"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="197"/>
         <source>Mod archive</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2403,32 +2403,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="141"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="140"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="142"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="141"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="143"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="142"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="144"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="143"/>
         <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="145"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="144"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="256"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="255"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>

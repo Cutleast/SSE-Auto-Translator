@@ -30,7 +30,6 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.exporter import Exporter
 from core.database.translation import Translation
-from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
@@ -393,11 +392,12 @@ class TranslationsWidget(QTreeWidget):
         valid_archive: bool = path.suffix.lower() in SUPPORTED_ARCHIVE_TYPES
 
         valid_modfile: bool = False
-        try:
-            ModFileService.get_modfiletype_for_suffix(path.suffix)
-            valid_modfile = True
-        except NotImplementedError:
-            pass
+        # TODO: Add support for loose files
+        # try:
+        #     ModFileService.get_modfiletype_for_suffix(path.suffix)
+        #     valid_modfile = True
+        # except NotImplementedError:
+        #     pass
 
         valid: bool = path.is_file() and (valid_modfile or valid_archive)
 
