@@ -1,3 +1,10 @@
+# v3.0.1 (Hotfix)
+
+- Fix German localization for "API key is valid!"
+- ModInstanceLoader: Only load enabled mods
+- NexusModsApi: Further improve translation relevance sorting
+- DownloadListWidget: Set AcceptMode to "Save" when exporting download list
+
 # v3.0.0
 
 This update is a near-complete rewrite of SSE-AT and not fully backwards-compatible.
