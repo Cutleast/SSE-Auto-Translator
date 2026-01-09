@@ -13,7 +13,7 @@ TIP: The ZIP file already contains a folder called "SSE-AT" with everything that
 +
 CAUTION: Windows Defender may show a warning telling you that it blocked the execution of an unknown app. This warning can be ignored by clicking on "Run anyways".
 +
-NOTE: *Pre-release* versions of SSE-AT are built with the console window enabled. This means that opening SSE-AT will also open a minimized console window. *DO NOT CLOSE THE CONSOLE WINDOW* as it will also kill the entire SSE-AT process.
+NOTE: SSE-AT is built with the console window enabled. This means that opening SSE-AT will also open a minimized console window. *DO NOT CLOSE THE CONSOLE WINDOW* as it will also kill the entire SSE-AT process.
 
 . A setup window will now appear. On the first page, click on "Fix Windows Path Length Limit" to disable the path length limit, as it will otherwise cause problems later on. Then restart your PC and run _SSE-AT.exe_ again. The button should now be grayed out with a message indicating that the limit has been disabled.
 +
