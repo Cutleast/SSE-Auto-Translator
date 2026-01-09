@@ -36,7 +36,7 @@ image::setup_initial_setup_done.png[]
 [%collapsible]
 =====
 . Open link:https://www.nexusmods.com/settings/api-keys[this] page in your web browser.
-. Scroll down to *SSE Auto Translator* and click on "Request Api Key". The API is now copied to your clipboard.
+. Scroll down to *SSE Auto Translator* and click on "Request Api Key". The API key is now copied to your clipboard.
 . Go back to SSE-AT and go to the "Manual Setup" tab.
 . Click on the paste button of the API key field.
 . Click on "Check API key" to validate the API key.
