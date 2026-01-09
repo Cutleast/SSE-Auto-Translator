@@ -118,7 +118,22 @@ TIP: You can maximize the window or resize the separate columns for longer file 
 * if there is no translation for your particular mod version, choose the next most recent one
 * if there are translations for multiple variants of the mod, choose the one that best fits the installed original (the name of the installed mod may give a hint about the installed variant)
 
-NOTE: SSE-AT automatically attempts to pre-select the best-fitting translation files but this is currently not that reliable.
+[NOTE]
+====
+SSE-AT automatically attempts to pre-select the best-fitting translation files, but you should still go through them all and check them manually.
+
+.Click here to get details about the pre-selection and sorting of translations.
+[%collapsible]
+=====
+Translations are sorted by their potential relevance and compatibility for the installed original mod file and the sorting is affected by these criteria in this order:
+
+. File version vaguely matches the version of the installed original mod.
+. File has the "same" age as the installed mod (newer than the installed original but older than the original's updates (if any)).
+. File upload timestamp (newer first).
+
+If none or all of these criteria match on multiple translations, the newest one is pre-selected.
+=====
+====
 
 TIP: You can hide entries with just one option by clicking on the image:filter.svg[width=24px,height=24px] _Filter items without selection options_ button at the top left corner of the dialog.
 
