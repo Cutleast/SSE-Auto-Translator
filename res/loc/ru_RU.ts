@@ -445,7 +445,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
     </message>
     <message>
         <location filename="src/ui/downloader/download_list_widget.py" line="342"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="392"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="393"/>
         <source>SSE-AT download list file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -471,17 +471,17 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="393"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="394"/>
         <source>Export download list...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
         <source>Export complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="427"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
         <source>Export completed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
