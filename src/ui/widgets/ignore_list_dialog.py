@@ -118,11 +118,7 @@ class IgnoreListDialog(QDialog):
 
         self.user_config.save()
 
-    def __on_text_filter_change(self, _text_filter: tuple[str, bool]) -> None:
-        text_filter: str
-        case_sensitive: bool
-        text_filter, case_sensitive = _text_filter
-
+    def __on_text_filter_change(self, text_filter: str, case_sensitive: bool) -> None:
         for rindex in range(self.__userlist_widget.count()):
             self.__userlist_widget.setRowHidden(
                 rindex,
