@@ -7,11 +7,10 @@ from __future__ import annotations
 import urllib.parse
 from pathlib import Path
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass(frozen=True, kw_only=True)
-class NxmRequest:
+class NxmRequest(BaseModel):
     """
     Dataclass for NXM (Mod Manager Download) requests.
     """
