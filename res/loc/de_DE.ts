@@ -536,6 +536,11 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <source>Downloading...</source>
         <translation>Wird heruntergeladen...</translation>
     </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="128"/>
+        <source>Downloading &apos;{0}&apos;...</source>
+        <translation>&apos;{0}&apos; wird heruntergeladen...</translation>
+    </message>
 </context>
 <context>
     <name>DownloadsTab</name>
@@ -1003,14 +1008,9 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>InstanceCreatorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="75"/>
-        <source>Mod Manager:</source>
-        <translation>Mod-Manager:</translation>
-    </message>
-    <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="81"/>
-        <source>Please select...</source>
-        <translation>Bitte auswählen...</translation>
+        <source>Mod manager:</source>
+        <translation>Mod Manager:</translation>
     </message>
 </context>
 <context>
@@ -1034,7 +1034,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="101"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="99"/>
         <source>Mod manager:</source>
         <translation>Mod Manager:</translation>
     </message>
@@ -1661,17 +1661,9 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModOrganizerSelectorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="47"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="48"/>
         <source>Instance:</source>
         <translation>Instanz:</translation>
-    </message>
-    <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="52"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="80"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="90"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="113"/>
-        <source>Please select...</source>
-        <translation>Bitte auswählen...</translation>
     </message>
     <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="63"/>
@@ -1775,27 +1767,27 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="296"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="313"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="349"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="316"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="352"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="324"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="360"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="325"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="361"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -2769,7 +2761,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>VortexCreatorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/vortex_creator_widget.py" line="39"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/vortex_creator_widget.py" line="40"/>
         <source>Profile name:</source>
         <translation>Name des Profils:</translation>
     </message>
