@@ -1,3 +1,10 @@
+# v3.0.2 (Hotfix)
+
+- DownloadListWidget: Improve export download list file dialog
+- IgnoreListDialog: Fix crash when searching
+- Masterlist: Fix mod files not being checked against Vanilla mod files
+- ModInstanceMenu: Hide actions menu if there is no mod file selected
+
 # v3.0.1 (Hotfix)
 
 - Fix German localization for "API key is valid!"
