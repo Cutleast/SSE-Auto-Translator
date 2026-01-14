@@ -10,7 +10,7 @@ image:support_me_on_kofi.png[width=193,height=60,link=https://ko-fi.com/Cutleast
 
 == Description
 
-SSE Auto Translator is an independent Windows app that allows you to translate entire mod lists with a high degree of automation.
+SSE Auto Translator is a standalone Windows app that allows you to translate entire mod lists with a high degree of automation.
 Its main features include an automatic mod list scan that identifies the mods that need translation.
 SSE-AT is then able to automatically search link:https://www.nexusmods.com[Nexus Mods] (and link:https://www.confrerie-des-traducteurs.fr[La Confrérie des Traducteurs] for French translations) for available translations, download them, and convert them to DSD format.
 The downloaded translations are then combined into a new mod (the so-called _Output Mod_) and installed at the end of your mod list.
