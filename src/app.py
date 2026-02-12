@@ -143,7 +143,7 @@ class App(BaseApp, Singleton):
                 self.log.info(f"Loaded localisation for {language}.")
 
     @override
-    def exec(self) -> int:
+    def exec(self) -> int:  # pyright: ignore[reportIncompatibleMethodOverride]
         self.log.info("Application started.")
 
         if self.__user_data_service.is_setup_required():
