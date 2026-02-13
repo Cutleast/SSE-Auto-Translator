@@ -1,3 +1,10 @@
+# v3.0.3
+
+Please note that because of the reworked mod id handling, exported download lists with SSE-AT v3.0.0-v3.0.2 cannot be processed by v3.0.3+.
+
+- Downloader: Fix non-premium NM downloads blocking entire queue when CDT is enabled
+- Fix CDT support and rework mod id handling
+
 # v3.0.2 (Hotfix)
 
 - DownloadListWidget: Improve export download list file dialog
