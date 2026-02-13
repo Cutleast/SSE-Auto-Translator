@@ -10,13 +10,16 @@ from pathlib import Path
 from typing import Any, Optional, override
 
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 
-from core.database.translation_service import TranslationService
 from core.string.string_utils import StringUtils
 from core.string.types import StringList
+from core.translation_provider.cdt_api.cdt_id import CdtModId
 from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.source import Source
+
+from .translation_service import TranslationService
 
 
 class Translation(BaseModel):
@@ -25,49 +28,25 @@ class Translation(BaseModel):
     """
 
     name: str
-    """
-    The name of the translation.
-    """
+    """The name of the translation."""
 
-    path: Path
-    """
-    The path to the translation.
-    """
+    path: Path = Field(exclude=True)
+    """The path to the translation."""
 
     mod_id: Optional[ModId] = None
-    """
-    The mod identifier of the translation at its source.
-    """
+    """The mod identifier of the translation at its source."""
 
     version: Optional[str] = None
-    """
-    The version of the translation at its source.
-    """
+    """The version of the translation at its source."""
 
-    original_mod_id: Optional[ModId] = None
-    """
-    The mod id of the original mod.
-    """
-
-    original_version: Optional[str] = None
-    """
-    The version of the original mod.
-    """
-
-    _strings: Optional[dict[Path, StringList]] = None
-    """
-    Map of mod file names to list of strings.
-    """
+    strings_: Optional[dict[Path, StringList]] = Field(default=None, exclude=True)
+    """Map of mod file names to list of strings."""
 
     source: Source = Source.Local
-    """
-    The source of the translation.
-    """
+    """The source of the translation."""
 
     timestamp: int = Field(default_factory=lambda: int(time.time()))
-    """
-    The install timestamp of the translation.
-    """
+    """The creation timestamp of the translation."""
 
     def to_index_data(self) -> dict[str, Any]:
         """
@@ -77,21 +56,7 @@ class Translation(BaseModel):
             dict[str, Any]: Index data.
         """
 
-        return {
-            "name": self.name,
-            "mod_id": self.mod_id.mod_id if self.mod_id else None,
-            "file_id": self.mod_id.file_id if self.mod_id else None,
-            "version": self.version,
-            "original_mod_id": (
-                self.original_mod_id.mod_id if self.original_mod_id else None
-            ),
-            "original_file_id": (
-                self.original_mod_id.file_id if self.original_mod_id else None
-            ),
-            "original_version": self.original_version,
-            "source": self.source.name,
-            "timestamp": self.timestamp,
-        }
+        return self.model_dump(mode="json", exclude_defaults=True)
 
     @staticmethod
     def from_index_data(index_data: dict[str, Any], database_path: Path) -> Translation:
@@ -106,18 +71,18 @@ class Translation(BaseModel):
             Translation: Translation object.
         """
 
+        try:
+            data: dict[str, Any] = index_data.copy()
+            data["path"] = database_path
+
+            return Translation.model_validate(data)
+        except ValidationError:
+            pass
+
         name: str = index_data["name"]
         raw_mod_id: Optional[int] = index_data.pop("mod_id", None)
         raw_file_id: Optional[int] = index_data.pop("file_id", None)
-        mod_id: Optional[ModId] = None
-        if raw_mod_id:
-            mod_id = ModId(mod_id=raw_mod_id, file_id=raw_file_id)
-
         raw_orig_mod_id: Optional[int] = index_data.pop("original_mod_id", None)
-        raw_orig_file_id: Optional[int] = index_data.pop("original_file_id", None)
-        orig_mod_id: Optional[ModId] = None
-        if raw_orig_mod_id:
-            orig_mod_id = ModId(mod_id=raw_orig_mod_id, file_id=raw_orig_file_id)
 
         translation_path: Path = database_path / name
         source_name: str = index_data.pop("source", "")
@@ -131,12 +96,14 @@ class Translation(BaseModel):
             else:
                 source = Source.Local
 
+        mod_id: Optional[ModId] = None
+        if raw_mod_id and raw_file_id and source == Source.NexusMods:
+            mod_id = NxmModId(mod_id=raw_mod_id, file_id=raw_file_id)
+        elif raw_mod_id and source == Source.Confrerie and raw_orig_mod_id is not None:
+            mod_id = CdtModId(mod_id=raw_mod_id, nm_mod_id=raw_orig_mod_id)
+
         return Translation(
-            path=translation_path,
-            mod_id=mod_id,
-            original_mod_id=orig_mod_id,
-            **index_data,
-            source=source,
+            path=translation_path, mod_id=mod_id, **index_data, source=source
         )
 
     @staticmethod
@@ -183,14 +150,14 @@ class Translation(BaseModel):
         List of strings for each mod file name.
         """
 
-        if self._strings is None:
-            self._strings = TranslationService.load_translation_strings(self.path)
+        if self.strings_ is None:
+            self.strings_ = TranslationService.load_translation_strings(self.path)
 
-        return self._strings
+        return self.strings_
 
     @strings.setter
     def strings(self, strings: dict[Path, StringList]) -> None:
-        self._strings = strings
+        self.strings_ = strings
 
     @lru_cache
     def get_size(self) -> int:

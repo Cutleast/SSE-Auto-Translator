@@ -20,7 +20,7 @@ import websocket
 from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel, ValidationError
 
-from core.translation_provider.source import Source
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.filesystem import extract_file_paths
 from core.utilities.web_utils import get_url_identifier
 
@@ -32,6 +32,7 @@ from ..exceptions import (
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
+from ..source import Source
 from .models.nm_file import NmFile
 from .models.nm_files import NmFiles
 from .models.nm_mod import NmMod
@@ -237,6 +238,9 @@ class NexusModsApi(ProviderApi):
 
     @override
     def get_mod_details(self, mod_id: ModId) -> ModDetails:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         mod_details: ModDetails
         if mod_id.file_id:
             file: NmFile = self.__request_file(mod_id)
@@ -277,6 +281,9 @@ class NexusModsApi(ProviderApi):
         return mod_details
 
     def __request_file(self, mod_id: ModId) -> NmFile:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         if not mod_id.mod_id or not mod_id.file_id:
             ProviderApi.raise_mod_not_found_error(mod_id)
         elif mod_id.mod_id == mod_id.file_id:
@@ -296,7 +303,7 @@ class NexusModsApi(ProviderApi):
         return files_by_id[mod_id.file_id]
 
     def __request_mod_details(self, mod_id: ModId) -> NmMod:
-        if not mod_id.mod_id:
+        if not isinstance(mod_id, NxmModId):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
         self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
@@ -306,6 +313,9 @@ class NexusModsApi(ProviderApi):
 
     @override
     def get_modpage_url(self, mod_id: ModId) -> str:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         return NexusModsApi.create_nexus_mods_url(
             game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id
         )
@@ -314,6 +324,9 @@ class NexusModsApi(ProviderApi):
     def get_translations(
         self, mod_id: ModId, file_name: str, language: str
     ) -> list[ModId]:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         translation_mod_ids: list[int] = self.__scrape_mod_translations(
             game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id, language=language
         )
@@ -327,10 +340,9 @@ class NexusModsApi(ProviderApi):
             )
 
             translations += [
-                ModId(
+                NxmModId(
                     mod_id=translation_mod_id,
                     file_id=file_id,
-                    nm_id=translation_mod_id,
                     nm_game_id=mod_id.nm_game_id,
                 )
                 for file_id in translation_files
@@ -542,7 +554,7 @@ class NexusModsApi(ProviderApi):
         """
 
         if not mod_id:
-            raise ProviderApi.raise_mod_not_found_error(ModId(mod_id=mod_id))
+            raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
         cache_file_path = ProviderApi.CACHE_FOLDER / (
@@ -715,6 +727,9 @@ class NexusModsApi(ProviderApi):
             str: Direct download url
         """
 
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         if mod_id.file_id is None:
             raise ValueError("Mod file id must not be None.")
 
@@ -847,7 +862,7 @@ class NexusModsApi(ProviderApi):
             return ModDetails(
                 display_name=display_name,
                 file_name=file_name,
-                mod_id=ModId(mod_id=mod_id, installation_file_name=file_name),
+                mod_id=NxmModId(mod_id=mod_id, installation_file_name=file_name),
                 version=version,
                 timestamp=timestamp,
                 author=None,

@@ -12,7 +12,7 @@ from typing import Optional, Self, override
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
 
 from core.mod_file.mod_file import ModFile
-from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.constants import DSD_FILE_PATTERN
 
 
@@ -41,11 +41,11 @@ class Mod(BaseMod):
 
     @property
     @cache
-    def mod_id(self) -> Optional[ModId]:
-        """The mod id of the mod identifying it at its source."""
+    def mod_id(self) -> Optional[NxmModId]:
+        """The mod id of the mod identifying it at Nexus Mods."""
 
         if self.metadata.mod_id:
-            return ModId(
+            return NxmModId(
                 mod_id=self.metadata.mod_id,
                 file_id=self.metadata.file_id,
                 nm_game_id=self.metadata.game_id,

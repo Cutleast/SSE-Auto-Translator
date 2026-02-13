@@ -14,6 +14,7 @@ from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
 from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.mod_details import ModDetails
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.provider import Provider
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
@@ -133,7 +134,12 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
 
     def __create_file_display_name(self, download: FileDownload) -> str:
         details: ModDetails = download.mod_details
-        return f"{details.display_name} [{details.version}] ({details.mod_id.file_id})"
+        display_name: str = f"{details.display_name} [{details.version}]"
+
+        if isinstance(details.mod_id, NxmModId):
+            display_name += f" ({details.mod_id.file_id})"
+
+        return display_name
 
     def __open_translation_modpage(self) -> None:
         current_translation_download: TranslationDownload = (

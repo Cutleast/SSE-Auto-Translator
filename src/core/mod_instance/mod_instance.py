@@ -7,7 +7,7 @@ from typing import Optional
 
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
-from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.container_utils import unique
 
 from .mod import Mod
@@ -110,14 +110,14 @@ class ModInstance:
             )
         ]
 
-    def get_mod(self, mod_id: ModId) -> Optional[Mod]:
+    def get_mod(self, mod_id: NxmModId) -> Optional[Mod]:
         """
         Get a mod by its id or None if it doesn't exist.
         Returns the mod with the highest index if there are multiple mods with the same
         id.
 
         Args:
-            mod_id (int): Mod identifier.
+            mod_id (NxmModId): Mod identifier.
 
         Returns:
             Optional[Mod]: Mod or None

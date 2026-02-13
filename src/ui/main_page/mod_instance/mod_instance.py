@@ -511,7 +511,10 @@ class ModInstanceWidget(QTreeWidget):
         else:
             translation = self.database.get_translation_by_mod(current_item)
 
-        self.highlight_translation_requested.emit(translation)
+        if translation is not None:
+            self.highlight_translation_requested.emit(translation)
+        else:
+            self.log.error(f"No translation found for {current_item}.")
 
     def __create_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()

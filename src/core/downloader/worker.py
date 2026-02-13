@@ -6,7 +6,7 @@ import logging
 import time
 from pathlib import Path
 from queue import Empty, Queue
-from typing import Optional, override
+from typing import override
 
 from PySide6.QtCore import QThread, Signal
 
@@ -15,9 +15,6 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
-from core.downloader.downloader import Downloader
-from core.mod_file.translation_status import TranslationStatus
-from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
@@ -25,12 +22,12 @@ from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (
     DownloadFailedError,
     InstallationFailedError,
-    NoOriginalModFound,
     NoStringsExtractedError,
 )
 from core.utilities.progress_update import ProgressCallback, ProgressUpdate
 from core.utilities.temp_folder_provider import TempFolderProvider
 
+from .downloader import Downloader
 from .file_download import FileDownload
 
 
@@ -170,19 +167,6 @@ class Worker(QThread):
         if not strings:
             raise NoStringsExtractedError
 
-        # TODO: Improve this to work with modfiles from multiple original mods or to get at least the original mod with the most mod files
-        modfile: Path = list(strings.keys())[0]
-        original_mod: Optional[Mod] = self.mod_instance.get_mod_with_modfile(
-            modfile,
-            ignore_states=[
-                TranslationStatus.TranslationInstalled,
-                TranslationStatus.IsTranslated,
-            ],
-        )
-
-        if original_mod is None:
-            raise NoOriginalModFound
-
         translation = Translation(
             name=download.mod_details.display_name,
             path=(
@@ -192,8 +176,6 @@ class Worker(QThread):
             ),
             mod_id=download.mod_details.mod_id,
             version=download.mod_details.version,
-            original_mod_id=original_mod.mod_id,
-            original_version=original_mod.version,
             source=download.source,
             timestamp=download.mod_details.timestamp,
         )
