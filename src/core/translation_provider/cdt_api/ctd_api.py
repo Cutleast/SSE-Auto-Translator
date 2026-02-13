@@ -26,8 +26,8 @@ class CDTApi(ProviderApi):
     """
 
     DL_URL_PATTERN: re.Pattern[str] = re.compile(
-        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/telechargement_se/([0-9]+)/"
-        r"sse\?fromSseAtAPI=1"
+        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/telechargement-se/([0-9]+)"
+        r"\?fromSseAtAPI=1"
     )
     """
     Regex pattern for capturing the CDT mod id from a download url.
