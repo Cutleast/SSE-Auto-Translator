@@ -259,8 +259,6 @@ class DatabaseService:
         # Merge metadata
         existing_translation.mod_id = new_translation.mod_id
         existing_translation.version = new_translation.version
-        existing_translation.original_mod_id = new_translation.original_mod_id
-        existing_translation.original_version = new_translation.original_version
 
         return existing_translation
 
@@ -594,16 +592,8 @@ class DatabaseService:
                 path=database.userdb_path / database.language.id / mod.name,
                 mod_id=mod.mod_id,
                 version=mod.version,
-                original_mod_id=original_mod.mod_id if original_mod else None,
-                original_version=original_mod.version if original_mod else None,
-                _strings={},
-                source=(
-                    mod.mod_id.estimate_source(
-                        is_french=database.language == GameLanguage.French
-                    )
-                    if mod.mod_id is not None
-                    else Source.Local
-                ),
+                strings_={},
+                source=mod.mod_id.source if mod.mod_id is not None else Source.Local,
             )
 
         translation.strings = cls.merge_translation_strings(

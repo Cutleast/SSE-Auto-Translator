@@ -182,7 +182,10 @@ class TranslationDatabase(QObject):
             ]
 
         elif mod.modfiles:
-            translation = self.get_translation_by_modfile_path(mod.modfiles[0].path)
+            for modfile in mod.modfiles:
+                translation = self.get_translation_by_modfile_path(modfile.path)
+                if translation is not None:
+                    break
 
         return translation
 

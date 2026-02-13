@@ -7,7 +7,7 @@ from typing import Optional
 import pytest
 
 from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.provider_api import ProviderApi
 from tests.core.core_test import CoreTest
 
@@ -41,7 +41,7 @@ class TestProviderApi(CoreTest):
         with pytest.raises(ModNotFoundError) as exc_info:
             # when
             ProviderApi.raise_mod_not_found_error(
-                ModId(mod_id=mod_id, file_id=file_id), mod_name
+                NxmModId(mod_id=mod_id, file_id=file_id), mod_name
             )
 
         # then

@@ -412,11 +412,7 @@ class DownloadManager(QObject):
                     continue
 
                 download = FileDownload(mod_details=file_details, source=source)
-                download_id = ModId(
-                    mod_id=translation_id.mod_id,
-                    nm_id=translation_id.nm_id,
-                    nm_game_id=translation_id.nm_game_id,
-                )
+                download_id = translation_id
                 translation_name: str = self.provider.get_details(
                     download_id, source=source
                 ).display_name

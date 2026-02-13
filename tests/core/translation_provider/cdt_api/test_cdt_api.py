@@ -7,6 +7,7 @@ from typing import Any
 import pytest
 
 from core.translation_provider.cdt_api.ctd_api import CDTApi
+from core.translation_provider.cdt_api.models.cdt_translation import CdtTranslation
 
 from ...core_test import CoreTest
 
@@ -48,23 +49,40 @@ class TestCDTApi(CoreTest):
         with pytest.raises(ValueError, match="Could not extract CDT id from"):
             CDTApi.get_cdt_id_from_url(url)
 
-    def test_get_timestamp_from_response_data(self) -> None:
+    def test_deserialize_response_data(self) -> None:
         """
-        Tests `core.translation_provider.cdt_api.ctd_api.CDTApi.get_timestamp_from_response_data()`.
+        Tests the deserialization of the response data returned by the CDT API.
         """
 
         # given
         response_data: dict[str, Any] = {
+            "NexusModId": 49616,
+            "FrenchName": "USMP - Compilation de correctifs",
+            "Version": "2.6.7",
+            "Filename": "usmp___compilation_de_correctifs_2.6.7_sse.7z",
+            "DownloadLink": "https://www.confrerie-des-traducteurs.fr/skyrim/telechargement-se/3425?fromSseAtAPI=1",
             "LastArchiveUpdateDate": {
-                "date": "2024-03-22 21:16:32.000000",
+                "date": "2026-01-08 14:46:05.000000",
                 "timezone_type": 3,
                 "timezone": "Europe/Paris",
-            }
+            },
         }
-        expected_timestamp: int = 1711141652
 
         # when
-        actual_timestamp: int = CDTApi.get_timestamp_from_response_data(response_data)
+        actual_translation: CdtTranslation = CdtTranslation.model_validate(
+            response_data, by_alias=True
+        )
 
         # then
-        assert expected_timestamp == actual_timestamp
+        assert actual_translation.nexus_mods_id == 49616
+        assert actual_translation.name == "USMP - Compilation de correctifs"
+        assert actual_translation.version == "2.6.7"
+        assert (
+            actual_translation.file_name
+            == "usmp___compilation_de_correctifs_2.6.7_sse.7z"
+        )
+        assert (
+            actual_translation.download_link
+            == "https://www.confrerie-des-traducteurs.fr/skyrim/telechargement-se/3425?fromSseAtAPI=1"
+        )
+        assert actual_translation.timestamp == 1767883025

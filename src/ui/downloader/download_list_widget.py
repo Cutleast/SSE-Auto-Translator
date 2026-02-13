@@ -418,7 +418,7 @@ class DownloadListWidget(QWidget):
                 download_list.append(
                     DownloadListItem(
                         mod=mod,
-                        mod_file=Path(modfile_item.text(1)),
+                        mod_file=Path(modfile_item.text(1).strip()),
                         translation=modfile_item.get_current_translation().mod_info,
                         download=modfile_item.get_current_file_download(),
                     )
@@ -448,7 +448,7 @@ class DownloadListWidget(QWidget):
         for mod_item in iter_toplevel_items(self.__tree_widget):
             if mod_item.data(0, Qt.ItemDataRole.UserRole) == mod:
                 for modfile_item in iter_children(mod_item):
-                    if Path(modfile_item.text(1)) == modfile:
+                    if Path(modfile_item.text(1).strip()) == modfile:
                         return cast(DownloadListWidgetItem, modfile_item)
 
         raise KeyError(f"Found no item for {mod} and {modfile}!")
