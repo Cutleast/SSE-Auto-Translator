@@ -29,15 +29,24 @@ class Provider:
     def __init__(self, user_config: UserConfig) -> None:
         ProviderManager.init(user_config)
 
-    def direct_downloads_possible(self) -> bool:
+    def direct_downloads_possible(self, source: Optional[Source] = None) -> bool:
         """
         Checks if direct downloads are possible for Nexus Mods API.
+
+        Args:
+            source (Optional[Source], optional): Source. Defaults to preferred.
 
         Returns:
             bool: `True` if direct downloads are possible, `False` otherwise
         """
 
-        return ProviderManager.get_default_provider().is_direct_download_possible()
+        if source is None:
+            return ProviderManager.get_default_provider().is_direct_download_possible()
+
+        else:
+            return ProviderManager.get_provider_by_source(
+                source
+            ).is_direct_download_possible()
 
     def get_remaining_requests(self) -> tuple[int, int]:
         """

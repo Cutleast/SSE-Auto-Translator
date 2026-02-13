@@ -103,7 +103,7 @@ class Worker(QThread):
 
         self.log.info(f"Processing download '{file_name}'...")
 
-        if self.provider.direct_downloads_possible():
+        if self.provider.direct_downloads_possible(download.source):
             self.log.info("Downloading translation...")
             progress_callback(
                 ProgressUpdate(0, 0, self.tr("Downloading translation..."))
