@@ -73,7 +73,7 @@ class Translation(BaseModel):
 
         try:
             data: dict[str, Any] = index_data.copy()
-            data["path"] = database_path
+            data["path"] = database_path / data["name"]
 
             return Translation.model_validate(data)
         except ValidationError:
