@@ -1,3 +1,7 @@
+# v3.0.4 (Hotfix)
+
+- Fix database not loading
+
 # v3.0.3
 
 Please note that because of the reworked mod id handling, exported download lists with SSE-AT v3.0.0-v3.0.2 cannot be processed by v3.0.3+.
