@@ -10,11 +10,12 @@ from typing import Optional
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
-from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.provider_api import ProviderApi
 
+from .exceptions import ModNotFoundError
 from .mod_details import ModDetails
 from .mod_id import ModId
+from .nm_api.nxm_id import NxmModId
+from .provider_api import ProviderApi
 from .provider_manager import ProviderManager
 from .source import Source
 
@@ -29,15 +30,24 @@ class Provider:
     def __init__(self, user_config: UserConfig) -> None:
         ProviderManager.init(user_config)
 
-    def direct_downloads_possible(self) -> bool:
+    def direct_downloads_possible(self, source: Optional[Source] = None) -> bool:
         """
         Checks if direct downloads are possible for Nexus Mods API.
+
+        Args:
+            source (Optional[Source], optional): Source. Defaults to preferred.
 
         Returns:
             bool: `True` if direct downloads are possible, `False` otherwise
         """
 
-        return ProviderManager.get_default_provider().is_direct_download_possible()
+        if source is None:
+            return ProviderManager.get_default_provider().is_direct_download_possible()
+
+        else:
+            return ProviderManager.get_provider_by_source(
+                source
+            ).is_direct_download_possible()
 
     def get_remaining_requests(self) -> tuple[int, int]:
         """
@@ -167,7 +177,7 @@ class Provider:
                     masterlist_source: Source = target.source
 
                     available_translations.setdefault(masterlist_source, []).append(
-                        ModId(mod_id=masterlist_mod_id, file_id=masterlist_file_id)
+                        NxmModId(mod_id=masterlist_mod_id, file_id=masterlist_file_id)
                     )
 
         return available_translations
@@ -196,16 +206,12 @@ class Provider:
                 mod_id
             )
 
-    def is_mod_id_valid(
-        self, mod_id: ModId, source: Optional[Source] = None, check_online: bool = True
-    ) -> bool:
+    def is_mod_id_valid(self, mod_id: ModId, check_online: bool = True) -> bool:
         """
-        Checks if the mod id is valid at the specified source by attempting to get its
-        details if `check_online` is True.
+        Checks if the mod id is valid by attempting to get its details if `check_online` is True.
 
         Args:
             mod_id (ModId): Mod identifier
-            source (Optional[Source], optional): Source. Defaults to preferred.
             check_online (bool, optional):
                 Whether to check by attempting to get the mod details. Defaults to True.
 
@@ -213,15 +219,13 @@ class Provider:
             bool: Whether the mod id is valid
         """
 
-        if not mod_id.mod_id or mod_id.file_id == 0:
+        if not mod_id.mod_id or (isinstance(mod_id, NxmModId) and mod_id.file_id == 0):
             return False
 
         if check_online:
-            provider_api: ProviderApi
-            if source is None:
-                provider_api = ProviderManager.get_default_provider()
-            else:
-                provider_api = ProviderManager.get_provider_by_source(source)
+            provider_api: ProviderApi = ProviderManager.get_provider_by_source(
+                mod_id.source
+            )
 
             try:
                 provider_api.get_mod_details(mod_id)

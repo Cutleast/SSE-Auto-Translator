@@ -282,12 +282,8 @@ class ProviderApi(QObject):
             ModNotFoundError: always
         """
 
-        mod: str = str(mod_id.mod_id)
-        if mod_name is not None and mod_id.file_id is None:
+        mod: str = str(mod_id)
+        if mod_name is not None:
             mod = f"{mod_name} ({mod})"
-        elif mod_name is not None and mod_id.file_id is not None:
-            mod = f"{mod_name} ({mod} > {mod_id.file_id})"
-        elif mod_id.file_id is not None:
-            mod += f" > {mod_id.file_id}"
 
         raise ModNotFoundError(mod)

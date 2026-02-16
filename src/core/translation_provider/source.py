@@ -11,7 +11,7 @@ from PySide6.QtWidgets import QApplication
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
-class Source(LocalizedEnum):
+class Source(str, LocalizedEnum):
     """
     Enum for different Sources (for eg. Nexus Mods or Confrérie des Traducteurs).
     """

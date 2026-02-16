@@ -291,6 +291,9 @@ class ModInstanceMenu(Menu):
         self.__uncheck_action.setVisible(len(selected_modfiles) > 0)
         self.__check_action.setVisible(len(selected_modfiles) > 0)
 
+        # actions only visible if at least one mod file is selected
+        self.__action_menu.menuAction().setVisible(len(selected_modfiles) > 0)
+
         translation_installed: bool = (
             ModInstanceMenu.__is_translation_installed(current_item)
             if current_item is not None

@@ -25,7 +25,6 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
-from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_file.translation_status import TranslationStatus
@@ -196,7 +195,8 @@ class TranslationsTab(QWidget):
             fdialog.setFileMode(QFileDialog.FileMode.ExistingFiles)
             fdialog.setNameFilters(
                 [self.tr("Mod archive") + " (*.7z *.rar *.zip)"]
-                + [file_type.get_file_dialog_filter() for file_type in FileType]
+                # TODO: Add support for loose files
+                # + [file_type.get_file_dialog_filter() for file_type in FileType]
             )
             fdialog.setWindowTitle(self.tr("Import Translation..."))
 

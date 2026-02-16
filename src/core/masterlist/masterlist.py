@@ -10,6 +10,7 @@ from cutleast_core_lib.core.utilities.web_utils import get_raw_web_content
 from pydantic import TypeAdapter
 from pydantic.dataclasses import dataclass
 
+from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
 from core.utilities.game_language import GameLanguage
 
 from .masterlist_entry import MasterlistEntry
@@ -98,7 +99,11 @@ class Masterlist:
             file_name.lower()
         )
 
-        return file_name.lower() in self.user_ignore_list or (
+        ignore_list: list[str] = self.user_ignore_list.copy()
+        ignore_list.extend(BASE_GAME_PLUGINS)
+        ignore_list.extend(AE_CC_PLUGINS)
+
+        return file_name.lower() in ignore_list or (
             masterlist_entry is not None
             and masterlist_entry.type == MasterlistEntry.Type.Ignore
         )

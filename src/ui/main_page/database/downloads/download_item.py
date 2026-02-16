@@ -12,6 +12,7 @@ from PySide6.QtWidgets import QPushButton, QTreeWidget, QTreeWidgetItem
 
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nm_api import NexusModsApi
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.progress_update import ProgressUpdate
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.progress_widget import ProgressWidget
@@ -65,6 +66,8 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
         )
 
         def open_download_page() -> None:
+            assert isinstance(self.download.mod_details.mod_id, NxmModId)
+
             url = NexusModsApi.create_nexus_mods_url(
                 self.download.mod_details.mod_id.nm_game_id,
                 self.download.mod_details.mod_id.mod_id,

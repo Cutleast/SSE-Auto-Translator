@@ -1,3 +1,77 @@
+# v3.0.4 (Hotfix)
+
+- Fix database not loading
+
+# v3.0.3
+
+Please note that because of the reworked mod id handling, exported download lists with SSE-AT v3.0.0-v3.0.2 cannot be processed by v3.0.3+.
+
+- Downloader: Fix non-premium NM downloads blocking entire queue when CDT is enabled
+- Fix CDT support and rework mod id handling
+
+# v3.0.2 (Hotfix)
+
+- DownloadListWidget: Improve export download list file dialog
+- IgnoreListDialog: Fix crash when searching
+- Masterlist: Fix mod files not being checked against Vanilla mod files
+- ModInstanceMenu: Hide actions menu if there is no mod file selected
+
+# v3.0.1 (Hotfix)
+
+- Fix German localization for "API key is valid!"
+- ModInstanceLoader: Only load enabled mods
+- NexusModsApi: Further improve translation relevance sorting
+- DownloadListWidget: Set AcceptMode to "Save" when exporting download list
+
+# v3.0.0
+
+This update is a near-complete rewrite of SSE-AT and not fully backwards-compatible.
+Although not recommended due to changes to both DSD and SSE-AT's plugin parser, you can still use your old translation database, but other user settings will be reset.
+On first launch, SSE-AT v3 will reinitialize your configuration and convert your existing translations to a new format - this may take a while.
+
+Because of the scale of this rewrite, not all changes and fixes can be listed.
+
+## Highlights
+
+- **Full interface translation support** (`data/interface/*_<language>.txt`)
+    - Includes files from BSA archives (can be disabled in setup or settings)
+    - Interface files are now scanned and handled like plugin translations
+    - During export/build, strings are applied to copies of the original files - avoiding version mismatches
+    - Unified ID column across translation editor, string list, and search dialogs
+
+- **Multi-threaded performance** for heavy I/O tasks:
+    - Loading and parsing BSAs
+    - Online translation scans *(avoid raising thread count to prevent Nexus Mods rate-limits)*
+    - Installing/importing and downloading translations
+    - Adjustable worker limits for advanced users in app settings
+
+- **Completely redesigned download list dialog**
+    - Select translations per mod file and choose between available versions
+    - Automatic preselection of the most compatible versions - avoiding downloads of incompatible translations
+    - Optional filter, search bar, and ability to unselect downloads
+
+- **Overhauled translation editor**
+    - Displays the entire translation at once, organized by mod file and state
+    - Improved structure and usability
+
+- **esp2dsd** and **Vanilla database generator** rewritten and integrated
+    - Run `SSE-AT.exe --help` for usage info
+
+- **New and entirely rewritten documentation** hosted at https://docs.moddingforge.com/sse-at
+    - Thanks to @Wuerfelhusten for providing the server infrastructure!
+
+- Numerous optimizations and UI improvements
+
+## Removed / Disabled Features
+
+- **Russian and Chinese localizations** removed (new localization system)
+    - Must be recreated - see `README.md` for instructions
+- **Translation update feature** removed (made obsolete by new download system)
+    - To update a translation to a new mod version, read [this](https://docs.moddingforge.com/sse-at/faqs.html#_how_do_i_update_an_installed_translation_after_a_mod_update)
+- **Manual Nexus Mods downloads** removed
+    - Automatic free downloads by SSE-AT still work
+- **Additional file type support** (scripts, sound and textures) removed (was half-baked and barely working besides interface translations)
+
 # v2.1.10 (Hotfix)
 
 - Fix Mod Manager (and non-premium Nexus Mods) downloads

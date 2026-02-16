@@ -53,7 +53,7 @@ class StackedWidget(QStackedWidget):
         parent: Optional[QWidget] = None,
         orientation: Orientation = Orientation.Vertical,
         reverse: bool = False,
-    ):
+    ) -> None:
         super().__init__(parent)
 
         self.orientation = orientation
@@ -83,7 +83,9 @@ class StackedWidget(QStackedWidget):
             )
             index = (index + self.count()) % self.count()
 
-        self.slideInWidget(self.widget(index), direction)
+        widget: Optional[QWidget] = self.widget(index)
+        if widget is not None:
+            self.slideInWidget(widget, direction)
 
     def slideInWidget(
         self, nextWidget: QWidget, direction: Direction = Direction.Automatic

@@ -224,7 +224,7 @@ class ModInstanceWidget(QTreeWidget):
                 cur_separator = ModInstanceWidget._create_separator_item(mod, i)
                 self.__mod_items[mod] = cur_separator
                 self.addTopLevelItem(cur_separator)
-            else:
+            elif mod.mod_type == Mod.Type.Regular:
                 mod_item: QTreeWidgetItem = ModInstanceWidget._create_mod_item(mod, i)
 
                 self.__mod_items[mod] = mod_item
@@ -511,7 +511,10 @@ class ModInstanceWidget(QTreeWidget):
         else:
             translation = self.database.get_translation_by_mod(current_item)
 
-        self.highlight_translation_requested.emit(translation)
+        if translation is not None:
+            self.highlight_translation_requested.emit(translation)
+        else:
+            self.log.error(f"No translation found for {current_item}.")
 
     def __create_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()

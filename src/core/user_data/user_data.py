@@ -2,8 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from pydantic import ConfigDict
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -12,10 +11,9 @@ from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
 
 
-@dataclass(frozen=True, kw_only=True, config=ConfigDict(arbitrary_types_allowed=True))
-class UserData:
+class UserData(BaseModel, frozen=True, arbitrary_types_allowed=True):
     """
-    Dataclass for holding the loaded user data.
+    Model for holding the loaded user data.
     """
 
     user_config: UserConfig

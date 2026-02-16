@@ -45,22 +45,6 @@ def __init_argparser() -> ArgumentParser:
     )
 
     parser.add_argument(
-        "--show-docs",
-        action="store_true",
-        help="Opens documentation without starting main application.",
-    )
-
-    parser.add_argument(
-        "--extract-strings",
-        nargs="?",
-        default="",
-        help=(
-            "Extracts strings from a plugin and writes them in a JSON file with the "
-            "same location and name."
-        ),
-    )
-
-    parser.add_argument(
         "--data-path",
         nargs="?",
         default="",

@@ -20,7 +20,7 @@ import websocket
 from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel, ValidationError
 
-from core.translation_provider.source import Source
+from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.filesystem import extract_file_paths
 from core.utilities.web_utils import get_url_identifier
 
@@ -32,6 +32,7 @@ from ..exceptions import (
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
+from ..source import Source
 from .models.nm_file import NmFile
 from .models.nm_files import NmFiles
 from .models.nm_mod import NmMod
@@ -68,11 +69,17 @@ class NexusModsApi(ProviderApi):
     """
 
     FILE_NAME_PATTERN: re.Pattern[str] = re.compile(
-        r"-([0-9]{2,})-(.*)-([0-9]{9,})\.(zip|rar|7z)$"
+        r"^(?P<display_name>.*)-(?P<mod_id>[0-9]{2,})-(?P<version>.*)-(?P<timestamp>[0-9]{9,})\.(?P<file_type>zip|rar|7z)$"
     )
     """
     Regex pattern for extracting mod id, version and upload timestamp from a file name,
     like: `Untarnished UI - RaceMenu Patch-97347-v1-3-1713561432.7z`
+
+    The pattern provides these named groups:
+    - `display_name` - the display name of the file
+    - `mod_id` - the mod id at Nexus Mods
+    - `version` - the sluggified version of the file (e.g. `v1-3` for `v1.3`)
+    - `timestamp` - the upload timestamp of the file
     """
 
     __api_key: Optional[str] = None
@@ -231,6 +238,9 @@ class NexusModsApi(ProviderApi):
 
     @override
     def get_mod_details(self, mod_id: ModId) -> ModDetails:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         mod_details: ModDetails
         if mod_id.file_id:
             file: NmFile = self.__request_file(mod_id)
@@ -271,6 +281,9 @@ class NexusModsApi(ProviderApi):
         return mod_details
 
     def __request_file(self, mod_id: ModId) -> NmFile:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         if not mod_id.mod_id or not mod_id.file_id:
             ProviderApi.raise_mod_not_found_error(mod_id)
         elif mod_id.mod_id == mod_id.file_id:
@@ -290,7 +303,7 @@ class NexusModsApi(ProviderApi):
         return files_by_id[mod_id.file_id]
 
     def __request_mod_details(self, mod_id: ModId) -> NmMod:
-        if not mod_id.mod_id:
+        if not isinstance(mod_id, NxmModId):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
         self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
@@ -300,6 +313,9 @@ class NexusModsApi(ProviderApi):
 
     @override
     def get_modpage_url(self, mod_id: ModId) -> str:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         return NexusModsApi.create_nexus_mods_url(
             game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id
         )
@@ -308,6 +324,9 @@ class NexusModsApi(ProviderApi):
     def get_translations(
         self, mod_id: ModId, file_name: str, language: str
     ) -> list[ModId]:
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         translation_mod_ids: list[int] = self.__scrape_mod_translations(
             game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id, language=language
         )
@@ -321,10 +340,9 @@ class NexusModsApi(ProviderApi):
             )
 
             translations += [
-                ModId(
+                NxmModId(
                     mod_id=translation_mod_id,
                     file_id=file_id,
-                    nm_id=translation_mod_id,
                     nm_game_id=mod_id.nm_game_id,
                 )
                 for file_id in translation_files
@@ -345,38 +363,42 @@ class NexusModsApi(ProviderApi):
         compatibility) to the installed original mod.
 
         Translation relevance is determined by the following factors in this order:
-        1. File has the "same" age as the installed mod (newer than the installed
+        1. File version vaguely matches the version of the installed original mod.
+        2. File has the "same" age as the installed mod (newer than the installed
         original but older than the original's updates (if any)).
-        2. File upload timestamp (newer first).
+        3. File upload timestamp (newer first).
 
         Args:
             available_translations (list[ModId]): List of available translations.
             original_mod_id (ModId): Mod identifier of the installed original mod.
         """
 
-        original_mod_timestamp: int
-        try:
-            original_mod_timestamp = self.get_mod_details(original_mod_id).timestamp
-        except Exception as ex:
-            if original_mod_id.installation_file_name is not None:
-                self.log.debug(
-                    "Falling back to installation file name for "
-                    f"{original_mod_id.mod_id}..."
+        original_mod_details: ModDetails
+        if original_mod_id.installation_file_name is not None:
+            try:
+                original_mod_details = (
+                    NexusModsApi.reconstruct_mod_details_from_file_name(
+                        original_mod_id.installation_file_name
+                    )
                 )
-                original_mod_timestamp = NexusModsApi.extract_timestamp_from_file_name(
-                    original_mod_id.installation_file_name
-                )
-            else:
-                raise ex
+            except ValueError:
+                original_mod_details = self.get_mod_details(original_mod_id)
+        else:
+            original_mod_details = self.get_mod_details(original_mod_id)
 
         # sort translations ascending after their timestamp difference to the original
         # mod timestamp or their upload timestamp if they're older than the original mod
-        available_translations.sort(
-            key=lambda mod_id: self.__get_sort_key(
-                self.get_mod_details(mod_id).timestamp, original_mod_timestamp
-            ),
-            reverse=True,
-        )
+        def get_sort_key(mod_id: ModId) -> tuple[bool, bool, int]:
+            translation_details: ModDetails = self.get_mod_details(mod_id)
+
+            return self.__get_sort_key(
+                translation_details.timestamp,
+                translation_details.version,
+                original_mod_details.timestamp,
+                original_mod_details.version,
+            )
+
+        available_translations.sort(key=get_sort_key, reverse=True)
 
         self.log.debug(
             f"Sorted {len(available_translations)} translations after their potential "
@@ -385,20 +407,44 @@ class NexusModsApi(ProviderApi):
 
     @staticmethod
     def __get_sort_key(
-        translation_timestamp: int, original_mod_timestamp: int
-    ) -> tuple[bool, int]:
+        translation_timestamp: int,
+        translation_version: str,
+        original_mod_timestamp: int,
+        original_mod_version: str,
+    ) -> tuple[bool, bool, int]:
         """
-        Calculates a sort key for a translation.
+        Calculates a sort key for a translation. The sort key consists of these values:
+        - vague version match (prefer translations that start with the same version as
+          the original)
+        - relative translation age
+        - translation upload timestamp
 
         Args:
             translation_timestamp (int): Timestamp of the translation.
+            translation_version (str): Version of the translation.
             original_mod_timestamp (int): Timestamp of the original mod.
+            original_mod_version (str): Version of the original mod.
 
         Returns:
-            tuple[bool, int]: Sort key
+            tuple[bool, bool, int]: Sort key
         """
 
-        return (translation_timestamp > original_mod_timestamp, translation_timestamp)
+        translation_version = translation_version.lower().removeprefix("v")
+        original_mod_version = original_mod_version.lower().removeprefix("v")
+
+        version_match: bool = bool(
+            translation_version.strip() and original_mod_version.strip()
+        ) and translation_version.startswith(original_mod_version)
+
+        return (
+            # vague version match (prefer translations that start with the same version
+            # as the original)
+            version_match,
+            # relative translation age
+            translation_timestamp > original_mod_timestamp,
+            # translation upload timestamp
+            translation_timestamp,
+        )
 
     def __request_mod_files(self, game_id: str, mod_id: int) -> NmFiles:
         """
@@ -508,7 +554,7 @@ class NexusModsApi(ProviderApi):
         """
 
         if not mod_id:
-            raise ProviderApi.raise_mod_not_found_error(ModId(mod_id=mod_id))
+            raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
         cache_file_path = ProviderApi.CACHE_FOLDER / (
@@ -681,6 +727,9 @@ class NexusModsApi(ProviderApi):
             str: Direct download url
         """
 
+        if not isinstance(mod_id, NxmModId):
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
         if mod_id.file_id is None:
             raise ValueError("Mod file id must not be None.")
 
@@ -780,9 +829,9 @@ class NexusModsApi(ProviderApi):
         raise ValueError(f"Could not extract mod id from {url!r}")
 
     @staticmethod
-    def extract_timestamp_from_file_name(file_name: str) -> int:
+    def reconstruct_mod_details_from_file_name(file_name: str) -> ModDetails:
         """
-        Attempts to extract the upload timestamp from the file name of a file downloaded
+        Attempts to reconstruct the mod details from the file name of a file downloaded
         from Nexus Mods.
 
         Args:
@@ -790,10 +839,11 @@ class NexusModsApi(ProviderApi):
 
         Raises:
             ValueError:
-                When the file name is not from Nexus Mods or does not contain a timestamp
+                When the file name is not from Nexus Mods or does not match the file
+                name pattern.
 
         Returns:
-            int: Upload timestamp
+            ModDetails: Reconstructed mod details
         """
 
         file_name_match: Optional[re.Match[str]] = (
@@ -801,6 +851,25 @@ class NexusModsApi(ProviderApi):
         )
 
         if file_name_match is not None:
-            return int(file_name_match.group(3))
+            display_name: str = file_name_match.group("display_name")
+            mod_id = int(file_name_match.group("mod_id"))
+            version: str = file_name_match.group("version")
+            timestamp = int(file_name_match.group("timestamp"))
 
-        raise ValueError(f"Could not extract timestamp from {file_name!r}")
+            # attempt to "desluggify" the version
+            version = version.replace("-", ".")
+
+            return ModDetails(
+                display_name=display_name,
+                file_name=file_name,
+                mod_id=NxmModId(mod_id=mod_id, installation_file_name=file_name),
+                version=version,
+                timestamp=timestamp,
+                author=None,
+                uploader=None,
+                modpage_url=NexusModsApi.create_nexus_mods_url(
+                    game_id="skyrimspecialedition", mod_id=mod_id
+                ),
+            )
+
+        raise ValueError(f"Could not reconstruct mod details from '{file_name}'")

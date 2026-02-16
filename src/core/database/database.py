@@ -44,6 +44,14 @@ class TranslationDatabase(QObject):
         list[Translation]: The removed translations.
     """
 
+    rename_signal = Signal(Translation)
+    """
+    This signal gets emitted when a translation is renamed.
+
+    Args:
+        Translation: The renamed translation.
+    """
+
     userdb_path: Path
     """The path to the user database directory (language not included)."""
 
@@ -174,7 +182,10 @@ class TranslationDatabase(QObject):
             ]
 
         elif mod.modfiles:
-            translation = self.get_translation_by_modfile_path(mod.modfiles[0].path)
+            for modfile in mod.modfiles:
+                translation = self.get_translation_by_modfile_path(modfile.path)
+                if translation is not None:
+                    break
 
         return translation
 

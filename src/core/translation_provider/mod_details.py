@@ -4,15 +4,14 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 from .mod_id import ModId
 
 
-@dataclass(frozen=True, kw_only=True)
-class ModDetails:
+class ModDetails(BaseModel):
     """
-    Dataclass for mod details returned by a translation provider.
+    Model for mod details returned by a translation provider.
     """
 
     display_name: str

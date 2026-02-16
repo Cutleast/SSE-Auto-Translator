@@ -3,7 +3,6 @@ Copyright (c) Cutleast
 """
 
 import subprocess
-import webbrowser
 from argparse import Namespace
 from pathlib import Path
 from typing import Callable, Optional, cast, override
@@ -11,10 +10,7 @@ from typing import Callable, Optional, cast, override
 from cutleast_core_lib.base_app import BaseApp
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
-from cutleast_core_lib.core.utilities.exe_info import (
-    get_current_path,
-    get_execution_info,
-)
+from cutleast_core_lib.core.utilities.exe_info import get_execution_info
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
@@ -147,7 +143,7 @@ class App(BaseApp, Singleton):
                 self.log.info(f"Loaded localisation for {language}.")
 
     @override
-    def exec(self) -> int:
+    def exec(self) -> int:  # pyright: ignore[reportIncompatibleMethodOverride]
         self.log.info("Application started.")
 
         if self.__user_data_service.is_setup_required():
@@ -283,16 +279,6 @@ class App(BaseApp, Singleton):
         """
 
         return subprocess.list2cmdline(self.executable)
-
-    @staticmethod
-    def open_documentation() -> None:
-        """
-        Opens the documentation in the default browser.
-        """
-
-        webbrowser.open(
-            "file://" + str(get_current_path() / "doc" / "Instructions_en_US.html")
-        )
 
     def restart_application(self) -> None:
         """
