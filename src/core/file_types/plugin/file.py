@@ -133,8 +133,8 @@ class PluginFile(ModFile):
             strings (StringList): Strings to export.
             path (Path): Path to export to.
             output_mod (bool, optional):
-                Whether the export is used in the output mod. Affects the JSON filename.
-                Defaults to False.
+                Whether the export is used in the output mod. Affects the JSON filename
+                and if untranslated strings are excluded. Defaults to False.
 
         Returns:
             Path: Path to the exported DSD file.
@@ -151,15 +151,16 @@ class PluginFile(ModFile):
             # the output mod uses a different naming scheme to prevent it from being
             # imported again by SSE-AT
             json_filename = "SSE-AT_output.json"
+
+            # only dump strings that have been translated for the output mod
+            strings = list(
+                filter(
+                    lambda s: s.original != s.string and s.string,
+                    strings,
+                )
+            )
         else:
             json_filename = "SSE-AT_exported.json"
-
-        strings = list(
-            filter(
-                lambda s: (s.original != s.string and s.string),
-                strings,
-            )
-        )
 
         dsd_path: Path = plugin_folder / json_filename
         TranslationService.save_strings_to_json_file(dsd_path, strings, indent=4)
