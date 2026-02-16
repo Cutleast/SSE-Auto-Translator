@@ -19,6 +19,7 @@ class GameLanguage(Enum):
     Portuguese = "Portuguese"
     Russian = "Russian"
     Spanish = "Spanish"
+    Turkish = "Turkish"
 
     @override
     def __str__(self) -> str:
@@ -39,6 +40,7 @@ class GameLanguage(Enum):
             GameLanguage.Portuguese: "pt_BR",
             GameLanguage.Russian: "ru_RU",
             GameLanguage.Spanish: "es_ES",
+            GameLanguage.Turkish: "tr_TR",
         }
 
         return ISO_CODES[self]

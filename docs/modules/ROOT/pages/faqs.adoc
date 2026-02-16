@@ -38,6 +38,7 @@ Please ensure that the original translation works and that it's a problem with S
 * These languages are also supported by SSE-AT but not by the game. A database is not included for them.
 ** Korean
 ** Portuguese
+** Turkish
 
 == How do I update an installed translation after a mod update?
 
