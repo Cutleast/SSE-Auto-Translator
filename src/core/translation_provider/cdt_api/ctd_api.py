@@ -11,7 +11,7 @@ import jstyleson as json
 import requests as req
 from pydantic import ValidationError
 
-from ..exceptions import ModNotFoundError, Non200HttpError, UnexpectedResponseError
+from ..exceptions import Non200HttpError, UnexpectedResponseError
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
@@ -117,7 +117,7 @@ class CDTApi(ProviderApi):
 
             return [translation_id]
 
-        except ModNotFoundError:
+        except FileNotFoundError:
             return []
 
     @override
