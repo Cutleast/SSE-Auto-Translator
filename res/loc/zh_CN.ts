@@ -334,19 +334,6 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
-    <name>DescriptionFwString</name>
-    <message>
-        <location filename="src/core/file_types/description_framework/string.py" line="42"/>
-        <source>ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/description_framework/string.py" line="46"/>
-        <source>Priority</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DownloadItem</name>
     <message>
         <location filename="src/ui/main_page/database/downloads/download_item.py" line="65"/>
@@ -950,48 +937,33 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>FileType</name>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="39"/>
+        <location filename="src/core/file_types/file_type.py" line="34"/>
         <source>Plugin File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="40"/>
+        <location filename="src/core/file_types/file_type.py" line="35"/>
         <source>Interface File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="43"/>
-        <source>Description Framework File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="53"/>
+        <location filename="src/core/file_types/file_type.py" line="45"/>
         <source>Traditional plugin files (.esp, .esm, .esl).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="56"/>
+        <location filename="src/core/file_types/file_type.py" line="48"/>
         <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="61"/>
-        <source>Description Framework files (data/*_DESC.ini).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="75"/>
+        <location filename="src/core/file_types/file_type.py" line="64"/>
         <source>Show plugin files (*.esp, *.esm, *.esl)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="78"/>
+        <location filename="src/core/file_types/file_type.py" line="67"/>
         <source>Show interface files (*.txt)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="81"/>
-        <source>Show Description Framework files (*_DESC.ini)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

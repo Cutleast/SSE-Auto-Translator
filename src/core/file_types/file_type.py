@@ -11,8 +11,6 @@ from PySide6.QtWidgets import QApplication
 from core.mod_file.mod_file import ModFile
 from core.string.types import String
 
-from .description_framework.file import DescriptionFwFile
-from .description_framework.string import DescriptionFwString
 from .interface.file import InterfaceFile
 from .interface.string import InterfaceString
 from .plugin.file import PluginFile
@@ -30,18 +28,12 @@ class FileType(LocalizedEnum):
     InterfaceFile = auto()
     """Interface translation files (data/interface/translations/*_[language].txt)."""
 
-    DescriptionFwFile = auto()
-    """Description Framework files (data/*_DESC.ini)."""
-
     @override
     def get_localized_name(self) -> str:
         LOC_NAMES: dict[FileType, str] = {
             FileType.PluginFile: QApplication.translate("FileType", "Plugin File"),
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Interface File"
-            ),
-            FileType.DescriptionFwFile: QApplication.translate(
-                "FileType", "Description Framework File"
             ),
         }
 
@@ -57,9 +49,6 @@ class FileType(LocalizedEnum):
                 "FileType",
                 "Interface translation files "
                 "(data/interface/translations/*_[language].txt).",
-            ),
-            FileType.DescriptionFwFile: QApplication.translate(
-                "FileType", "Description Framework files (data/*_DESC.ini)."
             ),
         }
 
@@ -78,9 +67,6 @@ class FileType(LocalizedEnum):
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Show interface files (*.txt)"
             ),
-            FileType.DescriptionFwFile: QApplication.translate(
-                "FileType", "Show Description Framework files (*_DESC.ini)"
-            ),
         }
 
         return LOC_FILTERS[self]
@@ -94,7 +80,6 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[ModFile]] = {
             FileType.PluginFile: PluginFile,
             FileType.InterfaceFile: InterfaceFile,
-            FileType.DescriptionFwFile: DescriptionFwFile,
         }
 
         return CLASSES[self]
@@ -108,7 +93,6 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[String]] = {
             FileType.PluginFile: PluginString,
             FileType.InterfaceFile: InterfaceString,
-            FileType.DescriptionFwFile: DescriptionFwString,
         }
 
         return CLASSES[self]
@@ -125,9 +109,6 @@ class FileType(LocalizedEnum):
             ),
             FileType.InterfaceFile: (
                 FileType.InterfaceFile.get_localized_name() + " (*.txt)"
-            ),
-            FileType.DescriptionFwFile: (
-                FileType.DescriptionFwFile.get_localized_name() + " (*_DESC.ini)"
             ),
         }
 
