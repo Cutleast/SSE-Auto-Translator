@@ -947,34 +947,49 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>FileType</name>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="34"/>
+        <location filename="src/core/file_types/file_type.py" line="39"/>
         <source>Plugin File</source>
         <translation>Plugindatei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="35"/>
+        <location filename="src/core/file_types/file_type.py" line="40"/>
         <source>Interface File</source>
         <translation>Interface-Datei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="45"/>
+        <location filename="src/core/file_types/file_type.py" line="43"/>
+        <source>Dragonborn&apos;s Bestiary File</source>
+        <translation>Dragonborn&apos;s Bestiary-Datei</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="53"/>
         <source>Traditional plugin files (.esp, .esm, .esl).</source>
         <translation>Klassische Plugindateien (.esp, .esm, .esl).</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="48"/>
+        <location filename="src/core/file_types/file_type.py" line="56"/>
         <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
         <translation>Interface-Übersetzungsdateien (data/interface/translations/*_[language].txt).</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="64"/>
+        <location filename="src/core/file_types/file_type.py" line="61"/>
+        <source>Dragonborn&apos;s Bestiary files (data/interface/creatures/**/*.json)</source>
+        <translation>Dragonborn&apos;s Bestiary-Dateien (data/interface/creatures/**/*.json)</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="76"/>
         <source>Show plugin files (*.esp, *.esm, *.esl)</source>
         <translation>Plugindateien (*.esp, *.esm, *.esl) zeigen</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="67"/>
+        <location filename="src/core/file_types/file_type.py" line="79"/>
         <source>Show interface files (*.txt)</source>
         <translation>Interface-Dateien (*.txt) zeigen</translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/file_type.py" line="82"/>
+        <source>Show Dragonborn&apos;s Bestiary files (*.json)</source>
+        <translation>Dragonborn&apos;s Bestiary-Dateien (*.json) zeigen</translation>
     </message>
 </context>
 <context>

@@ -11,6 +11,8 @@ from PySide6.QtWidgets import QApplication
 from core.mod_file.mod_file import ModFile
 from core.string.types import String
 
+from .bestiary.file import BestiaryFile
+from .bestiary.string import BestiaryString
 from .interface.file import InterfaceFile
 from .interface.string import InterfaceString
 from .plugin.file import PluginFile
@@ -28,12 +30,18 @@ class FileType(LocalizedEnum):
     InterfaceFile = auto()
     """Interface translation files (data/interface/translations/*_[language].txt)."""
 
+    BestiaryFile = auto()
+    """Dragonborn's Bestiary translation files (data/interface/creatures/**/*.json)"""
+
     @override
     def get_localized_name(self) -> str:
         LOC_NAMES: dict[FileType, str] = {
             FileType.PluginFile: QApplication.translate("FileType", "Plugin File"),
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Interface File"
+            ),
+            FileType.BestiaryFile: QApplication.translate(
+                "FileType", "Dragonborn's Bestiary File"
             ),
         }
 
@@ -49,6 +57,10 @@ class FileType(LocalizedEnum):
                 "FileType",
                 "Interface translation files "
                 "(data/interface/translations/*_[language].txt).",
+            ),
+            FileType.BestiaryFile: QApplication.translate(
+                "FileType",
+                "Dragonborn's Bestiary files (data/interface/creatures/**/*.json)",
             ),
         }
 
@@ -67,6 +79,9 @@ class FileType(LocalizedEnum):
             FileType.InterfaceFile: QApplication.translate(
                 "FileType", "Show interface files (*.txt)"
             ),
+            FileType.BestiaryFile: QApplication.translate(
+                "FileType", "Show Dragonborn's Bestiary files (*.json)"
+            ),
         }
 
         return LOC_FILTERS[self]
@@ -80,6 +95,7 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[ModFile]] = {
             FileType.PluginFile: PluginFile,
             FileType.InterfaceFile: InterfaceFile,
+            FileType.BestiaryFile: BestiaryFile,
         }
 
         return CLASSES[self]
@@ -93,6 +109,7 @@ class FileType(LocalizedEnum):
         CLASSES: dict[FileType, type[String]] = {
             FileType.PluginFile: PluginString,
             FileType.InterfaceFile: InterfaceString,
+            FileType.BestiaryFile: BestiaryString,
         }
 
         return CLASSES[self]
@@ -109,6 +126,9 @@ class FileType(LocalizedEnum):
             ),
             FileType.InterfaceFile: (
                 FileType.InterfaceFile.get_localized_name() + " (*.txt)"
+            ),
+            FileType.BestiaryFile: (
+                FileType.BestiaryFile.get_localized_name() + " (*.json)"
             ),
         }
 
