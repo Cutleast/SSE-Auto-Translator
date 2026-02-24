@@ -941,48 +941,33 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>FileType</name>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="39"/>
+        <location filename="src/core/file_types/file_type.py" line="34"/>
         <source>Plugin File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="40"/>
+        <location filename="src/core/file_types/file_type.py" line="35"/>
         <source>Interface File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="43"/>
-        <source>Dragonborn&apos;s Bestiary File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="53"/>
+        <location filename="src/core/file_types/file_type.py" line="45"/>
         <source>Traditional plugin files (.esp, .esm, .esl).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="56"/>
+        <location filename="src/core/file_types/file_type.py" line="48"/>
         <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="61"/>
-        <source>Dragonborn&apos;s Bestiary files (data/interface/creatures/**/*.json)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="76"/>
+        <location filename="src/core/file_types/file_type.py" line="64"/>
         <source>Show plugin files (*.esp, *.esm, *.esl)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="79"/>
+        <location filename="src/core/file_types/file_type.py" line="67"/>
         <source>Show interface files (*.txt)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="82"/>
-        <source>Show Dragonborn&apos;s Bestiary files (*.json)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
