@@ -450,15 +450,24 @@ class TranslationsWidget(QTreeWidget):
         if not isinstance(current_item, Translation):
             return
 
-        export_dialog = ExportDialog(QApplication.activeModalWidget())
+        plugin_extensions = {".esp", ".esm", ".esl"}
+        has_plugin_files = any(
+            file_path.suffix.lower() in plugin_extensions
+            for file_path in current_item.strings.keys()
+        )
 
-        if export_dialog.exec() != QDialog.DialogCode.Accepted:
-            return
+        if has_plugin_files:
+            export_dialog = ExportDialog(QApplication.activeModalWidget())
 
-        export_format: Optional[ExportDialog.ExportFormat] = export_dialog.get_value()
+            if export_dialog.exec() != QDialog.DialogCode.Accepted:
+                return
 
-        if export_format is None:
-            return
+            export_format: Optional[ExportDialog.ExportFormat] = export_dialog.get_value()
+
+            if export_format is None:
+                return
+        else:
+            export_format = ExportDialog.ExportFormat.DSD
 
         file_dialog = QFileDialog(QApplication.activeModalWidget())
         file_dialog.setWindowTitle(self.tr("Export translation..."))
