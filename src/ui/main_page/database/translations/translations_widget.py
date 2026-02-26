@@ -30,6 +30,8 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.exporter import Exporter
 from core.database.translation import Translation
+from core.file_types.plugin.file import PluginFile
+from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
@@ -450,24 +452,22 @@ class TranslationsWidget(QTreeWidget):
         if not isinstance(current_item, Translation):
             return
 
-        plugin_extensions = {".esp", ".esm", ".esl"}
         has_plugin_files = any(
-            file_path.suffix.lower() in plugin_extensions
+            ModFileService.get_modfiletype_for_suffix(file_path.suffix) == PluginFile
             for file_path in current_item.strings.keys()
         )
 
+        export_format: Optional[ExportDialog.ExportFormat] = ExportDialog.ExportFormat.DSD
         if has_plugin_files:
             export_dialog = ExportDialog(QApplication.activeModalWidget())
 
             if export_dialog.exec() != QDialog.DialogCode.Accepted:
                 return
 
-            export_format: Optional[ExportDialog.ExportFormat] = export_dialog.get_value()
+            export_format = export_dialog.get_value()
 
             if export_format is None:
                 return
-        else:
-            export_format = ExportDialog.ExportFormat.DSD
 
         file_dialog = QFileDialog(QApplication.activeModalWidget())
         file_dialog.setWindowTitle(self.tr("Export translation..."))
