@@ -452,7 +452,7 @@ class TranslationsWidget(QTreeWidget):
         if not isinstance(current_item, Translation):
             return
 
-        has_plugin_files = any(
+        has_plugin_files: bool = any(
             ModFileService.get_modfiletype_for_suffix(file_path.suffix) == PluginFile
             for file_path in current_item.strings.keys()
         )
@@ -460,12 +460,10 @@ class TranslationsWidget(QTreeWidget):
         export_format: Optional[ExportDialog.ExportFormat] = ExportDialog.ExportFormat.DSD
         if has_plugin_files:
             export_dialog = ExportDialog(QApplication.activeModalWidget())
-
             if export_dialog.exec() != QDialog.DialogCode.Accepted:
                 return
 
             export_format = export_dialog.get_value()
-
             if export_format is None:
                 return
 
