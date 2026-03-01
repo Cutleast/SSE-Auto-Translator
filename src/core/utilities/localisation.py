@@ -18,10 +18,10 @@ class Language(Enum):
     """
 
     System = "System"
-    German = "de_DE"
+    Chinese = "zh_CN"
     English = "en_US"
+    German = "de_DE"
     # Russian = "ru_RU"
-    # Chinese = "zh_CN"
 
 
 class LocalisationUtils:
