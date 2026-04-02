@@ -7,7 +7,7 @@ from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, TypeAlias
 
-from cutleast_core_lib.core.archive.archive import Archive
+from cutleast_core_lib.core.archive_legacy.archive import Archive
 from cutleast_core_lib.core.filesystem.utils import get_file_identifier
 from cutleast_core_lib.core.multithreading.progress import (
     ProgressUpdate,
@@ -15,7 +15,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from PySide6.QtCore import QObject
 
 from core.file_source.archive_file_source import ArchiveFileSource

@@ -54,7 +54,7 @@ class TestPasteLineEdit(BaseTest):
 
         # given
         test_text: str = "Hello, Clipboard!"
-        clipboard.copy(test_text)
+        clipboard.setText(test_text)
 
         # when
         widget.paste_action.trigger()
@@ -76,7 +76,7 @@ class TestPasteLineEdit(BaseTest):
         # given
         test_text: str = "Hello, Clipboard!"
         widget.setText(test_text)
-        clipboard.copy("")
+        clipboard.setText("")
 
         # when
         widget.paste_action.trigger()

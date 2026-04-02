@@ -14,7 +14,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from PySide6.QtCore import QObject, Signal
 
 from core.config.app_config import AppConfig

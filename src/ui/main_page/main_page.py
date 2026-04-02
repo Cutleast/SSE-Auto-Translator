@@ -9,11 +9,11 @@ from pathlib import Path
 from typing import Optional, cast
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
-from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor

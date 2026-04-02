@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 from typing import BinaryIO, Optional, override
 
-from cutleast_core_lib.core.archive.archive import Archive
+from cutleast_core_lib.core.archive_legacy.archive import Archive
 from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from cutleast_core_lib.core.filesystem.utils import get_file_identifier
 

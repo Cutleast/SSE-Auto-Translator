@@ -326,6 +326,55 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
+    <name>CollapsibleLabel</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="82"/>
+        <source>Reduce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="90"/>
+        <source>Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CollapsibleTextEdit</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="66"/>
+        <source>Reduce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="75"/>
+        <source>Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ContextMenu</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="103"/>
+        <source>Duplicate item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="111"/>
+        <source>Cut item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="117"/>
+        <source>Copy item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="123"/>
+        <source>Paste item</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DatabaseWidget</name>
     <message>
         <location filename="src/ui/main_page/database/database_widget.py" line="61"/>
@@ -537,7 +586,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation>正在下载...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="128"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="135"/>
         <source>Downloading &apos;{0}&apos;...</source>
         <translation>正在下载 &apos;{0}&apos;...</translation>
     </message>
@@ -1569,40 +1618,40 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="153"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="229"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="149"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="225"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="171"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="491"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="167"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="518"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载工具 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="260"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="256"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="322"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="442"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="318"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="469"/>
         <source>Processing mod conflicts...</source>
         <translation>正在处理模组冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="457"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="484"/>
         <source>Processing single file conflicts...</source>
         <translation>正在处理单个文件冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="677"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="706"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>正在下载并安装 ModOrganizer...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="710"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="739"/>
         <source>Extracting archive...</source>
         <translation>正在解压压缩包...</translation>
     </message>
@@ -1779,27 +1828,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="304"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="221"/>
         <source>Elapsed time:</source>
         <translation>耗时：</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="292"/>
         <source>Cancel?</source>
         <translation>取消？</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="360"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="295"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>您确定要取消吗？这可能会产生意想不到的后果，具体取决于当前运行的进度！</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="368"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="303"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="369"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="304"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -2600,6 +2649,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>TreeMenu</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="35"/>
+        <source>Expand all</source>
+        <translation type="unfinished">全部展开</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="41"/>
+        <source>Collapse all</source>
+        <translation type="unfinished">全部折叠</translation>
+    </message>
+</context>
+<context>
+    <name>TreeWidgetEditor</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="234"/>
+        <source>Add new item...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="240"/>
+        <source>Remove selected item(s)...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="240"/>
+        <source>Del</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="248"/>
+        <source>Edit selected item...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="248"/>
+        <source>Double click</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>UIMode</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/utilities/ui_mode.py" line="24"/>
@@ -2844,6 +2934,11 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="115"/>
         <source>The process is incomplete and has no result!</source>
         <translation>这个过程不完整，并且没有结果！</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="127"/>
+        <source>The task was cancelled!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/translation_provider/exceptions.py" line="75"/>

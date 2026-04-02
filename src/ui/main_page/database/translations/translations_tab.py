@@ -6,9 +6,9 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
-from cutleast_core_lib.ui.widgets.progress_dialog import ProgressDialog
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QApplication,

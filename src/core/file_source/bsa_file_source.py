@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import BinaryIO, cast, override
 
-from cutleast_core_lib.core.archive.archive import Archive
+from cutleast_core_lib.core.archive_legacy.archive import Archive
 from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from sse_bsa import BSAArchive
 
