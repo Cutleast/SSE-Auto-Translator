@@ -17,6 +17,7 @@ dependencies = [
     "lz4",
     "mod-manager-lib",
     "plyvel-ci",
+    "PySide6<6.11",  # 6.11 has a bug with hover effects
     "pytz",
     "pyuac",
     "pywin32",
@@ -61,7 +62,7 @@ log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s
 [tool.pyright]
 include = ["src", "tests"]
 typeCheckingMode = "strict"
-exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py"]
+exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py", "**/node_modules", "**/.*", ".venv"]
 stubPath = "./stubs"
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
