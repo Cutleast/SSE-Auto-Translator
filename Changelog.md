@@ -1,3 +1,12 @@
+# v3.1.0
+
+- Add full support for [Dragonborn's Bestiary](https://www.nexusmods.com/skyrimspecialedition/mods/123521)
+- Readd Turkish to the supported game languages
+- Plugin files: Include untranslated strings when manually exporting a translation
+- CDT: Fix wrong exception being caught 
+- Skip export format dialog when a translation to be exported has no plugin files
+- Readd Chinese localization (thanks to @apprentice_99419 on the Modding Forge Discord server for translating SSE-AT v3 to Chinese!)
+
 # v3.0.4 (Hotfix)
 
 - Fix database not loading
