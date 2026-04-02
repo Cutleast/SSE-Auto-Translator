@@ -53,7 +53,19 @@
 			"*.dic"
 		],
 		"todo-tree.highlights.enabled": false,
-		"autoDocstring.startOnNewLine": true
+		"autoDocstring.startOnNewLine": true,
+		"python-envs.pythonProjects": [
+			{
+				"path": "core-lib",
+				"envManager": "ms-python.python:venv",
+				"packageManager": "ms-python.python:pip"
+			},
+			{
+				"path": "mod-manager-lib",
+				"envManager": "ms-python.python:venv",
+				"packageManager": "ms-python.python:pip"
+			}
+		]
 	},
 	"launch": {
 		"version": "0.2.0",
