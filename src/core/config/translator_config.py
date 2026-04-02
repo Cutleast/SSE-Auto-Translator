@@ -22,6 +22,15 @@ class TranslatorConfig(BaseConfig):
     )
     """The API key for the translator API."""
 
+    lm_studio_base_url: str = "http://127.0.0.1:1234"
+    """Base URL of the LM Studio local server."""
+
+    lm_studio_model: Optional[str] = None
+    """Model name for LM Studio. If unset, the first loaded model is used."""
+
+    lm_studio_use_server_prompt: bool = True
+    """Whether to use the prompt configured in LM Studio instead of SSE-AT's built-in system prompt."""
+
     show_confirmation_dialogs: bool = True
     """Whether to ask for confirmation before starting a machine translation."""
 

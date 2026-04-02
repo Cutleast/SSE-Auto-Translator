@@ -108,6 +108,14 @@ class EditorTab(QWidget):
         self.__menu.reset_translation_requested.connect(self.__reset_selected)
         self.__menu.mark_as_requested.connect(self.__set_status)
 
+    def set_translator(self, translator: Translator) -> None:
+        """
+        Updates the translator backend used by this tab.
+        """
+
+        self.translator = translator
+        self.__editor.translator = translator
+
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
         self.setLayout(self.__vlayout)

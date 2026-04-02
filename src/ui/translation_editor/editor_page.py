@@ -70,6 +70,16 @@ class EditorPage(QSplitter):
         self.setOrientation(Qt.Orientation.Horizontal)
         self.__init_ui()
 
+    def set_translator(self, translator: Translator) -> None:
+        """
+        Updates the translator backend for new and already open editor tabs.
+        """
+
+        self.translator = translator
+
+        for tab, _ in self.__tabs.values():
+            tab.set_translator(translator)
+
     def __init_ui(self) -> None:
         self.__tab_list_widget = QTreeWidget()
         self.__tab_list_widget.header().hide()

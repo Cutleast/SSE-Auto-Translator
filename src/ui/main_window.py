@@ -18,6 +18,7 @@ from core.downloader.download_manager import DownloadManager
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.provider import Provider
+from core.translator_api.translator_api import TranslatorApi
 from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
 from core.utilities.constants import DOCS_URL
@@ -204,12 +205,23 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def __open_settings(self) -> None:
-        SettingsDialog(
+        dialog = SettingsDialog(
             self.app_config,
             self.user_data.user_config,
             self.user_data.translator_config,
             self,
-        ).show()
+        )
+        dialog.save_signal.connect(self.__reload_translator)
+        dialog.show()
+
+    def __reload_translator(self) -> None:
+        """
+        Reloads the active translator after settings were saved.
+        """
+
+        translator_api: TranslatorApi = self.user_data.translator_config.translator
+        self.translator = translator_api.get_api_class()(self.user_data.translator_config)
+        self.translation_editor.set_translator(self.translator)
 
     def __check_for_updates(self) -> None:
         upd = Updater.get()

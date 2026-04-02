@@ -14,6 +14,9 @@ class TranslatorApi(Enum):
     DeepL = "DeepL"
     """DeepL translator API (requires API key)."""
 
+    LMStudio = "LM Studio"
+    """LM Studio local API (OpenAI-compatible local server)."""
+
     def get_api_class(self) -> type["Translator"]:
         """
         Returns the API class for this API.
@@ -24,11 +27,13 @@ class TranslatorApi(Enum):
 
         from .deepl import DeepLTranslator
         from .google import GoogleTranslator
+        from .lm_studio import LMStudioTranslator
         from .translator import Translator
 
         apis: dict[TranslatorApi, type[Translator]] = {
             TranslatorApi.Google: GoogleTranslator,
             TranslatorApi.DeepL: DeepLTranslator,
+            TranslatorApi.LMStudio: LMStudioTranslator,
         }
 
         return apis[self]
