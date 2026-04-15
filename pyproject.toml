@@ -64,6 +64,7 @@ include = ["src", "tests"]
 typeCheckingMode = "strict"
 exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py", "**/node_modules", "**/.*", ".venv"]
 stubPath = "./stubs"
+extraPaths = ["src", "core-lib/src", "mod-manager-lib/src"]
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
 deprecateTypingAliases = false
