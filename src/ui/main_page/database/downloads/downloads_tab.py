@@ -142,7 +142,8 @@ class DownloadsTab(QWidget):
             NXMHandler.get().unbind()
 
     def __check_nxm_link(self) -> None:
-        self.__toolbar.set_handle_nxm_action_checked(NXMHandler.get().is_bound())
+        if NXMHandler.has_instance():
+            self.__toolbar.set_handle_nxm_action_checked(NXMHandler.get().is_bound())
 
     @override
     def timerEvent(self, event: QTimerEvent) -> None:
