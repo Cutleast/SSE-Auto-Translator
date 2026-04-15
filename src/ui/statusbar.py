@@ -105,7 +105,10 @@ class StatusBar(QStatusBar):
         Updates status labels and API limit label.
         """
 
-        rem_hreq, rem_dreq = self.__provider.get_remaining_requests()
+        try:
+            rem_hreq, rem_dreq = self.__provider.get_remaining_requests()
+        except ValueError:
+            return
 
         self.api_label.setText(
             self.tr("API: Hourly: {0} | Daily: {1}").format(rem_hreq, rem_dreq)
