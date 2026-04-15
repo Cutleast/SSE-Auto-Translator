@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import NoReturn, Optional, cast, override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
@@ -105,8 +106,12 @@ class Batch(Utility):
             qapp = None
             qt_app = QCoreApplication(sys.argv)  # pyright: ignore[reportUnusedVariable]  # noqa: F841
 
+        cur_path: Path = get_current_path()
+        res_path: Path = cur_path / "res"
         data_path: Path = (
-            Path(args.data_path) if getattr(args, "data_path", None) else Path("data")
+            Path(args.data_path)
+            if getattr(args, "data_path", None)
+            else cur_path / "data"
         )
         cache_path: Path = data_path / "cache"
         log_path: Path = data_path / "logs"
@@ -117,7 +122,7 @@ class Batch(Utility):
             self.__apply_theme(cast(QApplication, qapp), app_config)
             self.__install_translator(cast(QApplication, qapp), app_config)
 
-        UserDataService(res_path=Path("res"), data_path=data_path)
+        UserDataService(res_path=res_path, data_path=data_path)
         Cache(cache_path, App.APP_VERSION)
         GameService(read_resource(":/skyrimse.json"))
 
