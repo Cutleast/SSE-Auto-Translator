@@ -96,14 +96,14 @@ class Batch(Utility):
         # QApplication is required for the progress dialog (a QWidget); without the
         # flag a lightweight QCoreApplication suffices. Keep a reference to the
         # created application object for the lifetime of this batch run.
-        qt_app: QApplication | QCoreApplication
+        qt_app: QApplication | QCoreApplication  # pyright: ignore[reportUnusedVariable]
         qapp: Optional[QApplication]
         if show_progress:
             qapp = QApplication(sys.argv)
-            qt_app = qapp
+            qt_app = qapp  # pyright: ignore[reportUnusedVariable]
         else:
             qapp = None
-            qt_app = QCoreApplication(sys.argv)
+            qt_app = QCoreApplication(sys.argv)  # pyright: ignore[reportUnusedVariable]  # noqa: F841
 
         data_path: Path = (
             Path(args.data_path) if getattr(args, "data_path", None) else Path("data")
