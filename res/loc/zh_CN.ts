@@ -640,7 +640,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="162"/>
+        <location filename="src/core/editor/editor.py" line="163"/>
         <source>Translating with API...</source>
         <translation>使用 API 翻译中...</translation>
     </message>
@@ -722,22 +722,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="134"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="137"/>
         <source>Strings</source>
         <translation>字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="227"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="230"/>
         <source>DSD file</source>
         <translation>DSD 文件</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="228"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="231"/>
         <source>Import pre-v1.1 translation...</source>
         <translation>导入 v1.1 之前的翻译...</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="390"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="393"/>
         <source>Translated %n string from database.</source>
         <comment>Translated %n strings from database.</comment>
         <translation>
@@ -745,22 +745,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="404"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="407"/>
         <source>Search and Replace</source>
         <translation>搜索和替换</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="421"/>
         <source>Case sensitive</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="457"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="460"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="464"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="467"/>
         <source>Are you sure you want to translate %n string via translator API?
 Depending on the translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n strings via translator API?
@@ -771,89 +771,89 @@ Depending on the translator API this can raise unexpected costs.</comment>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="513"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="516"/>
         <source>Save before export?</source>
         <translation>导出前保存？</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="516"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="519"/>
         <source>Do you want to save the translation before exporting? Unsaved changes are not exported.</source>
         <translation>您想在导出之前保存翻译吗？未保存的更改不会导出。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="525"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="528"/>
         <source>Export only</source>
         <translation>仅导出</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="528"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="531"/>
         <source>Save and export</source>
         <translation>保存并导出</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="538"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="541"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>导出翻译（仅支持 DSD 格式）</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="573"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="576"/>
         <source>Reset selected String(s)</source>
         <translation>重置已选择的字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="581"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="584"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="582"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="585"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="387"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="390"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="554"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="413"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="416"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="416"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="419"/>
         <source>Replace</source>
         <translation>替换</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="428"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="431"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="433"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="488"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="436"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="491"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="486"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="480"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
         <source>Don&apos;t show again</source>
         <translation>不要再显示</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="552"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="555"/>
         <source>Translation successfully exported.</source>
         <translation>翻译成功导出。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="575"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="578"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation>您确定要重置所选字符串吗？</translation>
     </message>
@@ -2559,38 +2559,38 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="137"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="138"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="171"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="172"/>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="261"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="98"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="99"/>
         <source>Go to previous string</source>
         <translation>跳至上一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="109"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="110"/>
         <source>Go to next string</source>
         <translation>跳至下一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="143"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="144"/>
         <source>Reset string</source>
         <translation>重置字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="180"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="181"/>
         <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
         <translation>按 F1（翻译完成）、F2（翻译未完成/正在进行中）或 F3（无需翻译）以完成字符串并进入下一个。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="191"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="192"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>

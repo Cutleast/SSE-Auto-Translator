@@ -17,7 +17,8 @@ from core.database.translation import Translation
 from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.translator_api.translator import Translator
+from core.translator.service import TranslatorService
+from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
 
 
@@ -30,7 +31,7 @@ class Editor(QObject):
 
     language: GameLanguage
     database: TranslationDatabase
-    translator: Translator
+    translator_service: TranslatorService
 
     __translation: Translation
     __strings_cache: dict[Path, StringList]
@@ -50,7 +51,7 @@ class Editor(QObject):
         translation: Translation,
         language: GameLanguage,
         database: TranslationDatabase,
-        translator: Translator,
+        translator_service: TranslatorService,
     ) -> None:
         super().__init__()
 
@@ -58,7 +59,7 @@ class Editor(QObject):
 
         self.language = language
         self.database = database
-        self.translator = translator
+        self.translator_service = translator_service
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
@@ -163,10 +164,12 @@ class Editor(QObject):
 
         self.log.info(f"Translating {len(strings)} string(s) with API...")
 
+        translator: Translator = self.translator_service.get_translator()
+
+        self.log.info(f"Used translator API: {translator.__class__.__name__}")
+
         texts: list[str] = [selected_string.original for selected_string in strings]
-        src: str = "English"
-        dst: str = self.language.id
-        result: dict[str, str] = self.translator.mass_translate(texts, src, dst)
+        result: dict[str, str] = translator.mass_translate(texts, self.language)
 
         for string in strings:
             string.string = result[string.original]

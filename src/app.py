@@ -185,7 +185,7 @@ class App(BaseApp, Singleton):
         main_window.initialize(
             cast(AppConfig, self.app_config),
             self.__user_data,
-            self.__component_provider.get_translator(),
+            self.__component_provider.get_translator_service(),
             self.__component_provider.get_scanner(),
             self.__component_provider.get_provider(),
             self.__component_provider.get_download_manager(),

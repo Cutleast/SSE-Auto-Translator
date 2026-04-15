@@ -12,7 +12,7 @@ from PySide6.QtWidgets import QCheckBox
 from pytestqt.qtbot import QtBot
 
 from core.config.translator_config import TranslatorConfig
-from core.translator_api.translator_api import TranslatorApi
+from core.translator.apis import TranslatorApi
 from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
 from ui.settings.translator_settings import TranslatorSettings

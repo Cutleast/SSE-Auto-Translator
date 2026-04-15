@@ -18,7 +18,7 @@ from core.downloader.download_manager import DownloadManager
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.provider import Provider
-from core.translator_api.translator import Translator
+from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.constants import DOCS_URL
 from core.utilities.licenses import LICENSES
@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
 
     app_config: AppConfig
     user_data: UserData
-    translator: Translator
+    translator_service: TranslatorService
     scanner: Scanner
     provider: Provider
     download_manager: DownloadManager
@@ -65,7 +65,7 @@ class MainWindow(QMainWindow):
         self,
         app_config: AppConfig,
         user_data: UserData,
-        translator: Translator,
+        translator_service: TranslatorService,
         scanner: Scanner,
         provider: Provider,
         download_manager: DownloadManager,
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
         Args:
             app_config (AppConfig): App configuration.
             user_data (UserData): User data.
-            translator (Translator): API translator.
+            translator_service (TranslatorService): API translator service.
             scanner (Scanner): Scanner.
             provider (Provider): Translation provider.
             download_manager (DownloadManager): Download manager.
@@ -86,7 +86,7 @@ class MainWindow(QMainWindow):
 
         self.app_config = app_config
         self.user_data = user_data
-        self.translator = translator
+        self.translator_service = translator_service
         self.scanner = scanner
         self.provider = provider
         self.download_manager = download_manager
@@ -144,7 +144,7 @@ class MainWindow(QMainWindow):
         self.tab_widget.addTab(self.mainpage_widget, self.tr("Modlist"))
 
         self.translation_editor = EditorPage(
-            self.app_config, self.user_data, self.translator
+            self.app_config, self.user_data, self.translator_service
         )
         self.tab_widget.addTab(self.translation_editor, self.tr("Translation Editor"))
         self.tab_widget.setTabEnabled(1, False)

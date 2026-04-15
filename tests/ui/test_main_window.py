@@ -38,7 +38,7 @@ class TestMainWindow(BaseTest):
         window.initialize(
             app_config=app_config,
             user_data=user_data,
-            translator=component_provider.get_translator(),
+            translator_service=component_provider.get_translator_service(),
             scanner=component_provider.get_scanner(),
             provider=component_provider.get_provider(),
             download_manager=component_provider.get_download_manager(),

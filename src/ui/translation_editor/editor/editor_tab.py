@@ -34,7 +34,7 @@ from core.editor.editor import Editor
 from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.translator_api.translator import Translator
+from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
@@ -62,7 +62,7 @@ class EditorTab(QWidget):
     translation: Translation
     app_config: AppConfig
     user_data: UserData
-    translator: Translator
+    translator_service: TranslatorService
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
@@ -75,17 +75,20 @@ class EditorTab(QWidget):
         translation: Translation,
         app_config: AppConfig,
         user_data: UserData,
-        translator: Translator,
+        translator_service: TranslatorService,
     ) -> None:
         super().__init__()
 
         self.translation = translation
         self.app_config = app_config
         self.user_data = user_data
-        self.translator = translator
+        self.translator_service = translator_service
 
         self.__editor = Editor(
-            translation, user_data.user_config.language, user_data.database, translator
+            translation=translation,
+            language=user_data.user_config.language,
+            database=user_data.database,
+            translator_service=translator_service,
         )
         self.__editor.update_signal.connect(self.update)
 
@@ -258,7 +261,7 @@ class EditorTab(QWidget):
                 string,
                 self.app_config,
                 self.user_data.user_config,
-                self.translator,
+                self.translator_service,
             )
             dialog.update_signal.connect(self.update)
             dialog.show()

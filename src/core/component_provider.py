@@ -16,7 +16,7 @@ from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
-from core.translator_api.translator import Translator
+from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.temp_folder_provider import TempFolderProvider
 
@@ -30,7 +30,7 @@ class ComponentProvider(Singleton):
     __user_data: UserData
 
     __provider: Optional[Provider] = None
-    __translator: Optional[Translator] = None
+    __translator_service: Optional[TranslatorService] = None
     __state_service: Optional[StateService] = None
     __scanner: Optional[Scanner] = None
     __download_manager: Optional[DownloadManager] = None
@@ -55,10 +55,8 @@ class ComponentProvider(Singleton):
 
         self.__provider = Provider(self.__user_data.user_config)
 
-        self.__translator = (
-            self.__user_data.translator_config.translator.get_api_class()(
-                self.__user_data.translator_config
-            )
+        self.__translator_service = TranslatorService(
+            self.__user_data.translator_config
         )
 
         self.__state_service = StateService(
@@ -104,19 +102,19 @@ class ComponentProvider(Singleton):
 
         return self.__provider
 
-    def get_translator(self) -> Translator:
+    def get_translator_service(self) -> TranslatorService:
         """
         Returns:
-            Translator: Translator.
+            TranslatorService: Translator service.
 
         Raises:
-            ValueError: When the translator is not yet initialized.
+            ValueError: When the translator service is not yet initialized.
         """
 
-        if self.__translator is None:
-            raise ValueError("Translator is not yet initialized.")
+        if self.__translator_service is None:
+            raise ValueError("Translator service is not yet initialized.")
 
-        return self.__translator
+        return self.__translator_service
 
     def get_state_service(self) -> StateService:
         """

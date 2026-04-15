@@ -6,7 +6,7 @@ from typing import Annotated, Optional, override
 
 from cutleast_core_lib.core.config.base_config import BaseConfig
 
-from core.translator_api.translator_api import TranslatorApi
+from core.translator.apis import TranslatorApi
 
 
 class TranslatorConfig(BaseConfig):

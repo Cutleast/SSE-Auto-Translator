@@ -11,7 +11,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QCheckBox, QFormLayout, QLabel, QWidget
 
 from core.config.translator_config import TranslatorConfig
-from core.translator_api.translator_api import TranslatorApi
+from core.translator.apis import TranslatorApi
 
 
 class TranslatorSettings(SettingsPage[TranslatorConfig]):

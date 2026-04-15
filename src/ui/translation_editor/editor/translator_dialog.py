@@ -23,7 +23,8 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.string.string_status import StringStatus
 from core.string.types import String
-from core.translator_api.translator import Translator
+from core.translator.service import TranslatorService
+from core.translator.translator import Translator
 from core.user_data.user_data_service import UserDataService
 from ui.utilities.icon_provider import IconProvider
 from ui.utilities.theme_manager import ThemeManager
@@ -43,7 +44,7 @@ class TranslatorDialog(QWidget):
 
     app_config: AppConfig
     user_config: UserConfig
-    translator: Translator
+    translator_service: TranslatorService
 
     changes_pending: bool = False
     changes_signal = Signal()
@@ -67,13 +68,13 @@ class TranslatorDialog(QWidget):
         initial_string: String,
         app_config: AppConfig,
         user_config: UserConfig,
-        translator: Translator,
+        translator: TranslatorService,
     ) -> None:
         super().__init__(QApplication.activeModalWidget())
 
         self.app_config = app_config
         self.user_config = user_config
-        self.translator = translator
+        self.translator_service = translator
 
         self.changes_signal.connect(self.__on_change)
 
@@ -236,10 +237,9 @@ class TranslatorDialog(QWidget):
         Translates string with API.
         """
 
-        translated: str = self.translator.translate(
-            self.__current_string.original,
-            "English",
-            self.user_config.language.id,
+        translator: Translator = self.translator_service.get_translator()
+        translated: str = translator.translate(
+            self.__current_string.original, self.user_config.language
         )
 
         self.__translated_entry.setPlainText(translated)
