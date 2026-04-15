@@ -12,7 +12,7 @@ dependencies = [
     "cloudscraper",
     "cutleast-core-lib",
     "deepl",
-    "googletrans==3.1.0a0",
+    "googletrans",
     "lingua-language-detector",
     "lz4",
     "mod-manager-lib",
