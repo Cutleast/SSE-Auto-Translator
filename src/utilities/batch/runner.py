@@ -198,7 +198,7 @@ class BatchRunner(Singleton):
 
         assert self.__user_data is not None
 
-        self.log.info(f"Importing {len(archives)} translations(s)...")
+        self.log.info(f"Importing {len(archives)} translation archive(s)...")
 
         database = self.__user_data.database
         mod_instance = self.__user_data.modinstance
