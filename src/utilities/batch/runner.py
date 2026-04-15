@@ -8,6 +8,8 @@ from typing import Optional
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.singleton import Singleton
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from PySide6.QtWidgets import QApplication
 
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
@@ -55,9 +57,13 @@ class BatchRunner(Singleton):
         self.__app_config = app_config
         self.__command = command
 
-    def run(self) -> int:
+    def run(self, ldialog: Optional[LoadingDialog] = None) -> int:
         """
         Executes all requested batch operations sequentially.
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
 
         Returns:
             int: Exit code (0 = success, 1 = failure).
@@ -66,17 +72,17 @@ class BatchRunner(Singleton):
         self.log.info("Starting batch run...")
 
         try:
-            self.__user_data = self.__load_user_data()
-            self.__component_provider = self.__init_components()
+            self.__user_data = self.__load_user_data(ldialog)
+            self.__component_provider = self.__init_components(ldialog)
 
             if self.__command.run_basic_scan:
-                self.__run_basic_scan()
+                self.__run_basic_scan(ldialog)
 
             if self.__command.translation_archives:
-                self.__import_archives(self.__command.translation_archives)
+                self.__import_archives(self.__command.translation_archives, ldialog)
 
             if self.__command.build_output_mod:
-                self.__build_output_mod()
+                self.__build_output_mod(ldialog)
 
         except Exception as ex:
             self.log.error(f"Batch run failed: {ex}", exc_info=ex)
@@ -85,9 +91,13 @@ class BatchRunner(Singleton):
         self.log.info("Batch run completed successfully.")
         return BatchRunner.EXIT_CODE_SUCCESS
 
-    def __load_user_data(self) -> UserData:
+    def __load_user_data(self, ldialog: Optional[LoadingDialog] = None) -> UserData:
         """
         Loads the user data (config, database, modinstance, masterlist).
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
 
         Returns:
             UserData: The loaded user data.
@@ -96,14 +106,20 @@ class BatchRunner(Singleton):
         self.log.info("Loading user data...")
 
         service: UserDataService = UserDataService.get()
-        user_data: UserData = service.load()
+        user_data: UserData = service.load(ldialog)
 
         self.log.info("User data loaded.")
         return user_data
 
-    def __init_components(self) -> ComponentProvider:
+    def __init_components(
+        self, ldialog: Optional[LoadingDialog] = None
+    ) -> ComponentProvider:
         """
         Initializes all app components via ComponentProvider.
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
 
         Returns:
             ComponentProvider: Initialized component provider.
@@ -113,6 +129,13 @@ class BatchRunner(Singleton):
 
         self.log.info("Initializing components...")
 
+        if ldialog is not None:
+            ldialog.updateProgress(
+                text1=QApplication.translate(
+                    "BatchRunner", "Initializing components..."
+                )
+            )
+
         provider = ComponentProvider(self.__app_config, self.__user_data)
         provider.initialize_components()
 
@@ -121,9 +144,13 @@ class BatchRunner(Singleton):
         self.log.info("Components initialized.")
         return provider
 
-    def __run_basic_scan(self) -> None:
+    def __run_basic_scan(self, ldialog: Optional[LoadingDialog] = None) -> None:
         """
         Runs the basic modlist scan and updates all mod file states.
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
         """
 
         assert self.__user_data is not None
@@ -140,7 +167,7 @@ class BatchRunner(Singleton):
         }
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = (
-            scanner.run_basic_scan(items)
+            scanner.run_basic_scan(items, ldialog)
         )
 
         flattened: dict[ModFile, TranslationStatus] = {
@@ -154,26 +181,44 @@ class BatchRunner(Singleton):
 
         if self.__app_config.auto_import_translations:
             self.log.info("Importing installed translations...")
-            scanner.import_installed_translations(list(mod_instance.mods))
+            scanner.import_installed_translations(list(mod_instance.mods), ldialog)
             self.log.info("Translation import complete.")
 
-    def __import_archives(self, archives: list[Path]) -> None:
+    def __import_archives(
+        self, archives: list[Path], ldialog: Optional[LoadingDialog] = None
+    ) -> None:
         """
         Imports translation archives into the database.
 
         Args:
             archives (list[Path]): List of archive file paths to import.
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
         """
 
         assert self.__user_data is not None
 
-        self.log.info(f"Importing {len(archives)} archive(s)...")
+        self.log.info(f"Importing {len(archives)} translations(s)...")
 
         database = self.__user_data.database
         mod_instance = self.__user_data.modinstance
         extractor = StringExtractor()
 
-        for archive_path in archives:
+        for a, archive_path in enumerate(archives):
+            if ldialog is not None:
+                ldialog.updateProgress(
+                    text1=(
+                        QApplication.translate(
+                            "BatchRunner", "Importing translations..."
+                        )
+                        + f" ({a}/{len(archives)})"
+                    ),
+                    value1=a,
+                    max1=len(archives),
+                    show2=True,
+                    text2=archive_path.name,
+                )
+
             if not archive_path.is_file():
                 self.log.warning(
                     f"Archive '{archive_path}' does not exist. Skipping..."
@@ -209,11 +254,15 @@ class BatchRunner(Singleton):
             except Exception as ex:
                 self.log.error(f"Failed to import '{archive_path}': {ex}", exc_info=ex)
 
-        self.log.info("Archive import complete.")
+        self.log.info("Translation import complete.")
 
-    def __build_output_mod(self) -> None:
+    def __build_output_mod(self, ldialog: Optional[LoadingDialog] = None) -> None:
         """
         Builds the output mod at the configured (or overridden) path.
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
         """
 
         assert self.__user_data is not None
@@ -231,6 +280,7 @@ class BatchRunner(Singleton):
             mod_instance=self.__user_data.modinstance,
             translations=self.__user_data.database.user_translations,
             user_config=self.__user_data.user_config,
+            ldialog=ldialog,
         )
 
         self.log.info(f"Output mod built at '{output_path}'.")

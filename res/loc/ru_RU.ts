@@ -270,6 +270,19 @@ This feature is considered experimental because a crash might prevent it from un
     </message>
 </context>
 <context>
+    <name>BatchRunner</name>
+    <message>
+        <location filename="src/utilities/batch/runner.py" line="134"/>
+        <source>Initializing components...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/utilities/batch/runner.py" line="211"/>
+        <source>Importing translations...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BlacklistDialog</name>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="35"/>
