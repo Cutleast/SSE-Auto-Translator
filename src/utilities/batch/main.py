@@ -94,13 +94,16 @@ class Batch(Utility):
         show_progress: bool = getattr(args, "progress", False)
 
         # QApplication is required for the progress dialog (a QWidget); without the
-        # flag a lightweight QCoreApplication suffices.
+        # flag a lightweight QCoreApplication suffices. Keep a reference to the
+        # created application object for the lifetime of this batch run.
+        qt_app: QApplication | QCoreApplication
         qapp: Optional[QApplication]
         if show_progress:
             qapp = QApplication(sys.argv)
+            qt_app = qapp
         else:
             qapp = None
-            QCoreApplication(sys.argv)
+            qt_app = QCoreApplication(sys.argv)
 
         data_path: Path = (
             Path(args.data_path) if getattr(args, "data_path", None) else Path("data")
