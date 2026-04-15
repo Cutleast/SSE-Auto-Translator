@@ -1,0 +1,160 @@
+= Batch CLI
+
+The Batch CLI is a headless command-line interface for SSE Auto Translator that allows you to automate translation workflows without opening the graphical user interface.
+It is intended for use in scripts or other integrated in other apps where you want to trigger scans, import translations, and build the output mod unattended.
+
+== Invocation
+
+The Batch CLI is a sub-command of the SSE-AT executable:
+
+[source,shell]
+----
+SSE-AT.exe batch <command_file> [--data-path <path>] [--progress]
+----
+
+[cols="1,3", options="header"]
+|===
+| Argument | Description
+
+| `command_file`
+| *Required.* Path to a JSON file describing the operations to run.
+See <<command-file>> for the schema.
+
+| `--data-path <path>`
+| Override the SSE-AT data directory (user config, database, logs, …).
+Defaults to the `data/` folder next to `SSE-AT.exe`.
+
+| `--progress`
+| Show a graphical progress dialog while the batch is running.
+Requires a display. When omitted, the process runs fully headless.
+|===
+
+=== Exit codes
+
+[cols="1,3", options="header"]
+|===
+| Code | Meaning
+
+| `0`
+| All requested operations completed successfully.
+
+| `1`
+| At least one operation failed.
+Check the log file in `data/logs/` for details.
+|===
+
+[#command-file]
+== Command file
+
+The batch command is described in a JSON file.
+All fields are optional and default to sensible values when omitted.
+
+=== Schema
+
+[source,json]
+----
+{
+  "run_basic_scan": true,
+  "translation_archives": [],
+  "build_output_mod": true,
+  "output_path": null
+}
+----
+
+=== Fields
+
+[cols="1,1,3", options="header"]
+|===
+| Field | Default | Description
+
+| `run_basic_scan`
+| `true`
+| Run the basic modlist scan that detects which mod files need a translation,
+which already have one installed, and which are fully covered by the database.
+Installed translations are also imported into the database during this step.
+
+| `translation_archives`
+| `[]`
+| List of paths to translation archives (`.7z`, `.zip`, `.rar`) that are
+imported into the local database *before* the output mod is built.
+Missing files are skipped with a warning — the batch run does not fail.
+
+| `build_output_mod`
+| `true`
+| Assemble all database strings into the output mod and write it to disk.
+The destination path is taken from the app configuration or overridden by
+`output_path`.
+
+| `output_path`
+| `null`
+| Override the output mod path for this run.
+Falls back to the path configured in _Settings_ when `null`.
+|===
+
+== Examples
+
+=== Scan only
+
+Run the modlist scan without building an output mod:
+
+[source,json]
+----
+{
+  "run_basic_scan": true,
+  "build_output_mod": false
+}
+----
+
+[source,shell]
+----
+SSE-AT.exe batch scan_only.json
+----
+
+=== Import archives and rebuild output mod
+
+Import two locally stored translation archives, then rebuild the output mod:
+
+[source,json]
+----
+{
+  "run_basic_scan": false,
+  "translation_archives": [
+    "C:\\Translations\\MyMod - German.7z",
+    "C:\\Translations\\AnotherMod - German.zip"
+  ],
+  "build_output_mod": true
+}
+----
+
+[source,shell]
+----
+SSE-AT.exe batch import_and_build.json
+----
+
+=== Full pipeline with custom paths and progress dialog
+
+Run everything — scan, import, and build — against a non-default data directory
+and show a progress window:
+
+[source,json]
+----
+{
+  "run_basic_scan": true,
+  "translation_archives": [
+    "D:\\Downloads\\SomeMod - German.7z"
+  ],
+  "build_output_mod": true,
+  "output_path": "D:\\Modding\\MO2\\mods\\SSE-AT Output"
+}
+----
+
+[source,shell]
+----
+SSE-AT.exe batch full_pipeline.json --data-path "D:\SSE-AT\data" --progress
+----
+
+== Notes
+
+* The batch command re-uses the same user configuration, database, and mod instance that the regular GUI uses.
+  Changes made by a batch run (e.g. newly imported translations) are persisted to disk and will be visible the next time you open SSE-AT.
+* Log files are written to `data/logs/` regardless of whether `--progress` is specified.
