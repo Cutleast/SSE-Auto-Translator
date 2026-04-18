@@ -1,4 +1,4 @@
-= Batch CLI
+= Batch CLI (new in SSE-AT v3.2)
 
 The Batch CLI is a headless command-line interface for SSE Auto Translator that allows you to automate translation workflows without opening the graphical user interface.
 It is intended for use in scripts or other integrated in other apps where you want to trigger scans, import translations, and build the output mod unattended.
