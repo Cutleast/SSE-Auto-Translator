@@ -346,7 +346,7 @@ class DbGen(Utility):
                     ]
 
                 result.setdefault(plugin, []).extend(
-                    strings_folder_path.glob(f"{plugin.name}_*.*strings")
+                    strings_folder_path.glob(f"{plugin.stem}_*.*strings")
                 )
 
         return result
