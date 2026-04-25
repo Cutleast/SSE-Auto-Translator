@@ -346,7 +346,7 @@ class DbGen(Utility):
                     ]
 
                 result.setdefault(plugin, []).extend(
-                    strings_folder_path.glob(f"{plugin.name}_*.*strings")
+                    strings_folder_path.glob(f"{plugin.stem}_*.*strings")
                 )
 
         return result
@@ -389,7 +389,9 @@ class DbGen(Utility):
 
         string_tables: dict[int, str] = {}
 
-        for strings_file in filter(lambda f: language in f.name, strings_files):
+        for strings_file in filter(
+            lambda f: language.lower() in f.name.lower(), strings_files
+        ):
             bsa_path: Optional[Path]
             bsa_string_file: Optional[Path]
             bsa_path, bsa_string_file = split_path_with_bsa(strings_file)
