@@ -345,9 +345,9 @@ class DbGen(Utility):
                         for f in DbGen.get_strings_files_from_bsa(bsa_file, plugin.stem)
                     ]
 
-                result.setdefault(plugin, []).extend(
-                    strings_folder_path.glob(f"{plugin.stem}_*.*strings")
-                )
+            result.setdefault(plugin, []).extend(
+                strings_folder_path.glob(f"{plugin.stem}_*.*strings")
+            )
 
         return result
 
