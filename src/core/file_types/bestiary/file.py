@@ -239,7 +239,7 @@ class BestiaryFile(ModFile):
                 data[BestiaryFile.NAME_KEY] = name_value
             elif string.bestiary_id.endswith(BestiaryFile.ENTRY_DESC_SUFFIX):
                 creature_id: str = string.bestiary_id.removesuffix(
-                    BestiaryFile.ENTRY_NAME_SUFFIX
+                    BestiaryFile.ENTRY_DESC_SUFFIX
                 )
                 data[BestiaryFile.ID_KEY] = creature_id
 
