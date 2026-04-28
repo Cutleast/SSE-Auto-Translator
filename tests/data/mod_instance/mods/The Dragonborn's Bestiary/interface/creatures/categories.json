@@ -1,0 +1,14 @@
+{
+  "categories": {
+    "animals":"animals",
+    "aquatic": "aquatic",
+    "automatons": "automatons",
+    "beasts": "beasts",
+    "daedra": "daedra",
+    "draconids": "draconids",
+    "golems": "golems",
+    "insectoids": "insectoids",
+    "monsters": "monsters",
+    "undead":"undead"
+  }
+}
