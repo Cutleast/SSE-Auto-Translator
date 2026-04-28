@@ -42,8 +42,8 @@ class TestModInstanceLoader(CoreTest):
 
         # then
         assert mod_instance.display_name == "Portable > Default"
-        assert len(mod_instance.mods) == 8
-        assert len(mod_instance.modfiles) == 10
+        assert len(mod_instance.mods) == 10
+        assert len(mod_instance.modfiles) == 19
 
     def test_load_global_mo2_instance(
         self, global_mo2_instance_info: MO2InstanceInfo
@@ -62,8 +62,8 @@ class TestModInstanceLoader(CoreTest):
 
         # then
         assert mod_instance.display_name == "Test Instance > Default"
-        assert len(mod_instance.mods) == 8
-        assert len(mod_instance.modfiles) == 10
+        assert len(mod_instance.mods) == 10
+        assert len(mod_instance.modfiles) == 19
 
     def test_load_non_existing_mo2_instance(self, data_folder: Path) -> None:
         """
