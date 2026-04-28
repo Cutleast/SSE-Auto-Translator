@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import re
 from pathlib import Path
-from typing import Any, BinaryIO, TypeAlias, override
+from typing import Any, BinaryIO, Optional, TypeAlias, override
 
 from pydantic import TypeAdapter, ValidationError
 
@@ -63,6 +63,22 @@ class BestiaryFile(ModFile):
 
     LOOT_ID_SEP: str = "_LOOT"
     """ID separator for identifying the category of a loot item."""
+
+    LOOT_ID_PATTERN: re.Pattern[str] = re.compile(
+        rf"(?P<creature>.*?){LOOT_ID_SEP}-(?P<index>[0-9]+)/(?P<count>[0-9]+)-"
+        "(?P<category>.*)"
+    )
+    """
+    Pattern for the ID of a loot item string.
+    
+    Named groups:
+        creature: ID of the creature this loot item belongs to.
+        index:
+            Index of this loot item in the list of loot items for the current creature
+            (starting with 0).
+        count: Total number of loot items for the current creature.
+        category: Category of this loot item (e.g. "food", "weapon", etc.).
+    """
 
     @override
     @classmethod
@@ -279,11 +295,14 @@ class BestiaryFile(ModFile):
             if not isinstance(string, BestiaryString):
                 continue
 
-            if BestiaryFile.LOOT_ID_SEP not in string.bestiary_id:
+            match: Optional[re.Match[str]] = BestiaryFile.LOOT_ID_PATTERN.match(
+                string.bestiary_id
+            )
+            if match is None:
                 continue
 
             text: str = string.string if string.string is not None else string.original
-            category: str = string.bestiary_id.split(BestiaryFile.LOOT_ID_SEP, 1)[0]
+            category: str = match.group("category")
 
             loot_items.append((text, category))
 
