@@ -36,7 +36,7 @@ def matches_filter(filter: SearchFilter, string: String) -> bool:
     matching: bool = True
 
     if id_filter and matching:
-        matching = id_filter in string.display_id
+        matching = id_filter.lower() in string.display_id.lower()
 
     if original_filter and matching:
         matching = original_filter.lower() in string.original.lower()
