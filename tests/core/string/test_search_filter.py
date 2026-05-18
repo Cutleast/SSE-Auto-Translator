@@ -20,12 +20,19 @@ def load_search_filter(monkeypatch: MonkeyPatch):
     return importlib.reload(search_filter)
 
 
-def test_matches_filter_id_is_case_insensitive(monkeypatch: MonkeyPatch) -> None:
-    search_filter = load_search_filter(monkeypatch)
-    string = SimpleNamespace(
-        display_id="04000D65|Obsidian Weathers.esp - ObsidianSpell - SPEL FULL",
-        original="Hello",
-        string="Hallo",
-    )
+class TestSearchFilter:
+    """
+    Tests `core.string.search_filter`.
+    """
 
-    assert search_filter.matches_filter({"id": "obsidianspell"}, string)
+    def test_matches_filter_id_is_case_insensitive(
+        self, monkeypatch: MonkeyPatch
+    ) -> None:
+        search_filter = load_search_filter(monkeypatch)
+        string = SimpleNamespace(
+            display_id="04000D65|Obsidian Weathers.esp - ObsidianSpell - SPEL FULL",
+            original="Hello",
+            string="Hallo",
+        )
+
+        assert search_filter.matches_filter({"id": "obsidianspell"}, string)
