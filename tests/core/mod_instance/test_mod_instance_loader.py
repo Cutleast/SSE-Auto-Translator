@@ -6,9 +6,9 @@ from pathlib import Path
 
 import pytest
 from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.core.mod_manager.apis import ModManagerApi
 from mod_manager_lib.core.mod_manager.exceptions import InstanceNotFoundError
-from mod_manager_lib.core.mod_manager.mod_manager import ModManager
-from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
     MO2InstanceInfo,
 )
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
@@ -79,7 +79,7 @@ class TestModInstanceLoader(CoreTest):
             base_folder=data_folder / "lol",
             mods_folder=data_folder / "lol" / "mods",
             profiles_folder=data_folder / "lol" / "profiles",
-            mod_manager=ModManager.ModOrganizer,
+            mod_manager=ModManagerApi.ModOrganizer,
         )
         loader = ModInstanceLoader()
 
@@ -119,7 +119,7 @@ class TestModInstanceLoader(CoreTest):
             display_name="Something",
             game=GameService.get_game_by_id("skyrimse"),
             id="lol",
-            mod_manager=ModManager.Vortex,
+            mod_manager=ModManagerApi.Vortex,
         )
         loader = ModInstanceLoader()
 

@@ -1082,7 +1082,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstanceCreatorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="81"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_creator/instance_creator_widget.py" line="85"/>
         <source>Mod manager:</source>
         <translation>Mod 管理：</translation>
     </message>
@@ -1108,7 +1108,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstanceSelectorWidget</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="99"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="102"/>
         <source>Mod manager:</source>
         <translation>Mod 管理器：</translation>
     </message>
@@ -1631,40 +1631,40 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="152"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="228"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="132"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="208"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="170"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="521"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="150"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="501"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载工具 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="259"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="239"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="321"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="472"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="301"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="452"/>
         <source>Processing mod conflicts...</source>
         <translation>正在处理模组冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="487"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="467"/>
         <source>Processing single file conflicts...</source>
         <translation>正在处理单个文件冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="730"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="708"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>正在下载并安装 ModOrganizer...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/modorganizer.py" line="763"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="741"/>
         <source>Extracting archive...</source>
         <translation>正在解压压缩包...</translation>
     </message>
@@ -2166,7 +2166,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>查看日志</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="111"/>
+        <location filename="src/ui/statusbar.py" line="114"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation>API: 每小时: {0} | 每日: {1}</translation>
     </message>
@@ -2850,22 +2850,22 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Vortex</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="146"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="130"/>
         <source>Loading profile {0}...</source>
         <translation>正在加载配置文件 {0}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="191"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="175"/>
         <source>Loading mods from profile {0}...</source>
         <translation>正在从配置文件加载模组 {0}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="233"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="217"/>
         <source>Loading mods from profile {0}: {1}...</source>
         <translation>正在从配置文件加载模组件 {0}:{1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/vortex.py" line="441"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="425"/>
         <source>Loading tools from Vortex...</source>
         <translation>正在从 Vortex 加载工具...</translation>
     </message>

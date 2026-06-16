@@ -20,8 +20,8 @@ from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from cutleast_core_lib.test.utils import Utils
 from mod_manager_lib.core.game_service import GameService
-from mod_manager_lib.core.mod_manager.mod_manager import ModManager
-from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+from mod_manager_lib.core.mod_manager.apis import ModManagerApi
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
     MO2InstanceInfo,
 )
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
@@ -226,7 +226,7 @@ class BaseTest(CoreBaseTest):
             base_folder=base_dir_path,
             mods_folder=base_dir_path / "mods",
             profiles_folder=base_dir_path / "profiles",
-            mod_manager=ModManager.ModOrganizer,
+            mod_manager=ModManagerApi.ModOrganizer,
         )
 
     @pytest.fixture
@@ -250,7 +250,7 @@ class BaseTest(CoreBaseTest):
             base_folder=base_dir_path,
             mods_folder=base_dir_path / "mods",
             profiles_folder=base_dir_path / "profiles",
-            mod_manager=ModManager.ModOrganizer,
+            mod_manager=ModManagerApi.ModOrganizer,
         )
 
     @pytest.fixture
@@ -266,7 +266,7 @@ class BaseTest(CoreBaseTest):
             display_name="Test Instance (1a2b3c4d)",
             game=GameService.get_game_by_id("skyrimse"),
             id="1a2b3c4d",
-            mod_manager=ModManager.Vortex,
+            mod_manager=ModManagerApi.Vortex,
         )
 
     @pytest.fixture

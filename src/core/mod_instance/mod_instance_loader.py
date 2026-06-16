@@ -11,14 +11,14 @@ from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from mod_manager_lib.core.instance.instance import Instance
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
 from mod_manager_lib.core.mod_manager.instance_info import InstanceInfo
-from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
-    MO2InstanceInfo,
-)
-from mod_manager_lib.core.mod_manager.modorganizer.modorganizer import (
+from mod_manager_lib.core.mod_manager.modorganizer.api import (
     ModOrganizer,
 )
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
+    MO2InstanceInfo,
+)
+from mod_manager_lib.core.mod_manager.vortex.api import Vortex
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
-from mod_manager_lib.core.mod_manager.vortex.vortex import Vortex
 from PySide6.QtCore import QObject
 
 from core.database.exporter import OUTPUT_MOD_MARKER_FILENAME

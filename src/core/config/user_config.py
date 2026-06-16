@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Annotated, Optional, override
 
 from cutleast_core_lib.core.config.base_config import BaseConfig
-from mod_manager_lib.core.mod_manager.modorganizer.mo2_instance_info import (
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
     MO2InstanceInfo,
 )
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
