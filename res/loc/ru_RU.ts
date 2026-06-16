@@ -645,6 +645,14 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
     </message>
 </context>
 <context>
+    <name>DragHandle</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/flex_container/drag_handle.py" line="52"/>
+        <source>Drag to rearrange</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Editor</name>
     <message>
         <location filename="src/core/editor/editor.py" line="163"/>
@@ -1177,27 +1185,27 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="268"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="269"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="358"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="360"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="361"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="368"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="369"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="369"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="370"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1791,42 +1799,42 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Position</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="69"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="42"/>
         <source>Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="70"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="43"/>
         <source>Bottom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="71"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="44"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="72"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="45"/>
         <source>Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="73"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="46"/>
         <source>Top Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="74"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="47"/>
         <source>Top Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="77"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="48"/>
         <source>Bottom Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="80"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="49"/>
         <source>Bottom Right</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1834,27 +1842,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="221"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="222"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="292"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="293"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="295"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="296"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="303"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="304"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="304"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="305"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2353,6 +2361,14 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <message>
         <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
         <source>String</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>StylesheetEditorWidget</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="47"/>
+        <source>Apply stylesheet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
