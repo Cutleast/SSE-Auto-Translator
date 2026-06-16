@@ -1,3 +1,9 @@
+# v3.1.1
+
+- Fix database generator CLI utility
+- Fix bestiary translation export
+- Fix string ID search being case-sensitive
+
 # v3.1.0
 
 - Add full support for [Dragonborn's Bestiary](https://www.nexusmods.com/skyrimspecialedition/mods/123521)
