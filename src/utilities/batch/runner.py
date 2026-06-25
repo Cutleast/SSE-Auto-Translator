@@ -19,7 +19,9 @@ from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
+from core.scanner.scanner import Scanner
 from core.string.string_extractor import StringExtractor
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
@@ -158,12 +160,17 @@ class BatchRunner(Singleton):
 
         self.log.info("Running basic scan...")
 
-        scanner = self.__component_provider.get_scanner()
+        scanner: Scanner = self.__component_provider.get_scanner()
         state_service: StateService = self.__component_provider.get_state_service()
-        mod_instance = self.__user_data.modinstance
+        mod_instance: ModInstance = self.__user_data.modinstance
 
         items: dict[Mod, list[ModFile]] = {
-            mod: mod.modfiles for mod in mod_instance.mods
+            mod: [
+                mf
+                for mf in mod.modfiles
+                if not self.__user_data.masterlist.is_ignored(mf.name)
+            ]
+            for mod in mod_instance.mods
         }
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = (
