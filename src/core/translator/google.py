@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import asyncio
-from typing import Optional, final, override
+from typing import ClassVar, Optional, final, override
 
 import googletrans
 import googletrans.models
@@ -21,8 +21,9 @@ class GoogleTranslator(Translator):
     API class for translating texts with Google Translator.
     """
 
-    LANG_OVERRIDES: dict[GameLanguage, str] = {
+    LANG_OVERRIDES: ClassVar[dict[GameLanguage, str]] = {
         GameLanguage.Chinese: "zh-cn",
+        GameLanguage.Portuguese: "pt",
     }
 
     @override
