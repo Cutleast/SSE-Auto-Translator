@@ -210,12 +210,12 @@ class TranslationsTab(QWidget):
         for file in files:
             if file.suffix.lower() in SUPPORTED_ARCHIVE_TYPES:
                 strings = ProgressDialog(
-                    lambda pdialog: StringExtractor().extract_strings(
+                    lambda pdisplay: StringExtractor().extract_strings(
                         file,
                         mod_instance=self.mod_instance,
                         language=self.database.language,
                         max_workers=self.app_config.worker_thread_num,
-                        pdialog=pdialog,
+                        pdisplay=pdisplay,
                     )
                 ).run()
 

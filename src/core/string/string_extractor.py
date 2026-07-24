@@ -15,7 +15,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
 
 from core.file_source.archive_file_source import ArchiveFileSource
@@ -52,7 +52,7 @@ class StringExtractor(QObject):
         language: GameLanguage,
         include_dsd_files: bool = True,
         max_workers: int = 4,
-        pdialog: Optional[ProgressDialog] = None,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> dict[Path, StringList]:
         """
         Extracts strings from all supported mod files in an archive or directory and maps
@@ -67,8 +67,8 @@ class StringExtractor(QObject):
                 Whether to include DSD files. Defaults to True.
             max_workers (int, optional):
                 Maximum number of threads to use. Defaults to 4.
-            pdialog (Optional[ProgressDialog], optional):
-                Optional progress dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             dict[Path, StringList]: Mapping of mod file path to list of strings.
@@ -83,8 +83,8 @@ class StringExtractor(QObject):
         self.log.info(f"Extracting strings from supported mod files in '{input}'...")
         self.log.info(f"Source is archive: {isinstance(source, Archive)}")
 
-        if pdialog is not None:
-            pdialog.updateMainProgress(
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
                 ProgressUpdate(
                     status_text=self.tr("Extracting strings from '{0}'...").format(
                         input
@@ -123,7 +123,7 @@ class StringExtractor(QObject):
 
         result: dict[Path, StringList] = {}
 
-        with ProgressExecutor(pdialog, max_workers) as executor:
+        with ProgressExecutor(pdisplay, max_workers) as executor:
             executor.set_main_progress_text(
                 self.tr("Extracting strings from '{0}'...").format(input)
             )

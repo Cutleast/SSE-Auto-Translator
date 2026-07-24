@@ -17,7 +17,7 @@ dependencies = [
     "lz4",
     "mod-manager-lib",
     "plyvel-ci",
-    "PySide6<6.11",  # 6.11 has a bug with hover effects
+    "PySide6",
     "pytz",
     "pyuac",
     "pywin32",
@@ -52,6 +52,26 @@ members = [
 cutleast-core-lib = { workspace = true }
 mod-manager-lib = { workspace = true }
 
+[tool.ruff]
+line-length = 89
+
+[tool.ruff.lint]
+extend-select = ["D"]
+ignore = [
+    "D105",  # Missing docstring in magic method
+    "D200",  # One-line docstring should fit on one line
+    "D202",  # No blank line before function
+    "D205",  # 1 blank line required between summary line and description
+    "D212",  # Multi-line docstring summary should start at the second line
+    "D415",  # First line should end with a period
+]
+
+[tool.ruff.lint.per-file-ignores]
+"resources_rc.py" = ["D100", "D103"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
@@ -68,12 +88,22 @@ extraPaths = ["src", "core-lib/src", "mod-manager-lib/src"]
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
 deprecateTypingAliases = false
+reportConstantRedefinition = true
+reportDeprecated = "warning"
+reportDuplicateImport = true
+reportIncompleteStub = "warning"
+reportIncompatibleMethodOverride = "warning"
+reportInconsistentConstructor = "warning"
+reportImplicitAbstractClass = "error"
 reportImplicitOverride = "warning"
+reportInvalidStubStatement = "warning"
 reportMatchNotExhaustive = false
+reportMissingImports = "error"
+reportMissingParameterType = "error"
 reportMissingTypeArgument = false
 reportMissingTypeStubs = false
-reportPropertyTypeMismatch = "warning"
-reportShadowedImports = "warning"
+reportPrivateUsage = "warning"
+reportTypeCommentUsage = "information"
 reportUnknownArgumentType = false
 reportUnknownLambdaType = false
 reportUnknownMemberType = false
@@ -88,3 +118,11 @@ reportUnusedClass = "warning"
 reportUnusedImport = "warning"
 reportUnusedFunction = "warning"
 reportUnusedVariable = "warning"
+reportUntypedBaseClass = "error"
+reportUntypedClassDecorator = "error"
+reportUntypedFunctionDecorator = "error"
+reportUntypedNamedTuple = "error"
+reportWildcardImportFromLibrary = "warning"
+strictDictionaryInference = true
+strictListInference = true
+strictSetInference = true

@@ -361,7 +361,7 @@ class MainPageWidget(QWidget):
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *ProgressDialog(
-                lambda pdialog: self.scanner.run_online_scan(modfiles, pdialog)
+                lambda pdisplay: self.scanner.run_online_scan(modfiles, pdisplay)
             )
             .run()
             .values()
@@ -388,8 +388,8 @@ class MainPageWidget(QWidget):
             items = self.__modinstance_widget.get_selected_modfiles()
 
         download_entries: DownloadListEntries = ProgressDialog(
-            lambda pdialog: self.download_manager.collect_available_downloads(
-                items, pdialog
+            lambda pdisplay: self.download_manager.collect_available_downloads(
+                items, pdisplay
             ),
         ).run()
         if download_entries:

@@ -14,7 +14,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
 from core.config.app_config import AppConfig
@@ -266,15 +266,17 @@ class DownloadManager(QObject):
         download.stale = True
 
     def collect_available_downloads(
-        self, items: dict[Mod, list[ModFile]], pdialog: Optional[ProgressDialog] = None
+        self,
+        items: dict[Mod, list[ModFile]],
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> DownloadListEntries:
         """
         Collects downloads for required translations that are available online.
 
         Args:
             items (dict[Mod, list[ModFile]]): The items to collect downloads for.
-            pdialog (Optional[ProgressDialog], optional):
-                Optional Loading dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             DownloadListEntries:
@@ -283,8 +285,8 @@ class DownloadManager(QObject):
 
         self.log.info("Getting downloads for required translations...")
 
-        if pdialog is not None:
-            pdialog.updateMainProgress(
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
                 ProgressUpdate(status_text=self.tr("Collecting available downloads..."))
             )
 
@@ -301,7 +303,7 @@ class DownloadManager(QObject):
 
         translation_downloads: DownloadListEntries = {}
         with ProgressExecutor(
-            pdialog, max_workers=self.app_config.worker_thread_num
+            pdisplay, max_workers=self.app_config.worker_thread_num
         ) as executor:
             executor.set_main_progress_text(
                 self.tr("Collecting available downloads...")

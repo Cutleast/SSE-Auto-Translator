@@ -275,12 +275,12 @@ This feature is considered experimental because a crash might prevent it from un
 <context>
     <name>BatchRunner</name>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="134"/>
+        <location filename="src/utilities/batch/runner.py" line="136"/>
         <source>Initializing components...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="211"/>
+        <location filename="src/utilities/batch/runner.py" line="218"/>
         <source>Importing translations...</source>
         <translation type="unfinished">正在导入翻译文件...</translation>
     </message>
@@ -585,8 +585,8 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="288"/>
-        <location filename="src/core/downloader/download_manager.py" line="307"/>
+        <location filename="src/core/downloader/download_manager.py" line="290"/>
+        <location filename="src/core/downloader/download_manager.py" line="309"/>
         <source>Collecting available downloads...</source>
         <translation>正在收集可用的下载...</translation>
     </message>
@@ -1849,27 +1849,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="222"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="98"/>
+        <source>Cancel</source>
+        <translation type="unfinished">取消</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="155"/>
         <source>Elapsed time:</source>
         <translation>耗时：</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="293"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="208"/>
         <source>Cancel?</source>
         <translation>取消？</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="296"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="211"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>您确定要取消吗？这可能会产生意想不到的后果，具体取决于当前运行的进度！</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="304"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="219"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="305"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="220"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -1938,7 +1943,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="579"/>
+        <location filename="src/core/scanner/scanner.py" line="581"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
@@ -1953,33 +1958,33 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在检测语言...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="230"/>
-        <location filename="src/core/scanner/scanner.py" line="267"/>
+        <location filename="src/core/scanner/scanner.py" line="232"/>
+        <location filename="src/core/scanner/scanner.py" line="269"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="378"/>
+        <location filename="src/core/scanner/scanner.py" line="380"/>
         <source>Running deep scan...</source>
         <translation>正在运行深度扫描...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="436"/>
+        <location filename="src/core/scanner/scanner.py" line="438"/>
         <source>Scanning strings...</source>
         <translation>正在扫描字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="503"/>
+        <location filename="src/core/scanner/scanner.py" line="505"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="635"/>
+        <location filename="src/core/scanner/scanner.py" line="637"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="684"/>
+        <location filename="src/core/scanner/scanner.py" line="686"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>

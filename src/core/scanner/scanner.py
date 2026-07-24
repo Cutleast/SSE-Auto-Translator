@@ -14,7 +14,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
@@ -208,23 +208,25 @@ class Scanner(QObject):
         return status
 
     def run_online_scan(
-        self, items: dict[Mod, list[ModFile]], pdialog: Optional[ProgressDialog] = None
+        self,
+        items: dict[Mod, list[ModFile]],
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> dict[Mod, dict[ModFile, TranslationStatus]]:
         """
         Scans online for available translations.
 
         Args:
             items (dict[Mod, list[ModFile]]): The items to scan.
-            pdialog (Optional[ProgressDialog], optional):
-                Optional progress dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             dict[Mod, dict[ModFile, TranslationStatus]]:
                 A dictionary of mods, their mod files and their status.
         """
 
-        if pdialog is not None:
-            pdialog.updateMainProgress(
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
                 ProgressUpdate(
                     status_text=self.tr(
                         "Scanning online for available translations..."
@@ -261,7 +263,7 @@ class Scanner(QObject):
         )
 
         with ProgressExecutor(
-            pdialog, max_workers=self.app_config.worker_thread_num
+            pdisplay, max_workers=self.app_config.worker_thread_num
         ) as executor:
             executor.set_main_progress_text(
                 self.tr("Scanning online for available translations...")
