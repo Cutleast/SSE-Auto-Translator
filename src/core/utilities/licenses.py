@@ -15,7 +15,7 @@ LICENSES = {
     "requests": "https://github.com/psf/requests/blob/main/LICENSE",
     "jstyleson": "https://github.com/linjackson78/jstyleson/blob/master/LICENSE",
     "semantic-version": "https://github.com/rbarrois/python-semanticversion/blob/master/LICENSE",
-    "plyvel-ci": "https://github.com/wbolster/plyvel/blob/main/LICENSE.rst",
+    "plyvel-next": "https://github.com/Modding-Forge/plyvel-next/blob/master/LICENSE",
     "py7zr": "https://github.com/miurahr/py7zr/blob/master/LICENSE",
     "rarfile": "https://github.com/markokr/rarfile/blob/master/LICENSE",
     "cloudscraper": "https://github.com/VeNoMouS/cloudscraper/blob/master/LICENSE",

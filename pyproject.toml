@@ -16,7 +16,7 @@ dependencies = [
     "lingua-language-detector",
     "lz4",
     "mod-manager-lib",
-    "plyvel-ci",
+    "plyvel-next",
     "PySide6",
     "pytz",
     "pyuac",
