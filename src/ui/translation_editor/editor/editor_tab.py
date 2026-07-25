@@ -315,9 +315,7 @@ class EditorTab(QWidget):
             int: The index
         """
 
-        index: int = self.__strings_widget.get_index_of_string(
-            string, only_visible=True
-        )
+        index: int = self.__strings_widget.get_index_of_string(string, only_visible=True)
         return index
 
     def get_string(self, index: int) -> Optional[String]:

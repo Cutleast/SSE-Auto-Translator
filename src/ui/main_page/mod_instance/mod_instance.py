@@ -154,9 +154,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.online_scan_requested.connect(self.online_scan_requested.emit)
         self.__menu.download_requested.connect(self.downloads_requested.emit)
         self.__menu.deep_scan_requested.connect(self.deep_scan_requested.emit)
-        self.__menu.import_as_translation_requested.connect(
-            self.__import_as_translation
-        )
+        self.__menu.import_as_translation_requested.connect(self.__import_as_translation)
         self.__menu.show_untranslated_strings_requested.connect(
             self.__show_untranslated_strings
         )
@@ -586,9 +584,7 @@ class ModInstanceWidget(QTreeWidget):
 
                 if original_mod is not None:
                     strings: dict[Path, StringList] = (
-                        StringExtractor.map_strings_from_mods(
-                            current_item, original_mod
-                        )
+                        StringExtractor.map_strings_from_mods(current_item, original_mod)
                     )
                     DatabaseService.create_translation_from_mod(
                         current_item, original_mod, strings, self.database

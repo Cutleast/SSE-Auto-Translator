@@ -50,9 +50,7 @@ class Batch(Utility):
     DATA_PATH_ARG: str = "--data-path"
     DATA_PATH_HELP: str = "Override for the SSE-AT data directory."
     PROGRESS_ARG: str = "--progress"
-    PROGRESS_HELP: str = (
-        "Show a progress dialog while the batch operations are running."
-    )
+    PROGRESS_HELP: str = "Show a progress dialog while the batch operations are running."
 
     @override
     def __repr__(self) -> str:
@@ -60,9 +58,7 @@ class Batch(Utility):
 
     @override
     def add_subparser(self, subparsers: _SubParsersAction) -> None:
-        subparser: ArgumentParser = subparsers.add_parser(
-            Batch.COMMAND, help=Batch.HELP
-        )
+        subparser: ArgumentParser = subparsers.add_parser(Batch.COMMAND, help=Batch.HELP)
         subparser.add_argument(Batch.COMMAND_FILE_ARG, help=Batch.COMMAND_FILE_HELP)
         subparser.add_argument(
             Batch.DATA_PATH_ARG, help=Batch.DATA_PATH_HELP, default=None

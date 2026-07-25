@@ -18,11 +18,7 @@ from cutleast_core_lib.core.utilities.singleton import Singleton
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QTranslator
-from PySide6.QtWidgets import (
-    QApplication,
-    QDialog,
-    QMessageBox,
-)
+from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
 
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
@@ -61,7 +57,7 @@ class App(BaseApp, Singleton):
 
     executable, compiled = get_execution_info()
 
-    exit_chain: list[Callable[[], None]] = []
+    exit_chain: list[Callable[[], None]]
     """
     List of functions to call before the application exits.
     """
@@ -78,6 +74,7 @@ class App(BaseApp, Singleton):
         )
         self.cache_path = self.data_path / "cache"
         self.log_path = self.data_path / "logs"
+        self.exit_chain = []
 
         Cache(self.cache_path, App.APP_VERSION)
         self.__user_data_service = UserDataService(self.res_path, self.data_path)
