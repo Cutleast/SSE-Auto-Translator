@@ -6,9 +6,10 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.exception_handler import ExceptionHandler
 from cutleast_core_lib.core.utilities.singleton import SingletonQObject
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -46,13 +47,13 @@ class UserDataService(SingletonQObject):
         self.__res_path = res_path
         self.__data_path = data_path
 
-    def load(self, ldialog: Optional[LoadingDialog[UserData]] = None) -> UserData:
+    def load(self, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
         """
         Loads the user data from the configured folder.
 
         Args:
-            ldialog (Optional[LoadingDialog[UserData]], optional):
-                Optional loading dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             UserData: The loaded user data.
@@ -60,28 +61,40 @@ class UserDataService(SingletonQObject):
 
         self.log.info(f"Loading user data from '{self.__data_path}'...")
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading user configuration..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Loading user configuration..."))
+            )
 
         user_config = self.__load_user_config()
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading translator configuration..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(
+                    status_text=self.tr("Loading translator configuration...")
+                )
+            )
 
         translator_config = self.__load_translator_config()
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading translation database..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Loading translation database..."))
+            )
 
-        database = self.__load_database(user_config.language, ldialog)
+        database = self.__load_database(user_config.language, pdisplay)
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading modlist..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Loading modlist..."))
+            )
 
-        modinstance = self.__load_modinstance(user_config, ldialog)
+        modinstance = self.__load_modinstance(user_config, pdisplay)
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Loading masterlist..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Loading masterlist..."))
+            )
 
         masterlist = self.__load_masterlist(user_config)
 
@@ -108,7 +121,7 @@ class UserDataService(SingletonQObject):
         return TranslatorConfig.load(self.__data_path)
 
     def __load_database(
-        self, language: GameLanguage, ldialog: Optional[LoadingDialog[UserData]] = None
+        self, language: GameLanguage, pdisplay: Optional[ProgressDisplay] = None
     ) -> TranslationDatabase:
         self.log.info(f"Loading translation database for language '{language}'...")
 
@@ -118,7 +131,7 @@ class UserDataService(SingletonQObject):
         return DatabaseService.load_database(appdb_path, userdb_path, language)
 
     def __load_modinstance(
-        self, user_config: UserConfig, ldialog: Optional[LoadingDialog[UserData]] = None
+        self, user_config: UserConfig, pdisplay: Optional[ProgressDisplay] = None
     ) -> ModInstance:
         if user_config.modinstance is not None:
             self.log.info("Loading modinstance...")
@@ -127,7 +140,7 @@ class UserDataService(SingletonQObject):
                 instance_info=user_config.modinstance,
                 language=user_config.language,
                 include_bsas=user_config.parse_bsa_archives,
-                ldialog=ldialog,
+                pdisplay=pdisplay,
             )
 
         self.log.info("No modinstance configured. Creating empty modinstance...")

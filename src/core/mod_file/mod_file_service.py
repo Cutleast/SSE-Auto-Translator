@@ -7,7 +7,11 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.filesystem.utils import glob
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.core.multithreading.progress import (
+    ProgressUpdate,
+    UpdateCallback,
+    update,
+)
 from mod_manager_lib.core.instance.mod import Mod
 from PySide6.QtCore import QObject
 
@@ -30,7 +34,7 @@ class ModFileService(QObject):
         mod: Mod,
         language: GameLanguage,
         include_bsas: bool,
-        ldialog: Optional[LoadingDialog] = None,
+        update_callback: Optional[UpdateCallback] = None,
     ) -> list[ModFile]:
         """
         Scans the specified mod and returns all mod files.
@@ -39,14 +43,23 @@ class ModFileService(QObject):
             mod (Mod): Mod to scan.
             language (GameLanguage): Language to filter for.
             include_bsas (bool): Whether to include mod files from BSA archives.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
+            update_callback (Optional[UpdateCallback], optional):
+                Optional update callback. Defaults to None.
 
         Returns:
             list[ModFile]: List of mod files.
         """
 
         self.log.info(f"Scanning '{mod.display_name}' for mod files...")
+
+        update(
+            update_callback,
+            ProgressUpdate(
+                status_text=self.tr("{modname}: Scanning for mod files...").format(
+                    modname=mod.display_name
+                ),
+            ),
+        )
 
         modfiles: list[ModFile] = []
         for file_type in FileType:
@@ -57,6 +70,15 @@ class ModFileService(QObject):
                         modfiles.append(file_type_cls(path.name, path))
 
         if include_bsas:
+            update(
+                update_callback,
+                ProgressUpdate(
+                    status_text=self.tr("{modname}: Scanning BSAs...").format(
+                        modname=mod.display_name
+                    ),
+                ),
+            )
+
             for bsa_file in mod.path.glob("*.bsa"):
                 modfiles.extend(self.get_modfiles_from_bsa(bsa_file, language))
 
@@ -65,10 +87,7 @@ class ModFileService(QObject):
         return modfiles
 
     def get_modfiles_from_bsa(
-        self,
-        bsa_file: Path,
-        language: GameLanguage,
-        ldialog: Optional[LoadingDialog] = None,
+        self, bsa_file: Path, language: GameLanguage
     ) -> list[ModFile]:
         """
         Scans the specified BSA archive and returns all mod files.
@@ -76,8 +95,6 @@ class ModFileService(QObject):
         Args:
             bsa_file (Path): Path to BSA archive.
             language (GameLanguage): Language to filter for.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
 
         Returns:
             list[ModFile]: List of mod files.

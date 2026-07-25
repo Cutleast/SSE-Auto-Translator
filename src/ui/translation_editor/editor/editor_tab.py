@@ -7,8 +7,8 @@ import re
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QKeySequence, QShortcut
@@ -499,12 +499,12 @@ class EditorTab(QWidget):
             else:
                 return
 
-        LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.__editor.translate_with_api(
-                self.__strings_widget.get_selected_strings(), ldialog
+        ProgressDialog(
+            lambda pdisplay: self.__editor.translate_with_api(
+                self.__strings_widget.get_selected_strings(), pdisplay
             ),
-        )
+            QApplication.activeModalWidget(),
+        ).run()
 
     def __export(self) -> None:
         """

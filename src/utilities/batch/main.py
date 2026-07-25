@@ -13,7 +13,7 @@ from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QCoreApplication, QTranslator
 from PySide6.QtWidgets import QApplication
@@ -134,7 +134,7 @@ class Batch(Utility):
 
         retcode: int
         if show_progress:
-            retcode = LoadingDialog.run_callable(None, runner.run)
+            retcode = ProgressDialog(runner.run).run()
         else:
             retcode = runner.run()
 

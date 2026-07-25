@@ -9,7 +9,8 @@ from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
 from core.database.database import TranslationDatabase
@@ -149,18 +150,21 @@ class Editor(QObject):
         self.update_signal.emit()
 
     def translate_with_api(
-        self, strings: StringList, ldialog: Optional[LoadingDialog]
+        self, strings: StringList, pdisplay: Optional[ProgressDisplay]
     ) -> None:
         """
         Translates a list of strings with a translator API.
 
         Args:
             strings (StringList): List of strings
-            ldialog (Optional[LoadingDialog]): Optional loading dialog, defaults to None
+            pdisplay (Optional[ProgressDisplay]):
+                Optional progress display, defaults to None.
         """
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Translating with API..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Translating with API..."))
+            )
 
         self.log.info(f"Translating {len(strings)} string(s) with API...")
 
