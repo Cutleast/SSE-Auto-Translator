@@ -96,9 +96,7 @@ class AppSettings(SettingsPage[AppConfig]):
             "*" + self.tr("Number of newest log files to keep"), self.__logs_num_box
         )
 
-        self.__log_level_box = EnumDropdown(
-            Logger.Level, self._initial_config.log_level
-        )
+        self.__log_level_box = EnumDropdown(Logger.Level, self._initial_config.log_level)
         self.__log_level_box.installEventFilter(self)
         self.__log_level_box.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -236,13 +234,15 @@ class AppSettings(SettingsPage[AppConfig]):
 
         self.__worker_threads_box = QSpinBox()
         self.__worker_threads_box.installEventFilter(self)
-        self.__worker_threads_box.setMinimum(1)
+        self.__worker_threads_box.setMinimum(-1)
         self.__worker_threads_box.setValue(self._initial_config.worker_thread_num)
         self.__worker_threads_box.valueChanged.connect(
             lambda _: self.changed_signal.emit()
         )
         behavior_flayout.addRow(
-            self.tr("Number of maximum worker threads for some IO tasks"),
+            self.tr(
+                "Number of maximum worker threads for some IO tasks (-1 for auto-detect)"
+            ),
             self.__worker_threads_box,
         )
 

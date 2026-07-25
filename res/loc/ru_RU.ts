@@ -141,7 +141,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="119"/>
+        <location filename="src/ui/settings/app_settings.py" line="117"/>
         <source>App language</source>
         <translation type="unfinished"></translation>
     </message>
@@ -156,24 +156,29 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="152"/>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
         <source>Path Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="160"/>
-        <location filename="src/ui/settings/app_settings.py" line="172"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
+        <location filename="src/ui/settings/app_settings.py" line="170"/>
         <source>Default: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="180"/>
+        <location filename="src/ui/settings/app_settings.py" line="178"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="199"/>
+        <location filename="src/ui/settings/app_settings.py" line="197"/>
         <source>Behavior Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="244"/>
+        <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -193,54 +198,49 @@ This feature is considered experimental because a crash might prevent it from un
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="109"/>
+        <location filename="src/ui/settings/app_settings.py" line="107"/>
         <source>Log level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="132"/>
+        <location filename="src/ui/settings/app_settings.py" line="130"/>
         <source>Accent color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="136"/>
+        <location filename="src/ui/settings/app_settings.py" line="134"/>
         <location filename="src/ui/settings/app_settings.py" line="326"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
+        <location filename="src/ui/settings/app_settings.py" line="165"/>
         <source>Path for output mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="178"/>
+        <location filename="src/ui/settings/app_settings.py" line="176"/>
         <source>Path for temporary folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="187"/>
+        <location filename="src/ui/settings/app_settings.py" line="185"/>
         <source>Defaults to temporary folder configured above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="196"/>
+        <location filename="src/ui/settings/app_settings.py" line="194"/>
         <source>Downloads path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="215"/>
+        <location filename="src/ui/settings/app_settings.py" line="213"/>
         <source>Language detector confidence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="231"/>
+        <location filename="src/ui/settings/app_settings.py" line="229"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="245"/>
-        <source>Number of maximum worker threads for some IO tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1868,27 +1868,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="177"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="231"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="242"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="243"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1946,59 +1946,54 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="102"/>
-        <source>Loading database...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="116"/>
+        <location filename="src/core/scanner/scanner.py" line="109"/>
         <location filename="src/core/scanner/scanner.py" line="124"/>
         <source>Scanning modlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="596"/>
+        <location filename="src/core/scanner/scanner.py" line="593"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="182"/>
-        <source>Extracting strings...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="197"/>
-        <source>Detecting language...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="243"/>
-        <location filename="src/core/scanner/scanner.py" line="279"/>
+        <location filename="src/core/scanner/scanner.py" line="240"/>
+        <location filename="src/core/scanner/scanner.py" line="276"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="389"/>
+        <location filename="src/core/scanner/scanner.py" line="170"/>
+        <source>{item_name}: Extracting strings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="191"/>
+        <source>{item_name}: Detecting language...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="386"/>
         <source>Running deep scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="451"/>
+        <location filename="src/core/scanner/scanner.py" line="448"/>
         <source>Scanning strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="518"/>
+        <location filename="src/core/scanner/scanner.py" line="515"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="655"/>
+        <location filename="src/core/scanner/scanner.py" line="652"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="705"/>
+        <location filename="src/core/scanner/scanner.py" line="702"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>

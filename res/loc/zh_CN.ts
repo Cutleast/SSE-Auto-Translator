@@ -143,7 +143,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation>强调色必须是有效的十六进制颜色代码！</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="119"/>
+        <location filename="src/ui/settings/app_settings.py" line="117"/>
         <source>App language</source>
         <translation>应用语言</translation>
     </message>
@@ -158,25 +158,30 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation>基本应用程序设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="152"/>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
         <source>Path Settings</source>
         <translation>路径设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="160"/>
-        <location filename="src/ui/settings/app_settings.py" line="172"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
+        <location filename="src/ui/settings/app_settings.py" line="170"/>
         <source>Default: </source>
         <translation>默认: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="180"/>
+        <location filename="src/ui/settings/app_settings.py" line="178"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>（用于下载等操作，退出后将被清除！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="199"/>
+        <location filename="src/ui/settings/app_settings.py" line="197"/>
         <source>Behavior Settings</source>
         <translation>偏好设置</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="244"/>
+        <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="256"/>
@@ -196,55 +201,50 @@ This feature is considered experimental because a crash might prevent it from un
         <translation>全局设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="109"/>
+        <location filename="src/ui/settings/app_settings.py" line="107"/>
         <source>Log level</source>
         <translation>日志级别</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="132"/>
+        <location filename="src/ui/settings/app_settings.py" line="130"/>
         <source>Accent color</source>
         <translation>强调色</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="136"/>
+        <location filename="src/ui/settings/app_settings.py" line="134"/>
         <location filename="src/ui/settings/app_settings.py" line="326"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation>清除缓存（这将重置所有 Mod 文件状态并删除缓存的 API 请求和更多临时数据！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
+        <location filename="src/ui/settings/app_settings.py" line="165"/>
         <source>Path for output mod</source>
         <translation>输出 Mod 路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="178"/>
+        <location filename="src/ui/settings/app_settings.py" line="176"/>
         <source>Path for temporary folder</source>
         <translation>临时文件夹路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="187"/>
+        <location filename="src/ui/settings/app_settings.py" line="185"/>
         <source>Defaults to temporary folder configured above</source>
         <translation>默认为上面配置的临时文件夹</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="196"/>
+        <location filename="src/ui/settings/app_settings.py" line="194"/>
         <source>Downloads path</source>
         <translation>下载路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="215"/>
+        <location filename="src/ui/settings/app_settings.py" line="213"/>
         <source>Language detector confidence</source>
         <translation>语言检测器置信度</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="231"/>
+        <location filename="src/ui/settings/app_settings.py" line="229"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation>并发下载数量（仅建议在您拥有 Nexus Mods Premium 时增加）</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="245"/>
-        <source>Number of maximum worker threads for some IO tasks</source>
-        <translation>某些IO任务的最大工作线程数</translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="252"/>
@@ -1875,27 +1875,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="177"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
         <source>Elapsed time:</source>
         <translation>耗时：</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="231"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
         <source>Cancel?</source>
         <translation>取消？</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>您确定要取消吗？这可能会产生意想不到的后果，具体取决于当前运行的进度！</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="242"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="243"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -1953,59 +1953,54 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="102"/>
-        <source>Loading database...</source>
-        <translation>正在加载数据库...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="116"/>
+        <location filename="src/core/scanner/scanner.py" line="109"/>
         <location filename="src/core/scanner/scanner.py" line="124"/>
         <source>Scanning modlist...</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="596"/>
+        <location filename="src/core/scanner/scanner.py" line="593"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="182"/>
-        <source>Extracting strings...</source>
-        <translation>正在提取字符串...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="197"/>
-        <source>Detecting language...</source>
-        <translation>正在检测语言...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="243"/>
-        <location filename="src/core/scanner/scanner.py" line="279"/>
+        <location filename="src/core/scanner/scanner.py" line="240"/>
+        <location filename="src/core/scanner/scanner.py" line="276"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="389"/>
+        <location filename="src/core/scanner/scanner.py" line="170"/>
+        <source>{item_name}: Extracting strings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="191"/>
+        <source>{item_name}: Detecting language...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="386"/>
         <source>Running deep scan...</source>
         <translation>正在运行深度扫描...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="451"/>
+        <location filename="src/core/scanner/scanner.py" line="448"/>
         <source>Scanning strings...</source>
         <translation>正在扫描字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="518"/>
+        <location filename="src/core/scanner/scanner.py" line="515"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="655"/>
+        <location filename="src/core/scanner/scanner.py" line="652"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="705"/>
+        <location filename="src/core/scanner/scanner.py" line="702"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>

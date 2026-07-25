@@ -95,11 +95,19 @@ class Scanner(QObject):
                 A dictionary of mods, their mod files and their status.
         """
 
+        thread_num: Optional[int] = (
+            self.app_config.worker_thread_num
+            if self.app_config.worker_thread_num > 0
+            else None
+        )
+
         self.log.info(f"Scanning {len(items)} mod(s)...")
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
-                ProgressUpdate(status_text=self.tr("Loading database..."))
+                ProgressUpdate(
+                    status_text=self.tr("Scanning modlist..."), value=0, maximum=0
+                )
             )
 
         database_strings: StringList = StringUtils.unique(
@@ -111,76 +119,61 @@ class Scanner(QObject):
             string.original for string in database_strings
         )
 
-        if pdisplay is not None:
-            pdisplay.updateMainProgress(
-                ProgressUpdate(status_text=self.tr("Scanning modlist..."))
-            )
-
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
-        for m, (mod, modfiles) in enumerate(items.items()):
-            if pdisplay is not None:
-                pdisplay.updateMainProgress(
-                    ProgressUpdate(
-                        status_text=self.tr("Scanning modlist...")
-                        + f" ({m}/{len(items)})",
-                        value=m,
-                        maximum=len(items),
-                    )
-                )
+        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
+            executor.set_main_progress_text(self.tr("Scanning modlist..."))
 
-            self.log.info(f"Scanning {mod.name!r}...")
-            scan_result[mod] = self.__basic_scan_mod(
-                mod, modfiles, database_strings, database_originals, pdisplay
-            )
+            tasks: dict[Future[TranslationStatus], tuple[Mod, ModFile]] = {}
+            for mod, modfiles in items.items():
+                scan_result[mod] = {}
+
+                for modfile in modfiles:
+                    future: Future[TranslationStatus] = executor.submit(
+                        lambda ucb, m=mod, mf=modfile: self.__basic_scan_modfile(
+                            mod=m,
+                            modfile=mf,
+                            database_strings=database_strings,
+                            database_originals=database_originals,
+                            update_callback=ucb,
+                        )
+                    )
+                    tasks[future] = (mod, modfile)
+
+            for future in as_completed(tasks):
+                mod, modfile = tasks[future]
+                try:
+                    scan_result[mod][modfile] = future.result()
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to scan {mod.name!r} > {modfile.name!r}: {ex}",
+                        exc_info=ex,
+                    )
 
         self.log.info("Modlist scan complete.")
 
         return scan_result
 
-    def __basic_scan_mod(
-        self,
-        mod: Mod,
-        modfiles: list[ModFile],
-        database_strings: StringList,
-        database_originals: list[str],
-        pdisplay: Optional[ProgressDisplay] = None,
-    ) -> dict[ModFile, TranslationStatus]:
-        result: dict[ModFile, TranslationStatus] = {}
-
-        for m, modfile in enumerate(modfiles):
-            if pdisplay is not None:
-                pdisplay.updateProgress(
-                    1,
-                    ProgressUpdate(
-                        status_text=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
-                        value=m,
-                        maximum=len(modfiles),
-                    ),
-                )
-
-            self.log.info(f"Scanning {mod.name!r} > {modfile.name!r}...")
-            try:
-                result[modfile] = self.__basic_scan_modfile(
-                    modfile, database_strings, database_originals, pdisplay
-                )
-            except Exception as ex:
-                self.log.error(
-                    f"Failed to scan {mod.name!r} > {modfile.name!r}: {ex}", exc_info=ex
-                )
-
-        return result
-
     def __basic_scan_modfile(
         self,
+        mod: Mod,
         modfile: ModFile,
         database_strings: StringList,
         database_originals: list[str],
-        pdisplay: Optional[ProgressDisplay] = None,
+        update_callback: Optional[UpdateCallback] = None,
     ) -> TranslationStatus:
-        if pdisplay is not None:
-            pdisplay.updateProgress(
-                2, ProgressUpdate(status_text=self.tr("Extracting strings..."))
-            )
+        modfile_path_text: str = f"{mod.name} > {modfile.name}"
+        self.log.info(f"Scanning {modfile_path_text}...")
+
+        update(
+            update_callback,
+            ProgressUpdate(
+                status_text=self.tr("{item_name}: Extracting strings...").format(
+                    item_name=modfile_path_text
+                ),
+                value=0,
+                maximum=0,
+            ),
+        )
 
         self.log.debug("Extracting strings...")
         modfile_strings: StringList = list(
@@ -192,10 +185,14 @@ class Scanner(QObject):
         if not len(modfile_strings):
             return TranslationStatus.NoStrings
 
-        if pdisplay is not None:
-            pdisplay.updateProgress(
-                2, ProgressUpdate(status_text=self.tr("Detecting language..."))
-            )
+        update(
+            update_callback,
+            ProgressUpdate(
+                status_text=self.tr("{item_name}: Detecting language...").format(
+                    item_name=modfile_path_text
+                ),
+            ),
+        )
 
         self.log.debug("Detecting language...")
 

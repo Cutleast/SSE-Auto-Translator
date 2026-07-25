@@ -143,7 +143,7 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
         <translation>Die Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="119"/>
+        <location filename="src/ui/settings/app_settings.py" line="117"/>
         <source>App language</source>
         <translation>App-Sprache</translation>
     </message>
@@ -158,25 +158,30 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
         <translation>Grundlegende App Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="152"/>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
         <source>Path Settings</source>
         <translation>Konfigurierte Pfade</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="160"/>
-        <location filename="src/ui/settings/app_settings.py" line="172"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
+        <location filename="src/ui/settings/app_settings.py" line="170"/>
         <source>Default: </source>
         <translation>Standard: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="180"/>
+        <location filename="src/ui/settings/app_settings.py" line="178"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>(für temporäre Dateien, wird nach Beenden geleert!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="199"/>
+        <location filename="src/ui/settings/app_settings.py" line="197"/>
         <source>Behavior Settings</source>
         <translation>Verhaltenseinstellungen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="244"/>
+        <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
+        <translation>Maximale Anzahl der zu verwendenden Threads für manche IO-Aufgaben (-1 für automatische Erkennung)</translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="256"/>
@@ -196,55 +201,50 @@ Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern kön
         <translation>Allgemeine Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="109"/>
+        <location filename="src/ui/settings/app_settings.py" line="107"/>
         <source>Log level</source>
         <translation>Logging-Level</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="132"/>
+        <location filename="src/ui/settings/app_settings.py" line="130"/>
         <source>Accent color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="136"/>
+        <location filename="src/ui/settings/app_settings.py" line="134"/>
         <location filename="src/ui/settings/app_settings.py" line="326"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation>Cache leeren (Das setzt alle Moddatei-Zustände zurück und löscht zwischengespeicherte API-Anfragen und weitere temporäre Daten!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
+        <location filename="src/ui/settings/app_settings.py" line="165"/>
         <source>Path for output mod</source>
         <translation>Pfad zur Output-Mod</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="178"/>
+        <location filename="src/ui/settings/app_settings.py" line="176"/>
         <source>Path for temporary folder</source>
         <translation>Pfad für temporäre Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="187"/>
+        <location filename="src/ui/settings/app_settings.py" line="185"/>
         <source>Defaults to temporary folder configured above</source>
         <translation>Liegt standardmäßig im oben konfigurierten Ordner für temporäre Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="196"/>
+        <location filename="src/ui/settings/app_settings.py" line="194"/>
         <source>Downloads path</source>
         <translation>Downloads-Pfad</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="215"/>
+        <location filename="src/ui/settings/app_settings.py" line="213"/>
         <source>Language detector confidence</source>
         <translation>Genauigkeit der Spracherkennung</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="231"/>
+        <location filename="src/ui/settings/app_settings.py" line="229"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation>Anzahl der gleichzeitigen Downloads (eine Erhöhung ist nur dann empfohlen, wenn du Nexus Mods Premium hast)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="245"/>
-        <source>Number of maximum worker threads for some IO tasks</source>
-        <translation>Anzahl der maximalen Worker-Threads für bestimmte E/A-Aufgaben</translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="252"/>
@@ -1474,12 +1474,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="58"/>
         <source>{modname}: Scanning for mod files...</source>
-        <translation type="unfinished"></translation>
+        <translation>{modname}: Nach Moddateien scannen...</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="76"/>
         <source>{modname}: Scanning BSAs...</source>
-        <translation type="unfinished"></translation>
+        <translation>{modname}: BSAs scannen...</translation>
     </message>
 </context>
 <context>
@@ -1505,7 +1505,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <message>
         <location filename="src/core/mod_instance/mod_instance_loader.py" line="139"/>
         <source>Scanning mod instance for translatable mod files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Modinstanz wird nach übersetzbaren Moddateien gescannt...</translation>
     </message>
 </context>
 <context>
@@ -1878,27 +1878,27 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="177"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="231"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="242"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="243"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -1956,59 +1956,54 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="102"/>
-        <source>Loading database...</source>
-        <translation>Datenbank wird geladen...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="116"/>
+        <location filename="src/core/scanner/scanner.py" line="109"/>
         <location filename="src/core/scanner/scanner.py" line="124"/>
         <source>Scanning modlist...</source>
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="596"/>
+        <location filename="src/core/scanner/scanner.py" line="593"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="182"/>
-        <source>Extracting strings...</source>
-        <translation>Strings werden extrahiert...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="197"/>
-        <source>Detecting language...</source>
-        <translation>Sprache wird erkannt...</translation>
-    </message>
-    <message>
-        <location filename="src/core/scanner/scanner.py" line="243"/>
-        <location filename="src/core/scanner/scanner.py" line="279"/>
+        <location filename="src/core/scanner/scanner.py" line="240"/>
+        <location filename="src/core/scanner/scanner.py" line="276"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="389"/>
+        <location filename="src/core/scanner/scanner.py" line="170"/>
+        <source>{item_name}: Extracting strings...</source>
+        <translation>{item_name}: Strings werden extrahiert...</translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="191"/>
+        <source>{item_name}: Detecting language...</source>
+        <translation>{item_name}: Sprache wird erkannt...</translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="386"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="451"/>
+        <location filename="src/core/scanner/scanner.py" line="448"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="518"/>
+        <location filename="src/core/scanner/scanner.py" line="515"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="655"/>
+        <location filename="src/core/scanner/scanner.py" line="652"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="705"/>
+        <location filename="src/core/scanner/scanner.py" line="702"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
