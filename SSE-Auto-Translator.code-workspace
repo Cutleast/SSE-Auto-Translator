@@ -7,14 +7,12 @@
 	"extensions": {
 		"recommendations": [
 			"njpwerner.autodocstring",
-			"aeschli.vscode-css-formatter",
-			"ms-python.vscode-pylance",
+			"detachhead.basedpyright",
 			"ms-python.python",
 			"ms-python.debugpy",
 			"theqtcompany.qt-core",
 			"charliermarsh.ruff",
-			"redhat.vscode-xml",
-			"gruntfuggly.todo-tree"
+			"redhat.vscode-xml"
 		]
 	},
 	"settings": {

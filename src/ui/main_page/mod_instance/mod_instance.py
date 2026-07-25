@@ -9,9 +9,11 @@ from pathlib import Path
 from typing import Optional, override
 
 from cutleast_core_lib.core.filesystem.utils import open_in_explorer
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
@@ -152,9 +154,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.online_scan_requested.connect(self.online_scan_requested.emit)
         self.__menu.download_requested.connect(self.downloads_requested.emit)
         self.__menu.deep_scan_requested.connect(self.deep_scan_requested.emit)
-        self.__menu.import_as_translation_requested.connect(
-            self.__import_as_translation
-        )
+        self.__menu.import_as_translation_requested.connect(self.__import_as_translation)
         self.__menu.show_untranslated_strings_requested.connect(
             self.__show_untranslated_strings
         )
@@ -524,24 +524,28 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, ModFile):
 
-            def process(ldialog: LoadingDialog) -> Translation:
-                ldialog.updateProgress(text1=self.tr("Creating translation..."))
+            def process(pdisplay: ProgressDisplay) -> Translation:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(status_text=self.tr("Creating translation..."))
+                )
 
                 return DatabaseService.create_translation_for_modfile(
                     current_item, self.database
                 )
         else:
 
-            def process(ldialog: LoadingDialog) -> Translation:
-                ldialog.updateProgress(text1=self.tr("Creating translation..."))
+            def process(pdisplay: ProgressDisplay) -> Translation:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(status_text=self.tr("Creating translation..."))
+                )
 
                 return DatabaseService.create_translation_for_mod(
                     current_item, self.database
                 )
 
-        translation = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), process
-        )
+        translation: Translation = ProgressDialog(
+            process, QApplication.activeModalWidget()
+        ).run()
 
         if isinstance(current_item, ModFile):
             current_item.status = TranslationStatus.TranslationIncomplete
@@ -555,9 +559,11 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, Mod):
 
-            def process(ldialog: LoadingDialog) -> None:
-                ldialog.updateProgress(
-                    text1=self.tr("Importing installed translation...")
+            def process(pdisplay: ProgressDisplay) -> None:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(
+                        status_text=self.tr("Importing installed translation...")
+                    )
                 )
 
                 # TODO: Make the import dependent on the original mod files instead of a single mod
@@ -578,9 +584,7 @@ class ModInstanceWidget(QTreeWidget):
 
                 if original_mod is not None:
                     strings: dict[Path, StringList] = (
-                        StringExtractor.map_strings_from_mods(
-                            current_item, original_mod
-                        )
+                        StringExtractor.map_strings_from_mods(current_item, original_mod)
                     )
                     DatabaseService.create_translation_from_mod(
                         current_item, original_mod, strings, self.database
@@ -590,7 +594,7 @@ class ModInstanceWidget(QTreeWidget):
                         f"Could not find original mod for {current_item.name!r}"
                     )
 
-            LoadingDialog.run_callable(QApplication.activeModalWidget(), process)
+            ProgressDialog(process, QApplication.activeModalWidget()).run()
 
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Success!"))

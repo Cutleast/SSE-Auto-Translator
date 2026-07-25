@@ -13,7 +13,6 @@ from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor
@@ -326,20 +325,22 @@ class MainPageWidget(QWidget):
             modfiles = self.__modinstance_widget.get_selected_modfiles()
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
-            *LoadingDialog.run_callable(
+            *ProgressDialog(
+                lambda pdisplay: self.scanner.run_basic_scan(modfiles, pdisplay),
                 QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_basic_scan(modfiles, ldialog),
-            ).values()
+            )
+            .run()
+            .values(),
         )
         self.state_service.set_modfile_states(scan_result)
 
         if self.app_config.auto_import_translations:
-            LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.import_installed_translations(
-                    mods, ldialog
+            ProgressDialog(
+                lambda pdisplay: self.scanner.import_installed_translations(
+                    mods, pdisplay
                 ),
-            )
+                QApplication.activeModalWidget(),
+            ).run()
 
         self.__show_scan_result(list(scan_result.keys()))
 
@@ -418,16 +419,16 @@ class MainPageWidget(QWidget):
         Builds the output mod at the configured location.
         """
 
-        output_path: Path = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: Exporter().build_output_mod(
+        output_path: Path = ProgressDialog(
+            lambda pdisplay: Exporter().build_output_mod(
                 self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
                 self.mod_instance,
                 self.user_data.database.user_translations,
                 self.user_data.user_config,
-                ldialog,
+                pdisplay,
             ),
-        )
+            QApplication.activeModalWidget(),
+        ).run()
 
         message_box = QMessageBox()
         message_box.setWindowTitle(self.tr("Success!"))
@@ -466,9 +467,9 @@ class MainPageWidget(QWidget):
         Runs a deep scan over the installed translations.
         """
 
-        result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.scanner.run_deep_scan
-        )
+        result: dict[ModFile, TranslationStatus] = ProgressDialog(
+            self.scanner.run_deep_scan, QApplication.activeModalWidget()
+        ).run()
         self.state_service.set_modfile_states(result)
         self.__show_scan_result(list(result.keys()))
 
@@ -477,19 +478,17 @@ class MainPageWidget(QWidget):
         Similar to Database Search feature but for loaded modlist.
         """
 
-        dialog = StringSearchDialog(
-            QApplication.activeModalWidget(), translations=False
-        )
+        dialog = StringSearchDialog(QApplication.activeModalWidget(), translations=False)
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[Path, StringList] = LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_string_search(
-                    self.__modinstance_widget.get_checked_items(), filter, ldialog
+            search_result: dict[Path, StringList] = ProgressDialog(
+                lambda pdisplay: self.scanner.run_string_search(
+                    self.__modinstance_widget.get_checked_items(), filter, pdisplay
                 ),
-            )
+                QApplication.activeModalWidget(),
+            ).run()
 
             if search_result:
                 StringListDialog(

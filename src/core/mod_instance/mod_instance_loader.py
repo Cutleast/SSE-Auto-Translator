@@ -3,11 +3,12 @@ Copyright (c) Cutleast
 """
 
 import logging
-from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from concurrent.futures import Future, as_completed
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from mod_manager_lib.core.instance.instance import Instance
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
 from mod_manager_lib.core.mod_manager.instance_info import InstanceInfo
@@ -42,7 +43,7 @@ class ModInstanceLoader(QObject):
         instance_info: InstanceInfo,
         language: GameLanguage,
         include_bsas: bool,
-        ldialog: Optional[LoadingDialog] = None,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> ModInstance:
         """
         Loads the mod instance identified by the specified instance info.
@@ -51,8 +52,8 @@ class ModInstanceLoader(QObject):
             instance_info (InstanceInfo): The instance info.
             language (GameLanguage): The game language.
             include_bsas (bool): Whether to include BSAs in the index.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Raises:
             InstanceNotFoundError: If the instance could not be found.
@@ -64,29 +65,27 @@ class ModInstanceLoader(QObject):
 
         self.log.info(f"Loading mod instance '{instance_info.display_name}'...")
 
-        def update_callback(update: ProgressUpdate) -> None:
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    text1=update.status_text, value1=update.value, max1=update.maximum
-                )
+        def update_callback(payload: ProgressUpdate) -> None:
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(payload)
 
         instance: Instance
         match instance_info:
             case MO2InstanceInfo():
                 mod_manager_api = ModOrganizer()
                 instance = mod_manager_api.load_instance(
-                    instance_info, update_callback=update_callback
+                    instance_info, load_conflicts=False, update_callback=update_callback
                 )
             case ProfileInfo():
                 mod_manager_api = Vortex()
                 instance = mod_manager_api.load_instance(
-                    instance_info, update_callback=update_callback
+                    instance_info, load_conflicts=False, update_callback=update_callback
                 )
             case default:
                 raise ValueError(f"Unknown mod instance type: {default}")
 
         modfile_index: dict[BaseMod, list[ModFile]] = self.build_modfile_index(
-            instance.mods, language, include_bsas, ldialog
+            instance.mods, language, include_bsas, pdisplay
         )
 
         mods: list[Mod] = [
@@ -112,7 +111,7 @@ class ModInstanceLoader(QObject):
         mods: list[BaseMod],
         language: GameLanguage,
         include_bsas: bool,
-        ldialog: Optional[LoadingDialog] = None,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> dict[BaseMod, list[ModFile]]:
         """
         Builds the mod file index for the given list of mods.
@@ -121,8 +120,8 @@ class ModInstanceLoader(QObject):
             mods (list[Mod]): The list of mods.
             language (GameLanguage): The game language.
             include_bsas (bool): Whether to include BSAs in the index.
-            ldialog (Optional[LoadingDialog], optional):
-                Optional loading dialog. Defaults to None.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             dict[Mod, list[ModFile]]: The mod file index.
@@ -135,9 +134,11 @@ class ModInstanceLoader(QObject):
         result: dict[BaseMod, list[ModFile]] = {}
 
         futures: dict[Future[list[ModFile]], BaseMod] = {}
-        with ThreadPoolExecutor(
-            thread_name_prefix="ModInstanceLoaderThread"
-        ) as executor:
+        with ProgressExecutor(pdisplay) as executor:
+            executor.set_main_progress_text(
+                self.tr("Scanning mod instance for translatable mod files...")
+            )
+
             for mod in mods:
                 if (  # skip non-regular mods and mods with an output mod marker
                     mod.mod_type != BaseMod.Type.Regular
@@ -147,25 +148,26 @@ class ModInstanceLoader(QObject):
                     continue
 
                 future: Future[list[ModFile]] = executor.submit(
-                    mod_file_service.get_modfiles_from_mod,
-                    mod=mod,
-                    language=language,
-                    include_bsas=include_bsas,
-                    ldialog=ldialog,
+                    lambda uc, m=mod: mod_file_service.get_modfiles_from_mod(
+                        mod=m,
+                        language=language,
+                        include_bsas=include_bsas,
+                        update_callback=uc,
+                    )
                 )
                 futures[future] = mod
 
-        for future in as_completed(futures):
-            mod = futures[future]
+            for future in as_completed(futures):
+                mod: BaseMod = futures[future]
 
-            try:
-                result[mod] = future.result()
-            except Exception as ex:
-                self.log.error(
-                    f"Error loading mod files for mod '{mod.display_name}': {ex}",
-                    exc_info=ex,
-                )
-                result[mod] = []
+                try:
+                    result[mod] = future.result()
+                except Exception as ex:
+                    self.log.error(
+                        f"Error loading mod files for mod '{mod.display_name}': {ex}",
+                        exc_info=ex,
+                    )
+                    result[mod] = []
 
         self.log.info("Mod file index built.")
 

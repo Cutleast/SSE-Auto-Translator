@@ -6,7 +6,8 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.multithreading.progress_executor import ProgressDisplay
 from PySide6.QtCore import QObject
 
 from core.config.user_config import UserConfig
@@ -73,9 +74,7 @@ class Exporter(QObject):
                     use_dsd_format=use_dsd_format,
                     output_mod=output_mod,
                 )
-                cls.log.debug(
-                    f"Dumped strings for '{modfile_path}' to '{output_path}'."
-                )
+                cls.log.debug(f"Dumped strings for '{modfile_path}' to '{output_path}'.")
 
             except Exception as ex:
                 cls.log.error(
@@ -92,7 +91,7 @@ class Exporter(QObject):
         mod_instance: ModInstance,
         translations: list[Translation],
         user_config: UserConfig,
-        ldialog: Optional[LoadingDialog] = None,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> Path:
         """
         Builds the output mod for DSD at the configured location.
@@ -102,7 +101,7 @@ class Exporter(QObject):
             mod_instance (ModInstance): Mod instance to use.
             translations (list[Translation]): Translations to include.
             user_config (UserConfig): User configuration.
-            ldialog (Optional[LoadingDialog], optional):
+            pdisplay (Optional[ProgressDisplay], optional):
                 Optional loading dialog. Defaults to None.
 
         Returns:
@@ -116,16 +115,20 @@ class Exporter(QObject):
             "translation(s)..."
         )
 
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Building output mod..."))
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Building output mod..."))
+            )
 
         for t, translation in enumerate(translations):
-            if ldialog is not None:
-                ldialog.updateProgress(
-                    text1=self.tr("Building output mod...")
-                    + f" ({t}/{len(translations)})",
-                    value1=t,
-                    max1=len(translations),
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(
+                        status_text=self.tr("Building output mod...")
+                        + f" ({t}/{len(translations)})",
+                        value=t,
+                        maximum=len(translations),
+                    )
                 )
 
             self.export_translation(

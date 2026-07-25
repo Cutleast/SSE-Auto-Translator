@@ -13,7 +13,7 @@ from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QCoreApplication, QTranslator
 from PySide6.QtWidgets import QApplication
@@ -50,9 +50,7 @@ class Batch(Utility):
     DATA_PATH_ARG: str = "--data-path"
     DATA_PATH_HELP: str = "Override for the SSE-AT data directory."
     PROGRESS_ARG: str = "--progress"
-    PROGRESS_HELP: str = (
-        "Show a progress dialog while the batch operations are running."
-    )
+    PROGRESS_HELP: str = "Show a progress dialog while the batch operations are running."
 
     @override
     def __repr__(self) -> str:
@@ -60,9 +58,7 @@ class Batch(Utility):
 
     @override
     def add_subparser(self, subparsers: _SubParsersAction) -> None:
-        subparser: ArgumentParser = subparsers.add_parser(
-            Batch.COMMAND, help=Batch.HELP
-        )
+        subparser: ArgumentParser = subparsers.add_parser(Batch.COMMAND, help=Batch.HELP)
         subparser.add_argument(Batch.COMMAND_FILE_ARG, help=Batch.COMMAND_FILE_HELP)
         subparser.add_argument(
             Batch.DATA_PATH_ARG, help=Batch.DATA_PATH_HELP, default=None
@@ -134,7 +130,7 @@ class Batch(Utility):
 
         retcode: int
         if show_progress:
-            retcode = LoadingDialog.run_callable(None, runner.run)
+            retcode = ProgressDialog(runner.run).run()
         else:
             retcode = runner.run()
 

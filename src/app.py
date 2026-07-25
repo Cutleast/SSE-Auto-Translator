@@ -15,14 +15,10 @@ from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QTranslator
-from PySide6.QtWidgets import (
-    QApplication,
-    QDialog,
-    QMessageBox,
-)
+from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
 
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
@@ -61,7 +57,7 @@ class App(BaseApp, Singleton):
 
     executable, compiled = get_execution_info()
 
-    exit_chain: list[Callable[[], None]] = []
+    exit_chain: list[Callable[[], None]]
     """
     List of functions to call before the application exits.
     """
@@ -78,6 +74,7 @@ class App(BaseApp, Singleton):
         )
         self.cache_path = self.data_path / "cache"
         self.log_path = self.data_path / "logs"
+        self.exit_chain = []
 
         Cache(self.cache_path, App.APP_VERSION)
         self.__user_data_service = UserDataService(self.res_path, self.data_path)
@@ -160,9 +157,9 @@ class App(BaseApp, Singleton):
         return retcode
 
     def __start_main_app(self) -> None:
-        self.__user_data = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.__user_data_service.load
-        )
+        self.__user_data = ProgressDialog(
+            self.__user_data_service.load, QApplication.activeModalWidget()
+        ).run()
 
         app_config: AppConfig = cast(AppConfig, self.app_config)
 
