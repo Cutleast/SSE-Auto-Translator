@@ -223,9 +223,9 @@ class TestBatchRunner(BaseTest):
         command = BatchCommand(run_basic_scan=True, build_output_mod=False)
         runner = BatchRunner(app_config, command)
 
-        ldialog_mock = MagicMock()
+        pdisplay_mock = MagicMock()
 
         # when / then - must not raise
-        retcode: int = runner.run(ldialog=ldialog_mock)
+        retcode: int = runner.run(pdisplay=pdisplay_mock)
         assert retcode == BatchRunner.EXIT_CODE_SUCCESS
-        assert ldialog_mock.updateProgress.called
+        assert pdisplay_mock.updateProgress.called

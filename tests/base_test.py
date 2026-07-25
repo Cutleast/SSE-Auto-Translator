@@ -24,6 +24,7 @@ from mod_manager_lib.core.mod_manager.apis import ModManagerApi
 from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
     MO2InstanceInfo,
 )
+from mod_manager_lib.core.mod_manager.vortex.leveldb import LevelDB
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from pyfakefs.fake_filesystem import FakeFilesystem
 from PySide6.QtGui import QIcon
@@ -40,7 +41,6 @@ from core.mod_instance.mod_instance_loader import ModInstanceLoader
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.constants import GAME_ID
-from core.utilities.leveldb import LevelDB
 
 from .setup.mock_plyvel import MockPlyvelDB
 from .setup.sync_executor import ExecutorPatcher, SynchronousExecutor
@@ -82,12 +82,13 @@ class BaseTest(CoreBaseTest):
         mock_instance = SynchronousExecutor()
 
         mocker.patch(
-            "concurrent.futures.thread.ThreadPoolExecutor", return_value=mock_instance
+            "cutleast_core_lib.core.multithreading.progress_executor",
+            return_value=mock_instance,
         )
 
         def patch(obj: object) -> SynchronousExecutor:
             mocker.patch(
-                obj.__module__ + ".ThreadPoolExecutor", return_value=mock_instance
+                obj.__module__ + ".ProgressExecutor", return_value=mock_instance
             )
             return mock_instance
 
@@ -346,7 +347,7 @@ class BaseTest(CoreBaseTest):
             {k.encode(): v.encode() for k, v in flat_data.items()}
         )
 
-        magic: MagicMock = mocker.patch("plyvel.DB", return_value=mock_instance)
+        magic: MagicMock = mocker.patch("plyvel_next.DB", return_value=mock_instance)
 
         yield mock_instance
 

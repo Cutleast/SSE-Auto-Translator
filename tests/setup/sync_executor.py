@@ -21,12 +21,15 @@ class SynchronousExecutor:
         future = Future()
 
         try:
-            result = fn(*args, **kwargs)
+            result = fn(lambda *_: None, *args, **kwargs)
             future.set_result(result)
         except Exception as exc:
             future.set_exception(exc)
 
         return future
+
+    def set_main_progress_text(self, text: str) -> None:
+        pass
 
     def __enter__(self) -> Self:
         return self
