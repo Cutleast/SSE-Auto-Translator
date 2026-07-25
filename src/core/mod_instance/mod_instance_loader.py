@@ -157,17 +157,17 @@ class ModInstanceLoader(QObject):
                 )
                 futures[future] = mod
 
-        for future in as_completed(futures):
-            mod = futures[future]
+            for future in as_completed(futures):
+                mod: BaseMod = futures[future]
 
-            try:
-                result[mod] = future.result()
-            except Exception as ex:
-                self.log.error(
-                    f"Error loading mod files for mod '{mod.display_name}': {ex}",
-                    exc_info=ex,
-                )
-                result[mod] = []
+                try:
+                    result[mod] = future.result()
+                except Exception as ex:
+                    self.log.error(
+                        f"Error loading mod files for mod '{mod.display_name}': {ex}",
+                        exc_info=ex,
+                    )
+                    result[mod] = []
 
         self.log.info("Mod file index built.")
 
