@@ -416,18 +416,19 @@ class DownloadManager(QObject):
                     continue
 
                 download = FileDownload(mod_details=file_details, source=source)
-                download_id = translation_id
-                translation_name: str = self.provider.get_details(
-                    download_id, source=source
-                ).display_name
+                translation_name: str = (
+                    file_details.mod_display_name or file_details.display_name
+                )
                 translation_download = TranslationDownload(
                     mod_info=ModInfo(
-                        display_name=translation_name, mod_id=download_id, source=source
+                        display_name=translation_name,
+                        mod_id=translation_id,
+                        source=source,
                     ),
                     available_downloads=[],
                 )
                 translation_downloads.setdefault(
-                    (download_id.mod_id, source), translation_download
+                    (translation_id.mod_id, source), translation_download
                 ).available_downloads.append(download)
 
         result: list[TranslationDownload] = list(translation_downloads.values())
