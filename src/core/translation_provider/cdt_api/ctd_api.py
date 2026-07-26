@@ -73,6 +73,7 @@ class CDTApi(ProviderApi):
 
         mod_details: ModDetails = ModDetails(
             display_name=translation.name,
+            mod_display_name=None,
             version=translation.version,
             file_name=translation.file_name,
             mod_id=CdtModId(

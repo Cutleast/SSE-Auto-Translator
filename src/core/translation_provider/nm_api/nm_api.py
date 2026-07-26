@@ -239,18 +239,21 @@ class NexusModsApi(ProviderApi):
         if not isinstance(mod_id, NxmModId):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
+        mod: NmMod = self.__request_mod_details(mod_id)
+
         mod_details: ModDetails
         if mod_id.file_id:
             file: NmFile = self.__request_file(mod_id)
 
             mod_details = ModDetails(
                 display_name=file.name,
+                mod_display_name=mod.name,
                 version=file.version,
                 file_name=file.file_name,
                 mod_id=mod_id,
                 timestamp=file.uploaded_timestamp,
-                author=None,
-                uploader=None,
+                author=mod.author,
+                uploader=mod.uploader,
                 modpage_url=NexusModsApi.create_nexus_mods_url(
                     game_id=mod_id.nm_game_id,
                     mod_id=mod_id.mod_id,
@@ -259,10 +262,9 @@ class NexusModsApi(ProviderApi):
             )
 
         else:
-            mod: NmMod = self.__request_mod_details(mod_id)
-
             mod_details = ModDetails(
                 display_name=mod.name,
+                mod_display_name=None,
                 version=mod.version,
                 file_name="",
                 mod_id=mod_id,
@@ -857,6 +859,7 @@ class NexusModsApi(ProviderApi):
 
             return ModDetails(
                 display_name=display_name,
+                mod_display_name=None,
                 file_name=file_name,
                 mod_id=NxmModId(mod_id=mod_id, installation_file_name=file_name),
                 version=version,
