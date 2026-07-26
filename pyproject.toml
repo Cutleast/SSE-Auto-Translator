@@ -5,15 +5,16 @@ description = "SSE Auto Translator"
 license = { file = "LICENSE" }
 authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "beautifulsoup4",
-    "chunspell",
+    "chunspell-next",
     "cloudscraper",
     "cutleast-core-lib",
     "deepl",
     "googletrans",
-    "libarchive-c>=5.3",
+    "legacy-cgi",
+    "libarchive-c",
     "lingua-language-detector",
     "lz4",
     "mod-manager-lib",
@@ -52,6 +53,7 @@ members = [
 [tool.uv.sources]
 cutleast-core-lib = { workspace = true }
 mod-manager-lib = { workspace = true }
+lingua-language-detector = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0/lingua_language_detector-2.2.0-cp314-cp314-win_amd64.whl" }
 
 [tool.ruff]
 line-length = 89
