@@ -586,7 +586,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
     <name>DownloadManager</name>
     <message>
         <location filename="src/core/downloader/download_manager.py" line="290"/>
-        <location filename="src/core/downloader/download_manager.py" line="309"/>
+        <location filename="src/core/downloader/download_manager.py" line="312"/>
         <source>Collecting available downloads...</source>
         <translation>正在收集可用的下载...</translation>
     </message>
@@ -2204,12 +2204,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <name>StringExtractor</name>
     <message>
         <location filename="src/core/string/string_extractor.py" line="89"/>
-        <location filename="src/core/string/string_extractor.py" line="128"/>
+        <location filename="src/core/string/string_extractor.py" line="129"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation>正在从&apos;{0}&apos;提取字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="225"/>
+        <location filename="src/core/string/string_extractor.py" line="226"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation>正在处理 &apos;{0}&apos;...</translation>
     </message>

@@ -28,6 +28,11 @@ class Provider:
     log: logging.Logger = logging.getLogger("Provider")
 
     def __init__(self, user_config: UserConfig) -> None:
+        """
+        Args:
+            user_config (UserConfig): User configuration.
+        """
+
         ProviderManager.init(user_config)
 
     def direct_downloads_possible(self, source: Optional[Source] = None) -> bool:
@@ -78,9 +83,7 @@ class Provider:
             return ProviderManager.get_default_provider().get_mod_details(mod_id)
 
         else:
-            return ProviderManager.get_provider_by_source(source).get_mod_details(
-                mod_id
-            )
+            return ProviderManager.get_provider_by_source(source).get_mod_details(mod_id)
 
     def get_modpage_url(self, mod_id: ModId, source: Optional[Source] = None) -> str:
         """
@@ -102,9 +105,7 @@ class Provider:
             return ProviderManager.get_default_provider().get_modpage_url(mod_id)
 
         else:
-            return ProviderManager.get_provider_by_source(source).get_modpage_url(
-                mod_id
-            )
+            return ProviderManager.get_provider_by_source(source).get_modpage_url(mod_id)
 
     def get_translations(
         self,
@@ -166,19 +167,18 @@ class Provider:
         masterlist_entry: Optional[MasterlistEntry] = masterlist.entries.get(
             file_name.lower()
         )
-        if masterlist_entry is not None:
-            if (
-                masterlist_entry.type == MasterlistEntry.Type.Route
-                and masterlist_entry.targets
-            ):
-                for target in masterlist_entry.targets:
-                    masterlist_mod_id: int = target.mod_id
-                    masterlist_file_id: Optional[int] = target.file_id
-                    masterlist_source: Source = target.source
+        if masterlist_entry is not None and (
+            masterlist_entry.type == MasterlistEntry.Type.Route
+            and masterlist_entry.targets
+        ):
+            for target in masterlist_entry.targets:
+                masterlist_mod_id: int = target.mod_id
+                masterlist_file_id: Optional[int] = target.file_id
+                masterlist_source: Source = target.source
 
-                    available_translations.setdefault(masterlist_source, []).append(
-                        NxmModId(mod_id=masterlist_mod_id, file_id=masterlist_file_id)
-                    )
+                available_translations.setdefault(masterlist_source, []).append(
+                    NxmModId(mod_id=masterlist_mod_id, file_id=masterlist_file_id)
+                )
 
         return available_translations
 

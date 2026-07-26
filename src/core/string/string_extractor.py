@@ -121,9 +121,10 @@ class StringExtractor(QObject):
 
         self.prepare_mod_files(list(original_modfiles.keys()))
 
-        result: dict[Path, StringList] = {}
+        thread_num: Optional[int] = max_workers if max_workers > 0 else None
 
-        with ProgressExecutor(pdisplay, max_workers) as executor:
+        result: dict[Path, StringList] = {}
+        with ProgressExecutor(pdisplay, thread_num) as executor:
             executor.set_main_progress_text(
                 self.tr("Extracting strings from '{0}'...").format(input)
             )
@@ -352,9 +353,7 @@ class StringExtractor(QObject):
             dsd_files (dict[Path, Path]): Mapping of mod file path to DSD file path.
         """
 
-        self.log.info(
-            f"Preparing {len(dsd_files)} DSD file(s) for string extraction..."
-        )
+        self.log.info(f"Preparing {len(dsd_files)} DSD file(s) for string extraction...")
 
         if not dsd_files:
             return

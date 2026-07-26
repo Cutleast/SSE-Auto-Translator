@@ -22,7 +22,7 @@
 		"[python]": {
 			"editor.codeActionsOnSave": {
 				"source.organizeImports.ruff": "explicit"
-			}
+			},
 		},
 		"editor.formatOnSave": true,
 		"files.associations": {
@@ -33,24 +33,15 @@
 		"python.testing.unittestEnabled": false,
 		"xml.format.maxLineWidth": 0,
 		"debugpy.debugJustMyCode": false,
-		"python.analysis.autoFormatStrings": true,
-		"python.analysis.autoImportCompletions": true,
-		"python.analysis.diagnosticMode": "workspace",
-		"python.analysis.generateWithTypeAnnotation": true,
-		"python.analysis.languageServerMode": "full",
-		"python.analysis.typeCheckingMode": "strict",
-		"git.diagnosticsCommitHook.Enabled": true,
+		"basedpyright.analysis.autoFormatStrings": true,
+		"basedpyright.analysis.autoImportCompletions": true,
+		"basedpyright.analysis.diagnosticMode": "workspace",
+		"basedpyright.analysis.typeCheckingMode": "strict",
 		"python.testing.autoTestDiscoverOnSavePattern": "**/tests/**/*.py",
 		"python.testing.autoTestDiscoverOnSaveEnabled": true,
 		"python.testing.pytestArgs": [
 			"-vv"
 		],
-		"todo-tree.filtering.excludeGlobs": [
-			".venv/**",
-			"dist/**",
-			"*.dic"
-		],
-		"todo-tree.highlights.enabled": false,
 		"autoDocstring.startOnNewLine": true,
 		"python-envs.pythonProjects": [
 			{
@@ -185,7 +176,51 @@
 					"cwd": "${workspaceFolder}/SSE-AT"
 				},
 				"problemMatcher": []
-			}
+			},
+			{
+				"label": "ruff",
+				"type": "shell",
+				"isBackground": true,
+				"presentation": {
+					"reveal": "never"
+				},
+				"command": "uv",
+				"args": [
+					"run",
+					"ruff",
+					"check",
+					"--watch",
+					"--output-format",
+					"github",
+					"."
+				],
+				"problemMatcher": [
+					{
+						"source": "Ruff",
+						"owner": "Ruff",
+						"severity": "warning",
+						"background": {
+							"beginsPattern": "\\[[^\\]]+\\] Found \\d+ errors\\. Watching for file changes\\.",
+							"endsPattern": "^$"
+						},
+						"pattern": [
+							{
+								"regexp": "^::\\w+ title=ruff \\(([^)]+)\\),file=[^,]+,line=(\\d+),col=(\\d+),endLine=(\\d+),endColumn=(\\d+)::([^:]+):\\d+:\\d+: [^\\s]+ (.*)$",
+								"code": 1,
+								"line": 2,
+								"column": 3,
+								"endLine": 4,
+								"endColumn": 5,
+								"file": 6,
+								"message": 7
+							}
+						]
+					}
+				],
+				"runOptions": {
+					"runOn": "folderOpen",
+				}
+			},
 		]
 	}
 }

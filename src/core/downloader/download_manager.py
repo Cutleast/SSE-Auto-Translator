@@ -301,13 +301,15 @@ class DownloadManager(QObject):
         }
         items = {mod: modfiles for mod, modfiles in items.items() if modfiles}
 
+        thread_num: Optional[int] = (
+            self.app_config.worker_thread_num
+            if self.app_config.worker_thread_num > 0
+            else None
+        )
+
         translation_downloads: DownloadListEntries = {}
-        with ProgressExecutor(
-            pdisplay, max_workers=self.app_config.worker_thread_num
-        ) as executor:
-            executor.set_main_progress_text(
-                self.tr("Collecting available downloads...")
-            )
+        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
+            executor.set_main_progress_text(self.tr("Collecting available downloads..."))
 
             tasks: dict[Future[dict[Path, list[TranslationDownload]]], Mod] = {}
             for mod, modfiles in items.items():

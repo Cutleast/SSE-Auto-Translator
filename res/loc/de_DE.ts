@@ -586,7 +586,7 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     <name>DownloadManager</name>
     <message>
         <location filename="src/core/downloader/download_manager.py" line="290"/>
-        <location filename="src/core/downloader/download_manager.py" line="309"/>
+        <location filename="src/core/downloader/download_manager.py" line="312"/>
         <source>Collecting available downloads...</source>
         <translation>Verfügbare Übersetzungen werden gesammelt...</translation>
     </message>
@@ -2207,12 +2207,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <name>StringExtractor</name>
     <message>
         <location filename="src/core/string/string_extractor.py" line="89"/>
-        <location filename="src/core/string/string_extractor.py" line="128"/>
+        <location filename="src/core/string/string_extractor.py" line="129"/>
         <source>Extracting strings from &apos;{0}&apos;...</source>
         <translation>Strings werden extrahiert aus &apos;{0}&apos;...</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="225"/>
+        <location filename="src/core/string/string_extractor.py" line="226"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation>&apos;{0}&apos; wird verarbeitet...</translation>
     </message>

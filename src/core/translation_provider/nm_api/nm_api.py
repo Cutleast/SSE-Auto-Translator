@@ -136,9 +136,7 @@ class NexusModsApi(ProviderApi):
         }
 
         self.log.debug(f"Sending API request to {url!r}...")
-        res: req.Response = self._request(
-            url, headers=headers, handle_status_code=False
-        )
+        res: req.Response = self._request(url, headers=headers, handle_status_code=False)
         self.log.debug(f"Status Code: {res.status_code}")
 
         api_key_valid: bool = res.status_code == 200
@@ -557,9 +555,7 @@ class NexusModsApi(ProviderApi):
             raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
-        cache_file_path = ProviderApi.CACHE_FOLDER / (
-            get_url_identifier(url) + ".cache"
-        )
+        cache_file_path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
 
         cached: Optional[req.Response] = Cache.get_from_cache(
             cache_file_path, default=None
@@ -846,8 +842,8 @@ class NexusModsApi(ProviderApi):
             ModDetails: Reconstructed mod details
         """
 
-        file_name_match: Optional[re.Match[str]] = (
-            NexusModsApi.FILE_NAME_PATTERN.search(file_name)
+        file_name_match: Optional[re.Match[str]] = NexusModsApi.FILE_NAME_PATTERN.search(
+            file_name
         )
 
         if file_name_match is not None:
