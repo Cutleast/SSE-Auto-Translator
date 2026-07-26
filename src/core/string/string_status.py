@@ -37,6 +37,16 @@ class StringStatus(LocalizedEnum):
 
     @classmethod
     def get_color(cls, status: StringStatus) -> Optional[QColor]:
+        """
+        Args:
+            status (StringStatus): The status to get the color for.
+
+        Returns:
+            Optional[QColor]:
+                The color associated with the status, or None if there is no color
+                associated with it.
+        """
+
         COLORS = {
             cls.NoTranslationRequired: QColor.fromString("#e9e042"),
             cls.TranslationComplete: QColor.fromString("#51c6d9"),
@@ -73,6 +83,11 @@ class StringStatus(LocalizedEnum):
         return self.get_localized_name()
 
     def get_localized_filter_name(self) -> str:
+        """
+        Returns:
+            str: A localized name for filtering based on the string status.
+        """
+
         LOC_NAMES: dict[StringStatus, str] = {
             StringStatus.NoneStatus: QApplication.translate(
                 "StringStatus", "Show stateless strings"

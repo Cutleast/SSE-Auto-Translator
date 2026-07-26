@@ -42,7 +42,7 @@ class TestDatabaseService(CoreTest):
 
         # then
         assert len(database.user_translations) == 2
-        assert sorted(map(lambda t: t.name, database.user_translations)) == [
+        assert sorted(t.name for t in database.user_translations) == [
             "Obsidian Weathers and Seasons - German",
             "Wet and Cold SE - German",
         ]

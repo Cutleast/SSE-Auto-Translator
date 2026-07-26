@@ -70,6 +70,15 @@ class TranslatorDialog(QWidget):
         user_config: UserConfig,
         translator: TranslatorService,
     ) -> None:
+        """
+        Args:
+            parent (EditorTab): Parent tab that opened this dialog.
+            initial_string (String): The initial string to be edited.
+            app_config (AppConfig): The application configuration.
+            user_config (UserConfig): The user configuration.
+            translator (TranslatorService): The translator service.
+        """
+
         super().__init__(QApplication.activeModalWidget())
 
         self.app_config = app_config
@@ -423,9 +432,7 @@ class TranslatorDialog(QWidget):
                 if self.__current_string.string is not None
                 else self.__current_string.original
             )
-            self.__parent.update_matching_strings(
-                self.__current_string.original, string
-            )
+            self.__parent.update_matching_strings(self.__current_string.original, string)
 
         self.changes_pending = False
         self.update_signal.emit()

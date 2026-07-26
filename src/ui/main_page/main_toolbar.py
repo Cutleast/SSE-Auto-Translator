@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any, Optional
+from typing import Any, Optional, override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import QSize, Signal
@@ -72,6 +72,7 @@ class MainToolBar(QToolBar):
     __deep_scan_action: QAction
     __string_search_action: QAction
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

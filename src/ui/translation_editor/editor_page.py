@@ -61,6 +61,13 @@ class EditorPage(QSplitter):
         user_data: UserData,
         translator_service: TranslatorService,
     ) -> None:
+        """
+        Args:
+            app_config (AppConfig): The application configuration.
+            user_data (UserData): The user data.
+            translator_service (TranslatorService): The translator service.
+        """
+
         super().__init__()
 
         self.app_config = app_config

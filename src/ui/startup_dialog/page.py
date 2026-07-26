@@ -47,6 +47,7 @@ class Page(QWidget):
     _back_button: QPushButton
     _next_button: QPushButton
 
+    @override
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 

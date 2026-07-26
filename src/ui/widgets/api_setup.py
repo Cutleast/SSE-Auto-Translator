@@ -4,8 +4,9 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import Optional, override
 
+from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QHBoxLayout,
@@ -19,8 +20,6 @@ from PySide6.QtWidgets import (
 
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 
-from .paste_entry import PasteLineEdit
-
 
 class ApiSetup(QWidget):
     """
@@ -31,6 +30,7 @@ class ApiSetup(QWidget):
     is_valid: bool = False
     api_key: Optional[str] = None
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 
@@ -92,7 +92,7 @@ class ApiSetup(QWidget):
         api_key_vlayout.addLayout(api_key_hlayout)
         api_key_label = QLabel(self.tr("Insert your API key"))
         api_key_hlayout.addWidget(api_key_label)
-        self.api_key_entry = PasteLineEdit()
+        self.api_key_entry = KeyLineEdit()
         api_key_hlayout.addWidget(self.api_key_entry)
         api_key_check_button = QPushButton(self.tr("Check API key"))
 

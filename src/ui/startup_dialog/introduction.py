@@ -28,13 +28,12 @@ class IntroductionPage(Page):
     BASIC_USAGE_URL: str = DOCS_URL + "/quick_start.html"
     """URL to the basic usage documentation page."""
 
+    @override
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
         self._back_button.setText(self.tr("Exit"))
-        self._back_button.setIcon(
-            rotated_icon(IconProvider.get_icon("exit"), angle=180)
-        )
+        self._back_button.setIcon(rotated_icon(IconProvider.get_icon("exit"), angle=180))
         self.valid_signal.emit(True)
 
         self.__init_header()
@@ -74,9 +73,7 @@ class IntroductionPage(Page):
 
     @override
     def _get_description(self) -> str:
-        return self.tr(
-            "This guide will help you setting up this tool for your modlist."
-        )
+        return self.tr("This guide will help you setting up this tool for your modlist.")
 
     @override
     def _init_form(self) -> None:

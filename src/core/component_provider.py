@@ -39,6 +39,12 @@ class ComponentProvider(Singleton):
     log: logging.Logger = logging.getLogger("ComponentProvider")
 
     def __init__(self, app_config: AppConfig, user_data: UserData) -> None:
+        """
+        Args:
+            app_config (AppConfig): The application configuration.
+            user_data (UserData): The user data.
+        """
+
         super().__init__()
 
         self.__app_config = app_config
@@ -55,9 +61,7 @@ class ComponentProvider(Singleton):
 
         self.__provider = Provider(self.__user_data.user_config)
 
-        self.__translator_service = TranslatorService(
-            self.__user_data.translator_config
-        )
+        self.__translator_service = TranslatorService(self.__user_data.translator_config)
 
         self.__state_service = StateService(
             self.__user_data.modinstance, self.__user_data.database

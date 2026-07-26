@@ -105,5 +105,5 @@ class TestBatchCommand(BaseTest):
         command = BatchCommand()
 
         # then
-        with pytest.raises(Exception):
+        with pytest.raises(Exception):  # noqa: B017
             command.run_basic_scan = False  # type: ignore[misc]

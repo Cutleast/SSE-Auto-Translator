@@ -107,7 +107,7 @@ class StateService(QObject):
                 "affected mod file states..."
             )
 
-            for modfile in translation.strings.keys():
+            for modfile in translation.strings:
                 original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
                     modfile, ignore_states=[TranslationStatus.IsTranslated]
                 )

@@ -23,6 +23,13 @@ class TempFolderProvider(Singleton):
     log: logging.Logger = logging.getLogger("TempFolderProvider")
 
     def __init__(self, folder_name: str, base_path: Optional[Path] = None) -> None:
+        """
+        Args:
+            folder_name (str): Name of the temporary folder.
+            base_path (Optional[Path], optional):
+                Base path to the folder. Defaults to None.
+        """
+
         super().__init__()
 
         self.__folder_name = folder_name

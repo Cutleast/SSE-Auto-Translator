@@ -41,11 +41,13 @@ class DownloadsTab(QWidget):
     __downloads_num_label: QLCDNumber
     __downloads_widget: QTreeWidget
 
-    def __init__(
-        self,
-        download_manager: DownloadManager,
-        provider: Provider,
-    ) -> None:
+    def __init__(self, download_manager: DownloadManager, provider: Provider) -> None:
+        """
+        Args:
+            download_manager (DownloadManager): The download manager instance.
+            provider (Provider): The translation provider instance.
+        """
+
         super().__init__()
 
         self.download_manager = download_manager

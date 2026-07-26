@@ -17,7 +17,7 @@ class ModDetails(BaseModel):
     display_name: str
     """The display name of the mod or file."""
 
-    mod_display_name: Optional[str]
+    mod_display_name: Optional[str] = None
     """The display name of the mod, if applicable."""
 
     file_name: str

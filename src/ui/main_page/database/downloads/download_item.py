@@ -43,6 +43,11 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
     current_widget: Optional[ProgressWidget | QPushButton] = None
 
     def __init__(self, download: FileDownload) -> None:
+        """
+        Args:
+            download (FileDownload): The download object that this item represents.
+        """
+
         QObject.__init__(self)
         super().__init__()
 

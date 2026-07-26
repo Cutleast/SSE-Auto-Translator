@@ -2,7 +2,8 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any, Callable, Iterable, Optional, TypeVar
+from collections.abc import Callable, Iterable
+from typing import Any, Optional, TypeVar
 
 T = TypeVar("T")
 K = TypeVar("K")

@@ -135,6 +135,14 @@ class ModInstanceWidget(QTreeWidget):
         provider: Provider,
         state_service: StateService,
     ) -> None:
+        """
+        Args:
+            app_config (AppConfig): The application configuration.
+            user_data (UserData): The user data.
+            provider (Provider): The translation provider.
+            state_service (StateService): The state service for managing mod file states.
+        """
+
         super().__init__()
 
         self.app_config = app_config

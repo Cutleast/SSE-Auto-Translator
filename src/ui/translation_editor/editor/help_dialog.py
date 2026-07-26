@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 import qtawesome as qta
 from PySide6.QtCore import Qt
@@ -24,6 +24,7 @@ class EditorHelpDialog(QDialog):
     Dialog for showing help about the string states.
     """
 
+    @override
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 

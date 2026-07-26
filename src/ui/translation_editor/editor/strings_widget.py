@@ -51,6 +51,11 @@ class StringsWidget(QTreeWidget):
     """
 
     def __init__(self, strings: dict[Path, StringList]) -> None:
+        """
+        Args:
+            strings (dict[Path, StringList]): The strings to display in the widget.
+        """
+
         super().__init__()
 
         self.__init_ui()

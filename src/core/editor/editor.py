@@ -54,6 +54,14 @@ class Editor(QObject):
         database: TranslationDatabase,
         translator_service: TranslatorService,
     ) -> None:
+        """
+        Args:
+            translation (Translation): The translation to edit.
+            language (GameLanguage): The language of the translation.
+            database (TranslationDatabase): The translation database.
+            translator_service (TranslatorService): The translator service.
+        """
+
         super().__init__()
 
         self.__translation = translation

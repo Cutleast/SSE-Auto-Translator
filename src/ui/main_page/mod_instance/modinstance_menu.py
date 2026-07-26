@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
@@ -113,6 +113,7 @@ class ModInstanceMenu(Menu):
     __open_modpage_action: QAction
     __open_in_explorer_action: QAction
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 
@@ -212,7 +213,7 @@ class ModInstanceMenu(Menu):
 
         self.__translation_menu.addSeparator()
 
-        self.__create_translation_action: QAction = self.__translation_menu.addAction(
+        self.__create_translation_action = self.__translation_menu.addAction(
             IconProvider.get_qta_icon("mdi6.passport-plus"),
             self.tr("Create new translation..."),
         )

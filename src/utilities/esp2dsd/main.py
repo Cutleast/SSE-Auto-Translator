@@ -59,7 +59,7 @@ class Esp2Dsd(Utility):
         )
 
     @override
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # noqa: RUF020
         activated: bool = hasattr(args, Esp2Dsd.ORIGINAL_PLUGIN_ARG_NAME) and hasattr(
             args, Esp2Dsd.TRANSLATED_PLUGIN_ARG_NAME
         )
@@ -74,9 +74,7 @@ class Esp2Dsd(Utility):
         original_plugin_name: Optional[str] = getattr(
             args, Esp2Dsd.ORIGINAL_PLUGIN_ARG_NAME, None
         )
-        output_path_name: Optional[str] = getattr(
-            args, Esp2Dsd.OUTPUT_PATH_ARG_ID, None
-        )
+        output_path_name: Optional[str] = getattr(args, Esp2Dsd.OUTPUT_PATH_ARG_ID, None)
 
         translated_plugin_path: Path
         original_plugin_path: Path
@@ -204,9 +202,7 @@ class Esp2Dsd(Utility):
         )
         plugin_folder.mkdir(parents=True, exist_ok=True)
 
-        output_file_path: Path = (
-            plugin_folder / f"{len(os.listdir(plugin_folder))}.json"
-        )
+        output_file_path: Path = plugin_folder / f"{len(os.listdir(plugin_folder))}.json"
         TranslationService.save_strings_to_json_file(
             output_file_path, mapped_strings, indent=4
         )

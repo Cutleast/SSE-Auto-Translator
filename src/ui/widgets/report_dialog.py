@@ -49,6 +49,13 @@ class ReportDialog(QDialog):
     __details_box: QPlainTextEdit
 
     def __init__(self, report: Report, parent: Optional[QWidget] = None) -> None:
+        """
+        Args:
+            report (Report): A dict mapping an item display name and an exception.
+            parent (Optional[QWidget], optional):
+                Optional parent widget. Defaults to None.
+        """
+
         super().__init__(parent)
 
         self.__report = report
@@ -116,6 +123,4 @@ class ReportDialog(QDialog):
                 not matches_filter(item.text(0), text, case_sensitive or False)
             )
 
-        self.__item_num_label.display(
-            get_visible_top_level_item_count(self.__item_list)
-        )
+        self.__item_num_label.display(get_visible_top_level_item_count(self.__item_list))

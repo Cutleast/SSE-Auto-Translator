@@ -227,8 +227,7 @@ class TranslationDatabase(QObject):
             if translation.id == id:
                 return translation
 
-        else:
-            raise KeyError(f"Translation with ID '{id}' not found in database.")
+        raise KeyError(f"Translation with ID '{id}' not found in database.")
 
     def is_translation_in_database(self, translation: Translation) -> bool:
         """

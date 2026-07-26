@@ -31,7 +31,7 @@ from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
 from requests_mock import Mocker as RequestsMock
 
-import resources_rc as resources_rc
+import resources_rc as resources_rc  # noqa: PLC0414
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
@@ -176,7 +176,7 @@ class BaseTest(CoreBaseTest):
         yield provider
 
         Utils.reset_singleton(ComponentProvider)
-        logging.debug("ComponentProvider singleton reset.")
+        logging.debug("ComponentProvider singleton reset.")  # noqa: LOG015
 
     @pytest.fixture
     def logger(
@@ -192,7 +192,7 @@ class BaseTest(CoreBaseTest):
         yield Logger(Path("logs") / "test.log")
 
         Utils.reset_singleton(Logger)
-        logging.debug("Logger singleton reset.")
+        logging.debug("Logger singleton reset.")  # noqa: LOG015
 
     @pytest.fixture(autouse=True)
     def game_service(self) -> Generator[GameService, None, None]:
@@ -206,7 +206,7 @@ class BaseTest(CoreBaseTest):
         yield GameService(read_resource(":/skyrimse.json"))
 
         Utils.reset_singleton(GameService)
-        logging.debug("GameService singleton reset.")
+        logging.debug("GameService singleton reset.")  # noqa: LOG015
 
     @pytest.fixture
     def mo2_instance_info(self, test_fs: FakeFilesystem) -> MO2InstanceInfo:
@@ -313,7 +313,7 @@ class BaseTest(CoreBaseTest):
 
         resolve(Path("%APPDATA%") / "Vortex" / "state.v2").mkdir(parents=True)
 
-        logging.info("Fake filesystem initialized.")
+        logging.info("Fake filesystem initialized.")  # noqa: LOG015
 
         return fs
 
@@ -398,7 +398,7 @@ class BaseTest(CoreBaseTest):
         """
 
         try:
-            mod: Mod = next((mod for mod in modinstance.mods if mod.name == mod_name))
+            mod: Mod = next(mod for mod in modinstance.mods if mod.name == mod_name)
         except StopIteration:
             raise ValueError(f"No mod with name {mod_name} found in mod instance.")
 
@@ -417,7 +417,7 @@ class BaseTest(CoreBaseTest):
         """
 
         try:
-            modfile: ModFile = next((m for m in mod.modfiles if m.name == modfile_name))
+            modfile: ModFile = next(m for m in mod.modfiles if m.name == modfile_name)
         except StopIteration:
             raise ValueError(f"No mod file with name {modfile_name} found in mod.")
 

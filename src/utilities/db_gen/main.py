@@ -30,9 +30,7 @@ class DbGen(Utility):
 
     COMMAND: str = "dbgen"
     INPUT_FOLDER_ARG_NAME: str = "input_folder"
-    INPUT_FOLDER_ARG_HELP: str = (
-        "Path to the input folder (eg. Data folder of the game)"
-    )
+    INPUT_FOLDER_ARG_HELP: str = "Path to the input folder (eg. Data folder of the game)"
     STRINGS_FOLDER_ARG_NAME: str = "strings_folder"
     STRINGS_FOLDER_ARG_HELP: str = (
         "Path to the folder with the translated .dlstring/.ilstrings/.strings files."
@@ -62,9 +60,7 @@ class DbGen(Utility):
 
     @override
     def add_subparser(self, subparsers: _SubParsersAction) -> None:
-        subparser: ArgumentParser = subparsers.add_parser(
-            DbGen.COMMAND, help=DbGen.HELP
-        )
+        subparser: ArgumentParser = subparsers.add_parser(DbGen.COMMAND, help=DbGen.HELP)
         subparser.add_argument(
             DbGen.INPUT_FOLDER_ARG_NAME, help=DbGen.INPUT_FOLDER_ARG_HELP
         )
@@ -77,7 +73,7 @@ class DbGen(Utility):
         )
 
     @override
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # noqa: RUF020
         activated: bool = (
             hasattr(args, DbGen.INPUT_FOLDER_ARG_NAME)
             and hasattr(args, DbGen.STRINGS_FOLDER_ARG_NAME)
@@ -89,9 +85,7 @@ class DbGen(Utility):
             return
 
         input_folder_name: Optional[str] = getattr(args, DbGen.INPUT_FOLDER_ARG_NAME)
-        strings_folder_name: Optional[str] = getattr(
-            args, DbGen.STRINGS_FOLDER_ARG_NAME
-        )
+        strings_folder_name: Optional[str] = getattr(args, DbGen.STRINGS_FOLDER_ARG_NAME)
         language_name: Optional[str] = getattr(args, DbGen.LANGUAGE_ARG_NAME)
         output_path_name: Optional[str] = getattr(args, DbGen.OUTPUT_PATH_ARG_ID)
         output_folder_path: Optional[Path] = (

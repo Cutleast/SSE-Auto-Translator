@@ -30,6 +30,11 @@ class StatusBar(QStatusBar):
     __log_window: Optional[LogWindow] = None
 
     def __init__(self, provider: Provider) -> None:
+        """
+        Args:
+            provider (Provider): The translation provider.
+        """
+
         super().__init__()
 
         self.__logger = Logger.get()
@@ -54,9 +59,7 @@ class StatusBar(QStatusBar):
 
         self.api_label = QLabel()
         self.api_label.setToolTip(
-            self.tr(
-                "The hourly limit only applies if the daily limit has been used up."
-            )
+            self.tr("The hourly limit only applies if the daily limit has been used up.")
         )
         self.addPermanentWidget(self.api_label)
 

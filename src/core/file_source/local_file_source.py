@@ -15,6 +15,7 @@ class LocalFileSource(FileSource):
     File source for local files that are accessible on the file system.
     """
 
+    @override
     def __init__(self, file_path: Path) -> None:
         super().__init__(file_path)
 

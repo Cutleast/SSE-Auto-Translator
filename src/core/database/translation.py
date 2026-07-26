@@ -159,7 +159,7 @@ class Translation(BaseModel):
     def strings(self, strings: dict[Path, StringList]) -> None:
         self.strings_ = strings
 
-    @lru_cache
+    @lru_cache  # noqa: B019
     def get_size(self) -> int:
         """
         Returns the size of the translation in bytes.

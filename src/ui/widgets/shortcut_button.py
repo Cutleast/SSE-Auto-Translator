@@ -16,6 +16,7 @@ class ShortcutButton(QPushButton):
     Adapted QPushButton that automatically displays set shortcuts.
     """
 
+    @override
     def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
@@ -41,9 +42,9 @@ class ShortcutButton(QPushButton):
         super().setText("")
 
         # Set minimum width
-        self.updateSizeHint()
+        self.__update_size_hint()
 
-    def updateSizeHint(self) -> None:
+    def __update_size_hint(self) -> None:
         padding = 20
 
         label_width = self.__label.sizeHint().width()
@@ -57,6 +58,7 @@ class ShortcutButton(QPushButton):
 
         self.setMinimumWidth(combined_width)
 
+    @override
     def setShortcut(self, shortcut: QKeySequence) -> None:  # type: ignore[override]
         super().setShortcut(shortcut)
 
@@ -67,13 +69,13 @@ class ShortcutButton(QPushButton):
         else:
             self.__shortcut_label.hide()
 
-        self.updateSizeHint()
+        self.__update_size_hint()
 
     @override
     def setText(self, text: str) -> None:
         self.__label.setText(text)
 
-        self.updateSizeHint()
+        self.__update_size_hint()
 
     @override
     def setIcon(self, icon: QIcon | QPixmap) -> None:
@@ -83,7 +85,7 @@ class ShortcutButton(QPushButton):
             self.__icon_label.setPixmap(icon.pixmap(self.iconSize()))
         self.__icon_label.show()
 
-        self.updateSizeHint()
+        self.__update_size_hint()
 
 
 if __name__ == "__main__":

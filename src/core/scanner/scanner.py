@@ -65,6 +65,16 @@ class Scanner(QObject):
         provider: Provider,
         masterlist: Masterlist,
     ) -> None:
+        """
+        Args:
+            mod_instance (ModInstance): The loaded mod instance.
+            database (TranslationDatabase): The translation database.
+            app_config (AppConfig): The application configuration.
+            user_config (UserConfig): The user configuration.
+            provider (Provider): The translation provider.
+            masterlist (Masterlist): The loaded masterlist.
+        """
+
         super().__init__()
 
         self.mod_instance = mod_instance

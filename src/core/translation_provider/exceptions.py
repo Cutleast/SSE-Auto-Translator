@@ -27,6 +27,11 @@ class ModNotFoundError(ProviderError):
     """
 
     def __init__(self, mod: str) -> None:
+        """
+        Args:
+            mod (str): The mod that could not be found.
+        """
+
         super().__init__(mod)
 
     @override
@@ -40,6 +45,12 @@ class RequestError(ProviderError):
     """
 
     def __init__(self, request_url: str, *values: Any) -> None:
+        """
+        Args:
+            request_url (str): The URL of the request that failed.
+            *values (Any): Additional values to format the message with.
+        """
+
         super().__init__(request_url, *values)
 
     @override
@@ -53,6 +64,12 @@ class Non200HttpError(RequestError):
     """
 
     def __init__(self, request_url: str, status_code: int) -> None:
+        """
+        Args:
+            request_url (str): The URL of the request that failed.
+            status_code (int): The HTTP status code returned by the request.
+        """
+
         super().__init__(request_url, status_code)
 
     @override
@@ -68,6 +85,12 @@ class UnexpectedResponseError(RequestError):
     """
 
     def __init__(self, request_url: str, response_text: str) -> None:
+        """
+        Args:
+            request_url (str): The URL of the request that failed.
+            response_text (str): The response text returned by the request.
+        """
+
         super().__init__(request_url, response_text)
 
     @override

@@ -16,7 +16,15 @@ class StackedBar(QChartView):
     Class for stacked bar for displaying data ratios.
     """
 
-    def __init__(self, values: list[int], colors: Optional[list] = None):
+    def __init__(self, values: list[int], colors: Optional[list] = None) -> None:
+        """
+        Args:
+            values (list[int]): List of values to display in the stacked bar.
+            colors (Optional[list], optional):
+                List of colors with the same amount of items as the values. Defaults to
+                None.
+        """
+
         super().__init__()
 
         self.setRubberBand(self.RubberBand.NoRubberBand)
@@ -52,12 +60,22 @@ class StackedBar(QChartView):
             self.__bar_sets.append(bar_set)
 
     def setValues(self, values: list[int]) -> None:
+        """
+        Args:
+            values (list[int]): The values to display.
+        """
+
         for v, value in enumerate(values):
             bar_set = self.__bar_sets[v]
             bar_set.remove(0)
             bar_set.append(value)
 
     def setColors(self, colors: list) -> None:
+        """
+        Args:
+            colors (list): The colors to set for the bar sets.
+        """
+
         for c, color in enumerate(colors):
             bar_set = self.__bar_sets[c]
             if color is None:

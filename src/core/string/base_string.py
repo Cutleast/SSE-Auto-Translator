@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Annotated, Any, Optional, TypeVar, override
+from typing import Annotated, Optional, TypeVar, override
 
 from pydantic import BaseModel, BeforeValidator, PlainSerializer, model_validator
 
@@ -34,9 +34,7 @@ class BaseString(BaseModel, ABC):
             )
         ),
         # Serialize by name
-        PlainSerializer(
-            lambda member: member.name, return_type=str, when_used="always"
-        ),
+        PlainSerializer(lambda member: member.name, return_type=str, when_used="always"),
     ] = StringStatus.NoneStatus
     """
     Status visible in Editor Tab.
@@ -77,10 +75,9 @@ class BaseString(BaseModel, ABC):
             T: Raw string data.
         """
 
-        if isinstance(data, dict):
-            if "original" not in data and "string" in data:
-                data["original"] = data.pop("string")
-                data["status"] = StringStatus.TranslationRequired.name
+        if isinstance(data, dict) and "original" not in data and "string" in data:
+            data["original"] = data.pop("string")
+            data["status"] = StringStatus.TranslationRequired.name
 
         return data
 
@@ -89,7 +86,7 @@ class BaseString(BaseModel, ABC):
         return hash((self.id, self.original, self.string, self.status))
 
     @override
-    def __eq__(self, value: Any) -> bool:
+    def __eq__(self, value: object) -> bool:
         if not isinstance(value, BaseString):
             return False
 

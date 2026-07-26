@@ -99,6 +99,16 @@ class DownloadManager(QObject):
         user_config: UserConfig,
         masterlist: Masterlist,
     ) -> None:
+        """
+        Args:
+            database (TranslationDatabase): The translation database.
+            mod_instance (ModInstance): The loaded mod instance.
+            provider (Provider): The translation provider.
+            app_config (AppConfig): The application configuration.
+            user_config (UserConfig): The user configuration.
+            masterlist (Masterlist): The loaded masterlist.
+        """
+
         super().__init__()
 
         self.thread_num = app_config.download_thread_num

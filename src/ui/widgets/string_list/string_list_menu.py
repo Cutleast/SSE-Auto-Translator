@@ -24,6 +24,13 @@ class StringListMenu(Menu):
     """
 
     def __init__(self, parent: "StringListWidget", nested: bool = True) -> None:
+        """
+        Args:
+            parent (StringListWidget): The parent string list widget.
+            nested (bool, optional):
+                If the string list has separators. Defaults to True.
+        """
+
         super().__init__()
 
         self.__parent = parent

@@ -92,6 +92,7 @@ class TestDownloadList(CoreTest):
                 download=FileDownload(
                     mod_details=ModDetails(
                         display_name="Vivez une nouvelle vie",
+                        mod_display_name=None,
                         file_name="vivez_une_nouvelle_vie_4.2.5_sse.7z",
                         mod_id=CdtModId(
                             installation_file_name="vivez_une_nouvelle_vie_4.2.5_sse.7z",
@@ -124,9 +125,7 @@ class TestDownloadList(CoreTest):
         """
 
         # when
-        download_list_item: DownloadListItem = DownloadListItem.model_validate(
-            json_data
-        )
+        download_list_item: DownloadListItem = DownloadListItem.model_validate(json_data)
 
         # then
         assert download_list_item == expected_download_list_item

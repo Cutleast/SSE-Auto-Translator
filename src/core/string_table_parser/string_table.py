@@ -21,9 +21,15 @@ class StringTable:
     raw_data_offset: int
 
     def __init__(self, stream: Stream, lstring: bool) -> None:
-        self.parse(stream, lstring)
+        """
+        Args:
+            stream (Stream): Stream to parse from.
+            lstring (bool): Whether the string table contains LStrings or not.
+        """
 
-    def parse(self, stream: Stream, lstring: bool) -> None:
+        self.__parse(stream, lstring)
+
+    def __parse(self, stream: Stream, lstring: bool) -> None:
         self.num_of_entries = Integer.parse(stream, Integer.IntType.UInt32)
         self.string_data_size = Integer.parse(stream, Integer.IntType.UInt32)
 

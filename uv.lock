@@ -674,6 +674,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/5f/c1/3791e39d65c39b4e081010f2cf6f9443b7b6b9f6de63a5e458172c5c9376/jstyleson-0.0.2.tar.gz", hash = "sha256:680003f3b15a2959e4e6a351f3b858e3c07dd3e073a0d54954e34d8ea5e1308e", size = 2004, upload-time = "2016-06-21T14:38:54.305Z" }
 
 [[package]]
+name = "libarchive-c"
+version = "5.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/23/e72434d5457c24113e0c22605cbf7dd806a2561294a335047f5aa8ddc1ca/libarchive_c-5.3.tar.gz", hash = "sha256:5ddb42f1a245c927e7686545da77159859d5d4c6d00163c59daff4df314dae82", size = 54349, upload-time = "2025-05-22T08:08:04.604Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/3f/ff00c588ebd7eae46a9d6223389f5ae28a3af4b6d975c0f2a6d86b1342b9/libarchive_c-5.3-py3-none-any.whl", hash = "sha256:651550a6ec39266b78f81414140a1e04776c935e72dfc70f1d7c8e0a3672ffba", size = 17035, upload-time = "2025-05-22T08:08:03.045Z" },
+]
+
+[[package]]
 name = "lingua-language-detector"
 version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1502,6 +1511,7 @@ dependencies = [
     { name = "cutleast-core-lib" },
     { name = "deepl" },
     { name = "googletrans" },
+    { name = "libarchive-c" },
     { name = "lingua-language-detector" },
     { name = "lz4" },
     { name = "mod-manager-lib" },
@@ -1539,6 +1549,7 @@ requires-dist = [
     { name = "cutleast-core-lib", editable = "core-lib" },
     { name = "deepl" },
     { name = "googletrans" },
+    { name = "libarchive-c", specifier = ">=5.3" },
     { name = "lingua-language-detector" },
     { name = "lz4" },
     { name = "mod-manager-lib", editable = "mod-manager-lib" },

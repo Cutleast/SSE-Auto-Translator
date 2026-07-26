@@ -15,7 +15,7 @@ class Utility:
 
     log: logging.Logger
 
-    def __init__(self) -> None:
+    def __init__(self) -> None:  # noqa: D107
         self.log = logging.getLogger(self.__repr__())
 
     @abstractmethod
@@ -33,7 +33,7 @@ class Utility:
         """
 
     @abstractmethod
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # noqa: RUF020
         """
         Runs the Utility with the specified commandline arguments.
 

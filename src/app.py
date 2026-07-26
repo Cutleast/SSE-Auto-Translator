@@ -4,8 +4,9 @@ Copyright (c) Cutleast
 
 import subprocess
 from argparse import Namespace
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable, Optional, cast, override
+from typing import Optional, cast, override
 
 from cutleast_core_lib.base_app import BaseApp
 from cutleast_core_lib.core.cache.cache import Cache
@@ -30,7 +31,7 @@ from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.container_utils import unique
 from core.utilities.localisation import Language
-from resources_rc import qt_resource_data as qt_resource_data
+from resources_rc import qt_resource_data as qt_resource_data  # noqa: PLC0414
 from ui.main_window import MainWindow
 from ui.startup_dialog.startup_dialog import StartupDialog
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
@@ -67,6 +68,11 @@ class App(BaseApp, Singleton):
     __component_provider: Optional[ComponentProvider] = None
 
     def __init__(self, args: Namespace) -> None:
+        """
+        Args:
+            args (Namespace): The argparse namespace containing command line arguments.
+        """
+
         Singleton.__init__(self)
 
         self.data_path = (

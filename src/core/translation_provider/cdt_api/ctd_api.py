@@ -140,7 +140,7 @@ class CDTApi(ProviderApi):
             if ex.args[1] == 404:
                 ProviderApi.raise_mod_not_found_error(mod_id)
             else:
-                raise ex
+                raise
 
         except Exception as ex:
             raise UnexpectedResponseError(url, res.content.decode()) from ex

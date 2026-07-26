@@ -77,6 +77,14 @@ class EditorTab(QWidget):
         user_data: UserData,
         translator_service: TranslatorService,
     ) -> None:
+        """
+        Args:
+            translation (Translation): The translation to edit.
+            app_config (AppConfig): The application configuration.
+            user_data (UserData): The user data.
+            translator_service (TranslatorService): The translator service.
+        """
+
         super().__init__()
 
         self.translation = translation
@@ -104,8 +112,8 @@ class EditorTab(QWidget):
         self.__tool_bar.save_requested.connect(self.__save)
         self.__tool_bar.export_requested.connect(self.__export)
 
-        self.__menu.expand_all_clicked.connect(self.expandAll)
-        self.__menu.collapse_all_clicked.connect(self.collapseAll)
+        self.__menu.expand_all_clicked.connect(self.__expand_all)
+        self.__menu.collapse_all_clicked.connect(self.__collapse_all)
         self.__menu.edit_string_requested.connect(self.__edit_string)
         self.__menu.copy_string_requested.connect(self.__copy_selected)
         self.__menu.reset_translation_requested.connect(self.__reset_selected)
@@ -641,8 +649,8 @@ class EditorTab(QWidget):
 
         self.__strings_widget.go_to_modfile(modfile)
 
-    def collapseAll(self) -> None:
+    def __collapse_all(self) -> None:
         self.__strings_widget.collapseAll()
 
-    def expandAll(self) -> None:
+    def __expand_all(self) -> None:
         self.__strings_widget.expandAll()

@@ -39,7 +39,15 @@ class ProgressWidget(QWidget):
     __copy_button: QPushButton
     __close_button: QPushButton
 
-    def __init__(self, item: QTreeWidgetItem, parent: Optional[QWidget] = None):
+    def __init__(self, item: QTreeWidgetItem, parent: Optional[QWidget] = None) -> None:
+        """
+        Args:
+            item (QTreeWidgetItem):
+                The QTreeWidgetItem associated with this progress widget.
+            parent (Optional[QWidget], optional):
+                Optional parent widget. Defaults to None.
+        """
+
         super().__init__(parent)
 
         self.item = item

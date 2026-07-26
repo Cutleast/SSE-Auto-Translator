@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 import qtawesome as qta
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
@@ -39,6 +41,7 @@ class EditorMenu(Menu):
         Status: The string status to set.
     """
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 
@@ -110,4 +113,8 @@ class EditorMenu(Menu):
         self.addSeparator()
 
     def open(self) -> None:
+        """
+        Opens the menu at the current mouse cursor position.
+        """
+
         self.exec(QCursor.pos())

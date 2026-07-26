@@ -6,7 +6,7 @@ import logging
 import platform
 from abc import abstractmethod
 from pathlib import Path
-from typing import NoReturn, Optional
+from typing import NoReturn, Optional, override
 
 import requests as req
 from cutleast_core_lib.core.cache.cache import Cache
@@ -40,7 +40,10 @@ class ProviderApi(QObject):
     CACHE_FOLDER = Path("web_cache")
     """The subfolder within the cache folder to store cached web requests."""
 
+    @override
     def __init__(self) -> None:
+        super().__init__()
+
         from app import App
 
         self.log = logging.getLogger(self.__class__.__name__)

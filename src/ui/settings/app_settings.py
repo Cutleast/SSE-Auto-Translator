@@ -61,6 +61,12 @@ class AppSettings(SettingsPage[AppConfig]):
     __double_click_strings: QCheckBox
 
     def __init__(self, initial_config: AppConfig, cache: Cache) -> None:
+        """
+        Args:
+            initial_config (AppConfig): Initial configuration to load.
+            cache (Cache): Cache instance to manage application cache.
+        """
+
         self.cache = cache
 
         super().__init__(initial_config)

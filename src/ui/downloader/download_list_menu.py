@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
@@ -32,6 +34,7 @@ class DownloadListMenu(Menu):
     __check_action: QAction
     __uncheck_action: QAction
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

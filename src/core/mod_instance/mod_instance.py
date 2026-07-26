@@ -5,6 +5,8 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.typing_utils import not_none
+
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.translation_provider.nm_api.nxm_id import NxmModId
@@ -31,6 +33,12 @@ class ModInstance:
     __modfiles_by_path: Optional[dict[Path, list[ModFile]]] = None
 
     def __init__(self, display_name: str, mods: list[Mod]) -> None:
+        """
+        Args:
+            display_name (str): Display name of this instance.
+            mods (list[Mod]): List of all installed mods in this instance.
+        """
+
         self.display_name = display_name
         self.mods = mods
 
@@ -60,8 +68,8 @@ class ModInstance:
     def get_modfile(
         self,
         modfile: Path,
-        ignore_mods: list[Mod] = [],
-        ignore_states: list[TranslationStatus] = [],
+        ignore_mods: Optional[list[Mod]] = None,
+        ignore_states: Optional[list[TranslationStatus]] = None,
     ) -> Optional[ModFile]:
         """
         Get a mod file by its name or None if it doesn't exist.
@@ -70,9 +78,10 @@ class ModInstance:
 
         Args:
             modfile (Path): Path of the mod file, relative to the game's "Data" folder.
-            ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
-            ignore_states (list[TranslationStatus], optional):
-                List of mod file states to ignore. Defaults to [].
+            ignore_mods (Optional[list[Mod]], optional):
+                List of mods to ignore. Defaults to None.
+            ignore_states (Optional[list[TranslationStatus]], optional):
+                List of mod file states to ignore. Defaults to None.
 
         Returns:
             Optional[ModFile]: Mod file or None
@@ -84,8 +93,8 @@ class ModInstance:
     def get_modfiles(
         self,
         modfile: Path,
-        ignore_mods: list[Mod] = [],
-        ignore_states: list[TranslationStatus] = [],
+        ignore_mods: Optional[list[Mod]] = None,
+        ignore_states: Optional[list[TranslationStatus]] = None,
     ) -> list[ModFile]:
         """
         Gets a list of mod files that match a given path. Returns them sorted in order
@@ -93,13 +102,20 @@ class ModInstance:
 
         Args:
             modfile (Path): Path of the mod file, relative to the game's "Data" folder.
-            ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
-            ignore_states (list[TranslationStatus], optional):
-                List of mod file states to ignore. Defaults to [].
+            ignore_mods (Optional[list[Mod]], optional):
+                List of mods to ignore. Defaults to None.
+            ignore_states (Optional[list[TranslationStatus]], optional):
+                List of mod file states to ignore. Defaults to None.
 
         Returns:
             list[ModFile]: List of mod files
         """
+
+        if ignore_mods is None:
+            ignore_mods = []
+
+        if ignore_states is None:
+            ignore_states = []
 
         return [
             mf
@@ -141,8 +157,8 @@ class ModInstance:
     def get_mod_with_modfile(
         self,
         modfile: Path,
-        ignore_mods: list[Mod] = [],
-        ignore_states: list[TranslationStatus] = [],
+        ignore_mods: Optional[list[Mod]] = None,
+        ignore_states: Optional[list[TranslationStatus]] = None,
     ) -> Optional[Mod]:
         """
         Get a mod that has the specified mod file or None if it doesn't exist.
@@ -150,20 +166,29 @@ class ModInstance:
         mod file.
 
         Args:
-            modfile_name (Path):
+            modfile (Path):
                 Path of the mod file, relative to the game's "Data" folder.
-            ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
-            ignore_states (list[TranslationStatus], optional):
-                List of mod file states to ignore. Defaults to [].
+            ignore_mods (Optional[list[Mod]], optional):
+                List of mods to ignore. Defaults to None.
+            ignore_states (Optional[list[TranslationStatus]], optional):
+                List of mod file states to ignore. Defaults to None.
 
         Returns:
             Optional[Mod]: Mod or None
         """
 
+        if ignore_mods is None:
+            ignore_mods = []
+
+        if ignore_states is None:
+            ignore_states = []
+
         mods: list[Mod] = unique(
             mod
             for mod in filter(lambda m: m not in ignore_mods, self.mods)
-            for mf in filter(lambda mf: mf.status not in ignore_states, mod.modfiles)
+            for mf in filter(
+                lambda mf: mf.status not in not_none(ignore_states), mod.modfiles
+            )
             if mf.path == modfile
         )
 

@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import webbrowser
-from typing import Optional
+from typing import Optional, override
 
 from cutleast_core_lib.ui.widgets.dropdown import Dropdown
 from PySide6.QtCore import QObject, Qt, Signal
@@ -42,6 +42,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
     __open_translation_button: QPushButton
     __files_combobox: QComboBox
 
+    @override
     def __init__(self) -> None:
         super().__init__()
         QObject.__init__(self)
@@ -76,9 +77,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             icon: Optional[QIcon] = download.mod_info.source.get_icon()
             self.__translations_combobox.setItemIcon(d, icon)  # pyright: ignore[reportArgumentType] (source can't be Local here)
 
-        self.__translations_combobox.setEnabled(
-            self.__translations_combobox.count() > 1
-        )
+        self.__translations_combobox.setEnabled(self.__translations_combobox.count() > 1)
         self.__files_combobox.setEnabled(self.__files_combobox.count() > 1)
 
     def __init_ui(self) -> None:
@@ -142,9 +141,9 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         return display_name
 
     def __open_translation_modpage(self) -> None:
-        current_translation_download: TranslationDownload = (
-            self.__translation_downloads[self.__translations_combobox.currentIndex()]
-        )
+        current_translation_download: TranslationDownload = self.__translation_downloads[
+            self.__translations_combobox.currentIndex()
+        ]
 
         if current_translation_download.mod_info.mod_id is not None:
             url: str = self.provider.get_modpage_url(
@@ -185,9 +184,9 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             FileDownload: The currently selected file download.
         """
 
-        current_translation_download: TranslationDownload = (
-            self.__translation_downloads[self.__translations_combobox.currentIndex()]
-        )
+        current_translation_download: TranslationDownload = self.__translation_downloads[
+            self.__translations_combobox.currentIndex()
+        ]
 
         return current_translation_download.available_downloads[
             self.__files_combobox.currentIndex()
@@ -200,8 +199,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         """
 
         return (
-            self.__translations_combobox.count() > 1
-            or self.__files_combobox.count() > 1
+            self.__translations_combobox.count() > 1 or self.__files_combobox.count() > 1
         )
 
     def set_selected_download(self, translation: ModInfo, file: FileDownload) -> None:

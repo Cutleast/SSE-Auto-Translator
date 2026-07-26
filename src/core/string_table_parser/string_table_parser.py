@@ -33,6 +33,11 @@ class StringTableParser:
     parsed_data: StringTable
 
     def __init__(self, file_path: Path) -> None:
+        """
+        Args:
+            file_path (Path): The path to the string table file.
+        """
+
         self.file_path = file_path
 
     def parse(self, stream: Stream) -> StringTable:

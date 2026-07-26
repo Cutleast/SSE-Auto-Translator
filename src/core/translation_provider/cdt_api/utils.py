@@ -28,7 +28,7 @@ def get_unix_timestamp_from_timestamp_data(timestamp_data: TimestampData) -> int
     Extracts the upload timestamp from the timestamp data returned by the CDT API.
 
     Args:
-        response_data (TimestampData): Raw timestamp data.
+        timestamp_data (TimestampData): Raw timestamp data.
 
     Returns:
         int: Upload timestamp as Unix timestamp
@@ -37,10 +37,10 @@ def get_unix_timestamp_from_timestamp_data(timestamp_data: TimestampData) -> int
     date: str = timestamp_data["date"]
     timezone: str = timestamp_data["timezone"]
 
-    date_obj: datetime = datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")
-    date_obj_utc: datetime = date_obj.replace(
-        tzinfo=pytz.timezone(timezone)
-    ).astimezone(pytz.utc)
+    date_obj: datetime = datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")  # noqa: DTZ007
+    date_obj_utc: datetime = date_obj.replace(tzinfo=pytz.timezone(timezone)).astimezone(
+        pytz.utc
+    )
     timestamp = int(date_obj_utc.timestamp())
 
     return timestamp

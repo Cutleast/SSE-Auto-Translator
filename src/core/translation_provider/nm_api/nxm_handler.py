@@ -129,7 +129,7 @@ class NXMHandler(SingletonQObject):
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
                 winreg.SetValue(hkey, "", winreg.REG_SZ, self.reg_value)
 
-        except PermissionError as ex:
+        except PermissionError:
             self.log.error("Failed to bind to NXM Links: Admin Rights required!")
 
             if start_uac:
@@ -139,7 +139,7 @@ class NXMHandler(SingletonQObject):
                     self.log.warning("Failed to bind to NXM Links: Canceled by User.")
                     return
             else:
-                raise ex
+                raise
 
         self.log.info(f"Binding successful: {self.is_bound()}")
 

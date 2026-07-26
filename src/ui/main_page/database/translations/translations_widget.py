@@ -99,6 +99,14 @@ class TranslationsWidget(QTreeWidget):
         mod_instance: ModInstance,
         app_config: AppConfig,
     ) -> None:
+        """
+        Args:
+            database (TranslationDatabase): The translation database.
+            provider (Provider): The translation provider.
+            mod_instance (ModInstance): The loaded mod instance.
+            app_config (AppConfig): The application configuration.
+        """
+
         super().__init__()
 
         self.database = database
@@ -121,7 +129,10 @@ class TranslationsWidget(QTreeWidget):
         self.database.add_signal.connect(self.__on_translations_added)
         self.database.remove_signal.connect(self.__on_translations_removed)
         self.database.rename_signal.connect(
-            lambda translation: self.update_translations()  # currently, an entire reload is required
+            lambda translation: (
+                # currently, an entire reload is required
+                self.update_translations()
+            )
         )
 
         self.__load_translations()
@@ -235,9 +246,7 @@ class TranslationsWidget(QTreeWidget):
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
-    def __on_translations_removed(
-        self, removed_translations: list[Translation]
-    ) -> None:
+    def __on_translations_removed(self, removed_translations: list[Translation]) -> None:
         for translation in removed_translations:
             if translation not in self.__translation_items:
                 continue
@@ -389,6 +398,16 @@ class TranslationsWidget(QTreeWidget):
 
     @staticmethod
     def is_valid_translation_file(path: Path | str) -> bool:
+        """
+        Checks if a path points to a valid translation file.
+
+        Args:
+            path (Path | str): Path to check.
+
+        Returns:
+            bool: If the path points to a valid translation file.
+        """
+
         path = Path(path)
 
         valid_archive: bool = path.suffix.lower() in SUPPORTED_ARCHIVE_TYPES
@@ -438,9 +457,7 @@ class TranslationsWidget(QTreeWidget):
 
             if dialog.exec() == dialog.DialogCode.Accepted:
                 new_name = dialog.textValue()
-                DatabaseService.rename_translation(
-                    current_item, new_name, self.database
-                )
+                DatabaseService.rename_translation(current_item, new_name, self.database)
 
     def __export_translation(self) -> None:
         """
@@ -454,10 +471,12 @@ class TranslationsWidget(QTreeWidget):
 
         has_plugin_files: bool = any(
             ModFileService.get_modfiletype_for_suffix(file_path.suffix) == PluginFile
-            for file_path in current_item.strings.keys()
+            for file_path in current_item.strings
         )
 
-        export_format: Optional[ExportDialog.ExportFormat] = ExportDialog.ExportFormat.DSD
+        export_format: Optional[ExportDialog.ExportFormat] = (
+            ExportDialog.ExportFormat.DSD
+        )
         if has_plugin_files:
             export_dialog = ExportDialog(QApplication.activeModalWidget())
             if export_dialog.exec() != QDialog.DialogCode.Accepted:

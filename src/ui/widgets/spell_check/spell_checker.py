@@ -34,8 +34,8 @@ class SpellChecker:
             self.__load_user_dictionary()
             self.log.info(f"Hunspell dictionary loaded for: {language}")
         except (FileNotFoundError, OSError) as ex:
-            self.log.exception(
-                f"Failed to load dictionary for language '{language}': {ex}"
+            self.log.error(
+                f"Failed to load dictionary for language '{language}': {ex}", exc_info=ex
             )
             self.__hunspell = None
 
@@ -90,12 +90,10 @@ class SpellChecker:
             self.__user_dic_path.write_text("0\n", encoding="utf-8")
 
         # Read all existing words
-        words: set[str] = set(
+        words: set[str] = {
             line.strip()
-            for line in self.__user_dic_path.read_text(encoding="utf-8").splitlines()[
-                1:
-            ]
-        )
+            for line in self.__user_dic_path.read_text(encoding="utf-8").splitlines()[1:]
+        }
 
         # Add new word if not already present
         if word not in words:
@@ -119,7 +117,7 @@ class SpellChecker:
             try:
                 self.__hunspell.add_dic(str(self.__user_dic_path))
                 self.log.info(f"Loaded user dictionary: {self.__user_dic_path}")
-            except Exception as ex:
+            except Exception as ex:  # noqa: BLE001
                 self.log.warning(
                     f"Failed to load user dictionary {self.__user_dic_path}: {ex}"
                 )

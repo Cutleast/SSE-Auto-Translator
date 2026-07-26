@@ -26,6 +26,15 @@ class ResultDialog(QDialog):
     def __init__(
         self, summary: dict[TranslationStatus, int], parent: Optional[QWidget]
     ) -> None:
+        """
+        Args:
+            summary (dict[TranslationStatus, int]):
+                A dictionary containing the summary of the scan results, where the keys
+                are TranslationStatus objects and the values are the corresponding
+                counts.
+            parent (Optional[QWidget]): Optional parent widget.
+        """
+
         super().__init__(parent)
         self.setWindowTitle(self.tr("Scan Result"))
 

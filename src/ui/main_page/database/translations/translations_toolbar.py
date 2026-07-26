@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
@@ -23,6 +25,7 @@ class TranslationsToolbar(QToolBar):
     local_import_requested = Signal()
     """Signal emitted when the user clicks on the local import action."""
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

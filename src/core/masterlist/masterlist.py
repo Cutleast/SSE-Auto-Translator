@@ -3,12 +3,11 @@ Copyright (c) Cutleast
 """
 
 import logging
-from typing import Any, Optional
+from typing import Any, Optional, Self
 
 import jstyleson as json
 from cutleast_core_lib.core.utilities.web_utils import get_raw_web_content
-from pydantic import TypeAdapter
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel, TypeAdapter
 
 from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
 from core.utilities.game_language import GameLanguage
@@ -21,8 +20,7 @@ REPOSITORY_URL: str = "https://raw.githubusercontent.com/Cutleast/SSE-Auto-Trans
 log: logging.Logger = logging.getLogger("Masterlist")
 
 
-@dataclass
-class Masterlist:
+class Masterlist(BaseModel):
     """
     Class for translation masterlists.
     """
@@ -32,12 +30,22 @@ class Masterlist:
     Map of file names and their masterlist entries.
     """
 
-    @staticmethod
-    def from_data(data: dict[str, dict[str, Any]]) -> "Masterlist":
-        return Masterlist(TypeAdapter(dict[str, MasterlistEntry]).validate_python(data))
+    @classmethod
+    def from_data(cls, data: dict[str, dict[str, Any]]) -> Self:
+        """
+        Creates a Masterlist instance from a dictionary of data.
 
-    @staticmethod
-    def load_from_repo(language: GameLanguage) -> "Masterlist":
+        Args:
+            data (dict[str, dict[str, Any]]): Dictionary containing masterlist data.
+
+        Returns:
+            Self: A Masterlist instance created from the provided data.
+        """
+
+        return cls(entries=TypeAdapter(dict[str, MasterlistEntry]).validate_python(data))
+
+    @classmethod
+    def load_from_repo(cls, language: GameLanguage) -> Self:
         """
         Loads the masterlist from the repository.
 
@@ -60,11 +68,11 @@ class Masterlist:
 
         if url is None:
             log.warning(f"No masterlist available for language '{language.name}'.")
-            return Masterlist(entries={})
+            return cls(entries={})
 
         data = get_raw_web_content(url)
         json_data: dict[str, dict[str, Any]] = json.loads(data.decode())
-        masterlist: Masterlist = Masterlist.from_data(json_data)
+        masterlist: Self = cls.from_data(json_data)
 
         log.info(f"Loaded masterlist with {len(masterlist.entries)} entries.")
 
@@ -95,9 +103,7 @@ class Masterlist:
             bool: Whether the file is ignored.
         """
 
-        masterlist_entry: Optional[MasterlistEntry] = self.entries.get(
-            file_name.lower()
-        )
+        masterlist_entry: Optional[MasterlistEntry] = self.entries.get(file_name.lower())
 
         ignore_list: list[str] = self.user_ignore_list.copy()
         ignore_list.extend(BASE_GAME_PLUGINS)

@@ -20,7 +20,13 @@ class LangDetector:
 
     log: logging.Logger = logging.getLogger("Utilities.LangDetector")
 
-    def __init__(self, confidence: float, desired_lang: Language):
+    def __init__(self, confidence: float, desired_lang: Language) -> None:
+        """
+        Args:
+            confidence (float): Confidence threshold for language detection.
+            desired_lang (Language): Desired language to compare against.
+        """
+
         self.confidence = confidence
         self.desired_lang = desired_lang
 

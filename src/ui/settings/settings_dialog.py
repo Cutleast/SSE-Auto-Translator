@@ -22,6 +22,7 @@ class SettingsDialog(SettingsWidget):
     Class for settings dialog.
     """
 
+    @override
     def __init__(
         self,
         app_config: AppConfig,
@@ -29,9 +30,7 @@ class SettingsDialog(SettingsWidget):
         translator_config: TranslatorConfig,
         parent: Optional[QWidget] = None,
     ) -> None:
-        super().__init__(
-            Cache.get(), app_config, user_config, translator_config, parent
-        )
+        super().__init__(Cache.get(), app_config, user_config, translator_config, parent)
 
         self.setWindowModality(Qt.WindowModality.WindowModal)
         self.setWindowFlag(Qt.WindowType.Window, True)

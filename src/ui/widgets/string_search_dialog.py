@@ -36,7 +36,14 @@ class StringSearchDialog(QDialog):
     __string_box: QRadioButton | QCheckBox
     __string_entry: QLineEdit
 
-    def __init__(self, parent: Optional[QWidget], translations: bool = True):
+    def __init__(self, parent: Optional[QWidget], translations: bool = True) -> None:
+        """
+        Args:
+            parent (Optional[QWidget]): Optional parent widget.
+            translations (bool, optional):
+                If the translation database is searched. Defaults to True.
+        """
+
         super().__init__(parent)
 
         self.setWindowTitle(self.tr("Search for a string..."))

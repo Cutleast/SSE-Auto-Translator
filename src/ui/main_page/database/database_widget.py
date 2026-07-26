@@ -46,6 +46,16 @@ class DatabaseWidget(QTabWidget):
         scanner: Scanner,
         download_manager: DownloadManager,
     ) -> None:
+        """
+        Args:
+            database (TranslationDatabase): The translation database.
+            provider (Provider): The translation provider.
+            mod_instance (ModInstance): The loaded mod instance.
+            app_config (AppConfig): The application configuration.
+            scanner (Scanner): The scanner instance.
+            download_manager (DownloadManager): The download manager.
+        """
+
         super().__init__()
 
         self.tabBar().setDocumentMode(True)

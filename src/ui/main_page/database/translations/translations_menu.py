@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
@@ -54,6 +54,7 @@ class TranslationsMenu(Menu):
     __open_modpage_action: QAction
     __open_in_explorer_action: QAction
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 
@@ -137,10 +138,7 @@ class TranslationsMenu(Menu):
             current_item (Optional[Translation | Path]): The current item in the tree view.
         """
 
-        if (
-            isinstance(current_item, Translation)
-            and current_item.source != Source.Local
-        ):
+        if isinstance(current_item, Translation) and current_item.source != Source.Local:
             self.__open_modpage_action.setVisible(True)
             self.__open_modpage_action.setIcon(current_item.source.get_icon())  # type: ignore[arg-type]
         else:

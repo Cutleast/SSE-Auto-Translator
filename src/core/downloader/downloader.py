@@ -7,7 +7,7 @@ import os
 import time
 from cgi import parse_header
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 import requests as req
 from PySide6.QtCore import QObject, Signal
@@ -33,6 +33,7 @@ class Downloader(QObject):
     CHUNK_SIZE: int = 1024 * 1024  # 1 MB
     TIMEOUT: int = 5  # 5 seconds
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

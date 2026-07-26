@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QHBoxLayout, QPushButton, QVBoxLayout
@@ -19,6 +19,7 @@ class ApiSetupDialog(QDialog):
     __api_setup: ApiSetup
     __save_button: QPushButton
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

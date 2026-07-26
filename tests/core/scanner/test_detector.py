@@ -6,23 +6,13 @@ from typing import Optional
 
 import pytest
 
-from core.file_types.plugin.string import PluginString
 from core.scanner.detector import LangDetector, Language
-from core.string.types import String
 
 
 class TestLangDetector:
     """
     Tests `core.scanner.detector.LangDetector`.
     """
-
-    def create_string(self, text: str) -> String:
-        return PluginString(
-            editor_id="TestString",
-            form_id="00123456|Skyrim.esm",
-            type="BOOK FULL",
-            original=text,
-        )
 
     def setup(self, language: Language, confidence: float = 0.8) -> LangDetector:
         """

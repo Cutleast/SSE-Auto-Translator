@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from enum import Enum
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtWidgets import (
     QDialog,
@@ -40,6 +40,7 @@ class ExportDialog(QDialog):
 
     __value: Optional[ExportFormat] = None
 
+    @override
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 

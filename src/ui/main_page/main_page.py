@@ -104,6 +104,16 @@ class MainPageWidget(QWidget):
         download_manager: DownloadManager,
         state_service: StateService,
     ) -> None:
+        """
+        Args:
+            app_config (AppConfig): The application configuration.
+            user_data (UserData): The user data.
+            scanner (Scanner): The scanner.
+            provider (Provider): The translation provider.
+            download_manager (DownloadManager): The download manager.
+            state_service (StateService): The state service.
+        """
+
         super().__init__()
 
         self.setObjectName("root")

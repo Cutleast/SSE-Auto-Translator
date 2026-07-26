@@ -45,7 +45,7 @@ class NxmRequest(BaseModel):
             NxmRequest: Download details (mod id, file id, key, expires and user id)
         """
 
-        scheme, netloc, path, params, query, fragment = urllib.parse.urlparse(url)  # type: ignore
+        _scheme, netloc, path, _params, query, _fragment = urllib.parse.urlparse(url)
 
         path_parts = Path(path).parts
         game: str = netloc

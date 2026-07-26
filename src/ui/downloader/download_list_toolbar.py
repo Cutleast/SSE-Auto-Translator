@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
@@ -33,6 +35,7 @@ class DownloadListToolBar(QToolBar):
     __import_action: QAction
     __export_action: QAction
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

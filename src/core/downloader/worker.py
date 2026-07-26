@@ -71,6 +71,19 @@ class Worker(QThread):
         database: TranslationDatabase,
         mod_instance: ModInstance,
     ) -> None:
+        """
+        Args:
+            installer_queue (Queue[tuple[FileDownload, ProgressCallback]]):
+                Queue of downloads to process. Each item is a tuple of a `FileDownload`
+                and a `ProgressCallback`.
+            thread_id (int): ID of the thread.
+            app_config (AppConfig): The application configuration.
+            user_config (UserConfig): The user configuration.
+            provider (Provider): The translation provider.
+            database (TranslationDatabase): The translation database.
+            mod_instance (ModInstance): The loaded mod instance.
+        """
+
         super().__init__()
 
         self.log = logging.getLogger(f"DownloaderThread-{thread_id}")

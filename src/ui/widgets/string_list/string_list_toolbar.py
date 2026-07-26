@@ -23,6 +23,11 @@ class StringListToolbar(QToolBar):
     __filter_items: dict[StringStatus, QCheckBox]
 
     def __init__(self, parent: "StringListWidget") -> None:
+        """
+        Args:
+            parent (StringListWidget): The parent string list widget.
+        """
+
         super().__init__(parent)
 
         self.__parent = parent

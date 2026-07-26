@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import webbrowser
+from typing import override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
@@ -47,6 +48,7 @@ class MenuBar(QMenuBar):
     GITHUB_URL: str = "https://github.com/Cutleast/SSE-Auto-Translator"
     """URL to the GitHub repository."""
 
+    @override
     def __init__(self) -> None:
         super().__init__()
 

@@ -71,7 +71,7 @@ class Batch(Utility):
         )
 
     @override
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # noqa: RUF020
         if not hasattr(args, Batch.COMMAND_FILE_ARG):
             return
 

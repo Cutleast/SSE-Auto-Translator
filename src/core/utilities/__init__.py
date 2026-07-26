@@ -33,8 +33,8 @@ def is_valid_hex_color(color_code: str) -> bool:
 
 
 def trim_string(text: str, max_length: int = 100) -> str:
-    """
-    Returns raw representation (for eg. "\\n" instead of a line break) of a text
+    r"""
+    Returns raw representation (for eg. "\n" instead of a line break) of a text
     trimmed to a specified number of characters.
     Appends "..." suffix if the text was longer than the specified length.
 
@@ -46,7 +46,7 @@ def trim_string(text: str, max_length: int = 100) -> str:
         str: Trimmed string
     """
 
-    if len(text) > max_length and max_length > 3:
+    if len(text) > max_length > 3:
         trimmed_text = text[: max_length - 3] + "..."
         return f"{trimmed_text!r}"[1:-1]
 

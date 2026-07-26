@@ -166,9 +166,7 @@ class BestiaryFile(ModFile):
         return strings
 
     @staticmethod
-    def extract_strings_from_loot_file(
-        creature_id: str, stream: BinaryIO
-    ) -> StringList:
+    def extract_strings_from_loot_file(creature_id: str, stream: BinaryIO) -> StringList:
         """
         Extracts strings from a loot file belonging to a creature entry in the bestiary.
 
@@ -243,8 +241,9 @@ class BestiaryFile(ModFile):
             if not isinstance(string, BestiaryString):
                 continue
 
+            creature_id: str
             if string.bestiary_id.endswith(BestiaryFile.ENTRY_NAME_SUFFIX):
-                creature_id: str = string.bestiary_id.removesuffix(
+                creature_id = string.bestiary_id.removesuffix(
                     BestiaryFile.ENTRY_NAME_SUFFIX
                 )
                 data[BestiaryFile.ID_KEY] = creature_id
@@ -254,7 +253,7 @@ class BestiaryFile(ModFile):
                 )
                 data[BestiaryFile.NAME_KEY] = name_value
             elif string.bestiary_id.endswith(BestiaryFile.ENTRY_DESC_SUFFIX):
-                creature_id: str = string.bestiary_id.removesuffix(
+                creature_id = string.bestiary_id.removesuffix(
                     BestiaryFile.ENTRY_DESC_SUFFIX
                 )
                 data[BestiaryFile.ID_KEY] = creature_id

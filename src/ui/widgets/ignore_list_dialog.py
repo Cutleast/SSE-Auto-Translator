@@ -41,6 +41,14 @@ class IgnoreListDialog(QDialog):
         user_config: UserConfig,
         parent: Optional[QWidget] = None,
     ) -> None:
+        """
+        Args:
+            masterlist (Masterlist): The loaded masterlist.
+            user_config (UserConfig): The user configuration.
+            parent (Optional[QWidget], optional):
+                Optional parent widget. Defaults to None.
+        """
+
         super().__init__(parent)
 
         self.masterlist = masterlist

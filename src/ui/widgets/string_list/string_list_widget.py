@@ -63,6 +63,13 @@ class StringListWidget(QWidget):
     __menu: StringListMenu
 
     def __init__(self, strings: Strings, translation_mode: bool = False) -> None:
+        """
+        Args:
+            strings (Strings): The strings to display.
+            translation_mode (bool, optional):
+                If the strings belong to a translation. Defaults to False.
+        """
+
         super().__init__()
 
         self.__strings = strings
@@ -285,6 +292,8 @@ class StringListWidget(QWidget):
 
     @property
     def columns(self) -> list[str]:
+        """List of column names."""
+
         return self.__columns
 
     def set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
@@ -335,17 +344,35 @@ class StringListWidget(QWidget):
         QApplication.clipboard().setText(clipboard_text.strip())
 
     def expandAll(self) -> None:
+        """
+        Expands all separators.
+        """
+
         self.__strings_widget.expandAll()
 
     def collapseAll(self) -> None:
+        """
+        Collapses all separators
+        """
+
         self.__strings_widget.collapseAll()
 
     def get_selected_items(self) -> StringList:
+        """
+        Returns:
+            StringList: A list of currently selected strings.
+        """
+
         return [
             string for string, item in self.__string_items.items() if item.isSelected()
         ]
 
     def get_visible_item_count(self) -> int:
+        """
+        Returns:
+            int: The number of currently visible strings.
+        """
+
         return len(
             [item for item in self.__string_items.values() if not item.isHidden()]
         )

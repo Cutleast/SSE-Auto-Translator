@@ -92,7 +92,7 @@ class DatabaseService:
         cls.log.info("Loading vanilla database...")
 
         translation = Translation(name="", path=appdb_path / language.id)
-        translation.strings  # build cache of strings by "calling" the strings property
+        translation.strings  # build cache of strings by "calling" the strings property  # noqa: B018
 
         cls.log.info(
             f"Loaded vanilla database for {len(translation.strings)} base game "
@@ -133,7 +133,7 @@ class DatabaseService:
             name: str = translation_data["name"]
             try:
                 translation = Translation.from_index_data(translation_data, db_path)
-                translation.strings  # build cache of strings by "calling" the strings property
+                translation.strings  # build cache of strings by "calling" the strings property  # noqa: B018
                 translations.append(translation)
             except Exception as ex:
                 cls.log.error(f"Failed to load translation {name!r}: {ex}", exc_info=ex)
@@ -307,9 +307,7 @@ class DatabaseService:
             `TranslationDatabase.update_signal()`: Always.
         """
 
-        cls.delete_translations(
-            translations=[translation], database=database, save=save
-        )
+        cls.delete_translations(translations=[translation], database=database, save=save)
 
     @classmethod
     def delete_translations(
@@ -596,9 +594,7 @@ class DatabaseService:
                 source=mod.mod_id.source if mod.mod_id is not None else Source.Local,
             )
 
-        translation.strings = cls.merge_translation_strings(
-            translation.strings, strings
-        )
+        translation.strings = cls.merge_translation_strings(translation.strings, strings)
 
         if add_and_save:
             translation.save()

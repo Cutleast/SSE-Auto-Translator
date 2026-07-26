@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import pickle
 from pathlib import Path
 from types import ModuleType
-from typing import Any, BinaryIO, override
+from typing import Any, BinaryIO, Optional, override
 
 
 class AliasUnpickler(pickle.Unpickler):
@@ -23,6 +23,15 @@ class AliasUnpickler(pickle.Unpickler):
         module_aliases: dict[str, ModuleType],
         class_aliases: dict[str, str],
     ) -> None:
+        """
+        Args:
+            file (BinaryIO): File-like object to read the pickled data from.
+            module_aliases (dict[str, ModuleType]):
+                A dictionary mapping old module names to new module objects.
+            class_aliases (dict[str, str]):
+                A dictionary mapping old class names to new class names.
+        """
+
         super().__init__(file)
 
         self._module_aliases = module_aliases
@@ -84,7 +93,7 @@ class AliasUnpickler(pickle.Unpickler):
         cls,
         path: Path,
         module_aliases: dict[str, ModuleType],
-        class_aliases: dict[str, str] = {},
+        class_aliases: Optional[dict[str, str]] = None,
     ) -> Any:
         """
         Deserializes an object from a file.
@@ -92,10 +101,15 @@ class AliasUnpickler(pickle.Unpickler):
         Args:
             path (Path): Path to the file.
             module_aliases (dict[str, ModuleType]): Dictionary of module aliases.
+            class_aliases (Optional[dict[str, str]], optional):
+                Dictionary of class aliases. Defaults to None.
 
         Returns:
             Any: Deserialized object.
         """
+
+        if class_aliases is None:
+            class_aliases = {}
 
         with path.open("rb") as f:
             return cls(f, module_aliases, class_aliases).load()
@@ -105,7 +119,7 @@ class AliasUnpickler(pickle.Unpickler):
         cls,
         file_obj: BinaryIO,
         module_aliases: dict[str, ModuleType],
-        class_aliases: dict[str, str] = {},
+        class_aliases: Optional[dict[str, str]] = None,
     ) -> Any:
         """
         Deserializes an object from an opened file.
@@ -113,10 +127,14 @@ class AliasUnpickler(pickle.Unpickler):
         Args:
             file_obj (BinaryIO): Open file stream.
             module_aliases (dict[str, ModuleType]): Dictionary of module aliases.
-            class_aliases (dict[str, str]): Dictionary of class aliases.
+            class_aliases (Optional[dict[str, str]], optional):
+                Dictionary of class aliases. Defaults to None.
 
         Returns:
             Any: Deserialized object.
         """
+
+        if class_aliases is None:
+            class_aliases = {}
 
         return cls(file_obj, module_aliases, class_aliases).load()

@@ -80,6 +80,16 @@ class TranslationsTab(QWidget):
         scanner: Scanner,
         download_manager: DownloadManager,
     ) -> None:
+        """
+        Args:
+            database (TranslationDatabase): The translation database.
+            provider (Provider): The translation provider.
+            mod_instance (ModInstance): The loaded mod instance.
+            app_config (AppConfig): The application configuration.
+            scanner (Scanner): The scanner instance.
+            download_manager (DownloadManager): The download manager instance.
+        """
+
         super().__init__()
 
         self.database = database
@@ -100,9 +110,7 @@ class TranslationsTab(QWidget):
         self.__translations_widget.edit_translation_requested.connect(
             self.edit_translation_requested.emit
         )
-        self.__translations_widget.files_dropped.connect(
-            self.__import_local_translation
-        )
+        self.__translations_widget.files_dropped.connect(self.__import_local_translation)
 
         self.database.update_signal.connect(self.__update)
         self.__update()
@@ -158,9 +166,7 @@ class TranslationsTab(QWidget):
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[Path, StringList] = self.database.search_database(
-                filter
-            )
+            search_result: dict[Path, StringList] = self.database.search_database(filter)
 
             if search_result:
                 StringListDialog(
@@ -210,8 +216,8 @@ class TranslationsTab(QWidget):
         for file in files:
             if file.suffix.lower() in SUPPORTED_ARCHIVE_TYPES:
                 strings = ProgressDialog(
-                    lambda pdisplay: StringExtractor().extract_strings(
-                        file,
+                    lambda pdisplay, f=file: StringExtractor().extract_strings(
+                        input=f,
                         mod_instance=self.mod_instance,
                         language=self.database.language,
                         max_workers=self.app_config.worker_thread_num,
@@ -227,8 +233,8 @@ class TranslationsTab(QWidget):
                     DatabaseService.add_translation(translation, self.database)
 
             else:
-                file_type_cls: type[ModFile] = (
-                    ModFileService.get_modfiletype_for_suffix(file.suffix)
+                file_type_cls: type[ModFile] = ModFileService.get_modfiletype_for_suffix(
+                    file.suffix
                 )
                 original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
                     Path(relative_data_path(str(file))),

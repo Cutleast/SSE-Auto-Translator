@@ -118,8 +118,8 @@ class ProviderManager(QObject):
         for provider in cls.providers:
             if isinstance(provider, provider_type):
                 return provider
-        else:
-            raise ValueError(f"Provider of type {provider_type} not found!")
+
+        raise ValueError(f"Provider of type {provider_type} not found!")
 
     @overload
     @classmethod

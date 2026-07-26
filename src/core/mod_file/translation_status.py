@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from __future__ import annotations
+
 from enum import IntEnum
 from typing import Optional, override
 
@@ -61,8 +63,19 @@ class TranslationStatus(IntEnum, LocalizedEnum):
     """
 
     @classmethod
-    def get_color(cls, status: "TranslationStatus") -> QColor | None:
-        COLORS: dict["TranslationStatus", Optional[QColor]] = {
+    def get_color(cls, status: TranslationStatus) -> Optional[QColor]:
+        """
+        Args:
+            status (TranslationStatus):
+                The translation status for which to get the color.
+
+        Returns:
+            Optional[QColor]:
+                The color associated with the given translation status, or None if no
+                color is associated.
+        """
+
+        COLORS: dict[TranslationStatus, Optional[QColor]] = {
             cls.NoneStatus: None,
             cls.NoStrings: None,
             cls.IsTranslated: QColor.fromString("#8be248"),
@@ -78,7 +91,7 @@ class TranslationStatus(IntEnum, LocalizedEnum):
 
     @override
     def get_localized_name(self) -> str:
-        LOC_NAMES: dict["TranslationStatus", str] = {
+        LOC_NAMES: dict[TranslationStatus, str] = {
             TranslationStatus.NoneStatus: QApplication.translate(
                 "mod_file", "No Status (No Color)"
             ),
@@ -116,7 +129,12 @@ class TranslationStatus(IntEnum, LocalizedEnum):
         return self.get_localized_name()
 
     def get_localized_filter_name(self) -> str:
-        LOC_NAMES: dict["TranslationStatus", str] = {
+        """
+        Returns:
+            str: A localized name for filtering based on the translation status.
+        """
+
+        LOC_NAMES: dict[TranslationStatus, str] = {
             TranslationStatus.NoneStatus: QApplication.translate(
                 "mod_file", "No stateless files"
             ),

@@ -15,6 +15,14 @@ class StringListDialog(StringListWidget):
     def __init__(
         self, name: str, strings: Strings, show_translation: bool = False
     ) -> None:
+        """
+        Args:
+            name (str): The name of displayed list.
+            strings (Strings): The list of strings to display.
+            show_translation (bool, optional):
+                If the strings belong to a translation. Defaults to False.
+        """
+
         super().__init__(strings, show_translation)
 
         self.setObjectName("root")

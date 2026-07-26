@@ -6,6 +6,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional, override
 
+from cutleast_core_lib.ui.widgets.enum_placeholder_dropdown import (
+    EnumPlaceholderDropdown,
+)
 from cutleast_core_lib.ui.widgets.smooth_scroll_area import SmoothScrollArea
 from PySide6.QtWidgets import (
     QCheckBox,
@@ -22,7 +25,6 @@ from core.utilities.game_language import GameLanguage
 from core.utilities.localisation import LocalisationUtils
 from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.enum_placeholder_dropdown import EnumPlaceholderDropdown
 
 
 class SetupPage(Page):

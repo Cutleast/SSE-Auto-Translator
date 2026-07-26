@@ -22,6 +22,11 @@ class FileSource(metaclass=ABCMeta):
     _file_path: Path
 
     def __init__(self, file_path: Path) -> None:
+        """
+        Args:
+            file_path (Path): The absolute path to the file.
+        """
+
         self._file_path = file_path
 
     @override

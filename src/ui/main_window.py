@@ -9,8 +9,8 @@ from typing import override
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.updater import Updater
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
-from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QCloseEvent, QShortcut
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QTabWidget
 
 from core.config.app_config import AppConfig
@@ -56,11 +56,6 @@ class MainWindow(QMainWindow):
     toast_notifier: ToastNotifier
     __status_bar: StatusBar
 
-    refresh_signal = Signal()
-    """
-    This signal is emitted when the refresh shortcut is activated.
-    """
-
     def initialize(
         self,
         app_config: AppConfig,
@@ -72,8 +67,6 @@ class MainWindow(QMainWindow):
         state_service: StateService,
     ) -> None:
         """
-        Initializes the main window.
-
         Args:
             app_config (AppConfig): App configuration.
             user_data (UserData): User data.
@@ -93,7 +86,6 @@ class MainWindow(QMainWindow):
         self.state_service = state_service
 
         self.__init_ui()
-        self.__init_shortcuts()
         self.__init_toast_notifier()
 
         self.translation_editor.tab_count_updated.connect(
@@ -149,10 +141,6 @@ class MainWindow(QMainWindow):
         self.tab_widget.addTab(self.translation_editor, self.tr("Translation Editor"))
         self.tab_widget.setTabEnabled(1, False)
 
-    def __init_shortcuts(self) -> None:
-        self.__refresh_shortcut = QShortcut(QKeySequence("F5"), self)
-        self.__refresh_shortcut.activated.connect(self.refresh)
-
     def __init_status_bar(self) -> None:
         self.__status_bar = StatusBar(self.provider)
         self.setStatusBar(self.__status_bar)
@@ -161,40 +149,38 @@ class MainWindow(QMainWindow):
         self.toast_notifier = ToastNotifier(self)
         self.toast_notifier.set_download_manager(self.download_manager)
 
-    def refresh(self) -> None:
-        self.refresh_signal.emit()
-
     @override
     def closeEvent(self, event: QCloseEvent) -> None:
         confirmation: bool = True
 
         # TODO: Move this to the translation editor
-        if hasattr(self, "translation_editor"):
-            if any(tab.changes_pending for tab in self.translation_editor.tabs):
-                message_box = QMessageBox(self)
-                message_box.setWindowTitle(self.tr("Exit?"))
-                message_box.setText(
-                    self.tr(
-                        "Are you sure you want to exit? There are still unsaved "
-                        "translations open in the editor. All unsaved changes will be lost!"
-                    )
+        if hasattr(self, "translation_editor") and any(
+            tab.changes_pending for tab in self.translation_editor.tabs
+        ):
+            message_box = QMessageBox(self)
+            message_box.setWindowTitle(self.tr("Exit?"))
+            message_box.setText(
+                self.tr(
+                    "Are you sure you want to exit? There are still unsaved "
+                    "translations open in the editor. All unsaved changes will be lost!"
                 )
-                message_box.setStandardButtons(
-                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel
-                )
-                message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-                message_box.button(QMessageBox.StandardButton.Yes).setText(
-                    self.tr("Continue")
-                )
-                message_box.button(QMessageBox.StandardButton.Cancel).setText(
-                    self.tr("Cancel")
-                )
+            )
+            message_box.setStandardButtons(
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel
+            )
+            message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
+            message_box.button(QMessageBox.StandardButton.Yes).setText(
+                self.tr("Continue")
+            )
+            message_box.button(QMessageBox.StandardButton.Cancel).setText(
+                self.tr("Cancel")
+            )
 
-                # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-                message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
-                if message_box.exec() != QMessageBox.StandardButton.Yes:
-                    confirmation = False
+            if message_box.exec() != QMessageBox.StandardButton.Yes:
+                confirmation = False
 
         if confirmation:
             super().closeEvent(event)

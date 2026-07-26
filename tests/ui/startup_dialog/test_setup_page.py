@@ -6,12 +6,14 @@ from typing import Optional
 
 import pytest
 from cutleast_core_lib.test.utils import Utils
+from cutleast_core_lib.ui.widgets.enum_placeholder_dropdown import (
+    EnumPlaceholderDropdown,
+)
 from pytestqt.qtbot import QtBot
 
 from core.utilities.game_language import GameLanguage
 from tests.base_test import BaseTest
 from ui.startup_dialog.setup_page import SetupPage
-from ui.widgets.enum_placeholder_dropdown import EnumPlaceholderDropdown
 
 
 class TestSetupPage(BaseTest):

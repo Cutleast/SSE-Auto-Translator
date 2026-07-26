@@ -20,6 +20,7 @@ class DownloadListWindow(DownloadListWidget):
     Window wrapper of the download list widget with added event handling.
     """
 
+    @override
     def __init__(
         self,
         entries: DownloadListEntries,

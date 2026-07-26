@@ -545,6 +545,7 @@ class NexusModsApi(ProviderApi):
         Args:
             game_id (str): Nexus Mods game id, eg. skyrimspecialedition
             mod_id (int): Nexus Mods mod id
+            language (str): Language to filter translations for
 
         Raises:
             ModNotFoundError: when the requested mod could not be found
@@ -682,8 +683,7 @@ class NexusModsApi(ProviderApi):
                     return url_data["URI"]
 
             # Handle errors
-            else:
-                raise ApiInvalidServerError(path)
+            raise ApiInvalidServerError(path)
 
         except KeyError as ex:
             raise UnexpectedResponseError(path, res.content.decode()) from ex
@@ -705,8 +705,8 @@ class NexusModsApi(ProviderApi):
         try:
             for url_data in data:
                 return url_data["URI"]
-            else:
-                raise ApiNoServerAvailableError(path)
+
+            raise ApiNoServerAvailableError(path)
 
         except KeyError as ex:
             raise UnexpectedResponseError(path, res.content.decode()) from ex

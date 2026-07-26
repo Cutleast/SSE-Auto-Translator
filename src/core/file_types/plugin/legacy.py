@@ -23,7 +23,7 @@ class LegacyString:
     index: int | None = None
     editor_id: str | None = None
 
-    class Status(Enum):
+    class Status(Enum):  # noqa: D106
         NoneStatus = auto()
         NoTranslationRequired = auto()
         TranslationComplete = auto()

@@ -25,6 +25,7 @@ class BsaFileSource(ArchiveFileSource):
 
         __bsa_archive: BSAArchive
 
+        @override
         def __init__(self, path: Path) -> None:
             super().__init__(path)
 
@@ -51,6 +52,16 @@ class BsaFileSource(ArchiveFileSource):
                 self.__bsa_archive.extract_file(file, dest)
 
         def get_file_stream(self, filename: Path) -> BinaryIO:
+            """
+            Gets an in-memory stream of a file in the archive.
+
+            Args:
+                filename (Path): Filename of file to get stream for.
+
+            Returns:
+                BinaryIO: In-memory stream of file in archive.
+            """
+
             return self.__bsa_archive.get_file_stream(filename)
 
         @staticmethod

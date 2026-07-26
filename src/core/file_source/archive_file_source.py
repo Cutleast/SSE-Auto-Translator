@@ -32,6 +32,7 @@ class ArchiveFileSource(FileSource):
     __extracted_file: Optional[Path] = None
     """Path to the extracted file. None if not extracted yet."""
 
+    @override
     def __init__(self, file_path: Path) -> None:
         super().__init__(file_path)
 

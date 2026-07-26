@@ -2,9 +2,10 @@
 Copyright (c) Cutleast
 """
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from enum import StrEnum
-from typing import Callable, Optional, TypeAlias
+from typing import Optional, TypeAlias
 
 
 @dataclass

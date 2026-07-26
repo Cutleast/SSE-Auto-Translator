@@ -64,6 +64,16 @@ class SettingsWidget(QWidget):
         translator_config: TranslatorConfig,
         parent: Optional[QWidget] = None,
     ) -> None:
+        """
+        Args:
+            cache (Cache): The application cache.
+            app_config (AppConfig): The application configuration.
+            user_config (UserConfig): The user configuration.
+            translator_config (TranslatorConfig): The translator configuration.
+            parent (Optional[QWidget], optional):
+                Optional parent widget. Defaults to None.
+        """
+
         super().__init__(parent)
 
         self.cache = cache

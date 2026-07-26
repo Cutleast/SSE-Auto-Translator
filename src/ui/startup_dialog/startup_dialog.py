@@ -10,11 +10,11 @@ from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
+from cutleast_core_lib.ui.widgets.stacked_widget import StackedWidget
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QVBoxLayout, QWidget
 
 from core.config.user_config import UserConfig
-from ui.widgets.stacked_widget import StackedWidget
 
 from .instance_page import InstancePage
 from .introduction import IntroductionPage
@@ -37,6 +37,13 @@ class StartupDialog(QDialog):
     __instance_page: InstancePage
 
     def __init__(self, data_path: Path, parent: Optional[QWidget] = None) -> None:
+        """
+        Args:
+            data_path (Path): Path to the data directory.
+            parent (Optional[QWidget], optional):
+                Optional parent widget. Defaults to None.
+        """
+
         super().__init__(parent)
 
         self.__data_path = data_path
@@ -54,9 +61,7 @@ class StartupDialog(QDialog):
         self.setLayout(self.__vlayout)
 
         # Page widget
-        self.__page_widget = StackedWidget(
-            orientation=StackedWidget.Orientation.Horizontal
-        )
+        self.__page_widget = StackedWidget(orientation=Qt.Orientation.Horizontal)
         self.__page_widget.setObjectName("transparent")
         self.__vlayout.addWidget(self.__page_widget, 1)
 
@@ -78,6 +83,10 @@ class StartupDialog(QDialog):
         self.__page_widget.setCurrentWidget(self.__introduction_page)
 
     def finish(self) -> None:
+        """
+        Finishes the user data setup and closes the dialog.
+        """
+
         user_path: Path = self.__data_path / "user"
 
         user_config = UserConfig.create(self.__data_path)
