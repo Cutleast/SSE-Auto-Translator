@@ -1196,37 +1196,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="179"/>
+        <location filename="src/ui/main_page/main_page.py" line="181"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="444"/>
+        <location filename="src/ui/main_page/main_page.py" line="446"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="185"/>
+        <location filename="src/ui/main_page/main_page.py" line="187"/>
         <source>Translatable files:</source>
         <translation>可翻译的文件：</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="204"/>
+        <location filename="src/ui/main_page/main_page.py" line="206"/>
         <source>Support me on Ko-fi</source>
         <translation>在 Ko-fi 上支持我</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="423"/>
+        <location filename="src/ui/main_page/main_page.py" line="425"/>
         <source>No translation downloads available!</source>
         <translation>没有可用的翻译下载！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="424"/>
+        <location filename="src/ui/main_page/main_page.py" line="426"/>
         <source>There are no translations available to download.</source>
         <translation>没有可供下载的翻译。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="447"/>
+        <location filename="src/ui/main_page/main_page.py" line="449"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1237,84 +1237,109 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
 请将这个文件夹拖到 MO2 或 Vortex 中的Mod列表中，并确保安装了 Dynamic String Distributor 并且启用了两个模组！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="457"/>
+        <location filename="src/ui/main_page/main_page.py" line="459"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="459"/>
+        <location filename="src/ui/main_page/main_page.py" line="461"/>
         <source>Open output mod in Explorer</source>
         <translation>在资源管理器中打开输出 Mod</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="462"/>
+        <location filename="src/ui/main_page/main_page.py" line="464"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>在Nexus Mods上打开DSD页面</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="505"/>
+        <location filename="src/ui/main_page/main_page.py" line="507"/>
         <source>Search Results</source>
         <translation>搜索结果</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="510"/>
+        <location filename="src/ui/main_page/main_page.py" line="512"/>
         <source>No strings found!</source>
         <translation>未找到任何字符串！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="512"/>
+        <location filename="src/ui/main_page/main_page.py" line="514"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>未找到任何符合给定筛选条件的字符串！
 点击“显示详情”以查看已使用的筛选条件。</translation>
     </message>
+    <message>
+        <location filename="src/ui/main_page/main_page.py" line="528"/>
+        <source>Export mod file states...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_page.py" line="531"/>
+        <source>JSON files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_page.py" line="549"/>
+        <source>Export successful!</source>
+        <translation type="unfinished">导出成功！</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_page.py" line="550"/>
+        <source>Successfully exported mod file states to:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainToolBar</name>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="130"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="134"/>
         <source>Open ignore list</source>
         <translation>打开忽略名单</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="135"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="139"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="144"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="148"/>
         <source>Scan modlist...</source>
         <translation>搜索Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="120"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="124"/>
         <source>Filter options</source>
         <translation>过滤器选项</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="150"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="154"/>
         <source>Scan online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="156"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="160"/>
         <source>Download available translations...</source>
         <translation>下载可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="162"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="166"/>
         <source>Build output mod...</source>
         <translation>构建输出 Mod ...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="171"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="175"/>
         <source>Scan translations for missing strings...</source>
         <translation>检索漏译字符串...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="177"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="181"/>
         <source>Search modlist for string...</source>
         <translation>在MOD列表中搜索字符串...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_toolbar.py" line="186"/>
+        <source>Export mod file states</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
