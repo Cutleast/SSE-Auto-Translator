@@ -11,7 +11,6 @@ from typing import Any, Optional
 import jstyleson as json
 
 from core.database.translation import Translation
-from core.database.translation_service import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -479,9 +478,8 @@ class DatabaseService:
                 string.status = StringStatus.TranslationRequired
 
             if apply_db:
-                TranslationService.update_strings(
-                    strings_to_update=modfile_strings,
-                    existing_strings=database.strings,
+                StringUtils.match_strings(
+                    strings_to_update=modfile_strings, database_strings=database.strings
                 )
 
             translation_strings.setdefault(modfile.path, []).extend(modfile_strings)
@@ -541,9 +539,8 @@ class DatabaseService:
             string.status = StringStatus.TranslationRequired
 
         if apply_db:
-            TranslationService.update_strings(
-                strings_to_update=modfile_strings,
-                existing_strings=database.strings,
+            StringUtils.match_strings(
+                strings_to_update=modfile_strings, database_strings=database.strings
             )
 
         translation.strings.setdefault(modfile.path, []).extend(modfile_strings)

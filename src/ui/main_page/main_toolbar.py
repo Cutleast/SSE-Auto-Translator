@@ -54,9 +54,6 @@ class MainToolBar(QToolBar):
     build_output_requested = Signal()
     """Signal when the user clicks on the build output action."""
 
-    deep_scan_requested = Signal()
-    """Signal when the user clicks on the deep scan action."""
-
     string_search_requested = Signal()
     """Signal when the user clicks on the string search action."""
 
@@ -72,7 +69,6 @@ class MainToolBar(QToolBar):
     __download_action: QAction
     __build_output_action: QAction
 
-    __deep_scan_action: QAction
     __string_search_action: QAction
     __export_states_action: QAction
 
@@ -85,7 +81,7 @@ class MainToolBar(QToolBar):
 
         self.__init_filter_actions()
         self.__init_actions()
-        self.__init_search_actions()
+        self.__init_utility_actions()
 
         self.__highlight_action(self.__modlist_scan_action)
 
@@ -169,13 +165,7 @@ class MainToolBar(QToolBar):
 
         self.addSeparator()
 
-    def __init_search_actions(self) -> None:
-        self.__deep_scan_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.line-scan"),
-            self.tr("Scan translations for missing strings..."),
-        )
-        self.__deep_scan_action.triggered.connect(self.deep_scan_requested.emit)
-
+    def __init_utility_actions(self) -> None:
         self.__string_search_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.layers-search"),
             self.tr("Search modlist for string..."),

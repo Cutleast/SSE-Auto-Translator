@@ -42,9 +42,6 @@ class ModInstanceMenu(Menu):
     download_requested = Signal()
     """Signal emitted when the user clicks on the download action."""
 
-    deep_scan_requested = Signal()
-    """Signal emitted when the user clicks on the deep scan action."""
-
     import_as_translation_requested = Signal()
     """Signal emitted when the user clicks on the import as translation action."""
 
@@ -168,11 +165,6 @@ class ModInstanceMenu(Menu):
             self.tr("Download available translations..."),
         )
         download_action.triggered.connect(self.download_requested.emit)
-
-        deep_scan_action: QAction = self.__action_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.line-scan"), self.tr("Deep scan...")
-        )
-        deep_scan_action.triggered.connect(self.deep_scan_requested.emit)
 
     def __init_translation_actions(self) -> None:
         self.__translation_menu = Menu(

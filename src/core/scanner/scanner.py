@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 import logging
 from concurrent.futures import Future, as_completed
-from copy import copy
 from pathlib import Path
 from typing import Optional
 
@@ -32,7 +31,7 @@ from core.string.search_filter import SearchFilter, matches_filter
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
-from core.string.types import String, StringList
+from core.string.types import StringList
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
@@ -368,122 +367,6 @@ class Scanner(QObject):
             return TranslationStatus.TranslationAvailableOnline
         else:
             return TranslationStatus.NoTranslationAvailable
-
-    def run_deep_scan(
-        self, pdisplay: Optional[ProgressDisplay] = None
-    ) -> dict[ModFile, TranslationStatus]:
-        """
-        Scans each installed translation for missing or untranslated strings.
-
-        Args:
-            pdisplay (Optional[ProgressDisplay], optional):
-                Optional progress display. Defaults to None.
-
-        Returns:
-            dict[ModFile, TranslationStatus]:
-                Mod files with installed translations and their status
-        """
-
-        translations: list[Translation] = self.database.user_translations
-
-        self.log.info(f"Running deep scan for {len(translations)} translation(s)...")
-
-        scan_result: dict[ModFile, TranslationStatus] = {}
-        for t, translation in enumerate(translations):
-            if pdisplay is not None:
-                pdisplay.updateMainProgress(
-                    ProgressUpdate(
-                        status_text=self.tr("Running deep scan...")
-                        + f" ({t}/{len(translations)})",
-                        value=t,
-                        maximum=len(translations),
-                    )
-                )
-
-            self.log.info(f"Scanning {translation.name!r}...")
-            scan_result.update(self.__deep_scan_translation(translation, pdisplay))
-
-        self.log.info("Deep scan complete.")
-
-        return scan_result
-
-    def __deep_scan_translation(
-        self, translation: Translation, pdisplay: Optional[ProgressDisplay] = None
-    ) -> dict[ModFile, TranslationStatus]:
-        result: dict[ModFile, TranslationStatus] = {}
-        for m, (modfile_path, strings) in enumerate(translation.strings.items()):
-            if pdisplay is not None:
-                pdisplay.updateProgress(
-                    1,
-                    ProgressUpdate(
-                        status_text=f"{translation.name} > {modfile_path} ({m}/{len(translation.strings)})",
-                        value=m,
-                        maximum=len(translation.strings),
-                    ),
-                )
-
-            modfile: Optional[ModFile] = self.mod_instance.get_modfile(
-                modfile_path, ignore_states=[TranslationStatus.IsTranslated]
-            )
-
-            if modfile is None:
-                self.log.warning(f"Mod file {modfile_path!r} not found in modlist.")
-                continue
-
-            self.log.info(f"Scanning {translation.name!r} > {modfile_path!r}...")
-            result[modfile] = self.__deep_scan_modfile_translation(
-                strings, modfile, pdisplay
-            )
-            translation.save()
-
-        return result
-
-    def __deep_scan_modfile_translation(
-        self,
-        translation_strings: StringList,
-        modfile: ModFile,
-        pdisplay: Optional[ProgressDisplay] = None,
-    ) -> TranslationStatus:
-        modfile_strings: StringList = modfile.get_strings()
-        translation_map: dict[str, String] = {
-            string.id: string for string in translation_strings
-        }
-
-        translation_complete = True
-        for s, modfile_string in enumerate(modfile_strings):
-            if pdisplay is not None:
-                pdisplay.updateProgress(
-                    2,
-                    ProgressUpdate(
-                        status_text=self.tr("Scanning strings...")
-                        + f" ({s}/{len(modfile_strings)})",
-                        value=s,
-                        maximum=len(modfile_strings),
-                    ),
-                )
-
-            matching: Optional[String] = translation_map.get(modfile_string.id)
-
-            if matching is None:
-                new_string: String = copy(modfile_string)
-                new_string.status = StringStatus.TranslationRequired
-                new_string.string = new_string.original
-                translation_map[new_string.id] = new_string
-                translation_strings.append(new_string)
-                translation_complete = False
-
-            elif (
-                matching.status == StringStatus.TranslationIncomplete
-                or matching.status == StringStatus.TranslationRequired
-            ):
-                translation_complete = False
-
-        if not translation_complete:
-            self.log.info(f"Translation for {modfile.name!r} is incomplete.")
-            return TranslationStatus.TranslationIncomplete
-        else:
-            self.log.info(f"Translation for {modfile.name!r} is complete.")
-            return TranslationStatus.TranslationInstalled
 
     def run_string_search(
         self,

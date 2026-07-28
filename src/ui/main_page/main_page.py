@@ -137,7 +137,6 @@ class MainPageWidget(QWidget):
         self.__tool_bar.online_scan_requested.connect(self.__run_online_scan)
         self.__tool_bar.download_requested.connect(self.__run_downloads)
         self.__tool_bar.build_output_requested.connect(self.__build_output)
-        self.__tool_bar.deep_scan_requested.connect(self.__run_deep_scan)
         self.__tool_bar.string_search_requested.connect(self.__run_string_search)
         self.__tool_bar.export_states_requested.connect(self.__export_modfile_states)
 
@@ -152,7 +151,6 @@ class MainPageWidget(QWidget):
         self.__modinstance_widget.downloads_requested.connect(
             lambda: self.__run_downloads(only_selected=True)
         )
-        self.__modinstance_widget.deep_scan_requested.connect(self.__run_deep_scan)
         self.__modinstance_widget.highlight_translation_requested.connect(
             self.__database_widget.highlight_translation
         )
@@ -225,12 +223,13 @@ class MainPageWidget(QWidget):
         splitter.addWidget(self.__modinstance_widget)
 
         self.__database_widget = DatabaseWidget(
-            self.user_data.database,
-            self.provider,
-            self.mod_instance,
-            self.app_config,
-            self.scanner,
-            self.download_manager,
+            database=self.user_data.database,
+            provider=self.provider,
+            mod_instance=self.mod_instance,
+            app_config=self.app_config,
+            scanner=self.scanner,
+            download_manager=self.download_manager,
+            state_service=self.state_service,
         )
         splitter.addWidget(self.__database_widget)
         splitter.setSizes([int(0.6 * splitter.width()), int(0.4 * splitter.width())])
@@ -473,17 +472,6 @@ class MainPageWidget(QWidget):
 
         if choice == message_box.StandardButton.Help:
             os.startfile(output_path)
-
-    def __run_deep_scan(self) -> None:
-        """
-        Runs a deep scan over the installed translations.
-        """
-
-        result: dict[ModFile, TranslationStatus] = ProgressDialog(
-            self.scanner.run_deep_scan, QApplication.activeModalWidget()
-        ).run()
-        self.state_service.set_modfile_states(result)
-        self.__show_scan_result(list(result.keys()))
 
     def __run_string_search(self) -> None:
         """

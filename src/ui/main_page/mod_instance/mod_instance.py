@@ -67,9 +67,6 @@ class ModInstanceWidget(QTreeWidget):
     downloads_requested = Signal()
     """Signal emitted when the user requests downloads via the context menu."""
 
-    deep_scan_requested = Signal()
-    """Signal emitted when the user requests a deep scan via the context menu."""
-
     highlight_translation_requested = Signal(Translation)
     """
     Signal emitted when the user requests to highlight a translation via the context
@@ -162,7 +159,6 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.basic_scan_requested.connect(self.basic_scan_requested.emit)
         self.__menu.online_scan_requested.connect(self.online_scan_requested.emit)
         self.__menu.download_requested.connect(self.downloads_requested.emit)
-        self.__menu.deep_scan_requested.connect(self.deep_scan_requested.emit)
         self.__menu.import_as_translation_requested.connect(self.__import_as_translation)
         self.__menu.show_untranslated_strings_requested.connect(
             self.__show_untranslated_strings
