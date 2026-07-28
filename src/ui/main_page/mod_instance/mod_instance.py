@@ -11,6 +11,7 @@ from typing import Optional, override
 from cutleast_core_lib.core.filesystem.utils import open_in_explorer
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
+from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
@@ -530,37 +531,89 @@ class ModInstanceWidget(QTreeWidget):
         if current_item is None:
             return
 
-        if isinstance(current_item, ModFile):
+        selected_mods: list[Mod] = [
+            mod for mod, item in self.__mod_items.items() if item.isSelected()
+        ]
+        selected_modfiles: list[ModFile] = [
+            modfile
+            for modfile_items in self.__modfile_items.values()
+            for modfile, item in modfile_items.items()
+            if item.isSelected()
+        ]
 
-            def process(pdisplay: ProgressDisplay) -> Translation:
+        def process(pdisplay: ProgressDisplay) -> None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(status_text=self.tr("Creating translations for mods..."))
+            )
+
+            t: int = 0
+            translation: Translation
+            modfile_states: dict[ModFile, TranslationStatus] = {}
+            for m, selected_mod in enumerate(selected_mods):
                 pdisplay.updateMainProgress(
-                    ProgressUpdate(status_text=self.tr("Creating translation..."))
+                    ProgressUpdate(
+                        status_text=(
+                            self.tr("Creating translation for mod '{mod}'...").format(
+                                mod=selected_mod.name
+                            )
+                            + f" ({m + 1}/{len(selected_mods)})"
+                        ),
+                        value=m,
+                        maximum=len(selected_mods),
+                    )
                 )
 
-                return DatabaseService.create_translation_for_modfile(
-                    current_item, self.database
+                translation = DatabaseService.create_translation_for_mod(
+                    selected_mod, self.database
                 )
-        else:
+                t += 1
 
-            def process(pdisplay: ProgressDisplay) -> Translation:
+                modfile_states.update(
+                    {
+                        not_none(
+                            self.mod_instance.get_modfile(path)
+                        ): TranslationStatus.TranslationIncomplete
+                        for path in translation.strings
+                    }
+                )
+
+            for m, selected_modfile in enumerate(selected_modfiles):
                 pdisplay.updateMainProgress(
-                    ProgressUpdate(status_text=self.tr("Creating translation..."))
+                    ProgressUpdate(
+                        status_text=(
+                            self.tr(
+                                "Creating translation for mod file '{modfile}'..."
+                            ).format(modfile=selected_modfile.path)
+                            + f" ({m + 1}/{len(selected_modfiles)})"
+                        ),
+                        value=m,
+                        maximum=len(selected_modfiles),
+                    )
                 )
 
-                return DatabaseService.create_translation_for_mod(
-                    current_item, self.database
+                if selected_modfile in modfile_states or selected_modfile.status in [
+                    TranslationStatus.NoStrings,
+                    TranslationStatus.TranslationInstalled,
+                    TranslationStatus.IsTranslated,
+                ]:
+                    continue  # no translation required for the mod file
+
+                translation = DatabaseService.create_translation_for_modfile(
+                    selected_modfile, self.database
+                )
+                t += 1
+
+                modfile_states[selected_modfile] = (
+                    TranslationStatus.TranslationIncomplete
                 )
 
-        translation: Translation = ProgressDialog(
-            process, QApplication.activeModalWidget()
-        ).run()
+            self.state_service.set_modfile_states(modfile_states)
 
-        if isinstance(current_item, ModFile):
-            current_item.status = TranslationStatus.TranslationIncomplete
-        # TODO: Set status of all relevant mod files if current item is a mod
+            if t == 1:
+                self.highlight_translation_requested.emit(translation)  # pyright: ignore[reportPossiblyUnboundVariable]
+                self.edit_translation_requested.emit(translation)  # pyright: ignore[reportPossiblyUnboundVariable]
 
-        self.highlight_translation_requested.emit(translation)
-        self.edit_translation_requested.emit(translation)
+        ProgressDialog(process, QApplication.activeModalWidget()).run()
 
     def __import_as_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()

@@ -1593,38 +1593,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="199"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="200"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="200"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="201"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="201"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="202"/>
         <source>Priority</source>
         <translation>优先级</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="537"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="547"/>
-        <source>Creating translation...</source>
-        <translation>正在创建翻译文件...</translation>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="546"/>
+        <source>Creating translations for mods...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="573"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="556"/>
+        <source>Creating translation for mod &apos;{mod}&apos;...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="585"/>
+        <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="626"/>
         <source>Importing installed translation...</source>
         <translation>正在导入已安装的翻译...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="608"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="661"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="610"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="663"/>
         <source>Translation successfully imported into database.</source>
         <translation>翻译文件已成功导入数据库。</translation>
     </message>

@@ -1596,38 +1596,47 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="199"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="200"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="200"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="201"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="201"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="202"/>
         <source>Priority</source>
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="537"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="547"/>
-        <source>Creating translation...</source>
-        <translation>Übersetzung wird erstellt...</translation>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="546"/>
+        <source>Creating translations for mods...</source>
+        <translation>Übersetzungen werden für Mods erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="573"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="556"/>
+        <source>Creating translation for mod &apos;{mod}&apos;...</source>
+        <translation>Übersetzung für Mod &apos;{mod}&apos; wird erstellt...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="585"/>
+        <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
+        <translation>Übersetzung für Moddatei &apos;{modfile}&apos; wird erstellt...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="626"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="608"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="661"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="610"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="663"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
