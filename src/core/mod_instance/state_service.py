@@ -208,12 +208,14 @@ class StateService(QObject):
 
         self.update_signal.emit()
 
-    def export_states(self, file_path: Path, check_states: dict[ModFile, bool]) -> None:
+    def export_states_to_json_file(
+        self, file_path: Path, check_states: dict[ModFile, bool]
+    ) -> None:
         """
-        Exports the mod file states to a file.
+        Exports the mod file states to a JSON file.
 
         Args:
-            file_path (Path): The path to the file to export the states to.
+            file_path (Path): The path to the JSON file to export the states to.
             check_states (dict[ModFile, bool]):
                 Dictionary of mod files and their checkstate.
         """

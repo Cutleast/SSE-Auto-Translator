@@ -535,7 +535,7 @@ class MainPageWidget(QWidget):
         if fdialog.exec() == QFileDialog.DialogCode.Accepted:
             file_path = Path(fdialog.selectedFiles()[0])
 
-            self.state_service.export_states(
+            self.state_service.export_states_to_json_file(
                 file_path,
                 check_states={
                     modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
