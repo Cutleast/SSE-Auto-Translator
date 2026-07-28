@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import logging
 from collections.abc import Iterable
 from copy import copy
+from typing import Optional
 
 from core.utilities.container_utils import unique
 
@@ -97,3 +98,137 @@ class StringUtils:
             cls.log.error("Mapping failed!")
 
         return merged_strings
+
+    @classmethod
+    def match_strings(
+        cls, strings_to_update: StringList, database_strings: StringList
+    ) -> None:
+        """
+        Updates a list of strings and attempts to translate them via similarities to
+        existing strings.
+
+        Args:
+            strings_to_update (StringList): Strings to update.
+            database_strings (StringList): Existing strings to use for translation.
+        """
+
+        cls.log.info(
+            f"Attempting to translate {len(strings_to_update)} string(s) from "
+            f"{len(database_strings)} existing string(s)..."
+        )
+
+        db_strings_by_id: dict[str, String] = {
+            string.id: string for string in database_strings
+        }
+        db_strings_by_original: dict[str, String] = {
+            string.original: string for string in database_strings
+        }
+
+        matched: int = 0
+        for string in strings_to_update:
+            matched += cls.match_string(
+                string_to_update=string,
+                database_strings_by_id=db_strings_by_id,
+                database_strings_by_original=db_strings_by_original,
+            )
+
+        cls.log.info(f"Successfully translated {matched} string(s).")
+
+    @classmethod
+    def match_string(
+        cls,
+        string_to_update: String,
+        database_strings_by_id: dict[str, String],
+        database_strings_by_original: dict[str, String],
+    ) -> bool:
+        """
+        Updates a string and attempts to translate it via similarities to existing strings.
+
+        Args:
+            string_to_update (String): String to update.
+            database_strings_by_id (dict[str, String]):
+                Dictionary mapping string IDs to existing strings.
+            database_strings_by_original (dict[str, String]):
+                Dictionary mapping original strings to existing strings.
+
+        Returns:
+            bool: `True` if the string was updated, `False` otherwise.
+        """
+
+        matched: bool = False
+
+        database_string: String
+        if string_to_update.id in database_strings_by_id:
+            database_string = database_strings_by_id[string_to_update.id]
+            string_to_update.string = database_string.string
+            string_to_update.status = StringStatus.TranslationComplete
+            matched = True
+
+        elif string_to_update.original in database_strings_by_original:
+            database_string = database_strings_by_original[string_to_update.original]
+            string_to_update.string = database_string.string
+            string_to_update.status = StringStatus.TranslationIncomplete
+            matched = True
+
+        return matched
+
+    @classmethod
+    def update_string_list(
+        cls,
+        translation_strings: StringList,
+        original_strings: StringList,
+        keep_deleted: bool = False,
+    ) -> bool:
+        """
+        Updates a list of strings based on a list of original strings. This method fills
+        in missing strings and resets translations where the original text has changed.
+        If `keep_deleted` is set to `False`, strings that are no longer present in the
+        original list will be removed from the translation list.
+
+        Args:
+            translation_strings (StringList): List of translated strings.
+            original_strings (StringList): List of original strings.
+            keep_deleted (bool):
+                Whether to keep strings that are no longer present in the original list.
+                Defaults to `False`.
+
+        Returns:
+            bool:
+                `True` if any strings were updated, added or removed, `False` otherwise.
+        """
+
+        translation_map: dict[str, String] = {
+            string.id: string for string in translation_strings
+        }
+
+        changed: bool = False
+        for original_string in original_strings:
+            translated_string: Optional[String] = translation_map.get(original_string.id)
+
+            if translated_string is None:
+                # string is missing -> add it and mark as "translation required"
+                new_string: String = copy(original_string)
+                new_string.status = StringStatus.TranslationRequired
+                new_string.string = new_string.original
+                translation_map[new_string.id] = new_string
+                translation_strings.append(new_string)
+                changed = True
+
+            elif translated_string.original != original_string.original:
+                # original string has changed -> reset translation to original and mark
+                # string as "translation required"
+                translated_string.original = original_string.original
+                translated_string.status = StringStatus.TranslationRequired
+                translated_string.string = translated_string.original
+                changed = True
+
+        if not keep_deleted:
+            # remove strings that are no longer present in the original list
+            original_ids: set[str] = {string.id for string in original_strings}
+
+            for translated_string in translation_strings.copy():
+                if translated_string.id not in original_ids:
+                    translation_strings.remove(translated_string)
+                    changed = True
+
+        return changed

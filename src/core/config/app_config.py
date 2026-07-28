@@ -73,6 +73,15 @@ class AppConfig(BaseAppConfig):
     translation in the "Translations" tab.
     """
 
+    keep_deleted_strings: bool = False
+    """Whether to keep deleted strings when updating translations in the database."""
+
+    add_missing_modfiles: bool = True
+    """
+    Whether to automatically add missing mod files to existing translations when
+    updating the database.
+    """
+
     @override
     @staticmethod
     def get_config_name() -> str:

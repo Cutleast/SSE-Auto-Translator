@@ -16,6 +16,7 @@ from PySide6.QtWidgets import (
     QFileDialog,
     QHBoxLayout,
     QLabel,
+    QMessageBox,
     QVBoxLayout,
     QWidget,
 )
@@ -23,12 +24,14 @@ from PySide6.QtWidgets import (
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
+from core.database.database_updater import DatabaseUpdater
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.string.search_filter import SearchFilter
 from core.string.string_extractor import StringExtractor
@@ -59,12 +62,14 @@ class TranslationsTab(QWidget):
 
     log: logging.Logger = logging.getLogger("TranslationsTab")
 
-    database: TranslationDatabase
-    provider: Provider
-    mod_instance: ModInstance
-    app_config: AppConfig
-    scanner: Scanner
-    download_manager: DownloadManager
+    __database: TranslationDatabase
+    __provider: Provider
+    __mod_instance: ModInstance
+    __app_config: AppConfig
+    __scanner: Scanner
+    __download_manager: DownloadManager
+    __state_service: StateService
+    __database_updater: DatabaseUpdater
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
@@ -79,6 +84,7 @@ class TranslationsTab(QWidget):
         app_config: AppConfig,
         scanner: Scanner,
         download_manager: DownloadManager,
+        state_service: StateService,
     ) -> None:
         """
         Args:
@@ -88,16 +94,19 @@ class TranslationsTab(QWidget):
             app_config (AppConfig): The application configuration.
             scanner (Scanner): The scanner instance.
             download_manager (DownloadManager): The download manager instance.
+            state_service (StateService): The state service instance.
         """
 
         super().__init__()
 
-        self.database = database
-        self.provider = provider
-        self.mod_instance = mod_instance
-        self.app_config = app_config
-        self.scanner = scanner
-        self.download_manager = download_manager
+        self.__database = database
+        self.__provider = provider
+        self.__mod_instance = mod_instance
+        self.__app_config = app_config
+        self.__scanner = scanner
+        self.__download_manager = download_manager
+        self.__state_service = state_service
+        self.__database_updater = DatabaseUpdater(database, mod_instance)
 
         self.__init_ui()
 
@@ -106,13 +115,16 @@ class TranslationsTab(QWidget):
         )
         self.__toolbar.search_database_requested.connect(self.__search_database)
         self.__toolbar.local_import_requested.connect(self.__import_local_translation)
+        self.__toolbar.update_translations_requested.connect(
+            self.__update_translation_database
+        )
 
         self.__translations_widget.edit_translation_requested.connect(
             self.edit_translation_requested.emit
         )
         self.__translations_widget.files_dropped.connect(self.__import_local_translation)
 
-        self.database.update_signal.connect(self.__update)
+        self.__database.update_signal.connect(self.__update)
         self.__update()
 
     def __init_ui(self) -> None:
@@ -141,7 +153,7 @@ class TranslationsTab(QWidget):
 
     def __init_translations_widget(self) -> None:
         self.__translations_widget = TranslationsWidget(
-            self.database, self.provider, self.mod_instance, self.app_config
+            self.__database, self.__provider, self.__mod_instance, self.__app_config
         )
         self.__vlayout.addWidget(self.__translations_widget)
 
@@ -152,7 +164,7 @@ class TranslationsTab(QWidget):
 
         StringListDialog(
             self.tr("Base Game + AE CC Content"),
-            self.database.vanilla_translation.strings,
+            self.__database.vanilla_translation.strings,
             show_translation=True,
         ).show()
 
@@ -166,7 +178,9 @@ class TranslationsTab(QWidget):
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[Path, StringList] = self.database.search_database(filter)
+            search_result: dict[Path, StringList] = self.__database.search_database(
+                filter
+            )
 
             if search_result:
                 StringListDialog(
@@ -218,25 +232,25 @@ class TranslationsTab(QWidget):
                 strings = ProgressDialog(
                     lambda pdisplay, f=file: StringExtractor().extract_strings(
                         input=f,
-                        mod_instance=self.mod_instance,
-                        language=self.database.language,
-                        max_workers=self.app_config.worker_thread_num,
+                        mod_instance=self.__mod_instance,
+                        language=self.__database.language,
+                        max_workers=self.__app_config.worker_thread_num,
                         pdisplay=pdisplay,
                     )
                 ).run()
 
                 if strings:
                     translation = DatabaseService.create_blank_translation(
-                        file.stem, strings, self.database
+                        file.stem, strings, self.__database
                     )
                     translation.save()
-                    DatabaseService.add_translation(translation, self.database)
+                    DatabaseService.add_translation(translation, self.__database)
 
             else:
                 file_type_cls: type[ModFile] = ModFileService.get_modfiletype_for_suffix(
                     file.suffix
                 )
-                original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
+                original_modfile: Optional[ModFile] = self.__mod_instance.get_modfile(
                     Path(relative_data_path(str(file))),
                     ignore_states=[
                         TranslationStatus.IsTranslated,
@@ -253,21 +267,60 @@ class TranslationsTab(QWidget):
 
                     if strings:
                         translation = DatabaseService.create_blank_translation(
-                            f"{file.name} - {self.database.language.name}",
+                            f"{file.name} - {self.__database.language.name}",
                             strings,
-                            self.database,
+                            self.__database,
                         )
                         translation.save()
-                        DatabaseService.add_translation(translation, self.database)
+                        DatabaseService.add_translation(translation, self.__database)
 
                 else:
                     raise NoOriginalModFound
+
+    def __update_translation_database(self) -> None:
+        """
+        Updates the translation database by updating existing translations and adding
+        missing mod files to existing translations.
+        """
+
+        thread_num: Optional[int] = (
+            self.__app_config.worker_thread_num
+            if self.__app_config.worker_thread_num > 0
+            else None
+        )
+
+        scan_result: dict[ModFile, TranslationStatus] = ProgressDialog(
+            lambda pdisplay: self.__database_updater.update_database_translations(
+                keep_deleted=self.__app_config.keep_deleted_strings,
+                add_missing_files=self.__app_config.add_missing_modfiles,
+                thread_num=thread_num,
+                pdisplay=pdisplay,
+            )
+        ).run()
+        self.__state_service.set_modfile_states(scan_result)
+
+        if scan_result:
+            QMessageBox.information(
+                QApplication.activeModalWidget(),
+                self.tr("Database update complete"),
+                self.tr(
+                    "Successfully updated translations for {num} mod file(s)."
+                ).format(num=len(scan_result)),
+                buttons=QMessageBox.StandardButton.Ok,
+            )
+        else:
+            QMessageBox.information(
+                QApplication.activeModalWidget(),
+                self.tr("Database update complete"),
+                self.tr("All translations are up-to-date."),
+                buttons=QMessageBox.StandardButton.Ok,
+            )
 
     def __update(self) -> None:
         self.__update_translations_num()
 
     def __update_translations_num(self) -> None:
-        self.__translations_num_label.display(len(self.database.user_translations))
+        self.__translations_num_label.display(len(self.__database.user_translations))
 
     def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """

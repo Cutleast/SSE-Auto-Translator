@@ -7,11 +7,10 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.core.filesystem.utils import add_suffix
+from cutleast_core_lib.core.filesystem.utils import add_suffix, rem_last_suffix
 
 from core.string.string_loader import StringLoader
-from core.string.string_status import StringStatus
-from core.string.types import String, StringList, StringListModel
+from core.string.types import StringList, StringListModel
 
 
 class TranslationService:
@@ -49,7 +48,7 @@ class TranslationService:
         json_files: list[Path] = list(translation_folder.rglob("*.json"))
         strings: dict[Path, StringList] = {}
         for json_file in json_files:
-            modfile_path = json_file.with_name(json_file.stem).relative_to(
+            modfile_path: Path = rem_last_suffix(json_file).relative_to(
                 translation_folder
             )
             try:
@@ -79,9 +78,7 @@ class TranslationService:
         strings: StringList = StringLoader.load_strings_from_legacy_file(
             legacy_ats_file_path
         )
-        cls.save_strings_to_json_file(
-            legacy_ats_file_path.with_suffix(".json"), strings
-        )
+        cls.save_strings_to_json_file(legacy_ats_file_path.with_suffix(".json"), strings)
         os.unlink(legacy_ats_file_path)
 
         return strings
@@ -99,9 +96,7 @@ class TranslationService:
         """
 
         for modfile_name, modfile_strings in strings.items():
-            json_file_path: Path = translation_folder / add_suffix(
-                modfile_name, ".json"
-            )
+            json_file_path: Path = translation_folder / add_suffix(modfile_name, ".json")
             json_file_path.parent.mkdir(parents=True, exist_ok=True)
             cls.save_strings_to_json_file(json_file_path, modfile_strings)
 
@@ -119,71 +114,3 @@ class TranslationService:
         """
 
         json_file_path.write_bytes(StringListModel.dump_json(strings, indent=indent))
-
-    @classmethod
-    def update_strings(
-        cls, strings_to_update: StringList, existing_strings: StringList
-    ) -> None:
-        """
-        Updates a list of strings and attempts to translate them via similarities to
-        existing strings.
-
-        Args:
-            strings_to_update (StringList): Strings to update.
-            existing_strings (StringList): Existing strings to use for translation.
-        """
-
-        cls.log.info(
-            f"Attempting to translate {len(strings_to_update)} string(s) from "
-            f"{len(existing_strings)} existing string(s)..."
-        )
-
-        existing_strings_by_id: dict[str, String] = {
-            string.id: string for string in existing_strings
-        }
-        existing_strings_by_original: dict[str, String] = {
-            string.original: string for string in existing_strings
-        }
-
-        matched: int = 0
-        for string in strings_to_update:
-            matched += cls.update_string(
-                string, existing_strings_by_id, existing_strings_by_original
-            )
-
-        cls.log.info(f"Successfully translated {matched} string(s).")
-
-    @classmethod
-    def update_string(
-        cls,
-        string_to_update: String,
-        existing_strings_by_id: dict[str, String],
-        existing_strings_by_original: dict[str, String],
-    ) -> bool:
-        """
-        Updates a string and attempts to translate it via similarities to existing strings.
-
-        Args:
-            string_to_update (String): String to update.
-            existing_strings_by_id (dict[str, String]): Dictionary mapping string IDs to existing strings.
-            existing_strings_by_original (dict[str, String]): Dictionary mapping original strings to existing strings.
-
-        Returns:
-            bool: `True` if the string was updated, `False` otherwise.
-        """
-
-        matched: bool = False
-
-        if string_to_update.id in existing_strings_by_id:
-            existing_string = existing_strings_by_id[string_to_update.id]
-            string_to_update.string = existing_string.string
-            string_to_update.status = StringStatus.TranslationComplete
-            matched = True
-
-        elif string_to_update.original in existing_strings_by_original:
-            existing_string = existing_strings_by_original[string_to_update.original]
-            string_to_update.string = existing_string.string
-            string_to_update.status = StringStatus.TranslationIncomplete
-            matched = True
-
-        return matched

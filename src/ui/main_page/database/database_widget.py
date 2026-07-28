@@ -14,6 +14,7 @@ from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.provider import Provider
 
@@ -45,6 +46,7 @@ class DatabaseWidget(QTabWidget):
         app_config: AppConfig,
         scanner: Scanner,
         download_manager: DownloadManager,
+        state_service: StateService,
     ) -> None:
         """
         Args:
@@ -54,6 +56,7 @@ class DatabaseWidget(QTabWidget):
             app_config (AppConfig): The application configuration.
             scanner (Scanner): The scanner instance.
             download_manager (DownloadManager): The download manager.
+            state_service (StateService): The state service.
         """
 
         super().__init__()
@@ -61,12 +64,13 @@ class DatabaseWidget(QTabWidget):
         self.tabBar().setDocumentMode(True)
 
         self.__translations_tab = TranslationsTab(
-            database,
-            provider,
-            mod_instance,
-            app_config,
-            scanner,
-            download_manager,
+            database=database,
+            provider=provider,
+            mod_instance=mod_instance,
+            app_config=app_config,
+            scanner=scanner,
+            download_manager=download_manager,
+            state_service=state_service,
         )
         self.addTab(self.__translations_tab, self.tr("Translations"))
 

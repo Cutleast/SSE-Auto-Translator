@@ -25,6 +25,9 @@ class TranslationsToolbar(QToolBar):
     local_import_requested = Signal()
     """Signal emitted when the user clicks on the local import action."""
 
+    update_translations_requested = Signal()
+    """Signal emitted when the user clicks on the update translations action."""
+
     @override
     def __init__(self) -> None:
         super().__init__()
@@ -55,3 +58,11 @@ class TranslationsToolbar(QToolBar):
             self.tr("Import translation from local disk"),
         )
         local_import_action.triggered.connect(self.local_import_requested.emit)
+
+        update_translations_action: QAction = self.addAction(
+            IconProvider.get_qta_icon("mdi6.book-refresh-outline"),
+            self.tr("Update translations from installed mods"),
+        )
+        update_translations_action.triggered.connect(
+            self.update_translations_requested.emit
+        )
