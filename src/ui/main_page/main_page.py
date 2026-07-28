@@ -19,6 +19,7 @@ from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
+    QFileDialog,
     QHBoxLayout,
     QLabel,
     QMessageBox,
@@ -138,6 +139,7 @@ class MainPageWidget(QWidget):
         self.__tool_bar.build_output_requested.connect(self.__build_output)
         self.__tool_bar.deep_scan_requested.connect(self.__run_deep_scan)
         self.__tool_bar.string_search_requested.connect(self.__run_string_search)
+        self.__tool_bar.export_states_requested.connect(self.__export_modfile_states)
 
         self.__search_bar.searchChanged.connect(self.__on_search_changed)
 
@@ -515,6 +517,39 @@ class MainPageWidget(QWidget):
                     details=str(filter),
                     yesno=False,
                 ).show()
+
+    def __export_modfile_states(self) -> None:
+        """
+        Exports the current modfile states to a JSON file.
+        """
+
+        fdialog = QFileDialog(
+            QApplication.activeModalWidget(),
+            caption=self.tr("Export mod file states..."),
+        )
+        fdialog.setFileMode(QFileDialog.FileMode.AnyFile)
+        fdialog.setNameFilter(self.tr("JSON files") + " (*.json)")
+        fdialog.setAcceptMode(QFileDialog.AcceptMode.AcceptSave)
+        fdialog.selectFile("modfile_states.json")
+
+        if fdialog.exec() == QFileDialog.DialogCode.Accepted:
+            file_path = Path(fdialog.selectedFiles()[0])
+
+            self.state_service.export_states(
+                file_path,
+                check_states={
+                    modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
+                    for mod in self.user_data.modinstance.mods
+                    for modfile in mod.modfiles
+                },
+            )
+
+            QMessageBox.information(
+                QApplication.activeModalWidget(),
+                self.tr("Export successful!"),
+                self.tr("Successfully exported mod file states to:") + f"\n{file_path}",
+                buttons=QMessageBox.StandardButton.Ok,
+            )
 
     def save_state(self) -> None:
         """

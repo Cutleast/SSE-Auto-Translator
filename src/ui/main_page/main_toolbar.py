@@ -60,6 +60,9 @@ class MainToolBar(QToolBar):
     string_search_requested = Signal()
     """Signal when the user clicks on the string search action."""
 
+    export_states_requested = Signal()
+    """Signal when the user clicks on the export states action."""
+
     __filter_menu: Menu
     __state_filter_items: dict[TranslationStatus, QCheckBox]
     __type_filter_items: dict[FileType, QCheckBox]
@@ -71,6 +74,7 @@ class MainToolBar(QToolBar):
 
     __deep_scan_action: QAction
     __string_search_action: QAction
+    __export_states_action: QAction
 
     @override
     def __init__(self) -> None:
@@ -177,6 +181,11 @@ class MainToolBar(QToolBar):
             self.tr("Search modlist for string..."),
         )
         self.__string_search_action.triggered.connect(self.string_search_requested.emit)
+
+        self.__export_states_action = self.addAction(
+            IconProvider.get_qta_icon("fa5s.share"), self.tr("Export mod file states")
+        )
+        self.__export_states_action.triggered.connect(self.export_states_requested.emit)
 
     def __on_state_filter_change(self, *args: Any) -> None:
         self.state_filter_changed.emit(

@@ -4,9 +4,10 @@ Copyright (c) Cutleast
 
 import logging
 from pathlib import Path
-from typing import Optional
+from typing import Annotated, Optional, TypeAlias, cast
 
 from cutleast_core_lib.core.cache.cache import Cache
+from pydantic import BaseModel, PlainSerializer, TypeAdapter
 from PySide6.QtCore import QObject, Signal
 
 from core.database.database import TranslationDatabase
@@ -16,7 +17,7 @@ from core.mod_file.translation_status import TranslationStatus
 
 from .mod_instance import ModInstance
 
-StateCache = dict[Path, tuple[bool, TranslationStatus]]
+StateCache: TypeAlias = dict[Path, tuple[bool, TranslationStatus]]
 
 
 class StateService(QObject):
@@ -178,7 +179,8 @@ class StateService(QObject):
         Saves the mod file states to the cache.
 
         Args:
-            check_states (dict[ModFile, bool]): Dictionary of mod files and their checkstate.
+            check_states (dict[ModFile, bool]):
+                Dictionary of mod files and their checkstate.
         """
 
         state_cache: StateCache = {
@@ -205,3 +207,38 @@ class StateService(QObject):
         self.log.debug(f"Updated states for {len(states)} mod file(s).")
 
         self.update_signal.emit()
+
+    def export_states(self, file_path: Path, check_states: dict[ModFile, bool]) -> None:
+        """
+        Exports the mod file states to a file.
+
+        Args:
+            file_path (Path): The path to the file to export the states to.
+            check_states (dict[ModFile, bool]):
+                Dictionary of mod files and their checkstate.
+        """
+
+        class _ModFileState(BaseModel):
+            checked: bool
+            status: Annotated[
+                TranslationStatus,
+                # export the name of the status instead of its value to be
+                # more human-readable
+                PlainSerializer(
+                    lambda status: cast(TranslationStatus, status).name,
+                    return_type=str,
+                ),
+            ]
+
+        state_cache: dict[Path, _ModFileState] = {
+            modfile.full_path: _ModFileState(
+                checked=check_states.get(modfile, True), status=modfile.status
+            )
+            for modfile in self.mod_instance.modfiles
+        }
+
+        file_path.write_bytes(
+            TypeAdapter(dict[Path, _ModFileState]).dump_json(state_cache, indent=4)
+        )
+
+        self.log.info(f"Exported mod file states to '{file_path}'.")
