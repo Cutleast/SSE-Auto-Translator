@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from PySide6.QtCore import Signal
@@ -40,7 +41,7 @@ from core.translation_provider.provider import Provider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from core.utilities.exceptions import NoOriginalModFound
 from core.utilities.filesystem import relative_data_path
-from ui.widgets.string_list.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListWindow
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .translations_toolbar import TranslationsToolbar
@@ -162,11 +163,13 @@ class TranslationsTab(QWidget):
         Displays the vanilla strings in a StringListDialog.
         """
 
-        StringListDialog(
-            self.tr("Base Game + AE CC Content"),
-            self.__database.vanilla_translation.strings,
-            show_translation=True,
-        ).show()
+        WindowManager.get().show(
+            StringListWindow(
+                self.tr("Base Game + AE CC Content"),
+                self.__database.vanilla_translation.strings,
+                translation_mode=True,
+            )
+        )
 
     def __search_database(self) -> None:
         """
@@ -183,11 +186,13 @@ class TranslationsTab(QWidget):
             )
 
             if search_result:
-                StringListDialog(
-                    self.tr("Search Results"),
-                    search_result,
-                    show_translation=True,
-                ).show()
+                WindowManager.get().show(
+                    StringListWindow(
+                        self.tr("Search Results"),
+                        search_result,
+                        translation_mode=True,
+                    )
+                )
             else:
                 ErrorDialog(
                     QApplication.activeModalWidget(),

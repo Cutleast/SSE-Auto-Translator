@@ -2,10 +2,10 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any
+from typing import override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QSize, Signal
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from core.string.string_status import StringStatus
@@ -17,20 +17,20 @@ class StringListToolbar(QToolBar):
     Toolbar for `StringListWidget`.
     """
 
-    __parent: "StringListWidget"
+    filter_changed = Signal(list)
+    """
+    Signal emitted when the user changes the display filter.
+
+    Args:
+        list[StringStatus]: The list of selected string states to display.
+    """
 
     __filter_menu: Menu
     __filter_items: dict[StringStatus, QCheckBox]
 
-    def __init__(self, parent: "StringListWidget") -> None:
-        """
-        Args:
-            parent (StringListWidget): The parent string list widget.
-        """
-
-        super().__init__(parent)
-
-        self.__parent = parent
+    @override
+    def __init__(self) -> None:
+        super().__init__()
 
         self.setIconSize(QSize(32, 32))
         self.setFloatable(False)
@@ -46,7 +46,7 @@ class StringListToolbar(QToolBar):
                 status.get_localized_filter_name(), self.__filter_menu
             )
             filter_box.setChecked(True)
-            filter_box.stateChanged.connect(self.__on_filter_change)
+            filter_box.stateChanged.connect(lambda *_: self.__on_filter_change())
             widget_action = QWidgetAction(self.__filter_menu)
             widget_action.setDefaultWidget(filter_box)
             self.__filter_menu.addAction(widget_action)
@@ -62,15 +62,11 @@ class StringListToolbar(QToolBar):
         )
         self.addAction(filter_action)
 
-    def __on_filter_change(self, *args: Any) -> None:
-        self.__parent.set_state_filter(
+    def __on_filter_change(self) -> None:
+        self.filter_changed.emit(
             [
                 status
                 for status, checkbox in self.__filter_items.items()
                 if checkbox.isChecked()
             ]
         )
-
-
-if __name__ == "__main__":
-    from .string_list_widget import StringListWidget

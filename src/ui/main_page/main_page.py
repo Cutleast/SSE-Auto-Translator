@@ -10,6 +10,7 @@ from typing import Optional, cast
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
@@ -49,7 +50,7 @@ from ui.downloader.download_list_window import DownloadListWindow
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.stacked_bar import StackedBar
-from ui.widgets.string_list.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListWindow
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .database.database_widget import DatabaseWidget
@@ -417,7 +418,7 @@ class MainPageWidget(QWidget):
             download_list_window.downloads_started.connect(
                 lambda file_downloads, link_nxm: self.download_manager.start()
             )
-            download_list_window.show()
+            WindowManager.get().show(download_list_window)
         else:
             QMessageBox.information(
                 QApplication.activeModalWidget() or self,
@@ -491,9 +492,13 @@ class MainPageWidget(QWidget):
             ).run()
 
             if search_result:
-                StringListDialog(
-                    self.tr("Search Results"), search_result, show_translation=False
-                ).show()
+                WindowManager.get().show(
+                    StringListWindow(
+                        name=self.tr("Search Results"),
+                        strings=search_result,
+                        translation_mode=False,
+                    )
+                )
             else:
                 ErrorDialog(
                     QApplication.activeModalWidget(),
