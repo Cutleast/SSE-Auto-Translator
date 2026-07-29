@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.ui.settings.settings_page import SettingsPage
 from cutleast_core_lib.ui.widgets.enum_radiobutton_widget import EnumRadiobuttonsWidget
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
@@ -77,6 +78,16 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
             lambda _: self.changed_signal.emit()
         )
         self.__flayout.addRow(self.__show_confirmations_box)
+
+    @override
+    def validate(self) -> None:
+        if (
+            self.__api_selector.getCurrentValue() == TranslatorApi.DeepL
+            and not self.__api_key_entry.text().strip()
+        ):
+            raise ConfigValidationError(
+                self.tr("An API key is required for DeepL translator!")
+            )
 
     @override
     def apply(self, config: TranslatorConfig) -> None:

@@ -6,6 +6,7 @@ from copy import copy
 
 import pytest
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.browse_edit import BrowseLineEdit
@@ -172,3 +173,37 @@ class TestAppSettings(BaseTest):
 
         # then
         assert app_config == old_config
+
+    def test_validate_raises_for_invalid_accent_color(
+        self, app_settings: AppSettings
+    ) -> None:
+        """
+        Tests that `validate` rejects an invalid accent color.
+        """
+
+        # given
+        accent_color_entry: ColorLineEdit = Utils.get_private_field(
+            app_settings, *TestAppSettings.ACCENT_COLOR_ENTRY
+        )
+        accent_color_entry.setText("invalid")
+
+        # when / then
+        with pytest.raises(ConfigValidationError, match="Accent color"):
+            app_settings.validate()
+
+    def test_validate_raises_for_nonexistent_output_parent(
+        self, app_settings: AppSettings
+    ) -> None:
+        """
+        Tests that `validate` rejects an output path with a nonexistent parent.
+        """
+
+        # given
+        output_path_entry: BrowseLineEdit = Utils.get_private_field(
+            app_settings, *TestAppSettings.OUTPUT_PATH_ENTRY
+        )
+        output_path_entry.setText("nonexistent_parent/output")
+
+        # when / then
+        with pytest.raises(ConfigValidationError, match="does not exist"):
+            app_settings.validate()

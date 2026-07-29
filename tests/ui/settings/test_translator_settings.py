@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from copy import copy
 
 import pytest
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_selector import EnumSelector
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
@@ -93,3 +94,24 @@ class TestTranslatorSettings(BaseTest):
 
         # then
         assert translator_config == old_config
+
+    def test_validate_raises_for_missing_deepl_api_key(
+        self, translator_settings: TranslatorSettings
+    ) -> None:
+        """
+        Tests that `validate` requires an API key for DeepL.
+        """
+
+        # given
+        api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_SELECTOR
+        )
+        api_key_entry: KeyLineEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
+        )
+        api_selector.setCurrentValue(TranslatorApi.DeepL)
+        api_key_entry.setText("   ")
+
+        # when / then
+        with pytest.raises(ConfigValidationError, match="API key is required for DeepL"):
+            translator_settings.validate()

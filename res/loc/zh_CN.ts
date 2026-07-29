@@ -112,7 +112,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     <name>AppSettings</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="107"/>
-        <location filename="src/ui/settings/app_settings.py" line="102"/>
+        <location filename="src/ui/settings/app_settings.py" line="104"/>
         <source>Number of newest log files to keep</source>
         <translation>要保留的最新日志文件的数量</translation>
     </message>
@@ -139,11 +139,12 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="156"/>
+        <location filename="src/ui/settings/app_settings.py" line="346"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>强调色必须是有效的十六进制颜色代码！</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="123"/>
+        <location filename="src/ui/settings/app_settings.py" line="125"/>
         <source>App language</source>
         <translation>应用语言</translation>
     </message>
@@ -158,116 +159,116 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation>基本应用程序设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="156"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
         <source>Path Settings</source>
         <translation>路径设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="164"/>
-        <location filename="src/ui/settings/app_settings.py" line="176"/>
+        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <location filename="src/ui/settings/app_settings.py" line="178"/>
         <source>Default: </source>
         <translation>默认: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="184"/>
+        <location filename="src/ui/settings/app_settings.py" line="186"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>（用于下载等操作，退出后将被清除！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="203"/>
+        <location filename="src/ui/settings/app_settings.py" line="205"/>
         <source>Behavior Settings</source>
         <translation>偏好设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="250"/>
+        <location filename="src/ui/settings/app_settings.py" line="252"/>
         <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="262"/>
+        <location filename="src/ui/settings/app_settings.py" line="264"/>
         <source>[EXPERIMENTAL]</source>
         <translation>偏好设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="266"/>
+        <location filename="src/ui/settings/app_settings.py" line="268"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation>这将自动绑定到 Mod Manager 下载并在 SSE-AT 关闭时取消绑定。
 此功能被认为是实验性的，因为崩溃可能会阻止它正确解除绑定。</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="88"/>
+        <location filename="src/ui/settings/app_settings.py" line="90"/>
         <source>General App Settings</source>
         <translation>全局设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="113"/>
+        <location filename="src/ui/settings/app_settings.py" line="115"/>
         <source>Log level</source>
         <translation>日志级别</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="136"/>
+        <location filename="src/ui/settings/app_settings.py" line="138"/>
         <source>Accent color</source>
         <translation>强调色</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="140"/>
-        <location filename="src/ui/settings/app_settings.py" line="332"/>
+        <location filename="src/ui/settings/app_settings.py" line="142"/>
+        <location filename="src/ui/settings/app_settings.py" line="334"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation>清除缓存（这将重置所有 Mod 文件状态并删除缓存的 API 请求和更多临时数据！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="171"/>
+        <location filename="src/ui/settings/app_settings.py" line="173"/>
         <source>Path for output mod</source>
         <translation>输出 Mod 路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="182"/>
+        <location filename="src/ui/settings/app_settings.py" line="184"/>
         <source>Path for temporary folder</source>
         <translation>临时文件夹路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="191"/>
+        <location filename="src/ui/settings/app_settings.py" line="193"/>
         <source>Defaults to temporary folder configured above</source>
         <translation>默认为上面配置的临时文件夹</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="200"/>
+        <location filename="src/ui/settings/app_settings.py" line="202"/>
         <source>Downloads path</source>
         <translation>下载路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="219"/>
+        <location filename="src/ui/settings/app_settings.py" line="221"/>
         <source>Language detector confidence</source>
         <translation>语言检测器置信度</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="235"/>
+        <location filename="src/ui/settings/app_settings.py" line="237"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation>并发下载数量（仅建议在您拥有 Nexus Mods Premium 时增加）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="258"/>
+        <location filename="src/ui/settings/app_settings.py" line="260"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; buttons on Nexus Mods on startup</source>
         <translation>启动时自动绑定到 Nexus Mods 上的“Mod Manager Download”按钮</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="281"/>
+        <location filename="src/ui/settings/app_settings.py" line="283"/>
         <source>Enable spell checking in translation editor</source>
         <translation>在翻译编辑器中启用拼写检查</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="290"/>
+        <location filename="src/ui/settings/app_settings.py" line="292"/>
         <source>Automatically import installed translations into the database</source>
         <translation>自动将已安装的翻译导入数据库</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="302"/>
+        <location filename="src/ui/settings/app_settings.py" line="304"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>自动为已安装的翻译完全覆盖的 Mod 文件创建翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="316"/>
+        <location filename="src/ui/settings/app_settings.py" line="318"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>在Mod列表中双击 Mod 或插件文件，或在“翻译”标签页中双击翻译内容时显示字符串</translation>
     </message>
@@ -2060,57 +2061,57 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>SettingsWidget</name>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="97"/>
+        <location filename="src/ui/settings/settings_widget.py" line="99"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="103"/>
+        <location filename="src/ui/settings/settings_widget.py" line="105"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>标有 * 的设置需要重新启动才能生效。</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="117"/>
+        <location filename="src/ui/settings/settings_widget.py" line="119"/>
         <source>App Settings</source>
         <translation>应用设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="122"/>
+        <location filename="src/ui/settings/settings_widget.py" line="124"/>
         <source>User Settings</source>
         <translation>用户设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="130"/>
+        <location filename="src/ui/settings/settings_widget.py" line="132"/>
         <source>Translator Settings</source>
         <translation>翻译器设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="144"/>
+        <location filename="src/ui/settings/settings_widget.py" line="156"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="150"/>
+        <location filename="src/ui/settings/settings_widget.py" line="166"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="169"/>
+        <location filename="src/ui/settings/settings_widget.py" line="185"/>
         <source>Restart required</source>
         <translation>需要重新启动</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="172"/>
+        <location filename="src/ui/settings/settings_widget.py" line="188"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation>必须重新启动 SSE-AT 才能使更改生效！现在重新启动？</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="178"/>
+        <location filename="src/ui/settings/settings_widget.py" line="194"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="179"/>
+        <location filename="src/ui/settings/settings_widget.py" line="195"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -2699,19 +2700,24 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="50"/>
+        <location filename="src/ui/settings/translator_settings.py" line="51"/>
         <source>Translator API</source>
         <translation>翻译器 API</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="52"/>
+        <location filename="src/ui/settings/translator_settings.py" line="53"/>
         <source>Translator API key</source>
         <translation>翻译器 API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="71"/>
+        <location filename="src/ui/settings/translator_settings.py" line="72"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
         <translation>开始批量机器翻译之前要求确认</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="89"/>
+        <source>An API key is required for DeepL translator!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2850,7 +2856,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="70"/>
+        <location filename="src/ui/settings/user_settings.py" line="73"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
@@ -2860,44 +2866,57 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>Nexus Mods API密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="84"/>
+        <location filename="src/ui/settings/user_settings.py" line="85"/>
         <source>Game language</source>
         <translation>游戏语言</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="86"/>
+        <location filename="src/ui/settings/user_settings.py" line="87"/>
         <source>Translation source</source>
         <translation>翻译来源</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="114"/>
+        <location filename="src/ui/settings/user_settings.py" line="115"/>
         <source>Start API setup...</source>
         <translation>开始 API 设置...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="123"/>
+        <location filename="src/ui/settings/user_settings.py" line="122"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation>使用 GitHub 存储库中的全局主列表（推荐）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="129"/>
+        <location filename="src/ui/settings/user_settings.py" line="128"/>
         <source>Open masterlist (in browser)</source>
         <translation>打开主列表（在浏览器中）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="134"/>
+        <location filename="src/ui/settings/user_settings.py" line="133"/>
         <source>Open translation author blacklist...</source>
         <translation>打开翻译作者黑名单...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="140"/>
+        <location filename="src/ui/settings/user_settings.py" line="139"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="156"/>
+        <location filename="src/ui/settings/user_settings.py" line="155"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>解析 BSA 档案（这可能会减慢应用程序的启动速度，具体取决于您的 modlist 的大小！）</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="202"/>
+        <source>An API key is required for downloading translations from Nexus Mods!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ValidationUtils</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/config/validation_utils.py" line="79"/>
+        <source>The path &apos;{path}&apos; does not exist!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

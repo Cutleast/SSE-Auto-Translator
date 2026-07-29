@@ -110,7 +110,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     <name>AppSettings</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="107"/>
-        <location filename="src/ui/settings/app_settings.py" line="102"/>
+        <location filename="src/ui/settings/app_settings.py" line="104"/>
         <source>Number of newest log files to keep</source>
         <translation type="unfinished"></translation>
     </message>
@@ -137,11 +137,12 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="156"/>
+        <location filename="src/ui/settings/app_settings.py" line="346"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="123"/>
+        <location filename="src/ui/settings/app_settings.py" line="125"/>
         <source>App language</source>
         <translation type="unfinished"></translation>
     </message>
@@ -156,115 +157,115 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="156"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
         <source>Path Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="164"/>
-        <location filename="src/ui/settings/app_settings.py" line="176"/>
+        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <location filename="src/ui/settings/app_settings.py" line="178"/>
         <source>Default: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="184"/>
+        <location filename="src/ui/settings/app_settings.py" line="186"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="203"/>
+        <location filename="src/ui/settings/app_settings.py" line="205"/>
         <source>Behavior Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="250"/>
+        <location filename="src/ui/settings/app_settings.py" line="252"/>
         <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="262"/>
+        <location filename="src/ui/settings/app_settings.py" line="264"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="266"/>
+        <location filename="src/ui/settings/app_settings.py" line="268"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="88"/>
+        <location filename="src/ui/settings/app_settings.py" line="90"/>
         <source>General App Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="113"/>
+        <location filename="src/ui/settings/app_settings.py" line="115"/>
         <source>Log level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="136"/>
+        <location filename="src/ui/settings/app_settings.py" line="138"/>
         <source>Accent color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="140"/>
-        <location filename="src/ui/settings/app_settings.py" line="332"/>
+        <location filename="src/ui/settings/app_settings.py" line="142"/>
+        <location filename="src/ui/settings/app_settings.py" line="334"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="171"/>
+        <location filename="src/ui/settings/app_settings.py" line="173"/>
         <source>Path for output mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="182"/>
+        <location filename="src/ui/settings/app_settings.py" line="184"/>
         <source>Path for temporary folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="191"/>
+        <location filename="src/ui/settings/app_settings.py" line="193"/>
         <source>Defaults to temporary folder configured above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="200"/>
+        <location filename="src/ui/settings/app_settings.py" line="202"/>
         <source>Downloads path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="219"/>
+        <location filename="src/ui/settings/app_settings.py" line="221"/>
         <source>Language detector confidence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="235"/>
+        <location filename="src/ui/settings/app_settings.py" line="237"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="258"/>
+        <location filename="src/ui/settings/app_settings.py" line="260"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; buttons on Nexus Mods on startup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="281"/>
+        <location filename="src/ui/settings/app_settings.py" line="283"/>
         <source>Enable spell checking in translation editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="290"/>
+        <location filename="src/ui/settings/app_settings.py" line="292"/>
         <source>Automatically import installed translations into the database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="302"/>
+        <location filename="src/ui/settings/app_settings.py" line="304"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="316"/>
+        <location filename="src/ui/settings/app_settings.py" line="318"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2053,57 +2054,57 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>SettingsWidget</name>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="97"/>
+        <location filename="src/ui/settings/settings_widget.py" line="99"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="103"/>
+        <location filename="src/ui/settings/settings_widget.py" line="105"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="117"/>
+        <location filename="src/ui/settings/settings_widget.py" line="119"/>
         <source>App Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="122"/>
+        <location filename="src/ui/settings/settings_widget.py" line="124"/>
         <source>User Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="130"/>
+        <location filename="src/ui/settings/settings_widget.py" line="132"/>
         <source>Translator Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="144"/>
+        <location filename="src/ui/settings/settings_widget.py" line="156"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="150"/>
+        <location filename="src/ui/settings/settings_widget.py" line="166"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="169"/>
+        <location filename="src/ui/settings/settings_widget.py" line="185"/>
         <source>Restart required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="172"/>
+        <location filename="src/ui/settings/settings_widget.py" line="188"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="178"/>
+        <location filename="src/ui/settings/settings_widget.py" line="194"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="179"/>
+        <location filename="src/ui/settings/settings_widget.py" line="195"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2697,18 +2698,23 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="50"/>
+        <location filename="src/ui/settings/translator_settings.py" line="51"/>
         <source>Translator API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="52"/>
+        <location filename="src/ui/settings/translator_settings.py" line="53"/>
         <source>Translator API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="71"/>
+        <location filename="src/ui/settings/translator_settings.py" line="72"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="89"/>
+        <source>An API key is required for DeepL translator!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2848,7 +2854,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="70"/>
+        <location filename="src/ui/settings/user_settings.py" line="73"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2858,43 +2864,56 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="84"/>
+        <location filename="src/ui/settings/user_settings.py" line="85"/>
         <source>Game language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="86"/>
+        <location filename="src/ui/settings/user_settings.py" line="87"/>
         <source>Translation source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="114"/>
+        <location filename="src/ui/settings/user_settings.py" line="115"/>
         <source>Start API setup...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="123"/>
+        <location filename="src/ui/settings/user_settings.py" line="122"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="129"/>
+        <location filename="src/ui/settings/user_settings.py" line="128"/>
         <source>Open masterlist (in browser)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="134"/>
+        <location filename="src/ui/settings/user_settings.py" line="133"/>
         <source>Open translation author blacklist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="140"/>
+        <location filename="src/ui/settings/user_settings.py" line="139"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="156"/>
+        <location filename="src/ui/settings/user_settings.py" line="155"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/user_settings.py" line="202"/>
+        <source>An API key is required for downloading translations from Nexus Mods!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ValidationUtils</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/config/validation_utils.py" line="79"/>
+        <source>The path &apos;{path}&apos; does not exist!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
