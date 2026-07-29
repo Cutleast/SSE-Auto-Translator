@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.validation_utils import ValidationUtils
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.logger import Logger
@@ -334,6 +336,19 @@ class AppSettings(SettingsPage[AppConfig]):
             )
         )
         self.__clear_cache_button.setEnabled(False)
+
+    @override
+    def validate(self) -> None:
+        accent_color: str = self.__accent_color_entry.text().strip()
+
+        if not ValidationUtils.is_valid_hex_color(accent_color):
+            raise ConfigValidationError(
+                self.tr("Accent color must be a valid hexadecimal color code!")
+            )
+
+        ValidationUtils.validate_parent_path(self.__output_path_entry.text())
+        ValidationUtils.validate_parent_path(self.__temp_path_entry.text())
+        ValidationUtils.validate_parent_path(self.__downloads_path_entry.text())
 
     @override
     def apply(self, config: AppConfig) -> None:

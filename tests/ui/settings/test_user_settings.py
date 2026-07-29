@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from copy import copy
 
 import pytest
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
@@ -97,3 +98,24 @@ class TestUserSettings(BaseTest):
 
         # then (we're comparing the json because direct comparison is impossible due to pyfakefs)
         assert user_config.model_dump_json() == old_config.model_dump_json()
+
+    def test_validate_raises_for_missing_nexus_api_key(
+        self, user_settings: UserSettings
+    ) -> None:
+        """
+        Tests that `validate` requires an API key when Nexus Mods is enabled.
+        """
+
+        # given
+        source_box: EnumDropdown[ProviderPreference] = Utils.get_private_field(
+            user_settings, *TestUserSettings.SOURCE_BOX
+        )
+        api_key_entry: QLineEdit = Utils.get_private_field(
+            user_settings, *TestUserSettings.API_KEY_ENTRY
+        )
+        source_box.setCurrentValue(ProviderPreference.OnlyNexusMods)
+        api_key_entry.setText("   ")
+
+        # when / then
+        with pytest.raises(ConfigValidationError, match="API key is required"):
+            user_settings.validate()

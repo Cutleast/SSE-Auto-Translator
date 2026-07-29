@@ -2,13 +2,16 @@
 Copyright (c) Cutleast
 """
 
-from typing import override
+from typing import Optional, cast, override
 
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.ui.settings.settings_page import SettingsPage
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import MO2InstanceInfo
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
     InstanceSelectorWidget,
 )
@@ -75,9 +78,7 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__lang_box = EnumDropdown(GameLanguage, self._initial_config.language)
         self.__lang_box.installEventFilter(self)
         self.__lang_box.currentValueChanged.connect(self.__on_lang_change)
-        self.__lang_box.currentValueChanged.connect(
-            lambda _: self.changed_signal.emit()
-        )
+        self.__lang_box.currentValueChanged.connect(lambda _: self.changed_signal.emit())
         self.__lang_box.currentValueChanged.connect(
             lambda _: self.restart_required_signal.emit()
         )
@@ -114,9 +115,7 @@ class UserSettings(SettingsPage[UserConfig]):
         api_setup_button = QPushButton(self.tr("Start API setup..."))
         api_setup_button.clicked.connect(self.__start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
-        translations_flayout.addRow(
-            "*" + self.tr("Nexus Mods API Key"), api_key_hlayout
-        )
+        translations_flayout.addRow("*" + self.tr("Nexus Mods API Key"), api_key_hlayout)
 
         self.__masterlist_box = QCheckBox()
         self.__masterlist_box.setText(
@@ -193,10 +192,26 @@ class UserSettings(SettingsPage[UserConfig]):
             self.__api_key_entry.setText(dialog.get_api_key())
 
     @override
+    def validate(self) -> None:
+        if (
+            self.__source_box.getCurrentValue() != ProviderPreference.OnlyConfrerie
+            and not self.__api_key_entry.text().strip()
+        ):
+            raise ConfigValidationError(
+                self.tr(
+                    "An API key is required for downloading translations from Nexus "
+                    "Mods!"
+                )
+            )
+
+    @override
     def apply(self, config: UserConfig) -> None:
         config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
-        config.modinstance = self.__modinstance_selector.get_cur_instance_data()  # pyright: ignore[reportAttributeAccessIssue]
+        config.modinstance = cast(
+            Optional[MO2InstanceInfo | ProfileInfo],
+            self.__modinstance_selector.get_cur_instance_data(),
+        )
         config.use_masterlist = self.__masterlist_box.isChecked()
         config.provider_preference = self.__source_box.getCurrentValue()
         config.author_blacklist = self.__author_blacklist

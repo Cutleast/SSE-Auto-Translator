@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import Optional
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QHBoxLayout,
@@ -54,6 +55,7 @@ class SettingsWidget(QWidget):
     __user_settings: UserSettings
     __translator_settings: TranslatorSettings
 
+    __status_label: QLabel
     __save_button: QPushButton
 
     def __init__(
@@ -132,7 +134,17 @@ class SettingsWidget(QWidget):
 
     def _on_change(self) -> None:
         self.changes_pending = True
-        self.__save_button.setEnabled(True)
+
+        try:
+            self.__app_settings.validate()
+            self.__user_settings.validate()
+            self.__translator_settings.validate()
+        except ConfigValidationError as ex:
+            self.__status_label.setText(str(ex))
+            self.__save_button.setEnabled(False)
+        else:
+            self.__status_label.clear()
+            self.__save_button.setEnabled(True)
 
     def _on_restart_required(self) -> None:
         self.restart_required = True
@@ -146,6 +158,10 @@ class SettingsWidget(QWidget):
         hlayout.addWidget(cancel_button)
 
         hlayout.addStretch()
+
+        self.__status_label = QLabel()
+        self.__status_label.setObjectName("critical_label")
+        hlayout.addWidget(self.__status_label)
 
         self.__save_button = QPushButton(self.tr("Save"))
         self.__save_button.setDefault(True)
