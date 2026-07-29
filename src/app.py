@@ -17,6 +17,7 @@ from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QTranslator
 from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
@@ -86,6 +87,7 @@ class App(BaseApp, Singleton):
         self.__user_data_service = UserDataService(self.res_path, self.data_path)
 
         GameService(read_resource(":/skyrimse.json"))
+        WindowManager()
 
         super().__init__(args)
 

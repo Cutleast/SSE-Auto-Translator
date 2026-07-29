@@ -45,7 +45,7 @@ from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.user_data.user_data import UserData
 from core.utilities import matches_filter
-from ui.widgets.string_list.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListWindow
 
 from .help_dialog import ModInstanceHelpDialog
 from .modinstance_menu import ModInstanceMenu
@@ -396,7 +396,7 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            dialog = StringListDialog(current_item.name, current_item.get_strings())
+            dialog = StringListWindow(current_item.name, current_item.get_strings())
             dialog.show()
 
         elif isinstance(current_item, Mod):
@@ -408,7 +408,7 @@ class ModInstanceWidget(QTreeWidget):
                     modfile_strings
                 )
 
-            dialog = StringListDialog(current_item.name, strings)
+            dialog = StringListWindow(current_item.name, strings)
             dialog.show()
 
     def __check_selected(self) -> None:
@@ -477,7 +477,7 @@ class ModInstanceWidget(QTreeWidget):
             ]
 
             if untranslated_strings:
-                dialog = StringListDialog(translation.name, untranslated_strings)
+                dialog = StringListWindow(translation.name, untranslated_strings)
                 dialog.show()
 
     def __show_translation_strings(self) -> None:
@@ -495,10 +495,10 @@ class ModInstanceWidget(QTreeWidget):
             translation = self.database.get_translation_by_mod(current_item)
 
         if translation is not None:
-            dialog = StringListDialog(
+            dialog = StringListWindow(
                 translation.name,
                 translation.strings,
-                show_translation=True,
+                translation_mode=True,
             )
             dialog.show()
 

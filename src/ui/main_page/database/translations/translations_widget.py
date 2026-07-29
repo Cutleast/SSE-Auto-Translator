@@ -38,7 +38,7 @@ from core.translation_provider.provider import Provider
 from core.utilities import matches_filter
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from ui.utilities.theme_manager import ThemeManager
-from ui.widgets.string_list.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListWindow
 
 from .export_dialog import ExportDialog
 from .translations_menu import TranslationsMenu
@@ -428,8 +428,8 @@ class TranslationsWidget(QTreeWidget):
         current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.strings:
-            dialog = StringListDialog(
-                current_item.name, current_item.strings, show_translation=True
+            dialog = StringListWindow(
+                current_item.name, current_item.strings, translation_mode=True
             )
             dialog.show()
 

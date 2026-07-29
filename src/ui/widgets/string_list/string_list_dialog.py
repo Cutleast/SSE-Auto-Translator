@@ -7,25 +7,24 @@ from PySide6.QtCore import Qt
 from .string_list_widget import StringListWidget, Strings
 
 
-class StringListDialog(StringListWidget):
+class StringListWindow(StringListWidget):
     """
-    Dialog window for string preview.
+    Window for displaying a list of strings.
     """
 
     def __init__(
-        self, name: str, strings: Strings, show_translation: bool = False
+        self, name: str, strings: Strings, translation_mode: bool = False
     ) -> None:
         """
         Args:
             name (str): The name of displayed list.
             strings (Strings): The list of strings to display.
-            show_translation (bool, optional):
+            translation_mode (bool, optional):
                 If the strings belong to a translation. Defaults to False.
         """
 
-        super().__init__(strings, show_translation)
+        super().__init__(strings, translation_mode)
 
-        self.setObjectName("root")
         self.setMinimumSize(1400, 800)
         self.setWindowFlag(Qt.WindowType.Window, True)
         self.setWindowTitle(

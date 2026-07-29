@@ -8,6 +8,7 @@ from typing import override
 
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.updater import Updater
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent, QShortcut
@@ -185,7 +186,8 @@ class MainWindow(QMainWindow):
         if confirmation:
             super().closeEvent(event)
             self.mainpage_widget.save_state()
-            self.__status_bar.close_log_window()
+
+            WindowManager.get().close_all()
         else:
             event.ignore()
 

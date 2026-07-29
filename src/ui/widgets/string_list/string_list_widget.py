@@ -6,10 +6,7 @@ from pathlib import Path
 from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.ui.utilities.tree_widget import (
-    are_children_visible,
-    iter_toplevel_items,
-)
+from cutleast_core_lib.ui.utilities.tree_widget import apply_text_filter
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt
@@ -28,8 +25,9 @@ from PySide6.QtWidgets import (
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.utilities import matches_filter, trim_string
+from core.utilities import trim_string
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
+from ui.utilities.theme_manager import ThemeManager
 
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
@@ -62,6 +60,8 @@ class StringListWidget(QWidget):
     __strings_widget: QTreeWidget
     __menu: StringListMenu
 
+    __copy_shortcut: QShortcut
+
     def __init__(self, strings: Strings, translation_mode: bool = False) -> None:
         """
         Args:
@@ -88,6 +88,14 @@ class StringListWidget(QWidget):
             ]
 
         self.__init_ui()
+
+        self.__toolbar.filter_changed.connect(self.__set_state_filter)
+        self.__search_bar.searchChanged.connect(self.__set_text_filter)
+        self.__strings_widget.itemActivated.connect(self.__show_string)
+        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
+        self.__copy_shortcut.activated.connect(self.__copy_selected)
+        self.__menu.copy_selected_requested.connect(self.__copy_selected)
+
         self.__init_strings()
 
     def __init_ui(self) -> None:
@@ -98,19 +106,17 @@ class StringListWidget(QWidget):
         self.__init_strings_widget()
         self.__init_context_menu()
 
-        copy_shortcut = QShortcut(QKeySequence("Ctrl+C"), self)
-        copy_shortcut.activated.connect(self.copy_selected)
+        self.__copy_shortcut = QShortcut(QKeySequence("Ctrl+C"), self)
 
     def __init_header(self) -> None:
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__toolbar = StringListToolbar(self)
+        self.__toolbar = StringListToolbar()
         self.__toolbar.setVisible(self.__translation_mode)
         hlayout.addWidget(self.__toolbar)
 
         self.__search_bar = SearchBar()
-        self.__search_bar.searchChanged.connect(self.set_text_filter)
         hlayout.addWidget(self.__search_bar)
 
         strings_num_label = QLabel(self.tr("Strings:"))
@@ -139,48 +145,23 @@ class StringListWidget(QWidget):
         self.__strings_widget.setHorizontalScrollBarPolicy(
             Qt.ScrollBarPolicy.ScrollBarAsNeeded
         )
-        self.__strings_widget.itemActivated.connect(self.__show_string)
         self.__vlayout.addWidget(self.__strings_widget)
 
         self.__strings_widget.setHeaderLabels(self.__columns)
 
     def __init_context_menu(self) -> None:
-        self.__menu = StringListMenu(self, self.__nested)
+        self.__menu = StringListMenu(self.__columns, self.__nested)
 
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
-        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
 
     def __update(self) -> None:
-        text_filter: Optional[str] = (
-            self.__text_filter[0] if self.__text_filter else None
+        apply_text_filter(
+            widget=self.__strings_widget,
+            text=self.__text_filter[0] if self.__text_filter else "",
+            case_sensitive=self.__text_filter[1] if self.__text_filter else False,
         )
-        case_sensitive: Optional[bool] = (
-            self.__text_filter[1] if self.__text_filter else None
-        )
-
-        for string, item in self.__string_items.items():
-            string_text: str = string.display_id + string.original
-            if string.string is not None:
-                string_text += string.string
-
-            item.setHidden(
-                not matches_filter(string_text, text_filter, case_sensitive or False)
-                or (
-                    self.__state_filter is not None
-                    and string.status not in self.__state_filter
-                )
-            )
-
-        if self.__nested:
-            for item in iter_toplevel_items(self.__strings_widget):
-                item.setHidden(
-                    not matches_filter(
-                        item.text(0), text_filter, case_sensitive or False
-                    )
-                    and not are_children_visible(item)
-                )
 
         self.__strings_num_label.display(self.get_visible_item_count())
 
@@ -241,7 +222,7 @@ class StringListWidget(QWidget):
                 self.__string_items[string] = item
                 self.__strings_widget.addTopLevelItem(item)
 
-        self.expandAll()
+        self.__strings_widget.expandAll()
 
         if self.__translation_mode:
             self.__strings_widget.header().resizeSection(0, 500)
@@ -252,7 +233,7 @@ class StringListWidget(QWidget):
             self.__strings_widget.header().resizeSection(1, 650)
 
         if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
-            self.collapseAll()
+            self.__strings_widget.collapseAll()
 
         self.__search_bar.setLiveMode(
             len(self.__string_items) <= STRING_AUTO_SEARCH_THRESHOLD
@@ -286,47 +267,22 @@ class StringListWidget(QWidget):
                 for c in range(len(self.__columns)):
                     item.setForeground(c, color)
 
-        item.setFont(0, QFont("Consolas"))
+        item.setFont(0, QFont(ThemeManager.get().get_theme().monospace_font))
 
         return item
 
-    @property
-    def columns(self) -> list[str]:
-        """List of column names."""
-
-        return self.__columns
-
-    def set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
-        """
-        Sets the text filter.
-
-        Args:
-            text_filter (str): The text to filter by.
-            case_sensitive (bool): Case sensitivity.
-        """
-
+    def __set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
         if text_filter.strip():
             self.__text_filter = (text_filter, case_sensitive)
         else:
             self.__text_filter = None
         self.__update()
 
-    def set_state_filter(self, state_filter: list[StringStatus]) -> None:
-        """
-        Sets the state filter.
-
-        Args:
-            state_filter (list[StringStatus]): The states to filter by.
-        """
-
+    def __set_state_filter(self, state_filter: list[StringStatus]) -> None:
         self.__state_filter = state_filter
         self.__update()
 
-    def copy_selected(self, columns: Optional[list[int]] = None) -> None:
-        """
-        Copies current selected strings to clipboard.
-        """
-
+    def __copy_selected(self, columns: Optional[list[int]] = None) -> None:
         clipboard_text: str = ""
         for item in self.__string_items.values():
             if not item.isSelected():
@@ -342,30 +298,6 @@ class StringListWidget(QWidget):
             clipboard_text += "\n"
 
         QApplication.clipboard().setText(clipboard_text.strip())
-
-    def expandAll(self) -> None:
-        """
-        Expands all separators.
-        """
-
-        self.__strings_widget.expandAll()
-
-    def collapseAll(self) -> None:
-        """
-        Collapses all separators
-        """
-
-        self.__strings_widget.collapseAll()
-
-    def get_selected_items(self) -> StringList:
-        """
-        Returns:
-            StringList: A list of currently selected strings.
-        """
-
-        return [
-            string for string, item in self.__string_items.items() if item.isSelected()
-        ]
 
     def get_visible_item_count(self) -> int:
         """

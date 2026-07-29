@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
@@ -81,11 +82,13 @@ class StatusBar(QStatusBar):
         self.addPermanentWidget(open_log_button)
 
     def __open_log_window(self) -> None:
-        self.__log_window = LogWindow(self.__logger.get_content())
-        self.log_signal.connect(
-            self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
-        )
-        self.__log_window.show()
+        if self.__log_window is None:
+            self.__log_window = LogWindow(self.__logger.get_content())
+            self.log_signal.connect(
+                self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
+            )
+
+        WindowManager.get().show(self.__log_window)
 
     def close_log_window(self) -> None:
         """

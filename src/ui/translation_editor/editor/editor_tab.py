@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Optional, override
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt, Signal
@@ -272,7 +273,7 @@ class EditorTab(QWidget):
                 self.translator_service,
             )
             dialog.update_signal.connect(self.update)
-            dialog.show()
+            WindowManager.get().show(dialog)
 
     def update_matching_strings(self, original: str, translation: str) -> None:
         """
