@@ -23,6 +23,8 @@ class ArchiveFileSource(FileSource):
 
     _archive: Archive
 
+    log: logging.Logger = logging.getLogger("ArchiveFileSource")
+
     _archive_path: Path
     """Path to the archive."""
 
@@ -63,9 +65,8 @@ class ArchiveFileSource(FileSource):
             output_folder /= get_file_identifier(self._archive_path)
             output_folder.mkdir(parents=True, exist_ok=True)
 
-            logging.info(
-                f"Extracting file '{self._file_path}' from '{self._archive_path}' to "
-                f"'{output_folder}'..."
+            self.log.debug(
+                f"Extracting '{self._file_path.name}' from '{self._archive_path.name}'."
             )
             self._archive.extract_files([str(self._file_path)], output_folder)
             self.__extracted_file = output_folder / self._file_path

@@ -619,7 +619,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation>正在下载...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="135"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="138"/>
         <source>Downloading &apos;{0}&apos;...</source>
         <translation>正在下载 &apos;{0}&apos;...</translation>
     </message>
@@ -1676,40 +1676,40 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="132"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="211"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="133"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="212"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="150"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="500"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="151"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="509"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>正在从以下位置加载工具 {0} &gt; {1}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="242"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="245"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation>正在从以下位置加载模组 {0} &gt; {1}: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="304"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="451"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="308"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="460"/>
         <source>Processing mod conflicts...</source>
         <translation>正在处理模组冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="466"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="475"/>
         <source>Processing single file conflicts...</source>
         <translation>正在处理单个文件冲突...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="707"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="716"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>正在下载并安装 ModOrganizer...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="740"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="749"/>
         <source>Extracting archive...</source>
         <translation>正在解压压缩包...</translation>
     </message>
@@ -1886,32 +1886,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="102"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="109"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="180"/>
         <source>Elapsed time:</source>
         <translation>耗时：</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
         <source>Cancel?</source>
         <translation>取消？</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="237"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>您确定要取消吗？这可能会产生意想不到的后果，具体取决于当前运行的进度！</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="245"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -1969,44 +1969,44 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="118"/>
-        <location filename="src/core/scanner/scanner.py" line="133"/>
+        <location filename="src/core/scanner/scanner.py" line="123"/>
+        <location filename="src/core/scanner/scanner.py" line="139"/>
         <source>Scanning modlist...</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="486"/>
+        <location filename="src/core/scanner/scanner.py" line="517"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="249"/>
-        <location filename="src/core/scanner/scanner.py" line="285"/>
+        <location filename="src/core/scanner/scanner.py" line="271"/>
+        <location filename="src/core/scanner/scanner.py" line="307"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="179"/>
+        <location filename="src/core/scanner/scanner.py" line="201"/>
         <source>{item_name}: Extracting strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="200"/>
+        <location filename="src/core/scanner/scanner.py" line="222"/>
         <source>{item_name}: Detecting language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="408"/>
+        <location filename="src/core/scanner/scanner.py" line="432"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="545"/>
+        <location filename="src/core/scanner/scanner.py" line="578"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="595"/>
+        <location filename="src/core/scanner/scanner.py" line="632"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>
@@ -2397,7 +2397,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ToastNotifier</name>
     <message>
-        <location filename="src/ui/toast_notifier.py" line="32"/>
+        <location filename="src/ui/toast_notifier.py" line="35"/>
         <source>All downloads finished!</source>
         <translation>所有下载已完成！</translation>
     </message>

@@ -80,14 +80,14 @@ class LangDetector:
                 if c == treshold:
                     break
         else:
-            self.log.warning(
-                f"Treshold not reached! Mod file has only {c} different string(s). "
-                "Reliable detection not possible!"
+            self.log.debug(
+                f"Detection threshold not reached: mod file has only {c} "
+                "different string(s)."
             )
 
         detected_lang: Optional[Language] = self.detect_lang(detection_string)
         translation_required: bool = detected_lang != self.desired_lang
-        self.log.info(f"Translation required: {translation_required}")
+        self.log.debug(f"Translation required: {translation_required}")
 
         return translation_required
 

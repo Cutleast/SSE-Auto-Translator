@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from typing import Optional
 
 from cutleast_core_lib.ui.widgets.toast import Toast
@@ -19,6 +20,8 @@ class ToastNotifier(QObject):
     __download_manager: Optional[DownloadManager] = None
     __downloads_finished_toast: Optional[Toast] = None
 
+    log: logging.Logger = logging.getLogger("ToastNotifier")
+
     def set_download_manager(self, download_manager: DownloadManager) -> None:
         """
         Sets and connects a download manager.
@@ -33,4 +36,6 @@ class ToastNotifier(QObject):
         )
         self.__downloads_finished_toast.setIcon(QApplication.windowIcon())
         self.__download_manager.finished.connect(self.__downloads_finished_toast.show)
-        self.__download_manager.finished.connect(lambda: print("SHOWING TOAST..."))
+        self.__download_manager.finished.connect(
+            lambda: self.log.debug("Showing downloads finished toast.")
+        )

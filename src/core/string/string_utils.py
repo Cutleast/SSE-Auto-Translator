@@ -112,7 +112,7 @@ class StringUtils:
             database_strings (StringList): Existing strings to use for translation.
         """
 
-        cls.log.info(
+        cls.log.debug(
             f"Attempting to translate {len(strings_to_update)} string(s) from "
             f"{len(database_strings)} existing string(s)..."
         )
@@ -132,7 +132,7 @@ class StringUtils:
                 database_strings_by_original=db_strings_by_original,
             )
 
-        cls.log.info(f"Successfully translated {matched} string(s).")
+        cls.log.debug(f"Successfully translated {matched} string(s).")
 
     @classmethod
     def match_string(
