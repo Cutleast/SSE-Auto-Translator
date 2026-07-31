@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 import logging
 from concurrent.futures import Future, as_completed
 from pathlib import Path
-from time import perf_counter
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import (
@@ -105,14 +104,7 @@ class Scanner(QObject):
                 A dictionary of mods, their mod files and their status.
         """
 
-        thread_num: Optional[int] = (
-            self.app_config.worker_thread_num
-            if self.app_config.worker_thread_num > 0
-            else None
-        )
-
         total_modfiles: int = sum(len(modfiles) for modfiles in items.values())
-        start_time: float = perf_counter()
         self.log.info(
             f"Scanning {len(items)} mod(s) with {total_modfiles} mod file(s)..."
         )
@@ -135,7 +127,9 @@ class Scanner(QObject):
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
         failed_modfiles: int = 0
-        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
+        with ProgressExecutor(
+            pdisplay, max_workers=self.app_config.worker_thread_num
+        ) as executor:
             executor.set_main_progress_text(self.tr("Scanning modlist..."))
 
             tasks: dict[Future[TranslationStatus], tuple[Mod, ModFile]] = {}
@@ -165,22 +159,8 @@ class Scanner(QObject):
                         exc_info=ex,
                     )
 
-        status_counts: dict[TranslationStatus, int] = {}
-        for mod_results in scan_result.values():
-            for status in mod_results.values():
-                status_counts[status] = status_counts.get(status, 0) + 1
-
-        duration: float = perf_counter() - start_time
-        status_summary: str = ", ".join(
-            f"{status.value}={count}"
-            for status, count in sorted(
-                status_counts.items(), key=lambda item: item[0].value
-            )
-        )
-        self.log.info(
-            f"Modlist scan complete: files={total_modfiles}, failed={failed_modfiles}, "
-            f"duration={duration:.2f}s, statuses={status_summary or 'none'}."
-        )
+        self.log.info("Modlist scan complete.")
+        self.log.info(f"Status summary: {self.__create_status_summary(scan_result)}")
 
         return scan_result
 
@@ -325,6 +305,7 @@ class Scanner(QObject):
                     self.log.error(f"Failed to scan for '{mod.name}': {ex}", exc_info=ex)
 
         self.log.info("Online scan complete.")
+        self.log.info(f"Status summary: {self.__create_status_summary(scan_result)}")
 
         return scan_result
 
@@ -443,7 +424,10 @@ class Scanner(QObject):
             if mod_result:
                 results.update(mod_result)
 
-        self.log.info("Search modlist for strings complete.")
+        self.log.info(
+            f"Search modlist for strings complete. Found results in {len(results)} mod "
+            "file(s)."
+        )
 
         return results
 
@@ -528,8 +512,8 @@ class Scanner(QObject):
                 )
 
             self.log.debug(
-                f"Importing translation {installed_translation.name!r} "
-                f"for original mod {original_mod.name!r}..."
+                f"Importing translation '{installed_translation.name}' for original "
+                f"mod '{original_mod.name}'..."
             )
 
             translation_strings: dict[Path, StringList] = (
@@ -539,8 +523,8 @@ class Scanner(QObject):
             )
 
             if not translation_strings:
-                self.log.info(
-                    f"No additional strings from {installed_translation.name!r}."
+                self.log.warning(
+                    f"No additional strings from '{installed_translation.name}'."
                 )
                 continue
 
@@ -700,3 +684,20 @@ class Scanner(QObject):
                 )
 
         return original_mod
+
+    def __create_status_summary(
+        self, scan_result: dict[Mod, dict[ModFile, TranslationStatus]]
+    ) -> str:
+        status_counts: dict[TranslationStatus, int] = {}
+        for mod_results in scan_result.values():
+            for status in mod_results.values():
+                status_counts[status] = status_counts.get(status, 0) + 1
+
+        status_summary: str = " | ".join(
+            f"{status.name}: {count}"
+            for status, count in sorted(
+                status_counts.items(), key=lambda item: item[0].value
+            )
+        )
+
+        return status_summary

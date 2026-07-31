@@ -262,10 +262,10 @@ class TranslationDatabase(QObject):
         ]
 
         for translation in translations:
-            self.log.debug(f"Searching translation {translation.name!r}...")
+            self.log.debug(f"Searching translation '{translation.name}'...")
 
             for modfile, strings in translation.strings.items():
-                self.log.debug(f"Searching mod file translation {modfile!r}...")
+                self.log.debug(f"Searching mod file translation '{modfile}'...")
 
                 for string in strings:
                     if matches_filter(filter, string):

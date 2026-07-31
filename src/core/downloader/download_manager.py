@@ -387,7 +387,7 @@ class DownloadManager(QObject):
                     download_units[modfile.path] = modfile_downloads
             except Exception as ex:
                 self.log.error(
-                    f"Failed to collect downloads for {mod.name!r} > {modfile.name!r}: "
+                    f"Failed to collect downloads for '{mod.name}' > '{modfile.name}': "
                     + str(ex),
                     exc_info=ex,
                 )

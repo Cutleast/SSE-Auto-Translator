@@ -80,7 +80,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
                 mod_manager=True,
             )
 
-            self.log.debug(f"Opening {url!r}...")
+            self.log.debug(f"Opening '{url}'...")
             webbrowser.open(url)
 
             button.setIcon(IconProvider.get_qta_icon("fa5s.check"))

@@ -135,7 +135,7 @@ class DatabaseService:
                 translation.strings  # build cache of strings by "calling" the strings property  # noqa: B018
                 translations.append(translation)
             except Exception as ex:
-                cls.log.error(f"Failed to load translation {name!r}: {ex}", exc_info=ex)
+                cls.log.error(f"Failed to load translation '{name}': {ex}", exc_info=ex)
 
         cls.log.info(f"Loaded {len(translations)} user translation(s).")
 

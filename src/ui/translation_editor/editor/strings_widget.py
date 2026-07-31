@@ -5,7 +5,9 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.truncate import raw_string
 from cutleast_core_lib.ui.utilities.tree_widget import (
     are_children_visible,
     iter_children,
@@ -17,7 +19,6 @@ from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.utilities import matches_filter, trim_string
 
 from .string_item import StringItem
 
@@ -115,8 +116,8 @@ class StringsWidget(QTreeWidget):
         item = StringItem(
             [
                 string.display_id,
-                trim_string(string.original),
-                trim_string(
+                raw_string(string.original),
+                raw_string(
                     string.string if string.string is not None else string.original
                 ),
             ]
@@ -149,10 +150,10 @@ class StringsWidget(QTreeWidget):
         )
 
         for string, item in self.__string_items.items():
-            item.setText(1, trim_string(string.original))
+            item.setText(1, raw_string(string.original))
             item.setText(
                 2,
-                trim_string(
+                raw_string(
                     string.string if string.string is not None else string.original
                 ),
             )

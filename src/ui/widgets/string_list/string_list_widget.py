@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.truncate import raw_string
 from cutleast_core_lib.ui.utilities.tree_widget import apply_text_filter
 from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
@@ -25,7 +26,6 @@ from PySide6.QtWidgets import (
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.utilities import trim_string
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 from ui.utilities.theme_manager import ThemeManager
 
@@ -247,8 +247,8 @@ class StringListWidget(QWidget):
         item = QTreeWidgetItem(
             [
                 string.display_id,
-                trim_string(string.original, max_length=-1),
-                trim_string(
+                raw_string(string.original, max_length=-1),
+                raw_string(
                     string.string if string.string is not None else string.original,
                     max_length=-1,
                 ),
@@ -292,7 +292,7 @@ class StringListWidget(QWidget):
                 columns = list(range(len(self.__columns)))
 
             for c in columns:
-                clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
+                clipboard_text += f"'{item.toolTip(c)}'"[1:-1] + "\t"
 
             clipboard_text = clipboard_text.removesuffix("\t")
             clipboard_text += "\n"

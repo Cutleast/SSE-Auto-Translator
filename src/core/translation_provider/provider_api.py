@@ -119,7 +119,7 @@ class ProviderApi(QObject):
         if headers is None:
             headers = {"User-Agent": self.user_agent}
 
-        self.log.debug(f"Sending API request to {url!r}...")
+        self.log.debug(f"Sending API request to '{url}'...")
         res: req.Response = req.get(url, headers=headers)
 
         if handle_status_code:

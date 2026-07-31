@@ -144,4 +144,4 @@ class ModFileService(QObject):
             ):
                 return file_type_cls
 
-        raise NotImplementedError(f"File type {suffix!r} not yet supported!")
+        raise NotImplementedError(f"File type '{suffix}' not yet supported!")

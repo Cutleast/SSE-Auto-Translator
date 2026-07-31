@@ -43,6 +43,7 @@ class ModInstanceLoader(QObject):
         instance_info: InstanceInfo,
         language: GameLanguage,
         include_bsas: bool,
+        thread_num: int = 4,
         pdisplay: Optional[ProgressDisplay] = None,
     ) -> ModInstance:
         """
@@ -52,6 +53,8 @@ class ModInstanceLoader(QObject):
             instance_info (InstanceInfo): The instance info.
             language (GameLanguage): The game language.
             include_bsas (bool): Whether to include BSAs in the index.
+            thread_num (int, optional):
+                The number of threads to use for loading mod files. Defaults to 4.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
@@ -85,7 +88,7 @@ class ModInstanceLoader(QObject):
                 raise ValueError(f"Unknown mod instance type: {default}")
 
         modfile_index: dict[BaseMod, list[ModFile]] = self.build_modfile_index(
-            instance.mods, language, include_bsas, pdisplay
+            instance.mods, language, include_bsas, thread_num, pdisplay
         )
 
         mods: list[Mod] = [
@@ -111,6 +114,7 @@ class ModInstanceLoader(QObject):
         mods: list[BaseMod],
         language: GameLanguage,
         include_bsas: bool,
+        thread_num: int = 4,
         pdisplay: Optional[ProgressDisplay] = None,
     ) -> dict[BaseMod, list[ModFile]]:
         """
@@ -120,6 +124,8 @@ class ModInstanceLoader(QObject):
             mods (list[Mod]): The list of mods.
             language (GameLanguage): The game language.
             include_bsas (bool): Whether to include BSAs in the index.
+            thread_num (int, optional):
+                The number of threads to use for loading mod files. Defaults to 4.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
@@ -134,7 +140,7 @@ class ModInstanceLoader(QObject):
         result: dict[BaseMod, list[ModFile]] = {}
 
         futures: dict[Future[list[ModFile]], BaseMod] = {}
-        with ProgressExecutor(pdisplay) as executor:
+        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
             executor.set_main_progress_text(
                 self.tr("Scanning mod instance for translatable mod files...")
             )

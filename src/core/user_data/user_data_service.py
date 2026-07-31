@@ -47,11 +47,13 @@ class UserDataService(SingletonQObject):
         self.__res_path = res_path
         self.__data_path = data_path
 
-    def load(self, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
+    def load(self, thread_num: int = 4, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
         """
         Loads the user data from the configured folder.
 
         Args:
+            thread_num (int, optional):
+                The maximum number of threads to use. Defaults to 4.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
@@ -89,7 +91,7 @@ class UserDataService(SingletonQObject):
                 ProgressUpdate(status_text=self.tr("Loading modlist..."))
             )
 
-        modinstance = self.__load_modinstance(user_config, pdisplay)
+        modinstance = self.__load_modinstance(user_config, thread_num, pdisplay)
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -131,7 +133,7 @@ class UserDataService(SingletonQObject):
         return DatabaseService.load_database(appdb_path, userdb_path, language)
 
     def __load_modinstance(
-        self, user_config: UserConfig, pdisplay: Optional[ProgressDisplay] = None
+        self, user_config: UserConfig, thread_num: int, pdisplay: Optional[ProgressDisplay] = None
     ) -> ModInstance:
         if user_config.modinstance is not None:
             self.log.info("Loading modinstance...")
@@ -140,6 +142,7 @@ class UserDataService(SingletonQObject):
                 instance_info=user_config.modinstance,
                 language=user_config.language,
                 include_bsas=user_config.parse_bsa_archives,
+                thread_num=thread_num,
                 pdisplay=pdisplay,
             )
 

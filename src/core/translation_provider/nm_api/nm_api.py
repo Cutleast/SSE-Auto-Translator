@@ -135,7 +135,7 @@ class NexusModsApi(ProviderApi):
             "User-Agent": self.user_agent,
         }
 
-        self.log.debug(f"Sending API request to {url!r}...")
+        self.log.debug(f"Sending API request to '{url}'...")
         res: req.Response = self._request(url, headers=headers, handle_status_code=False)
         self.log.debug(f"Status Code: {res.status_code}")
 
@@ -480,7 +480,7 @@ class NexusModsApi(ProviderApi):
         Scans modpage for Files that contain `file_name` and returns their file ids.
         """
 
-        self.log.debug(f"Scanning mod {mod_id} for file {file_name!r}...")
+        self.log.debug(f"Scanning mod {mod_id} for file '{file_name}'...")
 
         mod_files: NmFiles = self.__request_mod_files(game_id, mod_id)
 
@@ -578,7 +578,7 @@ class NexusModsApi(ProviderApi):
             Cache.save_to_cache(cache_file_path, res)
         else:
             res = cached
-            self.log.debug(f"Got cached Web response for {url!r}")
+            self.log.debug(f"Got cached Web response for '{url}'")
 
         html: str = res.content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
@@ -824,7 +824,7 @@ class NexusModsApi(ProviderApi):
 
             return game_id, mod_id, file_id
 
-        raise ValueError(f"Could not extract mod id from {url!r}")
+        raise ValueError(f"Could not extract mod id from '{url}'")
 
     @staticmethod
     def reconstruct_mod_details_from_file_name(file_name: str) -> ModDetails:

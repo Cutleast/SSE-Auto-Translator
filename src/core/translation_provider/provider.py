@@ -146,7 +146,7 @@ class Provider:
                     and translation_details.author.lower() in author_blacklist
                 ):
                     self.log.debug(
-                        f"Skipped translation by author {translation_details.author!r} "
+                        f"Skipped translation by author '{translation_details.author}' "
                         "due to configured blacklist."
                     )
                     continue
@@ -156,7 +156,7 @@ class Provider:
                 ):
                     self.log.debug(
                         f"Skipped translation by uploader "
-                        f"{translation_details.uploader!r} due to configured blacklist."
+                        f"'{translation_details.uploader}' due to configured blacklist."
                     )
                     continue
 

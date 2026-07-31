@@ -32,7 +32,7 @@ class SpellChecker:
         try:
             self.__hunspell = self._load_hunspell(language)
             self.__load_user_dictionary()
-            self.log.info(f"Hunspell dictionary loaded for: {language}")
+            self.log.debug(f"Hunspell dictionary loaded for: {language}")
         except (FileNotFoundError, OSError) as ex:
             self.log.error(
                 f"Failed to load dictionary for language '{language}': {ex}", exc_info=ex
@@ -103,7 +103,7 @@ class SpellChecker:
             content = f"{len(words)}\n" + "\n".join(sorted(words))
             self.__user_dic_path.write_text(content, encoding="utf-8")
             self.__hunspell.add(word)
-            self.log.info(f"Added word '{word}' to user dictionary.")
+            self.log.debug(f"Added word '{word}' to user dictionary.")
 
     def __load_user_dictionary(self) -> None:
         """
@@ -116,7 +116,7 @@ class SpellChecker:
         if self.__user_dic_path.is_file():
             try:
                 self.__hunspell.add_dic(str(self.__user_dic_path))
-                self.log.info(f"Loaded user dictionary: {self.__user_dic_path}")
+                self.log.debug(f"Loaded user dictionary: {self.__user_dic_path}")
             except Exception as ex:  # noqa: BLE001
                 self.log.warning(
                     f"Failed to load user dictionary {self.__user_dic_path}: {ex}"

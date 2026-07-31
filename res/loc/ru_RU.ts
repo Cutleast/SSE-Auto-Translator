@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="242"/>
+        <location filename="src/app.py" line="245"/>
         <source>Path Limit Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="244"/>
+        <location filename="src/app.py" line="247"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -1505,7 +1505,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceLoader</name>
     <message>
-        <location filename="src/core/mod_instance/mod_instance_loader.py" line="139"/>
+        <location filename="src/core/mod_instance/mod_instance_loader.py" line="145"/>
         <source>Scanning mod instance for translatable mod files...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1879,32 +1879,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="109"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="102"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="180"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="237"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="245"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1962,44 +1962,44 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="123"/>
-        <location filename="src/core/scanner/scanner.py" line="139"/>
+        <location filename="src/core/scanner/scanner.py" line="115"/>
+        <location filename="src/core/scanner/scanner.py" line="133"/>
         <source>Scanning modlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="517"/>
+        <location filename="src/core/scanner/scanner.py" line="501"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="271"/>
-        <location filename="src/core/scanner/scanner.py" line="307"/>
+        <location filename="src/core/scanner/scanner.py" line="251"/>
+        <location filename="src/core/scanner/scanner.py" line="287"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="201"/>
+        <location filename="src/core/scanner/scanner.py" line="181"/>
         <source>{item_name}: Extracting strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="222"/>
+        <location filename="src/core/scanner/scanner.py" line="202"/>
         <source>{item_name}: Detecting language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="432"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="578"/>
+        <location filename="src/core/scanner/scanner.py" line="562"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="632"/>
+        <location filename="src/core/scanner/scanner.py" line="616"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2179,22 +2179,22 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="63"/>
+        <location filename="src/ui/statusbar.py" line="61"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="73"/>
+        <location filename="src/ui/statusbar.py" line="71"/>
         <source>Copy log to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="80"/>
+        <location filename="src/ui/statusbar.py" line="78"/>
         <source>View log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="120"/>
+        <location filename="src/ui/statusbar.py" line="118"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2366,17 +2366,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="75"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="76"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="76"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="77"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="77"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="78"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2821,32 +2821,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserDataService</name>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="66"/>
+        <location filename="src/core/user_data/user_data_service.py" line="68"/>
         <source>Loading user configuration...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="74"/>
+        <location filename="src/core/user_data/user_data_service.py" line="76"/>
         <source>Loading translator configuration...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="82"/>
+        <location filename="src/core/user_data/user_data_service.py" line="84"/>
         <source>Loading translation database...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="89"/>
+        <location filename="src/core/user_data/user_data_service.py" line="91"/>
         <source>Loading modlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="96"/>
+        <location filename="src/core/user_data/user_data_service.py" line="98"/>
         <source>Loading masterlist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="147"/>
+        <location filename="src/core/user_data/user_data_service.py" line="150"/>
         <source>&lt;No modinstance selected&gt;</source>
         <translation type="unfinished"></translation>
     </message>

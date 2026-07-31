@@ -123,7 +123,7 @@ class NXMHandler(SingletonQObject):
         except FileNotFoundError:
             self.prev_value = None
 
-        self.log.debug(f"Previous Value: {self.prev_value!r}")
+        self.log.debug(f"Previous Value: '{self.prev_value}'")
 
         try:
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
@@ -162,7 +162,7 @@ class NXMHandler(SingletonQObject):
                 return
 
         else:
-            self.log.debug(f"Setting Registry value to {self.prev_value!r}...")
+            self.log.debug(f"Setting Registry value to '{self.prev_value}'...")
 
             with winreg.OpenKey(
                 winreg.HKEY_CLASSES_ROOT, self.REG_PATH, access=winreg.KEY_WRITE
