@@ -177,4 +177,4 @@ class CDTApi(ProviderApi):
         if modpage_url_match is not None:
             return int(modpage_url_match.group(1))
 
-        raise ValueError(f"Could not extract CDT id from {url!r}")
+        raise ValueError(f"Could not extract CDT id from '{url}'")

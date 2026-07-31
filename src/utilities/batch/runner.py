@@ -109,7 +109,7 @@ class BatchRunner(Singleton):
         self.log.info("Loading user data...")
 
         service: UserDataService = UserDataService.get()
-        user_data: UserData = service.load(pdisplay)
+        user_data: UserData = service.load(self.__app_config.worker_thread_num, pdisplay)
 
         self.log.info("User data loaded.")
         return user_data

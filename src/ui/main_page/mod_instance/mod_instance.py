@@ -10,6 +10,7 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.filesystem.utils import open_in_explorer
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
@@ -44,7 +45,6 @@ from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.user_data.user_data import UserData
-from core.utilities import matches_filter
 from ui.widgets.string_list.string_list_dialog import StringListWindow
 
 from .help_dialog import ModInstanceHelpDialog
@@ -648,7 +648,7 @@ class ModInstanceWidget(QTreeWidget):
                     )
                 else:
                     raise FileNotFoundError(
-                        f"Could not find original mod for {current_item.name!r}"
+                        f"Could not find original mod for '{current_item.name}'"
                     )
 
             ProgressDialog(process, QApplication.activeModalWidget()).run()

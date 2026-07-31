@@ -83,7 +83,7 @@ class Editor(QObject):
         self.__translation.strings = self.__strings_cache
         self.__translation.save()
 
-        self.log.info(f"Saved translation {self.__translation.name!r}.")
+        self.log.info(f"Saved translation '{self.__translation.name}'.")
         self.__changes_pending = False
 
     def __on_change(self, changes_pending: bool = True) -> None:

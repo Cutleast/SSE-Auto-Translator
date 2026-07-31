@@ -31,10 +31,10 @@ class AppConfig(BaseAppConfig):
     download_thread_num: int = 1
     """Number of threads to use for downloading translation archives."""
 
-    worker_thread_num: int = -1
+    worker_thread_num: int = 4
     """
-    Maximum number of worker threads for some IO tasks. Default: -1 (depends on the
-    number of CPU cores).
+    Maximum number of worker threads for some IO tasks. Default: 4.
+    Increasing the number is not recommended, as it may harm the app's responsiveness.
     """
 
     auto_bind_nxm: bool = False

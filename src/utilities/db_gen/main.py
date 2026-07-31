@@ -197,7 +197,7 @@ class DbGen(Utility):
 
         self.log.debug(
             f"Extracting string tables for {len(strings_files)} "
-            f"plugin(s) for language {language_name!r}..."
+            f"plugin(s) for language '{language_name}'..."
         )
         string_tables: dict[str, dict[int, str]] = {}
         for plugin_path, string_table_paths in strings_files.items():
@@ -238,14 +238,14 @@ class DbGen(Utility):
 
             if plugin_name not in original_string_tables:
                 self.log.warning(
-                    f"Plugin {plugin_path.name!r} has no original string table. "
+                    f"Plugin '{plugin_path.name}' has no original string table. "
                     "Skipping..."
                 )
                 continue
 
             if plugin_name not in translated_string_tables:
                 self.log.warning(
-                    f"Plugin {plugin_path.name!r} has no translated string table. "
+                    f"Plugin '{plugin_path.name}' has no translated string table. "
                     "Skipping..."
                 )
                 continue
@@ -393,7 +393,7 @@ class DbGen(Utility):
             if bsa_string_file is None:
                 raise ValueError("Strings file must not be a BSA file!")
 
-            self.log.info(f"Extracting strings from {strings_file.name!r}...")
+            self.log.info(f"Extracting strings from '{strings_file.name}'...")
             parser = StringTableParser(strings_file)
 
             string_table: StringTable
@@ -424,7 +424,7 @@ class DbGen(Utility):
             dict[int, String]: Dictionary with string ids and strings
         """
 
-        self.log.info(f"Extracting string ids from {plugin_path.name!r}...")
+        self.log.info(f"Extracting string ids from '{plugin_path.name}'...")
 
         plugin = Plugin.from_file(plugin_path)
         strings: list[PluginString] = plugin.extract_strings(extract_localized=True)

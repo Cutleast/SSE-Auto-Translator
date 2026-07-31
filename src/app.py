@@ -165,11 +165,14 @@ class App(BaseApp, Singleton):
         return retcode
 
     def __start_main_app(self) -> None:
-        self.__user_data = ProgressDialog(
-            self.__user_data_service.load, QApplication.activeModalWidget()
-        ).run()
-
         app_config: AppConfig = cast(AppConfig, self.app_config)
+
+        self.__user_data = ProgressDialog(
+            lambda pdisplay: self.__user_data_service.load(
+                app_config.worker_thread_num, pdisplay
+            ),
+            QApplication.activeModalWidget(),
+        ).run()
 
         if app_config.auto_bind_nxm and NXMHandler.has_instance():
             NXMHandler.get().bind()

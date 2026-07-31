@@ -75,7 +75,7 @@ class NXMHandler(SingletonQObject):
             while self.__listening:
                 request: str = self.__socket.recv_string()  # type: ignore
 
-                self.log.debug(f"Received download request: {request!r}")
+                self.log.debug("Received NXM download request.")
                 self.request_signal.emit(request)
 
                 self.__socket.send_string("SUCCESS")  # type: ignore
@@ -123,7 +123,7 @@ class NXMHandler(SingletonQObject):
         except FileNotFoundError:
             self.prev_value = None
 
-        self.log.debug(f"Previous Value: {self.prev_value!r}")
+        self.log.debug(f"Previous Value: '{self.prev_value}'")
 
         try:
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
@@ -162,7 +162,7 @@ class NXMHandler(SingletonQObject):
                 return
 
         else:
-            self.log.debug(f"Setting Registry value to {self.prev_value!r}...")
+            self.log.debug(f"Setting Registry value to '{self.prev_value}'...")
 
             with winreg.OpenKey(
                 winreg.HKEY_CLASSES_ROOT, self.REG_PATH, access=winreg.KEY_WRITE
@@ -203,11 +203,11 @@ class NXMHandler(SingletonQObject):
             if (client.poll(1000) & zmq.POLLIN) != 0:
                 reply = client.recv_string()
                 if reply == "SUCCESS":
-                    print("Request successful!")
+                    NXMHandler.log.debug("NXM download request succeeded.")
                     sys.exit()
                 else:
-                    print("Unknown reply from process:", reply)
+                    NXMHandler.log.warning("Received unexpected NXM response.")
                     sys.exit(1)
 
-            print("No response from process!")
+            NXMHandler.log.warning("NXM download request timed out.")
             sys.exit(1)

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.datetime import fmt_timestamp
+from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.scale import scale_value
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtCore import QItemSelectionModel, Qt, QUrl, Signal
@@ -35,7 +36,6 @@ from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
-from core.utilities import matches_filter
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.string_list.string_list_dialog import StringListWindow

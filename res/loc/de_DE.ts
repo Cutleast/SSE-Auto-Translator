@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="242"/>
+        <location filename="src/app.py" line="245"/>
         <source>Path Limit Enabled</source>
         <translation>Pfadlängenbegrenzung aktiviert</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="244"/>
+        <location filename="src/app.py" line="247"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -619,7 +619,7 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Wird heruntergeladen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="135"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="138"/>
         <source>Downloading &apos;{0}&apos;...</source>
         <translation>&apos;{0}&apos; wird heruntergeladen...</translation>
     </message>
@@ -1515,7 +1515,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceLoader</name>
     <message>
-        <location filename="src/core/mod_instance/mod_instance_loader.py" line="139"/>
+        <location filename="src/core/mod_instance/mod_instance_loader.py" line="145"/>
         <source>Scanning mod instance for translatable mod files...</source>
         <translation>Modinstanz wird nach übersetzbaren Moddateien gescannt...</translation>
     </message>
@@ -1679,40 +1679,40 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="132"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="211"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="133"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="212"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation>Mods von {0} &gt; {1} werden geladen...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="150"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="500"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="151"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="509"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>Tools von {0} &gt; {1} werden geladen...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="242"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="245"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation>Mods von {0} &gt; {1} werden geladen: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="304"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="451"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="308"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="460"/>
         <source>Processing mod conflicts...</source>
         <translation>Modkonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="466"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="475"/>
         <source>Processing single file conflicts...</source>
         <translation>Einzelne Dateikonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="707"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="716"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>ModOrganizer wird heruntergeladen und installiert...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="740"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="749"/>
         <source>Extracting archive...</source>
         <translation>Archiv wird extrahiert...</translation>
     </message>
@@ -1972,44 +1972,44 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="118"/>
+        <location filename="src/core/scanner/scanner.py" line="115"/>
         <location filename="src/core/scanner/scanner.py" line="133"/>
         <source>Scanning modlist...</source>
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="486"/>
+        <location filename="src/core/scanner/scanner.py" line="501"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="249"/>
-        <location filename="src/core/scanner/scanner.py" line="285"/>
+        <location filename="src/core/scanner/scanner.py" line="251"/>
+        <location filename="src/core/scanner/scanner.py" line="287"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="179"/>
+        <location filename="src/core/scanner/scanner.py" line="181"/>
         <source>{item_name}: Extracting strings...</source>
         <translation>{item_name}: Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="200"/>
+        <location filename="src/core/scanner/scanner.py" line="202"/>
         <source>{item_name}: Detecting language...</source>
         <translation>{item_name}: Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="408"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="545"/>
+        <location filename="src/core/scanner/scanner.py" line="562"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="595"/>
+        <location filename="src/core/scanner/scanner.py" line="616"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
@@ -2189,22 +2189,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="63"/>
+        <location filename="src/ui/statusbar.py" line="61"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation>Das stündliche Limit gilt nur, wenn das tägliche Limit erreicht wurde.</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="73"/>
+        <location filename="src/ui/statusbar.py" line="71"/>
         <source>Copy log to clipboard</source>
         <translation>Log in Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="80"/>
+        <location filename="src/ui/statusbar.py" line="78"/>
         <source>View log</source>
         <translation>Log anzeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="120"/>
+        <location filename="src/ui/statusbar.py" line="118"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation>API: Stündlich: {0} | Täglich: {1}</translation>
     </message>
@@ -2375,17 +2375,17 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="75"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="76"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="76"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="77"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="77"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="78"/>
         <source>String</source>
         <translation>String</translation>
     </message>
@@ -2401,7 +2401,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ToastNotifier</name>
     <message>
-        <location filename="src/ui/toast_notifier.py" line="32"/>
+        <location filename="src/ui/toast_notifier.py" line="35"/>
         <source>All downloads finished!</source>
         <translation>Alle Downloads sind abgeschlossen!</translation>
     </message>
@@ -2829,32 +2829,32 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>UserDataService</name>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="66"/>
+        <location filename="src/core/user_data/user_data_service.py" line="68"/>
         <source>Loading user configuration...</source>
         <translation>Nutzereinstellungen werden geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="74"/>
+        <location filename="src/core/user_data/user_data_service.py" line="76"/>
         <source>Loading translator configuration...</source>
         <translation>Übersetzereinstellungen werden geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="82"/>
+        <location filename="src/core/user_data/user_data_service.py" line="84"/>
         <source>Loading translation database...</source>
         <translation>Übersetzungsdatenbank wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="89"/>
+        <location filename="src/core/user_data/user_data_service.py" line="91"/>
         <source>Loading modlist...</source>
         <translation>Modliste wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="96"/>
+        <location filename="src/core/user_data/user_data_service.py" line="98"/>
         <source>Loading masterlist...</source>
         <translation>Masterlist wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="147"/>
+        <location filename="src/core/user_data/user_data_service.py" line="150"/>
         <source>&lt;No modinstance selected&gt;</source>
         <translation>&lt;Keine Modinstanz ausgewählt&gt;</translation>
     </message>

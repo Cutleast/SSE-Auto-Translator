@@ -35,8 +35,8 @@ class Esp2Dsd(Utility):
     OUTPUT_PATH_ARG_HELP: str = "Optional path to output folder"
     HELP: str = (
         "Converts a plugin translation to a DSD file. "
-        f"Arguments {TRANSLATED_PLUGIN_ARG_NAME!r} and "
-        f"{ORIGINAL_PLUGIN_ARG_NAME!r} are required when used."
+        f"Arguments '{TRANSLATED_PLUGIN_ARG_NAME}' and "
+        f"'{ORIGINAL_PLUGIN_ARG_NAME}' are required when used."
     )
 
     @override

@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtWidgets import (
     QDialog,
@@ -20,7 +21,6 @@ from PySide6.QtWidgets import (
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
-from core.utilities import matches_filter
 from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
 
 
@@ -133,6 +133,6 @@ class IgnoreListDialog(QDialog):
                 not matches_filter(
                     self.__userlist_widget.item(rindex).text(),
                     text_filter,
-                    case_sensitive or False,
+                    case_sensitive,
                 ),
             )

@@ -5,11 +5,11 @@ Copyright (c) Cutleast
 import logging
 import os
 import time
-from cgi import parse_header
 from pathlib import Path
 from typing import Optional, override
 
 import requests as req
+from cgi import parse_header
 from PySide6.QtCore import QObject, Signal
 
 from core.utilities.progress_update import (
@@ -84,7 +84,7 @@ class Downloader(QObject):
             dl_path = dest_folder / file_name
 
             self.log.info(
-                f"Downloading {file_name!r} from {download_url!r} to '{dest_folder}'..."
+                f"Downloading '{file_name}' from '{download_url}' to '{dest_folder}'..."
             )
 
             if total_size == 0:

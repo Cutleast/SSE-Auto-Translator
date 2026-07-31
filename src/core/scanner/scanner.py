@@ -104,13 +104,10 @@ class Scanner(QObject):
                 A dictionary of mods, their mod files and their status.
         """
 
-        thread_num: Optional[int] = (
-            self.app_config.worker_thread_num
-            if self.app_config.worker_thread_num > 0
-            else None
+        total_modfiles: int = sum(len(modfiles) for modfiles in items.values())
+        self.log.info(
+            f"Scanning {len(items)} mod(s) with {total_modfiles} mod file(s)..."
         )
-
-        self.log.info(f"Scanning {len(items)} mod(s)...")
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -129,7 +126,10 @@ class Scanner(QObject):
         )
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
-        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
+        failed_modfiles: int = 0
+        with ProgressExecutor(
+            pdisplay, max_workers=self.app_config.worker_thread_num
+        ) as executor:
             executor.set_main_progress_text(self.tr("Scanning modlist..."))
 
             tasks: dict[Future[TranslationStatus], tuple[Mod, ModFile]] = {}
@@ -153,12 +153,14 @@ class Scanner(QObject):
                 try:
                     scan_result[mod][modfile] = future.result()
                 except Exception as ex:
+                    failed_modfiles += 1
                     self.log.error(
-                        f"Failed to scan {mod.name!r} > {modfile.name!r}: {ex}",
+                        f"Failed to scan '{mod.name}' > '{modfile.name}': {ex}",
                         exc_info=ex,
                     )
 
         self.log.info("Modlist scan complete.")
+        self.log.info(f"Status summary: {self.__create_status_summary(scan_result)}")
 
         return scan_result
 
@@ -171,7 +173,7 @@ class Scanner(QObject):
         update_callback: Optional[UpdateCallback] = None,
     ) -> TranslationStatus:
         modfile_path_text: str = f"{mod.name} > {modfile.name}"
-        self.log.info(f"Scanning {modfile_path_text}...")
+        self.log.debug(f"Scanning {modfile_path_text}...")
 
         update(
             update_callback,
@@ -221,7 +223,7 @@ class Scanner(QObject):
 
         else:
             status = TranslationStatus.IsTranslated
-            self.log.info("Mod file is already translated.")
+            self.log.debug("Mod file is already translated.")
 
         return status
 
@@ -303,6 +305,7 @@ class Scanner(QObject):
                     self.log.error(f"Failed to scan for '{mod.name}': {ex}", exc_info=ex)
 
         self.log.info("Online scan complete.")
+        self.log.info(f"Status summary: {self.__create_status_summary(scan_result)}")
 
         return scan_result
 
@@ -326,12 +329,12 @@ class Scanner(QObject):
                 ),
             )
 
-            self.log.info(f"Scanning for {mod.name!r} > {modfile.name!r}...")
+            self.log.debug(f"Scanning for '{mod.name}' > '{modfile.name}'...")
             try:
                 result[modfile] = self.__online_scan_modfile(mod.mod_id, modfile)
             except Exception as ex:
                 self.log.error(
-                    f"Failed to scan for {mod.name!r} > {modfile.name!r}: {ex}",
+                    f"Failed to scan for '{mod.name}' > '{modfile.name}': {ex}",
                     exc_info=ex,
                 )
                 result[modfile] = TranslationStatus.NoTranslationAvailable
@@ -360,7 +363,9 @@ class Scanner(QObject):
             and masterlist_entry.type == MasterlistEntry.Type.Route
             and masterlist_entry.targets
         ):
-            self.log.info("Found route entry for mod file in masterlist.")
+            self.log.debug(
+                f"Found route entry for mod file '{modfile.name}' in masterlist."
+            )
             return TranslationStatus.TranslationAvailableOnline
 
         if len(available_translations):
@@ -412,14 +417,17 @@ class Scanner(QObject):
                     )
                 )
 
-            self.log.info(f"Searching for strings in {mod.name!r}...")
+            self.log.debug(f"Searching for strings in '{mod.name}'...")
             mod_result: dict[Path, StringList] = self.__search_mod(
                 mod, modfiles, filter, pdisplay
             )
             if mod_result:
                 results.update(mod_result)
 
-        self.log.info("Search modlist for strings complete.")
+        self.log.info(
+            f"Search modlist for strings complete. Found results in {len(results)} mod "
+            "file(s)."
+        )
 
         return results
 
@@ -443,7 +451,9 @@ class Scanner(QObject):
                     ),
                 )
 
-            self.log.info(f"Searching for strings in {mod.name!r} > {modfile.name!r}...")
+            self.log.debug(
+                f"Searching for strings in '{mod.name}' > '{modfile.name}'..."
+            )
             modfile_result: StringList = self.__search_modfile(modfile, filter)
             if modfile_result:
                 result[Path(f"{mod.name} > {modfile.name}")] = modfile_result
@@ -476,6 +486,11 @@ class Scanner(QObject):
         installed_translations: dict[Mod, Mod] = self.run_translation_scan(
             mods, pdisplay
         )
+
+        self.log.info(
+            f"Importing {len(installed_translations)} installed translation(s)..."
+        )
+
         new_translations: list[Translation] = []
         for m, (installed_translation, original_mod) in enumerate(
             installed_translations.items()
@@ -496,9 +511,9 @@ class Scanner(QObject):
                     ),
                 )
 
-            self.log.info(
-                f"Importing translation {installed_translation.name!r} "
-                f"for original mod {original_mod.name!r}..."
+            self.log.debug(
+                f"Importing translation '{installed_translation.name}' for original "
+                f"mod '{original_mod.name}'..."
             )
 
             translation_strings: dict[Path, StringList] = (
@@ -508,8 +523,8 @@ class Scanner(QObject):
             )
 
             if not translation_strings:
-                self.log.info(
-                    f"No additional strings from {installed_translation.name!r}."
+                self.log.warning(
+                    f"No additional strings from '{installed_translation.name}'."
                 )
                 continue
 
@@ -522,6 +537,8 @@ class Scanner(QObject):
                     add_and_save=False,
                 )
             )
+
+        self.log.info(f"Imported {len(new_translations)} installed translation(s).")
 
         if self.app_config.auto_create_database_translations:
             self.log.info("Creating database translations...")
@@ -552,7 +569,7 @@ class Scanner(QObject):
                         1, ProgressUpdate(status_text=mod.name, value=0, maximum=0)
                     )
 
-                self.log.info(f"Creating database translation for {mod.name!r}...")
+                self.log.debug(f"Creating database translation for '{mod.name}'...")
                 new_translations.append(
                     DatabaseService.create_translation_for_mod(
                         mod,
@@ -561,6 +578,10 @@ class Scanner(QObject):
                         add_and_save=False,
                     )
                 )
+
+            self.log.info(
+                f"Created {len(new_translations)} new database translation(s)."
+            )
 
         for new_translation in new_translations:
             # remove duplicate strings and save the translation
@@ -602,20 +623,22 @@ class Scanner(QObject):
                     1, ProgressUpdate(status_text=mod.name, value=0, maximum=0)
                 )
 
-            self.log.info(f"Scanning for installed translations in {mod.name!r}...")
-
             original_mod: Optional[Mod] = self.__translation_scan_mod(mod, pdisplay)
 
             if original_mod is not None:
                 result[mod] = original_mod
 
-        self.log.info("Scanning for installed translations complete.")
+        self.log.info(
+            f"Found {len(result)} installed translation(s) that can be imported."
+        )
 
         return result
 
     def __translation_scan_mod(
         self, mod: Mod, pdisplay: Optional[ProgressDisplay] = None
     ) -> Optional[Mod]:
+        self.log.debug(f"Scanning for installed translations in '{mod.name}'...")
+
         original_mod: Optional[Mod] = None
 
         modfile_paths: list[Path] = list(
@@ -657,7 +680,24 @@ class Scanner(QObject):
         else:
             if modfile_paths:
                 self.log.warning(
-                    f"No original mod found for installed translation {mod.name!r}!"
+                    f"No original mod found for installed translation '{mod.name}'!"
                 )
 
         return original_mod
+
+    def __create_status_summary(
+        self, scan_result: dict[Mod, dict[ModFile, TranslationStatus]]
+    ) -> str:
+        status_counts: dict[TranslationStatus, int] = {}
+        for mod_results in scan_result.values():
+            for status in mod_results.values():
+                status_counts[status] = status_counts.get(status, 0) + 1
+
+        status_summary: str = " | ".join(
+            f"{status.name}: {count}"
+            for status, count in sorted(
+                status_counts.items(), key=lambda item: item[0].value
+            )
+        )
+
+        return status_summary

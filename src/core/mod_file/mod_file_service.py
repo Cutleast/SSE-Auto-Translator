@@ -50,7 +50,7 @@ class ModFileService(QObject):
             list[ModFile]: List of mod files.
         """
 
-        self.log.info(f"Scanning '{mod.display_name}' for mod files...")
+        self.log.debug(f"Scanning '{mod.display_name}' for mod files...")
 
         update(
             update_callback,
@@ -82,7 +82,7 @@ class ModFileService(QObject):
             for bsa_file in mod.path.glob("*.bsa"):
                 modfiles.extend(self.get_modfiles_from_bsa(bsa_file, language))
 
-        self.log.info(f"Found {len(modfiles)} mod file(s) in '{mod.display_name}'.")
+        self.log.debug(f"Found {len(modfiles)} mod file(s) in '{mod.display_name}'.")
 
         return modfiles
 
@@ -100,7 +100,7 @@ class ModFileService(QObject):
             list[ModFile]: List of mod files.
         """
 
-        self.log.info(f"Scanning '{bsa_file}' for mod files...")
+        self.log.debug(f"Scanning '{bsa_file}' for mod files...")
 
         bsa_files: list[Path] = BsaFileProvider.get_cached_file_list(bsa_file)
 
@@ -116,7 +116,7 @@ class ModFileService(QObject):
                     path = Path(path_str)
                     modfiles.append(file_type_cls(path.name, bsa_file / path))
 
-        self.log.info(f"Found {len(modfiles)} mod files.")
+        self.log.debug(f"Found {len(modfiles)} mod files.")
 
         return modfiles
 
@@ -144,4 +144,4 @@ class ModFileService(QObject):
             ):
                 return file_type_cls
 
-        raise NotImplementedError(f"File type {suffix!r} not yet supported!")
+        raise NotImplementedError(f"File type '{suffix}' not yet supported!")
