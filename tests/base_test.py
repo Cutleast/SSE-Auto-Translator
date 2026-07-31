@@ -19,6 +19,7 @@ from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from cutleast_core_lib.test.utils import Utils
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from mod_manager_lib.core.game_service import GameService
 from mod_manager_lib.core.mod_manager.apis import ModManagerApi
 from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
@@ -71,6 +72,16 @@ class BaseTest(CoreBaseTest):
             shutil.rmtree(cls._temp_folder)
 
         cls._temp_folder = None
+
+    @pytest.fixture(autouse=True)
+    def window_manager(self) -> Generator[WindowManager]:
+        """
+        Provides a WindowManager instance for testing.
+        """
+
+        yield WindowManager()
+
+        Utils.reset_singleton(WindowManager)
 
     @pytest.fixture
     def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
