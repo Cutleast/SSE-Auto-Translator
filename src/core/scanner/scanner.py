@@ -280,9 +280,9 @@ class Scanner(QObject):
             f"for {len(relevant_items)} mod(s)..."
         )
 
-        # 2 workers seems to be a good balance between speed and not overloading the
-        # provider's API
-        with ProgressExecutor(pdisplay, max_workers=2) as executor:
+        with ProgressExecutor(
+            pdisplay, max_workers=self.app_config.worker_thread_num
+        ) as executor:
             executor.set_main_progress_text(
                 self.tr("Scanning online for available translations...")
             )

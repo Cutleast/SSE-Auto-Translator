@@ -13,10 +13,10 @@ from typing import Any, Optional, TypeVar, override
 from uuid import uuid4
 
 import bs4
-import cloudscraper as cs
 import jstyleson as json
 import requests as req
 import websocket
+from curl_cffi import requests as curl_requests
 from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel, ValidationError
 
@@ -94,7 +94,7 @@ class NexusModsApi(ProviderApi):
     __rem_dreq: int = 0
     """Remaining API requests at current day"""
 
-    __scraper: Optional[cs.CloudScraper] = None
+    __scraper: Optional[curl_requests.Session] = None
     """
     Scraper for circumventing Cloudflare protection when scraping the HTML of a
     modpage for translations.
@@ -560,14 +560,14 @@ class NexusModsApi(ProviderApi):
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
         cache_file_path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
 
-        cached: Optional[req.Response] = Cache.get_from_cache(
+        cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
             cache_file_path, default=None
         )
 
-        res: req.Response
+        res: req.Response | curl_requests.Response
         if cached is None:
             if self.__scraper is None:
-                self.__scraper = cs.CloudScraper()
+                self.__scraper = curl_requests.Session(impersonate="chrome")
 
             headers = {
                 "User-Agent": self.user_agent,

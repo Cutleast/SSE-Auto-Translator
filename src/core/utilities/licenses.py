@@ -18,7 +18,7 @@ LICENSES = {
     "plyvel-next": "https://github.com/Modding-Forge/plyvel-next/blob/master/LICENSE",
     "py7zr": "https://github.com/miurahr/py7zr/blob/master/LICENSE",
     "rarfile": "https://github.com/markokr/rarfile/blob/master/LICENSE",
-    "cloudscraper": "https://github.com/VeNoMouS/cloudscraper/blob/master/LICENSE",
+    "curl-cffi": "https://github.com/lexiforest/curl_cffi/blob/main/LICENSE",
     "pywin32": "https://github.com/mhammond/pywin32",
     "pyuac": "https://github.com/Preston-Landers/pyuac/blob/master/LICENSE",
     "websocket-client": "https://github.com/websocket-client/websocket-client/blob/master/LICENSE",
