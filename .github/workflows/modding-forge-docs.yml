@@ -1,0 +1,72 @@
+name: Publish Modding Forge documentation
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: modding-forge-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine required central operation
+        id: changes
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          DOC_SOURCE_REF: ${{ github.ref_name }}
+          DOC_SOURCE_SHA: ${{ github.sha }}
+        run: |
+          # A new branch has no previous commit to compare and needs an initial build.
+          if [ "${BEFORE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+            docs_changed=true
+          elif git diff --quiet "${BEFORE_SHA}" "${DOC_SOURCE_SHA}" -- docs; then
+            docs_changed=false
+          else
+            docs_changed=true
+          fi
+
+          if [ "${docs_changed}" = "true" ]; then
+            echo "should_trigger=true" >> "${GITHUB_OUTPUT}"
+            echo "cleanup_only=false" >> "${GITHUB_OUTPUT}"
+          # Default-branch pushes also remove published branches that no longer exist.
+          elif [ "${DOC_SOURCE_REF}" = "${DEFAULT_BRANCH}" ]; then
+            echo "should_trigger=true" >> "${GITHUB_OUTPUT}"
+            echo "cleanup_only=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "should_trigger=false" >> "${GITHUB_OUTPUT}"
+            echo "cleanup_only=false" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Trigger central documentation pipeline
+        if: steps.changes.outputs.should_trigger == 'true'
+        env:
+          DOC_SOURCE_REF: ${{ github.ref_name }}
+          DOC_SOURCE_SHA: ${{ github.sha }}
+          DOC_VALIDATE_ONLY: false
+          DOC_CLEANUP_ONLY: ${{ steps.changes.outputs.cleanup_only }}
+          GITLAB_TRIGGER_TOKEN: ${{ secrets.MF_DOCS_GITLAB_TRIGGER_TOKEN }}
+        run: |
+          # The orchestrator validates repository, branch, and commit against Directus.
+          curl --fail-with-body --request POST \
+            --form "token=${GITLAB_TRIGGER_TOKEN}" \
+            --form "ref=master" \
+            --form "variables[DOC_TRIGGER_KIND]=repository" \
+            --form "variables[DOC_SOURCE_URL]=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}" \
+            --form "variables[DOC_SOURCE_REF]=${DOC_SOURCE_REF}" \
+            --form "variables[DOC_SOURCE_SHA]=${DOC_SOURCE_SHA}" \
+            --form "variables[DOC_VALIDATE_ONLY]=${DOC_VALIDATE_ONLY}" \
+            --form "variables[DOC_CLEANUP_ONLY]=${DOC_CLEANUP_ONLY}" \
+            "https://code.moddingforge.com/api/v4/projects/modding-forge%2Fmodding-forge-docs/trigger/pipeline"
