@@ -247,10 +247,10 @@ class StringListWidget(QWidget):
         item = QTreeWidgetItem(
             [
                 string.display_id,
-                raw_string(string.original, max_length=-1),
+                raw_string(string.original, max_length=None),
                 raw_string(
                     string.string if string.string is not None else string.original,
-                    max_length=-1,
+                    max_length=None,
                 ),
             ]
         )

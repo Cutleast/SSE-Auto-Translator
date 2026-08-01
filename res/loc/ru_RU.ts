@@ -1177,24 +1177,6 @@ Depending on the translator API this can raise unexpected costs.</comment>
     </message>
 </context>
 <context>
-    <name>JsonDataView</name>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="45"/>
-        <source>Expand all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="51"/>
-        <source>Collapse all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="58"/>
-        <source>Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>KeyLineEdit</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/key_edit.py" line="51"/>

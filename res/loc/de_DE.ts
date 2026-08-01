@@ -1183,24 +1183,6 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
     </message>
 </context>
 <context>
-    <name>JsonDataView</name>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="45"/>
-        <source>Expand all</source>
-        <translation>Alle aufklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="51"/>
-        <source>Collapse all</source>
-        <translation>Alle zuklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="58"/>
-        <source>Copy</source>
-        <translation>Kopieren</translation>
-    </message>
-</context>
-<context>
     <name>KeyLineEdit</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/key_edit.py" line="51"/>
