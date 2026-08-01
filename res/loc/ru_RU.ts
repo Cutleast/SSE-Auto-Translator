@@ -1950,13 +1950,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="503"/>
+        <location filename="src/core/scanner/scanner.py" line="501"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="251"/>
-        <location filename="src/core/scanner/scanner.py" line="289"/>
+        <location filename="src/core/scanner/scanner.py" line="287"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1971,17 +1971,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="415"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="564"/>
+        <location filename="src/core/scanner/scanner.py" line="562"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="618"/>
+        <location filename="src/core/scanner/scanner.py" line="616"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
