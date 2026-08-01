@@ -51,7 +51,9 @@ The translation and all its mod files are then opened in the translation editor.
 
 == Update a translation after a mod update
 
-To update an installed translation for an updated mod or mod file, run a image:deep_scan.svg[width=24px,height=24px] _Deep Scan_ from the toolbar on the xref:main_page.adoc[main page]. +
-This will check for strings that are missing in the translation and add them as untranslated strings.
-After the scan is complete, the mod files that had new strings are marked in purple (= _Translation incomplete_) in the mod list. +
+To update an installed translation for an updated mod or mod file, click on image:update_translations.svg[width=24px,height=24px] _Update translations from installed mods_ on the translations toolbar on the xref:main_page.adoc[main page]. +
+This will check for strings that are missing in the translation and add them as untranslated strings. +
+It will also invalidate strings where the original text has changed in the mod file. +
+In addition to that, if a mod got a new mod file through an update, that also requires a translation, it will automatically be added to an existing translation for that mod.
+After the update is complete, the mod files that had new strings are marked in purple (= _Translation incomplete_) in the mod list. +
 Now you can open the translation in the editor (if it is already open, you have to close it and open it again) and translate the new strings.
