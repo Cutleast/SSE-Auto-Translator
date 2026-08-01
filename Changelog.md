@@ -1,3 +1,19 @@
+# v3.2.0
+
+- Add button to export the mod file states to a JSON file
+- Add CLI commands for automation (see docs for more information)
+- Add validation to settings and prevent saving if there are any issues
+- Replaced deep scan feature by specialized "Update translations" button above the list of installed translations
+- Allow batch-creation of translations by selecting multiple mods and mod files > right click > "Create translation..."
+- Various performance tweaks, code cleanup and logging improvements
+- Fix database generator being unable to find string tables outside of BSAs
+- Fix string search being case-sensitive
+- Fix Dragonborn's Bestiary translations being exported with a wrong ID
+- Fix memory leaks of non-modal windows throughout the app
+- Fix incomplete Nexus Mods metadata being fetched that leads to translations bypassing the author ignorelist
+- Fix Portuguese for Google Translator API
+- Fix potential issues and optimize online scan
+
 # v3.1.1
 
 - Fix database generator CLI utility
