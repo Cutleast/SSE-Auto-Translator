@@ -2482,18 +2482,18 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="310"/>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="319"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="311"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="320"/>
         <source>Database update complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="312"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="313"/>
         <source>Successfully updated translations for {num} mod file(s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="320"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="321"/>
         <source>All translations are up-to-date.</source>
         <translation type="unfinished"></translation>
     </message>

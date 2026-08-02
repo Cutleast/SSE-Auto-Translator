@@ -2486,18 +2486,18 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Übersetzung importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="310"/>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="319"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="311"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="320"/>
         <source>Database update complete</source>
         <translation>Datenbank-Aktualisierung abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="312"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="313"/>
         <source>Successfully updated translations for {num} mod file(s).</source>
         <translation>Es wurden erfolgreich Übersetzungen für {num} Moddatei(en) aktualisiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="320"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="321"/>
         <source>All translations are up-to-date.</source>
         <translation>Alle Übersetzungen sind aktuell.</translation>
     </message>

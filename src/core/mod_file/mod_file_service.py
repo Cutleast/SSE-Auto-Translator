@@ -67,7 +67,7 @@ class ModFileService(QObject):
             for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path in mod.path.glob(pattern):
                     if path.is_file():
-                        modfiles.append(file_type_cls(path.name, path))
+                        modfiles.append(file_type_cls(name=path.name, full_path=path))
 
         if include_bsas:
             update(
@@ -114,7 +114,9 @@ class ModFileService(QObject):
             for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path_str in glob(pattern, bsa_files):
                     path = Path(path_str)
-                    modfiles.append(file_type_cls(path.name, bsa_file / path))
+                    modfiles.append(
+                        file_type_cls(name=path.name, full_path=bsa_file / path)
+                    )
 
         self.log.debug(f"Found {len(modfiles)} mod files.")
 

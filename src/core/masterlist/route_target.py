@@ -2,16 +2,14 @@
 Copyright (c) Cutleast
 """
 
-from dataclasses import field
 from typing import Optional
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 
 from core.translation_provider.source import Source
 
 
-@dataclass
-class RouteTarget:
+class RouteTarget(BaseModel, frozen=True):
     """
     Class for route targets.
     """
@@ -26,7 +24,7 @@ class RouteTarget:
     The file id of the target.
     """
 
-    source: Source = field(default=Source.NexusMods)
+    source: Source = Source.NexusMods
     """
     The source of the target.
     """

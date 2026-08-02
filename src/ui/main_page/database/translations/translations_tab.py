@@ -266,7 +266,8 @@ class TranslationsTab(QWidget):
                 if original_modfile is not None:
                     strings = {
                         original_modfile.path: StringExtractor.map_translation_strings(
-                            file_type_cls(file.name, file), original_modfile
+                            file_type_cls(name=file.name, full_path=file),
+                            original_modfile,
                         )
                     }
 

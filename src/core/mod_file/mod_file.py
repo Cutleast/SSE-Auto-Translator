@@ -7,11 +7,11 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
-from dataclasses import dataclass
 from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from pydantic import BaseModel
 
 from core.file_source.file_source_factory import FileSourceFactory
 from core.string.types import StringList
@@ -20,8 +20,7 @@ from core.utilities.filesystem import relative_data_path
 from .translation_status import TranslationStatus
 
 
-@dataclass
-class ModFile(metaclass=ABCMeta):
+class ModFile(BaseModel, metaclass=ABCMeta):
     """
     Dataclass for translatable mod files.
     """
