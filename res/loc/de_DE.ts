@@ -397,12 +397,12 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
         <translation>Datenbank-Übersetzungen werden aktualisiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="123"/>
+        <location filename="src/core/database/database_updater.py" line="197"/>
         <source>Adding missing mod files to translations...</source>
         <translation>Fehlende Moddateien werden zu Übersetzungen hinzugefügt...</translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="206"/>
+        <location filename="src/core/database/database_updater.py" line="166"/>
         <source>Updating translation strings...</source>
         <translation>Übersetzungsstrings werden aktualisiert...</translation>
     </message>

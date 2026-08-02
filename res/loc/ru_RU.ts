@@ -392,12 +392,12 @@ This list only affects translations from Nexus Mods!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="123"/>
+        <location filename="src/core/database/database_updater.py" line="197"/>
         <source>Adding missing mod files to translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="206"/>
+        <location filename="src/core/database/database_updater.py" line="166"/>
         <source>Updating translation strings...</source>
         <translation type="unfinished"></translation>
     </message>
