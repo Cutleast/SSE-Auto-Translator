@@ -129,7 +129,9 @@ class EditorPage(QSplitter):
                 The path of the mod file to go to, relative to the game's "Data" folder.
         """
 
-        item: QTreeWidgetItem = self.__tabs[tab.translation][1]
+        item: QTreeWidgetItem = next(
+            item for t, item in self.__tabs.values() if t is tab
+        )
         self.__tab_list_widget.setCurrentItem(item)
 
         if modfile is not None:

@@ -47,6 +47,9 @@ class App(BaseApp, Singleton):
     APP_NAME: str = "SSE Auto Translator"
     APP_VERSION: str = "development"
 
+    cache_path: Path
+    """Path to the cache folder."""
+
     __user_data: Optional[UserData] = None
     __user_data_service: UserDataService
 

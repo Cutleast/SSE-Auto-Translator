@@ -60,14 +60,17 @@ class EditorTab(QWidget):
 
     __editor: Editor
 
-    translation: Translation
-    app_config: AppConfig
-    user_data: UserData
-    translator_service: TranslatorService
+    __translation: Translation
+    __app_config: AppConfig
+    __user_data: UserData
+    __translator_service: TranslatorService
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
+    __strings_num_label: LCDNumber
     __tool_bar: EditorToolbar
+    __search_bar: SearchBar
+    __bar_chart: StackedBar
     __menu: EditorMenu
     __strings_widget: StringsWidget
 
@@ -88,10 +91,10 @@ class EditorTab(QWidget):
 
         super().__init__()
 
-        self.translation = translation
-        self.app_config = app_config
-        self.user_data = user_data
-        self.translator_service = translator_service
+        self.__translation = translation
+        self.__app_config = app_config
+        self.__user_data = user_data
+        self.__translator_service = translator_service
 
         self.__editor = Editor(
             translation=translation,
@@ -137,7 +140,7 @@ class EditorTab(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__title_label = QLabel(self.translation.name)
+        self.__title_label = QLabel(self.__translation.name)
         self.__title_label.setObjectName("h3")
         hlayout.addWidget(self.__title_label)
 
@@ -191,7 +194,7 @@ class EditorTab(QWidget):
 
         close_shortcut = QShortcut(QKeySequence("Ctrl+W"), self)
         close_shortcut.activated.connect(
-            lambda: self.close_signal.emit(self.translation)
+            lambda: self.close_signal.emit(self.__translation)
         )
 
         complete_shortcut = QShortcut(QKeySequence("F1"), self)
@@ -268,9 +271,9 @@ class EditorTab(QWidget):
             dialog = TranslatorDialog(
                 self,
                 string,
-                self.app_config,
-                self.user_data.user_config,
-                self.translator_service,
+                self.__app_config,
+                self.__user_data.user_config,
+                self.__translator_service,
             )
             dialog.update_signal.connect(self.update)
             WindowManager.get().show(dialog)
@@ -352,9 +355,9 @@ class EditorTab(QWidget):
         self.__strings_widget.update()
 
         if self.__editor.changes_pending:
-            self.__title_label.setText(self.translation.name + "*")
+            self.__title_label.setText(self.__translation.name + "*")
         else:
-            self.__title_label.setText(self.translation.name)
+            self.__title_label.setText(self.__translation.name)
 
         summary: dict[StringStatus, int] = self.get_string_states_summary()
 
@@ -462,7 +465,7 @@ class EditorTab(QWidget):
         Opens dialog to configure batch translation via user configured API.
         """
 
-        if self.user_data.translator_config.show_confirmation_dialogs:
+        if self.__user_data.translator_config.show_confirmation_dialogs:
             dialog = QDialog(QApplication.activeModalWidget())
             dialog.setWindowTitle(self.tr("Translate with API"))
 
@@ -501,8 +504,8 @@ class EditorTab(QWidget):
 
             if dialog.exec() == QDialog.DialogCode.Accepted:
                 if do_not_show_again_checkbox.isChecked():
-                    self.user_data.translator_config.show_confirmation_dialogs = False
-                    self.user_data.translator_config.save()
+                    self.__user_data.translator_config.show_confirmation_dialogs = False
+                    self.__user_data.translator_config.save()
             else:
                 return
 
@@ -554,7 +557,7 @@ class EditorTab(QWidget):
             folder_path = Path(folder)
 
             Exporter.export_translation(
-                self.translation, self.user_data.modinstance, folder_path
+                self.__translation, self.__user_data.modinstance, folder_path
             )
 
             messagebox = QMessageBox(QApplication.activeModalWidget())

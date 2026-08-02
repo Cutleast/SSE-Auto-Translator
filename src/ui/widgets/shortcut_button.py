@@ -16,10 +16,17 @@ class ShortcutButton(QPushButton):
     Adapted QPushButton that automatically displays set shortcuts.
     """
 
+    __icon_label: QLabel
+    __label: QLabel
+    __shortcut_label: QLabel
+
     @override
     def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
+        self.__init_ui()
+
+    def __init_ui(self) -> None:
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(7, 0, 7, 0)
         self.setLayout(hlayout)

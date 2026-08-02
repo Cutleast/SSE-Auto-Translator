@@ -16,6 +16,11 @@ class StackedBar(QChartView):
     Class for stacked bar for displaying data ratios.
     """
 
+    __chart: QChart
+    __series: QHorizontalPercentBarSeries
+
+    __bar_sets: list[QBarSet]
+
     def __init__(self, values: list[int], colors: Optional[list] = None) -> None:
         """
         Args:
@@ -32,19 +37,19 @@ class StackedBar(QChartView):
         self.setContentsMargins(0, 0, 0, 0)
         self.setRenderHint(QPainter.RenderHint.LosslessImageRendering)
 
-        self._chart = QChart()
-        self._chart.setMargins(QMargins(0, 0, 0, 0))
-        self._chart.layout().setContentsMargins(0, 0, 0, 0)
-        self._chart.setBackgroundRoundness(0)
-        self._chart.setBackgroundVisible(False)
-        self._chart.legend().hide()
-        self._chart.setAnimationOptions(QChart.AnimationOption.SeriesAnimations)
-        self.setChart(self._chart)
+        self.__chart = QChart()
+        self.__chart.setMargins(QMargins(0, 0, 0, 0))
+        self.__chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.__chart.setBackgroundRoundness(0)
+        self.__chart.setBackgroundVisible(False)
+        self.__chart.legend().hide()
+        self.__chart.setAnimationOptions(QChart.AnimationOption.SeriesAnimations)
+        self.setChart(self.__chart)
         self.__series = QHorizontalPercentBarSeries()
         self.__series.setBarWidth(2)
-        self._chart.addSeries(self.__series)
+        self.__chart.addSeries(self.__series)
 
-        self.__bar_sets: list[QBarSet] = []
+        self.__bar_sets = []
         for v, value in enumerate(values):
             bar_set = QBarSet("")
             bar_set.append(value)
