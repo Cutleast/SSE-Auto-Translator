@@ -13,7 +13,7 @@ from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
 
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.string.types import StringList
 from core.utilities.filesystem import relative_data_path
 
@@ -79,7 +79,7 @@ class ModFile(metaclass=ABCMeta):
 
     @Cache.persistent_cache(
         cache_subfolder=Path("modfile_strings"),
-        id_generator=lambda self: FileSource.from_file(
+        id_generator=lambda self: FileSourceFactory.for_file_path(
             self.full_path
         ).get_file_identifier(),
     )

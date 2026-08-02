@@ -1613,47 +1613,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="196"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="197"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="197"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="198"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="198"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="199"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="542"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="545"/>
         <source>Creating translations for mods...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="552"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="555"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="581"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="584"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="622"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="625"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="657"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="660"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="659"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="662"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1876,27 +1876,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="175"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="180"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="229"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="232"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="237"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="240"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="245"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="241"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

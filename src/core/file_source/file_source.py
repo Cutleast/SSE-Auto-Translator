@@ -83,26 +83,3 @@ class FileSource(metaclass=ABCMeta):
         Returns:
             bool: `True` if the file source can handle the file, `False` otherwise.
         """
-
-    @staticmethod
-    def from_file(file_path: Path) -> FileSource:
-        """
-        Returns a file source suited for accessing a given file.
-
-        Args:
-            file_path (Path): Path to the file.
-
-        Returns:
-            FileSource: File source for the file.
-        """
-
-        from .archive_file_source import ArchiveFileSource
-        from .bsa_file_source import BsaFileSource
-        from .local_file_source import LocalFileSource
-
-        if BsaFileSource.can_handle(file_path):
-            return BsaFileSource(file_path)
-        elif ArchiveFileSource.can_handle(file_path):
-            return ArchiveFileSource(file_path)
-
-        return LocalFileSource(file_path)

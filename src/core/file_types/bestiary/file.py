@@ -9,6 +9,7 @@ from typing import Any, BinaryIO, Optional, TypeAlias, override
 from pydantic import TypeAdapter, ValidationError
 
 from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import StringList
@@ -94,7 +95,7 @@ class BestiaryFile(ModFile):
     def _extract_strings(self) -> StringList:
         result: StringList
 
-        file_source: FileSource = FileSource.from_file(self.full_path)
+        file_source: FileSource = FileSourceFactory.for_file_path(self.full_path)
         with file_source.get_file_stream() as stream:
             if BestiaryFile.LOOT_FILE_NAME_PATTERN.match(self.name):
                 result = BestiaryFile.extract_strings_from_loot_file(

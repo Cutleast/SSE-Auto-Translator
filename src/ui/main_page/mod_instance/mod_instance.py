@@ -32,6 +32,7 @@ from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.file_source.bsa_file_source import BsaFileSource
 from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
@@ -289,7 +290,7 @@ class ModInstanceWidget(QTreeWidget):
     @staticmethod
     def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
         display_name: str = str(modfile.path).replace("\\", "/")
-        file_source: FileSource = FileSource.from_file(modfile.full_path)
+        file_source: FileSource = FileSourceFactory.for_file_path(modfile.full_path)
         if isinstance(file_source, BsaFileSource):
             display_name = f"{file_source.get_archive_path().name}/{display_name}"
 
@@ -448,7 +449,9 @@ class ModInstanceWidget(QTreeWidget):
         if current_item is not None:
             if (
                 isinstance(current_item, ModFile)
-                and not FileSource.from_file(current_item.full_path).is_real_file()
+                and not FileSourceFactory.for_file_path(
+                    current_item.full_path
+                ).is_real_file()
             ):
                 # there is no real file to show in explorer
                 return
@@ -678,7 +681,9 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            os.startfile(FileSource.from_file(current_item.full_path).get_real_file())
+            os.startfile(
+                FileSourceFactory.for_file_path(current_item.full_path).get_real_file()
+            )
 
     def get_selected_items(self) -> tuple[list[Mod], list[ModFile]]:
         """

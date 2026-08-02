@@ -3,9 +3,9 @@ Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import override
+from typing import BinaryIO, Optional, override
 
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import StringList
@@ -32,9 +32,9 @@ class InterfaceFile(ModFile):
     def _extract_strings(self) -> StringList:
         result: StringList = []
 
-        stream = None
+        stream: Optional[BinaryIO] = None
         try:
-            stream = FileSource.from_file(self.full_path).get_file_stream()
+            stream = FileSourceFactory.for_file_path(self.full_path).get_file_stream()
 
             for line in stream.read().decode("utf-16").splitlines():
                 if not line.strip():

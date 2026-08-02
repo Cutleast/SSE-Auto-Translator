@@ -9,7 +9,7 @@ from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
 from core.database.database import TranslationDatabase
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -357,7 +357,9 @@ class ModInstanceMenu(Menu):
             current_item is not None
             and not (
                 isinstance(current_item, ModFile)
-                and not FileSource.from_file(current_item.full_path).is_real_file()
+                and not FileSourceFactory.for_file_path(
+                    current_item.full_path
+                ).is_real_file()
             )
         )
 
