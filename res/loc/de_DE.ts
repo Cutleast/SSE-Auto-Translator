@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="245"/>
+        <location filename="src/app.py" line="249"/>
         <source>Path Limit Enabled</source>
         <translation>Pfadlängenbegrenzung aktiviert</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="247"/>
+        <location filename="src/app.py" line="251"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -446,7 +446,7 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListItem</name>
     <message>
-        <location filename="src/ui/downloader/download_list_item.py" line="97"/>
+        <location filename="src/ui/downloader/download_list_item.py" line="99"/>
         <source>Open translation mod page...</source>
         <translation>Modseite der Übersetzung öffnen...</translation>
     </message>
@@ -495,96 +495,96 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="134"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
         <source>Available Downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="141"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>Unten sind die Übersetzungen, die benötigt werden und online verfügbar sind. Wähle aus, welche Übersetzungen du herunterladen möchtest und klicke auf &quot;Downloads starten&quot;, wenn du bereit bist.
 Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manager Downloads&quot; verknüpft werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="155"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="153"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>SSE-AT vor dem Starten mit &quot;Mod Manager Downloads&quot; verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="159"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="157"/>
         <source>Start downloads</source>
         <translation>Downloads starten</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="175"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="173"/>
         <source>Selected downloads:</source>
         <translation>Ausgewählte Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="190"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="188"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="189"/>
         <source>Translation mod</source>
         <translation>Übersetzungsmod</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
         <source>Translation file</source>
         <translation>Übersetzungsdatei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="219"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="217"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>Elemente mit gleichem ausgewählten Download können nur gemeinsam an- oder abgewählt werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="258"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="254"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="342"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="393"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="338"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="389"/>
         <source>SSE-AT download list file</source>
         <translation>SSE-AT Downloadliste-Datei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="343"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="339"/>
         <source>Import download list...</source>
         <translation>Downloadliste importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="375"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="381"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="371"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="377"/>
         <source>Import complete</source>
         <translation>Import abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="376"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="372"/>
         <source>Import completed with errors! Click &apos;Ok&apos; to see details.</source>
         <translation>Der Import wurde mit Fehlern abgeschlossen! Auf &apos;Ok&apos; um die Details zu sehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="382"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="378"/>
         <source>Import completed successfully!</source>
         <translation>Der Import wurde erfolgreich abgeschlossen!</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="394"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="390"/>
         <source>Export download list...</source>
         <translation>Downloadliste exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="430"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="426"/>
         <source>Export complete</source>
         <translation>Export abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="430"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="426"/>
         <source>Export completed successfully!</source>
         <translation>Der Export wurde erfolgreich abgeschlossen!</translation>
     </message>
@@ -637,22 +637,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="97"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="99"/>
         <source>Downloads:</source>
         <translation>Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="114"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="114"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="114"/>
         <source>Progress</source>
         <translation>Fortschritt</translation>
     </message>
@@ -3009,7 +3009,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="120"/>
-        <location filename="src/core/translation_provider/exceptions.py" line="77"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="87"/>
         <source>Request to &apos;{0}&apos; failed with status code {1}!</source>
         <translation>Anfrage an &apos;{0}&apos; mit Status Code {1} fehlgeschlagen!</translation>
     </message>
@@ -3024,39 +3024,44 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Die Aufgabe wurde abgebrochen!</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="98"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="68"/>
+        <source>Could not reach translation provider.</source>
+        <translation>Der Übersetzungsanbieter konnte nicht erreicht werden.</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/exceptions.py" line="108"/>
         <source>Request to &apos;{0}&apos; returned an unexpected response!
 Response: {1}</source>
         <translation>Anfrage an &apos;{0}&apos; hat eine unerwartete Antwort erhalten!
 Antwort: {1}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="111"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="121"/>
         <source>Key invalid for request! Request url: {0}</source>
         <translation>Schlüssel ungültig für die Anfrage! Anfragen-URL: {0}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="123"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="133"/>
         <source>No Permission for request! Request url: {0}</source>
         <translation>Unauthorisierte Anfrage! Anfragen-URL: {0}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="135"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="145"/>
         <source>Request has expired! Request url: {0}</source>
         <translation>Anfrage ist abgelaufen! Anfragen-URL: {0}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="147"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="157"/>
         <source>Server is invalid! Request url: {0}</source>
         <translation>Server ist ungültig! Anfragen-URL: {0}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="159"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="169"/>
         <source>No server available for the request! Request url: {0}</source>
         <translation>Kein Server für die Anfrage verfügbar! Anfrage-URL:{0}</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/exceptions.py" line="171"/>
+        <location filename="src/core/translation_provider/exceptions.py" line="181"/>
         <source>API Request Limit reached! Request url: {0}</source>
         <translation>API-Anfragenbegrenzung erreicht! Anfragen-URL: {0}</translation>
     </message>

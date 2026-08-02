@@ -11,6 +11,7 @@ from typing import NoReturn, Optional, override
 import requests as req
 from cutleast_core_lib.core.cache.cache import Cache
 from PySide6.QtCore import QObject
+from PySide6.QtWidgets import QApplication
 
 from core.utilities.web_utils import get_url_identifier
 
@@ -20,6 +21,7 @@ from .exceptions import (
     ApiLimitReachedError,
     ApiPermissionError,
     ModNotFoundError,
+    NetworkRequestError,
     Non200HttpError,
 )
 from .mod_details import ModDetails
@@ -40,17 +42,18 @@ class ProviderApi(QObject):
     CACHE_FOLDER = Path("web_cache")
     """The subfolder within the cache folder to store cached web requests."""
 
+    REQUEST_TIMEOUT: tuple[float, float] = (5.0, 30.0)
+    """Connect and read timeout for provider HTTP requests in seconds."""
+
     @override
     def __init__(self) -> None:
         super().__init__()
 
-        from app import App
-
         self.log = logging.getLogger(self.__class__.__name__)
 
         self.user_agent = (
-            f"{App.APP_NAME}/"
-            f"{App.APP_VERSION} "
+            f"{QApplication.applicationName()}/"
+            f"{QApplication.applicationVersion()} "
             f"({platform.system()} {platform.version()}; "
             f"{platform.architecture()[0]})"
         )
@@ -120,7 +123,12 @@ class ProviderApi(QObject):
             headers = {"User-Agent": self.user_agent}
 
         self.log.debug(f"Sending API request to '{url}'...")
-        res: req.Response = req.get(url, headers=headers)
+        try:
+            res: req.Response = req.get(
+                url, headers=headers, timeout=ProviderApi.REQUEST_TIMEOUT
+            )
+        except req.RequestException as ex:
+            raise NetworkRequestError(url) from ex
 
         if handle_status_code:
             self.handle_status_code(url, res.status_code)

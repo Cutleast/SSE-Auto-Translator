@@ -11,7 +11,7 @@ import jstyleson as json
 import requests as req
 from pydantic import ValidationError
 
-from ..exceptions import Non200HttpError, UnexpectedResponseError
+from ..exceptions import UnexpectedResponseError
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
@@ -60,7 +60,10 @@ class CDTApi(ProviderApi):
             mod_id.mod_id if not isinstance(mod_id, CdtModId) else mod_id.nm_mod_id
         )
         url: str = CDTApi.API_BASE_URL + str(nm_mod_id)
-        res: req.Response = self._request(url)
+        try:
+            res: req.Response = self._request(url)
+        except FileNotFoundError:
+            ProviderApi.raise_mod_not_found_error(mod_id)
 
         try:
             return CdtTranslation.model_validate_json(res.content, by_alias=True)
@@ -71,6 +74,7 @@ class CDTApi(ProviderApi):
     def get_mod_details(self, mod_id: ModId) -> ModDetails:
         translation: CdtTranslation = self.__request_translation_details(mod_id)
 
+        cdt_mod_id: int = CDTApi.get_cdt_id_from_url(translation.download_link)
         mod_details: ModDetails = ModDetails(
             display_name=translation.name,
             mod_display_name=None,
@@ -78,7 +82,7 @@ class CDTApi(ProviderApi):
             file_name=translation.file_name,
             mod_id=CdtModId(
                 installation_file_name=translation.file_name,
-                mod_id=CDTApi.get_cdt_id_from_url(translation.download_link),
+                mod_id=cdt_mod_id,
                 nm_mod_id=(
                     mod_id.mod_id
                     if not isinstance(mod_id, CdtModId)
@@ -89,8 +93,7 @@ class CDTApi(ProviderApi):
             author=None,
             uploader=None,
             modpage_url=(
-                "https://www.confrerie-des-traducteurs.fr/skyrim/mods/"
-                + str(CDTApi.get_cdt_id_from_url(translation.download_link))
+                "https://www.confrerie-des-traducteurs.fr/skyrim/mods/" + str(cdt_mod_id)
             ),
         )
 
@@ -130,19 +133,15 @@ class CDTApi(ProviderApi):
             "https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/"
             f"{mod_id.nm_mod_id or mod_id.mod_id}"
         )
-        res: req.Response = self._request(url)
+        try:
+            res: req.Response = self._request(url)
+        except FileNotFoundError:
+            ProviderApi.raise_mod_not_found_error(mod_id)
 
         try:
             response_data: dict[str, Any] = json.loads(res.content.decode())
             download_url: str = response_data["DownloadLink"]
-
-        except Non200HttpError as ex:
-            if ex.args[1] == 404:
-                ProviderApi.raise_mod_not_found_error(mod_id)
-            else:
-                raise
-
-        except Exception as ex:
+        except (KeyError, TypeError, ValueError) as ex:
             raise UnexpectedResponseError(url, res.content.decode()) from ex
 
         return download_url

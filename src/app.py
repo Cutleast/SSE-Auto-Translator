@@ -27,7 +27,6 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider_manager import ProviderManager
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.container_utils import unique
@@ -204,8 +203,13 @@ class App(BaseApp, Singleton):
         self.detect_path_limit()
 
     def __check_nm_api_key(self, user_config: UserConfig) -> None:
+        if self.__component_provider is None:
+            raise ValueError("Component provider is not initialized.")
+
         try:
-            nm_api: NexusModsApi = ProviderManager.get_provider(NexusModsApi)
+            nm_api: NexusModsApi = self.__component_provider.get_provider().get_provider(
+                NexusModsApi
+            )
         except ValueError:
             self.log.warning("No Nexus Mods API available.")
         else:

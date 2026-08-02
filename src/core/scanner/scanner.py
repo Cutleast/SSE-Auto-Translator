@@ -33,7 +33,7 @@ from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.string.types import StringList
 from core.translation_provider.mod_id import ModId
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 
@@ -51,7 +51,7 @@ class Scanner(QObject):
     database: TranslationDatabase
     app_config: AppConfig
     user_config: UserConfig
-    provider: Provider
+    provider: TranslationProvider
     masterlist: Masterlist
     detector: LangDetector
 
@@ -61,7 +61,7 @@ class Scanner(QObject):
         database: TranslationDatabase,
         app_config: AppConfig,
         user_config: UserConfig,
-        provider: Provider,
+        provider: TranslationProvider,
         masterlist: Masterlist,
     ) -> None:
         """
@@ -70,7 +70,7 @@ class Scanner(QObject):
             database (TranslationDatabase): The translation database.
             app_config (AppConfig): The application configuration.
             user_config (UserConfig): The user configuration.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             masterlist (Masterlist): The loaded masterlist.
         """
 

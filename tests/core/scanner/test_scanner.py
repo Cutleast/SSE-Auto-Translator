@@ -8,7 +8,7 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
 
 from ..core_test import CoreTest
@@ -31,12 +31,10 @@ class TestScanner(CoreTest):
             user_data.database,
             app_config,
             user_data.user_config,
-            Provider(user_data.user_config),
+            TranslationProvider(user_data.user_config),
             user_data.masterlist,
         )
-        items: dict[Mod, list[ModFile]] = {
-            mod: mod.modfiles for mod in modinstance.mods
-        }
+        items: dict[Mod, list[ModFile]] = {mod: mod.modfiles for mod in modinstance.mods}
         expected_results: dict[Mod, dict[ModFile, TranslationStatus]] = {
             self.get_mod_by_name("Wet and Cold SE", modinstance): {
                 self.get_modfile_from_mod_name(

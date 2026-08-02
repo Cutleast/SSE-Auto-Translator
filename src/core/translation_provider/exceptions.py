@@ -58,6 +58,16 @@ class RequestError(ProviderError):
         return QApplication.translate("exceptions", "Request to '{0}' failed!")
 
 
+class NetworkRequestError(RequestError):
+    """Exception when a request could not reach the provider."""
+
+    @override
+    def getLocalizedMessage(self) -> str:
+        """Gets the localized error message."""
+
+        return QApplication.translate("exceptions", "Could not reach translation provider.")
+
+
 class Non200HttpError(RequestError):
     """
     Exception when a request returned a non-200 HTTP status code.

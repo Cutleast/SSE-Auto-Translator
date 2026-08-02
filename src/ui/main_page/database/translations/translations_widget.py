@@ -35,7 +35,7 @@ from core.file_types.plugin.file import PluginFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.string_list.string_list_dialog import StringListWindow
@@ -68,7 +68,7 @@ class TranslationsWidget(QTreeWidget):
     """
 
     database: TranslationDatabase
-    provider: Provider
+    provider: TranslationProvider
     mod_instance: ModInstance
     app_config: AppConfig
 
@@ -95,14 +95,14 @@ class TranslationsWidget(QTreeWidget):
     def __init__(
         self,
         database: TranslationDatabase,
-        provider: Provider,
+        provider: TranslationProvider,
         mod_instance: ModInstance,
         app_config: AppConfig,
     ) -> None:
         """
         Args:
             database (TranslationDatabase): The translation database.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             mod_instance (ModInstance): The loaded mod instance.
             app_config (AppConfig): The application configuration.
         """

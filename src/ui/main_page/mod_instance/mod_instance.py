@@ -42,7 +42,7 @@ from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.string.types import StringList
 from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 from core.user_data.user_data import UserData
 from ui.widgets.string_list.string_list_dialog import StringListWindow
@@ -87,7 +87,7 @@ class ModInstanceWidget(QTreeWidget):
     app_config: AppConfig
     user_data: UserData
     database: TranslationDatabase
-    provider: Provider
+    provider: TranslationProvider
 
     mod_instance: ModInstance
     """
@@ -130,14 +130,14 @@ class ModInstanceWidget(QTreeWidget):
         self,
         app_config: AppConfig,
         user_data: UserData,
-        provider: Provider,
+        provider: TranslationProvider,
         state_service: StateService,
     ) -> None:
         """
         Args:
             app_config (AppConfig): The application configuration.
             user_data (UserData): The user data.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             state_service (StateService): The state service for managing mod file states.
         """
 

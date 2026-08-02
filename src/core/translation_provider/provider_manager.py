@@ -5,8 +5,6 @@ Copyright (c) Cutleast
 import logging
 from typing import Literal, NoReturn, TypeVar, overload
 
-from PySide6.QtCore import QObject
-
 from core.config.user_config import UserConfig
 
 from .cdt_api.ctd_api import CDTApi
@@ -18,144 +16,158 @@ from .source import Source
 T = TypeVar("T", bound=ProviderApi)
 
 
-class ProviderManager(QObject):
+class ProviderManager:
     """
-    Singleton-class for managing translation providers.
+    Creates and resolves the translation providers configured for one application run.
     """
+
+    __providers: dict[Source, ProviderApi]
+    __provider_preference: ProviderPreference
 
     log: logging.Logger = logging.getLogger("ProviderManager")
 
-    providers: list[ProviderApi] = []
-    """The content and order of this list resembles the user preference."""
-
-    provider_preference: ProviderPreference = ProviderPreference.OnlyNexusMods
-    """The user preference for translation providers."""
-
-    @classmethod
-    def init(cls, user_config: UserConfig) -> None:
+    def __init__(self, user_config: UserConfig) -> None:
         """
-        Initializes configured translation providers. Clears all previously initialized
-        providers.
+        Initializes the configured providers.
 
         Args:
             user_config (UserConfig): The user configuration.
         """
 
-        cls.log.info("Initializing configured translation providers...")
-        cls.log.debug(f"Provider preference: {user_config.provider_preference}")
+        self.__providers = {}
+        self.__provider_preference = user_config.provider_preference
 
-        cls.providers.clear()
-        cls.provider_preference = user_config.provider_preference
-        match cls.provider_preference:
-            case ProviderPreference.OnlyNexusMods:
-                cls.__init_nm_api(user_config)
+        self.log.info("Initializing configured translation providers.")
+        self.log.debug(f"Provider preference: '{self.__provider_preference}'")
 
-            case ProviderPreference.PreferNexusMods:
-                cls.__init_nm_api(user_config)
-                cls.__init_cdt_api(user_config)
+        for source in self.__get_configured_sources():
+            self.__initialize_provider(source, user_config)
 
-            case ProviderPreference.OnlyConfrerie:
-                cls.__init_cdt_api(user_config)
-
-            case ProviderPreference.PreferConfrerie:
-                cls.__init_cdt_api(user_config)
-                cls.__init_nm_api(user_config)
-
-    @classmethod
-    def __init_nm_api(cls, user_config: UserConfig) -> None:
-        cls.log.info("Initializing Nexus Mods API...")
-        try:
-            nm_api = NexusModsApi()
-            nm_api.set_api_key(user_config.api_key)
-            cls.providers.append(nm_api)
-        except Exception as ex:
-            cls.log.error(f"Failed to initialize Nexus Mods API: {ex}", exc_info=ex)
-
-    @classmethod
-    def __init_cdt_api(cls, user_config: UserConfig) -> None:
-        cls.log.info("Initializing Confrérie des Traducteurs API...")
-        try:
-            cdt_api = CDTApi()
-            cls.providers.append(cdt_api)
-        except Exception as ex:
-            cls.log.error(
-                f"Failed to initialize Confrérie des Traducteurs API: {ex}", exc_info=ex
-            )
-
-    @classmethod
-    def get_default_provider(cls) -> ProviderApi:
+    @property
+    def providers(self) -> tuple[ProviderApi, ...]:
         """
-        Gets the default provider based on the user preference. Just returns the first
-        item of the providers list.
-
-        Raises:
-            ValueError: when there is no provider
+        Gets the initialized providers in configured preference order.
 
         Returns:
-            TranslationProvider: Default provider
+            tuple[ProviderApi, ...]: The configured providers.
         """
 
-        if cls.providers:
-            return cls.providers[0]
+        return tuple(self.__providers.values())
 
-        raise ValueError("No provider found!")
-
-    @classmethod
-    def get_provider(cls, provider_type: type[T]) -> T:
+    def __get_configured_sources(self) -> tuple[Source, ...]:
         """
-        Gets an initialized provider by its type.
+        Gets the sources configured by the user's provider preference.
+
+        Returns:
+            tuple[Source, ...]: Sources in preference order.
+        """
+
+        match self.__provider_preference:
+            case ProviderPreference.OnlyNexusMods:
+                return (Source.NexusMods,)
+            case ProviderPreference.PreferNexusMods:
+                return (Source.NexusMods, Source.Confrerie)
+            case ProviderPreference.OnlyConfrerie:
+                return (Source.Confrerie,)
+            case ProviderPreference.PreferConfrerie:
+                return (Source.Confrerie, Source.NexusMods)
+
+    def __initialize_provider(self, source: Source, user_config: UserConfig) -> None:
+        """
+        Initializes one provider without preventing other configured sources from starting.
 
         Args:
-            provider_type (type[TranslationProvider]): Provider type
-
-        Raises:
-            ValueError: when the provider is not found
-
-        Returns:
-            TranslationProvider: Initialized provider
+            source (Source): Source to initialize.
+            user_config (UserConfig): The user configuration.
         """
 
-        for provider in cls.providers:
+        try:
+            match source:
+                case Source.NexusMods:
+                    provider = NexusModsApi()
+                    provider.set_api_key(user_config.api_key)
+
+                case Source.Confrerie:
+                    provider = CDTApi()
+
+                case _:
+                    raise ValueError(f"Unsupported provider source: '{source}'")
+
+        except Exception:
+            self.log.exception(f"Failed to initialize provider '{source}'.")
+
+        else:
+            self.__providers[source] = provider
+
+    def get_default_provider(self) -> ProviderApi:
+        """
+        Gets the highest-priority initialized provider.
+
+        Raises:
+            ValueError: When no provider is initialized.
+
+        Returns:
+            ProviderApi: The default provider.
+        """
+
+        if self.__providers:
+            return next(iter(self.__providers.values()))
+
+        raise ValueError("No translation provider is initialized.")
+
+    def get_provider(self, provider_type: type[T]) -> T:
+        """
+        Gets an initialized provider by implementation type.
+
+        Args:
+            provider_type (type[T]): Provider implementation type.
+
+        Raises:
+            ValueError: When no matching provider is initialized.
+
+        Returns:
+            T: The requested provider.
+        """
+
+        for provider in self.__providers.values():
             if isinstance(provider, provider_type):
                 return provider
 
-        raise ValueError(f"Provider of type {provider_type} not found!")
+        raise ValueError(
+            f"Provider of type '{provider_type.__name__}' is not initialized."
+        )
 
     @overload
-    @classmethod
-    def get_provider_by_source(cls, source: Literal[Source.Local]) -> NoReturn: ...
+    def get_provider_by_source(self, source: Literal[Source.Local]) -> NoReturn: ...
 
     @overload
-    @classmethod
     def get_provider_by_source(
-        cls, source: Literal[Source.NexusMods]
+        self, source: Literal[Source.NexusMods]
     ) -> NexusModsApi: ...
 
     @overload
-    @classmethod
-    def get_provider_by_source(cls, source: Literal[Source.Confrerie]) -> CDTApi: ...
+    def get_provider_by_source(self, source: Literal[Source.Confrerie]) -> CDTApi: ...
 
-    @classmethod
-    def get_provider_by_source(cls, source: Source) -> ProviderApi:
+    def get_provider_by_source(self, source: Source) -> ProviderApi:
         """
-        Gets an initialized provider by its source.
+        Gets an initialized provider by source.
 
         Args:
-            source (Source): Source
+            source (Source): Provider source.
 
         Raises:
-            ValueError: when the provider is not found or Source is `Local`
+            ValueError: When the source is local or not initialized.
 
         Returns:
-            TranslationProvider: Initialized provider
+            ProviderApi: The provider for the source.
         """
 
-        match source:
-            case Source.NexusMods:
-                return cls.get_provider(NexusModsApi)
+        if source is Source.Local:
+            raise ValueError("Local files do not have a translation provider.")
 
-            case Source.Confrerie:
-                return cls.get_provider(CDTApi)
-
-            case _:
-                raise ValueError(source)
+        try:
+            return self.__providers[source]
+        except KeyError as ex:
+            raise ValueError(
+                f"Provider for source '{source}' is not initialized."
+            ) from ex
