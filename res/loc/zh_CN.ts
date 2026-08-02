@@ -1957,13 +1957,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="501"/>
+        <location filename="src/core/scanner/scanner.py" line="504"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="251"/>
-        <location filename="src/core/scanner/scanner.py" line="287"/>
+        <location filename="src/core/scanner/scanner.py" line="290"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
@@ -1978,17 +1978,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="413"/>
+        <location filename="src/core/scanner/scanner.py" line="416"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="562"/>
+        <location filename="src/core/scanner/scanner.py" line="565"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="616"/>
+        <location filename="src/core/scanner/scanner.py" line="619"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>
