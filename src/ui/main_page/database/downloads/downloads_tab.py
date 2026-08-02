@@ -4,7 +4,9 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.blocking_thread import BlockingThread
+from cutleast_core_lib.core.utilities.scale import scale_value
 from PySide6.QtCore import Qt, QTimerEvent
 from PySide6.QtGui import QShowEvent
 from PySide6.QtWidgets import (
@@ -31,10 +33,8 @@ class DownloadsTab(QWidget):
     Tab for Downloads.
     """
 
-    download_manager: DownloadManager
-    provider: Provider
-
-    __download_items: list[DownloadItem]
+    __download_manager: DownloadManager
+    __download_items: dict[FileDownload, DownloadItem]
 
     __vlayout: QVBoxLayout
     __toolbar: DownloadsToolbar
@@ -50,21 +50,29 @@ class DownloadsTab(QWidget):
 
         super().__init__()
 
-        self.download_manager = download_manager
-        self.provider = provider
-
-        self.__download_items = []
+        self.__download_manager = download_manager
+        self.__download_items = {}
 
         self.__init_ui()
 
         self.__toolbar.toggle_nxm_requested.connect(self.__toggle_nxm)
         self.__toolbar.toggle_pause_requested.connect(self.__toggle_pause)
 
-        self.download_manager.download_added.connect(self.__add_download)
+        self.__download_manager.download_added.connect(self.__on_download_added)
+        self.__download_manager.download_started.connect(self.__on_download_started)
+        self.__download_manager.download_finished.connect(
+            self.__remove_item_for_download
+        )
+        self.__download_manager.user_action_required.connect(
+            self.__on_user_action_required
+        )
+        self.__download_manager.download_failed.connect(self.__on_download_failed)
+
         self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
         # Highlight NXM button if the user has no Premium
-        if not self.provider.direct_downloads_possible():
+        # FIXME: This crashes the app if there is no provider initialized
+        if not provider.direct_downloads_possible():
             self.__toolbar.highlight_nxm_action()
 
     def __init_ui(self) -> None:
@@ -116,25 +124,60 @@ class DownloadsTab(QWidget):
 
         self.__downloads_widget.header().resizeSection(2, 300)
 
-    def __add_download(self, download: FileDownload) -> None:
+    def __on_download_added(self, download: FileDownload) -> None:
         download_item = DownloadItem(download)
-        download_item.finished_signal.connect(self.__remove_download_item)
-        download_item.remove_signal.connect(self.__remove_download_item)
-        download_item.remove_signal.connect(
-            lambda: self.download_manager.remove_download_item(download)
-        )
         self.__downloads_widget.addTopLevelItem(download_item)
-        self.__download_items.append(download_item)
-        self.download_manager.add_download_item(download, download_item.update_progress)
+
+        download_item.init_widget(2)
+        download_item.remove_requested.connect(
+            lambda: self.__remove_item_for_download(download)
+        )
+        download_item.remove_requested.connect(
+            lambda: self.__download_manager.remove_download_item(download)
+        )
+
+        def update_callback(payload: ProgressUpdate) -> None:
+            if payload.maximum:
+                download_item.setText(1, scale_value(payload.maximum))
+
+            download_item.update_progress(payload)
+
+        self.__download_items[download] = download_item
+        self.__download_manager.add_download_item(download, update_callback)
 
         self.__update()
 
-    def __remove_download_item(self, download_item: DownloadItem) -> None:
-        download_item.setHidden(True)
+    def __on_download_started(self, download: FileDownload) -> None:
+        if download not in self.__download_items:
+            self.__on_download_added(download)
+
+        download_item: DownloadItem = self.__download_items[download]
+        download_item.set_running()
+
+    def __on_user_action_required(
+        self, download: FileDownload, download_url: str
+    ) -> None:
+        if download not in self.__download_items:
+            self.__on_download_added(download)
+
+        download_item: DownloadItem = self.__download_items[download]
+        download_item.set_interaction_required(download_url)
+
+    def __on_download_failed(self, download: FileDownload, exception: Exception) -> None:
+        if download not in self.__download_items:
+            self.__on_download_added(download)
+
+        download_item: DownloadItem = self.__download_items[download]
+        download_item.set_failed(exception)
+
+    def __remove_item_for_download(self, download: FileDownload) -> None:
+        if download not in self.__download_items:
+            return  # we never had an item for the download
+
+        download_item: DownloadItem = self.__download_items.pop(download)
         self.__downloads_widget.takeTopLevelItem(
             self.__downloads_widget.indexOfTopLevelItem(download_item)
         )
-        self.__download_items.remove(download_item)
         self.__update()
 
     def __toggle_nxm(self, checked: bool) -> None:
@@ -156,12 +199,12 @@ class DownloadsTab(QWidget):
     def __toggle_pause(self) -> None:
         self.setDisabled(True)
 
-        if self.download_manager.running:
-            thread = BlockingThread(self.download_manager.pause)
+        if self.__download_manager.running:
+            thread = BlockingThread(self.__download_manager.pause)
             thread.start()
         else:
-            self.download_manager.resume()
+            self.__download_manager.resume()
 
-        self.__toolbar.update_toggle_pause_action(not self.download_manager.running)
+        self.__toolbar.update_toggle_pause_action(not self.__download_manager.running)
 
         self.setDisabled(False)

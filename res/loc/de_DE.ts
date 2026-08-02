@@ -421,11 +421,26 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     </message>
 </context>
 <context>
-    <name>DownloadItem</name>
+    <name>DownloadItemWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/download_item.py" line="70"/>
-        <source>Non-premium download...</source>
-        <translation>Nicht-Premium Download...</translation>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="78"/>
+        <source>Cancel download</source>
+        <translation>Download abbrechen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="81"/>
+        <source>Start download...</source>
+        <translation>Download starten...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="97"/>
+        <source>Remove download</source>
+        <translation>Download entfernen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="119"/>
+        <source>Pending...</source>
+        <translation>Ausstehend...</translation>
     </message>
 </context>
 <context>
@@ -605,8 +620,8 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="300"/>
-        <location filename="src/core/downloader/download_manager.py" line="322"/>
+        <location filename="src/core/downloader/download_manager.py" line="339"/>
+        <location filename="src/core/downloader/download_manager.py" line="357"/>
         <source>Collecting available downloads...</source>
         <translation>Verfügbare Übersetzungen werden gesammelt...</translation>
     </message>
@@ -614,12 +629,7 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>Downloader</name>
     <message>
-        <location filename="src/core/downloader/downloader.py" line="124"/>
-        <source>Downloading...</source>
-        <translation>Wird heruntergeladen...</translation>
-    </message>
-    <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="138"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="167"/>
         <source>Downloading &apos;{0}&apos;...</source>
         <translation>&apos;{0}&apos; wird heruntergeladen...</translation>
     </message>
@@ -627,22 +637,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="89"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="97"/>
         <source>Downloads:</source>
         <translation>Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Progress</source>
         <translation>Fortschritt</translation>
     </message>
@@ -2949,12 +2959,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="119"/>
+        <location filename="src/core/downloader/worker.py" line="184"/>
         <source>Downloading translation...</source>
         <translation>Wird heruntergeladen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="168"/>
+        <location filename="src/core/downloader/worker.py" line="211"/>
         <source>Installing translation...</source>
         <translation>Wird installiert...</translation>
     </message>

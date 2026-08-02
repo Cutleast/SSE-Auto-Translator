@@ -30,8 +30,8 @@ QPushButton#list_close_button:hover {
     border-color: @highlighted_bg_color;
 }
 
-/* ProgressWidget */
-ProgressWidget QToolTip {
+/* Monospace Tooltips */
+[monospace=true] QToolTip {
     font-family: Consolas;
 }
 
