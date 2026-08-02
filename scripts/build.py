@@ -22,22 +22,7 @@ class Backend(NuitkaBackend):
     """
 
     # this injects the version at, e.g. `APP_VERSION: str = "development"`
-    VERSION_PATTERN: re.Pattern[str] = re.compile(
-        r'(?<=APP_VERSION: str = ")[^"]+(?=")'
-    )
-
-    @override
-    def get_additional_args(
-        self,
-        main_module: Path,
-        exe_stem: str,
-        icon_path: Path | None,
-        metadata: BuildMetadata,
-    ) -> list[str]:
-        return [
-            "--include-data-files=.venv/lib/site-packages/cloudscraper/user_agent/"
-            "browsers.json=cloudscraper/user_agent/browsers.json",
-        ]
+    VERSION_PATTERN: re.Pattern[str] = re.compile(r'(?<=APP_VERSION: str = ")[^"]+(?=")')
 
     @override
     def preprocess_source(self, source_folder: Path, metadata: BuildMetadata) -> None:
