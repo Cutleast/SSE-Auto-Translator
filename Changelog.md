@@ -1,3 +1,8 @@
+# v3.2.1 (Hotfix)
+
+- Fix language detection when target language is Polish
+- Fix online scan marking unrelated mod files as "No translation available"
+
 # v3.2.0
 
 - Add button to export the mod file states to a JSON file
