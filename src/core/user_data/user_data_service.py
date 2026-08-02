@@ -47,7 +47,9 @@ class UserDataService(SingletonQObject):
         self.__res_path = res_path
         self.__data_path = data_path
 
-    def load(self, thread_num: int = 4, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
+    def load(
+        self, thread_num: int = 4, pdisplay: Optional[ProgressDisplay] = None
+    ) -> UserData:
         """
         Loads the user data from the configured folder.
 
@@ -133,7 +135,10 @@ class UserDataService(SingletonQObject):
         return DatabaseService.load_database(appdb_path, userdb_path, language)
 
     def __load_modinstance(
-        self, user_config: UserConfig, thread_num: int, pdisplay: Optional[ProgressDisplay] = None
+        self,
+        user_config: UserConfig,
+        thread_num: int,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> ModInstance:
         if user_config.modinstance is not None:
             self.log.info("Loading modinstance...")
@@ -162,7 +167,10 @@ class UserDataService(SingletonQObject):
         else:
             self.log.info("Masterlist disabled by user.")
 
-        return Masterlist(entries={})
+        masterlist = Masterlist(entries={})
+        masterlist.set_user_config(user_config)
+
+        return masterlist
 
     def is_setup_required(self) -> bool:
         """

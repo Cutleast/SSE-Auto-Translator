@@ -2815,32 +2815,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserDataService</name>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="68"/>
+        <location filename="src/core/user_data/user_data_service.py" line="70"/>
         <source>Loading user configuration...</source>
         <translation>正在加载用户配置...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="76"/>
+        <location filename="src/core/user_data/user_data_service.py" line="78"/>
         <source>Loading translator configuration...</source>
         <translation>正在加载翻译器配置...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="84"/>
+        <location filename="src/core/user_data/user_data_service.py" line="86"/>
         <source>Loading translation database...</source>
         <translation>正在加载翻译数据库...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="91"/>
+        <location filename="src/core/user_data/user_data_service.py" line="93"/>
         <source>Loading modlist...</source>
         <translation>正在加载Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="98"/>
+        <location filename="src/core/user_data/user_data_service.py" line="100"/>
         <source>Loading masterlist...</source>
         <translation>正在加载主列表...</translation>
     </message>
     <message>
-        <location filename="src/core/user_data/user_data_service.py" line="150"/>
+        <location filename="src/core/user_data/user_data_service.py" line="155"/>
         <source>&lt;No modinstance selected&gt;</source>
         <translation>&lt;未选择Mod实例&gt;</translation>
     </message>
