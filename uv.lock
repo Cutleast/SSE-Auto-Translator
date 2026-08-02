@@ -537,10 +537,10 @@ wheels = [
 
 [[package]]
 name = "lingua-language-detector"
-version = "2.2.0"
-source = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0/lingua_language_detector-2.2.0-cp314-cp314-win_amd64.whl" }
+version = "2.2.0.post2"
+source = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0-2/lingua_language_detector-2.2.0.post2-cp314-cp314-win_amd64.whl" }
 wheels = [
-    { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0/lingua_language_detector-2.2.0-cp314-cp314-win_amd64.whl", hash = "sha256:191714653e8cccaf45baa71d95f7fa7d3bcabdd39701f2c4fef88266f847c360" },
+    { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0-2/lingua_language_detector-2.2.0.post2-cp314-cp314-win_amd64.whl", hash = "sha256:d510994955a9a339b92ceb70ccc01387c85b10668cdf55f483d4bd37c008371b" },
 ]
 
 [package.metadata]
@@ -1167,7 +1167,7 @@ wheels = [
 
 [[package]]
 name = "sse-auto-translator"
-version = "3.3.0.dev1"
+version = "3.2.1"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -1217,7 +1217,7 @@ requires-dist = [
     { name = "googletrans" },
     { name = "legacy-cgi" },
     { name = "libarchive-c" },
-    { name = "lingua-language-detector", url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0/lingua_language_detector-2.2.0-cp314-cp314-win_amd64.whl" },
+    { name = "lingua-language-detector", url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0-2/lingua_language_detector-2.2.0.post2-cp314-cp314-win_amd64.whl" },
     { name = "lz4" },
     { name = "mod-manager-lib", editable = "mod-manager-lib" },
     { name = "plyvel-next" },

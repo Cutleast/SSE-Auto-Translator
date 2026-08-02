@@ -1,6 +1,6 @@
 [project]
 name = "sse-auto-translator"
-version = "3.3.0-dev-1"
+version = "3.2.1"
 description = "SSE Auto Translator"
 license = { file = "LICENSE" }
 authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
@@ -53,7 +53,7 @@ members = [
 [tool.uv.sources]
 cutleast-core-lib = { workspace = true }
 mod-manager-lib = { workspace = true }
-lingua-language-detector = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0/lingua_language_detector-2.2.0-cp314-cp314-win_amd64.whl" }
+lingua-language-detector = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0-2/lingua_language_detector-2.2.0.post2-cp314-cp314-win_amd64.whl" }
 
 [tool.ruff]
 line-length = 89
