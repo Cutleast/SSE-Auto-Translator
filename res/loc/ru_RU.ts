@@ -416,10 +416,25 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
-    <name>DownloadItem</name>
+    <name>DownloadItemWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/download_item.py" line="70"/>
-        <source>Non-premium download...</source>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="78"/>
+        <source>Cancel download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="81"/>
+        <source>Start download...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="97"/>
+        <source>Remove download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="119"/>
+        <source>Pending...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -599,8 +614,8 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="300"/>
-        <location filename="src/core/downloader/download_manager.py" line="322"/>
+        <location filename="src/core/downloader/download_manager.py" line="339"/>
+        <location filename="src/core/downloader/download_manager.py" line="357"/>
         <source>Collecting available downloads...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -608,12 +623,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Downloader</name>
     <message>
-        <location filename="src/core/downloader/downloader.py" line="124"/>
-        <source>Downloading...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="138"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="167"/>
         <source>Downloading &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -621,22 +631,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="89"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="97"/>
         <source>Downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="104"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="112"/>
         <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1950,13 +1960,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="501"/>
+        <location filename="src/core/scanner/scanner.py" line="504"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="251"/>
-        <location filename="src/core/scanner/scanner.py" line="287"/>
+        <location filename="src/core/scanner/scanner.py" line="290"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1971,17 +1981,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="413"/>
+        <location filename="src/core/scanner/scanner.py" line="416"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="562"/>
+        <location filename="src/core/scanner/scanner.py" line="565"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="616"/>
+        <location filename="src/core/scanner/scanner.py" line="619"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2941,12 +2951,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="119"/>
+        <location filename="src/core/downloader/worker.py" line="184"/>
         <source>Downloading translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="168"/>
+        <location filename="src/core/downloader/worker.py" line="211"/>
         <source>Installing translation...</source>
         <translation type="unfinished"></translation>
     </message>

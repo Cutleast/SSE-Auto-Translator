@@ -28,7 +28,6 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
-from core.utilities.progress_update import ProgressCallback
 
 from .file_download import FileDownload
 from .mod_info import ModInfo
@@ -54,41 +53,71 @@ class DownloadManager(QObject):
     Class for managing and running downloads and installations of translations.
     """
 
-    log: logging.Logger = logging.getLogger("DownloadManager")
-
-    thread_num: int
-    """Number of worker threads."""
-
-    queue: Queue[tuple[FileDownload, ProgressCallback]]
-    workers: list[Worker]
-    running: bool = False
-
     download_added = Signal(FileDownload)
     """
-    This signal gets emitted when a new download is added to the queue.
+    Signal emitted when a new download is added to the queue.
+
+    Args:
+        FileDownload: The download that was added to the queue.
+    """
+
+    download_started = Signal(FileDownload)
+    """
+    Signal emitted when a download has started.
+
+    Args:
+        FileDownload: The download that has started.
     """
 
     download_finished = Signal(FileDownload)
     """
-    This signal gets emitted when a download has finished.
+    Signal emitted when a download has finished.
+
+    Args:
+        FileDownload: The download that has finished.
+    """
+
+    user_action_required = Signal(FileDownload, str)
+    """
+    Signal emitted when a download requires user action to continue.
+
+    Args:
+        FileDownload: The download that requires user action.
+        str: The download URL to open.
+    """
+
+    download_failed = Signal(FileDownload, Exception)
+    """
+    Signal emitted when a download has failed.
+
+    Args:
+        FileDownload: The download that has failed.
+        Exception: The exception that caused the failure.
     """
 
     finished = Signal()
     """
-    This signal gets emitted when all worker threads have finished.
+    Signal emitted when all worker threads have finished.
     """
 
     stopped = Signal()
     """
-    This signal gets emitted when all worker threads have finished or have been stopped.
+    Signal emitted when all worker threads have finished or have been stopped.
     """
 
-    database: TranslationDatabase
-    mod_instance: ModInstance
-    provider: Provider
-    app_config: AppConfig
-    user_config: UserConfig
-    masterlist: Masterlist
+    __thread_num: int
+    __queue: Queue[tuple[FileDownload, UpdateCallback]]
+    __workers: list[Worker]
+    __running: bool
+
+    __database: TranslationDatabase
+    __mod_instance: ModInstance
+    __provider: Provider
+    __app_config: AppConfig
+    __user_config: UserConfig
+    __masterlist: Masterlist
+
+    log: logging.Logger = logging.getLogger("DownloadManager")
 
     def __init__(
         self,
@@ -111,16 +140,17 @@ class DownloadManager(QObject):
 
         super().__init__()
 
-        self.thread_num = app_config.download_thread_num
-        self.queue = Queue()
-        self.workers = []
+        self.__thread_num = app_config.download_thread_num
+        self.__queue = Queue()
+        self.__workers = []
+        self.__running = False
 
-        self.database = database
-        self.mod_instance = mod_instance
-        self.provider = provider
-        self.app_config = app_config
-        self.user_config = user_config
-        self.masterlist = masterlist
+        self.__database = database
+        self.__mod_instance = mod_instance
+        self.__provider = provider
+        self.__app_config = app_config
+        self.__user_config = user_config
+        self.__masterlist = masterlist
 
         self.finished.connect(self.stopped.emit)
 
@@ -131,13 +161,13 @@ class DownloadManager(QObject):
 
         self.log.info("Pausing worker threads...")
 
-        for worker in self.workers:
+        for worker in self.__workers:
             worker.paused = True
 
-        while any(worker.running for worker in self.workers):
+        while any(worker.running for worker in self.__workers):
             pass
 
-        self.running = False
+        self.__running = False
         self.log.info("Paused worker threads.")
 
     def resume(self) -> None:
@@ -146,50 +176,59 @@ class DownloadManager(QObject):
         """
 
         self.log.info("Continuing worker threads...")
-        self.running = True
+        self.__running = True
 
-        for worker in self.workers:
+        for worker in self.__workers:
             worker.paused = False
 
         self.log.info("Continued worker threads.")
+
+    @property
+    def running(self) -> bool:
+        """If the download manager is currently running."""
+
+        return self.__running
 
     def start(self) -> None:
         """
         Starts worker threads (if not already running).
         """
 
-        if self.running or self.workers:
+        if self.__running or self.__workers:
             return
 
-        self.log.debug(f"Starting {self.thread_num} thread(s)...")
+        self.log.debug(f"Starting {self.__thread_num} thread(s)...")
 
-        self.running = True
+        self.__running = True
 
-        self.workers = [
+        self.__workers = [
             Worker(
-                self.queue,
-                i,
-                self.app_config,
-                self.user_config,
-                self.provider,
-                self.database,
-                self.mod_instance,
+                installer_queue=self.__queue,
+                thread_id=i,
+                app_config=self.__app_config,
+                user_config=self.__user_config,
+                provider=self.__provider,
+                database=self.__database,
+                mod_instance=self.__mod_instance,
             )
-            for i in range(self.thread_num)
+            for i in range(self.__thread_num)
         ]
 
-        for worker in self.workers:
+        for worker in self.__workers:
             worker.task_done.connect(self.__on_worker_finished)
+            worker.download_started.connect(self.download_started.emit)
             worker.download_finished.connect(self.download_finished.emit)
+            worker.user_action_required.connect(self.user_action_required.emit)
+            worker.download_failed.connect(self.download_failed.emit)
             worker.start()
 
         self.log.info("Threads started, ready for downloads.")
 
     def __on_worker_finished(self) -> None:
         if (
-            self.queue.qsize() == 0
-            and all(not worker.processing for worker in self.workers)
-            and self.running
+            self.__queue.qsize() == 0
+            and all(not worker.processing for worker in self.__workers)
+            and self.__running
         ):
             self.finished.emit()
 
@@ -198,7 +237,7 @@ class DownloadManager(QObject):
         Blocks code until all mods are processed.
         """
 
-        self.queue.join()
+        self.__queue.join()
 
     def terminate(self) -> None:
         """
@@ -208,10 +247,10 @@ class DownloadManager(QObject):
 
         self.log.info("Terminating worker threads...")
 
-        for worker in self.workers:
+        for worker in self.__workers:
             worker.terminate()
 
-        self.workers.clear()
+        self.__workers.clear()
         self.stopped.emit()
         self.log.info("Terminated worker threads.")
 
@@ -222,7 +261,7 @@ class DownloadManager(QObject):
 
         self.log.info("Stopping worker threads...")
 
-        for worker in self.workers:
+        for worker in self.__workers:
             # Terminate paused workers
             if worker.paused or worker.waiting:
                 worker.terminate()
@@ -230,11 +269,11 @@ class DownloadManager(QObject):
             else:
                 worker.running = False
 
-        while any(worker.isRunning() for worker in self.workers):
+        while any(worker.isRunning() for worker in self.__workers):
             pass
 
-        self.running = False
-        self.workers.clear()
+        self.__running = False
+        self.__workers.clear()
         self.stopped.emit()
         self.log.info("Stopped worker threads.")
 
@@ -251,18 +290,18 @@ class DownloadManager(QObject):
         self.download_added.emit(download)
 
     def add_download_item(
-        self, download: FileDownload, progress_callback: ProgressCallback
+        self, download: FileDownload, update_callback: UpdateCallback
     ) -> None:
         """
         Adds a download item to the queue.
 
         Args:
             download (FileDownload): Download to add.
-            progress_callback (ProgressCallback):
+            update_callback (UpdateCallback):
                 Function or method to call with a ProgressUpdate.
         """
 
-        self.queue.put((download, progress_callback))
+        self.__queue.put((download, update_callback))
 
     def remove_download_item(self, download: FileDownload) -> None:
         """
@@ -311,14 +350,10 @@ class DownloadManager(QObject):
         }
         items = {mod: modfiles for mod, modfiles in items.items() if modfiles}
 
-        thread_num: Optional[int] = (
-            self.app_config.worker_thread_num
-            if self.app_config.worker_thread_num > 0
-            else None
-        )
-
         translation_downloads: DownloadListEntries = {}
-        with ProgressExecutor(pdisplay, max_workers=thread_num) as executor:
+        with ProgressExecutor(
+            pdisplay, max_workers=self.__app_config.worker_thread_num
+        ) as executor:
             executor.set_main_progress_text(self.tr("Collecting available downloads..."))
 
             tasks: dict[Future[dict[Path, list[TranslationDownload]]], Mod] = {}
@@ -401,12 +436,12 @@ class DownloadManager(QObject):
             return []
 
         available_translations: dict[Source, list[ModId]] = (
-            self.provider.get_translations(
+            self.__provider.get_translations(
                 mod.mod_id,
                 modfile.name,
-                self.user_config.language.id,
-                self.masterlist,
-                self.user_config.author_blacklist,
+                self.__user_config.language.id,
+                self.__masterlist,
+                self.__user_config.author_blacklist,
             )
         )
 
@@ -415,7 +450,7 @@ class DownloadManager(QObject):
         for source, translation_ids in available_translations.items():
             for translation_id in translation_ids:
                 try:
-                    file_details: ModDetails = self.provider.get_details(
+                    file_details: ModDetails = self.__provider.get_details(
                         translation_id, source
                     )
                 except Exception as ex:

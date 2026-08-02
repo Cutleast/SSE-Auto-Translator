@@ -263,6 +263,9 @@ class Scanner(QObject):
                 for modfile in modfiles
                 if modfile.status == TranslationStatus.RequiresTranslation
             ]
+            if not relevant_modfiles:
+                continue
+
             if mod.mod_id is not None and self.provider.is_mod_id_valid(
                 mod.mod_id, check_online=False
             ):
