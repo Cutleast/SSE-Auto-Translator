@@ -13,6 +13,7 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
 
@@ -35,7 +36,6 @@ from core.string.types import StringList
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
-from core.utilities.container_utils import unique
 
 from .detector import LangDetector, Language
 

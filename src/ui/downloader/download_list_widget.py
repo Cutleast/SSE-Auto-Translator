@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
+from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.utilities.tree_widget import (
     are_children_visible,
     iter_children,
@@ -38,7 +39,6 @@ from core.downloader.download_manager import DownloadListEntries
 from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
 from core.translation_provider.provider import TranslationProvider
-from core.utilities.container_utils import unique
 from ui.downloader.download_list_toolbar import DownloadListToolBar
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.report_dialog import ReportDialog

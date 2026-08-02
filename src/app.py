@@ -16,6 +16,7 @@ from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
+from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from mod_manager_lib.core.game_service import GameService
@@ -29,7 +30,6 @@ from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
-from core.utilities.container_utils import unique
 from core.utilities.localisation import Language
 from resources_rc import qt_resource_data as qt_resource_data  # noqa: PLC0414
 from ui.main_window import MainWindow

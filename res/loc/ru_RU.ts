@@ -1797,7 +1797,6 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <name>PlaceholderDropdown</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/placeholder_dropdown.py" line="28"/>
-        <location filename="src/ui/widgets/placeholder_dropdown.py" line="27"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>

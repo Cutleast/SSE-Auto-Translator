@@ -7,7 +7,7 @@ from collections.abc import Iterable
 from copy import copy
 from typing import Optional
 
-from core.utilities.container_utils import unique
+from cutleast_core_lib.core.utilities.unique import unique
 
 from .string_status import StringStatus
 from .types import String, StringList, StringType

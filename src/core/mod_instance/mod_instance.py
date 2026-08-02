@@ -6,11 +6,11 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.utilities.typing_utils import not_none
+from cutleast_core_lib.core.utilities.unique import unique
 
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.translation_provider.nm_api.nxm_id import NxmModId
-from core.utilities.container_utils import unique
 
 from .mod import Mod
 

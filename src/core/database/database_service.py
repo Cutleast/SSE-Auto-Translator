@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 import jstyleson as json
+from cutleast_core_lib.core.utilities.unique import unique
 
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
@@ -18,7 +19,6 @@ from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.string.types import StringList
 from core.translation_provider.source import Source
-from core.utilities.container_utils import unique
 from core.utilities.game_language import GameLanguage
 
 from .database import TranslationDatabase
