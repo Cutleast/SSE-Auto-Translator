@@ -25,7 +25,7 @@ from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_id import NxmModId
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 from core.utilities.exceptions import (
     DownloadFailedError,
@@ -93,7 +93,7 @@ class Worker(QThread):
     downloader: Downloader
     app_config: AppConfig
     user_config: UserConfig
-    provider: Provider
+    provider: TranslationProvider
     database: TranslationDatabase
     mod_instance: ModInstance
 
@@ -103,7 +103,7 @@ class Worker(QThread):
         thread_id: int,
         app_config: AppConfig,
         user_config: UserConfig,
-        provider: Provider,
+        provider: TranslationProvider,
         database: TranslationDatabase,
         mod_instance: ModInstance,
     ) -> None:
@@ -115,7 +115,7 @@ class Worker(QThread):
             thread_id (int): ID of the thread.
             app_config (AppConfig): The application configuration.
             user_config (UserConfig): The user configuration.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             database (TranslationDatabase): The translation database.
             mod_instance (ModInstance): The loaded mod instance.
         """

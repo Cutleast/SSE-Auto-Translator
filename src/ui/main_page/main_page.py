@@ -43,7 +43,7 @@ from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.string.search_filter import SearchFilter
 from core.string.types import StringList
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
 from ui.downloader.download_list_window import DownloadListWindow
@@ -83,7 +83,7 @@ class MainPageWidget(QWidget):
     app_config: AppConfig
     user_data: UserData
     scanner: Scanner
-    provider: Provider
+    provider: TranslationProvider
     download_manager: DownloadManager
     state_service: StateService
 
@@ -102,7 +102,7 @@ class MainPageWidget(QWidget):
         app_config: AppConfig,
         user_data: UserData,
         scanner: Scanner,
-        provider: Provider,
+        provider: TranslationProvider,
         download_manager: DownloadManager,
         state_service: StateService,
     ) -> None:
@@ -111,7 +111,7 @@ class MainPageWidget(QWidget):
             app_config (AppConfig): The application configuration.
             user_data (UserData): The user data.
             scanner (Scanner): The scanner.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             download_manager (DownloadManager): The download manager.
             state_service (StateService): The state service.
         """

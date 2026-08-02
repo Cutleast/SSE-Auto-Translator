@@ -18,7 +18,7 @@ from core.config.app_config import AppConfig
 from core.downloader.download_manager import DownloadManager
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.constants import DOCS_URL
@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
     user_data: UserData
     translator_service: TranslatorService
     scanner: Scanner
-    provider: Provider
+    provider: TranslationProvider
     download_manager: DownloadManager
     state_service: StateService
 
@@ -63,7 +63,7 @@ class MainWindow(QMainWindow):
         user_data: UserData,
         translator_service: TranslatorService,
         scanner: Scanner,
-        provider: Provider,
+        provider: TranslationProvider,
         download_manager: DownloadManager,
         state_service: StateService,
     ) -> None:
@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
             user_data (UserData): User data.
             translator_service (TranslatorService): API translator service.
             scanner (Scanner): Scanner.
-            provider (Provider): Translation provider.
+            provider (TranslationProvider): Translation provider.
             download_manager (DownloadManager): Download manager.
             state_service (StateService): State service.
         """

@@ -19,7 +19,7 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.state_service import StateService
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
 from ui.main_page.mod_instance.mod_instance import ModInstanceWidget
@@ -62,7 +62,7 @@ class TestModInstanceWidget(BaseTest):
         Fixture to create and provide a ModInstanceWidget instance for tests.
         """
 
-        provider = Provider(user_data.user_config)
+        provider = TranslationProvider(user_data.user_config)
         state_service = StateService(user_data.modinstance, user_data.database)
         widget = ModInstanceWidget(app_config, user_data, provider, state_service)
         qtbot.addWidget(widget)
@@ -106,9 +106,7 @@ class TestModInstanceWidget(BaseTest):
             widget, *TestModInstanceWidget.NAME_FILTER
         )
         state_filter: Optional[list[TranslationStatus]] = (
-            Utils.get_private_field_optional(
-                widget, *TestModInstanceWidget.STATE_FILTER
-            )
+            Utils.get_private_field_optional(widget, *TestModInstanceWidget.STATE_FILTER)
         )
         type_filter: Optional[list[FileType]] = Utils.get_private_field_optional(
             widget, *TestModInstanceWidget.TYPE_FILTER

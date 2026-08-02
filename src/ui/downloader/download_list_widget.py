@@ -37,7 +37,7 @@ from core.downloader.download_list import DownloadList, DownloadListItem
 from core.downloader.download_manager import DownloadListEntries
 from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.utilities.container_utils import unique
 from ui.downloader.download_list_toolbar import DownloadListToolBar
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
@@ -65,7 +65,7 @@ class DownloadListWidget(QWidget):
     """
 
     __items: dict[Path, DownloadListWidgetItem]
-    provider: Provider
+    provider: TranslationProvider
 
     __filter_items: bool = False
     """Whether to hide items with just one available download."""
@@ -87,13 +87,13 @@ class DownloadListWidget(QWidget):
     def __init__(
         self,
         entries: DownloadListEntries,
-        provider: Provider,
+        provider: TranslationProvider,
         parent: Optional[QWidget] = None,
     ) -> None:
         """
         Args:
             entries (DownloadListEntries): Download list entries.
-            provider (Provider): Translation provider.
+            provider (TranslationProvider): Translation provider.
             parent (Optional[QWidget], optional): Parent widget. Defaults to None.
         """
 
@@ -103,9 +103,7 @@ class DownloadListWidget(QWidget):
 
         self.__init_ui()
 
-        self._link_nxm_checkbox.setChecked(
-            not self.provider.direct_downloads_possible()
-        )
+        self._link_nxm_checkbox.setChecked(not self.provider.direct_downloads_possible())
         self.__init_items(entries)
         self.__tree_widget.expandAll()
 
@@ -251,9 +249,7 @@ class DownloadListWidget(QWidget):
         )
         self.__selected_downloads_num_label.display(len(self.__items))
 
-    def __add_modpage_button(
-        self, mod_item: QTreeWidgetItem, mod_info: ModInfo
-    ) -> None:
+    def __add_modpage_button(self, mod_item: QTreeWidgetItem, mod_info: ModInfo) -> None:
         button = QPushButton(IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), "")
         button.setToolTip(self.tr("Open mod page on Nexus Mods..."))
         button.clicked.connect(lambda: self.__open_modpage(mod_info))

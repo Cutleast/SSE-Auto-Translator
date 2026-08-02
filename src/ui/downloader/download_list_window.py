@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QApplication, QMessageBox, QWidget
 
 from core.downloader.download_manager import DownloadListEntries
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from ui.utilities.theme_manager import ThemeManager
 
 from .download_list_widget import DownloadListWidget
@@ -24,7 +24,7 @@ class DownloadListWindow(DownloadListWidget):
     def __init__(
         self,
         entries: DownloadListEntries,
-        provider: Provider,
+        provider: TranslationProvider,
         parent: Optional[QWidget] = None,
     ) -> None:
         super().__init__(entries, provider, parent)

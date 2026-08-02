@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 
 from .download_item import DownloadItem
 from .downloads_toolbar import DownloadsToolbar
@@ -41,11 +41,13 @@ class DownloadsTab(QWidget):
     __downloads_num_label: QLCDNumber
     __downloads_widget: QTreeWidget
 
-    def __init__(self, download_manager: DownloadManager, provider: Provider) -> None:
+    def __init__(
+        self, download_manager: DownloadManager, provider: TranslationProvider
+    ) -> None:
         """
         Args:
             download_manager (DownloadManager): The download manager instance.
-            provider (Provider): The translation provider instance.
+            provider (TranslationProvider): The translation provider instance.
         """
 
         super().__init__()

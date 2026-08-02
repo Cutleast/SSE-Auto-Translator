@@ -15,7 +15,7 @@ from core.downloader.mod_info import ModInfo
 from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.nm_api.nxm_id import NxmModId
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
@@ -33,7 +33,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         DownloadListItem: This item.
     """
 
-    provider: Provider
+    provider: TranslationProvider
 
     __translation_downloads: list[TranslationDownload]
 
@@ -48,7 +48,9 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         QObject.__init__(self)
 
     def post_init(
-        self, translation_downloads: list[TranslationDownload], provider: Provider
+        self,
+        translation_downloads: list[TranslationDownload],
+        provider: TranslationProvider,
     ) -> None:
         """
         **Must be called after adding this item to the tree widget!**
@@ -58,7 +60,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         Args:
             translation_downloads (list[TranslationDownload]):
                 Available translations for the mod file.
-            provider (Provider): Translation provider.
+            provider (TranslationProvider): Translation provider.
         """
 
         self.provider = provider

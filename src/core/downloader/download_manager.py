@@ -26,7 +26,7 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
-from core.translation_provider.provider import ModDetails, Provider
+from core.translation_provider.provider import ModDetails, TranslationProvider
 from core.translation_provider.source import Source
 
 from .file_download import FileDownload
@@ -112,7 +112,7 @@ class DownloadManager(QObject):
 
     __database: TranslationDatabase
     __mod_instance: ModInstance
-    __provider: Provider
+    __provider: TranslationProvider
     __app_config: AppConfig
     __user_config: UserConfig
     __masterlist: Masterlist
@@ -123,7 +123,7 @@ class DownloadManager(QObject):
         self,
         database: TranslationDatabase,
         mod_instance: ModInstance,
-        provider: Provider,
+        provider: TranslationProvider,
         app_config: AppConfig,
         user_config: UserConfig,
         masterlist: Masterlist,
@@ -132,7 +132,7 @@ class DownloadManager(QObject):
         Args:
             database (TranslationDatabase): The translation database.
             mod_instance (ModInstance): The loaded mod instance.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             app_config (AppConfig): The application configuration.
             user_config (UserConfig): The user configuration.
             masterlist (Masterlist): The loaded masterlist.

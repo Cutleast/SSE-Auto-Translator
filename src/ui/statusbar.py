@@ -12,7 +12,7 @@ from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from ui.utilities.icon_provider import IconProvider
 
 
@@ -23,17 +23,17 @@ class StatusBar(QStatusBar):
 
     log_signal = Signal(str)
     __logger: Logger
-    __provider: Provider
+    __provider: TranslationProvider
 
     __status_label: QLabel
     __api_label: QLabel
 
     __log_window: Optional[LogWindow] = None
 
-    def __init__(self, provider: Provider) -> None:
+    def __init__(self, provider: TranslationProvider) -> None:
         """
         Args:
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
         """
 
         super().__init__()
