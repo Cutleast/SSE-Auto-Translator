@@ -59,6 +59,7 @@ jobs:
           DOC_CLEANUP_ONLY: ${{ steps.changes.outputs.cleanup_only }}
           GITLAB_TRIGGER_TOKEN: ${{ secrets.MF_DOCS_GITLAB_TRIGGER_TOKEN }}
         run: |
+          # Project ID 30 remains stable when the central aggregator is renamed.
           # The orchestrator validates repository, branch, and commit against Directus.
           curl --fail-with-body --request POST \
             --form "token=${GITLAB_TRIGGER_TOKEN}" \
@@ -69,4 +70,4 @@ jobs:
             --form "variables[DOC_SOURCE_SHA]=${DOC_SOURCE_SHA}" \
             --form "variables[DOC_VALIDATE_ONLY]=${DOC_VALIDATE_ONLY}" \
             --form "variables[DOC_CLEANUP_ONLY]=${DOC_CLEANUP_ONLY}" \
-            "https://code.moddingforge.com/api/v4/projects/modding-forge%2Fmodding-forge-docs/trigger/pipeline"
+            "https://code.moddingforge.com/api/v4/projects/30/trigger/pipeline"
