@@ -50,6 +50,30 @@ class TranslationProvider:
 
         return self.__provider_manager.get_provider(provider_type)
 
+    @property
+    def is_available(self) -> bool:
+        """
+        Checks whether at least one translation provider is available.
+
+        Returns:
+            bool: Whether at least one provider is available.
+        """
+
+        return self.__provider_manager.has_providers
+
+    def is_source_available(self, source: Source) -> bool:
+        """
+        Checks whether a translation provider is available for a source.
+
+        Args:
+            source (Source): Source to check.
+
+        Returns:
+            bool: Whether a provider for the source is available.
+        """
+
+        return self.__provider_manager.is_source_available(source)
+
     def direct_downloads_possible(self, source: Optional[Source] = None) -> bool:
         """
         Checks if direct downloads are possible for Nexus Mods API.

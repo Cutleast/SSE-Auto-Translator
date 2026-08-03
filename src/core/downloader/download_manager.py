@@ -197,6 +197,10 @@ class DownloadManager(QObject):
         if self.__running or self.__workers:
             return
 
+        if not self.__provider.is_available:
+            self.log.warning("Skipping download start because no provider is available.")
+            return
+
         self.log.debug(f"Starting {self.__thread_num} thread(s)...")
 
         self.__running = True
@@ -331,6 +335,12 @@ class DownloadManager(QObject):
             DownloadListEntries:
                 Dictionary of mod-file combinations and their downloads.
         """
+
+        if not self.__provider.is_available:
+            self.log.warning(
+                "Skipping download collection because no provider is available."
+            )
+            return {}
 
         self.log.info("Getting downloads for required translations...")
 

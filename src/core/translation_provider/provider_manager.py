@@ -54,6 +54,30 @@ class ProviderManager:
 
         return tuple(self.__providers.values())
 
+    @property
+    def has_providers(self) -> bool:
+        """
+        Checks whether at least one translation provider was initialized.
+
+        Returns:
+            bool: Whether at least one provider is available.
+        """
+
+        return bool(self.__providers)
+
+    def is_source_available(self, source: Source) -> bool:
+        """
+        Checks whether a provider for a source was initialized.
+
+        Args:
+            source (Source): Source to check.
+
+        Returns:
+            bool: Whether a provider for the source is available.
+        """
+
+        return source in self.__providers
+
     def __get_configured_sources(self) -> tuple[Source, ...]:
         """
         Gets the sources configured by the user's provider preference.

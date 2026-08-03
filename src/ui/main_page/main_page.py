@@ -196,6 +196,7 @@ class MainPageWidget(QWidget):
         self.__vlayout.addLayout(hlayout)
 
         self.__tool_bar = MainToolBar()
+        self.__tool_bar.set_provider_features_enabled(self.__provider.is_available)
         hlayout.addWidget(self.__tool_bar)
 
         self.__search_bar = SearchBar()

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from collections.abc import Callable
 from pathlib import Path
 from typing import Optional, override
 
@@ -130,15 +131,24 @@ class TranslationsMenu(Menu):
             self.open_in_explorer_requested.emit
         )
 
-    def open(self, current_item: Optional[Translation | Path]) -> None:
+    def open(
+        self,
+        current_item: Optional[Translation | Path],
+        is_source_available: Callable[[Source], bool],
+    ) -> None:
         """
         Opens the context menu at the current cursor position.
 
         Args:
             current_item (Optional[Translation | Path]): The current item in the tree view.
+            is_source_available (Callable[[Source], bool]): Checks source availability.
         """
 
-        if isinstance(current_item, Translation) and current_item.source != Source.Local:
+        if (
+            isinstance(current_item, Translation)
+            and current_item.source != Source.Local
+            and is_source_available(current_item.source)
+        ):
             self.__open_modpage_action.setVisible(True)
             self.__open_modpage_action.setIcon(current_item.source.get_icon())  # type: ignore[arg-type]
         else:

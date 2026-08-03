@@ -23,6 +23,7 @@ from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import TranslationProvider
+from core.translation_provider.source import Source
 
 from .download_item import DownloadItem
 from .downloads_toolbar import DownloadsToolbar
@@ -72,9 +73,12 @@ class DownloadsTab(QWidget):
 
         self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
+        self.__toolbar.set_handle_nxm_action_enabled(
+            provider.is_source_available(Source.NexusMods)
+        )
+
         # Highlight NXM button if the user has no Premium
-        # FIXME: This crashes the app if there is no provider initialized
-        if not provider.direct_downloads_possible():
+        if provider.is_available and not provider.direct_downloads_possible():
             self.__toolbar.highlight_nxm_action()
 
     def __init_ui(self) -> None:

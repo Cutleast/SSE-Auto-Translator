@@ -186,6 +186,17 @@ class MainToolBar(QToolBar):
             ]
         )
 
+    def set_provider_features_enabled(self, enabled: bool) -> None:
+        """
+        Enables or disables actions that require a translation provider.
+
+        Args:
+            enabled (bool): Whether a translation provider is available.
+        """
+
+        self.__online_scan_action.setEnabled(enabled)
+        self.__download_action.setEnabled(enabled)
+
     def __on_type_filter_change(self, *args: Any) -> None:
         self.type_filter_changed.emit(
             [

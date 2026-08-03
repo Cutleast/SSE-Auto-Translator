@@ -45,6 +45,7 @@ class StatusBar(QStatusBar):
         self.__provider = provider
 
         self.__init_ui()
+        self.__api_label.setVisible(self.__provider.is_available)
         self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
     def __init_ui(self) -> None:
@@ -112,6 +113,7 @@ class StatusBar(QStatusBar):
         try:
             rem_hreq, rem_dreq = self.__provider.get_remaining_requests()
         except ValueError:
+            self.__api_label.setVisible(False)
             return
 
         self.__api_label.setText(

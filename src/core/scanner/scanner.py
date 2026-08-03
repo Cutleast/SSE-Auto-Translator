@@ -245,6 +245,10 @@ class Scanner(QObject):
                 A dictionary of mods, their mod files and their status.
         """
 
+        if not self.__provider.is_available:
+            self.log.warning("Skipping online scan because no provider is available.")
+            return {}
+
         if pdisplay is not None:
             pdisplay.updateMainProgress(
                 ProgressUpdate(

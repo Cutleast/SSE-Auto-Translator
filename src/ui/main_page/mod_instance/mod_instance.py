@@ -124,6 +124,10 @@ class ModInstanceWidget(QTreeWidget):
         self.__state_service = state_service
 
         self.__init_ui()
+        self.__menu.set_provider_features_enabled(self.__provider.is_available)
+        self.__menu.set_modpage_enabled(
+            self.__provider.is_source_available(Source.NexusMods)
+        )
 
         self.__menu.expand_all_clicked.connect(self.expandAll)
         self.__menu.collapse_all_clicked.connect(self.collapseAll)

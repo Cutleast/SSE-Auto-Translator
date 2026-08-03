@@ -165,7 +165,9 @@ class TranslationsWidget(QTreeWidget):
         self.__menu = TranslationsMenu()
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.customContextMenuRequested.connect(
-            lambda: self.__menu.open(self.get_current_item())
+            lambda: self.__menu.open(
+                self.get_current_item(), self.__provider.is_source_available
+            )
         )
 
     def highlight_translation(self, translation: Translation) -> None:
