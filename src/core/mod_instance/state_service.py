@@ -22,14 +22,14 @@ StateCache: TypeAlias = dict[Path, tuple[bool, TranslationStatus]]
 
 class StateService(QObject):
     """
-    Class for managing and updating the mod file states of a modinstance.
+    Class for managing and updating the mod file states of a mod instance.
     """
 
     update_signal = Signal()
     """Signal emitted everytime when the mod file states are updated."""
 
     __mod_instance: ModInstance
-    """The modinstance with the mod files to update."""
+    """The mod instance with the mod files to update."""
 
     __database: TranslationDatabase
     """The database with the installed translations."""
@@ -39,16 +39,16 @@ class StateService(QObject):
 
     log: logging.Logger = logging.getLogger("StateService")
 
-    def __init__(self, modinstance: ModInstance, database: TranslationDatabase) -> None:
+    def __init__(self, mod_instance: ModInstance, database: TranslationDatabase) -> None:
         """
         Args:
-            modinstance (ModInstance): The modinstance with the mod files to update.
+            mod_instance (ModInstance): The mod instance with the mod files to update.
             database (TranslationDatabase): The database with the installed translations.
         """
 
         super().__init__()
 
-        self.__mod_instance = modinstance
+        self.__mod_instance = mod_instance
         self.__database = database
 
         self.__database.add_signal.connect(self.__on_translations_added)

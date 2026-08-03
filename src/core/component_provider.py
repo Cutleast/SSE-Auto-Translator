@@ -64,11 +64,11 @@ class ComponentProvider(Singleton):
         self.__translator_service = TranslatorService(self.__user_data.translator_config)
 
         self.__state_service = StateService(
-            self.__user_data.modinstance, self.__user_data.database
+            self.__user_data.mod_instance, self.__user_data.database
         )
 
         self.__scanner = Scanner(
-            self.__user_data.modinstance,
+            self.__user_data.mod_instance,
             self.__user_data.database,
             self.__app_config,
             self.__user_data.user_config,
@@ -78,7 +78,7 @@ class ComponentProvider(Singleton):
 
         self.__download_manager = DownloadManager(
             self.__user_data.database,
-            self.__user_data.modinstance,
+            self.__user_data.mod_instance,
             self.__provider,
             self.__app_config,
             self.__user_data.user_config,

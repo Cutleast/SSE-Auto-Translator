@@ -2846,7 +2846,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="src/core/user_data/user_data_service.py" line="155"/>
-        <source>&lt;No modinstance selected&gt;</source>
+        <source>&lt;No mod instance selected&gt;</source>
         <translation>&lt;Keine Modinstanz ausgewählt&gt;</translation>
     </message>
 </context>

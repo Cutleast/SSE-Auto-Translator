@@ -120,7 +120,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__user_data = user_data
         self.__database = user_data.database
         self.__provider = provider
-        self.__mod_instance = user_data.modinstance
+        self.__mod_instance = user_data.mod_instance
         self.__state_service = state_service
 
         self.__init_ui()

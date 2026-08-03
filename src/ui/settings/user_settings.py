@@ -144,7 +144,7 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__modinstance_selector = InstanceSelectorWidget()
         self.__modinstance_selector.set_cur_game(GameService.get_game_by_id(GAME_ID))
         self.__modinstance_selector.set_cur_instance_data(
-            self._initial_config.modinstance
+            self._initial_config.mod_instance
         )
         self.__modinstance_selector.changed.connect(self.changed_signal.emit)
         self.__modinstance_selector.changed.connect(self.restart_required_signal.emit)
@@ -208,7 +208,7 @@ class UserSettings(SettingsPage[UserConfig]):
     def apply(self, config: UserConfig) -> None:
         config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
-        config.modinstance = cast(
+        config.mod_instance = cast(
             Optional[MO2InstanceInfo | ProfileInfo],
             self.__modinstance_selector.get_cur_instance_data(),
         )

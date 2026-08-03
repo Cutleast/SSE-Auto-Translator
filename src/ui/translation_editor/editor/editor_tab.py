@@ -558,7 +558,7 @@ class EditorTab(QWidget):
             folder_path = Path(folder)
 
             Exporter.export_translation(
-                self.__translation, self.__user_data.modinstance, folder_path
+                self.__translation, self.__user_data.mod_instance, folder_path
             )
 
             messagebox = QMessageBox(QApplication.activeModalWidget())

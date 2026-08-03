@@ -393,13 +393,13 @@ class BaseTest(CoreBaseTest):
 
         return cls._temp_folder
 
-    def get_mod_by_name(self, mod_name: str, modinstance: ModInstance) -> Mod:
+    def get_mod_by_name(self, mod_name: str, mod_instance: ModInstance) -> Mod:
         """
         Gets a mod by its name from the loaded mod instance.
 
         Args:
             mod_name (str): The name of the mod
-            modinstance (ModInstance): The mod instance
+            mod_instance (ModInstance): The mod instance
 
         Raises:
             ValueError: When no mod with the specified name is found
@@ -409,7 +409,7 @@ class BaseTest(CoreBaseTest):
         """
 
         try:
-            mod: Mod = next(mod for mod in modinstance.mods if mod.name == mod_name)
+            mod: Mod = next(mod for mod in mod_instance.mods if mod.name == mod_name)
         except StopIteration:
             raise ValueError(f"No mod with name {mod_name} found in mod instance.")
 
@@ -435,7 +435,7 @@ class BaseTest(CoreBaseTest):
         return modfile
 
     def get_modfile_from_mod_name(
-        self, mod_name: str, modfile_name: str, modinstance: ModInstance
+        self, mod_name: str, modfile_name: str, mod_instance: ModInstance
     ) -> ModFile:
         """
         Gets a mod file by its name from the specified mod.
@@ -443,7 +443,7 @@ class BaseTest(CoreBaseTest):
         Args:
             mod_name (str): Name of the mod to get mod file from
             modfile_name (str): The name of the mod file
-            modinstance (ModInstance): The mod instance
+            mod_instance (ModInstance): The mod instance
 
         Raises:
             ValueError: When no mod with the specified name is found
@@ -453,6 +453,6 @@ class BaseTest(CoreBaseTest):
             ModFile: The mod file
         """
 
-        mod: Mod = self.get_mod_by_name(mod_name, modinstance)
+        mod: Mod = self.get_mod_by_name(mod_name, mod_instance)
 
         return self.get_modfile_from_mod(mod, modfile_name)

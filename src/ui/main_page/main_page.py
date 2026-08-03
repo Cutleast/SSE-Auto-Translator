@@ -121,7 +121,7 @@ class MainPageWidget(QWidget):
 
         self.setObjectName("root")
 
-        self.__mod_instance = user_data.modinstance
+        self.__mod_instance = user_data.mod_instance
         self.__app_config = app_config
         self.__user_data = user_data
         self.__scanner = scanner
@@ -539,7 +539,7 @@ class MainPageWidget(QWidget):
                 file_path,
                 check_states={
                     modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
-                    for mod in self.__user_data.modinstance.mods
+                    for mod in self.__user_data.mod_instance.mods
                     for modfile in mod.modfiles
                 },
             )
@@ -559,7 +559,7 @@ class MainPageWidget(QWidget):
         self.__state_service.save_states_to_cache(
             {
                 modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
-                for mod in self.__user_data.modinstance.mods
+                for mod in self.__user_data.mod_instance.mods
                 for modfile in mod.modfiles
             }
         )

@@ -27,8 +27,8 @@ class UserConfig(BaseConfig):
     api_key: Annotated[str, BaseConfig.PropertyMarker.ExcludeFromLogging]
     """API key for Nexus Mods."""
 
-    modinstance: Optional[MO2InstanceInfo | ProfileInfo] = Field(
-        default=None, discriminator="mod_manager"
+    mod_instance: Optional[MO2InstanceInfo | ProfileInfo] = Field(
+        default=None, alias="modinstance", discriminator="mod_manager"
     )
     """Mod instance to load."""
 
@@ -69,7 +69,6 @@ class UserConfig(BaseConfig):
             _config_path=user_config_path,
             language=GameLanguage.German,
             api_key="",
-            modinstance=None,
         )
         config._config_path = user_config_path
 

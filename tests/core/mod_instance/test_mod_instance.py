@@ -23,14 +23,14 @@ class TestModInstance(CoreTest):
 
         # given
         original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.modinstance
+            "Wet and Cold SE", user_data.mod_instance
         )
         original_modfile: ModFile = self.get_modfile_from_mod(
             original_mod, "WetandCold.esp"
         )
         original_modfile.status = TranslationStatus.TranslationInstalled
         translated_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.modinstance
+            "Wet and Cold SE - German", user_data.mod_instance
         )
         translated_modfile: ModFile = self.get_modfile_from_mod(
             translated_mod, "WetandCold.esp"
@@ -38,7 +38,7 @@ class TestModInstance(CoreTest):
         translated_modfile.status = TranslationStatus.IsTranslated
 
         # when
-        actual_modfile: Optional[ModFile] = user_data.modinstance.get_modfile(
+        actual_modfile: Optional[ModFile] = user_data.mod_instance.get_modfile(
             original_modfile.path
         )
 
@@ -46,7 +46,7 @@ class TestModInstance(CoreTest):
         assert actual_modfile is translated_modfile
 
         # when
-        actual_modfile = user_data.modinstance.get_modfile(
+        actual_modfile = user_data.mod_instance.get_modfile(
             original_modfile.path, ignore_states=[TranslationStatus.IsTranslated]
         )
 
@@ -54,7 +54,7 @@ class TestModInstance(CoreTest):
         assert actual_modfile is original_modfile
 
         # when
-        actual_modfile = user_data.modinstance.get_modfile(
+        actual_modfile = user_data.mod_instance.get_modfile(
             original_modfile.path, ignore_mods=[translated_mod]
         )
 
@@ -62,7 +62,7 @@ class TestModInstance(CoreTest):
         assert actual_modfile is original_modfile
 
         # when
-        actual_modfile = user_data.modinstance.get_modfile(
+        actual_modfile = user_data.mod_instance.get_modfile(
             original_modfile.path,
             ignore_mods=[translated_mod],
             ignore_states=[TranslationStatus.TranslationInstalled],
@@ -78,14 +78,14 @@ class TestModInstance(CoreTest):
 
         # given
         original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.modinstance
+            "Wet and Cold SE", user_data.mod_instance
         )
         original_modfile: ModFile = self.get_modfile_from_mod(
             original_mod, "WetandCold.esp"
         )
         original_modfile.status = TranslationStatus.TranslationInstalled
         translated_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.modinstance
+            "Wet and Cold SE - German", user_data.mod_instance
         )
         translated_modfile: ModFile = self.get_modfile_from_mod(
             translated_mod, "WetandCold.esp"
@@ -93,7 +93,7 @@ class TestModInstance(CoreTest):
         translated_modfile.status = TranslationStatus.IsTranslated
 
         # when
-        actual_modfiles: list[ModFile] = user_data.modinstance.get_modfiles(
+        actual_modfiles: list[ModFile] = user_data.mod_instance.get_modfiles(
             original_modfile.path
         )
 
@@ -101,7 +101,7 @@ class TestModInstance(CoreTest):
         assert actual_modfiles == [original_modfile, translated_modfile]
 
         # when
-        actual_modfiles = user_data.modinstance.get_modfiles(
+        actual_modfiles = user_data.mod_instance.get_modfiles(
             original_modfile.path, ignore_states=[TranslationStatus.IsTranslated]
         )
 
@@ -109,7 +109,7 @@ class TestModInstance(CoreTest):
         assert actual_modfiles == [original_modfile]
 
         # when
-        actual_modfiles = user_data.modinstance.get_modfiles(
+        actual_modfiles = user_data.mod_instance.get_modfiles(
             original_modfile.path, ignore_mods=[translated_mod]
         )
 
@@ -117,7 +117,7 @@ class TestModInstance(CoreTest):
         assert actual_modfiles == [original_modfile]
 
         # when
-        actual_modfiles = user_data.modinstance.get_modfiles(
+        actual_modfiles = user_data.mod_instance.get_modfiles(
             original_modfile.path,
             ignore_mods=[translated_mod],
             ignore_states=[TranslationStatus.TranslationInstalled],

@@ -60,7 +60,7 @@ class InstancePage(Page):
 
     @override
     def apply(self, config: UserConfig) -> None:
-        config.modinstance = cast(
+        config.mod_instance = cast(
             Optional[MO2InstanceInfo | ProfileInfo],
             self.__modinstance_selector.get_cur_instance_data(),
         )

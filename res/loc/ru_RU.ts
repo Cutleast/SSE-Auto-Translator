@@ -2838,7 +2838,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/core/user_data/user_data_service.py" line="155"/>
-        <source>&lt;No modinstance selected&gt;</source>
+        <source>&lt;No mod instance selected&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

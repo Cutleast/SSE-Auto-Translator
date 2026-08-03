@@ -25,8 +25,8 @@ class UserData(BaseModel, frozen=True, arbitrary_types_allowed=True):
     database: TranslationDatabase
     """The translation database for the configured language."""
 
-    modinstance: ModInstance
-    """The configured modinstance."""
+    mod_instance: ModInstance
+    """The configured mod instance."""
 
     masterlist: Masterlist
     """The configured masterlist."""

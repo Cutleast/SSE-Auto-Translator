@@ -34,7 +34,7 @@ class BatchRunner(Singleton):
     """
     Runs a sequence of batch operations headlessly (without a main window).
 
-    Loads the full application stack (user data, database, modinstance) and sequentially
+    Loads the full application stack (user data, database, mod instance) and sequentially
     executes the requested operations, then exits.
     """
 
@@ -96,7 +96,7 @@ class BatchRunner(Singleton):
 
     def __load_user_data(self, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
         """
-        Loads the user data (config, database, modinstance, masterlist).
+        Loads the user data (config, database, mod instance, masterlist).
 
         Args:
             pdisplay (Optional[ProgressDisplay], optional):
@@ -165,7 +165,7 @@ class BatchRunner(Singleton):
 
         scanner: Scanner = self.__component_provider.get_scanner()
         state_service: StateService = self.__component_provider.get_state_service()
-        mod_instance: ModInstance = self.__user_data.modinstance
+        mod_instance: ModInstance = self.__user_data.mod_instance
 
         items: dict[Mod, list[ModFile]] = {
             mod: [
@@ -211,7 +211,7 @@ class BatchRunner(Singleton):
         self.log.info(f"Importing {len(archives)} translation archive(s)...")
 
         database = self.__user_data.database
-        mod_instance = self.__user_data.modinstance
+        mod_instance = self.__user_data.mod_instance
         extractor = StringExtractor()
 
         for a, archive_path in enumerate(archives):
@@ -286,7 +286,7 @@ class BatchRunner(Singleton):
 
         Exporter().build_output_mod(
             output_path=output_path,
-            mod_instance=self.__user_data.modinstance,
+            mod_instance=self.__user_data.mod_instance,
             translations=self.__user_data.database.user_translations,
             user_config=self.__user_data.user_config,
             pdisplay=pdisplay,

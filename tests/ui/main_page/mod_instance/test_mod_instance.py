@@ -67,7 +67,7 @@ class TestModInstanceWidget(BaseTest):
         """
 
         provider = TranslationProvider(user_data.user_config)
-        state_service = StateService(user_data.modinstance, user_data.database)
+        state_service = StateService(user_data.mod_instance, user_data.database)
         widget = ModInstanceWidget(app_config, user_data, provider, state_service)
         qtbot.addWidget(widget)
         widget.show()
@@ -142,7 +142,7 @@ class TestModInstanceWidget(BaseTest):
         Tests the initial state of the widget.
         """
 
-        self.assert_initial_state(widget, user_data.modinstance)
+        self.assert_initial_state(widget, user_data.mod_instance)
 
     def test_name_filter(self, widget: ModInstanceWidget, user_data: UserData) -> None:
         """
@@ -157,9 +157,9 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.modinstance)
+        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.mod_instance)
         test_separator_item: QTreeWidgetItem = mod_items[test_separator]
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_mod_item: QTreeWidgetItem = mod_items[test_mod]
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
@@ -213,9 +213,9 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.modinstance)
+        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.mod_instance)
         test_separator_item: QTreeWidgetItem = mod_items[test_separator]
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_mod_item: QTreeWidgetItem = mod_items[test_mod]
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_modfile.status = TranslationStatus.RequiresTranslation
@@ -263,9 +263,9 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.modinstance)
+        test_separator: Mod = self.get_mod_by_name("Test Mods", user_data.mod_instance)
         test_separator_item: QTreeWidgetItem = mod_items[test_separator]
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_mod_item: QTreeWidgetItem = mod_items[test_mod]
         test_pluginfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_pluginfile_item: QTreeWidgetItem = modfile_items[test_mod][test_pluginfile]
@@ -319,7 +319,7 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
 
@@ -355,7 +355,7 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
 
@@ -378,7 +378,7 @@ class TestModInstanceWidget(BaseTest):
 
         # then
         assert widget.get_visible_modfile_item_count() == len(
-            user_data.modinstance.modfiles
+            user_data.mod_instance.modfiles
         )
 
     def test_modfile_states_are_updated(
@@ -397,7 +397,7 @@ class TestModInstanceWidget(BaseTest):
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
         )
 
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.modinstance)
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
 
@@ -431,7 +431,7 @@ class TestModInstanceWidget(BaseTest):
         )
 
         original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.modinstance
+            "Wet and Cold SE", user_data.mod_instance
         )
         original_modfile: ModFile = self.get_modfile_from_mod(
             original_mod, "WetandCold.esp"
@@ -441,7 +441,7 @@ class TestModInstanceWidget(BaseTest):
             original_modfile
         ]
         translated_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.modinstance
+            "Wet and Cold SE - German", user_data.mod_instance
         )
         translated_modfile: ModFile = self.get_modfile_from_mod(
             translated_mod, "WetandCold.esp"
