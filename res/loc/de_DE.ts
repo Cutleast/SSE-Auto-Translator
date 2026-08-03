@@ -1478,12 +1478,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="58"/>
         <source>Scanning for mod files in &apos;{modname}&apos;...</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;{modname}&apos; wird nach Moddateien gescannt...</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="76"/>
         <source>Scanning BSAs in &apos;{modname}&apos;...</source>
-        <translation type="unfinished"></translation>
+        <translation>BSAs in &apos;{modname}&apos; werden gescannt...</translation>
     </message>
 </context>
 <context>
