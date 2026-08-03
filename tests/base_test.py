@@ -9,7 +9,7 @@ import sys
 import tempfile
 from collections.abc import Generator
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 from unittest.mock import MagicMock
 
 import jstyleson as json
@@ -82,6 +82,33 @@ class BaseTest(CoreBaseTest):
         yield WindowManager()
 
         Utils.reset_singleton(WindowManager)
+
+    @pytest.fixture(autouse=True)
+    def mock_web_requests(
+        self, data_folder: Path, requests_mock: RequestsMock
+    ) -> None:
+        """
+        Registers all mocked web responses from the test data folder.
+        """
+
+        web_requests_folder: Path = data_folder / "web_requests"
+        for response_file in sorted(web_requests_folder.glob("*.json")):
+            responses: list[dict[str, Any]] = json.loads(response_file.read_text())
+            for response in responses:
+                response_body: Any = response["response_body"]
+                response_kwargs: dict[str, Any] = {
+                    "status_code": response["status_code"],
+                    "headers": response.get("response_headers", {}),
+                }
+
+                if isinstance(response_body, (dict, list)):
+                    response_kwargs["json"] = response_body
+                else:
+                    response_kwargs["text"] = response_body
+
+                requests_mock.register_uri(
+                    response["method"], response["url"], **response_kwargs
+                )
 
     @pytest.fixture
     def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
@@ -165,7 +192,7 @@ class BaseTest(CoreBaseTest):
 
     @pytest.fixture
     def component_provider(
-        self, app_config: AppConfig, user_data: UserData, requests_mock: RequestsMock
+        self, app_config: AppConfig, user_data: UserData
     ) -> Generator[ComponentProvider]:
         """
         Returns a component provider with all components initialized.
@@ -173,13 +200,6 @@ class BaseTest(CoreBaseTest):
         Yields:
             ComponentProvider: The component provider
         """
-
-        # mock validate endpoint for Nexus Mods API key validation
-        requests_mock.get(
-            "https://api.nexusmods.com/v1/users/validate.json",
-            status_code=200,
-            json={"is_premium": True},
-        )
 
         provider = ComponentProvider(app_config, user_data)
         provider.initialize_components()
