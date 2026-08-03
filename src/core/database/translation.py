@@ -7,7 +7,7 @@ from __future__ import annotations
 import time
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Optional, override
+from typing import Any, Optional, Self, override
 
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from pydantic import BaseModel, Field, ValidationError
@@ -58,8 +58,8 @@ class Translation(BaseModel):
 
         return self.model_dump(mode="json", exclude_defaults=True)
 
-    @staticmethod
-    def from_index_data(index_data: dict[str, Any], database_path: Path) -> Translation:
+    @classmethod
+    def from_index_data(cls, index_data: dict[str, Any], database_path: Path) -> Self:
         """
         Gets a Translation object from the specified index data.
 
@@ -68,14 +68,14 @@ class Translation(BaseModel):
             database_path (Path): The path to the database.
 
         Returns:
-            Translation: Translation object.
+            Self: Translation object.
         """
 
         try:
             data: dict[str, Any] = index_data.copy()
             data["path"] = database_path / data["name"]
 
-            return Translation.model_validate(data)
+            return cls.model_validate(data)
         except ValidationError:
             pass
 
@@ -102,14 +102,12 @@ class Translation(BaseModel):
         elif raw_mod_id and source == Source.Confrerie and raw_orig_mod_id is not None:
             mod_id = CdtModId(mod_id=raw_mod_id, nm_mod_id=raw_orig_mod_id)
 
-        return Translation(
-            path=translation_path, mod_id=mod_id, **index_data, source=source
-        )
+        return cls(path=translation_path, mod_id=mod_id, **index_data, source=source)
 
-    @staticmethod
+    @classmethod
     def create(
-        name: str, path: Path, strings: Optional[dict[Path, StringList]] = None
-    ) -> Translation:
+        cls, name: str, path: Path, strings: Optional[dict[Path, StringList]] = None
+    ) -> Self:
         """
         Creates a new translation.
 
@@ -120,10 +118,10 @@ class Translation(BaseModel):
                 The initial strings of the translation. Defaults to None.
 
         Returns:
-            Translation: Created translation.
+            Self: Created translation.
         """
 
-        translation = Translation(name=name, path=path)
+        translation = cls(name=name, path=path)
         if strings is not None:
             translation.strings = strings
         return translation

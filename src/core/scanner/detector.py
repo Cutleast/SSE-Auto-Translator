@@ -15,8 +15,9 @@ class LangDetector:
     Language detector class.
     """
 
-    detector: LanguageDetector
-    confidence: float
+    __detector: LanguageDetector
+    __confidence: float
+    __desired_lang: Language
 
     log: logging.Logger = logging.getLogger("Utilities.LangDetector")
 
@@ -27,14 +28,14 @@ class LangDetector:
             desired_lang (Language): Desired language to compare against.
         """
 
-        self.confidence = confidence
-        self.desired_lang = desired_lang
+        self.__confidence = confidence
+        self.__desired_lang = desired_lang
 
         builder: LanguageDetectorBuilder = LanguageDetectorBuilder.from_languages(
             Language.ENGLISH, desired_lang
         )
-        builder.with_minimum_relative_distance(self.confidence)
-        self.detector = builder.build()
+        builder.with_minimum_relative_distance(self.__confidence)
+        self.__detector = builder.build()
 
     @staticmethod
     def get_available_langs() -> list[Language]:
@@ -86,7 +87,7 @@ class LangDetector:
             )
 
         detected_lang: Optional[Language] = self.detect_lang(detection_string)
-        translation_required: bool = detected_lang != self.desired_lang
+        translation_required: bool = detected_lang != self.__desired_lang
         self.log.debug(f"Translation required: {translation_required}")
 
         return translation_required
@@ -102,4 +103,4 @@ class LangDetector:
             Optional[Language]: Detected language or None if unknown.
         """
 
-        return self.detector.detect_language_of(string)
+        return self.__detector.detect_language_of(string)

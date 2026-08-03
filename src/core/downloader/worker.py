@@ -89,13 +89,13 @@ class Worker(QThread):
         Exception: The exception that caused the failure.
     """
 
-    download_queue: Queue[tuple[FileDownload, UpdateCallback]]
-    downloader: Downloader
-    app_config: AppConfig
-    user_config: UserConfig
-    provider: TranslationProvider
-    database: TranslationDatabase
-    mod_instance: ModInstance
+    __download_queue: Queue[tuple[FileDownload, UpdateCallback]]
+    __downloader: Downloader
+    __app_config: AppConfig
+    __user_config: UserConfig
+    __provider: TranslationProvider
+    __database: TranslationDatabase
+    __mod_instance: ModInstance
 
     def __init__(
         self,
@@ -124,14 +124,14 @@ class Worker(QThread):
 
         self.log = logging.getLogger(f"DownloaderThread-{thread_id}")
 
-        self.download_queue = installer_queue
+        self.__download_queue = installer_queue
 
-        self.downloader = Downloader(provider.user_agent)
-        self.app_config = app_config
-        self.user_config = user_config
-        self.provider = provider
-        self.database = database
-        self.mod_instance = mod_instance
+        self.__downloader = Downloader(provider.user_agent)
+        self.__app_config = app_config
+        self.__user_config = user_config
+        self.__provider = provider
+        self.__database = database
+        self.__mod_instance = mod_instance
 
     def __process_download(
         self, download: FileDownload, update_callback: UpdateCallback
@@ -150,13 +150,14 @@ class Worker(QThread):
         self.log.info(f"Processing download '{file_name}'...")
 
         downloads_folder: Path = (
-            self.app_config.downloads_path or TempFolderProvider.get().get_temp_folder()
+            self.__app_config.downloads_path
+            or TempFolderProvider.get().get_temp_folder()
         )
         downloads_folder.mkdir(parents=True, exist_ok=True)
         mod_file: Path = downloads_folder / file_name
 
         if not mod_file.is_file():
-            if not self.provider.direct_downloads_possible(download.source):
+            if not self.__provider.direct_downloads_possible(download.source):
                 if download.source == Source.NexusMods:
                     self.log.info("Waiting for free download to be started...")
                     assert isinstance(download.mod_details.mod_id, NxmModId)
@@ -173,7 +174,7 @@ class Worker(QThread):
                     raise DownloadFailedError
 
             self.waiting = True
-            url: str = self.provider.request_download(
+            url: str = self.__provider.request_download(
                 download.mod_details.mod_id, download.source
             )
             self.waiting = False
@@ -186,7 +187,7 @@ class Worker(QThread):
             )
             self.download_started.emit(download)
 
-            self.downloader.download(url, downloads_folder, file_name, update_callback)
+            self.__downloader.download(url, downloads_folder, file_name, update_callback)
             self.log.info(f"Downloaded translation to '{mod_file}'.")
         else:
             self.log.info("Translation already downloaded.")
@@ -215,9 +216,9 @@ class Worker(QThread):
         try:
             strings: dict[Path, StringList] = StringExtractor().extract_strings(
                 input=downloaded_file,
-                mod_instance=self.mod_instance,
-                language=self.database.language,
-                max_workers=self.app_config.worker_thread_num,
+                mod_instance=self.__mod_instance,
+                language=self.__database.language,
+                max_workers=self.__app_config.worker_thread_num,
             )
         except Exception as ex:
             raise InstallationFailedError from ex
@@ -228,8 +229,8 @@ class Worker(QThread):
         translation = Translation(
             name=download.mod_details.display_name,
             path=(
-                self.database.userdb_path
-                / self.database.language.id
+                self.__database.userdb_path
+                / self.__database.language.id
                 / download.mod_details.display_name
             ),
             mod_id=download.mod_details.mod_id,
@@ -239,7 +240,7 @@ class Worker(QThread):
         )
         translation.strings = strings
         translation.save()
-        DatabaseService.add_translation(translation, self.database)
+        DatabaseService.add_translation(translation, self.__database)
 
     @override
     def run(self) -> None:
@@ -260,7 +261,7 @@ class Worker(QThread):
             try:
                 # Wait at max 1 second for a download or just repeat the loop
                 # while the thread is set to running
-                download, update_callback = self.download_queue.get(timeout=1)
+                download, update_callback = self.__download_queue.get(timeout=1)
             except Empty:
                 continue
 
@@ -280,7 +281,7 @@ class Worker(QThread):
             else:
                 self.download_finished.emit(download)
 
-            self.download_queue.task_done()
+            self.__download_queue.task_done()
             self.task_done.emit()
 
         self.running = False

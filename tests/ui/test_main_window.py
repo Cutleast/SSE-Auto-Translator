@@ -29,7 +29,7 @@ class TestMainWindow(BaseTest):
         component_provider: ComponentProvider,
         logger: Logger,
         qtbot: QtBot,
-    ) -> Generator[MainWindow, None, None]:
+    ) -> Generator[MainWindow]:
         """
         Fixture to create and provide a `MainWindow` instance for testing.
         """
@@ -50,13 +50,17 @@ class TestMainWindow(BaseTest):
 
         window.destroy(True, True)
 
-    def test_close_saves_states_to_cache(self, widget: MainWindow) -> None:
+    def test_close_saves_states_to_cache(
+        self, widget: MainWindow, component_provider: ComponentProvider
+    ) -> None:
         """
         Tests that the main window calls `StateService.save_states_to_cache` when closed.
         """
 
         # when
-        with patch.object(widget.state_service, "save_states_to_cache") as mock_save:
+        with patch.object(
+            component_provider.get_state_service(), "save_states_to_cache"
+        ) as mock_save:
             widget.close()
 
         # then

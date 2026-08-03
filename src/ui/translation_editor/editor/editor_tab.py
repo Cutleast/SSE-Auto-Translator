@@ -167,7 +167,8 @@ class EditorTab(QWidget):
         self.__bar_chart = StackedBar(
             [0 for _ in StringStatus],
             colors=[
-                StringStatus.get_color(s) or Qt.GlobalColor.white for s in StringStatus
+                StringStatus.get_color(s) or QColor.fromString("#fff")
+                for s in StringStatus
             ],
         )
         self.__bar_chart.setFixedHeight(3)

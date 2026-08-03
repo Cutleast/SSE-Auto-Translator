@@ -437,11 +437,11 @@ class DownloadManager(QObject):
 
         available_translations: dict[Source, list[ModId]] = (
             self.__provider.get_translations(
-                mod.mod_id,
-                modfile.name,
-                self.__user_config.language.id,
-                self.__masterlist,
-                self.__user_config.author_blacklist,
+                mod_id=mod.mod_id,
+                file_name=modfile.name,
+                language=self.__user_config.language.id,
+                masterlist=self.__masterlist,
+                author_blacklist=self.__user_config.author_blacklist,
             )
         )
 

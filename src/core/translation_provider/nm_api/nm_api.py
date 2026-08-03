@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import re
@@ -16,7 +14,7 @@ from uuid import uuid4
 import bs4
 import jstyleson as json
 import requests as req
-import websocket
+import websocket as ws
 from curl_cffi import requests as curl_requests
 from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel, ValidationError
@@ -132,7 +130,7 @@ class NexusModsApi(ProviderApi):
     def __validate_api_key(self, key: str) -> tuple[bool, bool]:
         from app import App
 
-        url = "https://api.nexusmods.com/v1/users/validate.json"
+        url: str = "https://api.nexusmods.com/v1/users/validate.json"
         headers: dict[str, str] = {
             "accept": "application/json",
             "apikey": key,
@@ -629,33 +627,31 @@ class NexusModsApi(ProviderApi):
         Follows instructions from here: https://github.com/Nexus-Mods/sso-integration-demo
         """
 
-        res_data: dict[str, Any]
-
         self.log.info("Starting SSO process...")
 
         self.log.debug("Connecting to Nexus Mods SSO webserver...")
-        connection = websocket.create_connection("wss://sso.nexusmods.com")
+        connection: ws.WebSocket = ws.create_connection("wss://sso.nexusmods.com")
 
         self.log.debug("Generating UUID v4...")
         uuid = str(uuid4())
         self.log.debug(f"UUID: {uuid}")
 
         self.log.debug("Requesting SSO token...")
-        request_data = {
+        request_data: dict[str, Any] = {
             "id": uuid,
             "token": None,
             "protocol": 2,
         }
         connection.send(json.dumps(request_data).encode())
 
-        response = connection.recv()
+        response: str | bytes = connection.recv()
         if isinstance(response, bytes):
             response = response.decode()
-        res_data = json.loads(response)
+        res_data: dict[str, Any] = json.loads(response)
         token: str = res_data["data"]["connection_token"]  # type: ignore  # noqa: F841
 
         self.log.debug("Opening page in Web Browser...")
-        url = f"https://www.nexusmods.com/sso?id={uuid}&application={NexusModsApi.APP_SLUG}"
+        url: str = f"https://www.nexusmods.com/sso?id={uuid}&application={NexusModsApi.APP_SLUG}"
         webbrowser.open(url)
 
         self.log.info("Waiting for User to sign in...")

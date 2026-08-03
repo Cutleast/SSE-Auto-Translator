@@ -28,11 +28,14 @@ class Editor(QObject):
     Class for editing a translation.
     """
 
-    log: logging.Logger = logging.getLogger("Editor")
+    update_signal = Signal()
+    """
+    This signal gets emitted when any of the strings in the translation change.
+    """
 
-    language: GameLanguage
-    database: TranslationDatabase
-    translator_service: TranslatorService
+    __language: GameLanguage
+    __database: TranslationDatabase
+    __translator_service: TranslatorService
 
     __translation: Translation
     __strings_cache: dict[Path, StringList]
@@ -40,12 +43,9 @@ class Editor(QObject):
     Stores a deep copy of the strings in the translation.
     """
 
-    update_signal = Signal()
-    """
-    This signal gets emitted when any of the strings in the translation change.
-    """
+    __changes_pending: bool
 
-    __changes_pending: bool = False
+    log: logging.Logger = logging.getLogger("Editor")
 
     def __init__(
         self,
@@ -66,12 +66,14 @@ class Editor(QObject):
 
         self.__translation = translation
 
-        self.language = language
-        self.database = database
-        self.translator_service = translator_service
+        self.__language = language
+        self.__database = database
+        self.__translator_service = translator_service
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
+
+        self.__changes_pending = False
 
         self.update_signal.connect(self.__on_change)
 
@@ -176,12 +178,12 @@ class Editor(QObject):
 
         self.log.info(f"Translating {len(strings)} string(s) with API...")
 
-        translator: Translator = self.translator_service.get_translator()
+        translator: Translator = self.__translator_service.get_translator()
 
         self.log.info(f"Used translator API: {translator.__class__.__name__}")
 
         texts: list[str] = [selected_string.original for selected_string in strings]
-        result: dict[str, str] = translator.mass_translate(texts, self.language)
+        result: dict[str, str] = translator.mass_translate(texts, self.__language)
 
         for string in strings:
             string.string = result[string.original]
@@ -236,10 +238,10 @@ class Editor(QObject):
         self.log.info(f"Applying database to {len(strings)} string(s)...")
 
         database_originals: dict[str, String] = {
-            string.original: string for string in self.database.strings
+            string.original: string for string in self.__database.strings
         }
         database_strings: dict[str, String] = {
-            string.id: string for string in self.database.strings
+            string.id: string for string in self.__database.strings
         }
 
         modified_strings: int = 0

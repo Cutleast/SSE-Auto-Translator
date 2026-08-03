@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import logging
@@ -22,6 +20,9 @@ class NXMHandler(SingletonQObject):
     Class for listening for Nexus Mods downloads.
     """
 
+    REG_PATH: str = "nxm\\shell\\open\\command"
+    PORT: int = 1248
+
     request_signal = Signal(str)
     """
     Signal emitted whenever a Mod Manager download is started by the user and was
@@ -31,17 +32,13 @@ class NXMHandler(SingletonQObject):
         str: Full NXM Mod Manager download URL containing key and expiration timestamp
     """
 
+    __reg_value: str
+    __prev_value: Optional[str]
+
     __listening: bool = False
-
-    REG_PATH: str = "nxm\\shell\\open\\command"
-    reg_value: str
-    PORT: int = 1248
-
-    prev_value: Optional[str]
-
     __context: Optional[zmq.Context] = None
     __socket: Optional[zmq.Socket] = None
-    _thread: Thread
+    __thread: Thread
 
     log: logging.Logger = logging.getLogger("NXMHandler")
 
@@ -53,8 +50,8 @@ class NXMHandler(SingletonQObject):
 
         super().__init__()
 
-        self.reg_value = executable + ' --download "%1"'
-        self._thread = Thread(self.__listen)
+        self.__reg_value = executable + ' --download "%1"'
+        self.__thread = Thread(self.__listen)
 
     def bind(self) -> None:
         """
@@ -66,8 +63,8 @@ class NXMHandler(SingletonQObject):
 
         self.bind_reg()
         self.__listening = True
-        self._thread = Thread(self.__listen)
-        self._thread.start()
+        self.__thread = Thread(self.__listen)
+        self.__thread.start()
 
         self.log.debug("Started listening for downloads.")
 
@@ -99,7 +96,7 @@ class NXMHandler(SingletonQObject):
             self.__socket.close(linger=0)
             self.__socket = None
 
-        self._thread.wait(1000)
+        self.__thread.wait(1000)
 
         self.log.debug("Stopped listening for downloads.")
 
@@ -122,22 +119,22 @@ class NXMHandler(SingletonQObject):
 
         try:
             with winreg.OpenKey(winreg.HKEY_CLASSES_ROOT, NXMHandler.REG_PATH) as hkey:
-                self.prev_value = winreg.QueryValue(hkey, None)
+                self.__prev_value = winreg.QueryValue(hkey, None)
         except FileNotFoundError:
-            self.prev_value = None
+            self.__prev_value = None
 
-        self.log.debug(f"Previous Value: '{self.prev_value}'")
+        self.log.debug(f"Previous Value: '{self.__prev_value}'")
 
         try:
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, NXMHandler.REG_PATH) as hkey:
-                winreg.SetValue(hkey, "", winreg.REG_SZ, self.reg_value)
+                winreg.SetValue(hkey, "", winreg.REG_SZ, self.__reg_value)
 
         except PermissionError:
             self.log.error("Failed to bind to NXM Links: Admin Rights required!")
 
             if start_uac:
                 try:
-                    pyuac.runAsAdmin([self.reg_value, "--bind-nxm"])
+                    pyuac.runAsAdmin([self.__reg_value, "--bind-nxm"])
                 except pywintypes.error:
                     self.log.warning("Failed to bind to NXM Links: Canceled by User.")
                     return
@@ -156,7 +153,7 @@ class NXMHandler(SingletonQObject):
 
         self.log.info("Unbinding from NXM Links...")
 
-        if self.prev_value is None:
+        if self.__prev_value is None:
             self.log.debug("Previous Value is None. Deleting Registry Key...")
 
             try:
@@ -165,12 +162,12 @@ class NXMHandler(SingletonQObject):
                 return
 
         else:
-            self.log.debug(f"Setting Registry value to '{self.prev_value}'...")
+            self.log.debug(f"Setting Registry value to '{self.__prev_value}'...")
 
             with winreg.OpenKey(
                 winreg.HKEY_CLASSES_ROOT, NXMHandler.REG_PATH, access=winreg.KEY_WRITE
             ) as hkey:
-                winreg.SetValue(hkey, "", winreg.REG_SZ, self.prev_value)
+                winreg.SetValue(hkey, "", winreg.REG_SZ, self.__prev_value)
 
         self.log.info("Unbound from NXM Links.")
 
@@ -188,23 +185,28 @@ class NXMHandler(SingletonQObject):
         except FileNotFoundError:
             return False
 
-        return cur_value == self.reg_value
+        return cur_value == self.__reg_value
 
     @staticmethod
     def send_request(request: str) -> NoReturn:
         """
         Sends download request to the currently running app, if any.
         Exits with fitting return code.
+
+        Args:
+            request (str):
+                Full NXM Mod Manager download URL containing key and expiration
+                timestamp.
         """
 
         with zmq.Context() as context:
-            client = context.socket(zmq.REQ)
+            client: zmq.SyncSocket = context.socket(zmq.REQ)
             client.connect(f"tcp://127.0.0.1:{NXMHandler.PORT}")
 
             client.send_string(request)
 
             if (client.poll(1000) & zmq.POLLIN) != 0:
-                reply = client.recv_string()
+                reply: str = client.recv_string()
                 if reply == "SUCCESS":
                     NXMHandler.log.debug("NXM download request succeeded.")
                     sys.exit()

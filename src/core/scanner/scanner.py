@@ -47,13 +47,13 @@ class Scanner(QObject):
 
     log: logging.Logger = logging.getLogger("Scanner")
 
-    mod_instance: ModInstance
-    database: TranslationDatabase
-    app_config: AppConfig
-    user_config: UserConfig
-    provider: TranslationProvider
-    masterlist: Masterlist
-    detector: LangDetector
+    __mod_instance: ModInstance
+    __database: TranslationDatabase
+    __app_config: AppConfig
+    __user_config: UserConfig
+    __provider: TranslationProvider
+    __masterlist: Masterlist
+    __detector: LangDetector
 
     def __init__(
         self,
@@ -76,15 +76,15 @@ class Scanner(QObject):
 
         super().__init__()
 
-        self.mod_instance = mod_instance
-        self.database = database
-        self.app_config = app_config
-        self.user_config = user_config
-        self.provider = provider
-        self.masterlist = masterlist
-        self.detector = LangDetector(
-            self.app_config.detector_confidence,
-            getattr(Language, self.user_config.language.id.upper()),
+        self.__mod_instance = mod_instance
+        self.__database = database
+        self.__app_config = app_config
+        self.__user_config = user_config
+        self.__provider = provider
+        self.__masterlist = masterlist
+        self.__detector = LangDetector(
+            self.__app_config.detector_confidence,
+            getattr(Language, self.__user_config.language.id.upper()),
         )
 
     def run_basic_scan(
@@ -118,7 +118,7 @@ class Scanner(QObject):
 
         database_strings: StringList = StringUtils.unique(
             string
-            for string in self.database.strings
+            for string in self.__database.strings
             if string.status != StringStatus.TranslationRequired
         )
         database_originals: list[str] = unique(
@@ -128,7 +128,7 @@ class Scanner(QObject):
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
         failed_modfiles: int = 0
         with ProgressExecutor(
-            pdisplay, max_workers=self.app_config.worker_thread_num
+            pdisplay, max_workers=self.__app_config.worker_thread_num
         ) as executor:
             executor.set_main_progress_text(self.tr("Scanning modlist..."))
 
@@ -208,8 +208,8 @@ class Scanner(QObject):
         self.log.debug("Detecting language...")
 
         status: TranslationStatus
-        if self.detector.requires_translation(modfile_strings):
-            if self.database.get_translation_by_modfile_path(modfile.path) is not None:
+        if self.__detector.requires_translation(modfile_strings):
+            if self.__database.get_translation_by_modfile_path(modfile.path) is not None:
                 status = TranslationStatus.TranslationInstalled
 
             elif any(
@@ -266,7 +266,7 @@ class Scanner(QObject):
             if not relevant_modfiles:
                 continue
 
-            if mod.mod_id is not None and self.provider.is_mod_id_valid(
+            if mod.mod_id is not None and self.__provider.is_mod_id_valid(
                 mod.mod_id, check_online=False
             ):
                 relevant_items[mod] = relevant_modfiles
@@ -284,7 +284,7 @@ class Scanner(QObject):
         )
 
         with ProgressExecutor(
-            pdisplay, max_workers=self.app_config.worker_thread_num
+            pdisplay, max_workers=self.__app_config.worker_thread_num
         ) as executor:
             executor.set_main_progress_text(
                 self.tr("Scanning online for available translations...")
@@ -348,16 +348,16 @@ class Scanner(QObject):
         self, mod_id: ModId, modfile: ModFile
     ) -> TranslationStatus:
         available_translations: dict[Source, list[ModId]] = (
-            self.provider.get_translations(
-                mod_id,
-                modfile.name,
-                self.user_config.language.id,
-                self.masterlist,
-                self.user_config.author_blacklist,
+            self.__provider.get_translations(
+                mod_id=mod_id,
+                file_name=modfile.name,
+                language=self.__user_config.language.id,
+                masterlist=self.__masterlist,
+                author_blacklist=self.__user_config.author_blacklist,
             )
         )
 
-        masterlist_entry: Optional[MasterlistEntry] = self.masterlist.entries.get(
+        masterlist_entry: Optional[MasterlistEntry] = self.__masterlist.entries.get(
             modfile.name.lower()
         )
 
@@ -446,8 +446,8 @@ class Scanner(QObject):
         for m, modfile in enumerate(modfiles):
             if pdisplay is not None:
                 pdisplay.updateProgress(
-                    1,
-                    ProgressUpdate(
+                    progress_id=1,
+                    payload=ProgressUpdate(
                         status_text=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
                         value=m,
                         maximum=len(modfiles),
@@ -508,8 +508,8 @@ class Scanner(QObject):
                     ),
                 )
                 pdisplay.updateProgress(
-                    1,
-                    ProgressUpdate(
+                    progress_id=1,
+                    payload=ProgressUpdate(
                         status_text=installed_translation.name, value=0, maximum=0
                     ),
                 )
@@ -536,14 +536,14 @@ class Scanner(QObject):
                     mod=installed_translation,
                     original_mod=original_mod,
                     strings=translation_strings,
-                    database=self.database,
+                    database=self.__database,
                     add_and_save=False,
                 )
             )
 
         self.log.info(f"Imported {len(new_translations)} installed translation(s).")
 
-        if self.app_config.auto_create_database_translations:
+        if self.__app_config.auto_create_database_translations:
             self.log.info("Creating database translations...")
             items: dict[Mod, list[ModFile]] = {
                 mod: [
@@ -569,14 +569,15 @@ class Scanner(QObject):
                         )
                     )
                     pdisplay.updateProgress(
-                        1, ProgressUpdate(status_text=mod.name, value=0, maximum=0)
+                        progress_id=1,
+                        payload=ProgressUpdate(status_text=mod.name, value=0, maximum=0),
                     )
 
                 self.log.debug(f"Creating database translation for '{mod.name}'...")
                 new_translations.append(
                     DatabaseService.create_translation_for_mod(
-                        mod,
-                        self.database,
+                        mod=mod,
+                        database=self.__database,
                         only_complete_coverage=True,
                         add_and_save=False,
                     )
@@ -591,7 +592,7 @@ class Scanner(QObject):
             new_translation.remove_duplicates()
 
         if new_translations:
-            DatabaseService.add_translations(new_translations, self.database)
+            DatabaseService.add_translations(new_translations, self.__database)
 
     def run_translation_scan(
         self, mods: list[Mod], pdisplay: Optional[ProgressDisplay] = None
@@ -623,7 +624,8 @@ class Scanner(QObject):
                     ),
                 )
                 pdisplay.updateProgress(
-                    1, ProgressUpdate(status_text=mod.name, value=0, maximum=0)
+                    progress_id=1,
+                    payload=ProgressUpdate(status_text=mod.name, value=0, maximum=0),
                 )
 
             original_mod: Optional[Mod] = self.__translation_scan_mod(mod, pdisplay)
@@ -646,7 +648,7 @@ class Scanner(QObject):
 
         modfile_paths: list[Path] = list(
             filter(
-                lambda m: self.database.get_translation_by_modfile_path(m) is None,
+                lambda m: self.__database.get_translation_by_modfile_path(m) is None,
                 unique(
                     [
                         modfile.path
@@ -660,16 +662,16 @@ class Scanner(QObject):
         for m, modfile_path in enumerate(modfile_paths):
             if pdisplay is not None:
                 pdisplay.updateProgress(
-                    1,
-                    ProgressUpdate(
+                    progress_id=1,
+                    payload=ProgressUpdate(
                         status_text=f"{mod.name} > {modfile_path} ({m}/{len(modfile_paths)})",
                         value=m,
                         maximum=len(modfile_paths),
                     ),
                 )
 
-            original_mod = self.mod_instance.get_mod_with_modfile(
-                modfile_path,
+            original_mod = self.__mod_instance.get_mod_with_modfile(
+                modfile=modfile_path,
                 ignore_mods=[mod],
                 ignore_states=[
                     TranslationStatus.IsTranslated,

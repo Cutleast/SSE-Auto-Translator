@@ -18,6 +18,7 @@ from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
+    QAbstractButton,
     QApplication,
     QDialog,
     QFileDialog,
@@ -77,15 +78,15 @@ class MainPageWidget(QWidget):
 
     log: logging.Logger = logging.getLogger("Main")
 
-    mod_instance: ModInstance
-    ignore_list: list[str]
+    __mod_instance: ModInstance
+    __ignore_list: list[str]
 
-    app_config: AppConfig
-    user_data: UserData
-    scanner: Scanner
-    provider: TranslationProvider
-    download_manager: DownloadManager
-    state_service: StateService
+    __app_config: AppConfig
+    __user_data: UserData
+    __scanner: Scanner
+    __provider: TranslationProvider
+    __download_manager: DownloadManager
+    __state_service: StateService
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
@@ -120,13 +121,13 @@ class MainPageWidget(QWidget):
 
         self.setObjectName("root")
 
-        self.mod_instance = user_data.modinstance
-        self.app_config = app_config
-        self.user_data = user_data
-        self.scanner = scanner
-        self.provider = provider
-        self.download_manager = download_manager
-        self.state_service = state_service
+        self.__mod_instance = user_data.modinstance
+        self.__app_config = app_config
+        self.__user_data = user_data
+        self.__scanner = scanner
+        self.__provider = provider
+        self.__download_manager = download_manager
+        self.__state_service = state_service
 
         self.__init_ui()
 
@@ -163,7 +164,7 @@ class MainPageWidget(QWidget):
             self.edit_translation_requested.emit
         )
 
-        self.state_service.update_signal.connect(self.__update)
+        self.__state_service.update_signal.connect(self.__update)
         self.__update()
 
     def __init_ui(self) -> None:
@@ -201,15 +202,18 @@ class MainPageWidget(QWidget):
         hlayout.addWidget(self.__search_bar)
 
         ko_fi_button = LinkButton(
-            MainPageWidget.KOFI_URL,
-            self.tr("Support me on Ko-fi"),
-            IconProvider.get_icon("ko-fi"),
+            url=MainPageWidget.KOFI_URL,
+            display_text=self.tr("Support me on Ko-fi"),
+            icon=IconProvider.get_icon("ko-fi"),
         )
         hlayout.addWidget(ko_fi_button)
 
         self.__bar_chart = StackedBar(
-            [0 for _ in TranslationStatus],
-            colors=[TranslationStatus.get_color(s) for s in TranslationStatus],
+            values=[0 for _ in TranslationStatus],
+            colors=[
+                TranslationStatus.get_color(s) or QColor.fromString("#fff")
+                for s in TranslationStatus
+            ],
         )
         self.__bar_chart.setFixedHeight(3)
         self.__vlayout.addWidget(self.__bar_chart)
@@ -219,24 +223,24 @@ class MainPageWidget(QWidget):
         self.__vlayout.addWidget(splitter, stretch=1)
 
         self.__modinstance_widget = ModInstanceWidget(
-            self.app_config, self.user_data, self.provider, self.state_service
+            self.__app_config, self.__user_data, self.__provider, self.__state_service
         )
         splitter.addWidget(self.__modinstance_widget)
 
         self.__database_widget = DatabaseWidget(
-            database=self.user_data.database,
-            provider=self.provider,
-            mod_instance=self.mod_instance,
-            app_config=self.app_config,
-            scanner=self.scanner,
-            download_manager=self.download_manager,
-            state_service=self.state_service,
+            database=self.__user_data.database,
+            provider=self.__provider,
+            mod_instance=self.__mod_instance,
+            app_config=self.__app_config,
+            scanner=self.__scanner,
+            download_manager=self.__download_manager,
+            state_service=self.__state_service,
         )
         splitter.addWidget(self.__database_widget)
         splitter.setSizes([int(0.6 * splitter.width()), int(0.4 * splitter.width())])
 
     def __update(self) -> None:
-        self.__title_label.setText(self.mod_instance.display_name)
+        self.__title_label.setText(self.__mod_instance.display_name)
         self.__modfiles_num_label.display(
             self.__modinstance_widget.get_visible_modfile_item_count()
         )
@@ -244,7 +248,7 @@ class MainPageWidget(QWidget):
 
     def __update_header(self) -> None:
         modfile_states: dict[TranslationStatus, int] = (
-            self.state_service.get_modfile_state_summary(
+            self.__state_service.get_modfile_state_summary(
                 self.__modinstance_widget.get_visible_modfiles()
             )
         )
@@ -287,11 +291,11 @@ class MainPageWidget(QWidget):
         """
 
         IgnoreListDialog(
-            self.user_data.masterlist,
-            self.user_data.user_config,
-            QApplication.activeModalWidget(),
+            masterlist=self.__user_data.masterlist,
+            user_config=self.__user_data.user_config,
+            parent=QApplication.activeModalWidget(),
         ).exec()
-        self.user_data.user_config.save()
+        self.__user_data.user_config.save()
 
         self.__modinstance_widget.update()
 
@@ -313,8 +317,8 @@ class MainPageWidget(QWidget):
             ]
 
         ResultDialog(
-            self.state_service.get_modfile_state_summary(modfiles),
-            QApplication.activeModalWidget(),
+            summary=self.__state_service.get_modfile_state_summary(modfiles),
+            parent=QApplication.activeModalWidget(),
         ).exec()
 
     def __run_basic_scan(self, only_selected: bool = False) -> None:
@@ -331,27 +335,27 @@ class MainPageWidget(QWidget):
         modfiles: dict[Mod, list[ModFile]]
         if not only_selected:
             modfiles = self.__modinstance_widget.get_checked_items()
-            mods = self.mod_instance.mods
+            mods = self.__mod_instance.mods
         else:
             mods = self.__modinstance_widget.get_selected_items()[0]
             modfiles = self.__modinstance_widget.get_selected_modfiles()
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *ProgressDialog(
-                lambda pdisplay: self.scanner.run_basic_scan(modfiles, pdisplay),
-                QApplication.activeModalWidget(),
+                func=lambda pdisplay: self.__scanner.run_basic_scan(modfiles, pdisplay),
+                parent=QApplication.activeModalWidget(),
             )
             .run()
             .values(),
         )
-        self.state_service.set_modfile_states(scan_result)
+        self.__state_service.set_modfile_states(scan_result)
 
-        if self.app_config.auto_import_translations:
+        if self.__app_config.auto_import_translations:
             ProgressDialog(
-                lambda pdisplay: self.scanner.import_installed_translations(
+                func=lambda pdisplay: self.__scanner.import_installed_translations(
                     mods, pdisplay
                 ),
-                QApplication.activeModalWidget(),
+                parent=QApplication.activeModalWidget(),
             ).run()
 
         self.__show_scan_result(list(scan_result.keys()))
@@ -374,12 +378,12 @@ class MainPageWidget(QWidget):
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *ProgressDialog(
-                lambda pdisplay: self.scanner.run_online_scan(modfiles, pdisplay)
+                lambda pdisplay: self.__scanner.run_online_scan(modfiles, pdisplay)
             )
             .run()
             .values()
         )
-        self.state_service.set_modfile_states(scan_result)
+        self.__state_service.set_modfile_states(scan_result)
 
         self.__show_scan_result(list(scan_result.keys()))
 
@@ -401,22 +405,22 @@ class MainPageWidget(QWidget):
             items = self.__modinstance_widget.get_selected_modfiles()
 
         download_entries: DownloadListEntries = ProgressDialog(
-            lambda pdisplay: self.download_manager.collect_available_downloads(
+            lambda pdisplay: self.__download_manager.collect_available_downloads(
                 items, pdisplay
             ),
         ).run()
         if download_entries:
-            download_list_window = DownloadListWindow(download_entries, self.provider)
+            download_list_window = DownloadListWindow(download_entries, self.__provider)
             download_list_window.downloads_started.connect(
                 lambda file_downloads, link_nxm: list(
                     map(
-                        self.download_manager.request_download,
+                        self.__download_manager.request_download,
                         cast(list[FileDownload], file_downloads),
                     )
                 )
             )
             download_list_window.downloads_started.connect(
-                lambda file_downloads, link_nxm: self.download_manager.start()
+                lambda file_downloads, link_nxm: self.__download_manager.start()
             )
             WindowManager.get().show(download_list_window)
         else:
@@ -432,14 +436,17 @@ class MainPageWidget(QWidget):
         """
 
         output_path: Path = ProgressDialog(
-            lambda pdisplay: Exporter().build_output_mod(
-                self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
-                self.mod_instance,
-                self.user_data.database.user_translations,
-                self.user_data.user_config,
-                pdisplay,
+            func=lambda pdisplay: Exporter().build_output_mod(
+                output_path=(
+                    self.__app_config.output_path
+                    or (get_current_path() / "SSE-AT Output")
+                ),
+                mod_instance=self.__mod_instance,
+                translations=self.__user_data.database.user_translations,
+                user_config=self.__user_data.user_config,
+                pdisplay=pdisplay,
             ),
-            QApplication.activeModalWidget(),
+            parent=QApplication.activeModalWidget(),
         ).run()
 
         message_box = QMessageBox()
@@ -460,7 +467,7 @@ class MainPageWidget(QWidget):
         message_box.button(QMessageBox.StandardButton.Help).setText(
             self.tr("Open output mod in Explorer")
         )
-        btn = message_box.button(QMessageBox.StandardButton.Open)
+        btn: QAbstractButton = message_box.button(QMessageBox.StandardButton.Open)
         btn.setText(self.tr("Open DSD modpage on Nexus Mods"))
         btn.clicked.disconnect()
         btn.clicked.connect(
@@ -469,9 +476,9 @@ class MainPageWidget(QWidget):
             )
         )
 
-        choice = message_box.exec()
+        choice: int = message_box.exec()
 
-        if choice == message_box.StandardButton.Help:
+        if choice == QMessageBox.StandardButton.Help:
             os.startfile(output_path)
 
     def __run_string_search(self) -> None:
@@ -485,10 +492,10 @@ class MainPageWidget(QWidget):
             filter: SearchFilter = dialog.get_filter()
 
             search_result: dict[Path, StringList] = ProgressDialog(
-                lambda pdisplay: self.scanner.run_string_search(
+                func=lambda pdisplay: self.__scanner.run_string_search(
                     self.__modinstance_widget.get_checked_items(), filter, pdisplay
                 ),
-                QApplication.activeModalWidget(),
+                parent=QApplication.activeModalWidget(),
             ).run()
 
             if search_result:
@@ -501,7 +508,7 @@ class MainPageWidget(QWidget):
                 )
             else:
                 ErrorDialog(
-                    QApplication.activeModalWidget(),
+                    parent=QApplication.activeModalWidget(),
                     title=self.tr("No strings found!"),
                     text=self.tr(
                         "Did not find any strings matching the given filter!\n"
@@ -528,11 +535,11 @@ class MainPageWidget(QWidget):
         if fdialog.exec() == QFileDialog.DialogCode.Accepted:
             file_path = Path(fdialog.selectedFiles()[0])
 
-            self.state_service.export_states_to_json_file(
+            self.__state_service.export_states_to_json_file(
                 file_path,
                 check_states={
                     modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
-                    for mod in self.user_data.modinstance.mods
+                    for mod in self.__user_data.modinstance.mods
                     for modfile in mod.modfiles
                 },
             )
@@ -549,10 +556,10 @@ class MainPageWidget(QWidget):
         Saves the state of the widget to the cache.
         """
 
-        self.state_service.save_states_to_cache(
+        self.__state_service.save_states_to_cache(
             {
                 modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
-                for mod in self.user_data.modinstance.mods
+                for mod in self.__user_data.modinstance.mods
                 for modfile in mod.modfiles
             }
         )

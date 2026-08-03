@@ -43,10 +43,10 @@ class SettingsWidget(QWidget):
     restart_required: bool = False
     """Whether a restart is required for changes to take effect."""
 
-    cache: Cache
-    app_config: AppConfig
-    user_config: UserConfig
-    translator_config: TranslatorConfig
+    __cache: Cache
+    __app_config: AppConfig
+    __user_config: UserConfig
+    __translator_config: TranslatorConfig
 
     __vlayout: QVBoxLayout
     __tab_widget: QTabWidget
@@ -78,10 +78,10 @@ class SettingsWidget(QWidget):
 
         super().__init__(parent)
 
-        self.cache = cache
-        self.app_config = app_config
-        self.user_config = user_config
-        self.translator_config = translator_config
+        self.__cache = cache
+        self.__app_config = app_config
+        self.__user_config = user_config
+        self.__translator_config = translator_config
 
         self.__init_ui()
 
@@ -113,17 +113,17 @@ class SettingsWidget(QWidget):
         self.__tab_widget.tabBar().setDocumentMode(True)
         self.__vlayout.addWidget(self.__tab_widget)
 
-        self.__app_settings = AppSettings(self.app_config, self.cache)
+        self.__app_settings = AppSettings(self.__app_config, self.__cache)
         self.__app_settings.changed_signal.connect(self._on_change)
         self.__app_settings.restart_required_signal.connect(self._on_restart_required)
         self.__tab_widget.addTab(self.__app_settings, self.tr("App Settings"))
 
-        self.__user_settings = UserSettings(self.user_config)
+        self.__user_settings = UserSettings(self.__user_config)
         self.__user_settings.changed_signal.connect(self._on_change)
         self.__user_settings.restart_required_signal.connect(self._on_restart_required)
         self.__tab_widget.addTab(self.__user_settings, self.tr("User Settings"))
 
-        self.__translator_settings = TranslatorSettings(self.translator_config)
+        self.__translator_settings = TranslatorSettings(self.__translator_config)
         self.__translator_settings.changed_signal.connect(self._on_change)
         self.__translator_settings.restart_required_signal.connect(
             self._on_restart_required
@@ -169,13 +169,13 @@ class SettingsWidget(QWidget):
         hlayout.addWidget(self.__save_button)
 
     def _save(self) -> None:
-        self.__app_settings.apply(self.app_config)
-        self.__user_settings.apply(self.user_config)
-        self.__translator_settings.apply(self.translator_config)
+        self.__app_settings.apply(self.__app_config)
+        self.__user_settings.apply(self.__user_config)
+        self.__translator_settings.apply(self.__translator_config)
 
-        self.app_config.save()
-        self.user_config.save()
-        self.translator_config.save()
+        self.__app_config.save()
+        self.__user_config.save()
+        self.__translator_config.save()
 
         self.changes_pending = False
         self.save_signal.emit()
@@ -193,7 +193,7 @@ class SettingsWidget(QWidget):
             )
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             messagebox.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            choice = messagebox.exec()
+            choice: int = messagebox.exec()
 
             if choice == QMessageBox.StandardButton.Yes:
                 from app import App

@@ -85,47 +85,19 @@ class ModInstanceWidget(QTreeWidget):
         Translation: Translation to open with the editor.
     """
 
-    app_config: AppConfig
-    user_data: UserData
-    database: TranslationDatabase
-    provider: TranslationProvider
-
-    mod_instance: ModInstance
-    """
-    Currently loaded mod instance.
-    """
-
-    state_service: StateService
-
+    __app_config: AppConfig
+    __user_data: UserData
+    __database: TranslationDatabase
+    __provider: TranslationProvider
+    __mod_instance: ModInstance
+    __state_service: StateService
     __mod_items: dict[Mod, QTreeWidgetItem]
-    """
-    Mapping of loaded mods to their tree items.
-    """
-
     __modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]]
-    """
-    Mapping of loaded mods to their mod file tree items.
-    """
 
     __menu: ModInstanceMenu
-    """
-    Context menu.
-    """
-
     __name_filter: Optional[tuple[str, bool]] = None
-    """
-    Optional name filter and case-sensitivity.
-    """
-
     __state_filter: Optional[list[TranslationStatus]] = None
-    """
-    Optional list of mod file states to filter by.
-    """
-
     __type_filter: Optional[list[FileType]] = None
-    """
-    Optional list of file types to filter by.
-    """
 
     def __init__(
         self,
@@ -144,12 +116,12 @@ class ModInstanceWidget(QTreeWidget):
 
         super().__init__()
 
-        self.app_config = app_config
-        self.user_data = user_data
-        self.database = user_data.database
-        self.provider = provider
-        self.mod_instance = user_data.modinstance
-        self.state_service = state_service
+        self.__app_config = app_config
+        self.__user_data = user_data
+        self.__database = user_data.database
+        self.__provider = provider
+        self.__mod_instance = user_data.modinstance
+        self.__state_service = state_service
 
         self.__init_ui()
 
@@ -176,7 +148,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.state_service.update_signal.connect(self.update)
+        self.__state_service.update_signal.connect(self.update)
 
         self.__load_mod_instance()
 
@@ -210,7 +182,7 @@ class ModInstanceWidget(QTreeWidget):
 
     def __open_context_menu(self) -> None:
         self.__menu.open(
-            self.__get_current_item(), self.get_selected_items()[1], self.database
+            self.__get_current_item(), self.get_selected_items()[1], self.__database
         )
 
     def __load_mod_instance(self) -> None:
@@ -222,10 +194,10 @@ class ModInstanceWidget(QTreeWidget):
         self.__modfile_items = {}
         self.clear()
 
-        checkstates: dict[ModFile, bool] = self.state_service.load_states_from_cache()
+        checkstates: dict[ModFile, bool] = self.__state_service.load_states_from_cache()
 
         cur_separator: Optional[QTreeWidgetItem] = None
-        for i, mod in enumerate(self.mod_instance.mods):
+        for i, mod in enumerate(self.__mod_instance.mods):
             if mod.mod_type == Mod.Type.Separator:
                 cur_separator = ModInstanceWidget._create_separator_item(mod, i)
                 self.__mod_items[mod] = cur_separator
@@ -331,12 +303,12 @@ class ModInstanceWidget(QTreeWidget):
             )
 
             for modfile, item in modfile_items.items():
-                ignored: bool = self.user_data.masterlist.is_ignored(modfile.name)
+                ignored: bool = self.__user_data.masterlist.is_ignored(modfile.name)
                 item.setDisabled(ignored)
                 if ignored:
                     item.setCheckState(0, Qt.CheckState.Unchecked)
 
-                if self.app_config.debug_mode:
+                if self.__app_config.debug_mode:
                     item.setToolTip(1, modfile.status.name)
 
                 item.setHidden(
@@ -360,7 +332,7 @@ class ModInstanceWidget(QTreeWidget):
                     TranslationStatus.get_color(modfile.status) or Qt.GlobalColor.white,
                 )
 
-            if self.app_config.debug_mode:
+            if self.__app_config.debug_mode:
                 mod_item.setToolTip(1, str(mod))
 
             mod_item.setHidden(
@@ -381,7 +353,7 @@ class ModInstanceWidget(QTreeWidget):
                         [
                             modfile.status
                             for modfile in mod.modfiles
-                            if not self.user_data.masterlist.is_ignored(modfile.name)
+                            if not self.__user_data.masterlist.is_ignored(modfile.name)
                         ],
                         default=TranslationStatus.NoneStatus,
                     )
@@ -426,9 +398,9 @@ class ModInstanceWidget(QTreeWidget):
         _, selected_modfiles = self.get_selected_items()
 
         for modfile in selected_modfiles:
-            self.user_data.masterlist.add_to_ignore_list(modfile.name)
+            self.__user_data.masterlist.add_to_ignore_list(modfile.name)
 
-        self.user_data.user_config.save()
+        self.__user_data.user_config.save()
         self.update()
 
     def __open_modpage(self) -> None:
@@ -436,7 +408,7 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, Mod) and current_item.mod_id:
             try:
-                url: Optional[str] = self.provider.get_modpage_url(
+                url: Optional[str] = self.__provider.get_modpage_url(
                     current_item.mod_id, source=Source.NexusMods
                 )
                 webbrowser.open(url)
@@ -469,7 +441,7 @@ class ModInstanceWidget(QTreeWidget):
         if not isinstance(current_item, ModFile):
             return
 
-        translation = self.database.get_translation_by_modfile_path(current_item.path)
+        translation = self.__database.get_translation_by_modfile_path(current_item.path)
 
         if translation is not None:
             untranslated_strings: StringList = [
@@ -491,11 +463,11 @@ class ModInstanceWidget(QTreeWidget):
             return
 
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_path(
+            translation = self.__database.get_translation_by_modfile_path(
                 current_item.path
             )
         else:
-            translation = self.database.get_translation_by_mod(current_item)
+            translation = self.__database.get_translation_by_mod(current_item)
 
         if translation is not None:
             dialog = StringListWindow(
@@ -513,11 +485,11 @@ class ModInstanceWidget(QTreeWidget):
             return
 
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_path(
+            translation = self.__database.get_translation_by_modfile_path(
                 current_item.path
             )
         else:
-            translation = self.database.get_translation_by_mod(current_item)
+            translation = self.__database.get_translation_by_mod(current_item)
 
         if translation is not None:
             self.highlight_translation_requested.emit(translation)
@@ -563,14 +535,14 @@ class ModInstanceWidget(QTreeWidget):
                 )
 
                 translation = DatabaseService.create_translation_for_mod(
-                    selected_mod, self.database
+                    selected_mod, self.__database
                 )
                 t += 1
 
                 modfile_states.update(
                     {
                         not_none(
-                            self.mod_instance.get_modfile(path)
+                            self.__mod_instance.get_modfile(path)
                         ): TranslationStatus.TranslationIncomplete
                         for path in translation.strings
                     }
@@ -598,7 +570,7 @@ class ModInstanceWidget(QTreeWidget):
                     continue  # no translation required for the mod file
 
                 translation = DatabaseService.create_translation_for_modfile(
-                    selected_modfile, self.database
+                    selected_modfile, self.__database
                 )
                 t += 1
 
@@ -606,7 +578,7 @@ class ModInstanceWidget(QTreeWidget):
                     TranslationStatus.TranslationIncomplete
                 )
 
-            self.state_service.set_modfile_states(modfile_states)
+            self.__state_service.set_modfile_states(modfile_states)
 
             if t == 1:
                 self.highlight_translation_requested.emit(translation)  # pyright: ignore[reportPossiblyUnboundVariable]
@@ -630,7 +602,7 @@ class ModInstanceWidget(QTreeWidget):
                 # Find the original mod
                 original_mod: Optional[Mod] = None
                 for modfile in current_item.modfiles:
-                    original_mod = self.mod_instance.get_mod_with_modfile(
+                    original_mod = self.__mod_instance.get_mod_with_modfile(
                         modfile.full_path.relative_to(current_item.path),
                         ignore_mods=[current_item],
                         ignore_states=[
@@ -647,7 +619,7 @@ class ModInstanceWidget(QTreeWidget):
                         StringExtractor.map_strings_from_mods(current_item, original_mod)
                     )
                     DatabaseService.create_translation_from_mod(
-                        current_item, original_mod, strings, self.database
+                        current_item, original_mod, strings, self.__database
                     )
                 else:
                     raise FileNotFoundError(
@@ -668,11 +640,11 @@ class ModInstanceWidget(QTreeWidget):
 
         translation: Optional[Translation] = None
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_path(
+            translation = self.__database.get_translation_by_modfile_path(
                 current_item.path
             )
         elif isinstance(current_item, Mod):
-            translation = self.database.get_translation_by_mod(current_item)
+            translation = self.__database.get_translation_by_mod(current_item)
 
         if translation is not None:
             self.edit_translation_requested.emit(translation)
@@ -772,7 +744,7 @@ class ModInstanceWidget(QTreeWidget):
                     for modfile in current_item.modfiles
                 )
             )
-        ) and self.app_config.show_strings_on_double_click:
+        ) and self.__app_config.show_strings_on_double_click:
             self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())

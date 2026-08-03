@@ -65,7 +65,7 @@ class DownloadListWidget(QWidget):
     """
 
     __items: dict[Path, DownloadListWidgetItem]
-    provider: TranslationProvider
+    _provider: TranslationProvider
 
     __filter_items: bool = False
     """Whether to hide items with just one available download."""
@@ -99,11 +99,13 @@ class DownloadListWidget(QWidget):
 
         super().__init__(parent)
 
-        self.provider = provider
+        self._provider = provider
 
         self.__init_ui()
 
-        self._link_nxm_checkbox.setChecked(not self.provider.direct_downloads_possible())
+        self._link_nxm_checkbox.setChecked(
+            not self._provider.direct_downloads_possible()
+        )
         self.__init_items(entries)
         self.__tree_widget.expandAll()
 
@@ -234,7 +236,7 @@ class DownloadListWidget(QWidget):
                     DownloadListWidget._create_modfile_item(modfile_path)
                 )
                 mod_item.addChild(modfile_item)
-                modfile_item.post_init(downloads, self.provider)
+                modfile_item.post_init(downloads, self._provider)
                 modfile_item.toggled.connect(self.__on_checkstate_changed)
                 self.__items[modfile_path] = modfile_item
 
@@ -258,7 +260,7 @@ class DownloadListWidget(QWidget):
 
     def __open_modpage(self, mod_info: ModInfo) -> None:
         if mod_info.mod_id is not None:
-            url: str = self.provider.get_modpage_url(mod_info.mod_id, mod_info.source)
+            url: str = self._provider.get_modpage_url(mod_info.mod_id, mod_info.source)
             webbrowser.open(url)
 
     @staticmethod

@@ -28,47 +28,47 @@
 <context>
     <name>ApiSetup</name>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="45"/>
+        <location filename="src/ui/widgets/api_setup.py" line="43"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
         <translation>为了从 Nexus Mods 获取翻译，该工具需要访问 Nexus Mods API。您可以通过两种方法设置访问：手动输入 API 密钥或通过 SSO（一键登录）。</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="67"/>
+        <location filename="src/ui/widgets/api_setup.py" line="65"/>
         <source>Click here to login to Nexus Mods via browser</source>
         <translation>点击此处通过浏览器登录 Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="83"/>
+        <location filename="src/ui/widgets/api_setup.py" line="81"/>
         <source>Single-Sign-On (browser)</source>
         <translation>点击此处通过浏览器登录 Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="93"/>
+        <location filename="src/ui/widgets/api_setup.py" line="91"/>
         <source>Insert your API key</source>
         <translation>输入您的 API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="97"/>
+        <location filename="src/ui/widgets/api_setup.py" line="95"/>
         <source>Check API key</source>
         <translation>检查 API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="110"/>
+        <location filename="src/ui/widgets/api_setup.py" line="108"/>
         <source>API key is valid!</source>
         <translation>API 密钥有效！</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="115"/>
+        <location filename="src/ui/widgets/api_setup.py" line="113"/>
         <source>API key is invalid!</source>
         <translation>API 密钥无效！</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="76"/>
+        <location filename="src/ui/widgets/api_setup.py" line="74"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation>已成功登录到N网</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="119"/>
+        <location filename="src/ui/widgets/api_setup.py" line="117"/>
         <source>Manual Setup</source>
         <translation>手动设置</translation>
     </message>
@@ -289,12 +289,12 @@ This feature is considered experimental because a crash might prevent it from un
 <context>
     <name>BlacklistDialog</name>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="43"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
         <source>Blacklist for Translation Authors</source>
         <translation>翻译作者黑名单</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="51"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="49"/>
         <source>This is a blacklist to exclude translations from certain authors.
 All translations from authors on this list below (case-insensitive) are ignored and do not show up when scanning online.
 This list only affects translations from Nexus Mods!</source>
@@ -303,38 +303,38 @@ This list only affects translations from Nexus Mods!</source>
 此列表仅影响 Nexus Mods 的翻译！</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="63"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="61"/>
         <source>Remove selected authors from list...</source>
         <translation>从列表中删除选定的作者...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="79"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="77"/>
         <source>Add author...</source>
         <translation>添加作者...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="83"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="81"/>
         <source>Add Author...</source>
         <translation>添加作者...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="82"/>
         <source>Enter author name (case-insensitive):</source>
         <translation>输入作者姓名（不区分大小写）：</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="86"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="87"/>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="148"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="85"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="146"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/blacklist_dialog.py" line="143"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="141"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
@@ -410,12 +410,12 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DatabaseWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/database_widget.py" line="75"/>
+        <location filename="src/ui/main_page/database/database_widget.py" line="73"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/database_widget.py" line="78"/>
+        <location filename="src/ui/main_page/database/database_widget.py" line="76"/>
         <source>Downloads</source>
         <translation>下载</translation>
     </message>
@@ -495,96 +495,96 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="134"/>
         <source>Available Downloads</source>
         <translation>可用下载</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="141"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>以下是所需且可在线获取的翻译版本。请选择您想要下载的翻译版本，并在准备就绪后点击“开始下载”。
 如果你没有Nexus Mods Premium账户，则必须将SSE-AT与&quot;Mod Manager Downloads&quot;相关联。</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="153"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="155"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>开始之前将 SSE-AT 链接到“Mod Manager Downloads”</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="157"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="159"/>
         <source>Start downloads</source>
         <translation>开始下载</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="173"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="175"/>
         <source>Selected downloads:</source>
         <translation>已选择的下载文件：</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="188"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="190"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Mod 文件夹</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="189"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
         <source>Translation mod</source>
         <translation>翻译 mod</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
         <source>Translation file</source>
         <translation>翻译文件版本</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="217"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="219"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>具有相同选定下载项的项目只能一起勾选或取消勾选。</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="254"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="256"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>在 Nexus Mods 上打开 Mod 页面...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="338"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="389"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="340"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="391"/>
         <source>SSE-AT download list file</source>
         <translation>SSE-AT下载列表文件</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="339"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="341"/>
         <source>Import download list...</source>
         <translation>导入下载列表...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="371"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="377"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="373"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="379"/>
         <source>Import complete</source>
         <translation>导入完成</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="372"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="374"/>
         <source>Import completed with errors! Click &apos;Ok&apos; to see details.</source>
         <translation>导入已完成，但有错误！单击“确定”查看详细信息。</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="378"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="380"/>
         <source>Import completed successfully!</source>
         <translation>导入成功完成！</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="390"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="392"/>
         <source>Export download list...</source>
         <translation>导出下载列表...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="426"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
         <source>Export complete</source>
         <translation>导出完成</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="426"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
         <source>Export completed successfully!</source>
         <translation>导出成功完成！</translation>
     </message>
@@ -691,7 +691,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="174"/>
+        <location filename="src/core/editor/editor.py" line="176"/>
         <source>Translating with API...</source>
         <translation>使用 API 翻译中...</translation>
     </message>
@@ -750,22 +750,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>EditorPage</name>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="173"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="177"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="175"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="179"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
         <translation>您确定要关闭吗？所有更改都将丢失！</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="181"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="185"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="182"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="186"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -778,17 +778,17 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation>字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="242"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="243"/>
         <source>DSD file</source>
         <translation>DSD 文件</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="243"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="244"/>
         <source>Import pre-v1.1 translation...</source>
         <translation>导入 v1.1 之前的翻译...</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="403"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="404"/>
         <source>Translated %n string from database.</source>
         <comment>Translated %n strings from database.</comment>
         <translation>
@@ -796,22 +796,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="417"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
         <source>Search and Replace</source>
         <translation>搜索和替换</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="431"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="432"/>
         <source>Case sensitive</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="470"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="471"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="477"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="478"/>
         <source>Are you sure you want to translate %n string via translator API?
 Depending on the translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n strings via translator API?
@@ -822,89 +822,89 @@ Depending on the translator API this can raise unexpected costs.</comment>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="526"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="527"/>
         <source>Save before export?</source>
         <translation>导出前保存？</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="529"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="530"/>
         <source>Do you want to save the translation before exporting? Unsaved changes are not exported.</source>
         <translation>您想在导出之前保存翻译吗？未保存的更改不会导出。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="538"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="539"/>
         <source>Export only</source>
         <translation>仅导出</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="541"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="542"/>
         <source>Save and export</source>
         <translation>保存并导出</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="552"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>导出翻译（仅支持 DSD 格式）</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="586"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="587"/>
         <source>Reset selected String(s)</source>
         <translation>重置已选择的字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="594"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="595"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="595"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="596"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="400"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="564"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="401"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="565"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="426"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="427"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="429"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="430"/>
         <source>Replace</source>
         <translation>替换</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="441"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="442"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="446"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="501"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="447"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="502"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="496"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="497"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="493"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="494"/>
         <source>Don&apos;t show again</source>
         <translation>不要再显示</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="565"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="566"/>
         <source>Translation successfully exported.</source>
         <translation>翻译成功导出。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="588"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="589"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation>您确定要重置所选字符串吗？</translation>
     </message>
@@ -1092,27 +1092,27 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>IgnoreListDialog</name>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="57"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="55"/>
         <source>Ignore list</source>
         <translation>忽略名单</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="69"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="67"/>
         <source>User ignore list</source>
         <translation>用户忽略名单</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="75"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="73"/>
         <source>Remove selected mod file(s) from list</source>
         <translation>从列表中删除选定的 Mod 文件</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="99"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="97"/>
         <source>Base Game + CC Plugins</source>
         <translation>游戏本体 + CC 插件</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="111"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="109"/>
         <source>Masterlist Entries</source>
         <translation>主列表条目</translation>
     </message>
@@ -1128,17 +1128,17 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="37"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="38"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>解析 BSA 档案（这可能会减慢应用程序的启动速度，具体取决于您的 modlist 的大小！）</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="46"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="47"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="51"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="52"/>
         <source>On this page you select a modlist to load from a mod manager. You can always change the selected modlist and mod manager under Settings &gt; User Settings.</source>
         <translation>在此页面上，您可以选择要从 Mod管理器 加载的 Mod列表。您始终可以在“设置”&gt;“用户设置”下更改选定的 Mod列表 和 Mod管理器。</translation>
     </message>
@@ -1154,37 +1154,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="35"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="34"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="72"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="71"/>
         <source>Welcome!</source>
         <translation>欢迎！</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="76"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="75"/>
         <source>This guide will help you setting up this tool for your modlist.</source>
         <translation>本指南将帮助您为您的 Mod列表 设置此工具。</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="84"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="83"/>
         <source>Open documentation</source>
         <translation>打开文档</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="101"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="100"/>
         <source>Fix Windows path limit</source>
         <translation>修复Windows路径限制</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="110"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="109"/>
         <source>The path limit is already disabled.</source>
         <translation>路径限制已被禁用。</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="94"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="93"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows 的路径长度限制为 255 个字符。单击下面，授予管理员权限并重新启动以禁用它。</translation>
     </message>
@@ -1208,37 +1208,37 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="180"/>
+        <location filename="src/ui/main_page/main_page.py" line="181"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="446"/>
+        <location filename="src/ui/main_page/main_page.py" line="453"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="186"/>
+        <location filename="src/ui/main_page/main_page.py" line="187"/>
         <source>Translatable files:</source>
         <translation>可翻译的文件：</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="205"/>
+        <location filename="src/ui/main_page/main_page.py" line="206"/>
         <source>Support me on Ko-fi</source>
         <translation>在 Ko-fi 上支持我</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="425"/>
+        <location filename="src/ui/main_page/main_page.py" line="429"/>
         <source>No translation downloads available!</source>
         <translation>没有可用的翻译下载！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="426"/>
+        <location filename="src/ui/main_page/main_page.py" line="430"/>
         <source>There are no translations available to download.</source>
         <translation>没有可供下载的翻译。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="449"/>
+        <location filename="src/ui/main_page/main_page.py" line="456"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1249,54 +1249,54 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
 请将这个文件夹拖到 MO2 或 Vortex 中的Mod列表中，并确保安装了 Dynamic String Distributor 并且启用了两个模组！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="459"/>
+        <location filename="src/ui/main_page/main_page.py" line="466"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="461"/>
+        <location filename="src/ui/main_page/main_page.py" line="468"/>
         <source>Open output mod in Explorer</source>
         <translation>在资源管理器中打开输出 Mod</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="464"/>
+        <location filename="src/ui/main_page/main_page.py" line="471"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>在Nexus Mods上打开DSD页面</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="497"/>
+        <location filename="src/ui/main_page/main_page.py" line="504"/>
         <source>Search Results</source>
         <translation>搜索结果</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="505"/>
+        <location filename="src/ui/main_page/main_page.py" line="512"/>
         <source>No strings found!</source>
         <translation>未找到任何字符串！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="507"/>
+        <location filename="src/ui/main_page/main_page.py" line="514"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>未找到任何符合给定筛选条件的字符串！
 点击“显示详情”以查看已使用的筛选条件。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="521"/>
+        <location filename="src/ui/main_page/main_page.py" line="528"/>
         <source>Export mod file states...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="524"/>
+        <location filename="src/ui/main_page/main_page.py" line="531"/>
         <source>JSON files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="542"/>
+        <location filename="src/ui/main_page/main_page.py" line="549"/>
         <source>Export successful!</source>
         <translation type="unfinished">导出成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="543"/>
+        <location filename="src/ui/main_page/main_page.py" line="550"/>
         <source>Successfully exported mod file states to:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1352,57 +1352,57 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="137"/>
+        <location filename="src/ui/main_window.py" line="134"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="142"/>
+        <location filename="src/ui/main_window.py" line="140"/>
         <source>Translation Editor</source>
         <translation>翻译编辑器</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="162"/>
+        <location filename="src/ui/main_window.py" line="161"/>
         <source>Exit?</source>
         <translation>退出？</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="174"/>
+        <location filename="src/ui/main_window.py" line="173"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="177"/>
+        <location filename="src/ui/main_window.py" line="176"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="208"/>
+        <location filename="src/ui/main_window.py" line="207"/>
         <source>No Updates Available</source>
         <translation>当前已是最新版本</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="209"/>
+        <location filename="src/ui/main_window.py" line="208"/>
         <source>There are no updates available.</source>
         <translation>没有可用的更新。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="218"/>
+        <location filename="src/ui/main_window.py" line="217"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
         <translation>作者：Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;图标：Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;版权声明：Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="227"/>
+        <location filename="src/ui/main_window.py" line="226"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;请在此处填写您的翻译者信息。&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="241"/>
+        <location filename="src/ui/main_window.py" line="240"/>
         <source>About Qt</source>
         <translation>关于 Qt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="165"/>
+        <location filename="src/ui/main_window.py" line="164"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation>您确定要退出吗？编辑器中仍有未保存的翻译内容。所有未保存的更改都将丢失！</translation>
     </message>
@@ -1474,12 +1474,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <name>ModFileService</name>
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="58"/>
-        <source>{modname}: Scanning for mod files...</source>
+        <source>Scanning for mod files in &apos;{modname}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/mod_file/mod_file_service.py" line="76"/>
-        <source>{modname}: Scanning BSAs...</source>
+        <source>Scanning BSAs in &apos;{modname}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1620,47 +1620,47 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="197"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="169"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="198"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="170"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="199"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="171"/>
         <source>Priority</source>
         <translation>优先级</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="545"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="517"/>
         <source>Creating translations for mods...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="555"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="527"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="584"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="556"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="625"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="597"/>
         <source>Importing installed translation...</source>
         <translation>正在导入已安装的翻译...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="660"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="632"/>
         <source>Success!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="662"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="634"/>
         <source>Translation successfully imported into database.</source>
         <translation>翻译文件已成功导入数据库。</translation>
     </message>
@@ -1997,7 +1997,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="619"/>
+        <location filename="src/core/scanner/scanner.py" line="620"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>
@@ -2110,32 +2110,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>SetupPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="58"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="57"/>
         <source>Game language</source>
         <translation>游戏语言</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="70"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="69"/>
         <source>Translation source</source>
         <translation>翻译来源</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="83"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="82"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation>使用 GitHub 存储库中的全局主列表（推荐）</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="91"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="90"/>
         <source>Nexus Mods API key</source>
         <translation>Nexus Mods API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="108"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="107"/>
         <source>Initial Setup</source>
         <translation>初始设置</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="113"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
         <source>On this page you configure what translations to download from where for which language.</source>
         <translation>在此页面上，您可以配置从何处下载哪种语言的翻译。</translation>
     </message>
@@ -2169,7 +2169,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StartupDialog</name>
     <message>
-        <location filename="src/ui/startup_dialog/startup_dialog.py" line="53"/>
+        <location filename="src/ui/startup_dialog/startup_dialog.py" line="51"/>
         <source>Welcome!</source>
         <translation>欢迎！</translation>
     </message>
@@ -2177,17 +2177,17 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="61"/>
+        <location filename="src/ui/statusbar.py" line="62"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation>仅当每日限额用完时，每小时限额才适用。</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="71"/>
+        <location filename="src/ui/statusbar.py" line="72"/>
         <source>Copy log to clipboard</source>
         <translation>将日志复制到剪贴板</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="78"/>
+        <location filename="src/ui/statusbar.py" line="79"/>
         <source>View log</source>
         <translation>查看日志</translation>
     </message>
@@ -2573,22 +2573,22 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="490"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="492"/>
         <source>Export translation...</source>
         <translation>导出翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="508"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="510"/>
         <source>Export successful!</source>
         <translation>导出成功！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="509"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="511"/>
         <source>Translation successfully exported.</source>
         <translation>翻译成功导出。</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="520"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="522"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2596,7 +2596,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="527"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="529"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2604,12 +2604,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="536"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="538"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="537"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="539"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -2617,73 +2617,73 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="147"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="149"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="181"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="270"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="183"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="272"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="108"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="110"/>
         <source>Go to previous string</source>
         <translation>跳至上一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="119"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="121"/>
         <source>Go to next string</source>
         <translation>跳至下一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="153"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="155"/>
         <source>Reset string</source>
         <translation>重置字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="190"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="192"/>
         <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
         <translation>按 F1（翻译完成）、F2（翻译未完成/正在进行中）或 F3（无需翻译）以完成字符串并进入下一个。</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="201"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="203"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="272"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="274"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>您确定要取消吗？所有更改都将丢失！</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="278"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="280"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="279"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="281"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="309"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="311"/>
         <source>String was modified</source>
         <translation>字符串被修改</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="312"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="314"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>字符串被修改。您想在切换到另一个字符串之前保存它吗？</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="321"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="323"/>
         <source>Don&apos;t save and continue</source>
         <translation>不&apos;要保存并继续</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="324"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
         <source>Save and continue</source>
         <translation>保存并继续</translation>
     </message>
@@ -2952,12 +2952,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="184"/>
+        <location filename="src/core/downloader/worker.py" line="185"/>
         <source>Downloading translation...</source>
         <translation>正在下载翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="211"/>
+        <location filename="src/core/downloader/worker.py" line="212"/>
         <source>Installing translation...</source>
         <translation>正在安装翻译文件...</translation>
     </message>

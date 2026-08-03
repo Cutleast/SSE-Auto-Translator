@@ -28,10 +28,10 @@ class StateService(QObject):
     update_signal = Signal()
     """Signal emitted everytime when the mod file states are updated."""
 
-    mod_instance: ModInstance
+    __mod_instance: ModInstance
     """The modinstance with the mod files to update."""
 
-    database: TranslationDatabase
+    __database: TranslationDatabase
     """The database with the installed translations."""
 
     CACHE_FILE_NAME = Path("modfile_states.cache")
@@ -48,11 +48,11 @@ class StateService(QObject):
 
         super().__init__()
 
-        self.mod_instance = modinstance
-        self.database = database
+        self.__mod_instance = modinstance
+        self.__database = database
 
-        self.database.add_signal.connect(self.__on_translations_added)
-        self.database.remove_signal.connect(self.__on_translations_removed)
+        self.__database.add_signal.connect(self.__on_translations_added)
+        self.__database.remove_signal.connect(self.__on_translations_removed)
 
     def __on_translations_added(self, translations: list[Translation]) -> None:
         """
@@ -74,8 +74,8 @@ class StateService(QObject):
             )
 
             for modfile in translation.strings:
-                original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
-                    modfile,
+                original_modfiles: list[ModFile] = self.__mod_instance.get_modfiles(
+                    modfile=modfile,
                     ignore_states=[
                         TranslationStatus.TranslationInstalled,
                         TranslationStatus.IsTranslated,
@@ -109,7 +109,7 @@ class StateService(QObject):
             )
 
             for modfile in translation.strings:
-                original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
+                original_modfiles: list[ModFile] = self.__mod_instance.get_modfiles(
                     modfile, ignore_states=[TranslationStatus.IsTranslated]
                 )
 
@@ -137,7 +137,7 @@ class StateService(QObject):
             dict[TranslationStatus, int]: Summary of the mod file states
         """
 
-        modfiles = modfiles or self.mod_instance.modfiles
+        modfiles = modfiles or self.__mod_instance.modfiles
 
         return {
             state: len([modfile for modfile in modfiles if modfile.status == state])
@@ -157,7 +157,7 @@ class StateService(QObject):
         )
 
         check_state: dict[ModFile, bool] = {}
-        for mod in self.mod_instance.mods:
+        for mod in self.__mod_instance.mods:
             for modfile in mod.modfiles:
                 checked: bool
                 modfile_status: TranslationStatus
@@ -185,7 +185,7 @@ class StateService(QObject):
 
         state_cache: StateCache = {
             modfile.full_path: (check_states.get(modfile, True), modfile.status)
-            for modfile in self.mod_instance.modfiles
+            for modfile in self.__mod_instance.modfiles
         }
 
         Cache.save_to_cache(StateService.CACHE_FILE_NAME, state_cache)
@@ -236,7 +236,7 @@ class StateService(QObject):
             modfile.full_path: _ModFileState(
                 checked=check_states.get(modfile, True), status=modfile.status
             )
-            for modfile in self.mod_instance.modfiles
+            for modfile in self.__mod_instance.modfiles
         }
 
         file_path.write_bytes(

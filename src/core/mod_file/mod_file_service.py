@@ -55,7 +55,7 @@ class ModFileService(QObject):
         update(
             update_callback,
             ProgressUpdate(
-                status_text=self.tr("{modname}: Scanning for mod files...").format(
+                status_text=self.tr("Scanning for mod files in '{modname}'...").format(
                     modname=mod.display_name
                 ),
             ),
@@ -73,7 +73,7 @@ class ModFileService(QObject):
             update(
                 update_callback,
                 ProgressUpdate(
-                    status_text=self.tr("{modname}: Scanning BSAs...").format(
+                    status_text=self.tr("Scanning BSAs in '{modname}'...").format(
                         modname=mod.display_name
                     ),
                 ),

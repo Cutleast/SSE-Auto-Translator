@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Optional, override
@@ -15,8 +13,9 @@ from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QW
 
 from core.config.user_config import UserConfig
 from core.utilities.constants import DOCS_URL
-from ui.startup_dialog.page import Page
 from ui.utilities.icon_provider import IconProvider
+
+from .page import Page
 
 
 class IntroductionPage(Page):

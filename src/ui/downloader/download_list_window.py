@@ -45,7 +45,7 @@ class DownloadListWindow(DownloadListWidget):
             NXMHandler.get().bind()
 
         if (
-            not self.provider.direct_downloads_possible()
+            not self._provider.direct_downloads_possible()
             and not NXMHandler.get().is_bound()
         ):
             messagebox = QMessageBox(QApplication.activeModalWidget())

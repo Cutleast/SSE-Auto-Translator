@@ -1,14 +1,12 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Optional
 
 from PySide6.QtCharts import QBarSet, QChart, QChartView, QHorizontalPercentBarSeries
 from PySide6.QtCore import QMargins, Qt
-from PySide6.QtGui import QPainter
+from PySide6.QtGui import QColor, QPainter
 
 
 class StackedBar(QChartView):
@@ -21,11 +19,11 @@ class StackedBar(QChartView):
 
     __bar_sets: list[QBarSet]
 
-    def __init__(self, values: list[int], colors: Optional[list] = None) -> None:
+    def __init__(self, values: list[int], colors: Optional[list[QColor]] = None) -> None:
         """
         Args:
             values (list[int]): List of values to display in the stacked bar.
-            colors (Optional[list], optional):
+            colors (Optional[list[QColor]], optional):
                 List of colors with the same amount of items as the values. Defaults to
                 None.
         """
@@ -55,9 +53,7 @@ class StackedBar(QChartView):
             bar_set.append(value)
 
             if colors is not None:
-                color = colors[v]
-                if color is None:
-                    color = Qt.GlobalColor.lightGray
+                color: QColor = colors[v]
                 bar_set.setColor(color)
 
             bar_set.setBorderColor(Qt.GlobalColor.transparent)

@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import re
 from pathlib import Path
-from typing import Any, BinaryIO, Optional, TypeAlias, override
+from typing import Any, BinaryIO, ClassVar, Optional, TypeAlias, override
 
 from pydantic import TypeAdapter, ValidationError
 
@@ -34,38 +34,38 @@ class BestiaryFile(ModFile):
     Class for Dragonborn's Bestiary files (data/interface/creatures/**/*.json).
     """
 
-    LOOT_KEY: str = "loot"
+    LOOT_KEY: ClassVar[str] = "loot"
     """Name of the key attribute in a bestiary loot file."""
 
-    ID_KEY: str = "id"
+    ID_KEY: ClassVar[str] = "id"
     """Name of the id attribute in a bestiary creature file."""
 
-    NAME_KEY: str = "name"
+    NAME_KEY: ClassVar[str] = "name"
     """Name of the name attribute in a bestiary creature file."""
 
-    DESCRIPTION_KEY: str = "description"
+    DESCRIPTION_KEY: ClassVar[str] = "description"
     """Name of the description attribute in a bestiary creature file."""
 
-    LOOT_FILE_NAME_PATTERN: re.Pattern[str] = re.compile(
+    LOOT_FILE_NAME_PATTERN: ClassVar[re.Pattern[str]] = re.compile(
         r"[a-z \-_]+_LOOT *\.json", re.IGNORECASE
     )
     """Pattern for the file name of bestiary loot files."""
 
-    RESIST_FILE_NAME_PATTERN: re.Pattern[str] = re.compile(
+    RESIST_FILE_NAME_PATTERN: ClassVar[re.Pattern[str]] = re.compile(
         r"[a-z \-_]+_RESIST *\.json", re.IGNORECASE
     )
     """Pattern for the file name of bestiary resistance files."""
 
-    ENTRY_NAME_SUFFIX: str = "-name"
+    ENTRY_NAME_SUFFIX: ClassVar[str] = "-name"
     """ID suffix for identifying the name string of an entry file."""
 
-    ENTRY_DESC_SUFFIX: str = "-description"
+    ENTRY_DESC_SUFFIX: ClassVar[str] = "-description"
     """ID suffix for identifying the description string of an entry file."""
 
-    LOOT_ID_SEP: str = "_LOOT"
+    LOOT_ID_SEP: ClassVar[str] = "_LOOT"
     """ID separator for identifying the category of a loot item."""
 
-    LOOT_ID_PATTERN: re.Pattern[str] = re.compile(
+    LOOT_ID_PATTERN: ClassVar[re.Pattern[str]] = re.compile(
         rf"(?P<creature>.*?){LOOT_ID_SEP}-(?P<index>[0-9]+)/(?P<count>[0-9]+)-"
         "(?P<category>.*)"
     )

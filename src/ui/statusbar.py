@@ -21,7 +21,8 @@ class StatusBar(QStatusBar):
     Status bar for main window.
     """
 
-    log_signal = Signal(str)
+    __log_signal = Signal(str)
+
     __logger: Logger
     __provider: TranslationProvider
 
@@ -39,7 +40,7 @@ class StatusBar(QStatusBar):
         super().__init__()
 
         self.__logger = Logger.get()
-        self.__logger.set_callback(self.log_signal.emit)
+        self.__logger.set_callback(self.__log_signal.emit)
 
         self.__provider = provider
 
@@ -50,7 +51,7 @@ class StatusBar(QStatusBar):
         self.__status_label = ElidedLabel()
         self.__status_label.setProperty("monospace", True)
         self.__status_label.setTextFormat(Qt.TextFormat.PlainText)
-        self.log_signal.connect(
+        self.__log_signal.connect(
             lambda text: self.__status_label.setText(cast(str, text).splitlines()[0]),
             Qt.ConnectionType.QueuedConnection,
         )
@@ -82,7 +83,7 @@ class StatusBar(QStatusBar):
     def __open_log_window(self) -> None:
         if self.__log_window is None:
             self.__log_window = LogWindow(self.__logger.get_content())
-            self.log_signal.connect(
+            self.__log_signal.connect(
                 self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
             )
 
@@ -101,10 +102,9 @@ class StatusBar(QStatusBar):
     def timerEvent(self, event: QTimerEvent) -> None:
         super().timerEvent(event)
 
-        self.update()
+        self.__update()
 
-    @override
-    def update(self) -> None:  # type: ignore
+    def __update(self) -> None:
         """
         Updates status labels and API limit label.
         """

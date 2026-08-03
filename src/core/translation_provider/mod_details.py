@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from .mod_id import ModId
 
 
-class ModDetails(BaseModel):
+class ModDetails(BaseModel, frozen=True):
     """
     Model for mod details returned by a translation provider.
     """

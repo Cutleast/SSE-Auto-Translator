@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import logging
 import webbrowser
 from typing import override
 
@@ -38,23 +37,21 @@ class MainWindow(QMainWindow):
     Class for main application window.
     """
 
-    log: logging.Logger = logging.getLogger("App")
-
-    app_config: AppConfig
-    user_data: UserData
-    translator_service: TranslatorService
-    scanner: Scanner
-    provider: TranslationProvider
-    download_manager: DownloadManager
-    state_service: StateService
+    __app_config: AppConfig
+    __user_data: UserData
+    __translator_service: TranslatorService
+    __scanner: Scanner
+    __provider: TranslationProvider
+    __download_manager: DownloadManager
+    __state_service: StateService
 
     __refresh_shortcut: QShortcut
 
     __menu_bar: MenuBar
-    tab_widget: QTabWidget
-    mainpage_widget: MainPageWidget
-    translation_editor: EditorPage
-    toast_notifier: ToastNotifier
+    __tab_widget: QTabWidget
+    __mainpage_widget: MainPageWidget
+    __translation_editor: EditorPage
+    __toast_notifier: ToastNotifier
     __status_bar: StatusBar
 
     def initialize(
@@ -78,22 +75,22 @@ class MainWindow(QMainWindow):
             state_service (StateService): State service.
         """
 
-        self.app_config = app_config
-        self.user_data = user_data
-        self.translator_service = translator_service
-        self.scanner = scanner
-        self.provider = provider
-        self.download_manager = download_manager
-        self.state_service = state_service
+        self.__app_config = app_config
+        self.__user_data = user_data
+        self.__translator_service = translator_service
+        self.__scanner = scanner
+        self.__provider = provider
+        self.__download_manager = download_manager
+        self.__state_service = state_service
 
         self.__init_ui()
         self.__init_toast_notifier()
 
-        self.translation_editor.tab_count_updated.connect(
+        self.__translation_editor.tab_count_updated.connect(
             self.__on_editor_tab_count_change
         )
-        self.mainpage_widget.edit_translation_requested.connect(
-            self.translation_editor.open_translation
+        self.__mainpage_widget.edit_translation_requested.connect(
+            self.__translation_editor.open_translation
         )
 
     def __init_ui(self) -> None:
@@ -120,35 +117,37 @@ class MainWindow(QMainWindow):
         self.__menu_bar.about_qt_requested.connect(self.__show_about_qt)
 
     def __init_tab_widget(self) -> None:
-        self.tab_widget = QTabWidget()
-        self.tab_widget.setObjectName("main_tab_widget")
-        self.tab_widget.setTabPosition(QTabWidget.TabPosition.South)
-        self.tab_widget.tabBar().setDocumentMode(True)
-        self.setCentralWidget(self.tab_widget)
+        self.__tab_widget = QTabWidget()
+        self.__tab_widget.setObjectName("main_tab_widget")
+        self.__tab_widget.setTabPosition(QTabWidget.TabPosition.South)
+        self.__tab_widget.tabBar().setDocumentMode(True)
+        self.setCentralWidget(self.__tab_widget)
 
-        self.mainpage_widget = MainPageWidget(
-            self.app_config,
-            self.user_data,
-            self.scanner,
-            self.provider,
-            self.download_manager,
-            self.state_service,
+        self.__mainpage_widget = MainPageWidget(
+            app_config=self.__app_config,
+            user_data=self.__user_data,
+            scanner=self.__scanner,
+            provider=self.__provider,
+            download_manager=self.__download_manager,
+            state_service=self.__state_service,
         )
-        self.tab_widget.addTab(self.mainpage_widget, self.tr("Modlist"))
+        self.__tab_widget.addTab(self.__mainpage_widget, self.tr("Modlist"))
 
-        self.translation_editor = EditorPage(
-            self.app_config, self.user_data, self.translator_service
+        self.__translation_editor = EditorPage(
+            self.__app_config, self.__user_data, self.__translator_service
         )
-        self.tab_widget.addTab(self.translation_editor, self.tr("Translation Editor"))
-        self.tab_widget.setTabEnabled(1, False)
+        self.__tab_widget.addTab(
+            self.__translation_editor, self.tr("Translation Editor")
+        )
+        self.__tab_widget.setTabEnabled(1, False)
 
     def __init_status_bar(self) -> None:
-        self.__status_bar = StatusBar(self.provider)
+        self.__status_bar = StatusBar(self.__provider)
         self.setStatusBar(self.__status_bar)
 
     def __init_toast_notifier(self) -> None:
-        self.toast_notifier = ToastNotifier(self)
-        self.toast_notifier.set_download_manager(self.download_manager)
+        self.__toast_notifier = ToastNotifier(self)
+        self.__toast_notifier.set_download_manager(self.__download_manager)
 
     @override
     def closeEvent(self, event: QCloseEvent) -> None:
@@ -156,7 +155,7 @@ class MainWindow(QMainWindow):
 
         # TODO: Move this to the translation editor
         if hasattr(self, "translation_editor") and any(
-            tab.changes_pending for tab in self.translation_editor.tabs
+            tab.changes_pending for tab in self.__translation_editor.tabs
         ):
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("Exit?"))
@@ -185,7 +184,7 @@ class MainWindow(QMainWindow):
 
         if confirmation:
             super().closeEvent(event)
-            self.mainpage_widget.save_state()
+            self.__mainpage_widget.save_state()
 
             WindowManager.get().close_all()
         else:
@@ -193,14 +192,14 @@ class MainWindow(QMainWindow):
 
     def __open_settings(self) -> None:
         SettingsDialog(
-            self.app_config,
-            self.user_data.user_config,
-            self.user_data.translator_config,
-            self,
+            app_config=self.__app_config,
+            user_config=self.__user_data.user_config,
+            translator_config=self.__user_data.translator_config,
+            parent=self,
         ).show()
 
     def __check_for_updates(self) -> None:
-        upd = Updater.get()
+        upd: Updater = Updater.get()
         if upd.is_update_available():
             upd.run()
         else:
@@ -229,10 +228,10 @@ class MainWindow(QMainWindow):
             text += translator_info
 
         AboutDialog(
-            App.APP_NAME,
-            App.APP_VERSION,
-            App.windowIcon(),
-            "Attribution-NonCommercial-NoDerivatives 4.0 International",
+            app_name=App.APP_NAME,
+            app_version=App.APP_VERSION,
+            app_icon=App.windowIcon(),
+            app_license="Attribution-NonCommercial-NoDerivatives 4.0 International",
             licenses=LICENSES,
             text=text,
         ).exec()
@@ -242,8 +241,8 @@ class MainWindow(QMainWindow):
 
     def __on_editor_tab_count_change(self, new_tab_count: int) -> None:
         if new_tab_count > 0:
-            self.tab_widget.setCurrentWidget(self.translation_editor)
+            self.__tab_widget.setCurrentWidget(self.__translation_editor)
         else:
-            self.tab_widget.setCurrentWidget(self.mainpage_widget)
+            self.__tab_widget.setCurrentWidget(self.__mainpage_widget)
 
-        self.tab_widget.setTabEnabled(1, new_tab_count > 0)
+        self.__tab_widget.setTabEnabled(1, new_tab_count > 0)

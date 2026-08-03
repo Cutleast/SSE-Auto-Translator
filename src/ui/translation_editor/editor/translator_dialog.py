@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import TYPE_CHECKING, Optional
@@ -40,20 +38,20 @@ class TranslatorDialog(QWidget):
     Dialog for translating single strings.
     """
 
-    __parent: "EditorTab"
-
-    app_config: AppConfig
-    user_config: UserConfig
-    translator_service: TranslatorService
-
-    changes_pending: bool = False
     changes_signal = Signal()
-    __prev_text: Optional[str] = None
+    """Signal emitted when the current string is modified."""
 
     update_signal = Signal()
-    """
-    This signal gets emitted when the current string is saved.
-    """
+    """Signal emitted when the current string is saved."""
+
+    __parent: "EditorTab"
+
+    __app_config: AppConfig
+    __user_config: UserConfig
+    __translator_service: TranslatorService
+
+    __changes_pending: bool
+    __prev_text: Optional[str]
 
     __current_string: String
 
@@ -81,15 +79,19 @@ class TranslatorDialog(QWidget):
 
         super().__init__(QApplication.activeModalWidget())
 
-        self.app_config = app_config
-        self.user_config = user_config
-        self.translator_service = translator
+        self.__app_config = app_config
+        self.__user_config = user_config
+        self.__translator_service = translator
+
+        self.__changes_pending = False
+        self.__prev_text = None
 
         self.changes_signal.connect(self.__on_change)
 
         self.__parent = parent
 
         self.__init_ui()
+
         self.set_string(initial_string)
 
     def __init_ui(self) -> None:
@@ -164,9 +166,9 @@ class TranslatorDialog(QWidget):
         self.__original_entry.setReadOnly(True)
         splitter.addWidget(self.__original_entry)
 
-        if self.app_config.use_spell_check:
+        if self.__app_config.use_spell_check:
             self.__translated_entry = SpellCheckEdit(
-                language=self.user_config.language.id,
+                language=self.__user_config.language.id,
                 user_data_path=UserDataService.get().get_data_path(),
             )
         else:
@@ -229,7 +231,7 @@ class TranslatorDialog(QWidget):
             f"{self.__current_string.display_id} ({current_index + 1}/"
             f"{visible_string_count})"
         )
-        if self.changes_pending:
+        if self.__changes_pending:
             title += "*"
 
         self.setWindowTitle(title)
@@ -237,7 +239,7 @@ class TranslatorDialog(QWidget):
     def __on_change(self) -> None:
         new_text: str = self.__translated_entry.toPlainText()
         if new_text != self.__prev_text:
-            self.changes_pending = True
+            self.__changes_pending = True
             self.__update_title()
             self.__prev_text = new_text
 
@@ -246,9 +248,9 @@ class TranslatorDialog(QWidget):
         Translates string with API.
         """
 
-        translator: Translator = self.translator_service.get_translator()
+        translator: Translator = self.__translator_service.get_translator()
         translated: str = translator.translate(
-            self.__current_string.original, self.user_config.language
+            self.__current_string.original, self.__user_config.language
         )
 
         self.__translated_entry.setPlainText(translated)
@@ -265,7 +267,7 @@ class TranslatorDialog(QWidget):
         Closes dialog without saving, asks for confirmation if changes are pending
         """
 
-        if self.changes_pending:
+        if self.__changes_pending:
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("Cancel"))
             message_box.setText(
@@ -304,7 +306,7 @@ class TranslatorDialog(QWidget):
         if finalize_with_status:
             self.finalize_string(finalize_with_status)
 
-        elif self.changes_pending:
+        elif self.__changes_pending:
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("String was modified"))
             message_box.setText(
@@ -348,7 +350,7 @@ class TranslatorDialog(QWidget):
         )
         self.__translated_entry.textChanged.connect(self.changes_signal.emit)
         self.__prev_text = self.__translated_entry.toPlainText()
-        self.changes_pending = False
+        self.__changes_pending = False
 
         self.__update_title()
 
@@ -368,8 +370,9 @@ class TranslatorDialog(QWidget):
         visible_strings_count: int = self.__parent.get_visible_string_count()
 
         if visible_strings_count > 1:
-            current_index = self.__parent.get_index(self.__current_string)
+            current_index: int = self.__parent.get_index(self.__current_string)
 
+            new_index: int
             if current_index == (visible_strings_count - 1):
                 new_index = 0
             else:
@@ -394,6 +397,7 @@ class TranslatorDialog(QWidget):
         visible_strings_count: int = self.__parent.get_visible_string_count()
         current_index: int = self.__parent.get_index(self.__current_string)
 
+        new_index: int
         if current_index > 0:
             new_index = current_index - 1
         else:
@@ -420,7 +424,7 @@ class TranslatorDialog(QWidget):
 
         self.__current_string.status = status
 
-        if self.changes_pending:
+        if self.__changes_pending:
             self.__current_string.string = self.__translated_entry.toPlainText()
 
         elif status == StringStatus.NoTranslationRequired:
@@ -434,7 +438,7 @@ class TranslatorDialog(QWidget):
             )
             self.__parent.update_matching_strings(self.__current_string.original, string)
 
-        self.changes_pending = False
+        self.__changes_pending = False
         self.update_signal.emit()
 
     def finish(self) -> None:

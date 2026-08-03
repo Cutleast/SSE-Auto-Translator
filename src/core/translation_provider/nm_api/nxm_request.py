@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from __future__ import annotations
 
 import urllib.parse
+from typing import Self
 
 from pydantic import BaseModel
 
@@ -32,8 +33,8 @@ class NxmRequest(BaseModel):
     user_id: int
     """Download request user id."""
 
-    @staticmethod
-    def from_url(url: str) -> NxmRequest:
+    @classmethod
+    def from_url(cls, url: str) -> Self:
         """
         Parses an NXM Mod Manager Download URL.
 
@@ -41,7 +42,7 @@ class NxmRequest(BaseModel):
             url (str): NXM Download URL to parse.
 
         Returns:
-            NxmRequest: Download details (mod id, file id, key, expires and user id)
+            Self: Download details (mod id, file id, key, expires and user id)
         """
 
         parsed_url: urllib.parse.ParseResult = urllib.parse.urlparse(url)
@@ -66,12 +67,14 @@ class NxmRequest(BaseModel):
             expires: int = int(parsed_query["expires"][0])
             user_id: int = int(parsed_query["user_id"][0])
         except (KeyError, IndexError, ValueError) as ex:
-            raise ValueError("The NXM request is missing required query parameters.") from ex
+            raise ValueError(
+                "The NXM request is missing required query parameters."
+            ) from ex
 
         if not key or mod_id <= 0 or file_id <= 0 or user_id <= 0:
             raise ValueError("The NXM request contains invalid values.")
 
-        return NxmRequest(
+        return cls(
             game=game,
             mod_id=mod_id,
             file_id=file_id,

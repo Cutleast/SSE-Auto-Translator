@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import webbrowser
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.widgets.dropdown import Dropdown
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtGui import QIcon
@@ -33,8 +34,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         DownloadListItem: This item.
     """
 
-    provider: TranslationProvider
-
+    __provider: TranslationProvider
     __translation_downloads: list[TranslationDownload]
 
     __checkbox: QCheckBox
@@ -63,7 +63,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             provider (TranslationProvider): Translation provider.
         """
 
-        self.provider = provider
+        self.__provider = provider
         self.__translation_downloads = translation_downloads
 
         self.__init_ui()
@@ -77,7 +77,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         for d, download in enumerate(translation_downloads):
             self.__translations_combobox.addItem(download.mod_info.display_name)
             icon: Optional[QIcon] = download.mod_info.source.get_icon()
-            self.__translations_combobox.setItemIcon(d, icon)  # pyright: ignore[reportArgumentType] (source can't be Local here)
+            self.__translations_combobox.setItemIcon(d, not_none(icon))
 
         self.__translations_combobox.setEnabled(self.__translations_combobox.count() > 1)
         self.__files_combobox.setEnabled(self.__files_combobox.count() > 1)
@@ -99,7 +99,6 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             self.tr("Open translation mod page...")
         )
         self.__open_translation_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
-        # self.__open_translation_button.setObjectName("transparent")
         self.treeWidget().setItemWidget(self, 3, self.__open_translation_button)
 
         self.__files_combobox = Dropdown()
@@ -148,7 +147,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         ]
 
         if current_translation_download.mod_info.mod_id is not None:
-            url: str = self.provider.get_modpage_url(
+            url: str = self.__provider.get_modpage_url(
                 mod_id=current_translation_download.mod_info.mod_id,
                 source=current_translation_download.mod_info.source,
             )
