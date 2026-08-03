@@ -68,21 +68,21 @@ class ComponentProvider(Singleton):
         )
 
         self.__scanner = Scanner(
-            self.__user_data.mod_instance,
-            self.__user_data.database,
-            self.__app_config,
-            self.__user_data.user_config,
-            self.__provider,
-            self.__user_data.masterlist,
+            mod_instance=self.__user_data.mod_instance,
+            database=self.__user_data.database,
+            app_config=self.__app_config,
+            user_config=self.__user_data.user_config,
+            provider=self.__provider,
+            masterlist=self.__user_data.masterlist,
         )
 
         self.__download_manager = DownloadManager(
-            self.__user_data.database,
-            self.__user_data.mod_instance,
-            self.__provider,
-            self.__app_config,
-            self.__user_data.user_config,
-            self.__user_data.masterlist,
+            database=self.__user_data.database,
+            mod_instance=self.__user_data.mod_instance,
+            provider=self.__provider,
+            app_config=self.__app_config,
+            user_config=self.__user_data.user_config,
+            masterlist=self.__user_data.masterlist,
         )
 
         self.__temp_folder_provider = TempFolderProvider(

@@ -273,12 +273,12 @@ This feature is considered experimental because a crash might prevent it from un
 <context>
     <name>BatchRunner</name>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="138"/>
+        <location filename="src/utilities/batch/runner.py" line="140"/>
         <source>Initializing components...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="222"/>
+        <location filename="src/utilities/batch/runner.py" line="224"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -276,12 +276,12 @@ Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern kön
 <context>
     <name>BatchRunner</name>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="138"/>
+        <location filename="src/utilities/batch/runner.py" line="140"/>
         <source>Initializing components...</source>
         <translation>Komponenten werden initialisiert...</translation>
     </message>
     <message>
-        <location filename="src/utilities/batch/runner.py" line="222"/>
+        <location filename="src/utilities/batch/runner.py" line="224"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>

@@ -166,7 +166,7 @@ class BaseTest(CoreBaseTest):
     @pytest.fixture
     def component_provider(
         self, app_config: AppConfig, user_data: UserData, requests_mock: RequestsMock
-    ) -> Generator[ComponentProvider, None, None]:
+    ) -> Generator[ComponentProvider]:
         """
         Returns a component provider with all components initialized.
 
@@ -192,7 +192,7 @@ class BaseTest(CoreBaseTest):
     @pytest.fixture
     def logger(
         self, app_config: AppConfig, test_fs: FakeFilesystem
-    ) -> Generator[Logger, None, None]:
+    ) -> Generator[Logger]:
         """
         Returns a logger instance for testing.
 
@@ -206,7 +206,7 @@ class BaseTest(CoreBaseTest):
         logging.debug("Logger singleton reset.")  # noqa: LOG015
 
     @pytest.fixture(autouse=True)
-    def game_service(self) -> Generator[GameService, None, None]:
+    def game_service(self) -> Generator[GameService]:
         """
         Returns a game service instance for testing.
 
@@ -342,7 +342,7 @@ class BaseTest(CoreBaseTest):
     @pytest.fixture
     def vortex_db(
         self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
-    ) -> Generator[MockPlyvelDB, None, None]:
+    ) -> Generator[MockPlyvelDB]:
         """
         Pytest fixture to mock the plyvel.DB class and redirect it to use the
         database with the test instance.
