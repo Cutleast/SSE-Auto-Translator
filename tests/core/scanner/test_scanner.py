@@ -8,7 +8,7 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
 
 from ..core_test import CoreTest
@@ -25,32 +25,32 @@ class TestScanner(CoreTest):
         """
 
         # given
-        modinstance: ModInstance = user_data.modinstance
+        mod_instance: ModInstance = user_data.mod_instance
         scanner = Scanner(
-            modinstance,
+            mod_instance,
             user_data.database,
             app_config,
             user_data.user_config,
-            Provider(user_data.user_config),
+            TranslationProvider(user_data.user_config),
             user_data.masterlist,
         )
         items: dict[Mod, list[ModFile]] = {
-            mod: mod.modfiles for mod in modinstance.mods
+            mod: mod.modfiles for mod in mod_instance.mods
         }
         expected_results: dict[Mod, dict[ModFile, TranslationStatus]] = {
-            self.get_mod_by_name("Wet and Cold SE", modinstance): {
+            self.get_mod_by_name("Wet and Cold SE", mod_instance): {
                 self.get_modfile_from_mod_name(
-                    "Wet and Cold SE", "WetandCold.esp", modinstance
+                    "Wet and Cold SE", "WetandCold.esp", mod_instance
                 ): TranslationStatus.TranslationInstalled
             },
-            self.get_mod_by_name("Wet and Cold SE - German", modinstance): {
+            self.get_mod_by_name("Wet and Cold SE - German", mod_instance): {
                 self.get_modfile_from_mod_name(
-                    "Wet and Cold SE - German", "WetandCold.esp", modinstance
+                    "Wet and Cold SE - German", "WetandCold.esp", mod_instance
                 ): TranslationStatus.IsTranslated
             },
-            self.get_mod_by_name("RS Children Overhaul", modinstance): {
+            self.get_mod_by_name("RS Children Overhaul", mod_instance): {
                 self.get_modfile_from_mod_name(
-                    "RS Children Overhaul", "RSChildren.esp", modinstance
+                    "RS Children Overhaul", "RSChildren.esp", mod_instance
                 ): TranslationStatus.RequiresTranslation
             },
         }

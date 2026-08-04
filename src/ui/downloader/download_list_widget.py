@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
+from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.utilities.tree_widget import (
     are_children_visible,
     iter_children,
@@ -37,8 +38,7 @@ from core.downloader.download_list import DownloadList, DownloadListItem
 from core.downloader.download_manager import DownloadListEntries
 from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
-from core.translation_provider.provider import Provider
-from core.utilities.container_utils import unique
+from core.translation_provider.provider import TranslationProvider
 from ui.downloader.download_list_toolbar import DownloadListToolBar
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.report_dialog import ReportDialog
@@ -65,7 +65,7 @@ class DownloadListWidget(QWidget):
     """
 
     __items: dict[Path, DownloadListWidgetItem]
-    provider: Provider
+    _provider: TranslationProvider
 
     __filter_items: bool = False
     """Whether to hide items with just one available download."""
@@ -87,24 +87,24 @@ class DownloadListWidget(QWidget):
     def __init__(
         self,
         entries: DownloadListEntries,
-        provider: Provider,
+        provider: TranslationProvider,
         parent: Optional[QWidget] = None,
     ) -> None:
         """
         Args:
             entries (DownloadListEntries): Download list entries.
-            provider (Provider): Translation provider.
+            provider (TranslationProvider): Translation provider.
             parent (Optional[QWidget], optional): Parent widget. Defaults to None.
         """
 
         super().__init__(parent)
 
-        self.provider = provider
+        self._provider = provider
 
         self.__init_ui()
 
         self._link_nxm_checkbox.setChecked(
-            not self.provider.direct_downloads_possible()
+            not self._provider.direct_downloads_possible()
         )
         self.__init_items(entries)
         self.__tree_widget.expandAll()
@@ -236,7 +236,7 @@ class DownloadListWidget(QWidget):
                     DownloadListWidget._create_modfile_item(modfile_path)
                 )
                 mod_item.addChild(modfile_item)
-                modfile_item.post_init(downloads, self.provider)
+                modfile_item.post_init(downloads, self._provider)
                 modfile_item.toggled.connect(self.__on_checkstate_changed)
                 self.__items[modfile_path] = modfile_item
 
@@ -251,9 +251,7 @@ class DownloadListWidget(QWidget):
         )
         self.__selected_downloads_num_label.display(len(self.__items))
 
-    def __add_modpage_button(
-        self, mod_item: QTreeWidgetItem, mod_info: ModInfo
-    ) -> None:
+    def __add_modpage_button(self, mod_item: QTreeWidgetItem, mod_info: ModInfo) -> None:
         button = QPushButton(IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), "")
         button.setToolTip(self.tr("Open mod page on Nexus Mods..."))
         button.clicked.connect(lambda: self.__open_modpage(mod_info))
@@ -262,7 +260,7 @@ class DownloadListWidget(QWidget):
 
     def __open_modpage(self, mod_info: ModInfo) -> None:
         if mod_info.mod_id is not None:
-            url: str = self.provider.get_modpage_url(mod_info.mod_id, mod_info.source)
+            url: str = self._provider.get_modpage_url(mod_info.mod_id, mod_info.source)
             webbrowser.open(url)
 
     @staticmethod

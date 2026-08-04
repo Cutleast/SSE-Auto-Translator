@@ -2,45 +2,32 @@
 Copyright (c) Cutleast
 """
 
-import logging
 import webbrowser
-from typing import Optional
 
-from cutleast_core_lib.core.utilities.scale import scale_value
-from PySide6.QtCore import QObject, Qt, Signal
-from PySide6.QtWidgets import QPushButton, QTreeWidget, QTreeWidgetItem
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.exceptions import format_exception
+from cutleast_core_lib.core.utilities.typing_utils import not_none
+from PySide6.QtCore import QObject, Signal
+from PySide6.QtWidgets import QApplication, QTreeWidgetItem
 
 from core.downloader.file_download import FileDownload
-from core.translation_provider.nm_api.nm_api import NexusModsApi
-from core.translation_provider.nm_api.nxm_id import NxmModId
-from core.utilities.progress_update import ProgressUpdate
-from ui.utilities.icon_provider import IconProvider
-from ui.widgets.progress_widget import ProgressWidget
+
+from .item_widget import DownloadItemWidget
 
 
 class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
     """
     Class for items in the Downloads tab.
-
-    TODO: Add button to remove a download from the queue
     """
 
-    __update_signal = Signal(ProgressUpdate)
-
-    finished_signal = Signal(object)
+    remove_requested = Signal()
     """
-    This signal gets emitted when the download is finished and can be removed.
+    Signal emitted when the item should be removed from the queue.
     """
 
-    remove_signal = Signal(object)
-    """
-    This signal gets emitted when the download should be removed from the queue.
-    """
-
-    log: logging.Logger = logging.getLogger("DownloadItem")
-
-    download: FileDownload
-    current_widget: Optional[ProgressWidget | QPushButton] = None
+    __copy_text: str
+    __download: FileDownload
+    __widget: DownloadItemWidget
 
     def __init__(self, download: FileDownload) -> None:
         """
@@ -51,96 +38,68 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
         QObject.__init__(self)
         super().__init__()
 
-        self.download = download
-        self.__update_signal.connect(
-            self.__update_progress, Qt.ConnectionType.QueuedConnection
+        self.__copy_text = ""
+        self.__download = download
+
+        self.setText(0, self.__download.mod_details.display_name)
+        self.setIcon(0, not_none(self.__download.source.get_icon()))
+
+        self.__widget = DownloadItemWidget()
+
+        self.__widget.copy_requested.connect(
+            lambda: QApplication.clipboard().setText(self.__copy_text)
         )
+        self.__widget.remove_requested.connect(self.remove_requested.emit)
 
-        self.setText(0, self.download.mod_details.display_name)
-        self.setIcon(0, self.download.source.get_icon())  # pyright: ignore[reportArgumentType] (source can't be Local here)
+    def init_widget(self, widget_column: int) -> None:
+        """
+        Initializes the widget for the download item.
 
-    def __show_download_button(self) -> None:
-        if isinstance(self.current_widget, QPushButton):
-            return
+        Args:
+            widget_column (int): The column index where the widget will be displayed.
+        """
 
-        parent: QTreeWidget = self.treeWidget()
+        self.treeWidget().setItemWidget(self, widget_column, self.__widget)
 
-        button = QPushButton(
-            IconProvider.get_qta_icon("ri.download-line"),
-            self.tr("Non-premium download..."),
-        )
+    def set_interaction_required(self, download_url: str) -> None:
+        """
+        Sets the item to indicate that user interaction is required for the download.
 
-        def open_download_page() -> None:
-            assert isinstance(self.download.mod_details.mod_id, NxmModId)
+        Args:
+            download_url (str): The URL of the download that requires interaction.
+        """
 
-            url = NexusModsApi.create_nexus_mods_url(
-                self.download.mod_details.mod_id.nm_game_id,
-                self.download.mod_details.mod_id.mod_id,
-                self.download.mod_details.mod_id.file_id,
-                mod_manager=True,
-            )
+        self.__copy_text = download_url
 
-            self.log.debug(f"Opening '{url}'...")
-            webbrowser.open(url)
+        self.__widget.download_requested.disconnect()
+        self.__widget.download_requested.connect(lambda: webbrowser.open(download_url))
 
-            button.setIcon(IconProvider.get_qta_icon("fa5s.check"))
+        self.__widget.set_interaction_required()
 
-        button.clicked.connect(open_download_page)
+    def set_running(self) -> None:
+        """
+        Sets the item to indicate that the download is currently running.
+        """
 
-        parent.setItemWidget(self, 2, button)
-        self.current_widget = button
+        self.__widget.set_running()
 
-    def __show_progress_widget(self) -> None:
-        if isinstance(self.current_widget, ProgressWidget):
-            return
+    def set_failed(self, exception: Exception) -> None:
+        """
+        Sets the item to indicate that the download has failed.
 
-        parent: QTreeWidget = self.treeWidget()
-        progress_widget = ProgressWidget(self)
-        progress_widget.close_signal.connect(lambda: self.remove_signal.emit(self))
-        parent.setItemWidget(self, 2, progress_widget)
-        self.current_widget = progress_widget
+        Args:
+            exception (Exception): The exception that caused the failure.
+        """
+
+        self.__copy_text = format_exception(exception, False)
+        self.__widget.set_failed(exception)
 
     def update_progress(self, progress_update: ProgressUpdate) -> None:
         """
-        Updates progress of the mod item. This method is thread-safe.
+        Updates the progress of the download item.
 
         Args:
-            progress_update (ProgressUpdate): Progress update created by worker thread.
+            progress_update (ProgressUpdate): The progress update payload.
         """
 
-        self.__update_signal.emit(progress_update)
-
-    def __update_progress(self, progress_update: ProgressUpdate) -> None:
-        match progress_update.status_text:
-            case ProgressUpdate.Status.UserActionRequired:
-                # User has no premium and must start download in browser
-                self.__show_download_button()
-
-            case ProgressUpdate.Status.Finished:
-                self.finished_signal.emit(self)
-
-            case ProgressUpdate.Status.Failed:
-                self.__show_progress_widget()
-
-                if (
-                    isinstance(self.current_widget, ProgressWidget)
-                    and progress_update.exception
-                ):
-                    self.current_widget.setException(progress_update.exception)
-
-            case text:
-                self.__show_progress_widget()
-
-                if isinstance(self.current_widget, ProgressWidget):
-                    self.current_widget.setProgress(
-                        progress_update.current, progress_update.maximum
-                    )
-
-                if progress_update.speed is not None:
-                    text = (text or "") + f" ({scale_value(progress_update.speed)}/s)"
-
-                if text is not None and self.current_widget is not None:
-                    self.current_widget.setText(text)
-
-        if progress_update.maximum > 1 and progress_update.maximum != 100:
-            self.setText(1, scale_value(progress_update.maximum))
+        self.__widget.update_progress(progress_update)

@@ -1,12 +1,12 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
-from typing import override
+from typing import Optional, cast, override
 
 from mod_manager_lib.core.game_service import GameService
+from mod_manager_lib.core.mod_manager.modorganizer.instance_info import MO2InstanceInfo
+from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
     InstanceSelectorWidget,
 )
@@ -14,7 +14,8 @@ from PySide6.QtWidgets import QCheckBox
 
 from core.config.user_config import UserConfig
 from core.utilities.constants import GAME_ID
-from ui.startup_dialog.page import Page
+
+from .page import Page
 
 
 class InstancePage(Page):
@@ -59,5 +60,8 @@ class InstancePage(Page):
 
     @override
     def apply(self, config: UserConfig) -> None:
-        config.modinstance = self.__modinstance_selector.get_cur_instance_data()  # pyright: ignore[reportAttributeAccessIssue]
+        config.mod_instance = cast(
+            Optional[MO2InstanceInfo | ProfileInfo],
+            self.__modinstance_selector.get_cur_instance_data(),
+        )
         config.parse_bsa_archives = self.__parse_bsas_checkbox.isChecked()

@@ -25,7 +25,7 @@ from .user_data import UserData
 
 class UserDataService(SingletonQObject):
     """
-    Service class that manages the user data (config, database, modinstance, etc.).
+    Service class that manages the user data (config, database, mod instance, etc.).
     """
 
     __res_path: Path
@@ -47,7 +47,9 @@ class UserDataService(SingletonQObject):
         self.__res_path = res_path
         self.__data_path = data_path
 
-    def load(self, thread_num: int = 4, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
+    def load(
+        self, thread_num: int = 4, pdisplay: Optional[ProgressDisplay] = None
+    ) -> UserData:
         """
         Loads the user data from the configured folder.
 
@@ -91,7 +93,7 @@ class UserDataService(SingletonQObject):
                 ProgressUpdate(status_text=self.tr("Loading modlist..."))
             )
 
-        modinstance = self.__load_modinstance(user_config, thread_num, pdisplay)
+        mod_instance = self.__load_modinstance(user_config, thread_num, pdisplay)
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -104,7 +106,7 @@ class UserDataService(SingletonQObject):
             user_config=user_config,
             translator_config=translator_config,
             database=database,
-            modinstance=modinstance,
+            mod_instance=mod_instance,
             masterlist=masterlist,
         )
 
@@ -133,21 +135,24 @@ class UserDataService(SingletonQObject):
         return DatabaseService.load_database(appdb_path, userdb_path, language)
 
     def __load_modinstance(
-        self, user_config: UserConfig, thread_num: int, pdisplay: Optional[ProgressDisplay] = None
+        self,
+        user_config: UserConfig,
+        thread_num: int,
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> ModInstance:
-        if user_config.modinstance is not None:
-            self.log.info("Loading modinstance...")
+        if user_config.mod_instance is not None:
+            self.log.info("Loading mod instance...")
 
             return ModInstanceLoader().load_instance(
-                instance_info=user_config.modinstance,
+                instance_info=user_config.mod_instance,
                 language=user_config.language,
                 include_bsas=user_config.parse_bsa_archives,
                 thread_num=thread_num,
                 pdisplay=pdisplay,
             )
 
-        self.log.info("No modinstance configured. Creating empty modinstance...")
-        return ModInstance(self.tr("<No modinstance selected>"), [])
+        self.log.info("No mod instance configured. Creating empty mod instance...")
+        return ModInstance(self.tr("<No mod instance selected>"), [])
 
     def __load_masterlist(self, user_config: UserConfig) -> Masterlist:
         self.log.info("Loading masterlist...")
@@ -162,7 +167,10 @@ class UserDataService(SingletonQObject):
         else:
             self.log.info("Masterlist disabled by user.")
 
-        return Masterlist(entries={})
+        masterlist = Masterlist(entries={})
+        masterlist.set_user_config(user_config)
+
+        return masterlist
 
     def is_setup_required(self) -> bool:
         """

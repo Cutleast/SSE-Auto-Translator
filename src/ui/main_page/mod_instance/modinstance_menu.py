@@ -9,7 +9,7 @@ from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
 from core.database.database import TranslationDatabase
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -94,6 +94,8 @@ class ModInstanceMenu(Menu):
     __uncheck_action: QAction
     __check_action: QAction
     __show_strings_action: QAction
+    __online_scan_action: QAction
+    __download_action: QAction
 
     # Translation-related actions
     # Installed translations
@@ -154,17 +156,17 @@ class ModInstanceMenu(Menu):
         )
         basic_scan_action.triggered.connect(self.basic_scan_requested.emit)
 
-        online_scan_action: QAction = self.__action_menu.addAction(
+        self.__online_scan_action = self.__action_menu.addAction(
             IconProvider.get_res_icon(ResourceIcon.ScanOnline),
             self.tr("Online scan..."),
         )
-        online_scan_action.triggered.connect(self.online_scan_requested.emit)
+        self.__online_scan_action.triggered.connect(self.online_scan_requested.emit)
 
-        download_action: QAction = self.__action_menu.addAction(
+        self.__download_action = self.__action_menu.addAction(
             IconProvider.get_qta_icon("mdi6.download-multiple"),
             self.tr("Download available translations..."),
         )
-        download_action.triggered.connect(self.download_requested.emit)
+        self.__download_action.triggered.connect(self.download_requested.emit)
 
     def __init_translation_actions(self) -> None:
         self.__translation_menu = Menu(
@@ -357,7 +359,9 @@ class ModInstanceMenu(Menu):
             current_item is not None
             and not (
                 isinstance(current_item, ModFile)
-                and not FileSource.from_file(current_item.full_path).is_real_file()
+                and not FileSourceFactory.for_file_path(
+                    current_item.full_path
+                ).is_real_file()
             )
         )
 
@@ -367,6 +371,27 @@ class ModInstanceMenu(Menu):
         )
 
         self.exec(QCursor.pos())
+
+    def set_provider_features_enabled(self, enabled: bool) -> None:
+        """
+        Enables or disables actions that require a translation provider.
+
+        Args:
+            enabled (bool): Whether a translation provider is available.
+        """
+
+        self.__online_scan_action.setEnabled(enabled)
+        self.__download_action.setEnabled(enabled)
+
+    def set_modpage_enabled(self, enabled: bool) -> None:
+        """
+        Enables or disables the Nexus Mods modpage action.
+
+        Args:
+            enabled (bool): Whether the Nexus Mods provider is available.
+        """
+
+        self.__open_modpage_action.setEnabled(enabled)
 
     @staticmethod
     def __is_translation_installed(item: Mod | ModFile) -> bool:

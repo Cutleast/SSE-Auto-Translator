@@ -1,21 +1,20 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import re
 import urllib.parse
 import webbrowser
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
-from queue import Queue
+from pathlib import Path
+from queue import Empty, Queue
 from typing import Any, Optional, TypeVar, override
 from uuid import uuid4
 
 import bs4
 import jstyleson as json
 import requests as req
-import websocket
+import websocket as ws
 from curl_cffi import requests as curl_requests
 from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel, ValidationError
@@ -59,6 +58,9 @@ class NexusModsApi(ProviderApi):
         "Mandarin": "Chinese",
     }
     """Map for languages that are named differently on the Nexus Mods site."""
+
+    NXM_REQUEST_TIMEOUT: float = 300.0
+    """Maximum time to wait for a non-premium NXM download request in seconds."""
 
     MODPAGE_URL_PATTERN: re.Pattern[str] = re.compile(
         r"https://www\.nexusmods\.com/([a-z]+)/mods/([0-9]+)(?:\?tab=files&file_id=([0-9]+))?"
@@ -128,8 +130,8 @@ class NexusModsApi(ProviderApi):
     def __validate_api_key(self, key: str) -> tuple[bool, bool]:
         from app import App
 
-        url = "https://api.nexusmods.com/v1/users/validate.json"
-        headers = {
+        url: str = "https://api.nexusmods.com/v1/users/validate.json"
+        headers: dict[str, str] = {
             "accept": "application/json",
             "apikey": key,
             "User-Agent": self.user_agent,
@@ -150,7 +152,7 @@ class NexusModsApi(ProviderApi):
 
         if App.has_instance() and App.get().args.disable_nxm_premium:
             premium = False
-            self.log.info("Premium features disabled by command line argument.")
+            self.log.warning("Premium features disabled by command line argument.")
 
         return api_key_valid, premium
 
@@ -184,7 +186,7 @@ class NexusModsApi(ProviderApi):
         Caches result for avoiding redundant requests if `cache_result` is `True`.
         """
 
-        url = "https://api.nexusmods.com/v1/" + path
+        url: str = "https://api.nexusmods.com/v1/" + path
 
         if self.__api_key is None:
             raise ValueError("API Key not set!")
@@ -293,7 +295,7 @@ class NexusModsApi(ProviderApi):
             # similar exception at a later point.
             raise ValueError("Mod ID and file ID are the same! Wrong metadata?")
 
-        self.log.info(f"Requesting file info for {mod_id.mod_id} > {mod_id.file_id}...")
+        self.log.debug(f"Requesting file info for {mod_id.mod_id} > {mod_id.file_id}...")
         files: NmFiles = self.__request_mod_files(mod_id.nm_game_id, mod_id.mod_id)
         files_by_id: dict[int, NmFile] = {f.file_id: f for f in files.files}
 
@@ -306,7 +308,7 @@ class NexusModsApi(ProviderApi):
         if not isinstance(mod_id, NxmModId):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
-        self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
+        self.log.debug(f"Requesting mod info for {mod_id.mod_id}...")
         path: str = f"games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}.json"
 
         return self.__request_with_model(path, NmMod)
@@ -392,10 +394,10 @@ class NexusModsApi(ProviderApi):
             translation_details: ModDetails = self.get_mod_details(mod_id)
 
             return self.__get_sort_key(
-                translation_details.timestamp,
-                translation_details.version,
-                original_mod_details.timestamp,
-                original_mod_details.version,
+                translation_timestamp=translation_details.timestamp,
+                translation_version=translation_details.version,
+                original_mod_timestamp=original_mod_details.timestamp,
+                original_mod_version=original_mod_details.version,
             )
 
         available_translations.sort(key=get_sort_key, reverse=True)
@@ -461,13 +463,20 @@ class NexusModsApi(ProviderApi):
         Gets contents of `file_name` from `mod_id` in `game_id` and returns paths in a list.
         """
 
-        _game_id = self.GAME_IDS[game_id]
+        _game_id: int = NexusModsApi.GAME_IDS[game_id]
 
-        url = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
+        url: str = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
 
         try:
             res: req.Response = self._cached_request(url)
             return extract_file_paths(res.json())
+        except FileNotFoundError:
+            self.log.warning(
+                f"Failed to get file contents: No content preview for '{file_name}' "
+                "available."
+            )
+            return None
+
         except Exception as ex:
             self.log.error(f"Failed to get file contents: {ex}", exc_info=ex)
             self.log.debug(f"Request URL: {url}")
@@ -558,7 +567,9 @@ class NexusModsApi(ProviderApi):
             raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
-        cache_file_path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
+        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (
+            get_url_identifier(url) + ".cache"
+        )
 
         cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
             cache_file_path, default=None
@@ -569,7 +580,7 @@ class NexusModsApi(ProviderApi):
             if self.__scraper is None:
                 self.__scraper = curl_requests.Session(impersonate="chrome")
 
-            headers = {
+            headers: dict[str, str] = {
                 "User-Agent": self.user_agent,
             }
 
@@ -616,33 +627,31 @@ class NexusModsApi(ProviderApi):
         Follows instructions from here: https://github.com/Nexus-Mods/sso-integration-demo
         """
 
-        res_data: dict[str, Any]
-
         self.log.info("Starting SSO process...")
 
         self.log.debug("Connecting to Nexus Mods SSO webserver...")
-        connection = websocket.create_connection("wss://sso.nexusmods.com")
+        connection: ws.WebSocket = ws.create_connection("wss://sso.nexusmods.com")
 
         self.log.debug("Generating UUID v4...")
         uuid = str(uuid4())
         self.log.debug(f"UUID: {uuid}")
 
         self.log.debug("Requesting SSO token...")
-        request_data = {
+        request_data: dict[str, Any] = {
             "id": uuid,
             "token": None,
             "protocol": 2,
         }
         connection.send(json.dumps(request_data).encode())
 
-        response = connection.recv()
+        response: str | bytes = connection.recv()
         if isinstance(response, bytes):
             response = response.decode()
-        res_data = json.loads(response)
+        res_data: dict[str, Any] = json.loads(response)
         token: str = res_data["data"]["connection_token"]  # type: ignore  # noqa: F841
 
         self.log.debug("Opening page in Web Browser...")
-        url = f"https://www.nexusmods.com/sso?id={uuid}&application={self.APP_SLUG}"
+        url: str = f"https://www.nexusmods.com/sso?id={uuid}&application={NexusModsApi.APP_SLUG}"
         webbrowser.open(url)
 
         self.log.info("Waiting for User to sign in...")
@@ -731,6 +740,7 @@ class NexusModsApi(ProviderApi):
         if mod_id.file_id is None:
             raise ValueError("Mod file id must not be None.")
 
+        url: str
         if self.__premium:
             self.log.info("Starting premium download...")
 
@@ -754,9 +764,18 @@ class NexusModsApi(ProviderApi):
                 ):
                     queue.put(nxm_request)
 
-            NXMHandler.get().request_signal.connect(process_url)
-            nxm_request: NxmRequest = queue.get()
-            NXMHandler.get().request_signal.disconnect(process_url)
+            handler: NXMHandler = NXMHandler.get()
+            handler.request_signal.connect(process_url)
+            try:
+                nxm_request: NxmRequest = queue.get(
+                    timeout=NexusModsApi.NXM_REQUEST_TIMEOUT
+                )
+            except Empty as ex:
+                raise TimeoutError(
+                    "Timed out waiting for an NXM download request."
+                ) from ex
+            finally:
+                handler.request_signal.disconnect(process_url)
 
             key: str = nxm_request.key
             expires: int = nxm_request.expires
@@ -788,12 +807,11 @@ class NexusModsApi(ProviderApi):
         `file_id` is optional and can be used to link directly to a file.
         """
 
-        base_url = "https://www.nexusmods.com"
-
+        url: str = "https://www.nexusmods.com/"
         if file_id is None:
-            url = f"{base_url}/{game_id}/mods/{mod_id}"
+            url += f"{game_id}/mods/{mod_id}"
         else:
-            url = f"{base_url}/{game_id}/mods/{mod_id}?tab=files&file_id={file_id}"
+            url += f"{game_id}/mods/{mod_id}?tab=files&file_id={file_id}"
             if mod_manager:
                 url += "&nmm=1"
 
@@ -819,7 +837,7 @@ class NexusModsApi(ProviderApi):
 
         if url_match is not None:
             game_id: str = url_match.group(1)
-            mod_id: int = int(url_match.group(2))
+            mod_id = int(url_match.group(2))
             file_id: Optional[int] = int(url_match.group(3) or 0) or None
 
             return game_id, mod_id, file_id

@@ -80,8 +80,8 @@ class StringExtractor(QObject):
         else:
             source = input
 
-        self.log.info(f"Extracting strings from supported mod files in '{input}'...")
-        self.log.info(f"Source is archive: {isinstance(source, Archive)}")
+        self.log.debug(f"Extracting strings from supported mod files in '{input}'...")
+        self.log.debug(f"Source is archive: {isinstance(source, Archive)}")
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -155,7 +155,7 @@ class StringExtractor(QObject):
         if include_dsd_files:
             result.update(self.extract_dsd_strings(input, mod_instance))
 
-        self.log.info(f"Successfully extracted strings from {len(result)} mod file(s).")
+        self.log.debug(f"Successfully extracted strings from {len(result)} mod file(s).")
 
         return result
 
@@ -168,7 +168,7 @@ class StringExtractor(QObject):
             modfiles (list[ModFile]): List of mod files.
         """
 
-        self.log.info(f"Preparing {len(modfiles)} mod file(s) for string extraction...")
+        self.log.debug(f"Preparing {len(modfiles)} mod file(s) for string extraction...")
 
         if not modfiles:
             return
@@ -262,7 +262,7 @@ class StringExtractor(QObject):
                         # pathlib returns absolute paths
                         mod_files.append(Path(path).relative_to(source))
 
-        self.log.info(f"Found {len(mod_files)} supported mod files.")
+        self.log.debug(f"Found {len(mod_files)} supported mod files.")
 
         return mod_files
 
@@ -287,8 +287,8 @@ class StringExtractor(QObject):
         else:
             source = input
 
-        self.log.info(f"Extracting strings from DSD files in '{input}'...")
-        self.log.info(f"Source is archive: {isinstance(source, Archive)}")
+        self.log.debug(f"Extracting strings from DSD files in '{input}'...")
+        self.log.debug(f"Source is archive: {isinstance(source, Archive)}")
 
         dsd_files: dict[Path, Path] = self.scan_for_dsd_files(source)
         self.prepare_dsd_files(source, dsd_files)
@@ -312,7 +312,7 @@ class StringExtractor(QObject):
 
             result[mod_file] = StringLoader.load_strings_from_json_file(dsd_file)
 
-        self.log.info(f"Successfully extracted strings from {len(result)} DSD file(s).")
+        self.log.debug(f"Successfully extracted strings from {len(result)} DSD file(s).")
 
         return result
 
@@ -339,7 +339,7 @@ class StringExtractor(QObject):
 
             result[modfile_path] = path
 
-        self.log.info(f"Found {len(result)} DSD files.")
+        self.log.debug(f"Found {len(result)} DSD files.")
 
         return result
 
@@ -353,7 +353,9 @@ class StringExtractor(QObject):
             dsd_files (dict[Path, Path]): Mapping of mod file path to DSD file path.
         """
 
-        self.log.info(f"Preparing {len(dsd_files)} DSD file(s) for string extraction...")
+        self.log.debug(
+            f"Preparing {len(dsd_files)} DSD file(s) for string extraction..."
+        )
 
         if not dsd_files:
             return
@@ -393,7 +395,7 @@ class StringExtractor(QObject):
             original_mod (Mod): The original mod.
         """
 
-        cls.log.info(
+        cls.log.debug(
             f"Importing '{translated_mod.name}' as translation for '{original_mod.name}'..."
         )
 
@@ -456,7 +458,7 @@ class StringExtractor(QObject):
             except Exception as ex:
                 cls.log.error(f"Failed to extract from '{dsd_path}': {ex}", exc_info=ex)
 
-        cls.log.info(
+        cls.log.debug(
             f"Extracted {sum(len(strings) for strings in strings.values())} translated "
             f"string(s) for {len(strings)} file(s)."
         )

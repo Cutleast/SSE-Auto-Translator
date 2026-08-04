@@ -14,6 +14,7 @@ from PySide6.QtWidgets import QApplication
 
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
+from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.exporter import Exporter
 from core.database.translation import Translation
@@ -24,6 +25,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.string.string_extractor import StringExtractor
+from core.string.types import StringList
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 
@@ -34,7 +36,7 @@ class BatchRunner(Singleton):
     """
     Runs a sequence of batch operations headlessly (without a main window).
 
-    Loads the full application stack (user data, database, modinstance) and sequentially
+    Loads the full application stack (user data, database, mod instance) and sequentially
     executes the requested operations, then exits.
     """
 
@@ -96,7 +98,7 @@ class BatchRunner(Singleton):
 
     def __load_user_data(self, pdisplay: Optional[ProgressDisplay] = None) -> UserData:
         """
-        Loads the user data (config, database, modinstance, masterlist).
+        Loads the user data (config, database, mod instance, masterlist).
 
         Args:
             pdisplay (Optional[ProgressDisplay], optional):
@@ -165,7 +167,7 @@ class BatchRunner(Singleton):
 
         scanner: Scanner = self.__component_provider.get_scanner()
         state_service: StateService = self.__component_provider.get_state_service()
-        mod_instance: ModInstance = self.__user_data.modinstance
+        mod_instance: ModInstance = self.__user_data.mod_instance
 
         items: dict[Mod, list[ModFile]] = {
             mod: [
@@ -210,8 +212,8 @@ class BatchRunner(Singleton):
 
         self.log.info(f"Importing {len(archives)} translation archive(s)...")
 
-        database = self.__user_data.database
-        mod_instance = self.__user_data.modinstance
+        database: TranslationDatabase = self.__user_data.database
+        mod_instance: ModInstance = self.__user_data.mod_instance
         extractor = StringExtractor()
 
         for a, archive_path in enumerate(archives):
@@ -237,7 +239,7 @@ class BatchRunner(Singleton):
             self.log.info(f"Importing '{archive_path}'...")
 
             try:
-                strings = extractor.extract_strings(
+                strings: dict[Path, StringList] = extractor.extract_strings(
                     input=archive_path,
                     mod_instance=mod_instance,
                     language=database.language,
@@ -286,7 +288,7 @@ class BatchRunner(Singleton):
 
         Exporter().build_output_mod(
             output_path=output_path,
-            mod_instance=self.__user_data.modinstance,
+            mod_instance=self.__user_data.mod_instance,
             translations=self.__user_data.database.user_translations,
             user_config=self.__user_data.user_config,
             pdisplay=pdisplay,

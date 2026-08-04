@@ -39,7 +39,7 @@ class AppSettings(SettingsPage[AppConfig]):
     Page for application settings.
     """
 
-    cache: Cache
+    __cache: Cache
 
     __vlayout: QVBoxLayout
 
@@ -69,7 +69,7 @@ class AppSettings(SettingsPage[AppConfig]):
             cache (Cache): Cache instance to manage application cache.
         """
 
-        self.cache = cache
+        self.__cache = cache
 
         super().__init__(initial_config)
 
@@ -144,11 +144,11 @@ class AppSettings(SettingsPage[AppConfig]):
             )
         )
         self.__clear_cache_button.clicked.connect(self.__clear_cache)
-        self.__clear_cache_button.setEnabled(self.cache.path.is_dir())
-        if self.cache.path.is_dir():
+        self.__clear_cache_button.setEnabled(self.__cache.path.is_dir())
+        if self.__cache.path.is_dir():
             self.__clear_cache_button.setText(
                 self.__clear_cache_button.text()
-                + f" ({scale_value(DirectoryScanner.get_folder_size(self.cache.path))})"
+                + f" ({scale_value(DirectoryScanner.get_folder_size(self.__cache.path))})"
             )
         basic_flayout.addRow(self.__clear_cache_button)
 
@@ -328,7 +328,7 @@ class AppSettings(SettingsPage[AppConfig]):
         behavior_flayout.addRow(self.__double_click_strings)
 
     def __clear_cache(self) -> None:
-        self.cache.clear_caches()
+        self.__cache.clear_caches()
         self.__clear_cache_button.setText(
             self.tr(
                 "Clear cache (This will reset all mod file states and delete cached API "

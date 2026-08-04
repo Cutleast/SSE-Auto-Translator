@@ -53,7 +53,7 @@ class TestDatabaseService(CoreTest):
         """
 
         # given
-        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.modinstance)
+        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.mod_instance)
         main_esp: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
         main_esp.status = TranslationStatus.TranslationAvailableInDatabase
         database: TranslationDatabase = user_data.database
@@ -87,7 +87,7 @@ class TestDatabaseService(CoreTest):
 
         # given
         modfile: ModFile = self.get_modfile_from_mod_name(
-            "RS Children Overhaul", "RSChildren.esp", user_data.modinstance
+            "RS Children Overhaul", "RSChildren.esp", user_data.mod_instance
         )
         database: TranslationDatabase = user_data.database
 
@@ -109,10 +109,10 @@ class TestDatabaseService(CoreTest):
 
         # given
         original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.modinstance
+            "Wet and Cold SE", user_data.mod_instance
         )
         translated_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.modinstance
+            "Wet and Cold SE - German", user_data.mod_instance
         )
         database: TranslationDatabase = user_data.database
 

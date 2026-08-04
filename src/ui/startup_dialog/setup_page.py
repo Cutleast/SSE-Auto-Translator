@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Optional, override
@@ -23,8 +21,9 @@ from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
 from core.utilities.localisation import LocalisationUtils
-from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
+
+from .page import Page
 
 
 class SetupPage(Page):

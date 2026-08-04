@@ -12,7 +12,7 @@ from cutleast_core_lib.core.utilities.datetime import fmt_timestamp
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.scale import scale_value
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
-from PySide6.QtCore import QItemSelectionModel, Qt, QUrl, Signal
+from PySide6.QtCore import QItemSelectionModel, QSize, Qt, QUrl, Signal
 from PySide6.QtGui import QDragEnterEvent, QDragMoveEvent, QDropEvent
 from PySide6.QtWidgets import (
     QAbstractItemView,
@@ -35,7 +35,7 @@ from core.file_types.plugin.file import PluginFile
 from core.mod_file.mod_file_service import ModFileService
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.string_list.string_list_dialog import StringListWindow
@@ -67,10 +67,10 @@ class TranslationsWidget(QTreeWidget):
         Translation: Translation to edit.
     """
 
-    database: TranslationDatabase
-    provider: Provider
-    mod_instance: ModInstance
-    app_config: AppConfig
+    __database: TranslationDatabase
+    __provider: TranslationProvider
+    __mod_instance: ModInstance
+    __app_config: AppConfig
 
     __menu: TranslationsMenu
     """
@@ -95,24 +95,24 @@ class TranslationsWidget(QTreeWidget):
     def __init__(
         self,
         database: TranslationDatabase,
-        provider: Provider,
+        provider: TranslationProvider,
         mod_instance: ModInstance,
         app_config: AppConfig,
     ) -> None:
         """
         Args:
             database (TranslationDatabase): The translation database.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             mod_instance (ModInstance): The loaded mod instance.
             app_config (AppConfig): The application configuration.
         """
 
         super().__init__()
 
-        self.database = database
-        self.provider = provider
-        self.mod_instance = mod_instance
-        self.app_config = app_config
+        self.__database = database
+        self.__provider = provider
+        self.__mod_instance = mod_instance
+        self.__app_config = app_config
 
         self.__init_ui()
 
@@ -126,9 +126,9 @@ class TranslationsWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.database.add_signal.connect(self.__on_translations_added)
-        self.database.remove_signal.connect(self.__on_translations_removed)
-        self.database.rename_signal.connect(
+        self.__database.add_signal.connect(self.__on_translations_added)
+        self.__database.remove_signal.connect(self.__on_translations_removed)
+        self.__database.rename_signal.connect(
             lambda translation: (
                 # currently, an entire reload is required
                 self.update_translations()
@@ -165,7 +165,9 @@ class TranslationsWidget(QTreeWidget):
         self.__menu = TranslationsMenu()
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.customContextMenuRequested.connect(
-            lambda: self.__menu.open(self.get_current_item())
+            lambda: self.__menu.open(
+                self.get_current_item(), self.__provider.is_source_available
+            )
         )
 
     def highlight_translation(self, translation: Translation) -> None:
@@ -199,8 +201,8 @@ class TranslationsWidget(QTreeWidget):
 
         self.clear()
 
-        for translation in self.database.user_translations:
-            item = self._create_translation_item(translation)
+        for translation in self.__database.user_translations:
+            item: QTreeWidgetItem = self._create_translation_item(translation)
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
@@ -302,7 +304,7 @@ class TranslationsWidget(QTreeWidget):
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
         current_item: Optional[Translation | Path] = self.get_current_item()
 
-        if current_item is not None and self.app_config.show_strings_on_double_click:
+        if current_item is not None and self.__app_config.show_strings_on_double_click:
             self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
@@ -451,13 +453,15 @@ class TranslationsWidget(QTreeWidget):
             dialog.setOkButtonText(self.tr("Ok"))
             dialog.setCancelButtonText(self.tr("Cancel"))
             dialog.setMinimumWidth(800)
-            size = dialog.size()
+            size: QSize = dialog.size()
             size.setWidth(800)
             dialog.resize(size)
 
             if dialog.exec() == dialog.DialogCode.Accepted:
-                new_name = dialog.textValue()
-                DatabaseService.rename_translation(current_item, new_name, self.database)
+                new_name: str = dialog.textValue()
+                DatabaseService.rename_translation(
+                    current_item, new_name, self.__database
+                )
 
     def __export_translation(self) -> None:
         """
@@ -498,7 +502,7 @@ class TranslationsWidget(QTreeWidget):
 
         Exporter.export_translation(
             translation=current_item,
-            mod_instance=self.mod_instance,
+            mod_instance=self.__mod_instance,
             output_path=folder,
             use_dsd_format=export_format == ExportDialog.ExportFormat.DSD,
         )
@@ -507,7 +511,7 @@ class TranslationsWidget(QTreeWidget):
             QApplication.activeModalWidget() or self,
             self.tr("Export successful!"),
             self.tr("Translation successfully exported."),
-            QMessageBox.StandardButton.Ok,
+            buttons=QMessageBox.StandardButton.Ok,
         )
 
     def __delete_translation(self) -> None:
@@ -542,7 +546,7 @@ class TranslationsWidget(QTreeWidget):
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
 
-            DatabaseService.delete_translations(selected_translations, self.database)
+            DatabaseService.delete_translations(selected_translations, self.__database)
 
     def __open_modpage(self) -> None:
         current_item: Optional[Translation | Path] = self.get_current_item()
@@ -553,7 +557,7 @@ class TranslationsWidget(QTreeWidget):
             and current_item.mod_id
         ):
             try:
-                url: str = self.provider.get_modpage_url(
+                url: str = self.__provider.get_modpage_url(
                     current_item.mod_id, current_item.source
                 )
                 webbrowser.open(url)

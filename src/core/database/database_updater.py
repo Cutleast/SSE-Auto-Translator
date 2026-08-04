@@ -116,47 +116,7 @@ class DatabaseUpdater(QObject):
                     )
 
         if add_missing_files:
-            if pdisplay is not None:
-                pdisplay.updateMainProgress(
-                    ProgressUpdate(
-                        status_text=self.tr(
-                            "Adding missing mod files to translations..."
-                        ),
-                        value=0,
-                        maximum=0,
-                    )
-                )
-
-            for mod in self.__mod_instance.mods:
-                existing_translation: Optional[Translation] = (
-                    self.__database.get_translation_by_mod(mod)
-                )
-                if existing_translation is None:
-                    continue
-
-                missing_modfiles: list[ModFile] = [
-                    modfile
-                    for modfile in mod.modfiles
-                    if modfile.path not in existing_translation.strings
-                    and modfile.status >= TranslationStatus.RequiresTranslation
-                ]
-                for missing_modfile in missing_modfiles:
-                    modfile_translation: Translation = (
-                        DatabaseService.create_translation_for_modfile(
-                            modfile=missing_modfile,
-                            database=self.__database,
-                            # we just merge it into the existing translation
-                            add_and_save=False,
-                        )
-                    )
-                    existing_translation.strings.update(modfile_translation.strings)
-                    self.log.debug(
-                        f"Created new translation for mod file '{missing_modfile.path}' "
-                        f"and added it to translation '{existing_translation.name}'."
-                    )
-
-                if missing_modfiles:
-                    existing_translation.save()
+            self.__add_missing_modfiles(pdisplay)
 
         self.log.info("Finished updating database translations.")
 
@@ -229,3 +189,44 @@ class DatabaseUpdater(QObject):
         )
 
         return updated_modfile_states
+
+    def __add_missing_modfiles(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(
+                    status_text=self.tr("Adding missing mod files to translations..."),
+                    value=0,
+                    maximum=0,
+                )
+            )
+
+        for mod in self.__mod_instance.mods:
+            existing_translation: Optional[Translation] = (
+                self.__database.get_translation_by_mod(mod)
+            )
+            if existing_translation is None:
+                continue
+
+            missing_modfiles: list[ModFile] = [
+                modfile
+                for modfile in mod.modfiles
+                if modfile.path not in existing_translation.strings
+                and modfile.status >= TranslationStatus.RequiresTranslation
+            ]
+            for missing_modfile in missing_modfiles:
+                modfile_translation: Translation = (
+                    DatabaseService.create_translation_for_modfile(
+                        modfile=missing_modfile,
+                        database=self.__database,
+                        # we just merge it into the existing translation
+                        add_and_save=False,
+                    )
+                )
+                existing_translation.strings.update(modfile_translation.strings)
+                self.log.debug(
+                    f"Created new translation for mod file '{missing_modfile.path}' "
+                    f"and added it to translation '{existing_translation.name}'."
+                )
+
+            if missing_modfiles:
+                existing_translation.save()

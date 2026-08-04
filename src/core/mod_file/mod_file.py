@@ -1,27 +1,24 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
-from dataclasses import dataclass
 from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from pydantic import BaseModel
 
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.string.types import StringList
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
 
 
-@dataclass
-class ModFile(metaclass=ABCMeta):
+class ModFile(BaseModel, metaclass=ABCMeta):
     """
     Dataclass for translatable mod files.
     """
@@ -79,7 +76,7 @@ class ModFile(metaclass=ABCMeta):
 
     @Cache.persistent_cache(
         cache_subfolder=Path("modfile_strings"),
-        id_generator=lambda self: FileSource.from_file(
+        id_generator=lambda self: FileSourceFactory.for_file_path(
             self.full_path
         ).get_file_identifier(),
     )

@@ -7,8 +7,9 @@ from typing import Any, Optional, Self
 
 import jstyleson as json
 from cutleast_core_lib.core.utilities.web_utils import get_raw_web_content
-from pydantic import BaseModel, TypeAdapter
+from pydantic import BaseModel, PrivateAttr, TypeAdapter
 
+from core.config.user_config import UserConfig
 from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
 from core.utilities.game_language import GameLanguage
 
@@ -29,6 +30,8 @@ class Masterlist(BaseModel):
     """
     Map of file names and their masterlist entries.
     """
+
+    __user_config: Optional[UserConfig] = PrivateAttr(default=None)
 
     @classmethod
     def from_data(cls, data: dict[str, dict[str, Any]]) -> Self:
@@ -84,13 +87,20 @@ class Masterlist(BaseModel):
         User-configured ignore list for file names.
         """
 
-        from core.user_data.user_data_service import UserDataService
-
-        if UserDataService.has_instance():
-            # TODO: Improve this
-            return UserDataService.get().get_user_data().user_config.modfile_ignorelist
-        else:
+        if self.__user_config is None:
             return []
+
+        return self.__user_config.modfile_ignorelist
+
+    def set_user_config(self, user_config: UserConfig) -> None:
+        """
+        Sets the user configuration used by this masterlist.
+
+        Args:
+            user_config (UserConfig): User configuration containing the ignore list.
+        """
+
+        self.__user_config = user_config
 
     def is_ignored(self, file_name: str) -> bool:
         """

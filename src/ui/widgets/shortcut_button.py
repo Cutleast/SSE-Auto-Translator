@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Any, override
@@ -16,10 +14,17 @@ class ShortcutButton(QPushButton):
     Adapted QPushButton that automatically displays set shortcuts.
     """
 
+    __icon_label: QLabel
+    __label: QLabel
+    __shortcut_label: QLabel
+
     @override
     def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
+        self.__init_ui()
+
+    def __init_ui(self) -> None:
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(7, 0, 7, 0)
         self.setLayout(hlayout)
@@ -45,16 +50,15 @@ class ShortcutButton(QPushButton):
         self.__update_size_hint()
 
     def __update_size_hint(self) -> None:
-        padding = 20
-
-        label_width = self.__label.sizeHint().width()
-        shortcut_width = self.__shortcut_label.sizeHint().width()
-        icon_width = (
+        padding: int = 20
+        label_width: int = self.__label.sizeHint().width()
+        shortcut_width: int = self.__shortcut_label.sizeHint().width()
+        icon_width: int = (
             (self.__icon_label.sizeHint().width() + 10)
             if not self.__icon_label.isHidden()
             else 0
         )
-        combined_width = icon_width + label_width + shortcut_width + padding
+        combined_width: int = icon_width + label_width + shortcut_width + padding
 
         self.setMinimumWidth(combined_width)
 
@@ -62,7 +66,7 @@ class ShortcutButton(QPushButton):
     def setShortcut(self, shortcut: QKeySequence) -> None:  # type: ignore[override]
         super().setShortcut(shortcut)
 
-        key = self.shortcut().toString()
+        key: str = self.shortcut().toString()
         if key:
             self.__shortcut_label.setText(f"({key})")
             self.__shortcut_label.show()

@@ -34,7 +34,7 @@ class TestDatabaseUpdater(CoreTest):
 
         # given
         modfile: ModFile = self.get_modfile_from_mod_name(
-            "RS Children Overhaul", "RSChildren.esp", user_data.modinstance
+            "RS Children Overhaul", "RSChildren.esp", user_data.mod_instance
         )
         original_strings: StringList = modfile.get_strings()
         translation_strings: StringList = [
@@ -49,7 +49,7 @@ class TestDatabaseUpdater(CoreTest):
             strings={modfile.path: translation_strings},
             database=user_data.database,
         )
-        updater = DatabaseUpdater(user_data.database, user_data.modinstance)
+        updater = DatabaseUpdater(user_data.database, user_data.mod_instance)
 
         # when
         updated_modfile_states: dict[ModFile, TranslationStatus] = (
@@ -80,7 +80,7 @@ class TestDatabaseUpdater(CoreTest):
         """
 
         # given
-        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.modinstance)
+        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.mod_instance)
         modfile: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
         database = TranslationDatabase(
             userdb_path=user_data.database.userdb_path,
@@ -104,7 +104,7 @@ class TestDatabaseUpdater(CoreTest):
         )
         database.user_translations.append(translation)
 
-        updater = DatabaseUpdater(database, user_data.modinstance)
+        updater = DatabaseUpdater(database, user_data.mod_instance)
         sync_executor(updater)
 
         # when

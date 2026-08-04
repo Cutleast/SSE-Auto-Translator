@@ -1,11 +1,9 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import logging
-from typing import Optional
+from typing import Optional, TypeVar
 
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
@@ -19,13 +17,17 @@ from .provider_api import ProviderApi
 from .provider_manager import ProviderManager
 from .source import Source
 
+T = TypeVar("T", bound=ProviderApi)
 
-class Provider:
+
+class TranslationProvider:
     """
     Unified class for available translation sources.
     """
 
-    log: logging.Logger = logging.getLogger("Provider")
+    __provider_manager: ProviderManager
+
+    log: logging.Logger = logging.getLogger("TranslationProvider")
 
     def __init__(self, user_config: UserConfig) -> None:
         """
@@ -33,7 +35,44 @@ class Provider:
             user_config (UserConfig): User configuration.
         """
 
-        ProviderManager.init(user_config)
+        self.__provider_manager = ProviderManager(user_config)
+
+    def get_provider(self, provider_type: type[T]) -> T:
+        """
+        Gets a configured provider by its implementation type.
+
+        Args:
+            provider_type (type[T]): Provider implementation type.
+
+        Returns:
+            T: The configured provider.
+        """
+
+        return self.__provider_manager.get_provider(provider_type)
+
+    @property
+    def is_available(self) -> bool:
+        """
+        Checks whether at least one translation provider is available.
+
+        Returns:
+            bool: Whether at least one provider is available.
+        """
+
+        return self.__provider_manager.has_providers
+
+    def is_source_available(self, source: Source) -> bool:
+        """
+        Checks whether a translation provider is available for a source.
+
+        Args:
+            source (Source): Source to check.
+
+        Returns:
+            bool: Whether a provider for the source is available.
+        """
+
+        return self.__provider_manager.is_source_available(source)
 
     def direct_downloads_possible(self, source: Optional[Source] = None) -> bool:
         """
@@ -47,10 +86,10 @@ class Provider:
         """
 
         if source is None:
-            return ProviderManager.get_default_provider().is_direct_download_possible()
+            return self.__provider_manager.get_default_provider().is_direct_download_possible()
 
         else:
-            return ProviderManager.get_provider_by_source(
+            return self.__provider_manager.get_provider_by_source(
                 source
             ).is_direct_download_possible()
 
@@ -61,7 +100,7 @@ class Provider:
         Returns: `(rem_hreq, rem_dreq)`
         """
 
-        return ProviderManager.get_default_provider().get_remaining_requests()
+        return self.__provider_manager.get_default_provider().get_remaining_requests()
 
     def get_details(self, mod_id: ModId, source: Optional[Source] = None) -> ModDetails:
         """
@@ -80,10 +119,12 @@ class Provider:
         """
 
         if source is None:
-            return ProviderManager.get_default_provider().get_mod_details(mod_id)
+            return self.__provider_manager.get_default_provider().get_mod_details(mod_id)
 
         else:
-            return ProviderManager.get_provider_by_source(source).get_mod_details(mod_id)
+            return self.__provider_manager.get_provider_by_source(
+                source
+            ).get_mod_details(mod_id)
 
     def get_modpage_url(self, mod_id: ModId, source: Optional[Source] = None) -> str:
         """
@@ -102,10 +143,12 @@ class Provider:
         """
 
         if source is None:
-            return ProviderManager.get_default_provider().get_modpage_url(mod_id)
+            return self.__provider_manager.get_default_provider().get_modpage_url(mod_id)
 
         else:
-            return ProviderManager.get_provider_by_source(source).get_modpage_url(mod_id)
+            return self.__provider_manager.get_provider_by_source(
+                source
+            ).get_modpage_url(mod_id)
 
     def get_translations(
         self,
@@ -130,11 +173,19 @@ class Provider:
         """
 
         available_translations: dict[Source, list[ModId]] = {}
+        author_blacklist = [author.lower().strip() for author in author_blacklist]
 
-        for provider in ProviderManager.providers:
-            translation_ids: list[ModId] = provider.get_translations(
-                mod_id, file_name, language
-            )
+        for provider in self.__provider_manager.providers:
+            try:
+                translation_ids: list[ModId] = provider.get_translations(
+                    mod_id, file_name, language
+                )
+            except Exception as ex:
+                source: Source = provider.get_source()
+                self.log.error(
+                    f"Failed to find translations at '{source}': {ex}", exc_info=ex
+                )
+                continue
 
             for translation_id in translation_ids:
                 translation_details: ModDetails = provider.get_mod_details(
@@ -199,12 +250,14 @@ class Provider:
         """
 
         if source is None:
-            return ProviderManager.get_default_provider().request_download(mod_id)
-
-        else:
-            return ProviderManager.get_provider_by_source(source).request_download(
+            return self.__provider_manager.get_default_provider().request_download(
                 mod_id
             )
+
+        else:
+            return self.__provider_manager.get_provider_by_source(
+                source
+            ).request_download(mod_id)
 
     def is_mod_id_valid(self, mod_id: ModId, check_online: bool = True) -> bool:
         """
@@ -223,7 +276,7 @@ class Provider:
             return False
 
         if check_online:
-            provider_api: ProviderApi = ProviderManager.get_provider_by_source(
+            provider_api: ProviderApi = self.__provider_manager.get_provider_by_source(
                 mod_id.source
             )
 
@@ -240,4 +293,4 @@ class Provider:
         The user agent of the default provider.
         """
 
-        return ProviderManager.get_default_provider().user_agent
+        return self.__provider_manager.get_default_provider().user_agent

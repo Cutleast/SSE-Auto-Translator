@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Optional
@@ -27,7 +25,7 @@ class BlacklistDialog(QDialog):
     list.
     """
 
-    blacklist: list[str]
+    __blacklist: list[str]
 
     def __init__(self, parent: Optional[QWidget], author_blacklist: list[str]) -> None:
         """
@@ -38,7 +36,7 @@ class BlacklistDialog(QDialog):
 
         super().__init__(parent)
 
-        self.blacklist = author_blacklist
+        self.__blacklist = author_blacklist
 
         self.setWindowTitle(self.tr("Blacklist for Translation Authors"))
         self.resize(500, 700)
@@ -68,7 +66,7 @@ class BlacklistDialog(QDialog):
             entries: list[str] = [item.text() for item in items]
 
             for entry in entries:
-                self.blacklist.remove(entry)
+                self.__blacklist.remove(entry)
 
             for item in items:
                 blacklist_widget.takeItem(blacklist_widget.indexFromItem(item).row())
@@ -93,8 +91,8 @@ class BlacklistDialog(QDialog):
             if dialog.exec() == dialog.DialogCode.Accepted:
                 author_name: str = dialog.textValue()
 
-                if author_name.lower() not in self.blacklist:
-                    self.blacklist.append(author_name.lower())
+                if author_name.lower() not in self.__blacklist:
+                    self.__blacklist.append(author_name.lower())
                     blacklist_widget.addItem(author_name.lower())
 
         add_button.clicked.connect(add_author)
@@ -132,7 +130,7 @@ class BlacklistDialog(QDialog):
             remove_button.setEnabled(bool(items))
 
         blacklist_widget.itemSelectionChanged.connect(on_select)
-        blacklist_widget.addItems(self.blacklist)
+        blacklist_widget.addItems(self.__blacklist)
         vlayout.addWidget(blacklist_widget)
 
         hlayout = QHBoxLayout()

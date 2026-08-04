@@ -1,10 +1,8 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
-LICENSES = {
+LICENSES: dict[str, str] = {
     "7-zip": "https://www.7-zip.org/license.txt",
     "Qt6": "https://doc.qt.io/qt-6/lgpl.html",
     "lingua-language-detector": "https://github.com/pemistahl/lingua-py/blob/main/LICENSE.txt",

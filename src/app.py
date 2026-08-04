@@ -16,6 +16,7 @@ from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
+from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from mod_manager_lib.core.game_service import GameService
@@ -27,10 +28,8 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider_manager import ProviderManager
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
-from core.utilities.container_utils import unique
 from core.utilities.localisation import Language
 from resources_rc import qt_resource_data as qt_resource_data  # noqa: PLC0414
 from ui.main_window import MainWindow
@@ -47,6 +46,9 @@ class App(BaseApp, Singleton):
 
     APP_NAME: str = "SSE Auto Translator"
     APP_VERSION: str = "development"
+
+    cache_path: Path
+    """Path to the cache folder."""
 
     __user_data: Optional[UserData] = None
     __user_data_service: UserDataService
@@ -204,8 +206,13 @@ class App(BaseApp, Singleton):
         self.detect_path_limit()
 
     def __check_nm_api_key(self, user_config: UserConfig) -> None:
+        if self.__component_provider is None:
+            raise ValueError("Component provider is not initialized.")
+
         try:
-            nm_api: NexusModsApi = ProviderManager.get_provider(NexusModsApi)
+            nm_api: NexusModsApi = self.__component_provider.get_provider().get_provider(
+                NexusModsApi
+            )
         except ValueError:
             self.log.warning("No Nexus Mods API available.")
         else:

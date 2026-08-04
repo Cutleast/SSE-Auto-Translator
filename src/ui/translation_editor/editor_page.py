@@ -1,11 +1,9 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional
 
 from cutleast_core_lib.ui.utilities.tree_widget import calculate_required_width
 from PySide6.QtCore import Qt, Signal
@@ -43,9 +41,9 @@ class EditorPage(QSplitter):
         int: New number of open tabs.
     """
 
-    app_config: AppConfig
-    user_data: UserData
-    translator_service: TranslatorService
+    __app_config: AppConfig
+    __user_data: UserData
+    __translator_service: TranslatorService
 
     __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
     """
@@ -70,14 +68,15 @@ class EditorPage(QSplitter):
 
         super().__init__()
 
-        self.app_config = app_config
-        self.user_data = user_data
-        self.translator_service = translator_service
+        self.__app_config = app_config
+        self.__user_data = user_data
+        self.__translator_service = translator_service
 
-        self.setOrientation(Qt.Orientation.Horizontal)
         self.__init_ui()
 
     def __init_ui(self) -> None:
+        self.setOrientation(Qt.Orientation.Horizontal)
+
         self.__tab_list_widget = QTreeWidget()
         self.__tab_list_widget.header().hide()
         self.__tab_list_widget.setColumnCount(2)
@@ -99,7 +98,10 @@ class EditorPage(QSplitter):
 
     def __set_tab_from_item(self, item: Optional[QTreeWidgetItem]) -> None:
         """
-        Sets page according to selected `item`.
+        Sets the page widget to the tab corresponding to a specified item.
+
+        Args:
+            item (Optional[QTreeWidgetItem]): The item to set the tab for.
         """
 
         if item is None:
@@ -125,11 +127,14 @@ class EditorPage(QSplitter):
 
         Args:
             tab (EditorTab): The tab to switch to.
-            modfile (Optional[Path]):
+            modfile (Optional[Path], optional):
                 The path of the mod file to go to, relative to the game's "Data" folder.
+                Defaults to None.
         """
 
-        item: QTreeWidgetItem = self.__tabs[tab.translation][1]
+        item: QTreeWidgetItem = next(
+            item for t, item in self.__tabs.values() if t is tab
+        )
         self.__tab_list_widget.setCurrentItem(item)
 
         if modfile is not None:
@@ -143,12 +148,7 @@ class EditorPage(QSplitter):
 
         return [tab for tab, _ in self.__tabs.values()]
 
-    @override
-    def update(self) -> None:  # type: ignore
-        """
-        Updates the displayed editor tabs.
-        """
-
+    def __update(self) -> None:
         for tab, item in self.__tabs.values():
             tab.update()
 
@@ -159,7 +159,13 @@ class EditorPage(QSplitter):
 
     def close_translation(self, translation: Translation, silent: bool = False) -> None:
         """
-        Closes all tabs belonging to `translation`.
+        Closes all tabs belonging to a translation.
+
+        Args:
+            translation (Translation): The translation to close.
+            silent (bool, optional):
+                Whether to skip the confirmation dialog if there are unsaved changes.
+                Defaults to False.
         """
 
         tab: EditorTab
@@ -195,11 +201,14 @@ class EditorPage(QSplitter):
             self.__set_tab(self.tabs[-1])
 
         self.tab_count_updated.emit(len(self.tabs))
-        self.update()
+        self.__update()
 
     def open_translation(self, translation: Translation) -> None:
         """
-        Opens `translation` in new tab.
+        Opens a translation in a new tab.
+
+        Args:
+            translation (Translation): The translation to open.
         """
 
         # Create new tab if translation is not already open
@@ -207,7 +216,10 @@ class EditorPage(QSplitter):
             translation_item = QTreeWidgetItem([translation.name])
 
             translation_tab = EditorTab(
-                translation, self.app_config, self.user_data, self.translator_service
+                translation=translation,
+                app_config=self.__app_config,
+                user_data=self.__user_data,
+                translator_service=self.__translator_service,
             )
             translation_tab.close_signal.connect(self.close_translation)
             self.__tabs[translation] = translation_tab, translation_item
@@ -243,4 +255,4 @@ class EditorPage(QSplitter):
         self.setSizes([new_width, total_width - new_width])
 
         self.tab_count_updated.emit(len(self.tabs))
-        self.update()
+        self.__update()

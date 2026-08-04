@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import Optional
@@ -29,8 +27,8 @@ class IgnoreListDialog(QDialog):
     Dialog for ignore lists.
     """
 
-    masterlist: Masterlist
-    user_config: UserConfig
+    __masterlist: Masterlist
+    __user_config: UserConfig
 
     __userlist_widget: QListWidget
     __remove_button: QPushButton
@@ -51,8 +49,8 @@ class IgnoreListDialog(QDialog):
 
         super().__init__(parent)
 
-        self.masterlist = masterlist
-        self.user_config = user_config
+        self.__masterlist = masterlist
+        self.__user_config = user_config
 
         self.setWindowTitle(self.tr("Ignore list"))
         self.resize(600, 500)
@@ -85,7 +83,7 @@ class IgnoreListDialog(QDialog):
         )
         self.__userlist_widget.setUniformItemSizes(True)
         self.__userlist_widget.itemSelectionChanged.connect(self.__on_select)
-        self.__userlist_widget.addItems(self.masterlist.user_ignore_list)
+        self.__userlist_widget.addItems(self.__masterlist.user_ignore_list)
         vlayout.addWidget(self.__userlist_widget)
 
         search_bar = SearchBar()
@@ -104,7 +102,7 @@ class IgnoreListDialog(QDialog):
         masterlist_widget.addItems(
             sorted(
                 filename
-                for filename, masterlist_entry in self.masterlist.entries.items()
+                for filename, masterlist_entry in self.__masterlist.entries.items()
                 if masterlist_entry.type == MasterlistEntry.Type.Ignore
             )
         )
@@ -119,12 +117,12 @@ class IgnoreListDialog(QDialog):
         items: list[QListWidgetItem] = self.__userlist_widget.selectedItems()
 
         for item in items:
-            self.masterlist.remove_from_ignore_list(item.text())
+            self.__masterlist.remove_from_ignore_list(item.text())
             self.__userlist_widget.takeItem(
                 self.__userlist_widget.indexFromItem(item).row()
             )
 
-        self.user_config.save()
+        self.__user_config.save()
 
     def __on_text_filter_change(self, text_filter: str, case_sensitive: bool) -> None:
         for rindex in range(self.__userlist_widget.count()):

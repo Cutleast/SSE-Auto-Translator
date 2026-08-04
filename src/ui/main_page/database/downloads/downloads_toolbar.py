@@ -64,6 +64,16 @@ class DownloadsToolbar(QToolBar):
 
         self.__handle_nxm_action.setChecked(checked)
 
+    def set_handle_nxm_action_enabled(self, enabled: bool) -> None:
+        """
+        Enables or disables Nexus Mods download handling.
+
+        Args:
+            enabled (bool): Whether a translation provider is available.
+        """
+
+        self.__handle_nxm_action.setEnabled(enabled)
+
     def highlight_nxm_action(self) -> None:
         """
         Highlights the handle NXM action.

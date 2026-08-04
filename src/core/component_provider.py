@@ -15,7 +15,7 @@ from core.downloader.download_manager import DownloadManager
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.temp_folder_provider import TempFolderProvider
@@ -29,7 +29,7 @@ class ComponentProvider(Singleton):
     __app_config: AppConfig
     __user_data: UserData
 
-    __provider: Optional[Provider] = None
+    __provider: Optional[TranslationProvider] = None
     __translator_service: Optional[TranslatorService] = None
     __state_service: Optional[StateService] = None
     __scanner: Optional[Scanner] = None
@@ -59,30 +59,30 @@ class ComponentProvider(Singleton):
 
         NXMHandler(subprocess.list2cmdline(get_execution_info()[0]))
 
-        self.__provider = Provider(self.__user_data.user_config)
+        self.__provider = TranslationProvider(self.__user_data.user_config)
 
         self.__translator_service = TranslatorService(self.__user_data.translator_config)
 
         self.__state_service = StateService(
-            self.__user_data.modinstance, self.__user_data.database
+            self.__user_data.mod_instance, self.__user_data.database
         )
 
         self.__scanner = Scanner(
-            self.__user_data.modinstance,
-            self.__user_data.database,
-            self.__app_config,
-            self.__user_data.user_config,
-            self.__provider,
-            self.__user_data.masterlist,
+            mod_instance=self.__user_data.mod_instance,
+            database=self.__user_data.database,
+            app_config=self.__app_config,
+            user_config=self.__user_data.user_config,
+            provider=self.__provider,
+            masterlist=self.__user_data.masterlist,
         )
 
         self.__download_manager = DownloadManager(
-            self.__user_data.database,
-            self.__user_data.modinstance,
-            self.__provider,
-            self.__app_config,
-            self.__user_data.user_config,
-            self.__user_data.masterlist,
+            database=self.__user_data.database,
+            mod_instance=self.__user_data.mod_instance,
+            provider=self.__provider,
+            app_config=self.__app_config,
+            user_config=self.__user_data.user_config,
+            masterlist=self.__user_data.masterlist,
         )
 
         self.__temp_folder_provider = TempFolderProvider(
@@ -92,10 +92,10 @@ class ComponentProvider(Singleton):
 
         self.log.info("Initialization complete.")
 
-    def get_provider(self) -> Provider:
+    def get_provider(self) -> TranslationProvider:
         """
         Returns:
-            Provider: Translation provider.
+            TranslationProvider: Translation provider.
 
         Raises:
             ValueError: When the provider is not yet initialized.

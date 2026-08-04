@@ -1,0 +1,8 @@
+[
+    { // https://raw.githubusercontent.com/Cutleast/SSE-Auto-Translator/master/masterlists/index.json
+        "url": "https://raw.githubusercontent.com/Cutleast/SSE-Auto-Translator/master/masterlists/index.json",
+        "method": "GET",
+        "status_code": 200,
+        "response_body": {}
+    }
+]

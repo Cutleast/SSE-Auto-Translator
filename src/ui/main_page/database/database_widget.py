@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 from typing import override
@@ -16,7 +14,7 @@ from core.downloader.download_manager import DownloadManager
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 
 from .downloads.downloads_tab import DownloadsTab
 from .translations.translations_tab import TranslationsTab
@@ -41,7 +39,7 @@ class DatabaseWidget(QTabWidget):
     def __init__(
         self,
         database: TranslationDatabase,
-        provider: Provider,
+        provider: TranslationProvider,
         mod_instance: ModInstance,
         app_config: AppConfig,
         scanner: Scanner,
@@ -51,7 +49,7 @@ class DatabaseWidget(QTabWidget):
         """
         Args:
             database (TranslationDatabase): The translation database.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             mod_instance (ModInstance): The loaded mod instance.
             app_config (AppConfig): The application configuration.
             scanner (Scanner): The scanner instance.

@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
-from cutleast_core_lib.core.multithreading.progress_executor import ProgressDisplay
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
 
 from core.config.user_config import UserConfig

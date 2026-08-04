@@ -1,4 +1,12 @@
 [
+    { // https://api.nexusmods.com/v1/users/validate.json
+        "url": "https://api.nexusmods.com/v1/users/validate.json",
+        "method": "GET",
+        "status_code": 200,
+        "response_body": {
+            "is_premium": true
+        }
+    },
     { // https://api.nexusmods.com/v1/games/skyrimspecialedition/mods/12125.json
         "url": "https://api.nexusmods.com/v1/games/skyrimspecialedition/mods/12125.json",
         "method": "GET",

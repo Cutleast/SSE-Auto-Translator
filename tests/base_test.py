@@ -9,7 +9,7 @@ import sys
 import tempfile
 from collections.abc import Generator
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 from unittest.mock import MagicMock
 
 import jstyleson as json
@@ -82,6 +82,33 @@ class BaseTest(CoreBaseTest):
         yield WindowManager()
 
         Utils.reset_singleton(WindowManager)
+
+    @pytest.fixture(autouse=True)
+    def mock_web_requests(
+        self, data_folder: Path, requests_mock: RequestsMock
+    ) -> None:
+        """
+        Registers all mocked web responses from the test data folder.
+        """
+
+        web_requests_folder: Path = data_folder / "web_requests"
+        for response_file in sorted(web_requests_folder.glob("*.json")):
+            responses: list[dict[str, Any]] = json.loads(response_file.read_text())
+            for response in responses:
+                response_body: Any = response["response_body"]
+                response_kwargs: dict[str, Any] = {
+                    "status_code": response["status_code"],
+                    "headers": response.get("response_headers", {}),
+                }
+
+                if isinstance(response_body, (dict, list)):
+                    response_kwargs["json"] = response_body
+                else:
+                    response_kwargs["text"] = response_body
+
+                requests_mock.register_uri(
+                    response["method"], response["url"], **response_kwargs
+                )
 
     @pytest.fixture
     def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
@@ -165,21 +192,14 @@ class BaseTest(CoreBaseTest):
 
     @pytest.fixture
     def component_provider(
-        self, app_config: AppConfig, user_data: UserData, requests_mock: RequestsMock
-    ) -> Generator[ComponentProvider, None, None]:
+        self, app_config: AppConfig, user_data: UserData
+    ) -> Generator[ComponentProvider]:
         """
         Returns a component provider with all components initialized.
 
         Yields:
             ComponentProvider: The component provider
         """
-
-        # mock validate endpoint for Nexus Mods API key validation
-        requests_mock.get(
-            "https://api.nexusmods.com/v1/users/validate.json",
-            status_code=200,
-            json={"is_premium": True},
-        )
 
         provider = ComponentProvider(app_config, user_data)
         provider.initialize_components()
@@ -192,7 +212,7 @@ class BaseTest(CoreBaseTest):
     @pytest.fixture
     def logger(
         self, app_config: AppConfig, test_fs: FakeFilesystem
-    ) -> Generator[Logger, None, None]:
+    ) -> Generator[Logger]:
         """
         Returns a logger instance for testing.
 
@@ -206,7 +226,7 @@ class BaseTest(CoreBaseTest):
         logging.debug("Logger singleton reset.")  # noqa: LOG015
 
     @pytest.fixture(autouse=True)
-    def game_service(self) -> Generator[GameService, None, None]:
+    def game_service(self) -> Generator[GameService]:
         """
         Returns a game service instance for testing.
 
@@ -342,7 +362,7 @@ class BaseTest(CoreBaseTest):
     @pytest.fixture
     def vortex_db(
         self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
-    ) -> Generator[MockPlyvelDB, None, None]:
+    ) -> Generator[MockPlyvelDB]:
         """
         Pytest fixture to mock the plyvel.DB class and redirect it to use the
         database with the test instance.
@@ -393,13 +413,13 @@ class BaseTest(CoreBaseTest):
 
         return cls._temp_folder
 
-    def get_mod_by_name(self, mod_name: str, modinstance: ModInstance) -> Mod:
+    def get_mod_by_name(self, mod_name: str, mod_instance: ModInstance) -> Mod:
         """
         Gets a mod by its name from the loaded mod instance.
 
         Args:
             mod_name (str): The name of the mod
-            modinstance (ModInstance): The mod instance
+            mod_instance (ModInstance): The mod instance
 
         Raises:
             ValueError: When no mod with the specified name is found
@@ -409,7 +429,7 @@ class BaseTest(CoreBaseTest):
         """
 
         try:
-            mod: Mod = next(mod for mod in modinstance.mods if mod.name == mod_name)
+            mod: Mod = next(mod for mod in mod_instance.mods if mod.name == mod_name)
         except StopIteration:
             raise ValueError(f"No mod with name {mod_name} found in mod instance.")
 
@@ -435,7 +455,7 @@ class BaseTest(CoreBaseTest):
         return modfile
 
     def get_modfile_from_mod_name(
-        self, mod_name: str, modfile_name: str, modinstance: ModInstance
+        self, mod_name: str, modfile_name: str, mod_instance: ModInstance
     ) -> ModFile:
         """
         Gets a mod file by its name from the specified mod.
@@ -443,7 +463,7 @@ class BaseTest(CoreBaseTest):
         Args:
             mod_name (str): Name of the mod to get mod file from
             modfile_name (str): The name of the mod file
-            modinstance (ModInstance): The mod instance
+            mod_instance (ModInstance): The mod instance
 
         Raises:
             ValueError: When no mod with the specified name is found
@@ -453,6 +473,6 @@ class BaseTest(CoreBaseTest):
             ModFile: The mod file
         """
 
-        mod: Mod = self.get_mod_by_name(mod_name, modinstance)
+        mod: Mod = self.get_mod_by_name(mod_name, mod_instance)
 
         return self.get_modfile_from_mod(mod, modfile_name)

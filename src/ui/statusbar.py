@@ -12,7 +12,7 @@ from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from ui.utilities.icon_provider import IconProvider
 
 
@@ -21,36 +21,38 @@ class StatusBar(QStatusBar):
     Status bar for main window.
     """
 
-    log_signal = Signal(str)
+    __log_signal = Signal(str)
+
     __logger: Logger
-    __provider: Provider
+    __provider: TranslationProvider
 
     __status_label: QLabel
     __api_label: QLabel
 
     __log_window: Optional[LogWindow] = None
 
-    def __init__(self, provider: Provider) -> None:
+    def __init__(self, provider: TranslationProvider) -> None:
         """
         Args:
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
         """
 
         super().__init__()
 
         self.__logger = Logger.get()
-        self.__logger.set_callback(self.log_signal.emit)
+        self.__logger.set_callback(self.__log_signal.emit)
 
         self.__provider = provider
 
         self.__init_ui()
+        self.__api_label.setVisible(self.__provider.is_available)
         self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
     def __init_ui(self) -> None:
         self.__status_label = ElidedLabel()
         self.__status_label.setProperty("monospace", True)
         self.__status_label.setTextFormat(Qt.TextFormat.PlainText)
-        self.log_signal.connect(
+        self.__log_signal.connect(
             lambda text: self.__status_label.setText(cast(str, text).splitlines()[0]),
             Qt.ConnectionType.QueuedConnection,
         )
@@ -82,7 +84,7 @@ class StatusBar(QStatusBar):
     def __open_log_window(self) -> None:
         if self.__log_window is None:
             self.__log_window = LogWindow(self.__logger.get_content())
-            self.log_signal.connect(
+            self.__log_signal.connect(
                 self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
             )
 
@@ -101,10 +103,9 @@ class StatusBar(QStatusBar):
     def timerEvent(self, event: QTimerEvent) -> None:
         super().timerEvent(event)
 
-        self.update()
+        self.__update()
 
-    @override
-    def update(self) -> None:  # type: ignore
+    def __update(self) -> None:
         """
         Updates status labels and API limit label.
         """
@@ -112,6 +113,7 @@ class StatusBar(QStatusBar):
         try:
             rem_hreq, rem_dreq = self.__provider.get_remaining_requests()
         except ValueError:
+            self.__api_label.setVisible(False)
             return
 
         self.__api_label.setText(

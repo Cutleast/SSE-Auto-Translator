@@ -37,7 +37,7 @@ from core.scanner.scanner import Scanner
 from core.string.search_filter import SearchFilter
 from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from core.utilities.exceptions import NoOriginalModFound
 from core.utilities.filesystem import relative_data_path
@@ -64,7 +64,7 @@ class TranslationsTab(QWidget):
     log: logging.Logger = logging.getLogger("TranslationsTab")
 
     __database: TranslationDatabase
-    __provider: Provider
+    __provider: TranslationProvider
     __mod_instance: ModInstance
     __app_config: AppConfig
     __scanner: Scanner
@@ -80,7 +80,7 @@ class TranslationsTab(QWidget):
     def __init__(
         self,
         database: TranslationDatabase,
-        provider: Provider,
+        provider: TranslationProvider,
         mod_instance: ModInstance,
         app_config: AppConfig,
         scanner: Scanner,
@@ -90,7 +90,7 @@ class TranslationsTab(QWidget):
         """
         Args:
             database (TranslationDatabase): The translation database.
-            provider (Provider): The translation provider.
+            provider (TranslationProvider): The translation provider.
             mod_instance (ModInstance): The loaded mod instance.
             app_config (AppConfig): The application configuration.
             scanner (Scanner): The scanner instance.
@@ -266,7 +266,8 @@ class TranslationsTab(QWidget):
                 if original_modfile is not None:
                     strings = {
                         original_modfile.path: StringExtractor.map_translation_strings(
-                            file_type_cls(file.name, file), original_modfile
+                            file_type_cls(name=file.name, full_path=file),
+                            original_modfile,
                         )
                     }
 

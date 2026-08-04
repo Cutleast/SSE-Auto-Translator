@@ -28,10 +28,10 @@ class TestStringExtractor(CoreTest):
 
         # given
         original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.modinstance
+            "Wet and Cold SE", user_data.mod_instance
         )
         translation_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.modinstance
+            "Wet and Cold SE - German", user_data.mod_instance
         )
 
         # when
@@ -54,16 +54,16 @@ class TestStringExtractor(CoreTest):
 
         # given
         extractor = StringExtractor()
-        modinstance: ModInstance = user_data.modinstance
+        mod_instance: ModInstance = user_data.mod_instance
         language: GameLanguage = user_data.user_config.language
         test_file_path: Path = data_folder / "Wet and Cold SE - German.7z"
 
         # when
-        modinstance.mods.remove(  # Remove mod so that it doesn't conflict with the imported mod
-            self.get_mod_by_name("Wet and Cold SE - German", modinstance)
+        mod_instance.mods.remove(  # Remove mod so that it doesn't conflict with the imported mod
+            self.get_mod_by_name("Wet and Cold SE - German", mod_instance)
         )
         imported_strings: dict[Path, StringList] = extractor.extract_strings(
-            test_file_path, modinstance, language
+            test_file_path, mod_instance, language
         )
 
         # then

@@ -10,7 +10,7 @@ from sse_plugin_interface.plugin_string import PluginString as SSEPluginString
 from sse_plugin_interface.utilities import is_valid_string
 
 from core.database.translation_service import TranslationService
-from core.file_source.file_source import FileSource
+from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import StringList
@@ -45,7 +45,7 @@ class PluginFile(ModFile):
     @override
     def _extract_strings(self) -> StringList:
         plugin = SSEPlugin.from_stream(
-            FileSource.from_file(self.full_path).get_file_stream(), self.name
+            FileSourceFactory.for_file_path(self.full_path).get_file_stream(), self.name
         )
 
         raw_strings: list[SSEPluginString] = plugin.extract_strings()
@@ -98,7 +98,8 @@ class PluginFile(ModFile):
             self.__export_strings_to_dsd(strings, output_folder, output_mod)
         else:
             plugin = SSEPlugin.from_stream(
-                FileSource.from_file(self.full_path).get_file_stream(), self.name
+                FileSourceFactory.for_file_path(self.full_path).get_file_stream(),
+                self.name,
             )
 
             replacement_strings: list[SSEPluginString] = []

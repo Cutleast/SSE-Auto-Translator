@@ -55,7 +55,7 @@ class ModFileService(QObject):
         update(
             update_callback,
             ProgressUpdate(
-                status_text=self.tr("{modname}: Scanning for mod files...").format(
+                status_text=self.tr("Scanning for mod files in '{modname}'...").format(
                     modname=mod.display_name
                 ),
             ),
@@ -67,13 +67,13 @@ class ModFileService(QObject):
             for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path in mod.path.glob(pattern):
                     if path.is_file():
-                        modfiles.append(file_type_cls(path.name, path))
+                        modfiles.append(file_type_cls(name=path.name, full_path=path))
 
         if include_bsas:
             update(
                 update_callback,
                 ProgressUpdate(
-                    status_text=self.tr("{modname}: Scanning BSAs...").format(
+                    status_text=self.tr("Scanning BSAs in '{modname}'...").format(
                         modname=mod.display_name
                     ),
                 ),
@@ -114,7 +114,9 @@ class ModFileService(QObject):
             for pattern in file_type_cls.get_glob_patterns(language.id):
                 for path_str in glob(pattern, bsa_files):
                     path = Path(path_str)
-                    modfiles.append(file_type_cls(path.name, bsa_file / path))
+                    modfiles.append(
+                        file_type_cls(name=path.name, full_path=bsa_file / path)
+                    )
 
         self.log.debug(f"Found {len(modfiles)} mod files.")
 

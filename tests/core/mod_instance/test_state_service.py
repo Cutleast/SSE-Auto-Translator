@@ -29,7 +29,7 @@ class TestStateService(CoreTest):
 
         # given
         database: TranslationDatabase = user_data.database
-        modinstance: ModInstance = user_data.modinstance
+        mod_instance: ModInstance = user_data.mod_instance
         new_translation: Translation = DatabaseService.create_blank_translation(
             "A new translation",
             strings={Path("Ordinator - Perks of Skyrim.esp"): []},
@@ -38,9 +38,9 @@ class TestStateService(CoreTest):
         modfile: ModFile = self.get_modfile_from_mod_name(
             "Ordinator - Perks of Skyrim",
             "Ordinator - Perks of Skyrim.esp",
-            modinstance,
+            mod_instance,
         )
-        _ = StateService(modinstance, database)
+        _ = StateService(mod_instance, database)
 
         # then
         assert modfile.status != TranslationStatus.TranslationInstalled
