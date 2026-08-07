@@ -1,3 +1,8 @@
+# v3.2.2
+
+- Fix context menu of string list widget
+- Fix state updates for added mod files in translations
+
 # v3.2.1 (Hotfix)
 
 - Fix language detection when target language is Polish
