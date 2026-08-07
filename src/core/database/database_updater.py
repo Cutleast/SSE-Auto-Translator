@@ -150,6 +150,9 @@ class DatabaseUpdater(QObject):
                         )
                     )
                     existing_translation.strings.update(modfile_translation.strings)
+                    updated_modfile_states[missing_modfile] = (
+                        TranslationStatus.TranslationIncomplete
+                    )
                     self.log.debug(
                         f"Created new translation for mod file '{missing_modfile.path}' "
                         f"and added it to translation '{existing_translation.name}'."
@@ -157,6 +160,7 @@ class DatabaseUpdater(QObject):
 
                 if missing_modfiles:
                     existing_translation.save()
+                    self.__database.changed_signal.emit(existing_translation)
 
         self.log.info("Finished updating database translations.")
 

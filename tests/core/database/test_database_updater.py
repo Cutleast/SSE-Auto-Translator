@@ -108,7 +108,7 @@ class TestDatabaseUpdater(CoreTest):
         sync_executor(updater)
 
         # when
-        _updated_modfile_states: dict[ModFile, TranslationStatus] = (
+        updated_modfile_states: dict[ModFile, TranslationStatus] = (
             updater.update_database_translations(thread_num=1)
         )
 
@@ -122,3 +122,10 @@ class TestDatabaseUpdater(CoreTest):
         assert (translation.path / "RSChildren Patch - BS Bruma.esp.json").is_file()
         assert (translation.path / "RSChildren.esp.json").is_file()
         assert (translation.path / "RSkyrimChildren.esm.json").is_file()
+
+        assert {mf.path: st for mf, st in updated_modfile_states.items()} == {
+            Path(
+                "RSChildren Patch - BS Bruma.esp"
+            ): TranslationStatus.TranslationIncomplete,
+            Path("RSkyrimChildren.esm"): TranslationStatus.TranslationIncomplete,
+        }
