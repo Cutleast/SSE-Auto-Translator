@@ -116,7 +116,13 @@ class DatabaseUpdater(QObject):
                     )
 
         if add_missing_files:
-            self.__add_missing_modfiles(pdisplay)
+            added_files: list[ModFile] = self.__add_missing_modfiles(pdisplay)
+            updated_modfile_states.update(
+                {
+                    modfile: TranslationStatus.TranslationIncomplete
+                    for modfile in added_files
+                }
+            )
 
         self.log.info("Finished updating database translations.")
 
@@ -190,7 +196,9 @@ class DatabaseUpdater(QObject):
 
         return updated_modfile_states
 
-    def __add_missing_modfiles(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+    def __add_missing_modfiles(
+        self, pdisplay: Optional[ProgressDisplay] = None
+    ) -> list[ModFile]:
         if pdisplay is not None:
             pdisplay.updateMainProgress(
                 ProgressUpdate(
@@ -200,6 +208,7 @@ class DatabaseUpdater(QObject):
                 )
             )
 
+        modfiles_added: list[ModFile] = []
         for mod in self.__mod_instance.mods:
             existing_translation: Optional[Translation] = (
                 self.__database.get_translation_by_mod(mod)
@@ -230,3 +239,8 @@ class DatabaseUpdater(QObject):
 
             if missing_modfiles:
                 existing_translation.save()
+                self.__database.changed_signal.emit(existing_translation)
+
+            modfiles_added.extend(missing_modfiles)
+
+        return modfiles_added

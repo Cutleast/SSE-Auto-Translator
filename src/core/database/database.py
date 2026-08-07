@@ -52,6 +52,15 @@ class TranslationDatabase(QObject):
         Translation: The renamed translation.
     """
 
+    changed_signal = Signal(Translation)
+    """
+    This signal gets emitted when a translation itself is changed (e.g. added or removed
+    a mod file).
+
+    Args:
+        Translation: The changed translation.
+    """
+
     userdb_path: Path
     """The path to the user database directory (language not included)."""
 

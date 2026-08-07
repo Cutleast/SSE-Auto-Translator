@@ -392,12 +392,12 @@ This list only affects translations from Nexus Mods!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="197"/>
+        <location filename="src/core/database/database_updater.py" line="205"/>
         <source>Adding missing mod files to translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/database_updater.py" line="166"/>
+        <location filename="src/core/database/database_updater.py" line="172"/>
         <source>Updating translation strings...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2236,20 +2236,20 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="81"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="189"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="82"/>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="87"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="122"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="124"/>
         <source>Strings:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2517,72 +2517,72 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="153"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="154"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="154"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="155"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="155"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="156"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="156"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="157"/>
         <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="157"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="158"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="268"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="294"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="449"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="475"/>
         <source>Rename translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="450"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="476"/>
         <source>Enter new translation name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="453"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="479"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="454"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="480"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="494"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="520"/>
         <source>Export translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="512"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="538"/>
         <source>Export successful!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="513"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="539"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="524"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="550"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation type="unfinished">
@@ -2592,7 +2592,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="531"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="557"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation type="unfinished">
@@ -2602,12 +2602,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="540"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="566"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="541"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="567"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

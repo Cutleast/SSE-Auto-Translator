@@ -92,7 +92,9 @@ class StringListWidget(QWidget):
         self.__toolbar.filter_changed.connect(self.__set_state_filter)
         self.__search_bar.searchChanged.connect(self.__set_text_filter)
         self.__strings_widget.itemActivated.connect(self.__show_string)
-        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
+        self.__strings_widget.customContextMenuRequested.connect(
+            lambda *_: self.__menu.open(len(self.get_selected_items()))
+        )
         self.__copy_shortcut.activated.connect(self.__copy_selected)
         self.__menu.copy_selected_requested.connect(self.__copy_selected)
 
@@ -308,3 +310,13 @@ class StringListWidget(QWidget):
         return len(
             [item for item in self.__string_items.values() if not item.isHidden()]
         )
+
+    def get_selected_items(self) -> StringList:
+        """
+        Returns:
+            StringList: A list of currently selected strings.
+        """
+
+        return [
+            string for string, item in self.__string_items.items() if item.isSelected()
+        ]
