@@ -2237,20 +2237,20 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="81"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="189"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="82"/>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="87"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
         <source>String</source>
         <translation>String</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="122"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="124"/>
         <source>Strings:</source>
         <translation>Strings:</translation>
     </message>
