@@ -134,6 +134,7 @@ class TranslationsWidget(QTreeWidget):
                 self.update_translations()
             )
         )
+        self.database.changed_signal.connect(self.__on_translation_changed)
 
         self.__load_translations()
 
@@ -254,6 +255,31 @@ class TranslationsWidget(QTreeWidget):
             item: QTreeWidgetItem = self.__translation_items.pop(translation)
             self.takeTopLevelItem(self.indexOfTopLevelItem(item))
             self.__file_items.pop(translation, None)
+
+    def __on_translation_changed(self, translation: Translation) -> None:
+        if translation not in self.__translation_items:
+            return
+
+        item: QTreeWidgetItem = self.__translation_items[translation]
+
+        # check for added or removed mod files
+        current_files: set[Path] = set(translation.strings.keys())
+        existing_files: set[Path] = set(self.__file_items.get(translation, {}).keys())
+
+        added_files: set[Path] = current_files - existing_files
+        removed_files: set[Path] = existing_files - current_files
+
+        if added_files:
+            item.addChildren(
+                self._create_translation_file_items(translation, list(added_files))
+            )
+
+        for removed_file in removed_files:
+            removed_item: Optional[QTreeWidgetItem] = self.__file_items.get(
+                translation, {}
+            ).pop(removed_file, None)
+            if removed_item is not None:
+                item.removeChild(removed_item)
 
     def _create_translation_item(self, translation: Translation) -> QTreeWidgetItem:
         item = QTreeWidgetItem(
