@@ -2234,20 +2234,20 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="81"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="189"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
         <source>Original</source>
         <translation>原文</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="82"/>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="87"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="171"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
         <source>String</source>
         <translation>译文</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="122"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="124"/>
         <source>Strings:</source>
         <translation>字符串：</translation>
     </message>
