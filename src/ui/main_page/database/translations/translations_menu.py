@@ -6,6 +6,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
@@ -150,7 +151,7 @@ class TranslationsMenu(Menu):
             and is_source_available(current_item.source)
         ):
             self.__open_modpage_action.setVisible(True)
-            self.__open_modpage_action.setIcon(current_item.source.get_icon())  # type: ignore[arg-type]
+            self.__open_modpage_action.setIcon(not_none(current_item.source.get_icon()))
         else:
             self.__open_modpage_action.setVisible(False)
 

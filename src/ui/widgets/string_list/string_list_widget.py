@@ -132,7 +132,6 @@ class StringListWidget(QWidget):
     def __init_strings_widget(self) -> None:
         self.__strings_widget = QTreeWidget()
         self.__strings_widget.setUniformRowHeights(True)
-        self.__strings_widget.setAlternatingRowColors(True)
         self.__strings_widget.setSortingEnabled(True)
         self.__strings_widget.sortByColumn(1, Qt.SortOrder.AscendingOrder)
         self.__strings_widget.header().setFirstSectionMovable(True)

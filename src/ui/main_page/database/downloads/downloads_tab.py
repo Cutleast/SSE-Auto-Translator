@@ -111,7 +111,6 @@ class DownloadsTab(QWidget):
     def __init_downloads_widget(self) -> None:
         self.__downloads_widget = QTreeWidget()
         self.__downloads_widget.setObjectName("download_list")
-        self.__downloads_widget.setAlternatingRowColors(True)
         self.__downloads_widget.setSelectionMode(QTreeWidget.SelectionMode.NoSelection)
         self.__downloads_widget.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.__downloads_widget.setHeaderLabels(

@@ -32,12 +32,12 @@ from core.config.app_config import AppConfig
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
-from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
+from ui.translation_editor.editor.columns import StringsColumns
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.stacked_bar import StackedBar
@@ -107,6 +107,20 @@ class EditorTab(QWidget):
         self.__init_ui()
         self.__init_shortcuts()
 
+        self.__strings_widget.itemSelectionChanged.connect(
+            lambda: self.__tool_bar.set_edit_actions_enabled(
+                len(self.__strings_widget.get_selected_strings()) > 0
+            ),
+        )
+        self.__strings_widget.itemActivated.connect(
+            lambda item, col: self.__edit_string()
+        )
+        self.__strings_widget.customContextMenuRequested.connect(
+            lambda *_: self.__menu.open(
+                bool(self.__strings_widget.get_selected_strings())
+            )
+        )
+
         self.__tool_bar.filter_changed.connect(self.set_state_filter)
         self.__tool_bar.help_requested.connect(self.__show_help)
         self.__tool_bar.legacy_import_requested.connect(self.__import_legacy)
@@ -124,7 +138,10 @@ class EditorTab(QWidget):
         self.__menu.mark_as_requested.connect(self.__set_status)
 
     def __init_ui(self) -> None:
+        self.setContentsMargins(0, 0, 0, 0)
+
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__vlayout)
 
         self.__init_header()
@@ -176,15 +193,8 @@ class EditorTab(QWidget):
 
     def __init_strings_widget(self) -> None:
         self.__strings_widget = StringsWidget(self.__editor.strings)
-        self.__strings_widget.itemSelectionChanged.connect(
-            lambda: self.__tool_bar.set_edit_actions_enabled(
-                len(self.__strings_widget.get_selected_strings()) > 0
-            ),
-        )
         self.__vlayout.addWidget(self.__strings_widget)
-        self.__strings_widget.itemActivated.connect(
-            lambda item, col: self.__edit_string()
-        )
+
         self.__strings_num_label.setDigitCount(
             max((len(str(self.__strings_widget.get_visible_string_count())), 4))
         )
@@ -223,7 +233,6 @@ class EditorTab(QWidget):
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
-        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
 
     @property
     def changes_pending(self) -> bool:
@@ -353,7 +362,7 @@ class EditorTab(QWidget):
         Updates visible string list.
         """
 
-        self.__strings_widget.update()
+        self.__strings_widget.update_displayed_strings()
 
         if self.__editor.changes_pending:
             self.__title_label.setText(self.__translation.name + "*")
@@ -610,15 +619,13 @@ class EditorTab(QWidget):
 
         clipboard_text = ""
         for string in selected_strings:
-            if isinstance(string, PluginString):
-                clipboard_text += f"{string.type}\t"
-                clipboard_text += f"{string.form_id}\t"
-                clipboard_text += f"{string.editor_id}\t"
-            clipboard_text += f"{string.original}\t"
-            clipboard_text += f"{string.string}"
+            for col in StringsColumns.get_columns(type(string)):
+                clipboard_text += col.display_text_getter(string) + "\t"
+
+            clipboard_text = clipboard_text.rstrip("\t")
             clipboard_text += "\n"
 
-        QApplication.clipboard().setText(clipboard_text.strip())
+        QApplication.clipboard().setText(clipboard_text.rstrip("\n"))
 
     def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """

@@ -166,3 +166,41 @@ class TranslationStatus(IntEnum, LocalizedEnum):
         }
 
         return LOC_NAMES[self]
+
+    def get_localized_short_name(self) -> str:
+        """
+        Returns:
+            str: A localized short name for the translation status.
+        """
+
+        LOC_SHORT_NAMES: dict[TranslationStatus, str] = {
+            TranslationStatus.NoneStatus: QApplication.translate(
+                "mod_file", "No Status"
+            ),
+            TranslationStatus.NoStrings: QApplication.translate(
+                "mod_file", "No Strings"
+            ),
+            TranslationStatus.IsTranslated: QApplication.translate(
+                "mod_file", "Translated"
+            ),
+            TranslationStatus.TranslationInstalled: QApplication.translate(
+                "mod_file", "Translation Installed"
+            ),
+            TranslationStatus.TranslationIncomplete: QApplication.translate(
+                "mod_file", "Translation Incomplete"
+            ),
+            TranslationStatus.TranslationAvailableInDatabase: QApplication.translate(
+                "mod_file", "Available in Database"
+            ),
+            TranslationStatus.TranslationAvailableOnline: QApplication.translate(
+                "mod_file", "Available Online"
+            ),
+            TranslationStatus.RequiresTranslation: QApplication.translate(
+                "mod_file", "Requires Translation"
+            ),
+            TranslationStatus.NoTranslationAvailable: QApplication.translate(
+                "mod_file", "No Translation Available"
+            ),
+        }
+
+        return LOC_SHORT_NAMES[self]
