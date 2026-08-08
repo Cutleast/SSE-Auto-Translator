@@ -227,9 +227,8 @@ class EditorPage(QSplitter):
 
             close_button = QPushButton()
             close_button.setObjectName("list_close_button")
-            close_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
-            close_button.setIcon(IconProvider.get_qta_icon("mdi6.close-thick"))
-            close_button.setFixedSize(26, 26)
+            close_button.setIcon(IconProvider.get_qta_icon("mdi6.close"))
+            close_button.setToolTip(self.tr("Close translation"))
 
             for modfile in sorted(translation.strings, key=lambda m: m.name.lower()):
                 modfile_item = QTreeWidgetItem([str(modfile)])

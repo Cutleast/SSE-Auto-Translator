@@ -5,24 +5,18 @@ Copyright (c) Cutleast
 from typing import override
 
 import qtawesome as qta
-from cutleast_core_lib.ui.widgets.menu import Menu
+from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QAction, QCursor, QKeySequence
+from PySide6.QtGui import QAction, QKeySequence
 
 from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
 
 
-class EditorMenu(Menu):
+class EditorMenu(TreeMenu):
     """
     Context menu for editor tab.
     """
-
-    expand_all_clicked = Signal()
-    """Signal emitted when the user clicks on the expand all action."""
-
-    collapse_all_clicked = Signal()
-    """Signal emitted when the user clicks on the collapse all action."""
 
     edit_string_requested = Signal()
     """Signal emitted when the user clicks on the edit string action."""
@@ -41,47 +35,38 @@ class EditorMenu(Menu):
         Status: The string status to set.
     """
 
+    __edit_string_action: QAction
+    __copy_string_action: QAction
+    __reset_string_action: QAction
+    __mark_as_actions: dict[StringStatus, QAction]
+
     @override
     def __init__(self) -> None:
         super().__init__()
 
-        self.__init_separator_actions()
         self.__init_actions()
         self.__init_mark_actions()
 
-    def __init_separator_actions(self) -> None:
-        expand_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
-            self.tr("Expand all"),
-        )
-        expand_all_action.triggered.connect(self.expand_all_clicked.emit)
-
-        collapse_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
-            self.tr("Collapse all"),
-        )
-        collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
-
-        self.addSeparator()
-
     def __init_actions(self) -> None:
-        edit_string_action: QAction = self.addAction(
+        self.__edit_string_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.rename"), self.tr("Edit string...")
         )
-        edit_string_action.triggered.connect(self.edit_string_requested.emit)
+        self.__edit_string_action.triggered.connect(self.edit_string_requested.emit)
 
-        copy_action: QAction = self.addAction(
+        self.__copy_string_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy string")
         )
-        copy_action.setIconVisibleInMenu(True)
-        copy_action.triggered.connect(self.copy_string_requested.emit)
+        self.__copy_string_action.setIconVisibleInMenu(True)
+        self.__copy_string_action.triggered.connect(self.copy_string_requested.emit)
 
-        reset_string_action: QAction = self.addAction(
+        self.__reset_string_action = self.addAction(
             IconProvider.get_qta_icon("ri.arrow-go-back-line"),
             self.tr("Reset selected string(s)"),
         )
-        reset_string_action.setShortcut(QKeySequence("F4"))
-        reset_string_action.triggered.connect(self.reset_translation_requested.emit)
+        self.__reset_string_action.setShortcut(QKeySequence("F4"))
+        self.__reset_string_action.triggered.connect(
+            self.reset_translation_requested.emit
+        )
 
         self.addSeparator()
 
@@ -92,6 +77,7 @@ class EditorMenu(Menu):
             StringStatus.NoTranslationRequired: QKeySequence("F3"),
         }
 
+        self.__mark_as_actions = {}
         for status in StringStatus:
             # Skip NoneStatus
             if status == StringStatus.NoneStatus:
@@ -106,15 +92,28 @@ class EditorMenu(Menu):
             )
             if status in status_shortcuts:
                 mark_as_action.setShortcut(status_shortcuts[status])
+
             mark_as_action.triggered.connect(
                 lambda _, s=status: self.mark_as_requested.emit(s)
             )
 
+            self.__mark_as_actions[status] = mark_as_action
+
         self.addSeparator()
 
-    def open(self) -> None:
+    @override
+    def open(self, strings_selected: bool) -> None:  # pyright: ignore[reportIncompatibleMethodOverride]
         """
         Opens the menu at the current mouse cursor position.
+
+        Args:
+            strings_selected (bool): Whether any strings are selected.
         """
 
-        self.exec(QCursor.pos())
+        self.__edit_string_action.setVisible(strings_selected)
+        self.__copy_string_action.setVisible(strings_selected)
+        self.__reset_string_action.setVisible(strings_selected)
+        for action in self.__mark_as_actions.values():
+            action.setVisible(strings_selected)
+
+        super().open()

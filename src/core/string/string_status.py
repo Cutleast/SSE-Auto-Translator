@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from __future__ import annotations
 
-from enum import auto
+from enum import IntEnum
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
@@ -12,27 +12,27 @@ from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
 
-class StringStatus(LocalizedEnum):
+class StringStatus(IntEnum, LocalizedEnum):
     """
     Enum for string status.
     """
 
-    NoneStatus = auto()
+    NoneStatus = -1
     """String has no particular status."""
 
-    NoTranslationRequired = auto()
+    NoTranslationRequired = 0
     """String is marked as "No Translation Required"."""
 
-    TranslationComplete = auto()
+    TranslationComplete = 1
     """String is completely translated and validated."""
 
-    TranslationIncomplete = auto()
+    TranslationIncomplete = 2
     """
     String is automatically translated but not validated or user has partially
     translated this string.
     """
 
-    TranslationRequired = auto()
+    TranslationRequired = 3
     """String is not translated."""
 
     @classmethod
@@ -103,6 +103,30 @@ class StringStatus(LocalizedEnum):
             ),
             StringStatus.TranslationRequired: QApplication.translate(
                 "StringStatus", "Show strings that require a translation"
+            ),
+        }
+
+        return LOC_NAMES[self]
+
+    def get_localized_short_name(self) -> str:
+        """
+        Returns:
+            str: A localized short name.
+        """
+
+        LOC_NAMES: dict[StringStatus, str] = {
+            StringStatus.NoneStatus: QApplication.translate("StringStatus", "No Status"),
+            StringStatus.NoTranslationRequired: QApplication.translate(
+                "StringStatus", "No Translation Required"
+            ),
+            StringStatus.TranslationComplete: QApplication.translate(
+                "StringStatus", "Translated"
+            ),
+            StringStatus.TranslationIncomplete: QApplication.translate(
+                "StringStatus", "Partially Translated"
+            ),
+            StringStatus.TranslationRequired: QApplication.translate(
+                "StringStatus", "Untranslated"
             ),
         }
 

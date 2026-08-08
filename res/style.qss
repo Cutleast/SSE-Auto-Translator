@@ -3,6 +3,12 @@ IntroductionPage #h1 {
     font-size: 52px;
 }
 
+QTreeWidget::item,
+QTreeWidget::branch {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid @border_color;
+}
+
 /* Error text colors */
 #warning_label {
     color: #fff08d3b;

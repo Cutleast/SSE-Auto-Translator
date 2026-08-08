@@ -183,7 +183,6 @@ class DownloadListWidget(QWidget):
     def __init_tree_widget(self) -> None:
         self.__tree_widget = QTreeWidget()
         self.__tree_widget.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
-        self.__tree_widget.setAlternatingRowColors(True)
         self.__tree_widget.setHeaderLabels(
             [
                 "",  # Modpage button for original mod / checkbox

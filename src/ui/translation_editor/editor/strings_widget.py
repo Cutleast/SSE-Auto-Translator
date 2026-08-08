@@ -3,23 +3,22 @@ Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.core.utilities.truncate import raw_string
 from cutleast_core_lib.ui.utilities.tree_widget import (
     are_children_visible,
     iter_children,
     iter_toplevel_items,
 )
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 
+from .columns import StringsColumns
 from .string_item import StringItem
 
 
@@ -62,25 +61,17 @@ class StringsWidget(QTreeWidget):
         self.__init_ui()
         self.__init_strings(strings)
 
-    def __init_ui(self) -> None:
-        self.setAlternatingRowColors(True)
-        self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
-        self.setUniformRowHeights(True)
         self.setSortingEnabled(True)
-
-        self.__init_header()
-
-    def __init_header(self) -> None:
-        self.setHeaderLabels(
-            [
-                self.tr("ID"),
-                self.tr("Original"),
-                self.tr("String"),
-            ]
-        )
-
-        self.header().setDefaultSectionSize(200)
+        self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
         self.header().setSortIndicatorClearable(True)
+        self.expandAll()
+
+    def __init_ui(self) -> None:
+        StringsColumns.apply_to_tree_widget(self)
+
+        self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
+        self.header().setStretchLastSection(True)
+        self.setUniformRowHeights(True)
 
     def __init_strings(self, strings: dict[Path, StringList]) -> None:
         self.__string_items = ReferenceDict()
@@ -98,35 +89,14 @@ class StringsWidget(QTreeWidget):
                 if string in self.__string_items:
                     raise ValueError(f"Duplicate string: {string}")
 
-                item = self.__create_string_item(string)
+                item = StringItem(string, StringsColumns)
                 self.__string_items[string] = item
                 modfile_item.addChild(item)
 
             self.addTopLevelItem(modfile_item)
             modfile_item.setFirstColumnSpanned(True)
 
-        self.expandAll()
-        self.header().resizeSection(0, 500)
-        self.header().resizeSection(1, 400)
-        self.header().resizeSection(2, 400)
-        self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
-        self.update()
-
-    def __create_string_item(self, string: String) -> StringItem:
-        item = StringItem(
-            [
-                string.display_id,
-                raw_string(string.original),
-                raw_string(
-                    string.string if string.string is not None else string.original
-                ),
-            ]
-        )
-        item.set_string(string)
-
-        item.setFont(0, QFont("Consolas"))
-
-        return item
+        self.update_displayed_strings()
 
     def __get_items(self, only_visible: bool = False) -> list[QTreeWidgetItem]:
         return [
@@ -136,10 +106,9 @@ class StringsWidget(QTreeWidget):
             if not only_visible or not string_item.isHidden()
         ]
 
-    @override
-    def update(self) -> None:  # type: ignore
+    def update_displayed_strings(self) -> None:
         """
-        Updates the strings widget.
+        Updates the displayed string items.
         """
 
         name_filter: Optional[str] = (
@@ -150,13 +119,7 @@ class StringsWidget(QTreeWidget):
         )
 
         for string, item in self.__string_items.items():
-            item.setText(1, raw_string(string.original))
-            item.setText(
-                2,
-                raw_string(
-                    string.string if string.string is not None else string.original
-                ),
-            )
+            item.update()
 
             string_text: str = string.display_id + string.original
             if string.string is not None:
@@ -169,12 +132,6 @@ class StringsWidget(QTreeWidget):
                 )
                 or not matches_filter(string_text, name_filter, case_sensitive or False)
             )
-
-            for c in range(5):
-                item.setForeground(
-                    c,
-                    StringStatus.get_color(string.status) or Qt.GlobalColor.white,
-                )
 
         for modfile, modfile_item in self.__modfile_items.items():
             modfile_item.setHidden(
@@ -219,7 +176,7 @@ class StringsWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.update()
+        self.update_displayed_strings()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
@@ -230,7 +187,7 @@ class StringsWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter
-        self.update()
+        self.update_displayed_strings()
 
     def get_selected_strings(self) -> StringList:
         """

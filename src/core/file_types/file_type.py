@@ -37,9 +37,7 @@ class FileType(LocalizedEnum):
     def get_localized_name(self) -> str:
         LOC_NAMES: dict[FileType, str] = {
             FileType.PluginFile: QApplication.translate("FileType", "Plugin File"),
-            FileType.InterfaceFile: QApplication.translate(
-                "FileType", "Interface File"
-            ),
+            FileType.InterfaceFile: QApplication.translate("FileType", "Interface File"),
             FileType.BestiaryFile: QApplication.translate(
                 "FileType", "Dragonborn's Bestiary File"
             ),
@@ -113,6 +111,21 @@ class FileType(LocalizedEnum):
         }
 
         return CLASSES[self]
+
+    @classmethod
+    def get_file_type(cls, mod_file: ModFile) -> FileType:
+        """
+        Returns:
+            FileType: The file type for the given mod file.
+        """
+
+        CLASSES: dict[type[ModFile], FileType] = {
+            PluginFile: FileType.PluginFile,
+            InterfaceFile: FileType.InterfaceFile,
+            BestiaryFile: FileType.BestiaryFile,
+        }
+
+        return CLASSES[type(mod_file)]
 
     def get_file_dialog_filter(self) -> str:
         """

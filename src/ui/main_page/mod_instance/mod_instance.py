@@ -6,32 +6,24 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional, cast, override
 
 from cutleast_core_lib.core.filesystem.utils import open_in_explorer
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.filter import matches_filter
-from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
+from cutleast_core_lib.ui.utilities.column_config import CellValue, TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QFont
-from PySide6.QtWidgets import (
-    QApplication,
-    QHeaderView,
-    QMessageBox,
-    QTreeWidget,
-    QTreeWidgetItem,
-)
+from PySide6.QtWidgets import QApplication, QMessageBox, QTreeWidget, QTreeWidgetItem
 
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
-from core.file_source.bsa_file_source import BsaFileSource
-from core.file_source.file_source import FileSource
 from core.file_source.file_source_factory import FileSourceFactory
 from core.file_types.file_type import FileType
 from core.mod_file.mod_file import ModFile
@@ -48,6 +40,7 @@ from core.translation_provider.source import Source
 from core.user_data.user_data import UserData
 from ui.widgets.string_list.string_list_dialog import StringListWindow
 
+from .columns import ModInstanceColumns
 from .help_dialog import ModInstanceHelpDialog
 from .modinstance_menu import ModInstanceMenu
 
@@ -91,8 +84,8 @@ class ModInstanceWidget(QTreeWidget):
     __provider: TranslationProvider
     __mod_instance: ModInstance
     __state_service: StateService
-    __mod_items: dict[Mod, QTreeWidgetItem]
-    __modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]]
+    __mod_items: dict[Mod, TreeItem[Mod]]
+    __modfile_items: dict[Mod, dict[ModFile, TreeItem[ModFile]]]
 
     __menu: ModInstanceMenu
     __name_filter: Optional[tuple[str, bool]] = None
@@ -124,6 +117,10 @@ class ModInstanceWidget(QTreeWidget):
         self.__state_service = state_service
 
         self.__init_ui()
+
+        self.customContextMenuRequested.connect(self.__open_context_menu)
+        self.itemDoubleClicked.connect(self.__item_double_clicked)
+
         self.__menu.set_provider_features_enabled(self.__provider.is_available)
         self.__menu.set_modpage_enabled(
             self.__provider.is_source_available(Source.NexusMods)
@@ -156,33 +153,23 @@ class ModInstanceWidget(QTreeWidget):
 
         self.__load_mod_instance()
 
+        # only sort after loading the mod instance to avoid performance issues
+        self.setSortingEnabled(True)
+        self.sortByColumn(ModInstanceColumns.Priority.index, Qt.SortOrder.AscendingOrder)
+        self.header().setSortIndicatorClearable(True)
+
     def __init_ui(self) -> None:
+        ModInstanceColumns.apply_to_tree_widget(self)
+
         self.setUniformRowHeights(True)
-        self.setAlternatingRowColors(True)
-        self.resizeColumnToContents(2)
         self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
-        self.itemDoubleClicked.connect(self.__item_double_clicked)
         self.setExpandsOnDoubleClick(False)
 
-        self.__config_header()
         self.__init_context_menu()
-
-    def __config_header(self) -> None:
-        self.setHeaderLabels(
-            [
-                self.tr("Name"),
-                self.tr("Version"),
-                self.tr("Priority"),
-            ]
-        )
-        self.header().setDefaultAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.header().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
-        self.header().setStretchLastSection(False)
 
     def __init_context_menu(self) -> None:
         self.__menu = ModInstanceMenu()
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
-        self.customContextMenuRequested.connect(self.__open_context_menu)
 
     def __open_context_menu(self) -> None:
         self.__menu.open(
@@ -200,93 +187,41 @@ class ModInstanceWidget(QTreeWidget):
 
         checkstates: dict[ModFile, bool] = self.__state_service.load_states_from_cache()
 
-        cur_separator: Optional[QTreeWidgetItem] = None
-        for i, mod in enumerate(self.__mod_instance.mods):
+        cur_separator: Optional[TreeItem[Mod]] = None
+        for i, mod in enumerate(self.__mod_instance.mods, start=1):
             if mod.mod_type == Mod.Type.Separator:
-                cur_separator = ModInstanceWidget._create_separator_item(mod, i)
+                cur_separator = TreeItem(mod, ModInstanceColumns)
+                cur_separator.setValue(
+                    column=ModInstanceColumns.Priority,
+                    value=CellValue(display_text=str(i), sort_key=i),
+                )
+
                 self.__mod_items[mod] = cur_separator
                 self.addTopLevelItem(cur_separator)
             elif mod.mod_type == Mod.Type.Regular:
-                mod_item: QTreeWidgetItem = ModInstanceWidget._create_mod_item(mod, i)
+                mod_item = TreeItem(mod, ModInstanceColumns)
+                mod_item.setValue(
+                    column=ModInstanceColumns.Priority,
+                    value=CellValue(display_text=str(i), sort_key=i),
+                )
 
                 self.__mod_items[mod] = mod_item
-                self.__modfile_items[mod] = {
-                    modfile: ModInstanceWidget._create_modfile_item(
-                        modfile, checkstates[modfile]
+                self.__modfile_items[mod] = {}
+                for mod_file in mod.modfiles:
+                    mod_file_item = TreeItem(
+                        mod_file, ModInstanceColumns, checkable=True
                     )
-                    for modfile in mod.modfiles
-                }
-                mod_item.addChildren(list(self.__modfile_items[mod].values()))
+                    mod_file_item.setChecked(checkstates.get(mod_file, True))
+
+                    self.__modfile_items[mod][mod_file] = mod_file_item
+                    mod_item.addChild(mod_file_item)
 
                 if cur_separator is not None:
                     cur_separator.addChild(mod_item)
                 else:
                     self.addTopLevelItem(mod_item)
 
-        self.resizeColumnToContents(1)
         self.update()
-
-    @staticmethod
-    def _create_separator_item(separator: Mod, index: int) -> QTreeWidgetItem:
-        separator_item = QTreeWidgetItem(
-            [
-                separator.name,
-                "",
-                str(index + 1),  # Mod Priority
-            ]
-        )
-        separator_item.setTextAlignment(0, Qt.AlignmentFlag.AlignCenter)
-        separator_item.setTextAlignment(2, Qt.AlignmentFlag.AlignCenter)
-        font = QFont()
-        font.setBold(True)
-        font.setItalic(True)
-        separator_item.setFont(0, font)
-        separator_item.setFlags(Qt.ItemFlag.ItemIsSelectable)
-        separator_item.setToolTip(0, separator_item.text(0))
-        separator_item.setDisabled(False)
-
-        return separator_item
-
-    @staticmethod
-    def _create_mod_item(mod: Mod, index: int) -> QTreeWidgetItem:
-        mod_item = QTreeWidgetItem(
-            [
-                mod.name,
-                mod.version,
-                str(index + 1),  # Mod Priority
-            ]
-        )
-        mod_item.setToolTip(0, mod_item.text(0))
-        mod_item.setDisabled(False)
-        mod_item.setTextAlignment(1, Qt.AlignmentFlag.AlignCenter)
-        mod_item.setTextAlignment(2, Qt.AlignmentFlag.AlignCenter)
-
-        return mod_item
-
-    @staticmethod
-    def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
-        display_name: str = str(modfile.path).replace("\\", "/")
-        file_source: FileSource = FileSourceFactory.for_file_path(modfile.full_path)
-        if isinstance(file_source, BsaFileSource):
-            display_name = f"{file_source.get_archive_path().name}/{display_name}"
-
-        modfile_item = QTreeWidgetItem(
-            [
-                display_name,
-                "",  # Version
-                "",  # Priority
-            ]
-        )
-        modfile_item.setToolTip(0, str(modfile.full_path))
-        modfile_item.setFlags(
-            Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsSelectable
-        )
-        modfile_item.setDisabled(False)
-        modfile_item.setCheckState(
-            0, Qt.CheckState.Checked if checked else Qt.CheckState.Unchecked
-        )
-
-        return modfile_item
 
     @override
     def update(self) -> None:  # type: ignore
@@ -302,19 +237,16 @@ class ModInstanceWidget(QTreeWidget):
         )
 
         for mod, mod_item in self.__mod_items.items():
-            modfile_items: dict[ModFile, QTreeWidgetItem] = self.__modfile_items.get(
+            modfile_items: dict[ModFile, TreeItem[ModFile]] = self.__modfile_items.get(
                 mod, {}
             )
 
             for modfile, item in modfile_items.items():
                 ignored: bool = self.__user_data.masterlist.is_ignored(modfile.name)
-                item.setDisabled(ignored)
                 if ignored:
-                    item.setCheckState(0, Qt.CheckState.Unchecked)
+                    item.setChecked(False)
 
-                if self.__app_config.debug_mode:
-                    item.setToolTip(1, modfile.status.name)
-
+                item.setDisabled(ignored)
                 item.setHidden(
                     (
                         self.__state_filter is not None
@@ -331,13 +263,7 @@ class ModInstanceWidget(QTreeWidget):
                         modfile.name, name_filter, case_sensitive or False
                     )
                 )
-                item.setForeground(
-                    0,
-                    TranslationStatus.get_color(modfile.status) or Qt.GlobalColor.white,
-                )
-
-            if self.__app_config.debug_mode:
-                mod_item.setToolTip(1, str(mod))
+                item.update()
 
             mod_item.setHidden(
                 (
@@ -350,20 +276,7 @@ class ModInstanceWidget(QTreeWidget):
                     and not are_children_visible(mod_item)
                 )
             )
-            mod_item.setForeground(
-                0,
-                TranslationStatus.get_color(
-                    max(
-                        [
-                            modfile.status
-                            for modfile in mod.modfiles
-                            if not self.__user_data.masterlist.is_ignored(modfile.name)
-                        ],
-                        default=TranslationStatus.NoneStatus,
-                    )
-                )
-                or Qt.GlobalColor.white,
-            )
+            mod_item.update()
 
     def __show_strings(self) -> None:
         """
@@ -373,8 +286,9 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            dialog = StringListWindow(current_item.name, current_item.get_strings())
-            dialog.show()
+            WindowManager.get().show(
+                StringListWindow(current_item.name, current_item.get_strings())
+            )
 
         elif isinstance(current_item, Mod):
             strings: dict[Path, StringList] = {}
@@ -385,18 +299,25 @@ class ModInstanceWidget(QTreeWidget):
                     modfile_strings
                 )
 
-            dialog = StringListWindow(current_item.name, strings)
-            dialog.show()
+            WindowManager.get().show(StringListWindow(current_item.name, strings))
 
     def __check_selected(self) -> None:
         for item in self.selectedItems():
-            if Qt.ItemFlag.ItemIsUserCheckable in item.flags() and not item.text(2):
-                item.setCheckState(0, Qt.CheckState.Checked)
+            if (
+                isinstance(item, TreeItem)
+                and isinstance(item.item, ModFile)
+                and not item.isDisabled()
+            ):
+                item.setChecked(True)
 
     def __uncheck_selected(self) -> None:
         for item in self.selectedItems():
-            if Qt.ItemFlag.ItemIsUserCheckable in item.flags() and not item.text(2):
-                item.setCheckState(0, Qt.CheckState.Unchecked)
+            if (
+                isinstance(item, TreeItem)
+                and isinstance(item.item, ModFile)
+                and not item.isDisabled()
+            ):
+                item.setChecked(False)
 
     def __add_to_ignore_list(self) -> None:
         _, selected_modfiles = self.get_selected_items()
@@ -456,8 +377,9 @@ class ModInstanceWidget(QTreeWidget):
             ]
 
             if untranslated_strings:
-                dialog = StringListWindow(translation.name, untranslated_strings)
-                dialog.show()
+                WindowManager.get().show(
+                    StringListWindow(translation.name, untranslated_strings)
+                )
 
     def __show_translation_strings(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -474,12 +396,13 @@ class ModInstanceWidget(QTreeWidget):
             translation = self.__database.get_translation_by_mod(current_item)
 
         if translation is not None:
-            dialog = StringListWindow(
-                translation.name,
-                translation.strings,
-                translation_mode=True,
+            WindowManager.get().show(
+                StringListWindow(
+                    translation.name,
+                    translation.strings,
+                    translation_mode=True,
+                )
             )
-            dialog.show()
 
     def __show_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -711,8 +634,7 @@ class ModInstanceWidget(QTreeWidget):
             mod: [
                 modfile
                 for modfile, item in modfile_items.items()
-                if item.checkState(0) == Qt.CheckState.Checked
-                and (not filtered or not item.isHidden())
+                if item.isChecked() and (not filtered or not item.isHidden())
             ]
             for mod, modfile_items in self.__modfile_items.items()
         }
@@ -725,12 +647,12 @@ class ModInstanceWidget(QTreeWidget):
             Optional[Mod | ModFile]: Current item or None
         """
 
-        items: dict[QTreeWidgetItem, Mod | ModFile] = {}
-        items.update(reverse_dict(self.__mod_items))
-        for modfile_items in self.__modfile_items.values():
-            items.update(reverse_dict(modfile_items))
+        current_item: Optional[QTreeWidgetItem] = self.currentItem()
 
-        return items.get(self.currentItem(), None)
+        if not isinstance(current_item, TreeItem):
+            return
+
+        return cast(TreeItem[Mod | ModFile], current_item).item
 
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -813,10 +735,7 @@ class ModInstanceWidget(QTreeWidget):
             for modfile, modfile_item in modfile_items.items()
             if (
                 not modfile_item.isHidden()
-                and (
-                    not only_checked
-                    or modfile_item.checkState(0) == Qt.CheckState.Checked
-                )
+                and (not only_checked or modfile_item.isChecked())
             )
         ]
 
@@ -843,4 +762,4 @@ class ModInstanceWidget(QTreeWidget):
             bool: Whether the item is checked.
         """
 
-        return self.__modfile_items[mod][modfile].checkState(0) == Qt.CheckState.Checked
+        return self.__modfile_items[mod][modfile].isChecked()
