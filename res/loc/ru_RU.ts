@@ -1661,40 +1661,40 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="133"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="212"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="149"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="231"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="151"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="509"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="167"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="572"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="245"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="264"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="308"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="460"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="329"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="523"/>
         <source>Processing mod conflicts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="475"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="538"/>
         <source>Processing single file conflicts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="716"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="802"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="749"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="835"/>
         <source>Extracting archive...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2921,12 +2921,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="220"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="221"/>
         <source>Loading mods from profile {0}: {1}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="428"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/vortex/api.py" line="450"/>
         <source>Loading tools from Vortex...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3100,6 +3100,12 @@ Please create a separate mod from the overwrite folder and restart the migration
     <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/core/exceptions.py" line="18"/>
         <source>The installation folder for the selected game could not be found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/exceptions.py" line="40"/>
+        <source>The mod conflict rules contain a cycle: {0}
+Resolve these rules in Vortex and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
