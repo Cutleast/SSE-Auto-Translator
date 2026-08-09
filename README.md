@@ -38,7 +38,7 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 #### 1. Install requirements
 
-1. Install [Python 3.12](https://www.python.org/downloads/) (Make sure that you add it to PATH!)
+1. Install [Python 3.14](https://www.python.org/downloads/) (Make sure that you add it to PATH!)
 2. Install [uv](https://github.com/astral-sh/uv#installation)
 3. Clone repository and all submodules with `git clone https://github.com/Cutleast/SSE-Auto-Translator --recurse-submodules`
 4. Open terminal in repository folder
