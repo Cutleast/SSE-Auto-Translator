@@ -19,18 +19,19 @@ jobs:
 
     steps:
       - name: Check out source and submodules
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
           submodules: recursive
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.14"
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
         with:
           enable-cache: true
 
@@ -133,24 +134,51 @@ jobs:
       - name: Update update.json on master
         shell: pwsh
         env:
+          GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
           DOWNLOAD_URL: ${{ steps.nexus_after.outputs.download_url }}
         run: |
-          git fetch origin master
-          git switch --force-create master origin/master
+          $auth = [Convert]::ToBase64String(
+            [Text.Encoding]::UTF8.GetBytes("x-access-token:$env:GH_TOKEN")
+          )
 
-          python scripts/release_workflow.py update-json `
-            --version $env:RELEASE_TAG `
-            --download-url $env:DOWNLOAD_URL
+          for ($attempt = 1; $attempt -le 5; $attempt++) {
+            git fetch origin master
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to fetch master."
+            }
+            git switch --force-create master origin/master
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to check out origin/master."
+            }
 
-          git add -- update.json
-          git diff --cached --quiet
-          if ($LASTEXITCODE -eq 0) {
-            Write-Host "update.json already contains the published release."
-            exit 0
+            python scripts/release_workflow.py update-json `
+              --version $env:RELEASE_TAG `
+              --download-url $env:DOWNLOAD_URL
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to generate update.json."
+            }
+
+            git add -- update.json
+            git diff --cached --quiet
+            if ($LASTEXITCODE -eq 0) {
+              Write-Host "update.json already contains this or a newer release."
+              exit 0
+            }
+
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore(release): update metadata for $env:RELEASE_TAG"
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to commit update.json."
+            }
+            git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" `
+              push origin HEAD:master
+            if ($LASTEXITCODE -eq 0) {
+              exit 0
+            }
+
+            Write-Warning "Push raced with another release; retrying ($attempt/5)."
           }
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(release): update metadata for $env:RELEASE_TAG"
-          git push origin HEAD:master
+          throw "Failed to update update.json after 5 attempts."

@@ -28,6 +28,10 @@ class ReleaseError(RuntimeError):
     """Raised when release metadata or Nexus state is invalid."""
 
 
+class RetryableReleaseError(ReleaseError):
+    """Raised for temporary Nexus failures that may succeed on retry."""
+
+
 @dataclass(frozen=True)
 class ProjectMetadata:
     """Metadata required by the release workflow."""
@@ -63,6 +67,16 @@ def normalize_version(version: str) -> str:
     """Normalize Nexus and Git version strings for comparison."""
 
     return version.strip().removeprefix("v")
+
+
+def version_key(version: str) -> tuple[int, ...]:
+    """Convert the project's numeric version format into a comparison key."""
+
+    normalized = normalize_version(version)
+    parts = normalized.split(".")
+    if not parts or any(not part.isdecimal() for part in parts):
+        raise ReleaseError(f"Unsupported release version '{version}'.")
+    return tuple(int(part) for part in parts)
 
 
 def load_project_metadata(project_file: Path, tag: str) -> ProjectMetadata:
@@ -123,11 +137,20 @@ def create_release_notes(changes: str, download_url: str) -> str:
     return f"## Changes\n\n{changes}\n\n## Download\n\n[{download_url}]({download_url})\n"
 
 
-def update_update_json(update_file: Path, version: str, download_url: str) -> None:
+def update_update_json(update_file: Path, version: str, download_url: str) -> bool:
     """Update the application's remote update metadata."""
+
+    if update_file.is_file():
+        current = json.loads(update_file.read_text(encoding="utf8"))
+        current_version = current.get("version")
+        if isinstance(current_version, str) and version_key(
+            current_version
+        ) > version_key(version):
+            return False
 
     data = {"version": normalize_version(version), "download_url": download_url}
     update_file.write_text(json.dumps(data, indent=4) + "\n", encoding="utf8")
+    return True
 
 
 def write_github_outputs(output_file: Path, values: dict[str, str]) -> None:
@@ -164,11 +187,18 @@ class NexusClient:
                 result = json.load(response)
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf8", errors="replace")[:500]
-            raise ReleaseError(
+            error_type = (
+                RetryableReleaseError
+                if error.code == 429 or 500 <= error.code < 600
+                else ReleaseError
+            )
+            raise error_type(
                 f"Nexus API returned HTTP {error.code} for {url}: {detail}"
             ) from error
         except urllib.error.URLError as error:
-            raise ReleaseError(f"Nexus API request failed for {url}: {error.reason}") from error
+            raise RetryableReleaseError(
+                f"Nexus API request failed for {url}: {error.reason}"
+            ) from error
 
         if not isinstance(result, dict):
             raise ReleaseError(f"Nexus API returned an invalid response for {url}.")
@@ -324,18 +354,19 @@ def command_resolve(args: argparse.Namespace) -> None:
     state = client.inspect_release(
         args.game_domain, args.public_mod_id, args.file_name
     )
+    file_matches_target = normalize_version(state.file.version) == normalize_version(
+        args.target_version
+    )
     versions_match = normalize_version(state.mod_version) == normalize_version(
         state.file.version
     )
-    if not versions_match:
+    if not versions_match and not file_matches_target:
         raise ReleaseError(
             f"Nexus mod-page version '{state.mod_version}' does not match latest "
             f"file version '{state.file.version}'."
         )
 
-    already_published = normalize_version(state.mod_version) == normalize_version(
-        args.target_version
-    )
+    already_published = file_matches_target
     write_github_outputs(
         args.github_output,
         {
@@ -353,13 +384,19 @@ def command_verify(args: argparse.Namespace) -> None:
     client = NexusClient(os.environ.get("NEXUSMODS_API_KEY", ""))
     deadline = time.monotonic() + args.timeout
     last_state: NexusReleaseState | None = None
+    last_retryable_error: RetryableReleaseError | None = None
     while time.monotonic() < deadline:
-        last_state = client.inspect_release(
-            args.game_domain,
-            args.public_mod_id,
-            args.file_name,
-            file_id=args.file_id,
-        )
+        try:
+            last_state = client.inspect_release(
+                args.game_domain,
+                args.public_mod_id,
+                args.file_name,
+                file_id=args.file_id,
+            )
+        except RetryableReleaseError as error:
+            last_retryable_error = error
+            time.sleep(args.interval)
+            continue
         if (
             normalize_version(last_state.mod_version)
             == normalize_version(args.target_version)
@@ -379,7 +416,12 @@ def command_verify(args: argparse.Namespace) -> None:
         time.sleep(args.interval)
 
     if last_state is None:
-        raise ReleaseError("Timed out before Nexus returned release state.")
+        detail = (
+            f" Last transient error: {last_retryable_error}."
+            if last_retryable_error
+            else ""
+        )
+        raise ReleaseError(f"Timed out before Nexus returned release state.{detail}")
     raise ReleaseError(
         f"Timed out waiting for Nexus version '{args.target_version}'. "
         f"Mod page: '{last_state.mod_version}', file: '{last_state.file.version}'."
