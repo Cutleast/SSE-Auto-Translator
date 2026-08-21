@@ -1,0 +1,156 @@
+name: Publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out source and submodules
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Validate tag and prepare release metadata
+        id: metadata
+        shell: pwsh
+        run: |
+          python scripts/release_workflow.py prepare `
+            --tag $env:GITHUB_REF_NAME `
+            --changes-file "$env:RUNNER_TEMP/changes.md" `
+            --github-output $env:GITHUB_OUTPUT
+
+      - name: Install locked dependencies
+        run: uv sync --locked
+
+      - name: Build release archive
+        shell: cmd
+        run: build.bat
+
+      - name: Verify release archive
+        shell: pwsh
+        run: |
+          if (-not (Test-Path -LiteralPath '${{ steps.metadata.outputs.archive_path }}' -PathType Leaf)) {
+            throw "Expected release archive was not created: ${{ steps.metadata.outputs.archive_path }}"
+          }
+
+      - name: Resolve existing Nexus Mods file
+        id: nexus_before
+        shell: pwsh
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+        run: |
+          python scripts/release_workflow.py resolve `
+            --game-domain '${{ steps.metadata.outputs.game_domain }}' `
+            --public-mod-id '${{ steps.metadata.outputs.public_mod_id }}' `
+            --file-name '${{ steps.metadata.outputs.description }}' `
+            --target-version '${{ steps.metadata.outputs.tag }}' `
+            --github-output $env:GITHUB_OUTPUT
+
+      - name: Upload release to Nexus Mods
+        if: steps.nexus_before.outputs.already_published != 'true'
+        uses: Nexus-Mods/upload-action@19da5c91527877cd0bfedc6e6239c911035846a0
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ steps.nexus_before.outputs.file_id }}
+          filename: ${{ steps.metadata.outputs.archive_path }}
+          version: ${{ steps.metadata.outputs.tag }}
+          display_name: ${{ steps.metadata.outputs.description }} ${{ steps.metadata.outputs.tag }}
+          description: 'Please read the [url=https://docs.moddingforge.com/sse-at/quick_start.html]instructions[/url]![url=https://github.com/Cutleast/SSE-Auto-Translator/blob/master/Changelog.md]Changelog[/url]'
+          category: main
+          allow_mod_manager_download: true
+          show_requirements_pop_up: false
+          update_mod_version: true
+          archive_existing_version: false
+
+      - name: Verify Nexus Mods release
+        id: nexus_after
+        shell: pwsh
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+        run: |
+          python scripts/release_workflow.py verify `
+            --game-domain '${{ steps.metadata.outputs.game_domain }}' `
+            --public-mod-id '${{ steps.metadata.outputs.public_mod_id }}' `
+            --file-name '${{ steps.metadata.outputs.description }}' `
+            --file-id '${{ steps.nexus_before.outputs.file_id }}' `
+            --target-version '${{ steps.metadata.outputs.tag }}' `
+            --nexus-url '${{ steps.metadata.outputs.nexus_url }}' `
+            --github-output $env:GITHUB_OUTPUT
+
+      - name: Create release notes
+        shell: pwsh
+        run: |
+          python scripts/release_workflow.py notes `
+            --changes-file '${{ steps.metadata.outputs.changes_file }}' `
+            --download-url '${{ steps.nexus_after.outputs.download_url }}' `
+            --notes-file "$env:RUNNER_TEMP/release-notes.md"
+
+      - name: Create GitHub Release without assets
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+        run: |
+          gh release view $env:RELEASE_TAG *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release edit $env:RELEASE_TAG `
+              --title $env:RELEASE_TAG `
+              --notes-file "$env:RUNNER_TEMP/release-notes.md"
+          } else {
+            gh release create $env:RELEASE_TAG `
+              --verify-tag `
+              --title $env:RELEASE_TAG `
+              --notes-file "$env:RUNNER_TEMP/release-notes.md"
+          }
+          if ($LASTEXITCODE -ne 0) {
+            throw "Failed to create or update GitHub Release $env:RELEASE_TAG."
+          }
+
+      - name: Update update.json on master
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+          DOWNLOAD_URL: ${{ steps.nexus_after.outputs.download_url }}
+        run: |
+          git fetch origin master
+          git switch --force-create master origin/master
+
+          python scripts/release_workflow.py update-json `
+            --version $env:RELEASE_TAG `
+            --download-url $env:DOWNLOAD_URL
+
+          git add -- update.json
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "update.json already contains the published release."
+            exit 0
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(release): update metadata for $env:RELEASE_TAG"
+          git push origin HEAD:master
