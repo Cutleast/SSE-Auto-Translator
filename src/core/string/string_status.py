@@ -8,11 +8,16 @@ from enum import IntEnum
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.theme.models.theme import Theme
+from cutleast_core_lib.ui.theme.models.types import ThemeAlias
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
+from ..utilities.colored_enum import ColoredEnum
 
-class StringStatus(IntEnum, LocalizedEnum):
+
+class StringStatus(IntEnum, LocalizedEnum, ColoredEnum):
     """
     Enum for string status.
     """
@@ -28,106 +33,123 @@ class StringStatus(IntEnum, LocalizedEnum):
 
     TranslationIncomplete = 2
     """
-    String is automatically translated but not validated or user has partially
-    translated this string.
+    String is automatically translated but not validated or user has partially translated
+    this string.
     """
 
     TranslationRequired = 3
     """String is not translated."""
 
-    @classmethod
-    def get_color(cls, status: StringStatus) -> Optional[QColor]:
-        """
-        Args:
-            status (StringStatus): The status to get the color for.
+    @override
+    def get_base_color(self) -> QColor:
+        theme: Theme = ThemeManager.get().theme
 
-        Returns:
-            Optional[QColor]:
-                The color associated with the status, or None if there is no color
-                associated with it.
-        """
+        token: ThemeAlias
+        match self:
+            case StringStatus.NoneStatus:
+                token = theme.texts.text.color
+            case StringStatus.NoTranslationRequired:
+                token = theme.colors.warning
+            case StringStatus.TranslationComplete:
+                token = theme.colors.information
+            case StringStatus.TranslationIncomplete:
+                token = theme.colors.caution
+            case StringStatus.TranslationRequired:
+                token = theme.colors.error
 
-        COLORS = {
-            cls.NoTranslationRequired: QColor.fromString("#e9e042"),
-            cls.TranslationComplete: QColor.fromString("#51c6d9"),
-            cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
-            cls.TranslationRequired: QColor.fromString("#d74343"),
-        }
+        return QColor.fromString(theme.resolve(token))
 
-        return COLORS.get(status)
+    @override
+    def get_bg_color(self) -> Optional[QColor]:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case StringStatus.NoTranslationRequired:
+                token = theme.colors.warning_bg
+            case StringStatus.TranslationComplete:
+                token = theme.colors.information_bg
+            case StringStatus.TranslationIncomplete:
+                token = theme.colors.caution_bg
+            case StringStatus.TranslationRequired:
+                token = theme.colors.error_bg
+            case _:
+                return
+
+        return QColor.fromString(theme.resolve(token))
+
+    @override
+    def get_highlighted_bg_color(self) -> Optional[QColor]:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case StringStatus.NoTranslationRequired:
+                token = theme.colors.warning_bg_hover
+            case StringStatus.TranslationComplete:
+                token = theme.colors.information_bg_hover
+            case StringStatus.TranslationIncomplete:
+                token = theme.colors.caution_bg_hover
+            case StringStatus.TranslationRequired:
+                token = theme.colors.error_bg_hover
+            case _:
+                return
+
+        return QColor.fromString(theme.resolve(token))
+
+    @override
+    def get_fg_color(self) -> QColor:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case StringStatus.NoneStatus:
+                token = theme.texts.text.color
+            case StringStatus.NoTranslationRequired:
+                token = theme.colors.warning_fg
+            case StringStatus.TranslationComplete:
+                token = theme.colors.information_fg
+            case StringStatus.TranslationIncomplete:
+                token = theme.colors.caution_fg
+            case StringStatus.TranslationRequired:
+                token = theme.colors.error_fg
+
+        return QColor.fromString(theme.resolve(token))
 
     @override
     def get_localized_name(self) -> str:
-        LOC_NAMES: dict[StringStatus, str] = {
-            StringStatus.NoneStatus: QApplication.translate(
-                "StringStatus", "No status (no color)"
-            ),
-            StringStatus.NoTranslationRequired: QApplication.translate(
-                "StringStatus", "String does not require a translation"
-            ),
-            StringStatus.TranslationComplete: QApplication.translate(
-                "StringStatus", "String is completely translated"
-            ),
-            StringStatus.TranslationIncomplete: QApplication.translate(
-                "StringStatus", "String is partially translated"
-            ),
-            StringStatus.TranslationRequired: QApplication.translate(
-                "StringStatus", "String requires a translation"
-            ),
-        }
-
-        return LOC_NAMES[self]
+        match self:
+            case StringStatus.NoneStatus:
+                return QApplication.translate("StringStatus", "No Status")
+            case StringStatus.NoTranslationRequired:
+                return QApplication.translate("StringStatus", "No Translation Required")
+            case StringStatus.TranslationComplete:
+                return QApplication.translate("StringStatus", "Translated")
+            case StringStatus.TranslationIncomplete:
+                return QApplication.translate("StringStatus", "Partially Translated")
+            case StringStatus.TranslationRequired:
+                return QApplication.translate("StringStatus", "Untranslated")
 
     @override
     def get_localized_description(self) -> str:
-        return self.get_localized_name()
-
-    def get_localized_filter_name(self) -> str:
-        """
-        Returns:
-            str: A localized name for filtering based on the string status.
-        """
-
-        LOC_NAMES: dict[StringStatus, str] = {
-            StringStatus.NoneStatus: QApplication.translate(
-                "StringStatus", "Show stateless strings"
-            ),
-            StringStatus.NoTranslationRequired: QApplication.translate(
-                "StringStatus", "Show strings that do not require a translation"
-            ),
-            StringStatus.TranslationComplete: QApplication.translate(
-                "StringStatus", "Show strings that are completely translated"
-            ),
-            StringStatus.TranslationIncomplete: QApplication.translate(
-                "StringStatus", "Show strings that are partially translated"
-            ),
-            StringStatus.TranslationRequired: QApplication.translate(
-                "StringStatus", "Show strings that require a translation"
-            ),
-        }
-
-        return LOC_NAMES[self]
-
-    def get_localized_short_name(self) -> str:
-        """
-        Returns:
-            str: A localized short name.
-        """
-
-        LOC_NAMES: dict[StringStatus, str] = {
-            StringStatus.NoneStatus: QApplication.translate("StringStatus", "No Status"),
-            StringStatus.NoTranslationRequired: QApplication.translate(
-                "StringStatus", "No Translation Required"
-            ),
-            StringStatus.TranslationComplete: QApplication.translate(
-                "StringStatus", "Translated"
-            ),
-            StringStatus.TranslationIncomplete: QApplication.translate(
-                "StringStatus", "Partially Translated"
-            ),
-            StringStatus.TranslationRequired: QApplication.translate(
-                "StringStatus", "Untranslated"
-            ),
-        }
-
-        return LOC_NAMES[self]
+        match self:
+            case StringStatus.NoneStatus:
+                return QApplication.translate(
+                    "StringStatus", "The status of the string is unknown."
+                )
+            case StringStatus.NoTranslationRequired:
+                return QApplication.translate(
+                    "StringStatus", "The string does not require a translation."
+                )
+            case StringStatus.TranslationComplete:
+                return QApplication.translate(
+                    "StringStatus", "The string is completely translated."
+                )
+            case StringStatus.TranslationIncomplete:
+                return QApplication.translate(
+                    "StringStatus", "The string is partially translated."
+                )
+            case StringStatus.TranslationRequired:
+                return QApplication.translate(
+                    "StringStatus", "The string requires a translation."
+                )

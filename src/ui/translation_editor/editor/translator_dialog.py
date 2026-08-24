@@ -4,10 +4,15 @@ Copyright (c) Cutleast
 
 from typing import TYPE_CHECKING, Optional
 
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
+from cutleast_core_lib.ui.widgets.divider import Divider
+from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QCloseEvent, QFont, QKeySequence, QShortcut
+from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QApplication,
+    QGroupBox,
     QHBoxLayout,
     QLabel,
     QMessageBox,
@@ -25,7 +30,6 @@ from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.user_data.user_data_service import UserDataService
 from ui.utilities.icon_provider import IconProvider
-from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
 
@@ -96,19 +100,26 @@ class TranslatorDialog(QWidget):
 
     def __init_ui(self) -> None:
         self.setWindowFlags(Qt.WindowType.Window)
-        self.resize(1000, 600)
+        self.resize(1100, 600)
         self.closeEvent = self.cancel
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
 
         hlayout = QHBoxLayout()
+        hlayout.setContentsMargins(0, 0, 0, 0)
         vlayout.addLayout(hlayout)
 
-        prev_button = ShortcutButton(
-            IconProvider.get_qta_icon("fa5s.chevron-left"),
-            self.tr("Go to previous string"),
+        prev_button = ShortcutButton(self.tr("Go to previous string"))
+        IconProvider.bind_qta_icon(
+            prev_button,
+            prev_button.setIcon,
+            "mdi6.chevron-left",
+            color=IconProvider.Color.Primary,
+            scale_factor=1.5,
         )
+        prev_button.setProperty("primary", True)
+        prev_button.setProperty("transparent", True)
         prev_button.clicked.connect(self.goto_prev)
         prev_button.setShortcut(QKeySequence("Alt+Left"))
         prev_button.setEnabled(self.__parent.get_visible_string_count() > 1)
@@ -116,53 +127,49 @@ class TranslatorDialog(QWidget):
 
         hlayout.addStretch()
 
-        next_button = ShortcutButton(
-            IconProvider.get_qta_icon("fa5s.chevron-right"),
-            self.tr("Go to next string"),
+        next_button = ShortcutButton(self.tr("Go to next string"))
+        IconProvider.bind_qta_icon(
+            next_button,
+            next_button.setIcon,
+            "mdi6.chevron-right",
+            color=IconProvider.Color.Primary,
+            scale_factor=1.5,
         )
+        next_button.setProperty("primary", True)
+        next_button.setProperty("transparent", True)
         next_button.clicked.connect(self.goto_next)
         next_button.setShortcut(QKeySequence("Alt+Right"))
         next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
         next_button.setEnabled(self.__parent.get_visible_string_count() > 1)
         hlayout.addWidget(next_button)
 
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        vlayout.addWidget(Divider())
 
-        label_vlayout = QVBoxLayout()
-        hlayout.addLayout(label_vlayout)
+        context_groupbox = QGroupBox(self.tr("Context"))
+        vlayout.addWidget(context_groupbox)
+        context_vlayout = QVBoxLayout()
+        context_vlayout.setContentsMargins(0, 0, 0, 0)
+        context_groupbox.setLayout(context_vlayout)
 
         self.__info_label = QLabel()
-        self.__info_label.setFont(QFont("Consolas"))
+        self.__info_label.setProperty("monospace", True)
         self.__info_label.setTextInteractionFlags(
             Qt.TextInteractionFlag.TextSelectableByMouse
         )
         self.__info_label.setCursor(Qt.CursorShape.IBeamCursor)
         self.__info_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(self.__info_label)
+        context_vlayout.addWidget(self.__info_label)
 
-        hlayout.addStretch()
-
-        btn_vlayout = QVBoxLayout()
-        hlayout.addLayout(btn_vlayout)
-
-        translate_button = ShortcutButton(self.tr("Translate with API"))
-        translate_button.setIcon(IconProvider.get_qta_icon("ri.translate"))
-        translate_button.clicked.connect(self.__translate_with_api)
-        translate_button.setShortcut(QKeySequence("Ctrl+F5"))
-        btn_vlayout.addWidget(translate_button)
-
-        reset_button = ShortcutButton(self.tr("Reset string"))
-        reset_button.setIcon(IconProvider.get_qta_icon("ri.arrow-go-back-line"))
-        reset_button.clicked.connect(self.__reset_translation)
-        reset_button.setShortcut(QKeySequence("F4"))
-        reset_button.setFixedWidth(reset_button.minimumWidth())
-        btn_vlayout.addWidget(reset_button, alignment=Qt.AlignmentFlag.AlignRight)
+        translation_groupbox = QGroupBox(self.tr("Translation"))
+        vlayout.addWidget(translation_groupbox, stretch=1)
+        translation_vlayout = QVBoxLayout()
+        translation_vlayout.setContentsMargins(0, 0, 0, 0)
+        translation_groupbox.setLayout(translation_vlayout)
 
         splitter = QSplitter()
-        vlayout.addWidget(splitter, stretch=1)
+        translation_vlayout.addWidget(splitter, stretch=1)
 
-        self.__original_entry = QPlainTextEdit()
+        self.__original_entry = LineNumberTextEdit()
         self.__original_entry.setReadOnly(True)
         splitter.addWidget(self.__original_entry)
 
@@ -172,20 +179,32 @@ class TranslatorDialog(QWidget):
                 user_data_path=UserDataService.get().get_data_path(),
             )
         else:
-            self.__translated_entry = QPlainTextEdit()
+            self.__translated_entry = LineNumberTextEdit()
         self.__translated_entry.textChanged.connect(self.changes_signal.emit)
         self.__translated_entry.setFocus()
         splitter.addWidget(self.__translated_entry)
 
+        WidgetStateManager.get().register_state("translator_dialog_splitter", splitter)
+
+        vlayout.addWidget(Divider())
+
         hlayout = QHBoxLayout()
+        hlayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addLayout(hlayout)
 
-        cancel_button = ShortcutButton(self.tr("Cancel"))
-        cancel_button.clicked.connect(self.close)
-        cancel_button.setShortcut(QKeySequence("Esc"))
-        hlayout.addWidget(cancel_button)
-
-        hlayout.addSpacing(25)
+        info_icon = QLabel()
+        IconProvider.bind_qta_icon(
+            info_icon,
+            lambda icon: info_icon.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon,
+                    ThemeManager.get().theme.metrics.icon,
+                )
+            ),
+            "mdi6.information",
+            color=IconProvider.Color.Secondary,
+        )
+        hlayout.addWidget(info_icon)
 
         hint_label = QLabel(
             self.tr(
@@ -195,16 +214,43 @@ class TranslatorDialog(QWidget):
             )
         )
         hint_label.setWordWrap(True)
-        hint_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        hint_label.setAlignment(
+            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
+        )
+        hint_label.setProperty("secondary", True)
         hlayout.addWidget(hint_label, stretch=1)
 
-        hlayout.addSpacing(25)
+        vlayout.addSpacing(10)
+
+        hlayout = QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        translate_button = ShortcutButton(self.tr("Translate with API"))
+        IconProvider.bind_qta_icon(
+            translate_button, translate_button.setIcon, "mdi6.translate"
+        )
+        translate_button.clicked.connect(self.__translate_with_api)
+        translate_button.setShortcut(QKeySequence("Ctrl+F5"))
+        hlayout.addWidget(translate_button)
+
+        reset_button = ShortcutButton(self.tr("Reset string"))
+        IconProvider.bind_qta_icon(reset_button, reset_button.setIcon, "mdi6.undo")
+        reset_button.clicked.connect(self.__reset_translation)
+        reset_button.setShortcut(QKeySequence("F4"))
+        hlayout.addWidget(reset_button)
+
+        hlayout.addStretch()
 
         finish_button = ShortcutButton(self.tr("Done"))
         finish_button.clicked.connect(lambda: self.finish())
         finish_button.setShortcut(QKeySequence("Ctrl+Return"))
         finish_button.setDefault(True)
         hlayout.addWidget(finish_button)
+
+        cancel_button = ShortcutButton(self.tr("Cancel"))
+        cancel_button.clicked.connect(self.close)
+        cancel_button.setShortcut(QKeySequence("Esc"))
+        hlayout.addWidget(cancel_button)
 
         complete_shortcut = QShortcut(QKeySequence("F1"), self)
         complete_shortcut.activated.connect(
@@ -221,7 +267,7 @@ class TranslatorDialog(QWidget):
             lambda: self.goto_next(StringStatus.NoTranslationRequired)
         )
 
-        self.setStyleSheet(ThemeManager.get_stylesheet() or "")
+        ThemeManager.update_widget_styles(self)
 
     def __update_title(self) -> None:
         visible_string_count: int = self.__parent.get_visible_string_count()
@@ -279,9 +325,7 @@ class TranslatorDialog(QWidget):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 event.ignore()
@@ -325,9 +369,7 @@ class TranslatorDialog(QWidget):
             message_box.button(QMessageBox.StandardButton.Save).setText(
                 self.tr("Save and continue")
             )
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             choice: int = message_box.exec()
 

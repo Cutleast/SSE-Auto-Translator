@@ -9,12 +9,13 @@ from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.unique import unique
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.tree_widget import (
     are_children_visible,
     iter_children,
     iter_toplevel_items,
 )
-from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import QEvent, QObject, Qt, Signal
 from PySide6.QtGui import QWheelEvent
@@ -80,7 +81,7 @@ class DownloadListWidget(QWidget):
     __menu: DownloadListMenu
     __tool_bar: DownloadListToolBar
     __search_bar: SearchBar
-    __selected_downloads_num_label: LCDNumber
+    __selected_downloads_num_label: QLabel
 
     log: logging.Logger = logging.getLogger("DownloadListWidget")
 
@@ -132,7 +133,7 @@ class DownloadListWidget(QWidget):
 
     def __init_header(self) -> None:
         title_label = QLabel(self.tr("Available Downloads"))
-        title_label.setObjectName("h2")
+        title_label.setProperty("title", True)
         self.__vlayout.addWidget(title_label)
 
         hlayout = QHBoxLayout()
@@ -157,28 +158,31 @@ class DownloadListWidget(QWidget):
         hlayout.addWidget(self._link_nxm_checkbox)
 
         self._start_downloads_button = QPushButton(self.tr("Start downloads"))
-        self._start_downloads_button.setIcon(
-            IconProvider.get_qta_icon("mdi.download-multiple", color="#000000")
+        IconProvider.bind_qta_icon(
+            self._start_downloads_button,
+            self._start_downloads_button.setIcon,
+            "mdi6.download-multiple",
+            color=IconProvider.Color.Primary,
+            color_active=IconProvider.Color.Primary,
         )
         self._start_downloads_button.setDefault(True)
         hlayout.addWidget(self._start_downloads_button)
 
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__tool_bar = DownloadListToolBar()
-        hlayout.addWidget(self.__tool_bar)
+        self.__vlayout.addWidget(self.__tool_bar)
 
         self.__search_bar = SearchBar()
-        hlayout.addWidget(self.__search_bar, stretch=1)
+        self.__tool_bar.addWidget(self.__search_bar)
+
+        self.__tool_bar.addSeparator()
 
         num_label = QLabel(self.tr("Selected downloads:"))
-        num_label.setObjectName("h3")
-        hlayout.addWidget(num_label)
+        num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(num_label)
 
-        self.__selected_downloads_num_label = LCDNumber()
-        self.__selected_downloads_num_label.setDigitCount(4)
-        hlayout.addWidget(self.__selected_downloads_num_label)
+        self.__selected_downloads_num_label = QLabel()
+        self.__selected_downloads_num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(self.__selected_downloads_num_label)
 
     def __init_tree_widget(self) -> None:
         self.__tree_widget = QTreeWidget()
@@ -208,8 +212,16 @@ class DownloadListWidget(QWidget):
         self.__vlayout.addLayout(hlayout)
 
         icon_label = QLabel()
-        icon_label.setPixmap(
-            IconProvider.get_qta_icon("mdi6.information").pixmap(16, 16)
+        IconProvider.bind_qta_icon(
+            icon_label,
+            lambda icon: icon_label.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon,
+                    ThemeManager.get().theme.metrics.icon,
+                )
+            ),
+            "mdi6.information",
+            color=IconProvider.Color.Secondary,
         )
         hlayout.addWidget(icon_label, stretch=0)
 
@@ -220,6 +232,7 @@ class DownloadListWidget(QWidget):
             )
         )
         hint_label.setWordWrap(True)
+        hint_label.setProperty("secondary", True)
         hlayout.addWidget(hint_label, stretch=1)
 
     def __init_items(self, entries: DownloadListEntries) -> None:
@@ -244,14 +257,11 @@ class DownloadListWidget(QWidget):
             3, QHeaderView.ResizeMode.ResizeToContents
         )
 
-        self.__selected_downloads_num_label.setDigitCount(
-            # display at least 4 digits but as many as required
-            max(4, len(str(len(self.__items))))
-        )
-        self.__selected_downloads_num_label.display(len(self.__items))
+        self.__selected_downloads_num_label.setText(str(len(self.__items)))
 
     def __add_modpage_button(self, mod_item: QTreeWidgetItem, mod_info: ModInfo) -> None:
-        button = QPushButton(IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), "")
+        button = IconButton()
+        IconProvider.bind_res_icon(button, button.setIcon, ResourceIcon.OpenInBrowser)
         button.setToolTip(self.tr("Open mod page on Nexus Mods..."))
         button.clicked.connect(lambda: self.__open_modpage(mod_info))
         button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
@@ -308,8 +318,8 @@ class DownloadListWidget(QWidget):
                 other_item.set_checked(checked)
                 other_item.toggled.connect(self.__on_checkstate_changed)
 
-        self.__selected_downloads_num_label.display(
-            len([item for item in self.__items.values() if item.is_checked()])
+        self.__selected_downloads_num_label.setText(
+            str(len([item for item in self.__items.values() if item.is_checked()]))
         )
 
     def __open_context_menu(self) -> None:

@@ -7,8 +7,11 @@ from typing import override
 
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.updater import Updater
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent, QShortcut
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QTabWidget
@@ -23,7 +26,6 @@ from core.user_data.user_data import UserData
 from core.utilities.constants import DOCS_URL
 from core.utilities.licenses import LICENSES
 from ui.settings.settings_dialog import SettingsDialog
-from ui.utilities.theme_manager import ThemeManager
 
 from .main_page.main_page import MainPageWidget
 from .menubar import MenuBar
@@ -48,7 +50,7 @@ class MainWindow(QMainWindow):
     __refresh_shortcut: QShortcut
 
     __menu_bar: MenuBar
-    __tab_widget: QTabWidget
+    __tab_widget: TabWidget
     __mainpage_widget: MainPageWidget
     __translation_editor: EditorPage
     __toast_notifier: ToastNotifier
@@ -117,10 +119,9 @@ class MainWindow(QMainWindow):
         self.__menu_bar.about_qt_requested.connect(self.__show_about_qt)
 
     def __init_tab_widget(self) -> None:
-        self.__tab_widget = QTabWidget()
-        self.__tab_widget.setObjectName("main_tab_widget")
+        self.__tab_widget = TabWidget()
         self.__tab_widget.setTabPosition(QTabWidget.TabPosition.South)
-        self.__tab_widget.tabBar().setDocumentMode(True)
+        self.__tab_widget.setSpacing(0)
         self.setCentralWidget(self.__tab_widget)
 
         self.__mainpage_widget = MainPageWidget(
@@ -140,6 +141,8 @@ class MainWindow(QMainWindow):
             self.__translation_editor, self.tr("Translation Editor")
         )
         self.__tab_widget.setTabEnabled(1, False)
+
+        WidgetStateManager.get().register_state("editor_page", self.__translation_editor)
 
     def __init_status_bar(self) -> None:
         self.__status_bar = StatusBar(self.__provider)
@@ -175,9 +178,7 @@ class MainWindow(QMainWindow):
             message_box.button(QMessageBox.StandardButton.Cancel).setText(
                 self.tr("Cancel")
             )
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 confirmation = False

@@ -4,13 +4,13 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QMessageBox, QWidget
 
 from core.downloader.download_manager import DownloadListEntries
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import TranslationProvider
-from ui.utilities.theme_manager import ThemeManager
 
 from .download_list_widget import DownloadListWidget
 
@@ -63,9 +63,7 @@ class DownloadListWindow(DownloadListWidget):
             messagebox.setDefaultButton(QMessageBox.StandardButton.Yes)
             messagebox.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            messagebox.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(messagebox)
 
             if messagebox.exec() == QMessageBox.StandardButton.Yes:
                 NXMHandler.get().bind()

@@ -5,8 +5,9 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
+from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QAction, QCursor
+from PySide6.QtGui import QAction
 
 from core.database.database import TranslationDatabase
 from core.file_source.file_source_factory import FileSourceFactory
@@ -16,16 +17,10 @@ from core.mod_instance.mod import Mod
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
-class ModInstanceMenu(Menu):
+class ModInstanceMenu(TreeMenu):
     """
     Context menu for mod instance widget.
     """
-
-    expand_all_clicked = Signal()
-    """Signal emitted when the user clicks on the expand all action."""
-
-    collapse_all_clicked = Signal()
-    """Signal emitted when the user clicks on the collapse all action."""
 
     uncheck_selected_clicked = Signal()
     """Signal emitted when the user clicks on the uncheck selected action."""
@@ -123,83 +118,107 @@ class ModInstanceMenu(Menu):
         self.__init_general_actions()
 
     def __init_item_actions(self) -> None:
-        expand_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
-            self.tr("Expand all"),
-        )
-        expand_all_action.triggered.connect(self.expand_all_clicked.emit)
-
-        collapse_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
-            self.tr("Collapse all"),
-        )
-        collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
-
         self.__uncheck_action = self.addAction(self.tr("Uncheck selected mod file(s)"))
-        self.__uncheck_action.setIcon(IconProvider.get_qta_icon("mdi6.close"))
+        IconProvider.bind_qta_icon(
+            self.__uncheck_action, self.__uncheck_action.setIcon, "mdi6.close"
+        )
         self.__uncheck_action.triggered.connect(self.uncheck_selected_clicked.emit)
 
         self.__check_action = self.addAction(self.tr("Check selected mod file(s)"))
-        self.__check_action.setIcon(IconProvider.get_qta_icon("mdi6.check"))
+        IconProvider.bind_qta_icon(
+            self.__check_action, self.__check_action.setIcon, "mdi6.check"
+        )
         self.__check_action.triggered.connect(self.check_selected_clicked.emit)
 
         self.addSeparator()
 
     def __init_actions_menu(self) -> None:
-        self.__action_menu = Menu(
-            IconProvider.get_qta_icon("mdi6.lightning-bolt"), self.tr("Actions")
+        self.__action_menu = Menu(title=self.tr("Actions"))
+        IconProvider.bind_qta_icon(
+            self.__action_menu, self.__action_menu.setIcon, "mdi6.lightning-bolt"
         )
         self.addMenu(self.__action_menu)
 
         basic_scan_action: QAction = self.__action_menu.addAction(
-            IconProvider.get_res_icon(ResourceIcon.DetectLang), self.tr("Basic scan...")
+            self.tr("Basic scan...")
+        )
+        IconProvider.bind_res_icon(
+            basic_scan_action,
+            basic_scan_action.setIcon,
+            ResourceIcon.DetectLang,
         )
         basic_scan_action.triggered.connect(self.basic_scan_requested.emit)
 
         self.__online_scan_action = self.__action_menu.addAction(
-            IconProvider.get_res_icon(ResourceIcon.ScanOnline),
-            self.tr("Online scan..."),
+            self.tr("Online scan...")
+        )
+        IconProvider.bind_res_icon(
+            self.__online_scan_action,
+            self.__online_scan_action.setIcon,
+            ResourceIcon.ScanOnline,
         )
         self.__online_scan_action.triggered.connect(self.online_scan_requested.emit)
 
         self.__download_action = self.__action_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.download-multiple"),
-            self.tr("Download available translations..."),
+            self.tr("Download available translations...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__download_action,
+            self.__download_action.setIcon,
+            "mdi6.download-multiple",
         )
         self.__download_action.triggered.connect(self.download_requested.emit)
 
     def __init_translation_actions(self) -> None:
-        self.__translation_menu = Menu(
-            IconProvider.get_qta_icon("mdi6.translate"), self.tr("Translation")
+        self.__translation_menu = Menu(title=self.tr("Translation"))
+        IconProvider.bind_qta_icon(
+            self.__translation_menu, self.__translation_menu.setIcon, "mdi6.translate"
         )
         self.addMenu(self.__translation_menu)
 
         self.__show_untranslated_strings_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.book-alert-outline"),
-            self.tr("Show untranslated strings..."),
+            self.tr("Show untranslated strings...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__show_untranslated_strings_action,
+            self.__show_untranslated_strings_action.setIcon,
+            "mdi6.book-alert-outline",
         )
         self.__show_untranslated_strings_action.triggered.connect(
             self.show_untranslated_strings_requested.emit
         )
 
         self.__show_translation_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.translate"), self.tr("Show translation...")
+            self.tr("Show translation...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__show_translation_action,
+            self.__show_translation_action.setIcon,
+            "mdi6.translate",
         )
         self.__show_translation_action.triggered.connect(
             self.show_translation_requested.emit
         )
 
         self.__show_translation_strings_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.book-open-outline"),
-            self.tr("Show translation strings..."),
+            self.tr("Show translation strings...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__show_translation_strings_action,
+            self.__show_translation_strings_action.setIcon,
+            "mdi6.book-open-outline",
         )
         self.__show_translation_strings_action.triggered.connect(
             self.show_translation_strings_requested.emit
         )
 
         self.__edit_translation_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.text-box-edit"),
-            self.tr("Edit translation..."),
+            self.tr("Edit translation...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__edit_translation_action,
+            self.__edit_translation_action.setIcon,
+            "mdi6.text-box-edit",
         )
         self.__edit_translation_action.triggered.connect(
             self.edit_translation_requested.emit
@@ -208,16 +227,24 @@ class ModInstanceMenu(Menu):
         self.__translation_menu.addSeparator()
 
         self.__create_translation_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.passport-plus"),
-            self.tr("Create new translation..."),
+            self.tr("Create new translation...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__create_translation_action,
+            self.__create_translation_action.setIcon,
+            "mdi6.passport-plus",
         )
         self.__create_translation_action.triggered.connect(
             self.create_translation_requested.emit
         )
 
         self.__import_as_translation_action = self.__translation_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.database-import-outline"),
-            self.tr("Import as translation..."),
+            self.tr("Import as translation...")
+        )
+        IconProvider.bind_qta_icon(
+            self.__import_as_translation_action,
+            self.__import_as_translation_action.setIcon,
+            "mdi6.database-import-outline",
         )
         self.__import_as_translation_action.triggered.connect(
             self.import_as_translation_requested.emit
@@ -226,30 +253,38 @@ class ModInstanceMenu(Menu):
         self.addSeparator()
 
     def __init_modfile_actions(self) -> None:
-        self.__modfile_menu = Menu(
-            IconProvider.get_res_icon(ResourceIcon.Plugin), self.tr("Mod files")
+        self.__modfile_menu = Menu(title=self.tr("Mod files"))
+        IconProvider.bind_res_icon(
+            self.__modfile_menu,
+            self.__modfile_menu.setIcon,
+            ResourceIcon.Plugin,
         )
         self.addMenu(self.__modfile_menu)
 
         add_to_ignore_list_action: QAction = self.__modfile_menu.addAction(
-            IconProvider.get_qta_icon("mdi.playlist-remove"),
-            self.tr("Add mod file to ignore list"),
+            self.tr("Add mod file to ignore list")
+        )
+        IconProvider.bind_qta_icon(
+            add_to_ignore_list_action,
+            add_to_ignore_list_action.setIcon,
+            "mdi6.playlist-remove",
         )
         add_to_ignore_list_action.triggered.connect(
             self.add_to_ignore_list_requested.emit
         )
 
-        open_action = self.__modfile_menu.addAction(
-            IconProvider.get_qta_icon("fa5s.external-link-alt"), self.tr("Open...")
-        )
+        open_action = self.__modfile_menu.addAction(self.tr("Open..."))
+        IconProvider.bind_qta_icon(open_action, open_action.setIcon, "mdi6.open-in-new")
         open_action.triggered.connect(self.open_requested.emit)
 
         self.addSeparator()
 
     def __init_general_actions(self) -> None:
-        self.__show_strings_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.book-open-outline"),
-            self.tr("Show strings..."),
+        self.__show_strings_action = self.addAction(self.tr("Show strings..."))
+        IconProvider.bind_qta_icon(
+            self.__show_strings_action,
+            self.__show_strings_action.setIcon,
+            "mdi6.book-open-outline",
         )
         self.__show_strings_action.triggered.connect(self.show_strings_requested.emit)
 
@@ -259,13 +294,17 @@ class ModInstanceMenu(Menu):
         )
         self.__open_modpage_action.triggered.connect(self.open_modpage_requested.emit)
 
-        self.__open_in_explorer_action = self.addAction(
-            IconProvider.get_qta_icon("fa5s.folder"), self.tr("Open in Explorer...")
+        self.__open_in_explorer_action = self.addAction(self.tr("Open in Explorer..."))
+        IconProvider.bind_qta_icon(
+            self.__open_in_explorer_action,
+            self.__open_in_explorer_action.setIcon,
+            "mdi6.folder",
         )
         self.__open_in_explorer_action.triggered.connect(
             self.open_in_explorer_requested.emit
         )
 
+    @override
     def open(
         self,
         current_item: Optional[Mod | ModFile],
@@ -370,7 +409,7 @@ class ModInstanceMenu(Menu):
             isinstance(current_item, Mod) and current_item.mod_id is not None
         )
 
-        self.exec(QCursor.pos())
+        super().open()
 
     def set_provider_features_enabled(self, enabled: bool) -> None:
         """

@@ -25,22 +25,19 @@ class ProviderPreference(LocalizedEnum):
 
     @override
     def get_localized_name(self) -> str:
-        locs: dict[ProviderPreference, str] = {
-            ProviderPreference.OnlyNexusMods: QApplication.translate(
-                "ProviderPreference", "Only Nexus Mods"
-            ),
-            ProviderPreference.PreferNexusMods: QApplication.translate(
-                "ProviderPreference", "Prefer Nexus Mods"
-            ),
-            ProviderPreference.OnlyConfrerie: QApplication.translate(
-                "ProviderPreference", "Only Confrérie des Traducteurs"
-            ),
-            ProviderPreference.PreferConfrerie: QApplication.translate(
-                "ProviderPreference", "Prefer Confrérie des Traducteurs"
-            ),
-        }
-
-        return locs[self]
+        match self:
+            case ProviderPreference.OnlyNexusMods:
+                return QApplication.translate("ProviderPreference", "Only Nexus Mods")
+            case ProviderPreference.PreferNexusMods:
+                return QApplication.translate("ProviderPreference", "Prefer Nexus Mods")
+            case ProviderPreference.OnlyConfrerie:
+                return QApplication.translate(
+                    "ProviderPreference", "Only Confrérie des Traducteurs"
+                )
+            case ProviderPreference.PreferConfrerie:
+                return QApplication.translate(
+                    "ProviderPreference", "Prefer Confrérie des Traducteurs"
+                )
 
     @override
     def get_localized_description(self) -> str:

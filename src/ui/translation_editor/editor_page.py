@@ -5,17 +5,17 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.ui.utilities.tree_widget import calculate_required_width
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QKeySequence
 from PySide6.QtWidgets import (
     QHeaderView,
     QMessageBox,
-    QPushButton,
     QSplitter,
     QStackedWidget,
     QTreeWidget,
     QTreeWidgetItem,
-    QWidget,
 )
 
 from core.config.app_config import AppConfig
@@ -23,7 +23,6 @@ from core.database.translation import Translation
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from ui.utilities.icon_provider import IconProvider
-from ui.utilities.theme_manager import ThemeManager
 
 from .editor.editor_tab import EditorTab
 
@@ -74,10 +73,14 @@ class EditorPage(QSplitter):
 
         self.__init_ui()
 
+        w: int = self.contentsRect().width()
+        self.setSizes([int(0.25 * w), int(0.75 * w)])
+
     def __init_ui(self) -> None:
         self.setOrientation(Qt.Orientation.Horizontal)
 
         self.__tab_list_widget = QTreeWidget()
+        self.__tab_list_widget.setProperty("no_header", True)
         self.__tab_list_widget.header().hide()
         self.__tab_list_widget.setColumnCount(2)
         self.__tab_list_widget.header().setStretchLastSection(False)
@@ -184,9 +187,7 @@ class EditorPage(QSplitter):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
@@ -225,13 +226,19 @@ class EditorPage(QSplitter):
             self.__tabs[translation] = translation_tab, translation_item
             self.__page_widget.addWidget(translation_tab)
 
-            close_button = QPushButton()
+            close_button = IconButton()
             close_button.setObjectName("list_close_button")
-            close_button.setIcon(IconProvider.get_qta_icon("mdi6.close"))
-            close_button.setToolTip(self.tr("Close translation"))
+            IconProvider.bind_qta_icon(close_button, close_button.setIcon, "mdi6.close")
+            close_button.setToolTip(
+                self.tr("Close translation")
+                + "\t"
+                + QKeySequence("Ctrl+W").toString(QKeySequence.SequenceFormat.NativeText)
+            )
+            close_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
 
             for modfile in sorted(translation.strings, key=lambda m: m.name.lower()):
                 modfile_item = QTreeWidgetItem([str(modfile)])
+                modfile_item.setFirstColumnSpanned(True)
                 translation_item.addChild(modfile_item)
 
             self.__tab_list_widget.addTopLevelItem(translation_item)
@@ -245,13 +252,6 @@ class EditorPage(QSplitter):
 
         # Switch to Tab
         self.__set_tab(self.tabs[-1])
-
-        # Resize tab list to fit all translation and mod file names
-        new_width: int = calculate_required_width(self.__tab_list_widget, 0)
-        new_width += 100  # for the indentation and second column
-        parent: Optional[QWidget] = self.parentWidget()
-        total_width: int = parent.width() if parent else self.width()
-        self.setSizes([new_width, total_width - new_width])
 
         self.tab_count_updated.emit(len(self.tabs))
         self.__update()

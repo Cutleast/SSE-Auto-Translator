@@ -7,15 +7,7 @@ from typing import Optional, override
 from cutleast_core_lib.ui.widgets.enum_placeholder_dropdown import (
     EnumPlaceholderDropdown,
 )
-from cutleast_core_lib.ui.widgets.smooth_scroll_area import SmoothScrollArea
-from PySide6.QtWidgets import (
-    QCheckBox,
-    QGroupBox,
-    QHBoxLayout,
-    QLabel,
-    QVBoxLayout,
-    QWidget,
-)
+from PySide6.QtWidgets import QCheckBox, QGroupBox, QHBoxLayout, QLabel, QVBoxLayout
 
 from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
@@ -39,20 +31,14 @@ class SetupPage(Page):
 
     @override
     def _init_form(self) -> None:
-        # TODO: Move the scroll area to the Page class
-        self.__scroll_area = SmoothScrollArea()
-        self.__scroll_area.setObjectName("transparent")
-        self._vlayout.addWidget(self.__scroll_area, 1)
-        scroll_widget = QWidget()
-        scroll_widget.setObjectName("transparent")
-        self.__scroll_area.setWidget(scroll_widget)
-
-        vlayout = QVBoxLayout()
-        scroll_widget.setLayout(vlayout)
+        translation_groupbox = QGroupBox(self.tr("Translations"))
+        self._vlayout.addWidget(translation_groupbox)
+        translation_vlayout = QVBoxLayout()
+        translation_groupbox.setLayout(translation_vlayout)
 
         # Language
         hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        translation_vlayout.addLayout(hlayout)
 
         lang_label = QLabel(self.tr("Game language"))
         hlayout.addWidget(lang_label)
@@ -60,11 +46,9 @@ class SetupPage(Page):
         self.__lang_dropdown.installEventFilter(self)
         hlayout.addWidget(self.__lang_dropdown)
 
-        vlayout.addSpacing(10)
-
         # Source
         hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        translation_vlayout.addLayout(hlayout)
 
         self.__source_label = QLabel(self.tr("Translation source"))
         self.__source_label.setDisabled(True)
@@ -82,17 +66,17 @@ class SetupPage(Page):
             self.tr("Use global masterlist from GitHub repository (recommended)")
         )
         self.__masterlist_box.setChecked(True)
-        vlayout.addWidget(self.__masterlist_box)
-
-        vlayout.addSpacing(5)
+        translation_vlayout.addWidget(self.__masterlist_box)
 
         # API Setup Widget
         api_groupbox = QGroupBox(self.tr("Nexus Mods API key"))
-        vlayout.addWidget(api_groupbox)
+        self._vlayout.addWidget(api_groupbox)
         api_vlayout = QVBoxLayout()
         api_groupbox.setLayout(api_vlayout)
         self.__api_setup = ApiSetup()
         api_vlayout.addWidget(self.__api_setup)
+
+        self._vlayout.addStretch()
 
         self.__lang_dropdown.currentTextChanged.connect(lambda _: self._validate())
         self.__api_setup.valid_signal.connect(lambda _: self._validate())

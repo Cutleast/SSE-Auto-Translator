@@ -8,199 +8,220 @@ from enum import IntEnum
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.theme.models.theme import Theme
+from cutleast_core_lib.ui.theme.models.types import ThemeAlias
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
+from ..utilities.colored_enum import ColoredEnum
 
-class TranslationStatus(IntEnum, LocalizedEnum):
+
+class TranslationStatus(IntEnum, LocalizedEnum, ColoredEnum):
     """
     Enum for different translation status of mod files.
     """
 
     NoneStatus = -1
-    """
-    None Status (no color).
-    """
+    """None Status (no color)."""
 
     NoStrings = 0
-    """
-    File has no Strings (no color).
-    """
+    """File has no Strings (no color)."""
 
     IsTranslated = 1
-    """
-    File is already in target language (green).
-    """
+    """File is already in target language (green)."""
 
     TranslationInstalled = 2
-    """
-    Translation for file is already installed in Database (green).
-    """
+    """Translation for file is already installed in Database (green)."""
 
     TranslationAvailableInDatabase = 3
-    """
-    Translation for file is available in Database (green).
-    """
+    """Translation for file is available in Database (blue)."""
 
     TranslationAvailableOnline = 4
     """
-    Translation for file is available online at Nexus Mods or Confrérie des Traducteurs (cyan).
+    Translation for file is available online at Nexus Mods or Confrérie des Traducteurs
+    (blue).
     """
 
     TranslationIncomplete = 5
-    """
-    Translation for file is installed but incomplete (magenta).
-    """
+    """Translation for file is installed but incomplete (magenta)."""
 
     RequiresTranslation = 6
-    """
-    File has Strings and requires translation (yellow).
-    """
+    """File has Strings and requires translation (yellow)."""
 
     NoTranslationAvailable = 7
-    """
-    No Translation for file at Nexus Mods or in Database (red).
-    """
+    """No Translation for file at Nexus Mods or in Database (red)."""
 
-    @classmethod
-    def get_color(cls, status: TranslationStatus) -> Optional[QColor]:
-        """
-        Args:
-            status (TranslationStatus):
-                The translation status for which to get the color.
+    @override
+    def get_base_color(self) -> QColor:
+        theme: Theme = ThemeManager.get().theme
 
-        Returns:
-            Optional[QColor]:
-                The color associated with the given translation status, or None if no
-                color is associated.
-        """
+        token: ThemeAlias
+        match self:
+            case TranslationStatus.NoneStatus:
+                token = theme.texts.text.color
+            case TranslationStatus.NoStrings:
+                token = theme.texts.text.color
+            case TranslationStatus.IsTranslated:
+                token = theme.colors.success
+            case TranslationStatus.TranslationInstalled:
+                token = theme.colors.success
+            case TranslationStatus.TranslationIncomplete:
+                token = theme.colors.caution
+            case TranslationStatus.TranslationAvailableInDatabase:
+                token = theme.colors.information
+            case TranslationStatus.TranslationAvailableOnline:
+                token = theme.colors.information
+            case TranslationStatus.RequiresTranslation:
+                token = theme.colors.warning
+            case TranslationStatus.NoTranslationAvailable:
+                token = theme.colors.error
 
-        COLORS: dict[TranslationStatus, Optional[QColor]] = {
-            cls.NoneStatus: None,
-            cls.NoStrings: None,
-            cls.IsTranslated: QColor.fromString("#8be248"),
-            cls.TranslationInstalled: QColor.fromString("#8be248"),
-            cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
-            cls.TranslationAvailableInDatabase: QColor.fromString("#8be248"),
-            cls.TranslationAvailableOnline: QColor.fromString("#51c6d9"),
-            cls.RequiresTranslation: QColor.fromString("#e9e042"),
-            cls.NoTranslationAvailable: QColor.fromString("#d74343"),
-        }
+        return QColor.fromString(theme.resolve(token))
 
-        return COLORS[status]
+    @override
+    def get_bg_color(self) -> Optional[QColor]:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case TranslationStatus.NoneStatus:
+                return
+            case TranslationStatus.NoStrings:
+                return
+            case TranslationStatus.IsTranslated:
+                token = theme.colors.success_bg
+            case TranslationStatus.TranslationInstalled:
+                token = theme.colors.success_bg
+            case TranslationStatus.TranslationIncomplete:
+                token = theme.colors.caution_bg
+            case TranslationStatus.TranslationAvailableInDatabase:
+                token = theme.colors.information_bg
+            case TranslationStatus.TranslationAvailableOnline:
+                token = theme.colors.information_bg
+            case TranslationStatus.RequiresTranslation:
+                token = theme.colors.warning_bg
+            case TranslationStatus.NoTranslationAvailable:
+                token = theme.colors.error_bg
+
+        return QColor.fromString(theme.resolve(token))
+
+    @override
+    def get_highlighted_bg_color(self) -> Optional[QColor]:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case TranslationStatus.NoneStatus:
+                return
+            case TranslationStatus.NoStrings:
+                return
+            case TranslationStatus.IsTranslated:
+                token = theme.colors.success_bg_hover
+            case TranslationStatus.TranslationInstalled:
+                token = theme.colors.success_bg_hover
+            case TranslationStatus.TranslationIncomplete:
+                token = theme.colors.caution_bg_hover
+            case TranslationStatus.TranslationAvailableInDatabase:
+                token = theme.colors.information_bg_hover
+            case TranslationStatus.TranslationAvailableOnline:
+                token = theme.colors.information_bg_hover
+            case TranslationStatus.RequiresTranslation:
+                token = theme.colors.warning_bg_hover
+            case TranslationStatus.NoTranslationAvailable:
+                token = theme.colors.error_bg_hover
+
+        return QColor.fromString(theme.resolve(token))
+
+    @override
+    def get_fg_color(self) -> QColor:
+        theme: Theme = ThemeManager.get().theme
+
+        token: ThemeAlias
+        match self:
+            case TranslationStatus.NoneStatus:
+                token = theme.texts.text.color
+            case TranslationStatus.NoStrings:
+                token = theme.texts.text.color
+            case TranslationStatus.IsTranslated:
+                token = theme.colors.success_fg
+            case TranslationStatus.TranslationInstalled:
+                token = theme.colors.success_fg
+            case TranslationStatus.TranslationIncomplete:
+                token = theme.colors.caution_fg
+            case TranslationStatus.TranslationAvailableInDatabase:
+                token = theme.colors.information_fg
+            case TranslationStatus.TranslationAvailableOnline:
+                token = theme.colors.information_fg
+            case TranslationStatus.RequiresTranslation:
+                token = theme.colors.warning_fg
+            case TranslationStatus.NoTranslationAvailable:
+                token = theme.colors.error_fg
+
+        return QColor.fromString(theme.resolve(token))
 
     @override
     def get_localized_name(self) -> str:
-        LOC_NAMES: dict[TranslationStatus, str] = {
-            TranslationStatus.NoneStatus: QApplication.translate(
-                "mod_file", "No Status (No Color)"
-            ),
-            TranslationStatus.NoStrings: QApplication.translate(
-                "mod_file", "File has no Strings (No Color)"
-            ),
-            TranslationStatus.IsTranslated: QApplication.translate(
-                "mod_file", "File is already in target language"
-            ),
-            TranslationStatus.TranslationInstalled: QApplication.translate(
-                "mod_file", "Translation for file is already installed in Database"
-            ),
-            TranslationStatus.TranslationIncomplete: QApplication.translate(
-                "mod_file", "Translation for file is installed but incomplete"
-            ),
-            TranslationStatus.TranslationAvailableInDatabase: QApplication.translate(
-                "mod_file", "Translation for file is available in Database"
-            ),
-            TranslationStatus.TranslationAvailableOnline: QApplication.translate(
-                "mod_file", "Translation for file is available online"
-            ),
-            TranslationStatus.RequiresTranslation: QApplication.translate(
-                "mod_file", "File has Strings and requires translation"
-            ),
-            TranslationStatus.NoTranslationAvailable: QApplication.translate(
-                "mod_file",
-                "No Translation for file available online or in Database",
-            ),
-        }
-
-        return LOC_NAMES[self]
+        match self:
+            case TranslationStatus.NoneStatus:
+                return QApplication.translate("mod_file", "Unknown")
+            case TranslationStatus.NoStrings:
+                return QApplication.translate("mod_file", "No Strings")
+            case TranslationStatus.IsTranslated:
+                return QApplication.translate("mod_file", "Translated")
+            case TranslationStatus.TranslationInstalled:
+                return QApplication.translate("mod_file", "Translation Installed")
+            case TranslationStatus.TranslationIncomplete:
+                return QApplication.translate("mod_file", "Translation Incomplete")
+            case TranslationStatus.TranslationAvailableInDatabase:
+                return QApplication.translate("mod_file", "Available in Database")
+            case TranslationStatus.TranslationAvailableOnline:
+                return QApplication.translate("mod_file", "Available Online")
+            case TranslationStatus.RequiresTranslation:
+                return QApplication.translate("mod_file", "Requires Translation")
+            case TranslationStatus.NoTranslationAvailable:
+                return QApplication.translate("mod_file", "No Translation Available")
 
     @override
     def get_localized_description(self) -> str:
-        return self.get_localized_name()
-
-    def get_localized_filter_name(self) -> str:
-        """
-        Returns:
-            str: A localized name for filtering based on the translation status.
-        """
-
-        LOC_NAMES: dict[TranslationStatus, str] = {
-            TranslationStatus.NoneStatus: QApplication.translate(
-                "mod_file", "No stateless files"
-            ),
-            TranslationStatus.NoStrings: QApplication.translate(
-                "mod_file", "Show files without strings"
-            ),
-            TranslationStatus.IsTranslated: QApplication.translate(
-                "mod_file", "Show files that are already in target language"
-            ),
-            TranslationStatus.TranslationInstalled: QApplication.translate(
-                "mod_file", "Show files with an installed translation"
-            ),
-            TranslationStatus.TranslationIncomplete: QApplication.translate(
-                "mod_file",
-                "Show files with an installed but incomplete translation",
-            ),
-            TranslationStatus.TranslationAvailableInDatabase: QApplication.translate(
-                "mod_file", "Show files that can be translated with the database"
-            ),
-            TranslationStatus.TranslationAvailableOnline: QApplication.translate(
-                "mod_file", "Show files that have a translation available online"
-            ),
-            TranslationStatus.RequiresTranslation: QApplication.translate(
-                "mod_file", "Show files that require a translation"
-            ),
-            TranslationStatus.NoTranslationAvailable: QApplication.translate(
-                "mod_file", "Show files without an available translation"
-            ),
-        }
-
-        return LOC_NAMES[self]
-
-    def get_localized_short_name(self) -> str:
-        """
-        Returns:
-            str: A localized short name for the translation status.
-        """
-
-        LOC_SHORT_NAMES: dict[TranslationStatus, str] = {
-            TranslationStatus.NoneStatus: QApplication.translate(
-                "mod_file", "No Status"
-            ),
-            TranslationStatus.NoStrings: QApplication.translate(
-                "mod_file", "No Strings"
-            ),
-            TranslationStatus.IsTranslated: QApplication.translate(
-                "mod_file", "Translated"
-            ),
-            TranslationStatus.TranslationInstalled: QApplication.translate(
-                "mod_file", "Translation Installed"
-            ),
-            TranslationStatus.TranslationIncomplete: QApplication.translate(
-                "mod_file", "Translation Incomplete"
-            ),
-            TranslationStatus.TranslationAvailableInDatabase: QApplication.translate(
-                "mod_file", "Available in Database"
-            ),
-            TranslationStatus.TranslationAvailableOnline: QApplication.translate(
-                "mod_file", "Available Online"
-            ),
-            TranslationStatus.RequiresTranslation: QApplication.translate(
-                "mod_file", "Requires Translation"
-            ),
-            TranslationStatus.NoTranslationAvailable: QApplication.translate(
-                "mod_file", "No Translation Available"
-            ),
-        }
-
-        return LOC_SHORT_NAMES[self]
+        match self:
+            case TranslationStatus.NoneStatus:
+                return QApplication.translate(
+                    "mod_file", "The status of the file is unknown."
+                )
+            case TranslationStatus.NoStrings:
+                return QApplication.translate(
+                    "mod_file", "The file has no translatable strings."
+                )
+            case TranslationStatus.IsTranslated:
+                return QApplication.translate(
+                    "mod_file", "The file is already in the target language."
+                )
+            case TranslationStatus.TranslationInstalled:
+                return QApplication.translate(
+                    "mod_file",
+                    "A translation for the file is already installed in the database.",
+                )
+            case TranslationStatus.TranslationIncomplete:
+                return QApplication.translate(
+                    "mod_file", "A translation for the file is installed but incomplete."
+                )
+            case TranslationStatus.TranslationAvailableInDatabase:
+                return QApplication.translate(
+                    "mod_file",
+                    "A translation for the file is available in the database.",
+                )
+            case TranslationStatus.TranslationAvailableOnline:
+                return QApplication.translate(
+                    "mod_file", "A translation for the file is available online."
+                )
+            case TranslationStatus.RequiresTranslation:
+                return QApplication.translate(
+                    "mod_file", "The file has strings and requires a translation."
+                )
+            case TranslationStatus.NoTranslationAvailable:
+                return QApplication.translate(
+                    "mod_file",
+                    "There is no translation available for the file online or in the "
+                    "database.",
+                )

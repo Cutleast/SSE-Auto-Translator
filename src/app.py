@@ -18,7 +18,8 @@ from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.core.utilities.singleton import Singleton
 from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
-from cutleast_core_lib.ui.utilities.window_manager import WindowManager
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QTranslator
 from PySide6.QtWidgets import QApplication, QDialog, QMessageBox
@@ -35,7 +36,6 @@ from resources_rc import qt_resource_data as qt_resource_data  # noqa: PLC0414
 from ui.main_window import MainWindow
 from ui.startup_dialog.startup_dialog import StartupDialog
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.api_setup_dialog import ApiSetupDialog
 
 
@@ -88,8 +88,7 @@ class App(BaseApp, Singleton):
         Cache(self.cache_path, App.APP_VERSION)
         self.__user_data_service = UserDataService(self.res_path, self.data_path)
 
-        GameService(read_resource(":/skyrimse.json"))
-        WindowManager()
+        GameService(read_resource(":/sse-at/skyrimse.json"))
 
         super().__init__(args)
 
@@ -114,12 +113,16 @@ class App(BaseApp, Singleton):
         return app_config
 
     @override
-    def _get_theme_manager(self) -> Optional[ThemeManager]:
-        return ThemeManager(self.app_config.accent_color, self.app_config.ui_mode)
-
-    @override
     def _init_main_window(self) -> MainWindow:
         self.__load_translation()
+
+        ThemeManager(
+            app=self,
+            initial_primary_color=self.app_config.accent_color,
+            initial_ui_mode=self.app_config.ui_mode,
+            qss_files=ThemeManager.CORE_RES_QSS_FILES + [":/sse-at/style.qss"],
+            base_theme_files=ThemeManager.CORE_BASE_THEME_FILES,
+        )
 
         return MainWindow()
 
@@ -140,7 +143,7 @@ class App(BaseApp, Singleton):
             language = app_config.language.value
 
         if language != "en_US":
-            res_file: str = f":/loc/{language}.qm"
+            res_file: str = f":/sse-at/loc/{language}.qm"
             if not translator.load(res_file):
                 self.log.error(
                     f"Failed to load localisation for {language} from '{res_file}'."
@@ -193,15 +196,17 @@ class App(BaseApp, Singleton):
 
         main_window: MainWindow = cast(MainWindow, self.main_window)
         main_window.initialize(
-            cast(AppConfig, self.app_config),
-            self.__user_data,
-            self.__component_provider.get_translator_service(),
-            self.__component_provider.get_scanner(),
-            self.__component_provider.get_provider(),
-            self.__component_provider.get_download_manager(),
-            self.__component_provider.get_state_service(),
+            app_config=cast(AppConfig, self.app_config),
+            user_data=self.__user_data,
+            translator_service=self.__component_provider.get_translator_service(),
+            scanner=self.__component_provider.get_scanner(),
+            provider=self.__component_provider.get_provider(),
+            download_manager=self.__component_provider.get_download_manager(),
+            state_service=self.__component_provider.get_state_service(),
         )
         main_window.showMaximized()
+
+        WidgetStateManager.get().register_geometry("main_window", main_window)
 
         self.detect_path_limit()
 

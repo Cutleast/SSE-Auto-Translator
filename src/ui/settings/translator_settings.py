@@ -30,10 +30,10 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
     @override
     def _init_ui(self) -> None:
         scroll_widget = QWidget()
-        scroll_widget.setObjectName("transparent")
         self.setWidget(scroll_widget)
 
         self.__flayout = QFormLayout()
+        self.__flayout.setContentsMargins(4, 0, 4, 0)
         scroll_widget.setLayout(self.__flayout)
 
         self.__init_api_settings()

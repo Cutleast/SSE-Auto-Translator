@@ -17,7 +17,35 @@ from core.database.translation import Translation
 from core.string.string_status import StringStatus
 
 
-def get_translation_item_color(
+def get_translation_item_bg_color(
+    item: Translation | ImmutableValue[Path],
+) -> Optional[QColor]:
+    """Returns the background color for a translation item based on its status."""
+
+    if not isinstance(item, Translation):
+        return None
+
+    if any(status > StringStatus.TranslationComplete for status in item.status.values()):
+        return StringStatus.TranslationIncomplete.get_bg_color()
+
+    return StringStatus.TranslationComplete.get_bg_color()
+
+
+def get_translation_item_hover_bg_color(
+    item: Translation | ImmutableValue[Path],
+) -> Optional[QColor]:
+    """Returns the hover background color for a translation item based on its status."""
+
+    if not isinstance(item, Translation):
+        return None
+
+    if any(status > StringStatus.TranslationComplete for status in item.status.values()):
+        return StringStatus.TranslationIncomplete.get_highlighted_bg_color()
+
+    return StringStatus.TranslationComplete.get_highlighted_bg_color()
+
+
+def get_translation_item_fg_color(
     item: Translation | ImmutableValue[Path],
 ) -> Optional[QColor]:
     """Returns the color for a translation item based on its status."""
@@ -26,9 +54,9 @@ def get_translation_item_color(
         return None
 
     if any(status > StringStatus.TranslationComplete for status in item.status.values()):
-        return StringStatus.get_color(StringStatus.TranslationIncomplete)
+        return StringStatus.TranslationIncomplete.get_fg_color()
 
-    return StringStatus.get_color(StringStatus.TranslationComplete)
+    return StringStatus.TranslationComplete.get_fg_color()
 
 
 class TranslationsColumns(ColumnEnum):
@@ -42,7 +70,7 @@ class TranslationsColumns(ColumnEnum):
         tooltip_getter=lambda item: (
             str(item.path) if isinstance(item, Translation) else ""
         ),
-        foreground_color_getter=get_translation_item_color,
+        foreground_color_getter=get_translation_item_fg_color,
         stretch=True,
     )
     """Column for the name of the item."""
@@ -52,7 +80,7 @@ class TranslationsColumns(ColumnEnum):
         display_text_getter=lambda item: (
             (item.version or "") if isinstance(item, Translation) else ""
         ),
-        foreground_color_getter=get_translation_item_color,
+        foreground_color_getter=get_translation_item_fg_color,
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the version of the translation."""
@@ -65,7 +93,7 @@ class TranslationsColumns(ColumnEnum):
         icon_getter=lambda item: (
             item.source.get_icon() if isinstance(item, Translation) else None
         ),
-        foreground_color_getter=get_translation_item_color,
+        foreground_color_getter=get_translation_item_fg_color,
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the source of the translation."""
@@ -78,7 +106,7 @@ class TranslationsColumns(ColumnEnum):
         sort_key_getter=lambda item: (
             item.timestamp if isinstance(item, Translation) else 0
         ),
-        foreground_color_getter=get_translation_item_color,
+        foreground_color_getter=get_translation_item_fg_color,
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the date of the translation."""
@@ -92,7 +120,7 @@ class TranslationsColumns(ColumnEnum):
             f"{item.size} Bytes" if isinstance(item, Translation) else ""
         ),
         sort_key_getter=lambda item: item.size if isinstance(item, Translation) else 0,
-        foreground_color_getter=get_translation_item_color,
+        foreground_color_getter=get_translation_item_fg_color,
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the size of the translation."""
@@ -116,7 +144,9 @@ class TranslationsColumns(ColumnEnum):
             if isinstance(item, Translation)
             else 0
         ),
-        foreground_color_getter=get_translation_item_color,
+        background_color_getter=get_translation_item_bg_color,
+        hover_background_color_getter=get_translation_item_hover_bg_color,
+        foreground_color_getter=get_translation_item_fg_color,
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the status of the translation."""

@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
+from cutleast_core_lib.ui.widgets.menu_checkbox import MenuCheckBox
 from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QKeySequence
@@ -18,7 +19,7 @@ class StringListMenu(TreeMenu):
     Context menu for `StringListWidget`.
     """
 
-    copy_selected_requested = Signal(list[int])
+    copy_selected_requested = Signal(list)
     """
     Signal emitted when the user requests to copy the selected strings.
 
@@ -51,13 +52,17 @@ class StringListMenu(TreeMenu):
         self.__init_copy_menu()
 
     def __init_copy_menu(self) -> None:
-        self.__copy_menu = Menu(
-            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy")
+        self.__copy_menu = Menu(title=self.tr("Copy"))
+        IconProvider.bind_qta_icon(
+            self.__copy_menu.menuAction(),
+            self.__copy_menu.menuAction().setIcon,
+            "mdi6.content-copy",
         )
         self.addMenu(self.__copy_menu)
 
-        copy_all_action = self.__copy_menu.addAction(
-            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy")
+        copy_all_action = self.__copy_menu.addAction(self.tr("Copy"))
+        IconProvider.bind_qta_icon(
+            copy_all_action, copy_all_action.setIcon, "mdi6.content-copy"
         )
         copy_all_action.setShortcut(QKeySequence("Ctrl+C"))
         copy_all_action.triggered.connect(self.__copy)
@@ -66,7 +71,7 @@ class StringListMenu(TreeMenu):
 
         self.__copy_checkboxes = {}
         for c, column in enumerate(self.__columns):
-            checkbox = QCheckBox(self.tr("Copy {0}").format(column), self.__copy_menu)
+            checkbox = MenuCheckBox(self.tr("Copy {0}").format(column), self.__copy_menu)
             checkbox.setChecked(True)
             widget_action = QWidgetAction(self.__copy_menu)
             widget_action.setDefaultWidget(checkbox)
