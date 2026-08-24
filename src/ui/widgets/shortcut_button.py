@@ -2,94 +2,120 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any, override
+from typing import Optional, override
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import QSize, Qt
 from PySide6.QtGui import QIcon, QKeySequence, QPixmap
 from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QWidget
 
 
 class ShortcutButton(QPushButton):
     """
-    Adapted QPushButton that automatically displays set shortcuts.
+    Push button that displays its shortcut next to its text.
     """
 
+    __icon: QIcon
     __icon_label: QLabel
-    __label: QLabel
+    __text_label: QLabel
     __shortcut_label: QLabel
+    __layout: QHBoxLayout
 
-    @override
-    def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        text: str = "",
+        icon: Optional[QIcon] = None,
+        parent: Optional[QWidget] = None,
+    ) -> None:
+        """
+        Args:
+            text (str, optional): Text displayed by the button. Defaults to "".
+            icon (Optional[QIcon], optional):
+                Optional icon displayed by the button. Defaults to None.
+            parent (Optional[QWidget], optional): Parent widget. Defaults to None.
+        """
 
-        self.__init_ui()
+        super().__init__(parent)
 
-    def __init_ui(self) -> None:
-        hlayout = QHBoxLayout()
-        hlayout.setContentsMargins(7, 0, 7, 0)
-        self.setLayout(hlayout)
+        self.__icon = icon or QIcon()
+
+        self.__layout = QHBoxLayout(self)
+        self.__layout.setContentsMargins(0, 0, 0, 0)
 
         self.__icon_label = QLabel()
-        if not self.icon().isNull():
-            self.__icon_label.setPixmap(self.icon().pixmap(self.iconSize()))
-        else:
-            self.__icon_label.hide()
-        hlayout.addWidget(self.__icon_label)
+        self.__icon_label.setObjectName("icon_label")
+        self.__layout.addWidget(self.__icon_label)
 
-        self.__label = QLabel(self.text())
-        hlayout.addWidget(self.__label)
+        self.__text_label = QLabel(text)
+        self.__text_label.setObjectName("text_label")
+        self.__layout.addWidget(self.__text_label)
 
         self.__shortcut_label = QLabel()
-        hlayout.addWidget(self.__shortcut_label)
+        self.__shortcut_label.setObjectName("shortcut_label")
+        self.__shortcut_label.hide()
+        self.__layout.addWidget(self.__shortcut_label)
 
-        # Clear original icon and text to avoid duplicates
-        super().setIcon(QIcon())
-        super().setText("")
-
-        # Set minimum width
-        self.__update_size_hint()
-
-    def __update_size_hint(self) -> None:
-        padding: int = 20
-        label_width: int = self.__label.sizeHint().width()
-        shortcut_width: int = self.__shortcut_label.sizeHint().width()
-        icon_width: int = (
-            (self.__icon_label.sizeHint().width() + 10)
-            if not self.__icon_label.isHidden()
-            else 0
-        )
-        combined_width: int = icon_width + label_width + shortcut_width + padding
-
-        self.setMinimumWidth(combined_width)
+        self.__update_icon()
 
     @override
-    def setShortcut(self, shortcut: QKeySequence) -> None:  # type: ignore[override]
-        super().setShortcut(shortcut)
+    def sizeHint(self) -> QSize:
+        layout_size: QSize = self.__layout.sizeHint()
+        button_size: QSize = super().sizeHint()
 
-        key: str = self.shortcut().toString()
-        if key:
-            self.__shortcut_label.setText(f"({key})")
-            self.__shortcut_label.show()
-        else:
-            self.__shortcut_label.hide()
+        return QSize(
+            max(layout_size.width(), button_size.width()),
+            max(layout_size.height(), button_size.height()),
+        )
 
-        self.__update_size_hint()
+    @override
+    def minimumSizeHint(self) -> QSize:
+        return self.sizeHint()
 
     @override
     def setText(self, text: str) -> None:
-        self.__label.setText(text)
+        self.__text_label.setText(text)
 
-        self.__update_size_hint()
+        self.updateGeometry()
+
+    @override
+    def text(self) -> str:
+        return self.__text_label.text()
 
     @override
     def setIcon(self, icon: QIcon | QPixmap) -> None:
-        if isinstance(icon, QPixmap):
-            self.__icon_label.setPixmap(icon)
-        else:
-            self.__icon_label.setPixmap(icon.pixmap(self.iconSize()))
-        self.__icon_label.show()
+        self.__icon = QIcon(icon) if isinstance(icon, QPixmap) else icon
+        self.__update_icon()
 
-        self.__update_size_hint()
+    @override
+    def icon(self) -> QIcon:
+        return self.__icon
+
+    @override
+    def setIconSize(self, size: QSize) -> None:
+        super().setIconSize(size)
+
+        self.__update_icon()
+
+    @override
+    def setShortcut(self, shortcut: QKeySequence) -> None:  # pyright: ignore[reportIncompatibleMethodOverride]
+        super().setShortcut(shortcut)
+
+        text: str = shortcut.toString(QKeySequence.SequenceFormat.NativeText)
+
+        self.__shortcut_label.setText(text)
+        self.__shortcut_label.setVisible(bool(text))
+
+        self.updateGeometry()
+
+    def __update_icon(self) -> None:
+        if self.__icon.isNull():
+            self.__icon_label.clear()
+            self.__icon_label.hide()
+        else:
+            self.__icon_label.setPixmap(self.__icon.pixmap(self.iconSize()))
+            self.__icon_label.show()
+
+        self.setProperty("has_icon", not self.__icon.isNull())
+        self.updateGeometry()
 
 
 if __name__ == "__main__":
@@ -102,7 +128,8 @@ if __name__ == "__main__":
     widget.setLayout(hlayout)
 
     left_button = ShortcutButton(
-        qta.icon("fa5s.chevron-left", color="#000000"), "Click Me"
+        text="Click Me",
+        icon=qta.icon("mdi6.chevron-left", color="#000000"),
     )
     left_button.setShortcut(QKeySequence("Alt+N"))
     left_button.clicked.connect(
@@ -114,10 +141,10 @@ if __name__ == "__main__":
     hlayout.addWidget(left_button)
 
     hlayout.addStretch()
-    # hlayout.addSpacerItem(QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum))
 
     right_button = ShortcutButton(
-        qta.icon("fa5s.chevron-right", color="#000000"), "Click Me"
+        text="Click Me",
+        icon=qta.icon("mdi6.chevron-right", color="#000000"),
     )
     right_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
     right_button.setShortcut(QKeySequence("Alt+M"))

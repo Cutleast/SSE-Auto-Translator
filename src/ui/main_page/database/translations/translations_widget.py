@@ -10,6 +10,7 @@ from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
@@ -37,8 +38,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
-from ui.utilities.theme_manager import ThemeManager
-from ui.widgets.string_list.string_list_dialog import StringListWindow
+from ui.string_list.string_list_window import StringListWindow
 
 from .columns import TranslationsColumns
 from .export_dialog import ExportDialog
@@ -140,6 +140,8 @@ class TranslationsWidget(QTreeWidget):
         )
         self.__database.changed_signal.connect(self.__on_translation_changed)
 
+        ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
+
         self.__load_translations()
 
         self.setSortingEnabled(True)
@@ -207,6 +209,9 @@ class TranslationsWidget(QTreeWidget):
             self.__name_filter[1] if self.__name_filter else None
         )
 
+        # temporarily disable sorting to avoid performance issues
+        self.setSortingEnabled(False)
+
         for translation, translation_item in self.__translation_items.items():
             file_items: dict[Path, TreeItem[ImmutableValue[Path]]] = (
                 self.__file_items.get(translation, {})
@@ -224,6 +229,8 @@ class TranslationsWidget(QTreeWidget):
                     translation.name, name_filter, case_sensitive or False
                 )
             )
+
+        self.setSortingEnabled(True)  # re-enable sorting after updating
 
     def __on_translations_added(self, new_translations: list[Translation]) -> None:
         for translation in new_translations:
@@ -300,6 +307,10 @@ class TranslationsWidget(QTreeWidget):
             self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
+
+    def __on_theme_changed(self) -> None:
+        for item in self.__translation_items.values():
+            item.update()
 
     @override
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
@@ -529,9 +540,7 @@ class TranslationsWidget(QTreeWidget):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return

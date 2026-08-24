@@ -7,13 +7,12 @@ from typing import override
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.blocking_thread import BlockingThread
 from cutleast_core_lib.core.utilities.scale import scale_value
-from PySide6.QtCore import Qt, QTimerEvent
-from PySide6.QtGui import QShowEvent
+from PySide6.QtCore import Qt, QTimer
+from PySide6.QtGui import QAction, QShowEvent
 from PySide6.QtWidgets import (
-    QHBoxLayout,
     QHeaderView,
     QLabel,
-    QLCDNumber,
+    QSizePolicy,
     QTreeWidget,
     QVBoxLayout,
     QWidget,
@@ -34,12 +33,14 @@ class DownloadsTab(QWidget):
     Tab for Downloads.
     """
 
+    __nxm_update_timer: QTimer
+
     __download_manager: DownloadManager
     __download_items: dict[FileDownload, DownloadItem]
 
     __vlayout: QVBoxLayout
     __toolbar: DownloadsToolbar
-    __downloads_num_label: QLCDNumber
+    __downloads_num_label: QLabel
     __downloads_widget: QTreeWidget
 
     def __init__(
@@ -71,7 +72,11 @@ class DownloadsTab(QWidget):
         )
         self.__download_manager.download_failed.connect(self.__on_download_failed)
 
-        self.startTimer(1000, Qt.TimerType.PreciseTimer)
+        self.__nxm_update_timer = QTimer(
+            self, interval=1000, timerType=Qt.TimerType.PreciseTimer
+        )
+        self.__nxm_update_timer.timeout.connect(self.__check_nxm_link)
+        self.__nxm_update_timer.start()
 
         self.__toolbar.set_handle_nxm_action_enabled(
             provider.is_source_available(Source.NexusMods)
@@ -83,30 +88,43 @@ class DownloadsTab(QWidget):
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__vlayout)
 
         self.__init_header()
         self.__init_downloads_widget()
 
     def __update(self) -> None:
-        self.__downloads_num_label.display(len(self.__download_items))
+        self.__downloads_num_label.setText(str(len(self.__download_items)))
 
     def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__toolbar = DownloadsToolbar()
-        hlayout.addWidget(self.__toolbar)
+        self.__vlayout.addWidget(self.__toolbar)
 
-        hlayout.addStretch()
+        first_action: QAction = self.__toolbar.actions()[0]
 
-        downloads_num_label = QLabel(self.tr("Downloads:"))
-        downloads_num_label.setObjectName("h3")
-        hlayout.addWidget(downloads_num_label)
+        title_label = QLabel(self.tr("Downloads"))
+        title_label.setProperty("title", True)
+        self.__toolbar.insertWidget(first_action, title_label)
 
-        self.__downloads_num_label = QLCDNumber()
-        self.__downloads_num_label.setDigitCount(4)
-        hlayout.addWidget(self.__downloads_num_label)
+        self.__toolbar.insertSeparator(first_action)
+
+        self.__toolbar.addSeparator()
+
+        downloads_num_label = QLabel(self.tr("Running Downloads:"))
+        downloads_num_label.setProperty("subtitle", True)
+        downloads_num_label.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            downloads_num_label.sizePolicy().verticalPolicy(),
+        )
+        downloads_num_label.setAlignment(
+            Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter
+        )
+        self.__toolbar.addWidget(downloads_num_label)
+
+        self.__downloads_num_label = QLabel("0")
+        self.__downloads_num_label.setProperty("subtitle", True)
+        self.__toolbar.addWidget(self.__downloads_num_label)
 
     def __init_downloads_widget(self) -> None:
         self.__downloads_widget = QTreeWidget()
@@ -195,12 +213,6 @@ class DownloadsTab(QWidget):
         if NXMHandler.has_instance():
             self.__toolbar.set_handle_nxm_action_checked(NXMHandler.get().is_bound())
 
-    @override
-    def timerEvent(self, event: QTimerEvent) -> None:
-        super().timerEvent(event)
-
-        self.__check_nxm_link()
-
     def __toggle_pause(self) -> None:
         self.setDisabled(True)
 
@@ -210,6 +222,6 @@ class DownloadsTab(QWidget):
         else:
             self.__download_manager.resume()
 
-        self.__toolbar.update_toggle_pause_action(not self.__download_manager.running)
+        self.__toolbar.set_paused(not self.__download_manager.running)
 
         self.setDisabled(False)

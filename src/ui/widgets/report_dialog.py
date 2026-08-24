@@ -10,13 +10,13 @@ from cutleast_core_lib.ui.utilities.tree_widget import (
     get_visible_top_level_item_count,
     iter_toplevel_items,
 )
+from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
     QHBoxLayout,
     QLabel,
-    QLCDNumber,
     QPlainTextEdit,
     QPushButton,
     QSplitter,
@@ -42,7 +42,7 @@ class ReportDialog(QDialog):
     __vlayout: QVBoxLayout
 
     __search_bar: SearchBar
-    __item_num_label: QLCDNumber
+    __item_num_label: QLabel
 
     __splitter: QSplitter
     __item_list: QTreeWidget
@@ -64,7 +64,9 @@ class ReportDialog(QDialog):
         self.__init_items()
 
         self.__search_bar.searchChanged.connect(self.__on_search_changed)
-        self.__item_list.itemActivated.connect(self.__on_item_activated)
+        self.__item_list.currentItemChanged.connect(self.__on_item_activated)
+
+        self.resize(800, 600)
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
@@ -81,23 +83,28 @@ class ReportDialog(QDialog):
         self.__search_bar = SearchBar()
         hlayout.addWidget(self.__search_bar)
 
-        hlayout.addWidget(QLabel(self.tr("Failed items:")))
+        num_label = QLabel(self.tr("Failed items:"))
+        num_label.setProperty("subtitle", True)
+        hlayout.addWidget(num_label)
 
-        self.__item_num_label = QLCDNumber()
-        self.__item_num_label.setDigitCount(max(4, len(str(len(self.__report)))))
+        self.__item_num_label = QLabel()
+        self.__item_num_label.setProperty("subtitle", True)
         hlayout.addWidget(self.__item_num_label)
 
     def __init_splitter(self) -> None:
         self.__splitter = QSplitter()
         self.__splitter.setOrientation(Qt.Orientation.Horizontal)
-        self.__vlayout.addWidget(self.__splitter)
+        self.__vlayout.addWidget(self.__splitter, stretch=1)
 
         self.__item_list = QTreeWidget()
         self.__item_list.setIndentation(0)  # no indentation necessary
+        self.__item_list.setHeaderHidden(True)
+        self.__item_list.setProperty("no_header", True)
+        self.__item_list.setSelectionMode(QTreeWidget.SelectionMode.SingleSelection)
         self.__splitter.addWidget(self.__item_list)
 
-        self.__details_box = QPlainTextEdit()
-        self.__details_box.setObjectName("monospace")
+        self.__details_box = LineNumberTextEdit()
+        self.__details_box.setProperty("monospace", True)
         self.__splitter.addWidget(self.__details_box)
 
     def __init_footer(self) -> None:
@@ -111,10 +118,10 @@ class ReportDialog(QDialog):
             item = QTreeWidgetItem([item_name])
             self.__item_list.addTopLevelItem(item)
 
-        self.__item_num_label.display(len(self.__report))
+        self.__item_num_label.setText(str(len(self.__report)))
         self.__search_bar.setLiveMode(len(self.__report) < STRING_AUTO_SEARCH_THRESHOLD)
 
-    def __on_item_activated(self, item: QTreeWidgetItem) -> None:
+    def __on_item_activated(self, item: QTreeWidgetItem, prev: QTreeWidgetItem) -> None:
         self.__details_box.setPlainText(format_exception(self.__report[item.text(0)]))
 
     def __on_search_changed(self, text: str, case_sensitive: bool) -> None:
@@ -123,4 +130,6 @@ class ReportDialog(QDialog):
                 not matches_filter(item.text(0), text, case_sensitive or False)
             )
 
-        self.__item_num_label.display(get_visible_top_level_item_count(self.__item_list))
+        self.__item_num_label.setText(
+            str(get_visible_top_level_item_count(self.__item_list))
+        )

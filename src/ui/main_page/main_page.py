@@ -6,23 +6,23 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, cast
+from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
+from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
-from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
-from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QColor
+from PySide6.QtGui import QAction, QColor, QShowEvent
 from PySide6.QtWidgets import (
     QAbstractButton,
     QApplication,
     QDialog,
     QFileDialog,
-    QHBoxLayout,
     QLabel,
     QMessageBox,
     QSplitter,
@@ -48,10 +48,9 @@ from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
 from ui.downloader.download_list_window import DownloadListWindow
-from ui.utilities.icon_provider import IconProvider
+from ui.string_list.string_list_window import StringListWindow
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.stacked_bar import StackedBar
-from ui.widgets.string_list.string_list_dialog import StringListWindow
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .database.database_widget import DatabaseWidget
@@ -79,7 +78,6 @@ class MainPageWidget(QWidget):
     log: logging.Logger = logging.getLogger("Main")
 
     __mod_instance: ModInstance
-    __ignore_list: list[str]
 
     __app_config: AppConfig
     __user_data: UserData
@@ -90,11 +88,12 @@ class MainPageWidget(QWidget):
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
-    __modfiles_num_label: LCDNumber
+    __modfiles_num_label: QLabel
     __tool_bar: MainToolBar
     __search_bar: SearchBar
     __bar_chart: StackedBar
 
+    __splitter: QSplitter
     __modinstance_widget: ModInstanceWidget
     __database_widget: DatabaseWidget
 
@@ -134,7 +133,6 @@ class MainPageWidget(QWidget):
         self.__tool_bar.state_filter_changed.connect(self.__on_state_filter_changed)
         self.__tool_bar.type_filter_changed.connect(self.__on_type_filter_changed)
         self.__tool_bar.ignore_list_requested.connect(self.__open_ignore_list)
-        self.__tool_bar.help_requested.connect(self.__modinstance_widget.show_help)
         self.__tool_bar.modlist_scan_requested.connect(self.__run_basic_scan)
         self.__tool_bar.online_scan_requested.connect(self.__run_online_scan)
         self.__tool_bar.download_requested.connect(self.__run_downloads)
@@ -165,6 +163,8 @@ class MainPageWidget(QWidget):
         )
 
         self.__state_service.update_signal.connect(self.__update)
+        ThemeManager.get().theme_changed.connect(lambda _: self.__update_header())
+
         self.__update()
 
     def __init_ui(self) -> None:
@@ -175,58 +175,55 @@ class MainPageWidget(QWidget):
         self.__init_splitter()
 
     def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
-        self.__title_label = QLabel(self.tr("Modlist"))
-        self.__title_label.setObjectName("h3")
-        hlayout.addWidget(self.__title_label)
-
-        hlayout.addStretch()
-
-        num_label = QLabel(self.tr("Translatable files:"))
-        num_label.setObjectName("h3")
-        hlayout.addWidget(num_label)
-
-        self.__modfiles_num_label = LCDNumber()
-        self.__modfiles_num_label.setDigitCount(4)
-        hlayout.addWidget(self.__modfiles_num_label)
-
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__tool_bar = MainToolBar()
         self.__tool_bar.set_provider_features_enabled(self.__provider.is_available)
-        hlayout.addWidget(self.__tool_bar)
+        self.__vlayout.addWidget(self.__tool_bar)
+
+        first_action: QAction = self.__tool_bar.actions()[0]
+
+        title_label = QLabel(self.tr("Modlist"))
+        title_label.setProperty("title", True)
+        self.__tool_bar.insertWidget(first_action, title_label)
+
+        self.__title_label = ElidedLabel(self.tr("Modlist"))
+        self.__title_label.setProperty("subtitle", True)
+        self.__title_label.setMaximumWidth(300)
+        self.__tool_bar.insertWidget(first_action, self.__title_label)
+
+        self.__tool_bar.insertSeparator(first_action)
 
         self.__search_bar = SearchBar()
-        hlayout.addWidget(self.__search_bar)
+        self.__tool_bar.addWidget(self.__search_bar)
 
-        ko_fi_button = LinkButton(
-            url=MainPageWidget.KOFI_URL,
-            display_text=self.tr("Support me on Ko-fi"),
-            icon=IconProvider.get_icon("ko-fi"),
-        )
-        hlayout.addWidget(ko_fi_button)
+        self.__tool_bar.addSeparator()
+
+        num_label = QLabel(self.tr("Translatable files:"))
+        num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(num_label)
+
+        self.__modfiles_num_label = QLabel()
+        self.__modfiles_num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(self.__modfiles_num_label)
 
         self.__bar_chart = StackedBar(
             values=[0 for _ in TranslationStatus],
-            colors=[
-                TranslationStatus.get_color(s) or QColor.fromString("#fff")
-                for s in TranslationStatus
-            ],
+            colors=[TranslationStatus.get_base_color(s) for s in TranslationStatus],
         )
         self.__bar_chart.setFixedHeight(3)
         self.__vlayout.addWidget(self.__bar_chart)
 
     def __init_splitter(self) -> None:
-        splitter = QSplitter()
-        self.__vlayout.addWidget(splitter, stretch=1)
+        self.__splitter = QSplitter()
+        self.__vlayout.addWidget(self.__splitter, stretch=1)
 
         self.__modinstance_widget = ModInstanceWidget(
             self.__app_config, self.__user_data, self.__provider, self.__state_service
         )
-        splitter.addWidget(self.__modinstance_widget)
+        self.__splitter.addWidget(self.__modinstance_widget)
+
+        WidgetStateManager.get().register_state(
+            "modinstance_widget_header", self.__modinstance_widget.header()
+        )
 
         self.__database_widget = DatabaseWidget(
             database=self.__user_data.database,
@@ -237,13 +234,12 @@ class MainPageWidget(QWidget):
             download_manager=self.__download_manager,
             state_service=self.__state_service,
         )
-        splitter.addWidget(self.__database_widget)
-        splitter.setSizes([int(0.6 * splitter.width()), int(0.4 * splitter.width())])
+        self.__splitter.addWidget(self.__database_widget)
 
     def __update(self) -> None:
         self.__title_label.setText(self.__mod_instance.display_name)
-        self.__modfiles_num_label.display(
-            self.__modinstance_widget.get_visible_modfile_item_count()
+        self.__modfiles_num_label.setText(
+            str(self.__modinstance_widget.get_visible_modfile_item_count())
         )
         self.__update_header()
 
@@ -254,11 +250,14 @@ class MainPageWidget(QWidget):
             )
         )
         self.__bar_chart.setValues(list(modfile_states.values()))
+        self.__bar_chart.setColors(
+            [TranslationStatus.get_base_color(s) for s in TranslationStatus]
+        )
 
         num_tooltip = ""
 
         for status, count in modfile_states.items():
-            color: Optional[QColor] = TranslationStatus.get_color(status)
+            color: Optional[QColor] = TranslationStatus.get_fg_color(status)
 
             if color is None:
                 num_tooltip += f"<tr><td>{status.get_localized_name()}:\
@@ -551,6 +550,15 @@ class MainPageWidget(QWidget):
                 self.tr("Successfully exported mod file states to:") + f"\n{file_path}",
                 buttons=QMessageBox.StandardButton.Ok,
             )
+
+    @override
+    def showEvent(self, event: QShowEvent) -> None:
+        super().showEvent(event)
+
+        self.__splitter.setSizes(
+            [int(0.5 * self.__splitter.width()), int(0.5 * self.__splitter.width())]
+        )
+        WidgetStateManager.get().register_state("main_splitter", self.__splitter)
 
     def save_state(self) -> None:
         """

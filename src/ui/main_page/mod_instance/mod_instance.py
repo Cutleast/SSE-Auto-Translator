@@ -14,6 +14,7 @@ from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import CellValue, TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
@@ -38,10 +39,9 @@ from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 from core.user_data.user_data import UserData
-from ui.widgets.string_list.string_list_dialog import StringListWindow
+from ui.string_list.string_list_window import StringListWindow
 
 from .columns import ModInstanceColumns
-from .help_dialog import ModInstanceHelpDialog
 from .modinstance_menu import ModInstanceMenu
 
 
@@ -151,6 +151,8 @@ class ModInstanceWidget(QTreeWidget):
 
         self.__state_service.update_signal.connect(self.update)
 
+        ThemeManager.get().theme_changed.connect(lambda _: self.update())
+
         self.__load_mod_instance()
 
         # only sort after loading the mod instance to avoid performance issues
@@ -236,6 +238,9 @@ class ModInstanceWidget(QTreeWidget):
             self.__name_filter[1] if self.__name_filter else None
         )
 
+        # temporarily disable sorting to avoid performance issues
+        self.setSortingEnabled(False)
+
         for mod, mod_item in self.__mod_items.items():
             modfile_items: dict[ModFile, TreeItem[ModFile]] = self.__modfile_items.get(
                 mod, {}
@@ -277,6 +282,8 @@ class ModInstanceWidget(QTreeWidget):
                 )
             )
             mod_item.update()
+
+        self.setSortingEnabled(True)  # re-enable sorting after updating
 
     def __show_strings(self) -> None:
         """
@@ -674,13 +681,6 @@ class ModInstanceWidget(QTreeWidget):
             self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
-
-    def show_help(self) -> None:
-        """
-        Displays help popup.
-        """
-
-        ModInstanceHelpDialog(QApplication.activeModalWidget()).exec()
 
     def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """

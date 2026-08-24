@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 from typing import override
 
-import qtawesome as qta
 from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QKeySequence
@@ -47,26 +46,31 @@ class EditorMenu(TreeMenu):
         self.__init_actions()
         self.__init_mark_actions()
 
-    def __init_actions(self) -> None:
-        self.__edit_string_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.rename"), self.tr("Edit string...")
-        )
         self.__edit_string_action.triggered.connect(self.edit_string_requested.emit)
-
-        self.__copy_string_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy string")
-        )
-        self.__copy_string_action.setIconVisibleInMenu(True)
         self.__copy_string_action.triggered.connect(self.copy_string_requested.emit)
-
-        self.__reset_string_action = self.addAction(
-            IconProvider.get_qta_icon("ri.arrow-go-back-line"),
-            self.tr("Reset selected string(s)"),
-        )
-        self.__reset_string_action.setShortcut(QKeySequence("F4"))
         self.__reset_string_action.triggered.connect(
             self.reset_translation_requested.emit
         )
+
+    def __init_actions(self) -> None:
+        self.__edit_string_action = self.addAction(self.tr("Edit string..."))
+        IconProvider.bind_qta_icon(
+            self.__edit_string_action, self.__edit_string_action.setIcon, "mdi6.rename"
+        )
+
+        self.__copy_string_action = self.addAction(self.tr("Copy string"))
+        IconProvider.bind_qta_icon(
+            self.__copy_string_action,
+            self.__copy_string_action.setIcon,
+            "mdi6.content-copy",
+        )
+        self.__copy_string_action.setIconVisibleInMenu(True)
+
+        self.__reset_string_action = self.addAction(self.tr("Reset selected string(s)"))
+        IconProvider.bind_qta_icon(
+            self.__reset_string_action, self.__reset_string_action.setIcon, "mdi6.undo"
+        )
+        self.__reset_string_action.setShortcut(QKeySequence("F4"))
 
         self.addSeparator()
 
@@ -84,11 +88,16 @@ class EditorMenu(TreeMenu):
                 continue
 
             mark_as_action: QAction = self.addAction(
-                qta.icon(
-                    "mdi6.square-rounded",
-                    color=StringStatus.get_color(status),
-                ),
                 self.tr('Mark as "{0}"').format(status.get_localized_name()),
+            )
+            IconProvider.bind_custom_icon(
+                mark_as_action,
+                mark_as_action.setIcon,
+                lambda s=status: IconProvider.get_qta_icon(
+                    "mdi6.square-rounded",
+                    color=s.get_base_color().name(),
+                    color_active=s.get_base_color().name(),
+                ),
             )
             if status in status_shortcuts:
                 mark_as_action.setShortcut(status_shortcuts[status])

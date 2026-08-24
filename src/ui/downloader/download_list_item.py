@@ -7,6 +7,7 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.widgets.dropdown import Dropdown
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QCheckBox, QComboBox, QPushButton, QTreeWidgetItem
@@ -92,8 +93,11 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         self.__translations_combobox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.treeWidget().setItemWidget(self, 2, self.__translations_combobox)
 
-        self.__open_translation_button = QPushButton(
-            IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), ""
+        self.__open_translation_button = IconButton()
+        IconProvider.bind_res_icon(
+            self.__open_translation_button,
+            self.__open_translation_button.setIcon,
+            ResourceIcon.OpenInBrowser,
         )
         self.__open_translation_button.setToolTip(
             self.tr("Open translation mod page...")

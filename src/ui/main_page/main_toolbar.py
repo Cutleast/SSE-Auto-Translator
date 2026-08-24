@@ -2,17 +2,18 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any, Optional, override
+from typing import Any, Optional, cast, override
 
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.widgets.menu import Menu
-from PySide6.QtCore import QSize, Signal
-from PySide6.QtGui import QAction
-from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
+from cutleast_core_lib.ui.widgets.menu_checkbox import MenuCheckBox
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QAction, QActionEvent, QResizeEvent
+from PySide6.QtWidgets import QCheckBox, QToolBar, QToolButton, QWidget, QWidgetAction
 
 from core.file_types.file_type import FileType
 from core.mod_file.translation_status import TranslationStatus
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.utilities.theme_manager import ThemeManager
 
 
 class MainToolBar(QToolBar):
@@ -39,9 +40,6 @@ class MainToolBar(QToolBar):
     ignore_list_requested = Signal()
     """Signal when the user clicks on the ignore list action."""
 
-    help_requested = Signal()
-    """Signal when the user clicks on the help action."""
-
     modlist_scan_requested = Signal()
     """Signal when the user clicks on the modlist scan action."""
 
@@ -64,6 +62,7 @@ class MainToolBar(QToolBar):
     __state_filter_items: dict[TranslationStatus, QCheckBox]
     __type_filter_items: dict[FileType, QCheckBox]
 
+    __main_action_icons: dict[QAction, IconProvider.ThemeIconBinding]
     __modlist_scan_action: QAction
     __online_scan_action: QAction
     __download_action: QAction
@@ -72,27 +71,133 @@ class MainToolBar(QToolBar):
     __string_search_action: QAction
     __export_states_action: QAction
 
+    __highlighted_action: Optional[QAction]
+    __text_required_width: Optional[int]
+    __texts_shown: bool
+
+    TEXT_HYSTERESIS: int = 24
+
     @override
     def __init__(self) -> None:
         super().__init__()
 
-        self.setIconSize(QSize(32, 32))
+        self.__highlighted_action = None
+        self.__text_required_width = None
+        self.__texts_shown = False
+
         self.setFloatable(False)
 
-        self.__init_filter_actions()
         self.__init_actions()
         self.__init_utility_actions()
+        self.__init_filter_actions()
+
+        self.__set_action_texts_visible(False)
 
         self.__highlight_action(self.__modlist_scan_action)
 
+        self.__modlist_scan_action.triggered.connect(self.__on_modlist_scan_requested)
+        self.__online_scan_action.triggered.connect(self.__on_online_scan_requested)
+        self.__download_action.triggered.connect(self.__on_download_requested)
+        self.__build_output_action.triggered.connect(self.__on_build_output_requested)
+
+    def __init_actions(self) -> None:
+        self.__main_action_icons = {}
+
+        def get_icon_color(action: QAction) -> IconProvider.Color:
+            return (
+                IconProvider.Color.Primary
+                if action is self.__highlighted_action
+                else IconProvider.Color.Text
+            )
+
+        self.__modlist_scan_action = self.addAction(self.tr("Scan modlist"))
+
+        self.__main_action_icons[self.__modlist_scan_action] = (
+            IconProvider.bind_custom_icon(
+                self.__modlist_scan_action,
+                self.__modlist_scan_action.setIcon,
+                lambda: IconProvider.get_res_icon(
+                    ResourceIcon.DetectLang,
+                    color=get_icon_color(self.__modlist_scan_action),
+                    color_active=get_icon_color(self.__modlist_scan_action),
+                ),
+            )
+        )
+
+        self.__online_scan_action = self.addAction(self.tr("Search for translations"))
+        self.__main_action_icons[self.__online_scan_action] = (
+            IconProvider.bind_custom_icon(
+                self.__online_scan_action,
+                self.__online_scan_action.setIcon,
+                lambda: IconProvider.get_res_icon(
+                    ResourceIcon.ScanOnline,
+                    color=get_icon_color(self.__online_scan_action),
+                    color_active=get_icon_color(self.__online_scan_action),
+                ),
+            )
+        )
+
+        self.__download_action = self.addAction(self.tr("Download translations"))
+        self.__main_action_icons[self.__download_action] = IconProvider.bind_custom_icon(
+            self.__download_action,
+            self.__download_action.setIcon,
+            lambda: IconProvider.get_qta_icon(
+                "mdi6.download-multiple",
+                color=get_icon_color(self.__download_action),
+                color_active=get_icon_color(self.__download_action),
+            ),
+        )
+
+        self.__build_output_action = self.addAction(self.tr("Build output mod"))
+        self.__main_action_icons[self.__build_output_action] = (
+            IconProvider.bind_custom_icon(
+                self.__build_output_action,
+                self.__build_output_action.setIcon,
+                lambda: IconProvider.get_qta_icon(
+                    "mdi6.export-variant",
+                    color=get_icon_color(self.__build_output_action),
+                    color_active=get_icon_color(self.__build_output_action),
+                ),
+            )
+        )
+
+        self.addSeparator()
+
+    def __init_utility_actions(self) -> None:
+        self.__string_search_action = self.addAction(
+            self.tr("Search modlist for string..."),
+        )
+        IconProvider.bind_qta_icon(
+            self.__string_search_action,
+            self.__string_search_action.setIcon,
+            "mdi6.layers-search",
+        )
+        self.__string_search_action.triggered.connect(self.string_search_requested.emit)
+
+        self.__export_states_action = self.addAction(self.tr("Export mod file states"))
+        IconProvider.bind_qta_icon(
+            self.__export_states_action,
+            self.__export_states_action.setIcon,
+            "mdi6.share",
+        )
+        self.__export_states_action.triggered.connect(self.export_states_requested.emit)
+
+        self.addSeparator()
+
     def __init_filter_actions(self) -> None:
+        open_ignore_list_action = self.addAction(self.tr("Open ignore list"))
+        IconProvider.bind_qta_icon(
+            open_ignore_list_action,
+            open_ignore_list_action.setIcon,
+            "mdi6.playlist-remove",
+        )
+        open_ignore_list_action.triggered.connect(self.ignore_list_requested.emit)
+
         self.__filter_menu = Menu()
 
         self.__type_filter_items = {}
         for file_type in FileType:
-            filter_box = QCheckBox(
-                file_type.get_localized_filter_name(), self.__filter_menu
-            )
+            filter_box = MenuCheckBox(file_type.get_localized_name(), self.__filter_menu)
             filter_box.setChecked(True)
             filter_box.stateChanged.connect(self.__on_type_filter_change)
             widget_action = QWidgetAction(self.__filter_menu)
@@ -105,9 +210,7 @@ class MainToolBar(QToolBar):
 
         self.__state_filter_items = {}
         for status in TranslationStatus:
-            filter_box = QCheckBox(
-                status.get_localized_filter_name(), self.__filter_menu
-            )
+            filter_box = MenuCheckBox(status.get_localized_name(), self.__filter_menu)
             filter_box.setChecked(True)
             filter_box.stateChanged.connect(self.__on_state_filter_change)
             widget_action = QWidgetAction(self.__filter_menu)
@@ -116,66 +219,13 @@ class MainToolBar(QToolBar):
 
             self.__state_filter_items[status] = filter_box
 
-        filter_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter options")
-        )
+        filter_action = self.addAction(self.tr("Filter options"))
+        IconProvider.bind_qta_icon(filter_action, filter_action.setIcon, "mdi6.filter")
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(
-            lambda: self.__filter_menu.exec(self.mapToGlobal(self.pos()))
+            lambda: cast(QToolButton, self.widgetForAction(filter_action)).showMenu()
         )
         self.addAction(filter_action)
-
-        open_ignore_list_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.playlist-remove"),
-            self.tr("Open ignore list"),
-        )
-        open_ignore_list_action.triggered.connect(self.ignore_list_requested.emit)
-
-        help_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.help"), self.tr("Help")
-        )
-        help_action.triggered.connect(self.help_requested.emit)
-
-        self.addSeparator()
-
-    def __init_actions(self) -> None:
-        self.__modlist_scan_action = self.addAction(
-            IconProvider.get_res_icon(ResourceIcon.DetectLang),
-            self.tr("Scan modlist..."),
-        )
-        self.__modlist_scan_action.triggered.connect(self.__on_modlist_scan_requested)
-
-        self.__online_scan_action = self.addAction(
-            IconProvider.get_res_icon(ResourceIcon.ScanOnline),
-            self.tr("Scan online for available translations..."),
-        )
-        self.__online_scan_action.triggered.connect(self.__on_online_scan_requested)
-
-        self.__download_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.download-multiple"),
-            self.tr("Download available translations..."),
-        )
-        self.__download_action.triggered.connect(self.__on_download_requested)
-
-        self.__build_output_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.export-variant"),
-            self.tr("Build output mod..."),
-        )
-        self.__build_output_action.triggered.connect(self.__on_build_output_requested)
-
-        self.addSeparator()
-
-    def __init_utility_actions(self) -> None:
-        self.__string_search_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.layers-search"),
-            self.tr("Search modlist for string..."),
-        )
-        self.__string_search_action.triggered.connect(self.string_search_requested.emit)
-
-        self.__export_states_action = self.addAction(
-            IconProvider.get_qta_icon("fa5s.share"), self.tr("Export mod file states")
-        )
-        self.__export_states_action.triggered.connect(self.export_states_requested.emit)
 
     def __on_state_filter_change(self, *args: Any) -> None:
         self.state_filter_changed.emit(
@@ -231,12 +281,96 @@ class MainToolBar(QToolBar):
                 The action to highlight or None if no action should be highlighted.
         """
 
-        for _action in self.actions():
-            self.widgetForAction(_action).setObjectName("")
+        self.__highlighted_action = action
 
-        if action is not None:
-            self.widgetForAction(action).setObjectName("highlighted")
+        for _action, icon in self.__main_action_icons.items():
+            widget: QWidget = self.widgetForAction(_action)
+            widget.setProperty("highlighted", _action is action)
 
-        # Reapply stylesheet (the full stylesheet is required as the toolbar doesn't
-        # initially have its own)
-        self.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            icon.refresh()
+            ThemeManager.update_widget_styles(widget)
+
+    def __get_main_buttons(self) -> list[QToolButton]:
+        """
+        Gets the buttons whose text visibility is changed responsively.
+
+        Returns:
+            list[QToolButton]: Primary toolbar action buttons.
+        """
+
+        return [
+            cast(QToolButton, self.widgetForAction(action))
+            for action in (
+                self.__modlist_scan_action,
+                self.__online_scan_action,
+                self.__download_action,
+                self.__build_output_action,
+            )
+        ]
+
+    def __set_action_texts_visible(self, visible: bool) -> None:
+        """
+        Shows or hides text beside the primary toolbar action icons.
+
+        Args:
+            visible (bool): Whether action text should be visible.
+        """
+
+        style: Qt.ToolButtonStyle = (
+            Qt.ToolButtonStyle.ToolButtonTextBesideIcon
+            if visible
+            else Qt.ToolButtonStyle.ToolButtonIconOnly
+        )
+
+        for button in self.__get_main_buttons():
+            button.setToolButtonStyle(style)
+
+    def __calculate_text_required_width(self) -> int:
+        """
+        Calculates the toolbar width required while primary action text is visible.
+
+        Returns:
+            int: Required width with text beside all primary action icons.
+        """
+
+        buttons: list[QToolButton] = self.__get_main_buttons()
+        old_styles: list[Qt.ToolButtonStyle] = [
+            button.toolButtonStyle() for button in buttons
+        ]
+
+        self.__set_action_texts_visible(True)
+        self.ensurePolished()
+
+        required_width: int = self.sizeHint().width()
+
+        for button, style in zip(buttons, old_styles, strict=True):
+            button.setToolButtonStyle(style)
+
+        return required_width
+
+    @override
+    def actionEvent(self, event: QActionEvent, /) -> None:
+        super().actionEvent(event)
+
+        self.__text_required_width = None
+
+    @override
+    def resizeEvent(self, event: QResizeEvent, /) -> None:
+        super().resizeEvent(event)
+
+        available_width: int = self.contentsRect().width()
+        if self.__text_required_width is None:
+            self.__text_required_width = self.__calculate_text_required_width()
+
+        if self.__texts_shown:
+            show_text: bool = available_width >= (
+                self.__text_required_width - MainToolBar.TEXT_HYSTERESIS
+            )
+        else:
+            show_text = available_width >= (
+                self.__text_required_width + MainToolBar.TEXT_HYSTERESIS
+            )
+
+        if show_text != self.__texts_shown:
+            self.__set_action_texts_visible(show_text)
+            self.__texts_shown = show_text

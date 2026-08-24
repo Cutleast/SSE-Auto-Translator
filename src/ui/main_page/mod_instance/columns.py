@@ -51,7 +51,7 @@ class ModInstanceColumns(ColumnEnum):
         tooltip_getter=lambda item: (
             str(item.path) if isinstance(item, Mod) else str(item.full_path)
         ),
-        foreground_color_getter=lambda item: TranslationStatus.get_color(item.status),
+        foreground_color_getter=lambda item: TranslationStatus.get_fg_color(item.status),
         font_getter=lambda item: (
             SEPARATOR_FONT.value
             if isinstance(item, Mod) and item.mod_type == Mod.Type.Separator
@@ -69,7 +69,7 @@ class ModInstanceColumns(ColumnEnum):
     Version = ColumnConfig[Mod | ModFile](
         title_supplier=lambda: QApplication.translate("ModInstanceColumns", "Version"),
         display_text_getter=lambda item: item.version if isinstance(item, Mod) else "",
-        foreground_color_getter=lambda item: TranslationStatus.get_color(item.status),
+        foreground_color_getter=lambda item: TranslationStatus.get_fg_color(item.status),
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the version of the item."""
@@ -81,7 +81,12 @@ class ModInstanceColumns(ColumnEnum):
             if isinstance(item, Mod)
             else FileType.get_file_type(item).get_localized_name()
         ),
-        foreground_color_getter=lambda item: TranslationStatus.get_color(item.status),
+        tooltip_getter=lambda item: (
+            FileType.get_file_type(item).get_localized_description()
+            if isinstance(item, ModFile)
+            else ""
+        ),
+        foreground_color_getter=lambda item: TranslationStatus.get_fg_color(item.status),
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the type of the item."""
@@ -89,11 +94,21 @@ class ModInstanceColumns(ColumnEnum):
     Status = ColumnConfig[Mod | ModFile](
         title_supplier=lambda: QApplication.translate("ModInstanceColumns", "Status"),
         display_text_getter=lambda item: (
-            item.status.get_localized_short_name()
+            item.status.get_localized_name()
             if item.status != TranslationStatus.NoneStatus
             else ""
         ),
-        foreground_color_getter=lambda item: TranslationStatus.get_color(item.status),
+        sort_key_getter=lambda item: item.status.value,
+        tooltip_getter=lambda item: (
+            item.status.get_localized_description()
+            if item.status != TranslationStatus.NoneStatus
+            else ""
+        ),
+        background_color_getter=lambda item: TranslationStatus.get_bg_color(item.status),
+        hover_background_color_getter=lambda item: (
+            TranslationStatus.get_highlighted_bg_color(item.status)
+        ),
+        foreground_color_getter=lambda item: TranslationStatus.get_fg_color(item.status),
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the translation status of the item."""
@@ -101,7 +116,7 @@ class ModInstanceColumns(ColumnEnum):
     Priority = ColumnConfig[Mod | ModFile](
         title_supplier=lambda: QApplication.translate("ModInstanceColumns", "Priority"),
         display_text_getter=lambda item: "",  # is set by the item itself
-        foreground_color_getter=lambda item: TranslationStatus.get_color(item.status),
+        foreground_color_getter=lambda item: TranslationStatus.get_fg_color(item.status),
         alignment_getter=lambda item: Qt.AlignmentFlag.AlignCenter,
     )
     """Column for the priority of the item."""

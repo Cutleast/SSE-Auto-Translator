@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from __future__ import annotations
+
 from enum import auto
 from typing import override
 
@@ -35,54 +37,32 @@ class FileType(LocalizedEnum):
 
     @override
     def get_localized_name(self) -> str:
-        LOC_NAMES: dict[FileType, str] = {
-            FileType.PluginFile: QApplication.translate("FileType", "Plugin File"),
-            FileType.InterfaceFile: QApplication.translate("FileType", "Interface File"),
-            FileType.BestiaryFile: QApplication.translate(
-                "FileType", "Dragonborn's Bestiary File"
-            ),
-        }
-
-        return LOC_NAMES[self]
+        match self:
+            case FileType.PluginFile:
+                return QApplication.translate("FileType", "Plugin File")
+            case FileType.InterfaceFile:
+                return QApplication.translate("FileType", "Interface File")
+            case FileType.BestiaryFile:
+                return QApplication.translate("FileType", "Dragonborn's Bestiary File")
 
     @override
     def get_localized_description(self) -> str:
-        LOC_DESCS: dict[FileType, str] = {
-            FileType.PluginFile: QApplication.translate(
-                "FileType", "Traditional plugin files (.esp, .esm, .esl)."
-            ),
-            FileType.InterfaceFile: QApplication.translate(
-                "FileType",
-                "Interface translation files "
-                "(data/interface/translations/*_[language].txt).",
-            ),
-            FileType.BestiaryFile: QApplication.translate(
-                "FileType",
-                "Dragonborn's Bestiary files (data/interface/creatures/**/*.json)",
-            ),
-        }
-
-        return LOC_DESCS[self]
-
-    def get_localized_filter_name(self) -> str:
-        """
-        Returns:
-            str: Localized name for filtering this file type.
-        """
-
-        LOC_FILTERS: dict[FileType, str] = {
-            FileType.PluginFile: QApplication.translate(
-                "FileType", "Show plugin files (*.esp, *.esm, *.esl)"
-            ),
-            FileType.InterfaceFile: QApplication.translate(
-                "FileType", "Show interface files (*.txt)"
-            ),
-            FileType.BestiaryFile: QApplication.translate(
-                "FileType", "Show Dragonborn's Bestiary files (*.json)"
-            ),
-        }
-
-        return LOC_FILTERS[self]
+        match self:
+            case FileType.PluginFile:
+                return QApplication.translate(
+                    "FileType", "A traditional plugin file (.esp, .esm, .esl)."
+                )
+            case FileType.InterfaceFile:
+                return QApplication.translate(
+                    "FileType",
+                    "An interface translation file "
+                    "(data/interface/translations/*_[language].txt).",
+                )
+            case FileType.BestiaryFile:
+                return QApplication.translate(
+                    "FileType",
+                    "A Dragonborn's Bestiary file (data/interface/creatures/**/*.json).",
+                )
 
     def get_file_type_cls(self) -> type[ModFile]:
         """
@@ -90,13 +70,13 @@ class FileType(LocalizedEnum):
             type[ModFile]: The class for this file type.
         """
 
-        CLASSES: dict[FileType, type[ModFile]] = {
-            FileType.PluginFile: PluginFile,
-            FileType.InterfaceFile: InterfaceFile,
-            FileType.BestiaryFile: BestiaryFile,
-        }
-
-        return CLASSES[self]
+        match self:
+            case FileType.PluginFile:
+                return PluginFile
+            case FileType.InterfaceFile:
+                return InterfaceFile
+            case FileType.BestiaryFile:
+                return BestiaryFile
 
     def get_string_type_cls(self) -> type[String]:
         """
@@ -104,13 +84,13 @@ class FileType(LocalizedEnum):
             type[String]: The class of the strings for this file type.
         """
 
-        CLASSES: dict[FileType, type[String]] = {
-            FileType.PluginFile: PluginString,
-            FileType.InterfaceFile: InterfaceString,
-            FileType.BestiaryFile: BestiaryString,
-        }
-
-        return CLASSES[self]
+        match self:
+            case FileType.PluginFile:
+                return PluginString
+            case FileType.InterfaceFile:
+                return InterfaceString
+            case FileType.BestiaryFile:
+                return BestiaryString
 
     @classmethod
     def get_file_type(cls, mod_file: ModFile) -> FileType:
@@ -119,13 +99,15 @@ class FileType(LocalizedEnum):
             FileType: The file type for the given mod file.
         """
 
-        CLASSES: dict[type[ModFile], FileType] = {
-            PluginFile: FileType.PluginFile,
-            InterfaceFile: FileType.InterfaceFile,
-            BestiaryFile: FileType.BestiaryFile,
-        }
+        match mod_file:
+            case PluginFile():
+                return FileType.PluginFile
+            case InterfaceFile():
+                return FileType.InterfaceFile
+            case BestiaryFile():
+                return FileType.BestiaryFile
 
-        return CLASSES[type(mod_file)]
+        raise ValueError(f"Unknown mod file type: {type(mod_file)}")
 
     def get_file_dialog_filter(self) -> str:
         """
@@ -133,16 +115,10 @@ class FileType(LocalizedEnum):
             str: Localized file name filter for a QFileDialog.
         """
 
-        FILTERS: dict[FileType, str] = {
-            FileType.PluginFile: (
-                FileType.PluginFile.get_localized_name() + " (*.esp *.esm *.esl)"
-            ),
-            FileType.InterfaceFile: (
-                FileType.InterfaceFile.get_localized_name() + " (*.txt)"
-            ),
-            FileType.BestiaryFile: (
-                FileType.BestiaryFile.get_localized_name() + " (*.json)"
-            ),
-        }
-
-        return FILTERS[self]
+        match self:
+            case FileType.PluginFile:
+                return FileType.PluginFile.get_localized_name() + " (*.esp *.esm *.esl)"
+            case FileType.InterfaceFile:
+                return FileType.InterfaceFile.get_localized_name() + " (*.txt)"
+            case FileType.BestiaryFile:
+                return FileType.BestiaryFile.get_localized_name() + " (*.json)"

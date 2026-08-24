@@ -1,69 +1,130 @@
 /* Introduction header */
-IntroductionPage #h1 {
-    font-size: 52px;
+IntroductionPage [title=true] {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: ${metrics.spacing};
+    margin-left: ${metrics.spacing_l};
+}
+
+/* About Dialog */
+AboutDialog [title=true] {
+    font-weight: 300;
+    letter-spacing: ${metrics.spacing_s};
 }
 
 QTreeWidget::item,
 QTreeWidget::branch {
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid @border_color;
+    border-top: ${metrics.border_width} solid transparent;
+    border-bottom: ${metrics.border_width} solid ${colors.border};
 }
 
-/* Error text colors */
-#warning_label {
-    color: #fff08d3b;
-}
-#critical_label {
-    color: #ffd12525;
+/* Editor Page */
+EditorPage {
+    padding: ${metrics.spacing};
 }
 
-/* Buttons */
-QPushButton#download_button {
-    background: transparent;
-    border-color: transparent;
+EditorPage > QTreeWidget QScrollBar:vertical {
+    margin-top: 0;
 }
-QPushButton#download_button:hover {
-    background: @highlighted_bg_color;
-}
-QPushButton#list_close_button {
+
+EditorPage > QTreeWidget QPushButton {
     padding: 0px;
-    spacing: 0px;
     background: transparent;
     border-color: transparent;
+    border-radius: ${metrics.radius_ms}
 }
-QPushButton#list_close_button:hover {
-    background: @highlighted_bg_color;
-    border-color: @highlighted_bg_color;
+EditorPage > QTreeWidget QPushButton:hover {
+    background: ${colors.surface_pressed};
+    border-color: ${colors.surface_pressed};
 }
 
-/* Monospace Tooltips */
-[monospace=true] QToolTip {
-    font-family: Consolas;
+/* Menubar */
+MenuBar {
+    background-color: ${meta.window_bg};
+    border-bottom: ${metrics.border_width} solid ${colors.border};
+}
+MenuBar::item {
+    background-color: ${meta.window_bg};
+}
+MenuBar > QToolButton {
+    background-color: transparent;
+    border: none;
+    padding: ${metrics.spacing_xs} ${metrics.spacing_s};
 }
 
 /* Main Tabbar */
-QMainWindow > QTabWidget > QTabBar {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+QMainWindow > TabWidget > QTabBar {
+    border-radius: 0px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+/* Toolbars */
+QToolBar > [title=true] {
+    margin: 0 ${metrics.spacing};
+}
+QToolBar > SearchBar {
+    margin: 0 ${metrics.spacing_s};
 }
 
 /* Main Statusbar */
 QStatusBar {
-    background-color: @secondary_bg_color;
-    border: 0px;
+    background-color: ${colors.surface};
+    border: none;
     border-radius: 0px;
 }
 
+QStatusBar > QLabel#api_label {
+    border-left: ${metrics.border_width} solid ${colors.border_strong};
+    border-right: ${metrics.border_width} solid ${colors.border_strong};
+    padding: 0 ${metrics.spacing};
+    margin: 0 ${metrics.spacing};
+}
+
 QStatusBar QAbstractButton {
-    background-color: @secondary_bg_color;
+    padding: 0px;
 }
 
 /* Download List Widget */
-DownloadListWidget QTreeWidget QComboBox,
+DownloadListWidget QTreeWidget QComboBox {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-color: transparent;
+}
 DownloadListWidget QTreeWidget QPushButton {
+    border-color: transparent;
+}
+DownloadListWidget QTreeWidget QComboBox:disabled {
     background-color: transparent;
 }
 DownloadListWidget QTreeWidget QComboBox:hover:!disabled,
 DownloadListWidget QTreeWidget QPushButton:hover:!disabled:!pressed {
-    background-color: @highlighted_bg_color;
+    background-color: ${colors.surface_pressed};
+}
+
+Divider[orientation="horizontal"] {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Translator Dialog */
+TranslatorDialog Divider[orientation="horizontal"] {
+    margin-bottom: ${metrics.spacing};
+}
+
+TranslatorDialog QGroupBox {
+    border: none;
+    margin-top: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+}
+TranslatorDialog QGroupBox::title {
+    margin-left: -2px;
+    margin-right: 0px;
+    margin-top: -24px;
+    padding-left: 0px;
+    padding-top: 0px;
+    subcontrol-origin: border;
 }

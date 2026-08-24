@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QKeySequence
 from PySide6.QtWidgets import (
@@ -17,7 +18,6 @@ from PySide6.QtWidgets import (
 )
 
 from core.string.search_filter import SearchFilter
-from ui.utilities.theme_manager import ThemeManager
 
 from .shortcut_button import ShortcutButton
 
@@ -109,8 +109,7 @@ class StringSearchDialog(QDialog):
         search_button.clicked.connect(self.accept)
         hlayout.addWidget(search_button)
 
-        # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-        self.setStyleSheet(ThemeManager.get_stylesheet() or "")
+        ThemeManager.update_widget_styles(self)
 
     def get_filter(self) -> SearchFilter:
         """

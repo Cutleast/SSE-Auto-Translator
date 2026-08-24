@@ -18,46 +18,37 @@ class Source(str, LocalizedEnum):
 
     NexusMods = "NexusMods"
     """
-    Translation is downloaded and installed from Nexus Mods.
+    Translation was downloaded and installed from Nexus Mods.
     """
 
     Confrerie = "Confrérie des Traducteurs"
     """
-    Translation is downloaded and installed from Confrérie des Traducteurs.
+    Translation was downloaded and installed from Confrérie des Traducteurs.
     """
 
     Local = "Local"
     """
-    Translation is either imported from local disk or created from database.
+    Translation was either imported from local disk or created from database.
     """
 
     def get_icon(self) -> Optional[QIcon]:
         """
-        Returns the icon for the source.
-
         Returns:
             Optional[QIcon]: Icon or None.
         """
 
-        ICONS: dict[Source, QIcon] = {
-            Source.NexusMods: IconProvider.get_res_icon(ResourceIcon.NexusMods),
-            Source.Confrerie: IconProvider.get_res_icon(ResourceIcon.Confrerie),
-        }
-
-        return ICONS.get(self)
+        match self:
+            case Source.NexusMods:
+                return IconProvider.get_res_icon(ResourceIcon.NexusMods)
+            case Source.Confrerie:
+                return IconProvider.get_res_icon(ResourceIcon.Confrerie)
 
     @override
     def get_localized_name(self) -> str:
-        locs: dict[Source, str] = {
-            Source.NexusMods: QApplication.translate("Source", "Nexus Mods"),
-            Source.Confrerie: QApplication.translate(
-                "Source", "Confrérie des Traducteurs"
-            ),
-            Source.Local: QApplication.translate("Source", "Local"),
-        }
-
-        return locs[self]
-
-    @override
-    def get_localized_description(self) -> str:
-        return self.get_localized_name()
+        match self:
+            case Source.NexusMods:
+                return QApplication.translate("Source", "Nexus Mods")
+            case Source.Confrerie:
+                return QApplication.translate("Source", "Confrérie des Traducteurs")
+            case Source.Local:
+                return QApplication.translate("Source", "Local")

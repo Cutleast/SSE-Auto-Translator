@@ -1,44 +1,6 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
-    <qresource>
-        <!-- Dark mode icons -->
-        <file alias="icons/dark/arrow_down.svg">../core-res/icons/dark/arrow_down.svg</file>
-        <file alias="icons/dark/arrow_left.svg">../core-res/icons/dark/arrow_left.svg</file>
-        <file alias="icons/dark/arrow_right.svg">../core-res/icons/dark/arrow_right.svg</file>
-        <file alias="icons/dark/arrow_up.svg">../core-res/icons/dark/arrow_up.svg</file>
-        <file alias="icons/dark/checkmark.svg">../core-res/icons/dark/checkmark.svg</file>
-        <file alias="icons/dark/exit.svg">../core-res/icons/dark/exit.svg</file>
-        <file alias="icons/dark/horizontal_grip.png">../core-res/icons/dark/horizontal_grip.png</file>
-        <file alias="icons/dark/qt.svg">../core-res/icons/dark/qt.svg</file>
-        <file alias="icons/dark/quick_reference.svg">../core-res/icons/dark/quick_reference.svg</file>
-        <file alias="icons/dark/search.svg">../core-res/icons/dark/search.svg</file>
-        <file alias="icons/dark/vertical_grip.png">../core-res/icons/dark/vertical_grip.png</file>
-
-        <!-- Disabled icons -->
-        <file alias="icons/disabled/arrow_down.svg">../core-res/icons/disabled/arrow_down.svg</file>
-        <file alias="icons/disabled/arrow_left.svg">../core-res/icons/disabled/arrow_left.svg</file>
-        <file alias="icons/disabled/arrow_right.svg">../core-res/icons/disabled/arrow_right.svg</file>
-        <file alias="icons/disabled/arrow_up.svg">../core-res/icons/disabled/arrow_up.svg</file>
-
-        <!-- Light mode icons -->
-        <file alias="icons/light/arrow_down.svg">../core-res/icons/light/arrow_down.svg</file>
-        <file alias="icons/light/arrow_left.svg">../core-res/icons/light/arrow_left.svg</file>
-        <file alias="icons/light/arrow_right.svg">../core-res/icons/light/arrow_right.svg</file>
-        <file alias="icons/light/arrow_up.svg">../core-res/icons/light/arrow_up.svg</file>
-        <file alias="icons/light/checkmark.svg">../core-res/icons/light/checkmark.svg</file>
-        <file alias="icons/light/exit.svg">../core-res/icons/light/exit.svg</file>
-        <file alias="icons/light/horizontal_grip.png">../core-res/icons/light/horizontal_grip.png</file>
-        <file alias="icons/light/qt.svg">../core-res/icons/light/qt.svg</file>
-        <file alias="icons/light/quick_reference.svg">../core-res/icons/light/quick_reference.svg</file>
-        <file alias="icons/light/search.svg">../core-res/icons/light/search.svg</file>
-        <file alias="icons/light/vertical_grip.png">../core-res/icons/light/vertical_grip.png</file>
-
-        <!-- Other icons -->
-        <file alias="icons/close.svg">../core-res/icons/close.svg</file>
-        <file alias="icons/discord.png">../core-res/icons/discord.png</file>
-        <file alias="icons/ko-fi.png">../core-res/icons/ko-fi.png</file>
-        <file alias="icons/nexus_mods_colored.png">../core-res/icons/nexus_mods.png</file>
-
+    <qresource prefix="/sse-at">
         <!-- SSE-AT Icons -->
         <file>icons/cdt.svg</file>
         <file>icons/detect_lang.svg</file>
@@ -47,7 +9,6 @@
         <file>icons/icon.svg</file>
         <file>icons/nexus_mods.svg</file>
         <file>icons/open_in_browser.svg</file>
-        <file alias="icons/disabled/open_in_browser.svg">icons/open_in_browser_disabled.svg</file>
         <file>icons/plugin.svg</file>
         <file>icons/scan_online.svg</file>
         
@@ -55,26 +16,6 @@
         <file>loc/de_DE.qm</file>
         <file>loc/ru_RU.qm</file>
         <file>loc/zh_CN.qm</file>
-
-        <!-- Stylesheets -->
-        <file alias="styles/base.qss">../core-res/styles/base.qss</file>
-        <file alias="styles/area.qss">../core-res/styles/area.qss</file>
-        <file alias="styles/buttons.qss">../core-res/styles/buttons.qss</file>
-        <file alias="styles/inputs.qss">../core-res/styles/inputs.qss</file>
-        <file alias="styles/menu.qss">../core-res/styles/menu.qss</file>
-        <file alias="styles/popup.qss">../core-res/styles/popup.qss</file>
-        <file alias="styles/progress.qss">../core-res/styles/progress.qss</file>
-        <file alias="styles/scroll.qss">../core-res/styles/scroll.qss</file>
-        <file alias="styles/splitter.qss">../core-res/styles/splitter.qss</file>
-        <file alias="styles/statusbar.qss">../core-res/styles/statusbar.qss</file>
-        <file alias="styles/tab.qss">../core-res/styles/tab.qss</file>
-        <file alias="styles/toolbar.qss">../core-res/styles/toolbar.qss</file>
-        <file alias="styles/view.qss">../core-res/styles/view.qss</file>
-        <file alias="qss.json">../core-res/qss.json</file>
-
-        <!-- Themes -->
-        <file alias="dark_theme.json">../core-res/dark_theme.json</file>
-        <file alias="light_theme.json">../core-res/light_theme.json</file>
 
         <!-- Other -->
         <file>skyrimse.json</file>

@@ -5,17 +5,23 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional, TypeAlias
 
+from cutleast_core_lib.core.utilities.filter import matches_filter
+from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.core.utilities.truncate import raw_string
-from cutleast_core_lib.ui.utilities.tree_widget import apply_text_filter
-from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.theme.models.theme import Theme
+from cutleast_core_lib.ui.utilities.column_config import TreeItem
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
+from cutleast_core_lib.ui.utilities.tree_widget import (
+    are_children_visible,
+    iter_toplevel_items,
+)
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QColor, QFont, QKeySequence, QShortcut
+from PySide6.QtGui import QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
-    QHBoxLayout,
     QLabel,
     QPlainTextEdit,
     QTreeWidget,
@@ -27,7 +33,7 @@ from PySide6.QtWidgets import (
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
-from ui.utilities.theme_manager import ThemeManager
+from ui.string_list.columns import StringsColumns
 
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
@@ -47,8 +53,7 @@ class StringListWidget(QWidget):
     __strings: Strings
     __nested: bool
     __translation_mode: bool
-    __columns: list[str]
-    __string_items: ReferenceDict[String, QTreeWidgetItem]
+    __string_items: ReferenceDict[String, TreeItem[String]]
 
     __state_filter: Optional[list[StringStatus]] = None
     __text_filter: Optional[tuple[str, bool]] = None
@@ -56,7 +61,7 @@ class StringListWidget(QWidget):
     __vlayout: QVBoxLayout
     __toolbar: StringListToolbar
     __search_bar: SearchBar
-    __strings_num_label: LCDNumber
+    __strings_num_label: QLabel
     __strings_widget: QTreeWidget
     __menu: StringListMenu
 
@@ -75,19 +80,15 @@ class StringListWidget(QWidget):
         self.__strings = strings
         self.__nested = isinstance(strings, dict)
         self.__translation_mode = translation_mode
-        if translation_mode:
-            self.__columns = [
-                self.tr("ID"),
-                self.tr("Original"),
-                self.tr("String"),
-            ]
-        else:
-            self.__columns = [
-                self.tr("ID"),
-                self.tr("String"),
-            ]
 
         self.__init_ui()
+
+        self.__strings_widget.setColumnHidden(
+            StringsColumns.Status.index, not translation_mode
+        )
+        self.__strings_widget.setColumnHidden(
+            StringsColumns.Translation.index, not translation_mode
+        )
 
         self.__toolbar.filter_changed.connect(self.__set_state_filter)
         self.__search_bar.searchChanged.connect(self.__set_text_filter)
@@ -96,9 +97,19 @@ class StringListWidget(QWidget):
             lambda *_: self.__menu.open(len(self.get_selected_items()))
         )
         self.__copy_shortcut.activated.connect(self.__copy_selected)
+
+        self.__menu.expand_all_clicked.connect(self.__strings_widget.expandAll)
+        self.__menu.collapse_all_clicked.connect(self.__strings_widget.collapseAll)
         self.__menu.copy_selected_requested.connect(self.__copy_selected)
 
         self.__init_strings()
+
+        self.__strings_widget.setSortingEnabled(True)
+        self.__strings_widget.sortByColumn(
+            StringsColumns.Original.index, Qt.SortOrder.AscendingOrder
+        )
+
+        ThemeManager.get().theme_changed.connect(self.__on_theme_changed)
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
@@ -111,65 +122,98 @@ class StringListWidget(QWidget):
         self.__copy_shortcut = QShortcut(QKeySequence("Ctrl+C"), self)
 
     def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__toolbar = StringListToolbar()
-        self.__toolbar.setVisible(self.__translation_mode)
-        hlayout.addWidget(self.__toolbar)
+        self.__toolbar.set_filter_action_visible(self.__translation_mode)
+        self.__vlayout.addWidget(self.__toolbar)
 
         self.__search_bar = SearchBar()
-        hlayout.addWidget(self.__search_bar)
+        self.__toolbar.addWidget(self.__search_bar)
+
+        self.__toolbar.addSeparator()
 
         strings_num_label = QLabel(self.tr("Strings:"))
-        strings_num_label.setObjectName("h3")
-        hlayout.addWidget(strings_num_label)
+        strings_num_label.setProperty("subtitle", True)
+        self.__toolbar.addWidget(strings_num_label)
 
-        self.__strings_num_label = LCDNumber()
-        self.__strings_num_label.setDigitCount(6)
-        hlayout.addWidget(self.__strings_num_label)
+        self.__strings_num_label = QLabel()
+        self.__strings_num_label.setProperty("subtitle", True)
+        self.__toolbar.addWidget(self.__strings_num_label)
 
     def __init_strings_widget(self) -> None:
         self.__strings_widget = QTreeWidget()
-        self.__strings_widget.setUniformRowHeights(True)
-        self.__strings_widget.setSortingEnabled(True)
-        self.__strings_widget.sortByColumn(1, Qt.SortOrder.AscendingOrder)
-        self.__strings_widget.header().setFirstSectionMovable(True)
-        if not self.__nested:
-            self.__strings_widget.setIndentation(0)
+        StringsColumns.apply_to_tree_widget(self.__strings_widget)
+
         self.__strings_widget.setSelectionMode(
             QTreeWidget.SelectionMode.ExtendedSelection
         )
-        self.__strings_widget.setVerticalScrollBarPolicy(
-            Qt.ScrollBarPolicy.ScrollBarAsNeeded
-        )
-        self.__strings_widget.setHorizontalScrollBarPolicy(
-            Qt.ScrollBarPolicy.ScrollBarAsNeeded
-        )
+        self.__strings_widget.setUniformRowHeights(True)
+        self.__strings_widget.header().setFirstSectionMovable(True)
+        if not self.__nested:
+            self.__strings_widget.setIndentation(0)
+
         self.__vlayout.addWidget(self.__strings_widget)
 
-        self.__strings_widget.setHeaderLabels(self.__columns)
+        WidgetStateManager.get().register_state(
+            "string_list_widget_header", self.__strings_widget.header()
+        )
 
     def __init_context_menu(self) -> None:
-        self.__menu = StringListMenu(self.__columns, self.__nested)
+        self.__menu = StringListMenu(
+            [c.value.get_title() for c in StringsColumns], self.__nested
+        )
 
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
 
     def __update(self) -> None:
-        apply_text_filter(
-            widget=self.__strings_widget,
-            text=self.__text_filter[0] if self.__text_filter else "",
-            case_sensitive=self.__text_filter[1] if self.__text_filter else False,
+        name_filter: Optional[str] = (
+            self.__text_filter[0] if self.__text_filter else None
+        )
+        case_sensitive: Optional[bool] = (
+            self.__text_filter[1] if self.__text_filter else None
         )
 
-        self.__strings_num_label.display(self.get_visible_item_count())
+        for string, item in self.__string_items.items():
+            item.update()
+
+            string_text: str = string.display_id + string.original
+            if string.string is not None:
+                string_text += string.string
+
+            item.setHidden(
+                (
+                    self.__state_filter is not None
+                    and string.status not in self.__state_filter
+                )
+                or not matches_filter(string_text, name_filter, case_sensitive or False)
+            )
+
+        for item in iter_toplevel_items(self.__strings_widget):
+            if (
+                not isinstance(item, TreeItem)
+                or not isinstance(item.item, ImmutableValue)
+                or not isinstance(item.item.value, Path)
+            ):
+                continue
+
+            item.setHidden(
+                not are_children_visible(item)
+                and (
+                    not matches_filter(
+                        str(item.item.value), name_filter, case_sensitive or False
+                    )
+                    or self.__state_filter is not None
+                )
+            )
+
+        self.__strings_num_label.setText(str(self.get_visible_item_count()))
 
     def __show_string(self, item: QTreeWidgetItem, column_index: int) -> None:
-        column: str = self.__columns[column_index]
-
-        if column not in [self.tr("Original"), self.tr("String")]:
+        if column_index not in [
+            StringsColumns.Original.index,
+            StringsColumns.Translation.index,
+        ]:
             return
 
         strings: dict[QTreeWidgetItem, String] = {
@@ -187,7 +231,7 @@ class StringListWidget(QWidget):
 
         textbox = QPlainTextEdit()
         textbox.setReadOnly(True)
-        if column == self.tr("Original"):
+        if column_index == StringsColumns.Original.index:
             textbox.setPlainText(string.original)
         else:
             textbox.setPlainText(
@@ -207,10 +251,10 @@ class StringListWidget(QWidget):
         item: QTreeWidgetItem
         if self.__nested and isinstance(self.__strings, dict):
             for separator_name, strings in self.__strings.items():
-                separator_item = QTreeWidgetItem([str(separator_name)])
+                separator_item = TreeItem(ImmutableValue(separator_name), StringsColumns)
 
                 for string in strings:
-                    item = self.__create_string_item(string)
+                    item = TreeItem(string, StringsColumns)
                     separator_item.addChild(item)
                     self.__string_items[string] = item
 
@@ -219,19 +263,11 @@ class StringListWidget(QWidget):
 
         elif isinstance(self.__strings, list):
             for string in self.__strings:
-                item = self.__create_string_item(string)
+                item = TreeItem(string, StringsColumns)
                 self.__string_items[string] = item
                 self.__strings_widget.addTopLevelItem(item)
 
         self.__strings_widget.expandAll()
-
-        if self.__translation_mode:
-            self.__strings_widget.header().resizeSection(0, 500)
-            self.__strings_widget.header().resizeSection(1, 400)
-            self.__strings_widget.header().resizeSection(2, 400)
-        else:
-            self.__strings_widget.header().resizeSection(0, 650)
-            self.__strings_widget.header().resizeSection(1, 650)
 
         if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
             self.__strings_widget.collapseAll()
@@ -239,38 +275,7 @@ class StringListWidget(QWidget):
         self.__search_bar.setLiveMode(
             len(self.__string_items) <= STRING_AUTO_SEARCH_THRESHOLD
         )
-        self.__strings_num_label.setDigitCount(
-            max((len(str(len(self.__string_items))), 4))
-        )
         self.__update()
-
-    def __create_string_item(self, string: String) -> QTreeWidgetItem:
-        item = QTreeWidgetItem(
-            [
-                string.display_id,
-                raw_string(string.original, max_length=None),
-                raw_string(
-                    string.string if string.string is not None else string.original,
-                    max_length=None,
-                ),
-            ]
-        )
-
-        item.setToolTip(0, string.display_id)
-        item.setToolTip(1, string.original)
-        item.setToolTip(
-            2, string.string if string.string is not None else string.original
-        )
-
-        if self.__translation_mode:
-            color: Optional[QColor] = StringStatus.get_color(string.status)
-            if color:
-                for c in range(len(self.__columns)):
-                    item.setForeground(c, color)
-
-        item.setFont(0, QFont(ThemeManager.get().get_theme().monospace_font))
-
-        return item
 
     def __set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
         if text_filter.strip():
@@ -283,22 +288,27 @@ class StringListWidget(QWidget):
         self.__state_filter = state_filter
         self.__update()
 
-    def __copy_selected(self, columns: Optional[list[int]] = None) -> None:
+    def __copy_selected(self, col_idxs: Optional[list[int]] = None) -> None:
         clipboard_text: str = ""
         for item in self.__string_items.values():
             if not item.isSelected():
                 continue
 
-            if columns is None:
-                columns = list(range(len(self.__columns)))
+            columns: list[StringsColumns] = [
+                c for c in StringsColumns if col_idxs is None or c.index in col_idxs
+            ]
 
             for c in columns:
-                clipboard_text += f"'{item.toolTip(c)}'"[1:-1] + "\t"
+                clipboard_text += c.value.get_copy_text(item.item) + "\t"
 
             clipboard_text = clipboard_text.removesuffix("\t")
             clipboard_text += "\n"
 
         QApplication.clipboard().setText(clipboard_text.strip())
+
+    def __on_theme_changed(self, theme: Theme) -> None:
+        for item in self.__string_items.values():
+            item.update()
 
     def get_visible_item_count(self) -> int:
         """

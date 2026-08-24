@@ -17,8 +17,8 @@ from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from ui.string_list.columns import StringsColumns
 
-from .columns import StringsColumns
 from .string_item import StringItem
 
 

@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import logging
 import os
 from pathlib import Path
 from typing import Optional
@@ -24,8 +23,6 @@ class StartupDialog(QDialog):
     Startup dialog class.
     """
 
-    log: logging.Logger = logging.getLogger("StartupDialog")
-
     __data_path: Path
 
     __vlayout: QVBoxLayout
@@ -46,21 +43,15 @@ class StartupDialog(QDialog):
 
         self.__data_path = data_path
 
-        # Configure window
-        self.setWindowFlag(Qt.WindowType.Window, True)
-        self.setWindowTitle(self.tr("Welcome!"))
-        self.setFixedSize(900, 625)
+        self.setWindowTitle(self.tr("Welcome"))
 
         self.__init_ui()
 
     def __init_ui(self) -> None:
-        # Create layout
         self.__vlayout = QVBoxLayout()
         self.setLayout(self.__vlayout)
 
-        # Page widget
         self.__page_widget = StackedWidget(orientation=Qt.Orientation.Horizontal)
-        self.__page_widget.setObjectName("transparent")
         self.__vlayout.addWidget(self.__page_widget, 1)
 
         self.__introduction_page = IntroductionPage()
