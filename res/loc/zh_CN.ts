@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="257"/>
+        <location filename="src/app.py" line="259"/>
         <source>Path Limit Enabled</source>
         <translation>路径限制已启用</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="259"/>
+        <location filename="src/app.py" line="261"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -112,7 +112,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     <name>AppSettings</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="106"/>
-        <location filename="src/ui/settings/app_settings.py" line="103"/>
+        <location filename="src/ui/settings/app_settings.py" line="101"/>
         <source>Number of newest log files to keep</source>
         <translation>要保留的最新日志文件的数量</translation>
     </message>
@@ -139,12 +139,12 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="154"/>
-        <location filename="src/ui/settings/app_settings.py" line="396"/>
+        <location filename="src/ui/settings/app_settings.py" line="394"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>强调色必须是有效的十六进制颜色代码！</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="129"/>
+        <location filename="src/ui/settings/app_settings.py" line="127"/>
         <source>App language</source>
         <translation>应用语言</translation>
     </message>
@@ -159,121 +159,121 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
         <translation>基本应用程序设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="190"/>
+        <location filename="src/ui/settings/app_settings.py" line="188"/>
         <source>Path Settings</source>
         <translation>路径设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="203"/>
-        <location filename="src/ui/settings/app_settings.py" line="222"/>
+        <location filename="src/ui/settings/app_settings.py" line="201"/>
+        <location filename="src/ui/settings/app_settings.py" line="220"/>
         <source>Default: </source>
         <translation>默认: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="216"/>
+        <location filename="src/ui/settings/app_settings.py" line="214"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>（用于下载等操作，退出后将被清除！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="247"/>
+        <location filename="src/ui/settings/app_settings.py" line="245"/>
         <source>Behavior Settings</source>
         <translation>偏好设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="312"/>
+        <location filename="src/ui/settings/app_settings.py" line="310"/>
         <source>[EXPERIMENTAL]</source>
         <translation>偏好设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="316"/>
+        <location filename="src/ui/settings/app_settings.py" line="314"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation>这将自动绑定到 Mod Manager 下载并在 SSE-AT 关闭时取消绑定。
 此功能被认为是实验性的，因为崩溃可能会阻止它正确解除绑定。</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="96"/>
+        <location filename="src/ui/settings/app_settings.py" line="94"/>
         <source>General App Settings</source>
         <translation>全局设置</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="116"/>
+        <location filename="src/ui/settings/app_settings.py" line="114"/>
         <source>Log level</source>
         <translation>日志级别</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="155"/>
+        <location filename="src/ui/settings/app_settings.py" line="153"/>
         <source>Accent color</source>
         <translation>强调色</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="173"/>
-        <location filename="src/ui/settings/app_settings.py" line="384"/>
+        <location filename="src/ui/settings/app_settings.py" line="171"/>
+        <location filename="src/ui/settings/app_settings.py" line="382"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation>清除缓存（这将重置所有 Mod 文件状态并删除缓存的 API 请求和更多临时数据！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="198"/>
+        <location filename="src/ui/settings/app_settings.py" line="196"/>
         <source>Path for output mod</source>
         <translation>输出 Mod 路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="214"/>
+        <location filename="src/ui/settings/app_settings.py" line="212"/>
         <source>Path for temporary folder</source>
         <translation>临时文件夹路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="235"/>
+        <location filename="src/ui/settings/app_settings.py" line="233"/>
         <source>Defaults to temporary folder configured above</source>
         <translation>默认为上面配置的临时文件夹</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="230"/>
+        <location filename="src/ui/settings/app_settings.py" line="228"/>
         <source>Downloads path</source>
         <translation>下载路径</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="142"/>
+        <location filename="src/ui/settings/app_settings.py" line="140"/>
         <source>UI mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="254"/>
+        <location filename="src/ui/settings/app_settings.py" line="252"/>
         <source>Language detector confidence</source>
         <translation>语言检测器置信度</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="272"/>
+        <location filename="src/ui/settings/app_settings.py" line="270"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation>并发下载数量（仅建议在您拥有 Nexus Mods Premium 时增加）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="292"/>
+        <location filename="src/ui/settings/app_settings.py" line="290"/>
         <source>Number of maximum worker threads for some IO tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="308"/>
+        <location filename="src/ui/settings/app_settings.py" line="306"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; buttons on Nexus Mods on startup</source>
         <translation>启动时自动绑定到 Nexus Mods 上的“Mod Manager Download”按钮</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="331"/>
+        <location filename="src/ui/settings/app_settings.py" line="329"/>
         <source>Enable spell checking in translation editor</source>
         <translation>在翻译编辑器中启用拼写检查</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="340"/>
+        <location filename="src/ui/settings/app_settings.py" line="338"/>
         <source>Automatically import installed translations into the database</source>
         <translation>自动将已安装的翻译导入数据库</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="352"/>
+        <location filename="src/ui/settings/app_settings.py" line="350"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>自动为已安装的翻译完全覆盖的 Mod 文件创建翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="368"/>
+        <location filename="src/ui/settings/app_settings.py" line="366"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>在Mod列表中双击 Mod 或插件文件，或在“翻译”标签页中双击翻译内容时显示字符串</translation>
     </message>
@@ -1178,22 +1178,22 @@ Depending on the translator API this can raise unexpected costs.</comment>
         <translation>打开文档</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="103"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="101"/>
         <source>Windows path limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="117"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="115"/>
         <source>Fix Windows path limit</source>
         <translation>修复Windows路径限制</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="126"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="124"/>
         <source>The path limit is already disabled.</source>
         <translation>路径限制已被禁用。</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="110"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="108"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows 的路径长度限制为 255 个字符。单击下面，授予管理员权限并重新启动以禁用它。</translation>
     </message>
@@ -1785,12 +1785,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="98"/>
+        <location filename="src/ui/startup_dialog/page.py" line="95"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="109"/>
+        <location filename="src/ui/startup_dialog/page.py" line="106"/>
         <source>Next</source>
         <translation>下一步</translation>
     </message>
@@ -1872,32 +1872,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="102"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="103"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="180"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="181"/>
         <source>Elapsed time:</source>
         <translation>耗时：</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="235"/>
         <source>Cancel?</source>
         <translation>取消？</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="237"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="238"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>您确定要取消吗？这可能会产生意想不到的后果，具体取决于当前运行的进度！</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="245"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="247"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -2244,7 +2244,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>StringListWindow</name>
     <message numerus="yes">
-        <location filename="src/ui/string_list/string_list_window.py" line="33"/>
+        <location filename="src/ui/string_list/string_list_window.py" line="32"/>
         <source> (%n string)</source>
         <comment> (%n strings)</comment>
         <translation type="unfinished">
@@ -2490,60 +2490,65 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="146"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="150"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="159"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="163"/>
         <source>Installed Translations:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="190"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="208"/>
+        <source>You can import translations by dragging and dropping mod archives into the list above.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="223"/>
         <source>Base Game + AE CC Content</source>
         <translation>游戏本体 + AE CC 内容</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="213"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="246"/>
         <source>Search Results</source>
         <translation>搜索结果</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="221"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="254"/>
         <source>No strings found!</source>
         <translation>未找到任何字符串！</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="223"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="256"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>未找到任何符合给定筛选条件的字符串！
 点击&quot;显示详情&quot;以查看已使用的筛选条件。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="244"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="277"/>
         <source>Mod archive</source>
         <translation>模组存档</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="248"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="281"/>
         <source>Import Translation...</source>
         <translation>导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="333"/>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="342"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="366"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="375"/>
         <source>Database update complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="335"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="368"/>
         <source>Successfully updated translations for {num} mod file(s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="343"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="376"/>
         <source>All translations are up-to-date.</source>
         <translation type="unfinished"></translation>
     </message>

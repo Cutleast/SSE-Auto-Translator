@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
@@ -16,6 +17,7 @@ from PySide6.QtWidgets import (
     QApplication,
     QDialog,
     QFileDialog,
+    QHBoxLayout,
     QLabel,
     QMessageBox,
     QSizePolicy,
@@ -43,6 +45,7 @@ from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from core.utilities.exceptions import NoOriginalModFound
 from core.utilities.filesystem import relative_data_path
 from ui.string_list.string_list_window import StringListWindow
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .translations_toolbar import TranslationsToolbar
@@ -136,6 +139,7 @@ class TranslationsTab(QWidget):
 
         self.__init_header()
         self.__init_translations_widget()
+        self.__init_footer()
 
     def __init_header(self) -> None:
         self.__toolbar = TranslationsToolbar()
@@ -179,6 +183,35 @@ class TranslationsTab(QWidget):
         WidgetStateManager.get().register_state(
             "translations_widget_header", self.__translations_widget.header()
         )
+
+    def __init_footer(self) -> None:
+        hlayout = QHBoxLayout()
+        hlayout.setContentsMargins(0, 0, 0, 0)
+        self.__vlayout.addLayout(hlayout)
+
+        info_icon = QLabel()
+        IconProvider.bind_qta_icon(
+            info_icon,
+            lambda icon: info_icon.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon,
+                    ThemeManager.get().theme.metrics.icon,
+                ),
+            ),
+            "mdi6.information",
+            color=IconProvider.Color.Secondary,
+        )
+        hlayout.addWidget(info_icon)
+
+        info_label = QLabel(
+            self.tr(
+                "You can import translations by dragging and dropping mod archives into "
+                "the list above."
+            )
+        )
+        info_label.setProperty("secondary", True)
+        info_label.setWordWrap(True)
+        hlayout.addWidget(info_label, stretch=1)
 
     def __show_vanilla_strings(self) -> None:
         """
