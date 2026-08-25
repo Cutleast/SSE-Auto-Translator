@@ -18,7 +18,7 @@ from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.provider import TranslationProvider
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
+from ui.utilities.icon_provider import IconProvider
 
 
 class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncompatibleMethodOverride]
@@ -94,10 +94,10 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         self.treeWidget().setItemWidget(self, 2, self.__translations_combobox)
 
         self.__open_translation_button = IconButton()
-        IconProvider.bind_res_icon(
+        IconProvider.bind_icon(
             self.__open_translation_button,
             self.__open_translation_button.setIcon,
-            ResourceIcon.OpenInBrowser,
+            "open_in_browser",
         )
         self.__open_translation_button.setToolTip(
             self.tr("Open translation mod page...")

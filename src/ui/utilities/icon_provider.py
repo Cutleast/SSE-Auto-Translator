@@ -23,7 +23,6 @@ class ResourceIcon(Enum):
     DetectLang = ("detect_lang", True)
     SSEAT = ("icon", False)
     NexusMods = ("nexus_mods", False)
-    OpenInBrowser = ("open_in_browser", True)
     Plugin = ("plugin", True)
     ScanOnline = ("scan_online", True)
 
