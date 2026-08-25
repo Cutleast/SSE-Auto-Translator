@@ -23,6 +23,7 @@ from PySide6.QtWidgets import (
     QApplication,
     QDialog,
     QFileDialog,
+    QHBoxLayout,
     QLabel,
     QMessageBox,
     QSplitter,
@@ -49,6 +50,7 @@ from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
 from ui.downloader.download_list_window import DownloadListWindow
 from ui.string_list.string_list_window import StringListWindow
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.stacked_bar import StackedBar
 from ui.widgets.string_search_dialog import StringSearchDialog
@@ -173,6 +175,8 @@ class MainPageWidget(QWidget):
 
         self.__init_header()
         self.__init_splitter()
+        self.__init_modinstance_widget()
+        self.__init_database_widget()
 
     def __init_header(self) -> None:
         self.__tool_bar = MainToolBar()
@@ -216,15 +220,50 @@ class MainPageWidget(QWidget):
         self.__splitter = QSplitter()
         self.__vlayout.addWidget(self.__splitter, stretch=1)
 
+    def __init_modinstance_widget(self) -> None:
+        modinstance_wrapper = QWidget()
+        self.__splitter.addWidget(modinstance_wrapper)
+        modinstance_vlayout = QVBoxLayout()
+        modinstance_vlayout.setContentsMargins(0, 0, 0, 0)
+        modinstance_wrapper.setLayout(modinstance_vlayout)
+
         self.__modinstance_widget = ModInstanceWidget(
             self.__app_config, self.__user_data, self.__provider, self.__state_service
         )
-        self.__splitter.addWidget(self.__modinstance_widget)
-
         WidgetStateManager.get().register_state(
             "modinstance_widget_header", self.__modinstance_widget.header()
         )
+        modinstance_vlayout.addWidget(self.__modinstance_widget)
 
+        footer_hlayout = QHBoxLayout()
+        footer_hlayout.setContentsMargins(0, 0, 0, 0)
+        modinstance_vlayout.addLayout(footer_hlayout)
+
+        info_icon = QLabel()
+        IconProvider.bind_qta_icon(
+            info_icon,
+            lambda icon: info_icon.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon,
+                    ThemeManager.get().theme.metrics.icon,
+                )
+            ),
+            "mdi6.alert",
+            color=IconProvider.Color.Secondary,
+        )
+        footer_hlayout.addWidget(info_icon)
+
+        info_label = QLabel(
+            self.tr(
+                "SSE-AT has to be restarted after mod list changes. Changes are not "
+                "automatically detected."
+            )
+        )
+        info_label.setProperty("secondary", True)
+        info_label.setWordWrap(True)
+        footer_hlayout.addWidget(info_label, stretch=1)
+
+    def __init_database_widget(self) -> None:
         self.__database_widget = DatabaseWidget(
             database=self.__user_data.database,
             provider=self.__provider,
