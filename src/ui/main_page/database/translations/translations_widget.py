@@ -161,6 +161,7 @@ class TranslationsWidget(QTreeWidget):
 
     def __init_context_menu(self) -> None:
         self.__menu = TranslationsMenu()
+        self.__menu.set_shortcut_target(self)
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
 
     def highlight_translation(self, translation: Translation) -> None:

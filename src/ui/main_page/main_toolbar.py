@@ -111,7 +111,7 @@ class MainToolBar(QToolBar):
             )
 
         self.__modlist_scan_action = self.addAction(self.tr("Scan modlist"))
-
+        self.__modlist_scan_action.setShortcut("Ctrl+Shift+1")
         self.__main_action_icons[self.__modlist_scan_action] = (
             IconProvider.bind_custom_icon(
                 self.__modlist_scan_action,
@@ -125,6 +125,7 @@ class MainToolBar(QToolBar):
         )
 
         self.__online_scan_action = self.addAction(self.tr("Search for translations"))
+        self.__online_scan_action.setShortcut("Ctrl+Shift+2")
         self.__main_action_icons[self.__online_scan_action] = (
             IconProvider.bind_custom_icon(
                 self.__online_scan_action,
@@ -138,6 +139,7 @@ class MainToolBar(QToolBar):
         )
 
         self.__download_action = self.addAction(self.tr("Download translations"))
+        self.__download_action.setShortcut("Ctrl+Shift+3")
         self.__main_action_icons[self.__download_action] = IconProvider.bind_custom_icon(
             self.__download_action,
             self.__download_action.setIcon,
@@ -149,6 +151,7 @@ class MainToolBar(QToolBar):
         )
 
         self.__build_output_action = self.addAction(self.tr("Build output mod"))
+        self.__build_output_action.setShortcut("Ctrl+Shift+4")
         self.__main_action_icons[self.__build_output_action] = (
             IconProvider.bind_custom_icon(
                 self.__build_output_action,
@@ -374,3 +377,31 @@ class MainToolBar(QToolBar):
         if show_text != self.__texts_shown:
             self.__set_action_texts_visible(show_text)
             self.__texts_shown = show_text
+
+    def set_shortcut_target(self, target: QWidget) -> None:
+        """
+        Sets the target widget for the toolbar action shortcuts.
+
+        Args:
+            target (QWidget): Widget to receive shortcut events.
+        """
+
+        self.__modlist_scan_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__modlist_scan_action)
+
+        self.__online_scan_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__online_scan_action)
+
+        self.__download_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__download_action)
+
+        self.__build_output_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__build_output_action)

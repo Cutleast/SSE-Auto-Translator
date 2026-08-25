@@ -8,8 +8,9 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
-from PySide6.QtCore import Signal
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QAction
+from PySide6.QtWidgets import QWidget
 
 from core.database.translation import Translation
 from core.translation_provider.source import Source
@@ -91,6 +92,7 @@ class TranslationsMenu(TreeMenu):
         self.__rename_translation_action = self.addAction(
             self.tr("Rename translation...")
         )
+        self.__rename_translation_action.setShortcut("F2")
         IconProvider.bind_qta_icon(
             self.__rename_translation_action,
             self.__rename_translation_action.setIcon,
@@ -109,6 +111,7 @@ class TranslationsMenu(TreeMenu):
         self.__delete_translation_action = self.addAction(
             self.tr("Delete selected translation(s)...")
         )
+        self.__delete_translation_action.setShortcut("Delete")
         IconProvider.bind_qta_icon(
             self.__delete_translation_action,
             self.__delete_translation_action.setIcon,
@@ -133,6 +136,24 @@ class TranslationsMenu(TreeMenu):
         self.__open_in_explorer_action.triggered.connect(
             self.open_in_explorer_requested.emit
         )
+
+    def set_shortcut_target(self, target: QWidget) -> None:
+        """
+        Sets the target widget for the context menu's shortcuts.
+
+        Args:
+            target (QWidget): The target widget.
+        """
+
+        self.__rename_translation_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__rename_translation_action)
+
+        self.__delete_translation_action.setShortcutContext(
+            Qt.ShortcutContext.WidgetWithChildrenShortcut
+        )
+        target.addAction(self.__delete_translation_action)
 
     @override
     def open(
