@@ -41,7 +41,7 @@ from core.downloader.file_download import FileDownload
 from core.downloader.mod_info import ModInfo
 from core.translation_provider.provider import TranslationProvider
 from ui.downloader.download_list_toolbar import DownloadListToolBar
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.report_dialog import ReportDialog
 
 from .download_list_item import DownloadListItem as DownloadListWidgetItem
@@ -261,7 +261,7 @@ class DownloadListWidget(QWidget):
 
     def __add_modpage_button(self, mod_item: QTreeWidgetItem, mod_info: ModInfo) -> None:
         button = IconButton()
-        IconProvider.bind_res_icon(button, button.setIcon, ResourceIcon.OpenInBrowser)
+        IconProvider.bind_icon(button, button.setIcon, "open_in_browser")
         button.setToolTip(self.tr("Open mod page on Nexus Mods..."))
         button.clicked.connect(lambda: self.__open_modpage(mod_info))
         button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
