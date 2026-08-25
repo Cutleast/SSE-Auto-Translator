@@ -181,6 +181,7 @@ class MainPageWidget(QWidget):
     def __init_header(self) -> None:
         self.__tool_bar = MainToolBar()
         self.__tool_bar.set_provider_features_enabled(self.__provider.is_available)
+        self.__tool_bar.set_shortcut_target(self)
         self.__vlayout.addWidget(self.__tool_bar)
 
         first_action: QAction = self.__tool_bar.actions()[0]
