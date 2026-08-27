@@ -48,11 +48,6 @@ class StringsColumns(ColumnEnum):
             if isinstance(item, String)
             else ""
         ),
-        sort_key_getter=lambda item: (
-            raw_string(item.original, max_length=MAX_STRING_LENGTH)
-            if isinstance(item, String)
-            else ""
-        ),
         foreground_color_getter=lambda item: (
             item.status.get_fg_color() if isinstance(item, String) else None
         ),
@@ -63,14 +58,6 @@ class StringsColumns(ColumnEnum):
     Translation = ColumnConfig[String | ImmutableValue[Path]](
         title_supplier=lambda: QApplication.translate("StringsColumns", "String"),
         display_text_getter=lambda item: (
-            raw_string(
-                item.string if item.string is not None else item.original,
-                max_length=MAX_STRING_LENGTH,
-            )
-            if isinstance(item, String)
-            else ""
-        ),
-        sort_key_getter=lambda item: (
             raw_string(
                 item.string if item.string is not None else item.original,
                 max_length=MAX_STRING_LENGTH,
