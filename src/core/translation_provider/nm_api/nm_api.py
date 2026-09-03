@@ -3,7 +3,6 @@ Copyright (c) Cutleast
 """
 
 import re
-import urllib.parse
 import webbrowser
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -17,8 +16,10 @@ import requests as req
 import websocket as ws
 from curl_cffi import requests as curl_requests
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.filesystem.utils import norm
 from pydantic import BaseModel, ValidationError
 
+from core.translation_provider.nm_api.models.file_manifest import FileManifest
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.filesystem import extract_file_paths
 from core.utilities.web_utils import get_url_identifier
@@ -83,6 +84,38 @@ class NexusModsApi(ProviderApi):
     - `version` - the sluggified version of the file (e.g. `v1-3` for `v1.3`)
     - `timestamp` - the upload timestamp of the file
     """
+
+    OLD_CONTENT_URL_PATTERN: re.Pattern[str] = re.compile(
+        r"https://file-metadata\.nexusmods\.com/file/nexus-files-s3-meta/\d+/\d+/[^/]+\.json",
+        re.IGNORECASE,
+    )
+    """
+    Regex pattern for file content URLs belonging to the old file content preview system.
+
+    Example:
+        `https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/1704/73920/TESL Loading Screens - German-73920-v2-1-1-1688886211.7z.json`
+    """
+
+    INVALID_CONTENT_URL_PATTERN: re.Pattern[str] = re.compile(
+        r"https://file-metadata\.nexusmods\.com/file/nexus-files-s3-meta/\d+/\d+/"
+        r"(?P<id>[/0-9a-f\-]+)\.json",
+        re.IGNORECASE,
+    )
+    """
+    Regex pattern for file content URLs that are returned by the API but are invalid
+    because they belong to files uploaded with the new upload system.
+
+    The pattern provides these named groups:
+    - `id` - the file id of the file, which is a sluggified hash of the file
+    """
+
+    NEW_CONTENT_URL_PATTERN: re.Pattern[str] = re.compile(
+        r"https://mod-file-manifests\.nexusmods\.com/[0-9a-f/\-]+", re.IGNORECASE
+    )
+    """Regex pattern for file content URLs belonging to the new file content preview system."""
+
+    NEW_CONTENT_BASE_URL: str = "https://mod-file-manifests.nexusmods.com/"
+    """The base URL for the new file content preview system, which uses file manifests."""
 
     __api_key: Optional[str] = None
     """The user-specific API key used for most API requests."""
@@ -456,20 +489,36 @@ class NexusModsApi(ProviderApi):
         path = f"games/{game_id}/mods/{mod_id}/files.json?category=main%2Cupdate%2Coptional%2Cold_version%2Cmiscellaneous"
         return self.__request_with_model(path, NmFiles)
 
-    def __get_file_contents(
-        self, game_id: str, mod_id: int, file_name: str
-    ) -> Optional[list[str]]:
-        """
-        Gets contents of `file_name` from `mod_id` in `game_id` and returns paths in a list.
-        """
-
-        _game_id: int = NexusModsApi.GAME_IDS[game_id]
-
-        url: str = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
-
+    def __get_file_contents(self, url: str) -> Optional[list[str]]:
+        res: req.Response
         try:
-            res: req.Response = self._cached_request(url)
-            return extract_file_paths(res.json())
+            old_content_url_match: Optional[re.Match[str]] = (
+                NexusModsApi.OLD_CONTENT_URL_PATTERN.match(url)
+            )
+
+            if old_content_url_match is not None:
+                res = self._cached_request(url)
+                return extract_file_paths(res.json())
+
+            invalid_content_url_match: Optional[re.Match[str]] = (
+                NexusModsApi.INVALID_CONTENT_URL_PATTERN.match(url)
+            )
+            if invalid_content_url_match is not None:
+                file_id: str = invalid_content_url_match.group("id")
+                url = f"{NexusModsApi.NEW_CONTENT_BASE_URL}{file_id}"
+
+            new_content_url_match: Optional[re.Match[str]] = (
+                NexusModsApi.NEW_CONTENT_URL_PATTERN.match(url)
+            )
+            if new_content_url_match is None:
+                raise RuntimeError(f"Unknown URL scheme: {url}")
+
+            res = self._cached_request(url)
+            file_manifest: FileManifest = FileManifest.model_validate_json(
+                res.content, by_alias=True
+            )
+            return [norm(str(f.path)) for f in file_manifest.files]
+
         except FileNotFoundError:
             self.log.warning(
                 f"Failed to get file contents: No content preview for '{file_name}' "
@@ -505,7 +554,7 @@ class NexusModsApi(ProviderApi):
 
                 futures[
                     executor.submit(
-                        self.__get_file_contents, game_id, mod_id, mod_file.file_name
+                        self.__get_file_contents, mod_file.content_preview_link
                     )
                 ] = mod_file
 

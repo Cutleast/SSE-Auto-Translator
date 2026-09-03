@@ -1,3 +1,7 @@
+# v3.2.3
+
+- Fix SSE-AT not finding translations that were uploaded after the introduction of the new upload system
+
 # v3.2.2
 
 - Fix context menu of string list widget
