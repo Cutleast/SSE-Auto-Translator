@@ -32,7 +32,6 @@ from PySide6.QtWidgets import (
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 from ui.string_list.columns import StringsColumns
 
 from .string_list_menu import StringListMenu
@@ -54,6 +53,7 @@ class StringListWidget(QWidget):
     __nested: bool
     __translation_mode: bool
     __string_items: ReferenceDict[String, TreeItem[String]]
+    __rendered_columns: frozenset[StringsColumns]
 
     __state_filter: Optional[list[StringStatus]] = None
     __text_filter: Optional[tuple[str, bool]] = None
@@ -80,6 +80,11 @@ class StringListWidget(QWidget):
         self.__strings = strings
         self.__nested = isinstance(strings, dict)
         self.__translation_mode = translation_mode
+        self.__rendered_columns = (
+            frozenset(StringsColumns)
+            if translation_mode
+            else frozenset((StringsColumns.Id, StringsColumns.Original))
+        )
 
         self.__init_ui()
 
@@ -105,9 +110,6 @@ class StringListWidget(QWidget):
         self.__init_strings()
 
         self.__strings_widget.setSortingEnabled(True)
-        self.__strings_widget.sortByColumn(
-            StringsColumns.Original.index, Qt.SortOrder.AscendingOrder
-        )
 
         ThemeManager.get().theme_changed.connect(self.__on_theme_changed)
 
@@ -175,8 +177,6 @@ class StringListWidget(QWidget):
         )
 
         for string, item in self.__string_items.items():
-            item.update()
-
             string_text: str = string.display_id + string.original
             if string.string is not None:
                 string_text += string.string
@@ -251,10 +251,18 @@ class StringListWidget(QWidget):
         item: QTreeWidgetItem
         if self.__nested and isinstance(self.__strings, dict):
             for separator_name, strings in self.__strings.items():
-                separator_item = TreeItem(ImmutableValue(separator_name), StringsColumns)
+                separator_item = TreeItem(
+                    ImmutableValue(separator_name),
+                    StringsColumns,
+                    rendered_columns=self.__rendered_columns,
+                )
 
                 for string in strings:
-                    item = TreeItem(string, StringsColumns)
+                    item = TreeItem(
+                        string,
+                        StringsColumns,
+                        rendered_columns=self.__rendered_columns,
+                    )
                     separator_item.addChild(item)
                     self.__string_items[string] = item
 
@@ -263,7 +271,11 @@ class StringListWidget(QWidget):
 
         elif isinstance(self.__strings, list):
             for string in self.__strings:
-                item = TreeItem(string, StringsColumns)
+                item = TreeItem(
+                    string,
+                    StringsColumns,
+                    rendered_columns=self.__rendered_columns,
+                )
                 self.__string_items[string] = item
                 self.__strings_widget.addTopLevelItem(item)
 
@@ -272,9 +284,6 @@ class StringListWidget(QWidget):
         if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
             self.__strings_widget.collapseAll()
 
-        self.__search_bar.setLiveMode(
-            len(self.__string_items) <= STRING_AUTO_SEARCH_THRESHOLD
-        )
         self.__update()
 
     def __set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
