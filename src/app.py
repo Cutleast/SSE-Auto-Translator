@@ -121,7 +121,6 @@ class App(BaseApp, Singleton):
             initial_primary_color=self.app_config.accent_color,
             initial_ui_mode=self.app_config.ui_mode,
             qss_files=ThemeManager.CORE_RES_QSS_FILES + [":/sse-at/style.qss"],
-            base_theme_files=ThemeManager.CORE_BASE_THEME_FILES,
         )
 
         return MainWindow()
