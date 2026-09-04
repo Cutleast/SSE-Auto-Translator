@@ -257,7 +257,9 @@ class EditorTab(QWidget):
                 user_config=self.__user_data.user_config,
                 translator=self.__translator_service,
             )
-            dialog.update_signal.connect(self.update)
+            dialog.update_signal.connect(
+                lambda: self.__on_strings_changed([dialog.current_string])
+            )
             WidgetStateManager.get().register_geometry("translator_dialog", dialog)
             WindowManager.get().show(dialog)
 

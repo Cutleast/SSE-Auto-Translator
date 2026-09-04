@@ -333,6 +333,12 @@ class TranslatorDialog(QWidget):
 
         event.accept()
 
+    @property
+    def current_string(self) -> String:
+        """The current string being edited."""
+
+        return self.__current_string
+
     def set_string(
         self,
         string: String,
