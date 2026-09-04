@@ -16,6 +16,9 @@ from PySide6.QtWidgets import QApplication
 from core.string.string_status import StringStatus
 from core.string.types import String
 
+SEPARATOR_FONT: Lazy[QFont] = Lazy(
+    lambda: ThemeManager.get().theme.texts.emphasized.as_qfont()
+)
 ID_FONT: Lazy[QFont] = Lazy(lambda: ThemeManager.get().theme.texts.monospace.as_qfont())
 
 MAX_STRING_LENGTH = 200
@@ -33,7 +36,9 @@ class StringsColumns(ColumnEnum):
         foreground_color_getter=lambda item: (
             item.status.get_fg_color() if isinstance(item, String) else None
         ),
-        font_getter=lambda item: ID_FONT.value,
+        font_getter=lambda item: (
+            ID_FONT.value if isinstance(item, String) else SEPARATOR_FONT.value
+        ),
         alignment_getter=lambda item: (
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
         ),
