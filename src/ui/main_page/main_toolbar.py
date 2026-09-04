@@ -5,9 +5,10 @@ Copyright (c) Cutleast
 from typing import Any, Optional, cast, override
 
 from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.widgets.menu import Menu
 from cutleast_core_lib.ui.widgets.menu_checkbox import MenuCheckBox
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import QByteArray, Qt, Signal
 from PySide6.QtGui import QAction, QActionEvent, QResizeEvent
 from PySide6.QtWidgets import QCheckBox, QToolBar, QToolButton, QWidget, QWidgetAction
 
@@ -232,6 +233,22 @@ class MainToolBar(QToolBar):
         self.__filter_action.triggered.connect(self.__on_filter_action_triggered)
         self.addAction(self.__filter_action)
 
+        for file_type, checkbox in self.__type_filter_items.items():
+            WidgetStateManager.get().register_custom(
+                f"filter_type_{file_type.name}",
+                lambda c=checkbox: QByteArray(bytes(c.isChecked())),
+                lambda state, c=checkbox: c.setChecked(bool(state.data())),
+                checkbox,
+            )
+
+        for status, checkbox in self.__state_filter_items.items():
+            WidgetStateManager.get().register_custom(
+                f"filter_state_{status.name}",
+                lambda c=checkbox: QByteArray(bytes(c.isChecked())),
+                lambda state, c=checkbox: c.setChecked(bool(state.data())),
+                checkbox,
+            )
+
     def __on_filter_action_triggered(self) -> None:
         # reverse the checked state
         self.__filter_action.setChecked(not self.__filter_action.isChecked())
@@ -403,6 +420,14 @@ class MainToolBar(QToolBar):
         if show_text != self.__texts_shown:
             self.__set_action_texts_visible(show_text)
             self.__texts_shown = show_text
+
+    def refresh_filter(self) -> None:
+        """
+        Refreshes the filter based on the current filter settings.
+        """
+
+        self.__on_type_filter_change()
+        self.__on_state_filter_change()
 
     def set_shortcut_target(self, target: QWidget) -> None:
         """

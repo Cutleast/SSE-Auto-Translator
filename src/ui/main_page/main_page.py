@@ -168,6 +168,7 @@ class MainPageWidget(QWidget):
         ThemeManager.get().theme_changed.connect(lambda _: self.__update_header())
 
         self.__update()
+        self.__tool_bar.refresh_filter()
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
