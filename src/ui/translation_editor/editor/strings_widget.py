@@ -7,12 +7,7 @@ from typing import Optional
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.ui.utilities.tree_widget import (
-    are_children_visible,
-    iter_children,
-    iter_toplevel_items,
-)
-from PySide6.QtCore import Qt
+from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
@@ -62,7 +57,6 @@ class StringsWidget(QTreeWidget):
         self.__init_strings(strings)
 
         self.setSortingEnabled(True)
-        self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
         self.header().setSortIndicatorClearable(True)
         self.expandAll()
 
@@ -96,17 +90,16 @@ class StringsWidget(QTreeWidget):
             self.addTopLevelItem(modfile_item)
             modfile_item.setFirstColumnSpanned(True)
 
-        self.update_displayed_strings()
+        self.__update_displayed_strings()
 
-    def __get_items(self, only_visible: bool = False) -> list[QTreeWidgetItem]:
+    def __get_items(self, only_visible: bool = False) -> list[StringItem]:
         return [
             string_item
-            for modfile_item in iter_toplevel_items(self)
-            for string_item in iter_children(modfile_item)
+            for string_item in self.__string_items.values()
             if not only_visible or not string_item.isHidden()
         ]
 
-    def update_displayed_strings(self) -> None:
+    def __update_displayed_strings(self) -> None:
         """
         Updates the displayed string items.
         """
@@ -118,9 +111,11 @@ class StringsWidget(QTreeWidget):
             self.__name_filter[1] if self.__name_filter else None
         )
 
-        for string, item in self.__string_items.items():
-            item.update()
+        sorting_enabled: bool = self.isSortingEnabled()
+        if sorting_enabled:
+            self.setSortingEnabled(False)
 
+        for string, item in self.__string_items.items():
             string_text: str = string.display_id + string.original
             if string.string is not None:
                 string_text += string.string
@@ -144,10 +139,23 @@ class StringsWidget(QTreeWidget):
                 )
             )
 
-        if self.currentItem():
-            self.scrollToItem(
-                self.currentItem(), QTreeWidget.ScrollHint.PositionAtCenter
-            )
+        if sorting_enabled:
+            self.setSortingEnabled(True)
+
+        current_item: Optional[QTreeWidgetItem] = self.currentItem()
+        if current_item is not None:
+            self.scrollToItem(current_item, QTreeWidget.ScrollHint.PositionAtCenter)
+
+    def update_string(self, string: String) -> None:
+        """
+        Updates a string item.
+
+        Args:
+            string (String): The string to update.
+        """
+
+        item: StringItem = self.__string_items[string]
+        item.update()
 
     def go_to_modfile(self, modfile: Path) -> None:
         """
@@ -176,7 +184,7 @@ class StringsWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.update_displayed_strings()
+        self.__update_displayed_strings()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
@@ -187,7 +195,7 @@ class StringsWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter
-        self.update_displayed_strings()
+        self.__update_displayed_strings()
 
     def get_selected_strings(self) -> StringList:
         """
@@ -213,7 +221,20 @@ class StringsWidget(QTreeWidget):
             item: string for string, item in self.__string_items.items()
         }
 
-        return items.get(self.currentItem())
+        current_item: Optional[QTreeWidgetItem] = self.currentItem()
+        return items.get(current_item) if current_item is not None else None
+
+    def get_visible_strings(self) -> StringList:
+        """
+        Gets a list of all currently visible strings.
+
+        Returns:
+            StringList: List of visible strings
+        """
+
+        return [
+            string for string, item in self.__string_items.items() if not item.isHidden()
+        ]
 
     def get_visible_string_count(self) -> int:
         """
@@ -255,12 +276,12 @@ class StringsWidget(QTreeWidget):
             Optional[String]: The string or None if not found.
         """
 
-        items: list[QTreeWidgetItem] = self.__get_items(only_visible)
+        items: list[StringItem] = self.__get_items(only_visible)
 
         if index >= len(items):
             return None
 
-        string_items: dict[QTreeWidgetItem, String] = {
+        string_items: dict[StringItem, String] = {
             item: string for string, item in self.__string_items.items()
         }
 

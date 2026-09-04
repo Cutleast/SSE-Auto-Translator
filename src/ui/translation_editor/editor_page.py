@@ -116,10 +116,11 @@ class EditorPage(QSplitter):
 
         # Check if item is a top level item
         tab: EditorTab
-        if item.parent() is None:  # type: ignore
+        parent_item: Optional[QTreeWidgetItem] = item.parent()
+        if parent_item is None:
             tab = tabs[item]
         else:
-            tab = tabs[item.parent()]
+            tab = tabs[parent_item]
             tab.go_to_modfile(Path(item.text(0)))
 
         self.__page_widget.setCurrentWidget(tab)
@@ -151,10 +152,8 @@ class EditorPage(QSplitter):
 
         return [tab for tab, _ in self.__tabs.values()]
 
-    def __update(self) -> None:
+    def __update_tab_labels(self) -> None:
         for tab, item in self.__tabs.values():
-            tab.update()
-
             if tab.changes_pending and not item.text(0).endswith("*"):
                 item.setText(0, item.text(0) + "*")
             else:
@@ -202,7 +201,7 @@ class EditorPage(QSplitter):
             self.__set_tab(self.tabs[-1])
 
         self.tab_count_updated.emit(len(self.tabs))
-        self.__update()
+        self.__update_tab_labels()
 
     def open_translation(self, translation: Translation) -> None:
         """
@@ -254,4 +253,4 @@ class EditorPage(QSplitter):
         self.__set_tab(self.tabs[-1])
 
         self.tab_count_updated.emit(len(self.tabs))
-        self.__update()
+        self.__update_tab_labels()
