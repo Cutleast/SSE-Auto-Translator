@@ -53,7 +53,6 @@ class StringListWidget(QWidget):
     __nested: bool
     __translation_mode: bool
     __string_items: ReferenceDict[String, TreeItem[String]]
-    __rendered_columns: frozenset[StringsColumns]
 
     __state_filter: Optional[list[StringStatus]] = None
     __text_filter: Optional[tuple[str, bool]] = None
@@ -80,11 +79,6 @@ class StringListWidget(QWidget):
         self.__strings = strings
         self.__nested = isinstance(strings, dict)
         self.__translation_mode = translation_mode
-        self.__rendered_columns = (
-            frozenset(StringsColumns)
-            if translation_mode
-            else frozenset((StringsColumns.Id, StringsColumns.Original))
-        )
 
         self.__init_ui()
 
