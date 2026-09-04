@@ -335,7 +335,9 @@ class ModInstanceMenu(TreeMenu):
         )
 
         # translation-related actions only visible if a translation is installed
-        self.__show_untranslated_strings_action.setVisible(translation_installed)
+        self.__show_untranslated_strings_action.setVisible(
+            translation_installed and isinstance(current_item, ModFile)
+        )
         self.__show_translation_action.setVisible(translation_installed)
         self.__show_translation_strings_action.setVisible(translation_installed)
         self.__edit_translation_action.setVisible(translation_installed)
