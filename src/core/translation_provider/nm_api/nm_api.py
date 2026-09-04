@@ -521,8 +521,7 @@ class NexusModsApi(ProviderApi):
 
         except FileNotFoundError:
             self.log.warning(
-                f"Failed to get file contents: No content preview for '{file_name}' "
-                "available."
+                f"Failed to get file contents: No content preview at '{url}' available."
             )
             return None
 
