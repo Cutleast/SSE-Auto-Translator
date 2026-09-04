@@ -6,7 +6,9 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
+from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
@@ -30,7 +32,7 @@ class StringsWidget(QTreeWidget):
     but they're mutable and their hash may change.
     """
 
-    __modfile_items: dict[Path, QTreeWidgetItem]
+    __modfile_items: dict[Path, TreeItem[ImmutableValue[Path]]]
     """
     Mapping of mod file names to their tree items.
     """
@@ -76,7 +78,7 @@ class StringsWidget(QTreeWidget):
         for modfile, modfile_strings in sorted(
             strings.items(), key=lambda p: p[0].name.lower()
         ):
-            modfile_item = QTreeWidgetItem([str(modfile)])
+            modfile_item = TreeItem(ImmutableValue(modfile), StringsColumns)
             self.__modfile_items[modfile] = modfile_item
 
             for string in modfile_strings:
@@ -166,7 +168,7 @@ class StringsWidget(QTreeWidget):
                 The path of the mod file, relative to the game's "Data" folder.
         """
 
-        item: QTreeWidgetItem = self.__modfile_items[modfile]
+        item: TreeItem[ImmutableValue[Path]] = self.__modfile_items[modfile]
         item.setSelected(True)
         self.setCurrentItem(item)
         self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)
