@@ -251,18 +251,10 @@ class StringListWidget(QWidget):
         item: QTreeWidgetItem
         if self.__nested and isinstance(self.__strings, dict):
             for separator_name, strings in self.__strings.items():
-                separator_item = TreeItem(
-                    ImmutableValue(separator_name),
-                    StringsColumns,
-                    rendered_columns=self.__rendered_columns,
-                )
+                separator_item = TreeItem(ImmutableValue(separator_name), StringsColumns)
 
                 for string in strings:
-                    item = TreeItem(
-                        string,
-                        StringsColumns,
-                        rendered_columns=self.__rendered_columns,
-                    )
+                    item = TreeItem(string, StringsColumns)
                     separator_item.addChild(item)
                     self.__string_items[string] = item
 
@@ -271,11 +263,7 @@ class StringListWidget(QWidget):
 
         elif isinstance(self.__strings, list):
             for string in self.__strings:
-                item = TreeItem(
-                    string,
-                    StringsColumns,
-                    rendered_columns=self.__rendered_columns,
-                )
+                item = TreeItem(string, StringsColumns)
                 self.__string_items[string] = item
                 self.__strings_widget.addTopLevelItem(item)
 
