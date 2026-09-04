@@ -26,8 +26,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
-
 Report: TypeAlias = dict[str, Exception]
 """Type alias for a dict mapping an item display name and an exception."""
 
@@ -119,7 +117,6 @@ class ReportDialog(QDialog):
             self.__item_list.addTopLevelItem(item)
 
         self.__item_num_label.setText(str(len(self.__report)))
-        self.__search_bar.setLiveMode(len(self.__report) < STRING_AUTO_SEARCH_THRESHOLD)
 
     def __on_item_activated(self, item: QTreeWidgetItem, prev: QTreeWidgetItem) -> None:
         self.__details_box.setPlainText(format_exception(self.__report[item.text(0)]))
