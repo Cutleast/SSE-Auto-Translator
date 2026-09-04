@@ -8,7 +8,7 @@ from typing import Optional
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QKeySequence
+from PySide6.QtGui import QFont, QKeySequence
 from PySide6.QtWidgets import (
     QHeaderView,
     QMessageBox,
@@ -159,6 +159,10 @@ class EditorPage(QSplitter):
             else:
                 item.setText(0, item.text(0).removesuffix("*"))
 
+            font: QFont = item.font(0)
+            font.setItalic(tab.changes_pending)
+            item.setFont(0, font)
+
     def close_translation(self, translation: Translation, silent: bool = False) -> None:
         """
         Closes all tabs belonging to a translation.
@@ -214,6 +218,9 @@ class EditorPage(QSplitter):
         # Create new tab if translation is not already open
         if translation not in self.__tabs:
             translation_item = QTreeWidgetItem([translation.name])
+            translation_item.setFont(
+                0, ThemeManager.get().theme.texts.emphasized.as_qfont()
+            )
 
             translation_tab = EditorTab(
                 translation=translation,
@@ -221,6 +228,7 @@ class EditorPage(QSplitter):
                 user_data=self.__user_data,
                 translator_service=self.__translator_service,
             )
+            translation_tab.changed_signal.connect(self.__update_tab_labels)
             translation_tab.close_signal.connect(self.close_translation)
             self.__tabs[translation] = translation_tab, translation_item
             self.__page_widget.addWidget(translation_tab)

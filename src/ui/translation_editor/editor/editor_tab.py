@@ -52,6 +52,11 @@ class EditorTab(QWidget):
     Class for editor tabs.
     """
 
+    changed_signal = Signal()
+    """
+    This signal gets emitted when the tab has unsaved changes.
+    """
+
     close_signal = Signal(Translation)
     """
     This signal gets emitted when tab is to be closed.
@@ -316,6 +321,7 @@ class EditorTab(QWidget):
             self.__strings_widget.update_string(changed_string)
 
         self.__update_metadata()
+        self.changed_signal.emit()
 
     def __update_metadata(self) -> None:
         if self.__editor.changes_pending:
@@ -352,7 +358,8 @@ class EditorTab(QWidget):
         """
 
         self.__editor.save()
-        self.update()
+        self.__update_metadata()
+        self.changed_signal.emit()
 
     def __apply_database(self) -> None:
         """
