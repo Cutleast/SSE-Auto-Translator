@@ -58,6 +58,7 @@ class MainToolBar(QToolBar):
     export_states_requested = Signal()
     """Signal when the user clicks on the export states action."""
 
+    __filter_action: QAction
     __filter_menu: Menu
     __state_filter_items: dict[TranslationStatus, QCheckBox]
     __type_filter_items: dict[FileType, QCheckBox]
@@ -222,15 +223,38 @@ class MainToolBar(QToolBar):
 
             self.__state_filter_items[status] = filter_box
 
-        filter_action = self.addAction(self.tr("Filter options"))
-        IconProvider.bind_qta_icon(filter_action, filter_action.setIcon, "mdi6.filter")
-        filter_action.setMenu(self.__filter_menu)
-        filter_action.triggered.connect(
-            lambda: cast(QToolButton, self.widgetForAction(filter_action)).showMenu()
+        self.__filter_action = self.addAction(self.tr("Filter options"))
+        IconProvider.bind_qta_icon(
+            self.__filter_action, self.__filter_action.setIcon, "mdi6.filter"
         )
-        self.addAction(filter_action)
+        self.__filter_action.setCheckable(True)
+        self.__filter_action.setMenu(self.__filter_menu)
+        self.__filter_action.triggered.connect(self.__on_filter_action_triggered)
+        self.addAction(self.__filter_action)
+
+    def __on_filter_action_triggered(self) -> None:
+        # reverse the checked state
+        self.__filter_action.setChecked(not self.__filter_action.isChecked())
+
+        cast(QToolButton, self.widgetForAction(self.__filter_action)).showMenu()
+
+    def __on_filter_change(self, *args: Any) -> None:
+        state_filter_active: bool = (
+            len(
+                {checkbox.isChecked() for checkbox in self.__state_filter_items.values()}
+            )
+            > 1
+        )
+        type_filter_active: bool = (
+            len({checkbox.isChecked() for checkbox in self.__type_filter_items.values()})
+            > 1
+        )
+
+        self.__filter_action.setChecked(state_filter_active or type_filter_active)
 
     def __on_state_filter_change(self, *args: Any) -> None:
+        self.__on_filter_change()
+
         self.state_filter_changed.emit(
             [
                 status
@@ -251,6 +275,8 @@ class MainToolBar(QToolBar):
         self.__download_action.setEnabled(enabled)
 
     def __on_type_filter_change(self, *args: Any) -> None:
+        self.__on_filter_change()
+
         self.type_filter_changed.emit(
             [
                 file_type
