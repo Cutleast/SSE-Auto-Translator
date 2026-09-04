@@ -14,6 +14,7 @@ from cutleast_core_lib.ui.progress.widget import ProgressWidget
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import QHBoxLayout, QPushButton, QWidget
 
@@ -71,7 +72,7 @@ class DownloadItemWidget(QWidget):
         self.__progress_widget = ProgressWidget()
         self.__hlayout.addWidget(self.__progress_widget, stretch=1)
 
-        self.__cancel_button = QPushButton()
+        self.__cancel_button = IconButton()
         IconProvider.bind_qta_icon(
             self.__cancel_button, self.__cancel_button.setIcon, "mdi6.cancel"
         )
@@ -88,13 +89,13 @@ class DownloadItemWidget(QWidget):
 
         self.__status_label = ElidedLabel()
         self.__status_label.setProperty("monospace", True)
-        self.__hlayout.addWidget(self.__status_label)
+        self.__hlayout.addWidget(self.__status_label, stretch=1)
 
         self.__copy_button = CopyButton()
         self.__copy_button.setProperty("transparent", True)
         self.__hlayout.addWidget(self.__copy_button)
 
-        self.__remove_button = QPushButton()
+        self.__remove_button = IconButton()
         IconProvider.bind_qta_icon(
             self.__remove_button, self.__remove_button.setIcon, "mdi6.close"
         )
