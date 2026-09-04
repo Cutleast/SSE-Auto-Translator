@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import os
 import re
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.theme.manager import ThemeManager
@@ -38,7 +38,6 @@ from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
-from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
 from ui.string_list.columns import StringsColumns
 from ui.widgets.stacked_bar import StackedBar
 
@@ -102,7 +101,7 @@ class EditorTab(QWidget):
             database=user_data.database,
             translator_service=translator_service,
         )
-        self.__editor.update_signal.connect(self.update)
+        self.__editor.strings_changed.connect(self.__on_strings_changed)
 
         self.__init_ui()
         self.__init_shortcuts()
@@ -145,11 +144,7 @@ class EditorTab(QWidget):
         self.__init_header()
         self.__init_strings_widget()
         self.__init_context_menu()
-        self.update()
-
-        self.__search_bar.setLiveMode(
-            len(self.__editor.all_strings) <= STRING_AUTO_SEARCH_THRESHOLD
-        )
+        self.__update_metadata()
 
     def __init_header(self) -> None:
         self.__tool_bar = EditorToolbar()
@@ -273,26 +268,6 @@ class EditorTab(QWidget):
 
         self.__editor.apply_to_matching_strings(original, translation)
 
-    def get_string_states_summary(self) -> dict[StringStatus, int]:
-        """
-        Get a summary of string states.
-
-        Returns:
-            dict[StringStatus, int]:
-                Dictionary of string states and number of strings in each state
-        """
-
-        return {
-            state: len(
-                [
-                    string
-                    for string in self.__editor.all_strings
-                    if string.status == state
-                ]
-            )
-            for state in StringStatus
-        }
-
     def get_visible_string_count(self) -> int:
         """
         Gets the number of visible strings.
@@ -334,22 +309,24 @@ class EditorTab(QWidget):
         )
         return string
 
-    @override
-    def update(self) -> None:  # type: ignore
-        """
-        Updates visible string list.
-        """
+    def __on_strings_changed(self, changed_strings: StringList) -> None:
+        for changed_string in changed_strings:
+            self.__strings_widget.update_string(changed_string)
 
-        self.__strings_widget.update_displayed_strings()
+        self.__update_metadata()
 
+    def __update_metadata(self) -> None:
         if self.__editor.changes_pending:
             self.__title_label.setText(self.__translation.name + "*")
         else:
             self.__title_label.setText(self.__translation.name)
 
-        summary: dict[StringStatus, int] = self.get_string_states_summary()
+        visible_strings: StringList = self.__strings_widget.get_visible_strings()
+        summary: dict[StringStatus, int] = self.__editor.get_string_states_summary(
+            visible_strings
+        )
 
-        self.__strings_num_label.setText(str(self.get_visible_string_count()))
+        self.__strings_num_label.setText(str(len(visible_strings)))
         self.__bar_chart.setValues(list(summary.values()))
         self.__bar_chart.setColors([s.get_base_color() for s in StringStatus])
 
@@ -587,7 +564,7 @@ class EditorTab(QWidget):
         clipboard_text = ""
         for string in selected_strings:
             for col in StringsColumns.get_columns(type(string)):
-                clipboard_text += col.display_text_getter(string) + "\t"
+                clipboard_text += col.get_copy_text(string) + "\t"
 
             clipboard_text = clipboard_text.rstrip("\t")
             clipboard_text += "\n"
@@ -604,7 +581,7 @@ class EditorTab(QWidget):
         """
 
         self.__strings_widget.set_name_filter(name_filter, case_sensitive)
-        self.update()
+        self.__update_metadata()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
@@ -615,7 +592,7 @@ class EditorTab(QWidget):
         """
 
         self.__strings_widget.set_state_filter(state_filter)
-        self.update()
+        self.__update_metadata()
 
     def go_to_modfile(self, modfile: Path) -> None:
         """
