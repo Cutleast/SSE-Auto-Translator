@@ -42,6 +42,7 @@ class EditorToolbar(QToolBar):
     export_requested = Signal()
     """Signal emitted when the user clicks on the export action."""
 
+    __filter_action: QAction
     __filter_menu: Menu
     __filter_items: dict[StringStatus, QCheckBox]
 
@@ -118,22 +119,32 @@ class EditorToolbar(QToolBar):
 
             self.__filter_items[status] = filter_box
 
-        filter_action: QAction = self.addAction(self.tr("Filter options"))
-        IconProvider.bind_qta_icon(filter_action, filter_action.setIcon, "mdi6.filter")
-        filter_action.setMenu(self.__filter_menu)
-        filter_action.triggered.connect(
-            lambda: cast(QToolButton, self.widgetForAction(filter_action)).showMenu()
+        self.__filter_action = self.addAction(self.tr("Filter options"))
+        IconProvider.bind_qta_icon(
+            self.__filter_action, self.__filter_action.setIcon, "mdi6.filter"
         )
-        self.addAction(filter_action)
+        self.__filter_action.setCheckable(True)
+        self.__filter_action.setMenu(self.__filter_menu)
+        self.__filter_action.triggered.connect(self.__on_filter_action_triggered)
+        self.addAction(self.__filter_action)
+
+    def __on_filter_action_triggered(self) -> None:
+        # reverse the checked state
+        self.__filter_action.setChecked(not self.__filter_action.isChecked())
+
+        cast(QToolButton, self.widgetForAction(self.__filter_action)).showMenu()
 
     def __on_filter_change(self, *args: Any) -> None:
-        self.filter_changed.emit(
-            [
-                status
-                for status, filter_box in self.__filter_items.items()
-                if filter_box.isChecked()
-            ]
+        filters: list[StringStatus] = [
+            status
+            for status, filter_box in self.__filter_items.items()
+            if filter_box.isChecked()
+        ]
+
+        self.__filter_action.setChecked(
+            len(filters) != len(self.__filter_items) and len(filters) > 0
         )
+        self.filter_changed.emit(filters)
 
     def set_edit_actions_enabled(self, enabled: bool) -> None:
         """
