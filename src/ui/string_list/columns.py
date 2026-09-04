@@ -21,7 +21,7 @@ SEPARATOR_FONT: Lazy[QFont] = Lazy(
 )
 ID_FONT: Lazy[QFont] = Lazy(lambda: ThemeManager.get().theme.texts.monospace.as_qfont())
 
-MAX_STRING_LENGTH = 200
+MAX_STRING_LENGTH = 100
 
 
 class StringsColumns(ColumnEnum):
