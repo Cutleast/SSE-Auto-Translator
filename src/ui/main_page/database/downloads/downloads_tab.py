@@ -75,6 +75,7 @@ class DownloadsTab(QWidget):
             self.__on_user_action_required
         )
         self.__download_manager.download_failed.connect(self.__on_download_failed)
+        self.__download_manager.progress_updated.connect(self.__on_progress_updated)
 
         self.__downloads_widget.customContextMenuRequested.connect(
             self.__on_context_menu_requested
@@ -199,14 +200,8 @@ class DownloadsTab(QWidget):
             lambda: self.__download_manager.remove_download_item(download)
         )
 
-        def update_callback(payload: ProgressUpdate) -> None:
-            if payload.maximum:
-                download_item.setText(1, scale_value(payload.maximum))
-
-            download_item.update_progress(payload)
-
         self.__download_items[download] = download_item
-        self.__download_manager.add_download_item(download, update_callback)
+        self.__download_manager.add_download_item(download)
 
         self.__update()
 
@@ -232,6 +227,26 @@ class DownloadsTab(QWidget):
 
         download_item: DownloadItem = self.__download_items[download]
         download_item.set_failed(exception)
+
+    def __on_progress_updated(
+        self, download: FileDownload, payload: ProgressUpdate
+    ) -> None:
+        """
+        Updates the UI for the progress of a queued download.
+
+        Args:
+            download (FileDownload): The download whose progress changed.
+            payload (ProgressUpdate): The new progress data.
+        """
+
+        download_item: Optional[DownloadItem] = self.__download_items.get(download)
+        if download_item is None:
+            return
+
+        if payload.maximum:
+            download_item.setText(1, scale_value(payload.maximum))
+
+        download_item.update_progress(payload)
 
     def __remove_item_for_download(self, download: FileDownload) -> None:
         if download not in self.__download_items:

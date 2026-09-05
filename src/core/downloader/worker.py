@@ -9,10 +9,7 @@ from queue import Empty, Queue
 from typing import override
 
 from cutleast_core_lib.core.downloader import Downloader
-from cutleast_core_lib.core.multithreading.progress import (
-    ProgressUpdate,
-    UpdateCallback,
-)
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from PySide6.QtCore import QThread, Signal
 
 from core.config.app_config import AppConfig
@@ -89,7 +86,16 @@ class Worker(QThread):
         Exception: The exception that caused the failure.
     """
 
-    __download_queue: Queue[tuple[FileDownload, UpdateCallback]]
+    progress_updated = Signal(FileDownload, ProgressUpdate)
+    """
+    Signal emitted when the progress of a download changed.
+
+    Args:
+        FileDownload: The download whose progress changed.
+        ProgressUpdate: The new progress data.
+    """
+
+    __download_queue: Queue[FileDownload]
     __downloader: Downloader
     __app_config: AppConfig
     __user_config: UserConfig
@@ -99,7 +105,7 @@ class Worker(QThread):
 
     def __init__(
         self,
-        installer_queue: Queue[tuple[FileDownload, UpdateCallback]],
+        installer_queue: Queue[FileDownload],
         thread_id: int,
         app_config: AppConfig,
         user_config: UserConfig,
@@ -109,9 +115,7 @@ class Worker(QThread):
     ) -> None:
         """
         Args:
-            installer_queue (Queue[tuple[FileDownload, UpdateCallback]]):
-                Queue of downloads to process. Each item is a tuple of a `FileDownload`
-                and a `UpdateCallback`.
+            installer_queue (Queue[FileDownload]): Queue of downloads to process.
             thread_id (int): ID of the thread.
             app_config (AppConfig): The application configuration.
             user_config (UserConfig): The user configuration.
@@ -133,16 +137,12 @@ class Worker(QThread):
         self.__database = database
         self.__mod_instance = mod_instance
 
-    def __process_download(
-        self, download: FileDownload, update_callback: UpdateCallback
-    ) -> None:
+    def __process_download(self, download: FileDownload) -> None:
         """
         Processes a file download.
 
         Args:
             download (FileDownload): File to download.
-            update_callback (UpdateCallback):
-                Method or function that is called with a `ProgressUpdate`.
         """
 
         file_name: str = download.mod_details.file_name
@@ -180,20 +180,26 @@ class Worker(QThread):
             self.waiting = False
 
             self.log.info("Downloading translation...")
-            update_callback(
+            self.progress_updated.emit(
+                download,
                 ProgressUpdate(
                     status_text=self.tr("Downloading translation..."), value=0, maximum=0
-                )
+                ),
             )
             self.download_started.emit(download)
 
-            self.__downloader.download(url, downloads_folder, file_name, update_callback)
+            self.__downloader.download(
+                url,
+                downloads_folder,
+                file_name,
+                lambda update: self.progress_updated.emit(download, update),
+            )
             self.log.info(f"Downloaded translation to '{mod_file}'.")
         else:
             self.log.info("Translation already downloaded.")
 
         if mod_file.is_file():
-            self.__install_translation(download, mod_file, update_callback)
+            self.__install_translation(download, mod_file)
         else:
             raise DownloadFailedError
 
@@ -204,13 +210,13 @@ class Worker(QThread):
         self,
         download: FileDownload,
         downloaded_file: Path,
-        update_callback: UpdateCallback,
     ) -> None:
         self.log.info("Installing translation...")
-        update_callback(
+        self.progress_updated.emit(
+            download,
             ProgressUpdate(
                 status_text=self.tr("Installing translation..."), value=0, maximum=0
-            )
+            ),
         )
 
         try:
@@ -261,14 +267,14 @@ class Worker(QThread):
             try:
                 # Wait at max 1 second for a download or just repeat the loop
                 # while the thread is set to running
-                download, update_callback = self.__download_queue.get(timeout=1)
+                download = self.__download_queue.get(timeout=1)
             except Empty:
                 continue
 
             if not download.stale:
                 self.processing = True
                 try:
-                    self.__process_download(download, update_callback)
+                    self.__process_download(download)
                 except Exception as ex:
                     self.log.error(
                         f"Failed to process translation '{download.mod_details.file_name}':"

@@ -95,6 +95,15 @@ class DownloadManager(QObject):
         Exception: The exception that caused the failure.
     """
 
+    progress_updated = Signal(FileDownload, ProgressUpdate)
+    """
+    Signal emitted when the progress of a download changed.
+
+    Args:
+        FileDownload: The download whose progress changed.
+        ProgressUpdate: The new progress data.
+    """
+
     finished = Signal()
     """
     Signal emitted when all worker threads have finished.
@@ -106,7 +115,7 @@ class DownloadManager(QObject):
     """
 
     __thread_num: int
-    __queue: Queue[tuple[FileDownload, UpdateCallback]]
+    __queue: Queue[FileDownload]
     __workers: list[Worker]
     __running: bool
 
@@ -224,6 +233,7 @@ class DownloadManager(QObject):
             worker.download_finished.connect(self.download_finished.emit)
             worker.user_action_required.connect(self.user_action_required.emit)
             worker.download_failed.connect(self.download_failed.emit)
+            worker.progress_updated.connect(self.progress_updated.emit)
             worker.start()
 
         self.log.info("Threads started, ready for downloads.")
@@ -293,19 +303,15 @@ class DownloadManager(QObject):
 
         self.download_added.emit(download)
 
-    def add_download_item(
-        self, download: FileDownload, update_callback: UpdateCallback
-    ) -> None:
+    def add_download_item(self, download: FileDownload) -> None:
         """
         Adds a download item to the queue.
 
         Args:
             download (FileDownload): Download to add.
-            update_callback (UpdateCallback):
-                Function or method to call with a ProgressUpdate.
         """
 
-        self.__queue.put((download, update_callback))
+        self.__queue.put(download)
 
     def remove_download_item(self, download: FileDownload) -> None:
         """
