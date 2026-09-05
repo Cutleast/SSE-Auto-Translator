@@ -681,29 +681,37 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     </message>
 </context>
 <context>
+    <name>DownloadsMenu</name>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_menu.py" line="37"/>
+        <source>Open mod page...</source>
+        <translation>Modpage öffnen...</translation>
+    </message>
+</context>
+<context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="106"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="116"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="114"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="124"/>
         <source>Running Downloads:</source>
         <translation>Laufende Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Progress</source>
         <translation>Fortschritt</translation>
     </message>

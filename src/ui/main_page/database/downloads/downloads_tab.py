@@ -2,10 +2,12 @@
 Copyright (c) Cutleast
 """
 
-from typing import override
+import webbrowser
+from typing import Optional, cast, override
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.blocking_thread import BlockingThread
+from cutleast_core_lib.core.utilities.reverse_dict import reverse_dict
 from cutleast_core_lib.core.utilities.scale import scale_value
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QAction, QShowEvent
@@ -25,6 +27,7 @@ from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 
 from .download_item import DownloadItem
+from .downloads_menu import DownloadsMenu
 from .downloads_toolbar import DownloadsToolbar
 
 
@@ -42,6 +45,7 @@ class DownloadsTab(QWidget):
     __toolbar: DownloadsToolbar
     __downloads_num_label: QLabel
     __downloads_widget: QTreeWidget
+    __downloads_menu: DownloadsMenu
 
     def __init__(
         self, download_manager: DownloadManager, provider: TranslationProvider
@@ -72,6 +76,11 @@ class DownloadsTab(QWidget):
         )
         self.__download_manager.download_failed.connect(self.__on_download_failed)
 
+        self.__downloads_widget.customContextMenuRequested.connect(
+            self.__on_context_menu_requested
+        )
+        self.__downloads_menu.open_modpage_requested.connect(self.__open_modpage)
+
         self.__nxm_update_timer = QTimer(
             self, interval=1000, timerType=Qt.TimerType.PreciseTimer
         )
@@ -93,6 +102,7 @@ class DownloadsTab(QWidget):
 
         self.__init_header()
         self.__init_downloads_widget()
+        self.__init_context_menu()
 
     def __update(self) -> None:
         self.__downloads_num_label.setText(str(len(self.__download_items)))
@@ -140,6 +150,36 @@ class DownloadsTab(QWidget):
         )
         self.__downloads_widget.setUniformRowHeights(True)
         self.__vlayout.addWidget(self.__downloads_widget)
+
+    def __init_context_menu(self) -> None:
+        self.__downloads_menu = DownloadsMenu()
+        self.__downloads_widget.setContextMenuPolicy(
+            Qt.ContextMenuPolicy.CustomContextMenu
+        )
+
+    def __get_selected_download(self) -> Optional[FileDownload]:
+        current_item = cast(
+            Optional[DownloadItem], self.__downloads_widget.currentItem()
+        )
+        if current_item is None:
+            return
+
+        items: dict[DownloadItem, FileDownload] = reverse_dict(self.__download_items)
+        return items[current_item]
+
+    def __on_context_menu_requested(self) -> None:
+        selected_download: Optional[FileDownload] = self.__get_selected_download()
+        if selected_download is None:
+            return
+
+        self.__downloads_menu.open(selected_download.source)
+
+    def __open_modpage(self) -> None:
+        selected_download: Optional[FileDownload] = self.__get_selected_download()
+        if selected_download is None:
+            return
+
+        webbrowser.open(selected_download.mod_details.modpage_url)
 
     @override
     def showEvent(self, event: QShowEvent) -> None:

@@ -675,29 +675,37 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
     </message>
 </context>
 <context>
+    <name>DownloadsMenu</name>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_menu.py" line="37"/>
+        <source>Open mod page...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="106"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="116"/>
         <source>Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="114"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="124"/>
         <source>Running Downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="135"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="145"/>
         <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
