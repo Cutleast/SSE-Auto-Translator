@@ -1228,7 +1228,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="494"/>
+        <location filename="src/ui/main_page/main_page.py" line="493"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
@@ -1249,17 +1249,17 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         <translation>SSE-AT muss nach Modlisten-Änderungen neugestartet werden. Änderungen werden nicht automatisch erkannt.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="470"/>
+        <location filename="src/ui/main_page/main_page.py" line="469"/>
         <source>No translation downloads available!</source>
         <translation>Keine Downloads verfügbar!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="471"/>
+        <location filename="src/ui/main_page/main_page.py" line="470"/>
         <source>There are no translations available to download.</source>
         <translation>Es sind keine Übersetzungen zum Herunterladen verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="497"/>
+        <location filename="src/ui/main_page/main_page.py" line="496"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1270,54 +1270,54 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
 Bitte ziehe diesen Ordner in deine Modliste in MO2 oder Vortex und stelle sicher, dass der Dynamic String Distributor installiert ist und beide Mods aktiviert sind!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="507"/>
+        <location filename="src/ui/main_page/main_page.py" line="506"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="509"/>
+        <location filename="src/ui/main_page/main_page.py" line="508"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="512"/>
+        <location filename="src/ui/main_page/main_page.py" line="511"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="545"/>
+        <location filename="src/ui/main_page/main_page.py" line="544"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="553"/>
+        <location filename="src/ui/main_page/main_page.py" line="552"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="555"/>
+        <location filename="src/ui/main_page/main_page.py" line="554"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
 Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="569"/>
+        <location filename="src/ui/main_page/main_page.py" line="568"/>
         <source>Export mod file states...</source>
         <translation>Moddatei-Zustände exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="572"/>
+        <location filename="src/ui/main_page/main_page.py" line="571"/>
         <source>JSON files</source>
         <translation>JSON-Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="590"/>
+        <location filename="src/ui/main_page/main_page.py" line="589"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="591"/>
+        <location filename="src/ui/main_page/main_page.py" line="590"/>
         <source>Successfully exported mod file states to:</source>
         <translation>Moddatei-Zustände erfolgreich an diesen Pfad exportiert:</translation>
     </message>
@@ -1646,32 +1646,32 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="451"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="463"/>
         <source>Creating translations for mods...</source>
         <translation>Übersetzungen werden für Mods erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="461"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="473"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation>Übersetzung für Mod &apos;{mod}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="490"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="502"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation>Übersetzung für Moddatei &apos;{modfile}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="531"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="543"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="566"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="578"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="568"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>

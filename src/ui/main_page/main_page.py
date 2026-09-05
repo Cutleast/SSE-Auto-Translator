@@ -164,7 +164,7 @@ class MainPageWidget(QWidget):
             self.edit_translation_requested.emit
         )
 
-        self.__state_service.update_signal.connect(self.__update)
+        self.__state_service.update_signal.connect(lambda _: self.__update())
         ThemeManager.get().theme_changed.connect(lambda _: self.__update_header())
 
         self.__update()
@@ -298,14 +298,13 @@ class MainPageWidget(QWidget):
         num_tooltip = ""
 
         for status, count in modfile_states.items():
-            color: Optional[QColor] = TranslationStatus.get_fg_color(status)
+            color: QColor = TranslationStatus.get_fg_color(status)
 
-            if color is None:
-                num_tooltip += f"<tr><td>{status.get_localized_name()}:\
-                    </td><td align=right>{count}</td></tr>"
-            else:
-                num_tooltip += f"<tr><td><font color='{color.name()}'>{status.get_localized_name()}:\
-                    </font></td><td align=right><font color='{color.name()}'>{count}</font></td></tr>"
+            num_tooltip += (
+                f"<tr><td><font color='{color.name()}'>{status.get_localized_name()}:"
+                f"</font></td><td align=right><font color='{color.name()}'>{count}"
+                "</font></td></tr>"
+            )
 
         self.__modfiles_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)

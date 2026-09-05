@@ -1222,7 +1222,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="494"/>
+        <location filename="src/ui/main_page/main_page.py" line="493"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1243,17 +1243,17 @@ Depending on the translator API this can raise unexpected costs.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="470"/>
+        <location filename="src/ui/main_page/main_page.py" line="469"/>
         <source>No translation downloads available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="471"/>
+        <location filename="src/ui/main_page/main_page.py" line="470"/>
         <source>There are no translations available to download.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="497"/>
+        <location filename="src/ui/main_page/main_page.py" line="496"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1261,53 +1261,53 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="507"/>
+        <location filename="src/ui/main_page/main_page.py" line="506"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="509"/>
+        <location filename="src/ui/main_page/main_page.py" line="508"/>
         <source>Open output mod in Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="512"/>
+        <location filename="src/ui/main_page/main_page.py" line="511"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="545"/>
+        <location filename="src/ui/main_page/main_page.py" line="544"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="553"/>
+        <location filename="src/ui/main_page/main_page.py" line="552"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="555"/>
+        <location filename="src/ui/main_page/main_page.py" line="554"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="569"/>
+        <location filename="src/ui/main_page/main_page.py" line="568"/>
         <source>Export mod file states...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="572"/>
+        <location filename="src/ui/main_page/main_page.py" line="571"/>
         <source>JSON files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="590"/>
+        <location filename="src/ui/main_page/main_page.py" line="589"/>
         <source>Export successful!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="591"/>
+        <location filename="src/ui/main_page/main_page.py" line="590"/>
         <source>Successfully exported mod file states to:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1636,32 +1636,32 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="451"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="463"/>
         <source>Creating translations for mods...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="461"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="473"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="490"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="502"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="531"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="543"/>
         <source>Importing installed translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="566"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="578"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="568"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
         <source>Translation successfully imported into database.</source>
         <translation type="unfinished"></translation>
     </message>

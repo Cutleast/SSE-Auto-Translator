@@ -6,7 +6,7 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, cast, override
+from typing import Optional, cast
 
 from cutleast_core_lib.core.filesystem.utils import open_in_explorer
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
@@ -149,9 +149,11 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.__state_service.update_signal.connect(self.update)
+        self.__state_service.update_signal.connect(self.__on_modfiles_updated)
 
-        ThemeManager.get().theme_changed.connect(lambda _: self.update())
+        ThemeManager.get().theme_changed.connect(
+            lambda _: self.__update_item_visibilities()
+        )
 
         self.__load_mod_instance()
 
@@ -223,14 +225,26 @@ class ModInstanceWidget(QTreeWidget):
                 else:
                     self.addTopLevelItem(mod_item)
 
-        self.update()
+        self.__update_item_visibilities()
 
-    @override
-    def update(self) -> None:  # type: ignore
-        """
-        Updates the displayed modlist.
-        """
+    def __on_modfiles_updated(self, updated_modfiles: list[ModFile]) -> None:
+        for mod, mod_item in self.__mod_items.items():
+            modfile_items: dict[ModFile, TreeItem[ModFile]] = self.__modfile_items.get(
+                mod, {}
+            )
 
+            update_mod_item: bool = False
+            for modfile, item in modfile_items.items():
+                if modfile in updated_modfiles:
+                    item.update()
+                    update_mod_item = True
+
+            if update_mod_item:
+                mod_item.update()
+
+        self.__update_item_visibilities()
+
+    def __update_item_visibilities(self) -> None:
         name_filter: Optional[str] = (
             self.__name_filter[0] if self.__name_filter else None
         )
@@ -268,7 +282,6 @@ class ModInstanceWidget(QTreeWidget):
                         modfile.name, name_filter, case_sensitive or False
                     )
                 )
-                item.update()
 
             mod_item.setHidden(
                 (
@@ -281,7 +294,6 @@ class ModInstanceWidget(QTreeWidget):
                     and not are_children_visible(mod_item)
                 )
             )
-            mod_item.update()
 
         self.setSortingEnabled(True)  # re-enable sorting after updating
 
@@ -333,7 +345,7 @@ class ModInstanceWidget(QTreeWidget):
             self.__user_data.masterlist.add_to_ignore_list(modfile.name)
 
         self.__user_data.user_config.save()
-        self.update()
+        self.__update_item_visibilities()
 
     def __open_modpage(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -695,7 +707,7 @@ class ModInstanceWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.update()
+        self.__update_item_visibilities()
 
     def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
         """
@@ -706,7 +718,7 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter if state_filter else None
-        self.update()
+        self.__update_item_visibilities()
 
     def set_type_filter(self, type_filter: list[FileType]) -> None:
         """
@@ -717,7 +729,7 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         self.__type_filter = type_filter if type_filter else None
-        self.update()
+        self.__update_item_visibilities()
 
     def get_visible_modfiles(self, only_checked: bool = True) -> list[ModFile]:
         """
