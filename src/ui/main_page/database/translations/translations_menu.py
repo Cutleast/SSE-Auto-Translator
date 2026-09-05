@@ -156,7 +156,7 @@ class TranslationsMenu(TreeMenu):
         target.addAction(self.__delete_translation_action)
 
     @override
-    def open(
+    def open(  # pyright: ignore[reportIncompatibleMethodOverride]
         self,
         current_item: Optional[Translation | Path],
         is_source_available: Callable[[Source], bool],
