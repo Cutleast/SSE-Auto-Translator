@@ -2697,24 +2697,44 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="51"/>
+        <location filename="src/ui/settings/translator_settings.py" line="54"/>
         <source>Translator API</source>
         <translation>Übersetzer-API</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="53"/>
+        <location filename="src/ui/settings/translator_settings.py" line="56"/>
         <source>Translator API key</source>
         <translation>Übersetzer API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="72"/>
+        <location filename="src/ui/settings/translator_settings.py" line="66"/>
+        <source>Gemini system prompt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="71"/>
+        <source>The selected target language is appended automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="98"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
         <translation>Nach Bestätigung fragen, bevor eine Massenübersetzung gestartet wird</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="89"/>
+        <location filename="src/ui/settings/translator_settings.py" line="116"/>
         <source>An API key is required for DeepL translator!</source>
-        <translation>Ein API-Schlüssel ist für den DeepL-Übersetzer erforderlich!</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="123"/>
+        <source>An API key is required for Gemini translator!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="130"/>
+        <source>A system prompt is required for Gemini translator!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3134,6 +3154,41 @@ Löse diese in Vortex auf und versuche es erneut.</translation>
         <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/exceptions.py" line="36"/>
         <source>Cannot install MO2 when a global instance is selected as destination!</source>
         <translation>MO2 kann nicht installiert werden, wenn eine globale Instanz als Ziel ausgewählt wurde!</translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="17"/>
+        <source>Gemini translation failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="25"/>
+        <source>Gemini API key is required!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="33"/>
+        <source>Gemini system prompt is required!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="41"/>
+        <source>Gemini API request failed: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="49"/>
+        <source>Could not reach the Gemini API.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="57"/>
+        <source>Gemini API returned an unexpected response.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="67"/>
+        <source>Gemini API returned an empty translation.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
