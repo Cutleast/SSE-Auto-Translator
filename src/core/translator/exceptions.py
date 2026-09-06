@@ -14,6 +14,8 @@ class GeminiError(LocalizedException):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized generic Gemini failure message."""
+
         return QApplication.translate("exceptions", "Gemini translation failed!")
 
 
@@ -22,6 +24,8 @@ class GeminiApiKeyMissingError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized missing API key message."""
+
         return QApplication.translate("exceptions", "Gemini API key is required!")
 
 
@@ -30,6 +34,8 @@ class GeminiPromptMissingError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized missing system prompt message."""
+
         return QApplication.translate("exceptions", "Gemini system prompt is required!")
 
 
@@ -38,6 +44,8 @@ class GeminiRequestError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized rejected request message."""
+
         return QApplication.translate("exceptions", "Gemini API request failed: {0}")
 
 
@@ -46,6 +54,8 @@ class GeminiNetworkError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized network failure message."""
+
         return QApplication.translate("exceptions", "Could not reach the Gemini API.")
 
 
@@ -54,6 +64,8 @@ class GeminiUnexpectedResponseError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized malformed response message."""
+
         return QApplication.translate(
             "exceptions", "Gemini API returned an unexpected response."
         )
@@ -64,6 +76,8 @@ class GeminiEmptyTranslationError(GeminiError):
 
     @override
     def getLocalizedMessage(self) -> str:
+        """Returns the localized empty translation message."""
+
         return QApplication.translate(
             "exceptions", "Gemini API returned an empty translation."
         )

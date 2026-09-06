@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import json
 from typing import Any, ClassVar, final, override
 
 import requests
@@ -39,6 +40,8 @@ class GeminiTranslator(Translator):
 
     @override
     def __init__(self, config: TranslatorConfig) -> None:
+        """Initializes Gemini with the configured API key and system prompt."""
+
         super().__init__(config)
 
         if config.api_key is None or not config.api_key.strip():
@@ -93,9 +96,13 @@ class GeminiTranslator(Translator):
                 },
                 json=payload,
                 timeout=GeminiTranslator.REQUEST_TIMEOUT,
+                allow_redirects=False,
             )
         except requests.RequestException as ex:
             raise GeminiNetworkError() from ex
+
+        if 300 <= response.status_code < 400:
+            raise GeminiRequestError(f"HTTP {response.status_code}")
 
         try:
             response.raise_for_status()
@@ -109,11 +116,11 @@ class GeminiTranslator(Translator):
             parts: Any = candidates[0]["content"]["parts"]
             translated: str = "".join(
                 part.get("text", "") for part in parts if isinstance(part, dict)
-            ).strip()
+            )
         except (KeyError, IndexError, TypeError, ValueError) as ex:
             raise GeminiUnexpectedResponseError() from ex
 
-        if not translated:
+        if not translated.strip():
             raise GeminiEmptyTranslationError()
 
         return translated
@@ -122,14 +129,23 @@ class GeminiTranslator(Translator):
     def get_cache_id(self, text: str, dst: GameLanguage) -> str:
         """Includes the model and editable prompt in Gemini cache IDs."""
 
-        data: str = (
-            f"{self.__class__.__name__}-{GeminiTranslator.MODEL}-"
-            f"{self.__prompt}-{text}-{dst.name}"
+        data: str = json.dumps(
+            [
+                self.__class__.__name__,
+                GeminiTranslator.MODEL,
+                self.__prompt,
+                text,
+                dst.name,
+            ],
+            ensure_ascii=False,
+            separators=(",", ":"),
         )
         return sha256_hash(data.encode())
 
     @staticmethod
     def __get_error_message(response: requests.Response) -> str:
+        """Extracts a useful error message from a Gemini API response."""
+
         try:
             data: Any = response.json()
             message: Any = data.get("error", {}).get("message")

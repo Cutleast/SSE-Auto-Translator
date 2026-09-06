@@ -82,9 +82,13 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
     @staticmethod
     def __requires_api_key(translator_api: TranslatorApi) -> bool:
+        """Returns whether the selected translator requires an API key."""
+
         return translator_api in (TranslatorApi.DeepL, TranslatorApi.Gemini)
 
     def __set_translator_fields_enabled(self, translator_api: TranslatorApi) -> None:
+        """Updates API-specific settings when the selected translator changes."""
+
         api_key_required = self.__requires_api_key(translator_api)
         self.__api_key_label.setEnabled(api_key_required)
         self.__api_key_entry.setEnabled(api_key_required)

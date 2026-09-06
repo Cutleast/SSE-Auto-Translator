@@ -18,7 +18,13 @@ class TranslatorConfig(BaseConfig):
         "You are a professional localization translator for The Elder Scrolls V: "
         "Skyrim and Skyrim mods. Use established Skyrim and The Elder Scrolls "
         "terminology, lore, names, and the appropriate in-game style. Preserve line "
-        "breaks, formatting, placeholders, markup, and control sequences exactly."
+        "breaks, formatting, placeholders, markup, and control sequences exactly. "
+        "When translating into Russian, use informal singular forms of 'you' (ты, "
+        "тебя, тебе, тобой, твой, and related forms) by default. Use formal 'вы' "
+        "forms only when the context clearly requires respectful address, such as "
+        "speaking to an adult stranger, a jarl, thane, king, queen, or another "
+        "high-ranking character. Use plural 'вы' forms when 'you' clearly addresses "
+        "multiple people, as in 'you guys'."
     )
     """Default system prompt used for Gemini translations."""
 

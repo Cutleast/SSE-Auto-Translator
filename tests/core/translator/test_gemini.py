@@ -58,6 +58,9 @@ class TestGeminiTranslator:
         system_instruction: str = request_json["systemInstruction"]["parts"][0]["text"]
         assert "Skyrim" in system_instruction
         assert "Russian" in system_instruction
+        assert "ты" in system_instruction
+        assert "jarl" in system_instruction
+        assert "multiple people" in system_instruction
 
     def test_uses_custom_prompt(
         self, requests_mock: requests_mock_module.Mocker
@@ -99,6 +102,22 @@ class TestGeminiTranslator:
         with pytest.raises(GeminiRequestError, match="API key not valid"):
             translator.translate_uncached("Hello", GameLanguage.Russian)
 
+    def test_rejects_redirects(self, requests_mock: requests_mock_module.Mocker) -> None:
+        """Tests that redirects cannot forward the API key to another host."""
+
+        # given
+        requests_mock.post(
+            GeminiTranslator.API_URL,
+            status_code=302,
+            headers={"Location": "https://example.com"},
+        )
+        translator = GeminiTranslator(self.get_config("test-api-key"))
+
+        # when / then
+        with pytest.raises(GeminiRequestError, match="HTTP 302"):
+            translator.translate_uncached("Hello", GameLanguage.Russian)
+        assert len(requests_mock.request_history) == 1
+
     def test_rejects_unexpected_response(
         self, requests_mock: requests_mock_module.Mocker
     ) -> None:
@@ -127,3 +146,40 @@ class TestGeminiTranslator:
         # when / then
         with pytest.raises(GeminiNetworkError):
             translator.translate_uncached("Hello", GameLanguage.Russian)
+
+    def test_preserves_surrounding_whitespace(
+        self, requests_mock: requests_mock_module.Mocker
+    ) -> None:
+        """Tests that Gemini output whitespace and line breaks are preserved."""
+
+        # given
+        translated = " \nПеревод\n "
+        requests_mock.post(
+            GeminiTranslator.API_URL,
+            json={"candidates": [{"content": {"parts": [{"text": translated}]}}]},
+        )
+        translator = GeminiTranslator(self.get_config("test-api-key"))
+
+        # when / then
+        assert (
+            translator.translate_uncached("Translation", GameLanguage.Russian)
+            == translated
+        )
+
+    def test_cache_id_fields_cannot_collide(self) -> None:
+        """Tests that ambiguous prompt/text boundaries produce different cache IDs."""
+
+        # given
+        first_config = self.get_config("test-api-key")
+        first_config.gemini_prompt = "a-b"
+        second_config = self.get_config("test-api-key")
+        second_config.gemini_prompt = "a"
+
+        # when
+        first_id = GeminiTranslator(first_config).get_cache_id("c", GameLanguage.Russian)
+        second_id = GeminiTranslator(second_config).get_cache_id(
+            "b-c", GameLanguage.Russian
+        )
+
+        # then
+        assert first_id != second_id
