@@ -9,7 +9,7 @@ from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_selector import EnumSelector
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
-from PySide6.QtWidgets import QCheckBox
+from PySide6.QtWidgets import QCheckBox, QPlainTextEdit
 from pytestqt.qtbot import QtBot
 
 from core.config.translator_config import TranslatorConfig
@@ -29,6 +29,10 @@ class TestTranslatorSettings(BaseTest):
         EnumSelector[TranslatorApi],
     )
     API_KEY_ENTRY: tuple[str, type[KeyLineEdit]] = "api_key_entry", KeyLineEdit
+    GEMINI_PROMPT_ENTRY: tuple[str, type[QPlainTextEdit]] = (
+        "gemini_prompt_entry",
+        QPlainTextEdit,
+    )
 
     SHOW_CONFIRMATIONS_BOX: tuple[str, type[QCheckBox]] = (
         "show_confirmations_box",
@@ -61,6 +65,9 @@ class TestTranslatorSettings(BaseTest):
         api_key_entry: KeyLineEdit = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
         )
+        gemini_prompt_entry: QPlainTextEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.GEMINI_PROMPT_ENTRY
+        )
 
         show_confirmations_box: QCheckBox = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.SHOW_CONFIRMATIONS_BOX
@@ -69,9 +76,13 @@ class TestTranslatorSettings(BaseTest):
         # then
         assert api_selector.getCurrentValue() == translator_config.translator
         assert api_key_entry.isEnabled() == (
-            translator_config.translator == TranslatorApi.DeepL
+            translator_config.translator in (TranslatorApi.DeepL, TranslatorApi.Gemini)
         )
         assert (api_key_entry.text().strip() or None) == translator_config.api_key
+        assert gemini_prompt_entry.isEnabled() == (
+            translator_config.translator == TranslatorApi.Gemini
+        )
+        assert gemini_prompt_entry.toPlainText() == translator_config.gemini_prompt
 
         assert (
             show_confirmations_box.isChecked()
@@ -114,4 +125,48 @@ class TestTranslatorSettings(BaseTest):
 
         # when / then
         with pytest.raises(ConfigValidationError, match="API key is required for DeepL"):
+            translator_settings.validate()
+
+    def test_validate_raises_for_missing_gemini_api_key(
+        self, translator_settings: TranslatorSettings
+    ) -> None:
+        """Tests that `validate` requires an API key for Gemini."""
+
+        # given
+        api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_SELECTOR
+        )
+        api_key_entry: KeyLineEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
+        )
+        api_selector.setCurrentValue(TranslatorApi.Gemini)
+        api_key_entry.setText("   ")
+
+        # when / then
+        with pytest.raises(
+            ConfigValidationError, match="API key is required for Gemini"
+        ):
+            translator_settings.validate()
+
+    def test_validate_raises_for_missing_gemini_prompt(
+        self, translator_settings: TranslatorSettings
+    ) -> None:
+        """Tests that `validate` requires a system prompt for Gemini."""
+
+        # given
+        api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_SELECTOR
+        )
+        api_key_entry: KeyLineEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
+        )
+        gemini_prompt_entry: QPlainTextEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.GEMINI_PROMPT_ENTRY
+        )
+        api_selector.setCurrentValue(TranslatorApi.Gemini)
+        api_key_entry.setText("test-api-key")
+        gemini_prompt_entry.setPlainText("   ")
+
+        # when / then
+        with pytest.raises(ConfigValidationError, match="system prompt is required"):
             translator_settings.validate()
