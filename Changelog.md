@@ -1,3 +1,7 @@
+# v3.2.4 (Hotfix)
+
+- Fix SSE-AT not finding any translations due to Nexus Mods updates to mod pages
+
 # v3.2.3
 
 - Fix SSE-AT not finding translations that were uploaded after the introduction of the new upload system
