@@ -10,6 +10,7 @@ from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from pathlib import Path
 from queue import Queue
 from typing import Any, Optional, TypeVar, override
+from urllib.parse import urljoin
 from uuid import uuid4
 
 import bs4
@@ -60,6 +61,8 @@ class NexusModsApi(ProviderApi):
     LANG_OVERRIDES: dict[str, str] = {
         "Mandarin": "Chinese",
         "Simplified Chinese": "Chinese",
+        "Portuguese (Brazil)": "Portuguese",
+        "Spanish (Spain)": "Spanish",
     }
     """Map for languages that are named differently on the Nexus Mods site."""
 
@@ -609,9 +612,7 @@ class NexusModsApi(ProviderApi):
             raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
-        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (
-            f"translations-table-v1-{get_url_identifier(url)}.cache"
-        )
+        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
 
         cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
             cache_file_path, default=None
@@ -643,19 +644,21 @@ class NexusModsApi(ProviderApi):
         requested_language: str = language.strip().casefold()
         available_translations: list[int] = []
         seen_ids: set[int] = set()
-        for tag in parsed.select(
-            "table.translation-table tbody td.table-translation-name a"
-        ):
+        for tag in parsed.select("table.translation-table td.table-translation-name a"):
             lang_name: str = " ".join(tag.get_text(" ", strip=True).split()).casefold()
             lang_name = language_aliases.get(lang_name, lang_name)
             if lang_name != requested_language:
                 continue
 
             href = tag.get("href")
-            if not isinstance(href, str):
+            if not isinstance(href, str) or not href.strip():
+                continue
+            if href.lstrip().startswith(("#", "?")):
                 continue
             try:
-                linked_game_id, translation_id, _ = NexusModsApi.get_ids_from_url(href)
+                linked_game_id, translation_id, _ = NexusModsApi.get_ids_from_url(
+                    urljoin(url, href.strip())
+                )
             except ValueError:
                 continue
             if linked_game_id != game_id or translation_id in seen_ids:

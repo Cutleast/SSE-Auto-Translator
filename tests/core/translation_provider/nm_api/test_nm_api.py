@@ -165,6 +165,11 @@ class TestNexusModsApi(CoreTest):
             (" \n RuSSian \n ", " RUSSIAN ", [42, 43]),
             ("Mandarin", "chinese", [42, 43]),
             ("simplified\n Chinese", "chinese", [42, 43]),
+            ("Portuguese (Brazil)", "portuguese", [42, 43]),
+            ("Spanish (Spain)", "spanish", [42, 43]),
+            ("Portuguese", "portuguese", [42, 43]),
+            ("Spanish", "spanish", [42, 43]),
+            ("Portuguese (Portugal)", "portuguese", []),
             ("Traditional Chinese", "chinese", []),
         ],
     )
@@ -244,9 +249,61 @@ class TestNexusModsApi(CoreTest):
         # then
         assert actual == []
 
-    def test_scrape_ignores_legacy_cache(self, mocker: MockerFixture) -> None:
+    @pytest.mark.parametrize("with_tbody", [True, False])
+    @pytest.mark.parametrize(
+        ("href", "expected"),
+        [
+            ("https://www.nexusmods.com/skyrimspecialedition/mods/42", [42]),
+            ("/skyrimspecialedition/mods/42", [42]),
+            ("42", [42]),
+            ("//www.nexusmods.com/skyrimspecialedition/mods/42", [42]),
+            ("https://example.com/skyrimspecialedition/mods/42", []),
+            ("/skyrim/mods/42", []),
+            ("", []),
+            (" ", []),
+            ("#translations", []),
+            ("?tab=description", []),
+            ("https://[invalid", []),
+        ],
+    )
+    def test_scrape_optional_tbody_and_relative_links(
+        self,
+        mocker: MockerFixture,
+        with_tbody: bool,
+        href: str,
+        expected: list[int],
+    ) -> None:
         """
-        Tests that legacy cached HTML cannot hide newly available translations.
+        Tests equivalent table markup and safe resolution of relative links.
+
+        Args:
+            mocker (MockerFixture): Mocking fixture.
+            with_tbody (bool): Whether the table contains an explicit body.
+            href (str): Link target in the translation cell.
+            expected (list[int]): Expected matching translation IDs.
+        """
+
+        # given
+        rows: str = (
+            '<tr><td class="table-translation-name">'
+            f'<a href="{href}">Russian</a></td></tr>'
+        )
+        if with_tbody:
+            rows = f"<tbody>{rows}</tbody>"
+        html: str = f'<table class="translation-table">{rows}</table>'
+        mocker.patch.object(
+            Cache, "get_from_cache", return_value=Mock(content=html.encode())
+        )
+
+        # when
+        actual: list[int] = self.__scrape(NexusModsApi(), "russian")
+
+        # then
+        assert actual == expected
+
+    def test_scrape_reuses_existing_cache_key(self, mocker: MockerFixture) -> None:
+        """
+        Tests that fetched pages are saved and reused with the existing cache key.
 
         Args:
             mocker (MockerFixture): Mocking fixture.
@@ -255,11 +312,8 @@ class TestNexusModsApi(CoreTest):
         # given
         url: str = "https://www.nexusmods.com/skyrimspecialedition/mods/123"
         identifier: str = get_url_identifier(url)
-        old_path: Path = ProviderApi.CACHE_FOLDER / f"{identifier}.cache"
-        new_path: Path = ProviderApi.CACHE_FOLDER / (
-            f"translations-table-v1-{identifier}.cache"
-        )
-        cached: dict[Path, Mock] = {old_path: Mock(content=b"legacy page")}
+        cache_path: Path = ProviderApi.CACHE_FOLDER / f"{identifier}.cache"
+        cached: dict[Path, Mock] = {}
 
         def get_cached(path: Path, default: Optional[Mock]) -> Optional[Mock]:
             """
@@ -287,19 +341,19 @@ class TestNexusModsApi(CoreTest):
         self.__scrape(NexusModsApi(), "russian")
 
         # then
-        read_cache.assert_called_once_with(new_path, default=None)
+        read_cache.assert_called_once_with(cache_path, default=None)
         session.return_value.get.assert_called_once()
-        save_cache.assert_called_once_with(new_path, response)
+        save_cache.assert_called_once_with(cache_path, response)
 
         # given
-        cached[new_path] = response
+        cached[cache_path] = response
         read_cache.reset_mock()
 
         # when
         self.__scrape(NexusModsApi(), "russian")
 
         # then
-        read_cache.assert_called_once_with(new_path, default=None)
+        read_cache.assert_called_once_with(cache_path, default=None)
         session.assert_called_once()
         session.return_value.get.assert_called_once()
         save_cache.assert_called_once()

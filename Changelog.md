@@ -1,6 +1,5 @@
 # v3.2.3
 
-- Fix translation discovery after Nexus Mods changed the translations table
 - Fix SSE-AT not finding translations that were uploaded after the introduction of the new upload system
 
 # v3.2.2
