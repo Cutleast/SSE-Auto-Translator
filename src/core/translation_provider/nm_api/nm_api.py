@@ -7,8 +7,10 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import re
 import webbrowser
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from pathlib import Path
 from queue import Queue
 from typing import Any, Optional, TypeVar, override
+from urllib.parse import urljoin
 from uuid import uuid4
 
 import bs4
@@ -58,6 +60,9 @@ class NexusModsApi(ProviderApi):
 
     LANG_OVERRIDES: dict[str, str] = {
         "Mandarin": "Chinese",
+        "Simplified Chinese": "Chinese",
+        "Portuguese (Brazil)": "Portuguese",
+        "Spanish (Spain)": "Spanish",
     }
     """Map for languages that are named differently on the Nexus Mods site."""
 
@@ -607,7 +612,7 @@ class NexusModsApi(ProviderApi):
             raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
-        cache_file_path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
+        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
 
         cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
             cache_file_path, default=None
@@ -632,29 +637,34 @@ class NexusModsApi(ProviderApi):
         html: str = res.content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
 
-        translation_list: Optional[bs4.Tag] = parsed.find(
-            "ul", {"class": "translations"}
-        )
-        if translation_list is None:
-            return []
-
+        language_aliases: dict[str, str] = {
+            name.casefold(): alias.casefold()
+            for name, alias in NexusModsApi.LANG_OVERRIDES.items()
+        }
+        requested_language: str = language.strip().casefold()
         available_translations: list[int] = []
-        for tag in translation_list.children:
-            tag_text: Optional[str] = tag.text
-
-            if not tag_text or tag_text == "\n":
+        seen_ids: set[int] = set()
+        for tag in parsed.select("table.translation-table td.table-translation-name a"):
+            lang_name: str = " ".join(tag.get_text(" ", strip=True).split()).casefold()
+            lang_name = language_aliases.get(lang_name, lang_name)
+            if lang_name != requested_language:
                 continue
 
-            tags: bs4.ResultSet[bs4.Tag] = parsed.find_all(
-                "a", {"class": f"sortme flag flag-{tag_text}"}
-            )
-            urls: list[str] = [tag["href"] for tag in tags]  # type: ignore[misc,index]
-
-            lang_name: str = NexusModsApi.LANG_OVERRIDES.get(tag_text, tag_text).lower()
-            if lang_name == language:
-                available_translations += [
-                    NexusModsApi.get_ids_from_url(url)[1] for url in urls
-                ]
+            href = tag.get("href")
+            if not isinstance(href, str) or not href.strip():
+                continue
+            if href.lstrip().startswith(("#", "?")):
+                continue
+            try:
+                linked_game_id, translation_id, _ = NexusModsApi.get_ids_from_url(
+                    urljoin(url, href.strip())
+                )
+            except ValueError:
+                continue
+            if linked_game_id != game_id or translation_id in seen_ids:
+                continue
+            available_translations.append(translation_id)
+            seen_ids.add(translation_id)
 
         return available_translations
 
