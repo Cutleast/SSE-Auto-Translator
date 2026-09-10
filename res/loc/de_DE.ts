@@ -4,23 +4,23 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="52"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="62"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="47"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="58"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="90"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="86"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="97"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="93"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="109"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="105"/>
         <source>Used Software</source>
         <translation>Verwendete Software</translation>
     </message>
@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="256"/>
+        <location filename="src/app.py" line="255"/>
         <source>Path Limit Enabled</source>
         <translation>Pfadlängenbegrenzung aktiviert</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="258"/>
+        <location filename="src/app.py" line="257"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -281,7 +281,7 @@ Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern kön
 <context>
     <name>BaseApp</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="125"/>
+        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="128"/>
         <source>Stylesheet Editor</source>
         <translation>Stylesheet-Editor</translation>
     </message>
@@ -1013,12 +1013,12 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>ExceptionHandler</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="80"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="86"/>
         <source>An unexpected error occured: </source>
         <translation>Ein Fehler ist aufgetreten: </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="85"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="91"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -1403,17 +1403,17 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="218"/>
+        <location filename="src/ui/main_window.py" line="216"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Logo von Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="227"/>
+        <location filename="src/ui/main_window.py" line="225"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="241"/>
+        <location filename="src/ui/main_window.py" line="236"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -1646,32 +1646,32 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="463"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="471"/>
         <source>Creating translations for mods...</source>
         <translation>Übersetzungen werden für Mods erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="473"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="481"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation>Übersetzung für Mod &apos;{mod}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="502"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="510"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation>Übersetzung für Moddatei &apos;{modfile}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="543"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="551"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="578"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="586"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="580"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="588"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
