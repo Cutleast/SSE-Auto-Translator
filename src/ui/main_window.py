@@ -212,8 +212,6 @@ class MainWindow(QMainWindow):
             messagebox.exec()
 
     def __show_about(self) -> None:
-        from app import App
-
         text: str = self.tr(
             "Created by Cutleast (<a href='https://www.nexusmods.com/users/65733731'>"
             "NexusMods</a> | <a href='https://github.com/cutleast'>GitHub</a> "
@@ -229,9 +227,6 @@ class MainWindow(QMainWindow):
             text += translator_info
 
         AboutDialog(
-            app_name=App.APP_NAME,
-            app_version=App.APP_VERSION,
-            app_icon=App.windowIcon(),
             app_license="Attribution-NonCommercial-NoDerivatives 4.0 International",
             licenses=LICENSES,
             text=text,

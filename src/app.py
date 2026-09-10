@@ -99,7 +99,6 @@ class App(BaseApp, Singleton):
         """
 
         self.setApplicationName(App.APP_NAME)
-        self.setApplicationDisplayName(f"{App.APP_NAME} v{App.APP_VERSION}")
         self.setApplicationVersion(App.APP_VERSION)
         self.setWindowIcon(IconProvider.get_res_icon(ResourceIcon.SSEAT))
 
