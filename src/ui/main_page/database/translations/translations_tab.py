@@ -7,10 +7,12 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
-from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
-from PySide6.QtCore import Signal
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
@@ -18,6 +20,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QMessageBox,
+    QSizePolicy,
     QVBoxLayout,
     QWidget,
 )
@@ -41,7 +44,8 @@ from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from core.utilities.exceptions import NoOriginalModFound
 from core.utilities.filesystem import relative_data_path
-from ui.widgets.string_list.string_list_dialog import StringListWindow
+from ui.string_list.string_list_window import StringListWindow
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .translations_toolbar import TranslationsToolbar
@@ -74,7 +78,7 @@ class TranslationsTab(QWidget):
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
-    __translations_num_label: LCDNumber
+    __translations_num_label: QLabel
     __translations_widget: TranslationsWidget
 
     def __init__(
@@ -130,33 +134,84 @@ class TranslationsTab(QWidget):
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__vlayout)
 
         self.__init_header()
         self.__init_translations_widget()
+        self.__init_footer()
 
     def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__toolbar = TranslationsToolbar()
-        hlayout.addWidget(self.__toolbar)
+        self.__vlayout.addWidget(self.__toolbar)
 
-        hlayout.addStretch()
+        first_action: QAction = self.__toolbar.actions()[0]
 
-        translations_num_label = QLabel(self.tr("Translations:"))
-        translations_num_label.setObjectName("h3")
-        hlayout.addWidget(translations_num_label)
+        title_label = QLabel(self.tr("Database"))
+        title_label.setProperty("title", True)
+        self.__toolbar.insertWidget(first_action, title_label)
 
-        self.__translations_num_label = LCDNumber()
-        self.__translations_num_label.setDigitCount(4)
-        hlayout.addWidget(self.__translations_num_label)
+        language_label = QLabel(self.__database.language.value)
+        language_label.setProperty("subtitle", True)
+        language_label.setAlignment(Qt.AlignmentFlag.AlignVCenter)
+        self.__toolbar.insertWidget(first_action, language_label)
+
+        self.__toolbar.insertSeparator(first_action)
+
+        self.__toolbar.addSeparator()
+
+        translations_num_label = QLabel(self.tr("Installed Translations:"))
+        translations_num_label.setSizePolicy(
+            QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed
+        )
+        translations_num_label.setAlignment(
+            Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter
+        )
+        translations_num_label.setProperty("subtitle", True)
+        self.__toolbar.addWidget(translations_num_label)
+
+        self.__translations_num_label = QLabel()
+        self.__translations_num_label.setProperty("subtitle", True)
+        self.__toolbar.addWidget(self.__translations_num_label)
 
     def __init_translations_widget(self) -> None:
         self.__translations_widget = TranslationsWidget(
             self.__database, self.__provider, self.__mod_instance, self.__app_config
         )
         self.__vlayout.addWidget(self.__translations_widget)
+
+        WidgetStateManager.get().register_state(
+            "translations_widget_header", self.__translations_widget.header()
+        )
+
+    def __init_footer(self) -> None:
+        hlayout = QHBoxLayout()
+        hlayout.setContentsMargins(0, 0, 0, 0)
+        self.__vlayout.addLayout(hlayout)
+
+        info_icon = QLabel()
+        IconProvider.bind_qta_icon(
+            info_icon,
+            lambda icon: info_icon.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon,
+                    ThemeManager.get().theme.metrics.icon,
+                ),
+            ),
+            "mdi6.information",
+            color=IconProvider.Color.Secondary,
+        )
+        hlayout.addWidget(info_icon)
+
+        info_label = QLabel(
+            self.tr(
+                "You can import translations by dragging and dropping mod archives into "
+                "the list above."
+            )
+        )
+        info_label.setProperty("secondary", True)
+        info_label.setWordWrap(True)
+        hlayout.addWidget(info_label, stretch=1)
 
     def __show_vanilla_strings(self) -> None:
         """
@@ -326,7 +381,9 @@ class TranslationsTab(QWidget):
         self.__update_translations_num()
 
     def __update_translations_num(self) -> None:
-        self.__translations_num_label.display(len(self.__database.user_translations))
+        self.__translations_num_label.setText(
+            str(len(self.__database.user_translations))
+        )
 
     def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """

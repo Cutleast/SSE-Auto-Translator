@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from abc import abstractmethod
 from typing import Optional, override
 
+from cutleast_core_lib.ui.widgets.divider import Divider
 from PySide6.QtCore import QEvent, QObject, Qt, Signal
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
@@ -44,6 +45,7 @@ class Page(QWidget):
 
     _vlayout: QVBoxLayout
     _title_label: QLabel
+    _description_label: QLabel
     _back_button: QPushButton
     _next_button: QPushButton
 
@@ -51,11 +53,11 @@ class Page(QWidget):
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
-        self.setObjectName("root")
         self.__init_ui()
 
     def __init_ui(self) -> None:
         self._vlayout = QVBoxLayout()
+        self._vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self._vlayout)
 
         self.__init_header()
@@ -64,16 +66,12 @@ class Page(QWidget):
 
     def __init_header(self) -> None:
         self._title_label = QLabel(self._get_title())
-        self._title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        self._title_label.setObjectName("h1")
-        self._vlayout.addWidget(self._title_label, 0, Qt.AlignmentFlag.AlignHCenter)
-        self._vlayout.addSpacing(25)
+        self._title_label.setProperty("title", True)
+        self._vlayout.addWidget(self._title_label)
 
-        help_label = QLabel(self._get_description())
-        help_label.setWordWrap(True)
-        self._vlayout.addWidget(help_label)
-
-        self._vlayout.addSpacing(25)
+        self._description_label = QLabel(self._get_description())
+        self._description_label.setWordWrap(True)
+        self._vlayout.addWidget(self._description_label)
 
     @abstractmethod
     def _init_form(self) -> None: ...
@@ -86,19 +84,35 @@ class Page(QWidget):
 
     def __init_footer(self) -> None:
         self._vlayout.addStretch()
-        hlayout = QHBoxLayout()
-        self._vlayout.addLayout(hlayout)
+        self._vlayout.addWidget(Divider())
 
-        self._back_button = QPushButton(self.tr("Back"))
-        self._back_button.setIcon(IconProvider.get_qta_icon("fa5s.chevron-left"))
-        self._back_button.clicked.connect(self.prev_signal)
-        hlayout.addWidget(self._back_button, 0, Qt.AlignmentFlag.AlignLeft)
+        hlayout = QHBoxLayout()
+        hlayout.setContentsMargins(0, 0, 0, 0)
+        self._vlayout.addLayout(hlayout)
 
         hlayout.addStretch()
 
+        self._back_button = QPushButton(self.tr("Back"))
+        IconProvider.bind_qta_icon(
+            self._back_button,
+            self._back_button.setIcon,
+            "mdi6.chevron-left",
+            scale_factor=1.5,
+        )
+        self._back_button.setAutoDefault(False)
+        self._back_button.clicked.connect(self.prev_signal)
+        hlayout.addWidget(self._back_button, 0, Qt.AlignmentFlag.AlignLeft)
+
         self._next_button = QPushButton(self.tr("Next"))
-        self._next_button.setIcon(IconProvider.get_qta_icon("fa5s.chevron-right"))
+        IconProvider.bind_qta_icon(
+            self._next_button,
+            self._next_button.setIcon,
+            "mdi6.chevron-right",
+            color=IconProvider.Color.Primary,
+            scale_factor=1.5,
+        )
         self._next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self._next_button.setDefault(True)
         self._next_button.clicked.connect(self.next_signal)
         hlayout.addWidget(self._next_button)
 

@@ -6,17 +6,17 @@ import string
 from pathlib import Path
 from typing import Optional
 
-from cutleast_core_lib.ui.utilities import apply_shadow
+from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
 from PySide6.QtCore import QPoint, QSignalBlocker, Qt
 from PySide6.QtGui import QAction, QTextCharFormat, QTextCursor
-from PySide6.QtWidgets import QMenu, QPlainTextEdit, QWidget
+from PySide6.QtWidgets import QMenu, QWidget
 
 from ui.utilities.icon_provider import IconProvider
 
 from .spell_checker import SpellChecker
 
 
-class SpellCheckEdit(QPlainTextEdit):
+class SpellCheckEdit(LineNumberTextEdit):
     """
     A QPlainTextEdit with an integrated spell checker.
     """
@@ -53,8 +53,6 @@ class SpellCheckEdit(QPlainTextEdit):
 
     def __on_context_menu(self, point: QPoint) -> None:
         menu: QMenu = self.createStandardContextMenu()
-        menu.setWindowFlag(Qt.WindowType.NoDropShadowWindowHint, True)
-        apply_shadow(menu, size=4, shadow_color="#181818")
 
         word: str
         cursor: QTextCursor
@@ -67,7 +65,7 @@ class SpellCheckEdit(QPlainTextEdit):
             menu.insertSeparator(menu.actions()[0])
 
             add_action = QAction(self.tr("Add to dictionary"))
-            add_action.setIcon(IconProvider.get_qta_icon("mdi6.book-plus"))
+            IconProvider.bind_qta_icon(add_action, add_action.setIcon, "mdi6.book-plus")
             add_action.triggered.connect(lambda: self.__add_word_to_dictionary(word))
             menu.insertAction(menu.actions()[0], add_action)
 
@@ -75,9 +73,7 @@ class SpellCheckEdit(QPlainTextEdit):
 
             for sug in reversed(self.__checker.get_suggestions(word)):
                 action = QAction(sug)
-                action.triggered.connect(
-                    lambda _, s=sug: self.__replace_word(cursor, s)
-                )
+                action.triggered.connect(lambda _, s=sug: self.__replace_word(cursor, s))
                 menu.insertAction(menu.actions()[0], action)
 
         menu.exec(self.mapToGlobal(point))

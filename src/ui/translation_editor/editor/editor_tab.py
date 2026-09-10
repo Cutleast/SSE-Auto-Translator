@@ -5,14 +5,16 @@ Copyright (c) Cutleast
 import os
 import re
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional
 
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
-from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QColor, QKeySequence, QShortcut
+from PySide6.QtGui import QAction, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QApplication,
     QCheckBox,
@@ -32,14 +34,11 @@ from core.config.app_config import AppConfig
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
-from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
-from core.utilities.constants import STRING_AUTO_SEARCH_THRESHOLD
-from ui.translation_editor.editor.help_dialog import EditorHelpDialog
-from ui.utilities.theme_manager import ThemeManager
+from ui.string_list.columns import StringsColumns
 from ui.widgets.stacked_bar import StackedBar
 
 from .editor_menu import EditorMenu
@@ -51,6 +50,11 @@ from .translator_dialog import TranslatorDialog
 class EditorTab(QWidget):
     """
     Class for editor tabs.
+    """
+
+    changed_signal = Signal()
+    """
+    This signal gets emitted when the tab has unsaved changes.
     """
 
     close_signal = Signal(Translation)
@@ -67,7 +71,7 @@ class EditorTab(QWidget):
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
-    __strings_num_label: LCDNumber
+    __strings_num_label: QLabel
     __tool_bar: EditorToolbar
     __search_bar: SearchBar
     __bar_chart: StackedBar
@@ -102,14 +106,26 @@ class EditorTab(QWidget):
             database=user_data.database,
             translator_service=translator_service,
         )
-        self.__editor.update_signal.connect(self.update)
+        self.__editor.strings_changed.connect(self.__on_strings_changed)
 
         self.__init_ui()
         self.__init_shortcuts()
 
+        self.__strings_widget.itemSelectionChanged.connect(
+            lambda: self.__tool_bar.set_edit_actions_enabled(
+                len(self.__strings_widget.get_selected_strings()) > 0
+            ),
+        )
+        self.__strings_widget.itemActivated.connect(
+            lambda item, col: self.__edit_string()
+        )
+        self.__strings_widget.customContextMenuRequested.connect(
+            lambda *_: self.__menu.open(
+                bool(self.__strings_widget.get_selected_strings())
+            )
+        )
+
         self.__tool_bar.filter_changed.connect(self.set_state_filter)
-        self.__tool_bar.help_requested.connect(self.__show_help)
-        self.__tool_bar.legacy_import_requested.connect(self.__import_legacy)
         self.__tool_bar.apply_database_requested.connect(self.__apply_database)
         self.__tool_bar.search_and_replace_requested.connect(self.__search_and_replace)
         self.__tool_bar.api_translation_requested.connect(self.__translate_with_api)
@@ -123,70 +139,63 @@ class EditorTab(QWidget):
         self.__menu.reset_translation_requested.connect(self.__reset_selected)
         self.__menu.mark_as_requested.connect(self.__set_status)
 
+        ThemeManager.get().theme_changed.connect(lambda _: self.update())
+
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__vlayout)
 
         self.__init_header()
         self.__init_strings_widget()
         self.__init_context_menu()
-        self.update()
-
-        self.__search_bar.setLiveMode(
-            len(self.__editor.all_strings) <= STRING_AUTO_SEARCH_THRESHOLD
-        )
+        self.__update_metadata()
 
     def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
-        self.__title_label = QLabel(self.__translation.name)
-        self.__title_label.setObjectName("h3")
-        hlayout.addWidget(self.__title_label)
-
-        hlayout.addStretch()
-
-        num_label = QLabel(self.tr("Strings") + ":")
-        num_label.setObjectName("h3")
-        hlayout.addWidget(num_label)
-
-        self.__strings_num_label = LCDNumber()
-        self.__strings_num_label.setDigitCount(6)
-        hlayout.addWidget(self.__strings_num_label)
-
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
-
         self.__tool_bar = EditorToolbar()
-        hlayout.addWidget(self.__tool_bar)
+        self.__vlayout.addWidget(self.__tool_bar)
+
+        first_action: QAction = self.__tool_bar.actions()[0]
+
+        title_label = QLabel(self.tr("Translation Editor"))
+        title_label.setProperty("title", True)
+        self.__tool_bar.insertWidget(first_action, title_label)
+
+        self.__title_label = ElidedLabel(self.__translation.name)
+        self.__title_label.setMaximumWidth(300)
+        self.__title_label.setProperty("subtitle", True)
+        self.__tool_bar.insertWidget(first_action, self.__title_label)
+
+        self.__tool_bar.insertSeparator(first_action)
 
         self.__search_bar = SearchBar()
         self.__search_bar.searchChanged.connect(self.set_name_filter)
-        hlayout.addWidget(self.__search_bar)
+        self.__tool_bar.addWidget(self.__search_bar)
+
+        num_label = QLabel(self.tr("Strings") + ":")
+        num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(num_label)
+
+        self.__strings_num_label = QLabel()
+        self.__strings_num_label.setProperty("subtitle", True)
+        self.__tool_bar.addWidget(self.__strings_num_label)
+
+        hlayout = QHBoxLayout()
+        self.__vlayout.addLayout(hlayout)
 
         self.__bar_chart = StackedBar(
-            [0 for _ in StringStatus],
-            colors=[
-                StringStatus.get_color(s) or QColor.fromString("#fff")
-                for s in StringStatus
-            ],
+            values=[0 for _ in StringStatus],
+            colors=[s.get_base_color() for s in StringStatus],
         )
         self.__bar_chart.setFixedHeight(3)
         self.__vlayout.addWidget(self.__bar_chart)
 
     def __init_strings_widget(self) -> None:
         self.__strings_widget = StringsWidget(self.__editor.strings)
-        self.__strings_widget.itemSelectionChanged.connect(
-            lambda: self.__tool_bar.set_edit_actions_enabled(
-                len(self.__strings_widget.get_selected_strings()) > 0
-            ),
-        )
         self.__vlayout.addWidget(self.__strings_widget)
-        self.__strings_widget.itemActivated.connect(
-            lambda item, col: self.__edit_string()
-        )
-        self.__strings_num_label.setDigitCount(
-            max((len(str(self.__strings_widget.get_visible_string_count())), 4))
+
+        WidgetStateManager.get().register_state(
+            "editor_tab_strings_widget_header", self.__strings_widget.header()
         )
 
     def __init_shortcuts(self) -> None:
@@ -223,7 +232,6 @@ class EditorTab(QWidget):
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
-        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
 
     @property
     def changes_pending(self) -> bool:
@@ -232,28 +240,6 @@ class EditorTab(QWidget):
         """
 
         return self.__editor.changes_pending
-
-    def __import_legacy(self) -> None:
-        """
-        Opens file dialog to choose a DSD JSON of pre-v1.1 format.
-        """
-
-        fdialog = QFileDialog()
-        fdialog.setFileMode(QFileDialog.FileMode.ExistingFile)
-        fdialog.setNameFilters([self.tr("DSD file") + " (*.json)"])
-        fdialog.setWindowTitle(self.tr("Import pre-v1.1 translation..."))
-
-        if fdialog.exec() == QFileDialog.DialogCode.Rejected:
-            return
-
-        selected_files = fdialog.selectedFiles()
-
-        if len(selected_files):
-            filepath = Path(selected_files.pop(0))
-            if not filepath.is_file():
-                return
-
-            self.__editor.import_legacy_dsd_translation(filepath)
 
     def __edit_string(self, string: Optional[String] = None) -> None:
         """
@@ -270,13 +256,16 @@ class EditorTab(QWidget):
             assert string.id in [s.id for s in self.__editor.all_strings]
 
             dialog = TranslatorDialog(
-                self,
-                string,
-                self.__app_config,
-                self.__user_data.user_config,
-                self.__translator_service,
+                parent=self,
+                initial_string=string,
+                app_config=self.__app_config,
+                user_config=self.__user_data.user_config,
+                translator=self.__translator_service,
             )
-            dialog.update_signal.connect(self.update)
+            dialog.update_signal.connect(
+                lambda: self.__on_strings_changed([dialog.current_string])
+            )
+            WidgetStateManager.get().register_geometry("translator_dialog", dialog)
             WindowManager.get().show(dialog)
 
     def update_matching_strings(self, original: str, translation: str) -> None:
@@ -285,26 +274,6 @@ class EditorTab(QWidget):
         """
 
         self.__editor.apply_to_matching_strings(original, translation)
-
-    def get_string_states_summary(self) -> dict[StringStatus, int]:
-        """
-        Get a summary of string states.
-
-        Returns:
-            dict[StringStatus, int]:
-                Dictionary of string states and number of strings in each state
-        """
-
-        return {
-            state: len(
-                [
-                    string
-                    for string in self.__editor.all_strings
-                    if string.status == state
-                ]
-            )
-            for state in StringStatus
-        }
 
     def get_visible_string_count(self) -> int:
         """
@@ -347,35 +316,38 @@ class EditorTab(QWidget):
         )
         return string
 
-    @override
-    def update(self) -> None:  # type: ignore
-        """
-        Updates visible string list.
-        """
+    def __on_strings_changed(self, changed_strings: StringList) -> None:
+        for changed_string in changed_strings:
+            self.__strings_widget.update_string(changed_string)
 
-        self.__strings_widget.update()
+        self.__update_metadata()
+        self.changed_signal.emit()
 
+    def __update_metadata(self) -> None:
         if self.__editor.changes_pending:
             self.__title_label.setText(self.__translation.name + "*")
         else:
             self.__title_label.setText(self.__translation.name)
 
-        summary: dict[StringStatus, int] = self.get_string_states_summary()
+        visible_strings: StringList = self.__strings_widget.get_visible_strings()
+        summary: dict[StringStatus, int] = self.__editor.get_string_states_summary(
+            visible_strings
+        )
 
-        self.__strings_num_label.display(self.get_visible_string_count())
+        self.__strings_num_label.setText(str(len(visible_strings)))
         self.__bar_chart.setValues(list(summary.values()))
+        self.__bar_chart.setColors([s.get_base_color() for s in StringStatus])
 
         num_tooltip = ""
 
         for status, count in summary.items():
-            color: Optional[QColor] = StringStatus.get_color(status)
+            color: str = status.get_fg_color().name()
 
-            if color is None:
-                num_tooltip += f"<tr><td>{status.get_localized_name()}:\
-                    </td><td align=right>{count}</td></tr>"
-            else:
-                num_tooltip += f"<tr><td><font color='{color.name()}'>{status.get_localized_name()}:\
-                    </font></td><td align=right><font color='{color.name()}'>{count}</font></td></tr>"
+            num_tooltip += (
+                f"<tr><td><font color='{color}'>{status.get_localized_name()}:"
+                f"</font></td><td align=right><font color='{color}'>{count}"
+                "</font></td></tr>"
+            )
 
         self.__strings_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)
@@ -386,7 +358,8 @@ class EditorTab(QWidget):
         """
 
         self.__editor.save()
-        self.update()
+        self.__update_metadata()
+        self.changed_signal.emit()
 
     def __apply_database(self) -> None:
         """
@@ -541,9 +514,7 @@ class EditorTab(QWidget):
             message_box.button(QMessageBox.StandardButton.Yes).setText(
                 self.tr("Save and export")
             )
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() == QMessageBox.StandardButton.Yes:
                 self.__save()
@@ -566,13 +537,6 @@ class EditorTab(QWidget):
             messagebox.setText(self.tr("Translation successfully exported."))
             messagebox.exec()
 
-    def __show_help(self) -> None:
-        """
-        Displays help popup.
-        """
-
-        EditorHelpDialog(QApplication.activeModalWidget()).exec()
-
     def __set_status(self, status: StringStatus) -> None:
         selected_items: StringList = self.__strings_widget.get_selected_strings()
         self.__editor.set_status(selected_items, status)
@@ -594,9 +558,7 @@ class EditorTab(QWidget):
         message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
         message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
         message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-        # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-        message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+        ThemeManager.update_widget_styles(message_box)
 
         if message_box.exec() == QMessageBox.StandardButton.Yes:
             self.__editor.reset_strings(selected_items)
@@ -610,15 +572,13 @@ class EditorTab(QWidget):
 
         clipboard_text = ""
         for string in selected_strings:
-            if isinstance(string, PluginString):
-                clipboard_text += f"{string.type}\t"
-                clipboard_text += f"{string.form_id}\t"
-                clipboard_text += f"{string.editor_id}\t"
-            clipboard_text += f"{string.original}\t"
-            clipboard_text += f"{string.string}"
+            for col in StringsColumns.get_columns(type(string)):
+                clipboard_text += col.get_copy_text(string) + "\t"
+
+            clipboard_text = clipboard_text.rstrip("\t")
             clipboard_text += "\n"
 
-        QApplication.clipboard().setText(clipboard_text.strip())
+        QApplication.clipboard().setText(clipboard_text.rstrip("\n"))
 
     def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
@@ -630,7 +590,7 @@ class EditorTab(QWidget):
         """
 
         self.__strings_widget.set_name_filter(name_filter, case_sensitive)
-        self.update()
+        self.__update_metadata()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
@@ -641,7 +601,7 @@ class EditorTab(QWidget):
         """
 
         self.__strings_widget.set_state_filter(state_filter)
-        self.update()
+        self.__update_metadata()
 
     def go_to_modfile(self, modfile: Path) -> None:
         """

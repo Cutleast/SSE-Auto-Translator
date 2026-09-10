@@ -4,23 +4,23 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="52"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="65"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="47"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="58"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="91"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="86"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="98"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="93"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="110"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="105"/>
         <source>Used Software</source>
         <translation>Verwendete Software</translation>
     </message>
@@ -33,42 +33,42 @@
         <translation>Um Übersetzungen von Nexus Mods herunterladen zu können, benötigt dieses Tool Zugang zur Nexus Mods API. Du kannst diesen Zugang auf zwei Weisen einrichten: API-Schlüssel manuell eingeben oder über Anmeldung im Browser (Single-Sign-On).</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="65"/>
+        <location filename="src/ui/widgets/api_setup.py" line="62"/>
         <source>Click here to login to Nexus Mods via browser</source>
         <translation>Hier klicken, um dich im Browser bei Nexus Mods anzumelden</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="81"/>
+        <location filename="src/ui/widgets/api_setup.py" line="78"/>
         <source>Single-Sign-On (browser)</source>
         <translation>Single-Sign-On (Browser)</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="91"/>
+        <location filename="src/ui/widgets/api_setup.py" line="86"/>
         <source>Insert your API key</source>
         <translation>API-Schlüssel eingeben</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="95"/>
+        <location filename="src/ui/widgets/api_setup.py" line="90"/>
         <source>Check API key</source>
         <translation>API-Schlüssel überprüfen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="108"/>
+        <location filename="src/ui/widgets/api_setup.py" line="103"/>
         <source>API key is valid!</source>
         <translation>API-Schlüssel ist gültig!</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="113"/>
+        <location filename="src/ui/widgets/api_setup.py" line="108"/>
         <source>API key is invalid!</source>
         <translation>Der API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="74"/>
+        <location filename="src/ui/widgets/api_setup.py" line="71"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation>Erfolgreich bei Nexus Mods angemeldet</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="117"/>
+        <location filename="src/ui/widgets/api_setup.py" line="112"/>
         <source>Manual Setup</source>
         <translation>Manuelle Einrichtung</translation>
     </message>
@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="252"/>
+        <location filename="src/app.py" line="255"/>
         <source>Path Limit Enabled</source>
         <translation>Pfadlängenbegrenzung aktiviert</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="254"/>
+        <location filename="src/app.py" line="257"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -111,166 +111,179 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
 <context>
     <name>AppSettings</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="107"/>
-        <location filename="src/ui/settings/app_settings.py" line="104"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="106"/>
+        <location filename="src/ui/settings/app_settings.py" line="101"/>
         <source>Number of newest log files to keep</source>
         <translation>Anzahl der zu behaltenden neuesten Logdateien</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="111"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="110"/>
         <source>Log Level</source>
         <translation>Loglevel</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="116"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="115"/>
         <source>Display log at the bottom of the main window</source>
         <translation>Log im unteren Bereich des Hauptfensters anzeigen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="129"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="126"/>
         <source>UI Mode</source>
         <translation>UI-Modus</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="131"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="147"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="128"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="145"/>
         <source>Clear Cache</source>
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="156"/>
-        <location filename="src/ui/settings/app_settings.py" line="346"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="154"/>
+        <location filename="src/ui/settings/app_settings.py" line="394"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Die Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="125"/>
+        <location filename="src/ui/settings/app_settings.py" line="127"/>
         <source>App language</source>
         <translation>App-Sprache</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="125"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="123"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="98"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="97"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende App Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="158"/>
+        <location filename="src/ui/settings/app_settings.py" line="188"/>
         <source>Path Settings</source>
         <translation>Konfigurierte Pfade</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="166"/>
-        <location filename="src/ui/settings/app_settings.py" line="178"/>
+        <location filename="src/ui/settings/app_settings.py" line="201"/>
+        <location filename="src/ui/settings/app_settings.py" line="220"/>
         <source>Default: </source>
         <translation>Standard: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="186"/>
+        <location filename="src/ui/settings/app_settings.py" line="214"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>(für temporäre Dateien, wird nach Beenden geleert!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="205"/>
+        <location filename="src/ui/settings/app_settings.py" line="245"/>
         <source>Behavior Settings</source>
         <translation>Verhaltenseinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="252"/>
-        <source>Number of maximum worker threads for some IO tasks (-1 for auto-detect)</source>
-        <translation>Maximale Anzahl der zu verwendenden Threads für manche IO-Aufgaben (-1 für automatische Erkennung)</translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/app_settings.py" line="264"/>
+        <location filename="src/ui/settings/app_settings.py" line="310"/>
         <source>[EXPERIMENTAL]</source>
         <translation>[EXPERIMENTELL]</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="268"/>
+        <location filename="src/ui/settings/app_settings.py" line="314"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation>Dies verknüpft SSE-AT automatisch mit Mod Manager Downloads beim Start und hebt die Verknüpfung auf, wenn SSE-AT geschlossen wird.
 Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern könnte, dass die Verknüpfung korrekt aufgehoben wird.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="90"/>
+        <location filename="src/ui/settings/app_settings.py" line="94"/>
         <source>General App Settings</source>
         <translation>Allgemeine Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="115"/>
+        <location filename="src/ui/settings/app_settings.py" line="114"/>
         <source>Log level</source>
         <translation>Logging-Level</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="138"/>
+        <location filename="src/ui/settings/app_settings.py" line="153"/>
         <source>Accent color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="142"/>
-        <location filename="src/ui/settings/app_settings.py" line="334"/>
+        <location filename="src/ui/settings/app_settings.py" line="171"/>
+        <location filename="src/ui/settings/app_settings.py" line="382"/>
         <source>Clear cache (This will reset all mod file states and delete cached API requests and more temporary data!)</source>
         <translation>Cache leeren (Das setzt alle Moddatei-Zustände zurück und löscht zwischengespeicherte API-Anfragen und weitere temporäre Daten!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="173"/>
+        <location filename="src/ui/settings/app_settings.py" line="196"/>
         <source>Path for output mod</source>
         <translation>Pfad zur Output-Mod</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="184"/>
+        <location filename="src/ui/settings/app_settings.py" line="212"/>
         <source>Path for temporary folder</source>
         <translation>Pfad für temporäre Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="193"/>
+        <location filename="src/ui/settings/app_settings.py" line="233"/>
         <source>Defaults to temporary folder configured above</source>
         <translation>Liegt standardmäßig im oben konfigurierten Ordner für temporäre Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="202"/>
+        <location filename="src/ui/settings/app_settings.py" line="228"/>
         <source>Downloads path</source>
         <translation>Downloads-Pfad</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="221"/>
+        <location filename="src/ui/settings/app_settings.py" line="140"/>
+        <source>UI mode</source>
+        <translation>UI-Modus</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="252"/>
         <source>Language detector confidence</source>
         <translation>Genauigkeit der Spracherkennung</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="237"/>
+        <location filename="src/ui/settings/app_settings.py" line="270"/>
         <source>Number of concurrent downloads (only recommended to increase if you have Nexus Mods Premium)</source>
         <translation>Anzahl der gleichzeitigen Downloads (eine Erhöhung ist nur dann empfohlen, wenn du Nexus Mods Premium hast)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="260"/>
+        <location filename="src/ui/settings/app_settings.py" line="290"/>
+        <source>Number of maximum worker threads for some IO tasks</source>
+        <translation>Maximale Anzahl der Threads für manche E/A-Aufgaben</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="306"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; buttons on Nexus Mods on startup</source>
         <translation>Automatisch mit &quot;Mod Manager Download&quot; Buttons auf Nexus Mods beim Start von SSE-AT verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="283"/>
+        <location filename="src/ui/settings/app_settings.py" line="329"/>
         <source>Enable spell checking in translation editor</source>
         <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="292"/>
+        <location filename="src/ui/settings/app_settings.py" line="338"/>
         <source>Automatically import installed translations into the database</source>
         <translation>Automatisch installierte Übersetzungen in die Datenbank importieren</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="304"/>
+        <location filename="src/ui/settings/app_settings.py" line="350"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>Automatisch Übersetzungen für Moddateien erstellen, die vollständig von installierten Übersetzungen abgedeckt sind</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="318"/>
+        <location filename="src/ui/settings/app_settings.py" line="366"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>Bei einem Doppelklick auf eine Mod oder eine Moddatei in der Modliste oder einer Übersetzung im &quot;Übersetzungen&quot; Tab dessen Strings anzeigen</translation>
+    </message>
+</context>
+<context>
+    <name>BaseApp</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="128"/>
+        <source>Stylesheet Editor</source>
+        <translation>Stylesheet-Editor</translation>
     </message>
 </context>
 <context>
@@ -342,12 +355,12 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>CollapsibleLabel</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="92"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="96"/>
         <source>Reduce</source>
         <translation>Einklappen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="100"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="103"/>
         <source>Expand</source>
         <translation>Aufklappen</translation>
     </message>
@@ -355,12 +368,12 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>CollapsibleTextEdit</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="68"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="71"/>
         <source>Reduce</source>
         <translation>Einklappen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="77"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="79"/>
         <source>Expand</source>
         <translation>Aufklappen</translation>
     </message>
@@ -368,24 +381,67 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>ContextMenu</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="110"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="109"/>
         <source>Duplicate item</source>
         <translation>Element duplizieren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="118"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="120"/>
         <source>Cut item</source>
         <translation>Element ausschneiden</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="124"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="127"/>
         <source>Copy item</source>
         <translation>Element kopieren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="130"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="134"/>
         <source>Paste item</source>
         <translation>Element einfügen</translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseColumns</name>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="66"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="79"/>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="89"/>
+        <source>Source</source>
+        <translation>Quelle</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="102"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="115"/>
+        <source>Size</source>
+        <translation>Größe</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="129"/>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="132"/>
+        <source>Translation Incomplete</source>
+        <translation>Übersetzung unvollständig</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="137"/>
+        <source>Translation Complete</source>
+        <translation>Übersetzung vollständig</translation>
     </message>
 </context>
 <context>
@@ -423,22 +479,22 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadItemWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="78"/>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="80"/>
         <source>Cancel download</source>
         <translation>Download abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="81"/>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="83"/>
         <source>Start download...</source>
         <translation>Download starten...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="97"/>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="103"/>
         <source>Remove download</source>
         <translation>Download entfernen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="119"/>
+        <location filename="src/ui/main_page/database/downloads/item_widget.py" line="125"/>
         <source>Pending...</source>
         <translation>Ausstehend...</translation>
     </message>
@@ -446,7 +502,7 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListItem</name>
     <message>
-        <location filename="src/ui/downloader/download_list_item.py" line="99"/>
+        <location filename="src/ui/downloader/download_list_item.py" line="103"/>
         <source>Open translation mod page...</source>
         <translation>Modseite der Übersetzung öffnen...</translation>
     </message>
@@ -454,22 +510,12 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListMenu</name>
     <message>
-        <location filename="src/ui/downloader/download_list_menu.py" line="46"/>
-        <source>Expand all</source>
-        <translation>Alle aufklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/downloader/download_list_menu.py" line="52"/>
-        <source>Collapse all</source>
-        <translation>Alle zuklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/downloader/download_list_menu.py" line="58"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="38"/>
         <source>Uncheck selected download(s)</source>
         <translation>Ausgewählte(n) Download(s) abwählen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_menu.py" line="62"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="44"/>
         <source>Check selected download(s)</source>
         <translation>Ausgewählte(n) Download(s) anwählen</translation>
     </message>
@@ -477,17 +523,17 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListToolBar</name>
     <message>
-        <location filename="src/ui/downloader/download_list_toolbar.py" line="54"/>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="61"/>
         <source>Filter items without selection options</source>
         <translation>Elemente ohne Auswahlmöglichkeiten filtern</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_toolbar.py" line="63"/>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="69"/>
         <source>Import download list...</source>
         <translation>Downloadliste importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_toolbar.py" line="68"/>
+        <location filename="src/ui/downloader/download_list_toolbar.py" line="74"/>
         <source>Export download list...</source>
         <translation>Downloadliste exportieren...</translation>
     </message>
@@ -495,96 +541,96 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="134"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="135"/>
         <source>Available Downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="144"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>Unten sind die Übersetzungen, die benötigt werden und online verfügbar sind. Wähle aus, welche Übersetzungen du herunterladen möchtest und klicke auf &quot;Downloads starten&quot;, wenn du bereit bist.
 Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manager Downloads&quot; verknüpft werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="155"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="156"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>SSE-AT vor dem Starten mit &quot;Mod Manager Downloads&quot; verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="159"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="160"/>
         <source>Start downloads</source>
         <translation>Downloads starten</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="175"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="179"/>
         <source>Selected downloads:</source>
         <translation>Ausgewählte Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="190"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="191"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="194"/>
         <source>Translation mod</source>
         <translation>Übersetzungsmod</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="193"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="196"/>
         <source>Translation file</source>
         <translation>Übersetzungsdatei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="219"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="230"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>Elemente mit gleichem ausgewählten Download können nur gemeinsam an- oder abgewählt werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="256"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="265"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="340"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="391"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="349"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="400"/>
         <source>SSE-AT download list file</source>
         <translation>SSE-AT Downloadliste-Datei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="341"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="350"/>
         <source>Import download list...</source>
         <translation>Downloadliste importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="373"/>
-        <location filename="src/ui/downloader/download_list_widget.py" line="379"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="382"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="388"/>
         <source>Import complete</source>
         <translation>Import abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="374"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="383"/>
         <source>Import completed with errors! Click &apos;Ok&apos; to see details.</source>
         <translation>Der Import wurde mit Fehlern abgeschlossen! Auf &apos;Ok&apos; um die Details zu sehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="380"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="389"/>
         <source>Import completed successfully!</source>
         <translation>Der Import wurde erfolgreich abgeschlossen!</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="392"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="401"/>
         <source>Export download list...</source>
         <translation>Downloadliste exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="437"/>
         <source>Export complete</source>
         <translation>Export abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="428"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="437"/>
         <source>Export completed successfully!</source>
         <translation>Der Export wurde erfolgreich abgeschlossen!</translation>
     </message>
@@ -620,8 +666,8 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="349"/>
-        <location filename="src/core/downloader/download_manager.py" line="367"/>
+        <location filename="src/core/downloader/download_manager.py" line="355"/>
+        <location filename="src/core/downloader/download_manager.py" line="373"/>
         <source>Collecting available downloads...</source>
         <translation>Verfügbare Übersetzungen werden gesammelt...</translation>
     </message>
@@ -635,24 +681,37 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     </message>
 </context>
 <context>
+    <name>DownloadsMenu</name>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_menu.py" line="37"/>
+        <source>Open mod page...</source>
+        <translation>Modpage öffnen...</translation>
+    </message>
+</context>
+<context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="103"/>
-        <source>Downloads:</source>
-        <translation>Downloads:</translation>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="117"/>
+        <source>Downloads</source>
+        <translation>Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="118"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="125"/>
+        <source>Running Downloads:</source>
+        <translation>Laufende Downloads:</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="146"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="118"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="146"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="118"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="146"/>
         <source>Progress</source>
         <translation>Fortschritt</translation>
     </message>
@@ -660,22 +719,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="45"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="54"/>
         <source>[Experimental]</source>
         <translation>[Experimentell]</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="45"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="54"/>
         <source>Handle Nexus Mods downloads</source>
         <translation>Mit Nexus Mods Downloads verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="94"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="134"/>
         <source>Resume</source>
         <translation>Fortsetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="97"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="136"/>
         <source>Pause</source>
         <translation>Anhalten</translation>
     </message>
@@ -683,7 +742,7 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DragHandle</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/flex_container/drag_handle.py" line="52"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/flex_container/drag_handle.py" line="55"/>
         <source>Drag to rearrange</source>
         <translation>Zum Neuanordnen ziehen</translation>
     </message>
@@ -691,58 +750,30 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="176"/>
+        <location filename="src/core/editor/editor.py" line="175"/>
         <source>Translating with API...</source>
         <translation>Wird mit API übersetzt...</translation>
     </message>
 </context>
 <context>
-    <name>EditorHelpDialog</name>
-    <message>
-        <location filename="src/ui/translation_editor/editor/help_dialog.py" line="32"/>
-        <source>Help</source>
-        <translation>Hilfe</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/help_dialog.py" line="38"/>
-        <source>Below is an overview of the states a string can have:</source>
-        <translation>Mögliche String-Markierungen:</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/help_dialog.py" line="67"/>
-        <source>Ok</source>
-        <translation>Ok</translation>
-    </message>
-</context>
-<context>
     <name>EditorMenu</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="55"/>
-        <source>Expand all</source>
-        <translation>Alle aufklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="61"/>
-        <source>Collapse all</source>
-        <translation>Alle zuklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="69"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="56"/>
         <source>Edit string...</source>
         <translation>String bearbeiten...</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="74"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="61"/>
         <source>Copy string</source>
         <translation>String kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="81"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="69"/>
         <source>Reset selected string(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="105"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="91"/>
         <source>Mark as &quot;{0}&quot;</source>
         <translation>Als &quot;{0}&quot; markieren</translation>
     </message>
@@ -750,45 +781,40 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>EditorPage</name>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="177"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="183"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="179"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="185"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
         <translation>Bist du sicher, dass du den Tab schließen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="185"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="191"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="186"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="192"/>
         <source>Yes</source>
         <translation>Ja</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor_page.py" line="240"/>
+        <source>Close translation</source>
+        <translation>Übersetzung schließen</translation>
     </message>
 </context>
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="149"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="175"/>
         <source>Strings</source>
         <translation>Strings</translation>
     </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="243"/>
-        <source>DSD file</source>
-        <translation>DSD-Datei</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="244"/>
-        <source>Import pre-v1.1 translation...</source>
-        <translation>Pre-v1.1 Übersetzung importieren...</translation>
-    </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="404"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="377"/>
         <source>Translated %n string from database.</source>
         <comment>Translated %n strings from database.</comment>
         <translation>
@@ -797,22 +823,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="391"/>
         <source>Search and Replace</source>
         <translation>Suchen und Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="432"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="405"/>
         <source>Case sensitive</source>
         <translation>Groß-/Kleinschreibung beachten</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="471"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="444"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="478"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="451"/>
         <source>Are you sure you want to translate %n string via translator API?
 Depending on the translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n strings via translator API?
@@ -825,89 +851,94 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="527"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="500"/>
         <source>Save before export?</source>
         <translation>Vor dem Export speichern?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="530"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="503"/>
         <source>Do you want to save the translation before exporting? Unsaved changes are not exported.</source>
         <translation>Möchtest du die Übersetzung vor dem Exportieren speichern? Ungespeicherte Änderungen werden nicht exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="539"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="512"/>
         <source>Export only</source>
         <translation>Nur exportieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="542"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="515"/>
         <source>Save and export</source>
         <translation>Speichern und exportieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="552"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="523"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>Übersetzung exportieren (nur DSD-Format)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="587"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="401"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="565"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="374"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="536"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="427"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="160"/>
+        <source>Translation Editor</source>
+        <translation>Übersetzungseditor</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="400"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="430"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="403"/>
         <source>Replace</source>
         <translation>Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="442"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="415"/>
         <source>Apply</source>
         <translation>Übernehmen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="447"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="502"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="420"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="497"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="470"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="494"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="467"/>
         <source>Don&apos;t show again</source>
         <translation>Nicht erneut zeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="566"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="537"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="589"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="553"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation>Bist du sicher, dass du die ausgewählten String(s) zurücksetzen möchtest?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="595"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="559"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="596"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="560"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -915,42 +946,32 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>EditorToolbar</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="93"/>
-        <source>Help</source>
-        <translation>Hilfe</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="84"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="122"/>
         <source>Filter options</source>
         <translation>Filteroptionen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="102"/>
-        <source>Import pre-v1.1 translation...</source>
-        <translation>Pre-v1.1 Übersetzung importieren...</translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="108"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="75"/>
         <source>Apply database to untranslated strings</source>
         <translation>Unübersetzte Strings mithilfe der Datenbank übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="113"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="84"/>
         <source>Search and replace</source>
         <translation>Suchen und ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="121"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="95"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="132"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="63"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="137"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="67"/>
         <source>Export translation</source>
         <translation>Übersetzung exportieren</translation>
     </message>
@@ -958,33 +979,33 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="111"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="141"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="116"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="146"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="134"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="153"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="118"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="161"/>
         <source>Show details...</source>
         <translation>Mehr Details...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="147"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="158"/>
         <source>Hide details...</source>
         <translation>Weniger Details...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="120"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="150"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="126"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="134"/>
         <source>Copy error details...</source>
         <translation>Fehlerdetails kopieren...</translation>
     </message>
@@ -992,12 +1013,12 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>ExceptionHandler</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="80"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="86"/>
         <source>An unexpected error occured: </source>
         <translation>Ein Fehler ist aufgetreten: </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="85"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="91"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -1047,55 +1068,40 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>FileType</name>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="39"/>
+        <location filename="src/core/file_types/file_type.py" line="42"/>
         <source>Plugin File</source>
         <translation>Plugindatei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="40"/>
+        <location filename="src/core/file_types/file_type.py" line="44"/>
         <source>Interface File</source>
         <translation>Interface-Datei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="43"/>
+        <location filename="src/core/file_types/file_type.py" line="46"/>
         <source>Dragonborn&apos;s Bestiary File</source>
         <translation>Dragonborn&apos;s Bestiary-Datei</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="53"/>
-        <source>Traditional plugin files (.esp, .esm, .esl).</source>
-        <translation>Klassische Plugindateien (.esp, .esm, .esl).</translation>
+        <location filename="src/core/file_types/file_type.py" line="52"/>
+        <source>A traditional plugin file (.esp, .esm, .esl).</source>
+        <translation>Eine klassische Plugindatei (.esp, .esm, .esl).</translation>
     </message>
     <message>
         <location filename="src/core/file_types/file_type.py" line="56"/>
-        <source>Interface translation files (data/interface/translations/*_[language].txt).</source>
-        <translation>Interface-Übersetzungsdateien (data/interface/translations/*_[language].txt).</translation>
+        <source>An interface translation file (data/interface/translations/*_[language].txt).</source>
+        <translation>Eine Interface-Übersetzungsdatei (data/interface/translations/*_[language].txt).</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/file_type.py" line="61"/>
-        <source>Dragonborn&apos;s Bestiary files (data/interface/creatures/**/*.json)</source>
-        <translation>Dragonborn&apos;s Bestiary-Dateien (data/interface/creatures/**/*.json)</translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="76"/>
-        <source>Show plugin files (*.esp, *.esm, *.esl)</source>
-        <translation>Plugindateien (*.esp, *.esm, *.esl) zeigen</translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="79"/>
-        <source>Show interface files (*.txt)</source>
-        <translation>Interface-Dateien (*.txt) zeigen</translation>
-    </message>
-    <message>
-        <location filename="src/core/file_types/file_type.py" line="82"/>
-        <source>Show Dragonborn&apos;s Bestiary files (*.json)</source>
-        <translation>Dragonborn&apos;s Bestiary-Dateien (*.json) zeigen</translation>
+        <location filename="src/core/file_types/file_type.py" line="62"/>
+        <source>A Dragonborn&apos;s Bestiary file (data/interface/creatures/**/*.json).</source>
+        <translation>Eine Dragonborn&apos;s Bestiary-Datei (data/interface/**/*.json).</translation>
     </message>
 </context>
 <context>
     <name>IgnoreListDialog</name>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="55"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="56"/>
         <source>Ignore list</source>
         <translation>Ignorierliste</translation>
     </message>
@@ -1105,17 +1111,17 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         <translation>Nutzer-eigene Ignorierliste</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="73"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="74"/>
         <source>Remove selected mod file(s) from list</source>
         <translation>Ausgewählte Moddatei(en) von der Liste entfernen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="97"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="98"/>
         <source>Base Game + CC Plugins</source>
         <translation>Grundspiel + CC Plugins</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/ignore_list_dialog.py" line="109"/>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="110"/>
         <source>Masterlist Entries</source>
         <translation>Masterlist-Einträge</translation>
     </message>
@@ -1131,17 +1137,23 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="38"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="48"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>BSA-Archive parsen (Dies kann den Start der App, je nach Größe deiner Modliste, verlangsamen!)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="47"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="31"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="59"/>
         <source>Modlist</source>
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="52"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="41"/>
+        <source>Options</source>
+        <translation>Optionen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="64"/>
         <source>On this page you select a modlist to load from a mod manager. You can always change the selected modlist and mod manager under Settings &gt; User Settings.</source>
         <translation>Auf dieser Seite wählst du aus, welche Modliste du von einem Mod Manager laden möchtest. Du kannst die ausgewählte Modliste und den Mod Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
     </message>
@@ -1157,37 +1169,42 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="34"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="41"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="71"/>
-        <source>Welcome!</source>
-        <translation>Willkommen!</translation>
+        <location filename="src/ui/startup_dialog/introduction.py" line="80"/>
+        <source>Welcome</source>
+        <translation>Willkommen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="75"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="86"/>
         <source>This guide will help you setting up this tool for your modlist.</source>
         <translation>Diese Einführung wird dir bei der Einrichtung dieses Tools für deine Modliste helfen.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="83"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="92"/>
         <source>Open documentation</source>
         <translation>Dokumentation öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="100"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="101"/>
+        <source>Windows path limit</source>
+        <translation>Windows-Pfadlängenbegrenzung</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="115"/>
         <source>Fix Windows path limit</source>
         <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="109"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="124"/>
         <source>The path limit is already disabled.</source>
         <translation>Die Pfadlängenbegrenzung ist bereits deaktiviert.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="93"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="108"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows hat eine Begrenzung von 255 Zeichen auf Pfade. Unten klicken, Administratorrechte gewähren und neustarten, um diese Begrenzung zu deaktivieren.</translation>
     </message>
@@ -1195,7 +1212,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>KeyLineEdit</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/key_edit.py" line="51"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/key_edit.py" line="53"/>
         <source>Toggle password visibility</source>
         <translation>Passwortsichtbarkeit umschalten</translation>
     </message>
@@ -1211,37 +1228,38 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="181"/>
-        <source>Modlist</source>
-        <translation>Modliste</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/main_page.py" line="454"/>
+        <location filename="src/ui/main_page/main_page.py" line="493"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="187"/>
+        <location filename="src/ui/main_page/main_page.py" line="206"/>
         <source>Translatable files:</source>
         <translation>Übersetzbare Dateien:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="207"/>
-        <source>Support me on Ko-fi</source>
-        <translation>Unterstütze mich auf Ko-fi</translation>
+        <location filename="src/ui/main_page/main_page.py" line="190"/>
+        <location filename="src/ui/main_page/main_page.py" line="194"/>
+        <source>Modlist</source>
+        <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="430"/>
+        <location filename="src/ui/main_page/main_page.py" line="260"/>
+        <source>SSE-AT has to be restarted after mod list changes. Changes are not automatically detected.</source>
+        <translation>SSE-AT muss nach Modlisten-Änderungen neugestartet werden. Änderungen werden nicht automatisch erkannt.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_page.py" line="469"/>
         <source>No translation downloads available!</source>
         <translation>Keine Downloads verfügbar!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="431"/>
+        <location filename="src/ui/main_page/main_page.py" line="470"/>
         <source>There are no translations available to download.</source>
         <translation>Es sind keine Übersetzungen zum Herunterladen verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="457"/>
+        <location filename="src/ui/main_page/main_page.py" line="496"/>
         <source>The output mod was successfully built at:
 {0}
 
@@ -1252,54 +1270,54 @@ Please drag this folder to your modlist in MO2 or Vortex and ensure that Dynamic
 Bitte ziehe diesen Ordner in deine Modliste in MO2 oder Vortex und stelle sicher, dass der Dynamic String Distributor installiert ist und beide Mods aktiviert sind!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="467"/>
+        <location filename="src/ui/main_page/main_page.py" line="506"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="469"/>
+        <location filename="src/ui/main_page/main_page.py" line="508"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="472"/>
+        <location filename="src/ui/main_page/main_page.py" line="511"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="505"/>
+        <location filename="src/ui/main_page/main_page.py" line="544"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="513"/>
+        <location filename="src/ui/main_page/main_page.py" line="552"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="515"/>
+        <location filename="src/ui/main_page/main_page.py" line="554"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
 Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="529"/>
+        <location filename="src/ui/main_page/main_page.py" line="568"/>
         <source>Export mod file states...</source>
         <translation>Moddatei-Zustände exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="532"/>
+        <location filename="src/ui/main_page/main_page.py" line="571"/>
         <source>JSON files</source>
         <translation>JSON-Dateien</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="550"/>
+        <location filename="src/ui/main_page/main_page.py" line="589"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="551"/>
+        <location filename="src/ui/main_page/main_page.py" line="590"/>
         <source>Successfully exported mod file states to:</source>
         <translation>Moddatei-Zustände erfolgreich an diesen Pfad exportiert:</translation>
     </message>
@@ -1307,47 +1325,42 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>MainToolBar</name>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="130"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="193"/>
         <source>Open ignore list</source>
         <translation>Ignorierliste öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="135"/>
-        <source>Help</source>
-        <translation>Hilfe</translation>
+        <location filename="src/ui/main_page/main_toolbar.py" line="115"/>
+        <source>Scan modlist</source>
+        <translation>Modliste scannen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="144"/>
-        <source>Scan modlist...</source>
-        <translation>Modliste scannen...</translation>
+        <location filename="src/ui/main_page/main_toolbar.py" line="129"/>
+        <source>Search for translations</source>
+        <translation>Übersetzungen suchen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="120"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="143"/>
+        <source>Download translations</source>
+        <translation>Übersetzungen herunterladen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_toolbar.py" line="155"/>
+        <source>Build output mod</source>
+        <translation>Output-Mod erstellen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/main_toolbar.py" line="227"/>
         <source>Filter options</source>
         <translation>Filteroptionen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="150"/>
-        <source>Scan online for available translations...</source>
-        <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="156"/>
-        <source>Download available translations...</source>
-        <translation>Verfügbare Übersetzungen herunterladen...</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="162"/>
-        <source>Build output mod...</source>
-        <translation>Output-Mod erstellen...</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="171"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="173"/>
         <source>Search modlist for string...</source>
         <translation>Modliste nach String durchsuchen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="176"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="182"/>
         <source>Export mod file states</source>
         <translation>Moddatei-Zustände exportieren</translation>
     </message>
@@ -1355,57 +1368,57 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="134"/>
+        <location filename="src/ui/main_window.py" line="135"/>
         <source>Modlist</source>
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="140"/>
+        <location filename="src/ui/main_window.py" line="141"/>
         <source>Translation Editor</source>
         <translation>Übersetzungseditor</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="161"/>
+        <location filename="src/ui/main_window.py" line="164"/>
         <source>Exit?</source>
         <translation>Beenden?</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="173"/>
+        <location filename="src/ui/main_window.py" line="176"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="176"/>
+        <location filename="src/ui/main_window.py" line="179"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="207"/>
+        <location filename="src/ui/main_window.py" line="208"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="208"/>
+        <location filename="src/ui/main_window.py" line="209"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="217"/>
+        <location filename="src/ui/main_window.py" line="216"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Logo von Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="226"/>
+        <location filename="src/ui/main_window.py" line="225"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="240"/>
+        <location filename="src/ui/main_window.py" line="236"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="164"/>
+        <location filename="src/ui/main_window.py" line="167"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation>Bist du sicher, dass du beenden möchtest? Es sind ungespeicherte Übersetzungen im Editor offen. Alle ungespeicherten Änderungen gehen dabei verloren!</translation>
     </message>
@@ -1413,62 +1426,67 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="59"/>
+        <location filename="src/ui/menubar.py" line="79"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="68"/>
+        <location filename="src/ui/menubar.py" line="88"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="62"/>
+        <location filename="src/ui/menubar.py" line="82"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="73"/>
+        <location filename="src/ui/menubar.py" line="93"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="82"/>
+        <location filename="src/ui/menubar.py" line="104"/>
         <source>Check for updates...</source>
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="77"/>
+        <location filename="src/ui/menubar.py" line="97"/>
         <source>Show documentation...</source>
         <translation>Dokumentation öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="90"/>
+        <location filename="src/ui/menubar.py" line="64"/>
+        <source>Support me on Ko-fi</source>
+        <translation>Unterstütze mich auf Ko-fi</translation>
+    </message>
+    <message>
+        <location filename="src/ui/menubar.py" line="112"/>
         <source>Fix Windows path limit...</source>
         <translation>Windows-Pfadlängenbegrenzung beheben...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="98"/>
+        <location filename="src/ui/menubar.py" line="122"/>
         <source>Get support on our Discord server...</source>
         <translation>Erhalte Unterstützung auf unserem Discord Server...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="104"/>
+        <location filename="src/ui/menubar.py" line="128"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="109"/>
+        <location filename="src/ui/menubar.py" line="133"/>
         <source>View source code on GitHub...</source>
         <translation>Quellcode auf GitHub ansehen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="116"/>
+        <location filename="src/ui/menubar.py" line="140"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="120"/>
+        <location filename="src/ui/menubar.py" line="146"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -1487,21 +1505,36 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
 </context>
 <context>
-    <name>ModInstanceHelpDialog</name>
+    <name>ModInstanceColumns</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="32"/>
-        <source>Help</source>
-        <translation>Hilfe</translation>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="47"/>
+        <source>Name</source>
+        <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="38"/>
-        <source>Below is an overview of the states a mod file can have:</source>
-        <translation>Mögliche Moddatei-Markierungen:</translation>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="70"/>
+        <source>Version</source>
+        <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="67"/>
-        <source>Ok</source>
-        <translation>Ok</translation>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="78"/>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="80"/>
+        <source>Mod</source>
+        <translation>Mod</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="95"/>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/mod_instance/columns.py" line="117"/>
+        <source>Priority</source>
+        <translation>Priorität</translation>
     </message>
 </context>
 <context>
@@ -1515,32 +1548,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceMenu</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="128"/>
-        <source>Expand all</source>
-        <translation>Alle aufklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="134"/>
-        <source>Collapse all</source>
-        <translation>Alle zuklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="150"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="136"/>
         <source>Actions</source>
         <translation>Aktionen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="155"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="143"/>
         <source>Basic scan...</source>
         <translation>Einfacher Scan...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="161"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="153"/>
         <source>Online scan...</source>
         <translation>Online Scan...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="167"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="163"/>
         <source>Download available translations...</source>
         <translation>Verfügbare Übersetzungen herunterladen...</translation>
     </message>
@@ -1550,72 +1573,72 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="179"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="180"/>
         <source>Show untranslated strings...</source>
         <translation>Unübersetzte Strings zeigen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="186"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="192"/>
         <source>Show translation...</source>
         <translation>Übersetzung zeigen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="194"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="204"/>
         <source>Show translation strings...</source>
         <translation>Strings der Übersetzung zeigen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="202"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="216"/>
         <source>Edit translation...</source>
         <translation>Übersetzung bearbeiten...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="236"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="265"/>
         <source>Add mod file to ignore list</source>
         <translation>Moddatei zur Ignorierliste hinzufügen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="212"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="230"/>
         <source>Create new translation...</source>
         <translation>Neue Übersetzung erstellen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="138"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="121"/>
         <source>Uncheck selected mod file(s)</source>
         <translation>Ausgewählte Moddatei(en) abwählen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="142"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="127"/>
         <source>Check selected mod file(s)</source>
         <translation>Ausgewählte Moddatei(en) anwählen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="220"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="242"/>
         <source>Import as translation...</source>
         <translation>Als Übersetzung importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="230"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="256"/>
         <source>Mod files</source>
         <translation>Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="243"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="276"/>
         <source>Open...</source>
         <translation>Öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="252"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="283"/>
         <source>Show strings...</source>
         <translation>Strings anzeigen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="258"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="293"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="263"/>
+        <location filename="src/ui/main_page/mod_instance/modinstance_menu.py" line="297"/>
         <source>Open in Explorer...</source>
         <translation>Im Explorer öffnen...</translation>
     </message>
@@ -1623,47 +1646,32 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="173"/>
-        <source>Name</source>
-        <translation>Name</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="174"/>
-        <source>Version</source>
-        <translation>Version</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="175"/>
-        <source>Priority</source>
-        <translation>Priorität</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="521"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="471"/>
         <source>Creating translations for mods...</source>
         <translation>Übersetzungen werden für Mods erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="531"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="481"/>
         <source>Creating translation for mod &apos;{mod}&apos;...</source>
         <translation>Übersetzung für Mod &apos;{mod}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="560"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="510"/>
         <source>Creating translation for mod file &apos;{modfile}&apos;...</source>
         <translation>Übersetzung für Moddatei &apos;{modfile}&apos; wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="601"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="551"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="636"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="586"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="638"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="588"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
@@ -1671,40 +1679,40 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ModOrganizer</name>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="149"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="231"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="146"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="228"/>
         <source>Loading mods from {0} &gt; {1}...</source>
         <translation>Mods von {0} &gt; {1} werden geladen...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="167"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="572"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="164"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="567"/>
         <source>Loading tools from {0} &gt; {1}...</source>
         <translation>Tools von {0} &gt; {1} werden geladen...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="264"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="261"/>
         <source>Loading mods from {0} &gt; {1}: {2}...</source>
         <translation>Mods von {0} &gt; {1} werden geladen: {2}...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="329"/>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="523"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="326"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="518"/>
         <source>Processing mod conflicts...</source>
         <translation>Modkonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="538"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="533"/>
         <source>Processing single file conflicts...</source>
         <translation>Einzelne Dateikonflikte werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="802"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="795"/>
         <source>Downloading and installing ModOrganizer...</source>
         <translation>ModOrganizer wird heruntergeladen und installiert...</translation>
     </message>
     <message>
-        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="835"/>
+        <location filename="mod-manager-lib/src/mod_manager_lib/core/mod_manager/modorganizer/api.py" line="828"/>
         <source>Extracting archive...</source>
         <translation>Archiv wird extrahiert...</translation>
     </message>
@@ -1793,12 +1801,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="92"/>
+        <location filename="src/ui/startup_dialog/page.py" line="95"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="99"/>
+        <location filename="src/ui/startup_dialog/page.py" line="106"/>
         <source>Next</source>
         <translation>Weiter</translation>
     </message>
@@ -1880,32 +1888,32 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="102"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="103"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="180"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="181"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="234"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="235"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="237"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="238"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="245"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="246"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="247"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -1913,7 +1921,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>ProviderPreference</name>
     <message>
-        <location filename="src/core/translation_provider/provider_preference.py" line="29"/>
+        <location filename="src/core/translation_provider/provider_preference.py" line="30"/>
         <source>Only Nexus Mods</source>
         <translation>Nur Nexus Mods</translation>
     </message>
@@ -1923,7 +1931,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Nexus Mods bevorzugen</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/provider_preference.py" line="35"/>
+        <location filename="src/core/translation_provider/provider_preference.py" line="34"/>
         <source>Only Confrérie des Traducteurs</source>
         <translation>Nur Confrérie des Traducteurs</translation>
     </message>
@@ -1941,7 +1949,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Fehlgeschlagene Elemente:</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/report_dialog.py" line="104"/>
+        <location filename="src/ui/widgets/report_dialog.py" line="109"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -1955,7 +1963,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Scanergebnis</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/result_dialog.py" line="74"/>
+        <location filename="src/ui/main_page/result_dialog.py" line="75"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -2008,46 +2016,41 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>SearchBar</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="42"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="48"/>
         <source>Search...</source>
         <translation>Suchen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="67"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="64"/>
         <source>Toggle case sensitivity</source>
         <translation>Groß-/Kleinschreibung beachten</translation>
-    </message>
-    <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="56"/>
-        <source>Live search disabled. Press Enter to search.</source>
-        <translation>Echtzeitsuche deaktiviert. Drücke Enter um zu suchen.</translation>
     </message>
 </context>
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="37"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="48"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="38"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="49"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="64"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="65"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="66"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="67"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="84"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="73"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="85"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -2055,57 +2058,57 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>SettingsWidget</name>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="99"/>
+        <location filename="src/ui/settings/settings_widget.py" line="126"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="105"/>
+        <location filename="src/ui/settings/settings_widget.py" line="133"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Einstellungen mit * markiert benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="119"/>
+        <location filename="src/ui/settings/settings_widget.py" line="148"/>
         <source>App Settings</source>
         <translation>App-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="124"/>
+        <location filename="src/ui/settings/settings_widget.py" line="153"/>
         <source>User Settings</source>
         <translation>Nutzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="132"/>
+        <location filename="src/ui/settings/settings_widget.py" line="161"/>
         <source>Translator Settings</source>
         <translation>Übersetzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="156"/>
+        <location filename="src/ui/settings/settings_widget.py" line="199"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="166"/>
+        <location filename="src/ui/settings/settings_widget.py" line="194"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="185"/>
+        <location filename="src/ui/settings/settings_widget.py" line="223"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="188"/>
+        <location filename="src/ui/settings/settings_widget.py" line="226"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation>SSE-AT muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="194"/>
+        <location filename="src/ui/settings/settings_widget.py" line="232"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="195"/>
+        <location filename="src/ui/settings/settings_widget.py" line="233"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -2113,32 +2116,37 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>SetupPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="57"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="34"/>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="43"/>
         <source>Game language</source>
         <translation>Sprache des Spiels</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="69"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="53"/>
         <source>Translation source</source>
         <translation>Quelle der Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="82"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="66"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation>Globale Masterlist aus dem GitHub Repository verwenden (empfohlen)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="90"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="72"/>
         <source>Nexus Mods API key</source>
         <translation>Nexus Mods API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="107"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="91"/>
         <source>Initial Setup</source>
         <translation>Erste Einrichtung</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="96"/>
         <source>On this page you configure what translations to download from where for which language.</source>
         <translation>Auf dieser Seite legst du fest, welche Übersetzungen von wo für welche Sprache heruntergeladen werden.</translation>
     </message>
@@ -2146,17 +2154,17 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Source</name>
     <message>
-        <location filename="src/core/translation_provider/source.py" line="52"/>
+        <location filename="src/core/translation_provider/source.py" line="50"/>
         <source>Nexus Mods</source>
         <translation>Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/source.py" line="53"/>
+        <location filename="src/core/translation_provider/source.py" line="52"/>
         <source>Confrérie des Traducteurs</source>
         <translation>Confrérie des Traducteurs</translation>
     </message>
     <message>
-        <location filename="src/core/translation_provider/source.py" line="56"/>
+        <location filename="src/core/translation_provider/source.py" line="54"/>
         <source>Local</source>
         <translation>Lokal</translation>
     </message>
@@ -2164,7 +2172,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>SpellCheckEdit</name>
     <message>
-        <location filename="src/ui/widgets/spell_check/spell_check_edit.py" line="69"/>
+        <location filename="src/ui/widgets/spell_check/spell_check_edit.py" line="67"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
@@ -2172,30 +2180,30 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StartupDialog</name>
     <message>
-        <location filename="src/ui/startup_dialog/startup_dialog.py" line="51"/>
-        <source>Welcome!</source>
-        <translation>Willkommen!</translation>
+        <location filename="src/ui/startup_dialog/startup_dialog.py" line="46"/>
+        <source>Welcome</source>
+        <translation>Willkommen</translation>
     </message>
 </context>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="63"/>
+        <location filename="src/ui/statusbar.py" line="68"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation>Das stündliche Limit gilt nur, wenn das tägliche Limit erreicht wurde.</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="73"/>
+        <location filename="src/ui/statusbar.py" line="76"/>
         <source>Copy log to clipboard</source>
         <translation>Log in Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="80"/>
+        <location filename="src/ui/statusbar.py" line="83"/>
         <source>View log</source>
         <translation>Log anzeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="120"/>
+        <location filename="src/ui/statusbar.py" line="123"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation>API: Stündlich: {0} | Täglich: {1}</translation>
     </message>
@@ -2217,13 +2225,13 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringListMenu</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="55"/>
-        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="60"/>
+        <location filename="src/ui/string_list/string_list_menu.py" line="55"/>
+        <location filename="src/ui/string_list/string_list_menu.py" line="63"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="69"/>
+        <location filename="src/ui/string_list/string_list_menu.py" line="74"/>
         <source>Copy {0}</source>
         <translation>{0} kopieren</translation>
     </message>
@@ -2231,7 +2239,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringListToolbar</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_toolbar.py" line="57"/>
+        <location filename="src/ui/string_list/string_list_toolbar.py" line="56"/>
         <source>Filter options</source>
         <translation>Filteroptionen</translation>
     </message>
@@ -2239,27 +2247,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringListWidget</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="80"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="86"/>
-        <source>ID</source>
-        <translation>ID</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="81"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
-        <source>Original</source>
-        <translation>Original</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="82"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="87"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="173"/>
-        <source>String</source>
-        <translation>String</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="124"/>
+        <location filename="src/ui/string_list/string_list_widget.py" line="130"/>
         <source>Strings:</source>
         <translation>Strings:</translation>
     </message>
@@ -2267,7 +2255,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringListWindow</name>
     <message numerus="yes">
-        <location filename="src/ui/widgets/string_list/string_list_dialog.py" line="33"/>
+        <location filename="src/ui/string_list/string_list_window.py" line="32"/>
         <source> (%n string)</source>
         <comment> (%n strings)</comment>
         <translation>
@@ -2313,80 +2301,156 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>StringStatus</name>
     <message>
-        <location filename="src/core/string/string_status.py" line="62"/>
-        <source>No status (no color)</source>
-        <translation>Kein Status (ohne Farbe)</translation>
+        <location filename="src/core/string/string_status.py" line="123"/>
+        <source>No Status</source>
+        <translation>Kein Status</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="65"/>
-        <source>String does not require a translation</source>
-        <translation>String benötigt keine Übersetzung</translation>
+        <location filename="src/core/string/string_status.py" line="125"/>
+        <source>No Translation Required</source>
+        <translation>Keine Übersetzung benötigt</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="68"/>
-        <source>String is completely translated</source>
-        <translation>String ist vollständig übersetzt</translation>
+        <location filename="src/core/string/string_status.py" line="127"/>
+        <source>Translated</source>
+        <translation>Übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="71"/>
-        <source>String is partially translated</source>
-        <translation>String ist teilweise übersetzt</translation>
+        <location filename="src/core/string/string_status.py" line="129"/>
+        <source>Partially Translated</source>
+        <translation>Teilweise übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="74"/>
-        <source>String requires a translation</source>
-        <translation>String benötigt eine Übersetzung</translation>
+        <location filename="src/core/string/string_status.py" line="131"/>
+        <source>Untranslated</source>
+        <translation>Nicht übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="92"/>
-        <source>Show stateless strings</source>
-        <translation>Strings ohne Status zeigen</translation>
+        <location filename="src/core/string/string_status.py" line="137"/>
+        <source>The status of the string is unknown.</source>
+        <translation>Der Status des Strings ist unbekannt.</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="95"/>
-        <source>Show strings that do not require a translation</source>
-        <translation>Strings, die keine Übersetzung benötigen, zeigen</translation>
+        <location filename="src/core/string/string_status.py" line="141"/>
+        <source>The string does not require a translation.</source>
+        <translation>Der String benötigt keine Übersetzung.</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="98"/>
-        <source>Show strings that are completely translated</source>
-        <translation>Strings, die vollständig übersetzt sind, zeigen</translation>
+        <location filename="src/core/string/string_status.py" line="145"/>
+        <source>The string is completely translated.</source>
+        <translation>Der Stirng ist vollständig übersetzt.</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="101"/>
-        <source>Show strings that are partially translated</source>
-        <translation>Strings, die unvollständig übersetzt sind, zeigen</translation>
+        <location filename="src/core/string/string_status.py" line="149"/>
+        <source>The string is partially translated.</source>
+        <translation>Der String ist teilweise übersetzt.</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="104"/>
-        <source>Show strings that require a translation</source>
-        <translation>Strings, die eine Übersetzung benötigen, zeigen</translation>
+        <location filename="src/core/string/string_status.py" line="153"/>
+        <source>The string requires a translation.</source>
+        <translation>Der String benötigt eine Übersetzung.</translation>
     </message>
 </context>
 <context>
-    <name>StringsWidget</name>
+    <name>StringsColumns</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="76"/>
+        <location filename="src/ui/string_list/columns.py" line="31"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="77"/>
+        <location filename="src/ui/string_list/columns.py" line="50"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="78"/>
+        <location filename="src/ui/string_list/columns.py" line="64"/>
         <source>String</source>
         <translation>String</translation>
+    </message>
+    <message>
+        <location filename="src/ui/string_list/columns.py" line="81"/>
+        <source>Status</source>
+        <translation>Status</translation>
     </message>
 </context>
 <context>
     <name>StylesheetEditorWidget</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="47"/>
-        <source>Apply stylesheet</source>
-        <translation>Stylesheet anwenden</translation>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="126"/>
+        <source>Runtime preview only. Changes are discarded when the application exits.</source>
+        <translation>Nur Laufzeitvorschau. Änderungen gehen beim Beenden der App verloren.</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="135"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="345"/>
+        <source>Line {line}, Column {column}</source>
+        <translation>Zeile {line}, Spalte {column}</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="157"/>
+        <source>Go to previous occurrence</source>
+        <translation>Zum vorherigen Treffer gehen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="164"/>
+        <source>Go to next occurrence</source>
+        <translation>Zum nächsten Treffer gehen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="171"/>
+        <source>Hide search bar</source>
+        <translation>Suchleiste ausblenden</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="184"/>
+        <source>Widget:</source>
+        <translation>Widget:</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="191"/>
+        <source>Object path:</source>
+        <translation>Objektpfad:</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="200"/>
+        <source>QSS selector:</source>
+        <translation>QSS-Selektor:</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="213"/>
+        <source>Insert selector at cursor position</source>
+        <translation>Selektor an Cursorposition einfügen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="231"/>
+        <source>Inspect a widget in the application. Escape or right-click cancels.</source>
+        <translation>Ein Widget in der App untersuchen. Escape oder Rechtsklick zum Abbrechen.</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="237"/>
+        <source>UI mode:</source>
+        <translation>UI-Modus:</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="243"/>
+        <source>Revert runtime stylesheet</source>
+        <translation>Laufzeit-Stylesheet zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="246"/>
+        <source>Apply runtime stylesheet</source>
+        <translation>Laufzeit-Stylesheet anwenden</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="376"/>
+        <source>Theme changed</source>
+        <translation>Theme geändert</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="379"/>
+        <source>The application theme has changed. Do you want to reset the stylesheet to the current theme?</source>
+        <translation>Das App-Theme hat sich geändert. Möchtest du das Stylesheet auf das aktuelle Theme zurücksetzen?</translation>
     </message>
 </context>
 <context>
@@ -2400,27 +2464,17 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsMenu</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="69"/>
-        <source>Expand all</source>
-        <translation>Alle aufklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="75"/>
-        <source>Collapse all</source>
-        <translation>Alle zuklappen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="84"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="77"/>
         <source>Show translation strings...</source>
         <translation>Strings der Übersetzung zeigen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="89"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="85"/>
         <source>Edit translation...</source>
         <translation>Übersetzung bearbeiten...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="96"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="93"/>
         <source>Rename translation...</source>
         <translation>Übersetzung umbenennen...</translation>
     </message>
@@ -2430,17 +2484,17 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="111"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="112"/>
         <source>Delete selected translation(s)...</source>
         <translation>Ausgewählte Übersetzung(en) löschen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="122"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="126"/>
         <source>Open mod page...</source>
         <translation>Modpage öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="128"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="130"/>
         <source>Open in Explorer...</source>
         <translation>Im Explorer öffnen...</translation>
     </message>
@@ -2448,55 +2502,65 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="147"/>
-        <source>Translations:</source>
-        <translation>Übersetzungen:</translation>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="150"/>
+        <source>Database</source>
+        <translation>Datenbank</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="168"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="163"/>
+        <source>Installed Translations:</source>
+        <translation>Installierte Übersetzungen:</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="208"/>
+        <source>You can import translations by dragging and dropping mod archives into the list above.</source>
+        <translation>Du kannst Übersetzungen importieren, indem du Modarchive per Drag &amp; Drop in die obige Liste ziehst.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="223"/>
         <source>Base Game + AE CC Content</source>
         <translation>Grundspiel + AE CC Inhalte</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="191"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="246"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="199"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="254"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="201"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="256"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation>Es wurden keine Strings mit dem angegebenen Filter gefunden.
 Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="222"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="277"/>
         <source>Mod archive</source>
         <translation>Modarchiv</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="226"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="281"/>
         <source>Import Translation...</source>
         <translation>Übersetzung importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="311"/>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="320"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="366"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="375"/>
         <source>Database update complete</source>
         <translation>Datenbank-Aktualisierung abgeschlossen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="313"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="368"/>
         <source>Successfully updated translations for {num} mod file(s).</source>
         <translation>Es wurden erfolgreich Übersetzungen für {num} Moddatei(en) aktualisiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="321"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="376"/>
         <source>All translations are up-to-date.</source>
         <translation>Alle Übersetzungen sind aktuell.</translation>
     </message>
@@ -2504,22 +2568,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="43"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="42"/>
         <source>Show base game (+ AE CC content) strings</source>
         <translation>Strings des Grundspiels (+ AE CC Inhalte) anzeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="50"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="53"/>
         <source>Search database</source>
         <translation>Datenbank durchsuchen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="58"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="62"/>
         <source>Import translation from local disk</source>
         <translation>Übersetzung lokal importieren</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="64"/>
+        <location filename="src/ui/main_page/database/translations/translations_toolbar.py" line="70"/>
         <source>Update translations from installed mods</source>
         <translation>Übersetzungen anhand der installierten Mods aktualisieren</translation>
     </message>
@@ -2527,72 +2591,42 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="154"/>
-        <source>Name</source>
-        <translation>Name</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="155"/>
-        <source>Version</source>
-        <translation>Version</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="156"/>
-        <source>Source</source>
-        <translation>Quelle</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="157"/>
-        <source>Date</source>
-        <translation>Datum</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="158"/>
-        <source>Size</source>
-        <translation>Größe</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="294"/>
-        <source>Unknown</source>
-        <translation>Unbekannt</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="475"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="451"/>
         <source>Rename translation</source>
         <translation>Übersetzung unbenennen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="476"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="452"/>
         <source>Enter new translation name:</source>
         <translation>Neuen Namen der Übersetzung eingeben:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="479"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="455"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="480"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="456"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="520"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="496"/>
         <source>Export translation...</source>
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="538"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="514"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="539"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="515"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="550"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="526"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2601,7 +2635,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="557"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="533"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2610,12 +2644,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="566"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="542"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="567"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="543"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -2623,73 +2657,83 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="149"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="228"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="183"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="272"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="250"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="318"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="110"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="113"/>
         <source>Go to previous string</source>
         <translation>Zum vorherigen String gehen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="121"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="130"/>
         <source>Go to next string</source>
         <translation>Zum nächsten String gehen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="155"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="236"/>
         <source>Reset string</source>
         <translation>String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="192"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="211"/>
         <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
         <translation>F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/in Arbeit) oder F3 (keine Übersetzung erforderlich) drücken, um den String zu finalisieren und zum nächsten zu gehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="203"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="148"/>
+        <source>Context</source>
+        <translation>Kontext</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="163"/>
+        <source>Translation</source>
+        <translation>Übersetzung</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="244"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="274"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="320"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="280"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="281"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="327"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="311"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="361"/>
         <source>String was modified</source>
         <translation>String wurde verändert</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="314"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="364"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="323"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="373"/>
         <source>Don&apos;t save and continue</source>
         <translation>Nicht speichern und fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="376"/>
         <source>Save and continue</source>
         <translation>Speichern und fortfahren</translation>
     </message>
@@ -2720,7 +2764,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TreeMenu</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="38"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="36"/>
         <source>Expand all</source>
         <translation>Alle aufklappen</translation>
     </message>
@@ -2733,45 +2777,45 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TreeWidgetEditor</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="250"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="255"/>
         <source>Add new item...</source>
         <translation>Neues Element hinzufügen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="256"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
         <source>Remove selected item(s)...</source>
         <translation>Ausgewählte(s) Element(e) entfernen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="256"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
         <source>Del</source>
         <translation>Entf</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="264"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="270"/>
         <source>Edit selected item...</source>
         <translation>Ausgewähltes Element bearbeiten...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="264"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="270"/>
         <source>Double click</source>
         <translation>Doppelklick</translation>
     </message>
 </context>
 <context>
-    <name>UIMode</name>
+    <name>UiMode</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/ui_mode.py" line="24"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="28"/>
         <source>Dark</source>
         <translation>Dunkel</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/ui_mode.py" line="25"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="30"/>
         <source>Light</source>
         <translation>Hell</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/ui_mode.py" line="26"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="32"/>
         <source>System</source>
         <translation>System</translation>
     </message>
@@ -2799,12 +2843,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Was ist neu?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="78"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="77"/>
         <source>Ignore Update</source>
         <translation>Update ignorieren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="85"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="84"/>
         <source>Download Update</source>
         <translation>Update herunterladen</translation>
     </message>
@@ -2812,7 +2856,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>UrlEdit</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/url_edit.py" line="32"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/url_edit.py" line="36"/>
         <source>Open URL in default browser...</source>
         <translation>URL im Standardbrowser öffnen...</translation>
     </message>
@@ -2853,57 +2897,57 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="73"/>
+        <location filename="src/ui/settings/user_settings.py" line="75"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="118"/>
+        <location filename="src/ui/settings/user_settings.py" line="120"/>
         <source>Nexus Mods API Key</source>
         <translation>Nexus Mods API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="85"/>
+        <location filename="src/ui/settings/user_settings.py" line="87"/>
         <source>Game language</source>
         <translation>Sprache des Spiels</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="87"/>
+        <location filename="src/ui/settings/user_settings.py" line="89"/>
         <source>Translation source</source>
         <translation>Quelle der Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="115"/>
+        <location filename="src/ui/settings/user_settings.py" line="117"/>
         <source>Start API setup...</source>
         <translation>API-Einrichtung starten...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="122"/>
+        <location filename="src/ui/settings/user_settings.py" line="124"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation>Globale Masterlist aus dem GitHub Repository verwenden (empfohlen)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="128"/>
+        <location filename="src/ui/settings/user_settings.py" line="130"/>
         <source>Open masterlist (in browser)</source>
         <translation>Masterlist (im Browser) öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="133"/>
+        <location filename="src/ui/settings/user_settings.py" line="135"/>
         <source>Open translation author blacklist...</source>
         <translation>Ignorierliste für Übersetzungsautoren öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="139"/>
+        <location filename="src/ui/settings/user_settings.py" line="141"/>
         <source>Modlist</source>
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="155"/>
+        <location filename="src/ui/settings/user_settings.py" line="157"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>BSA-Archive parsen (Dies kann den Start der App, je nach Größe deiner Modliste, verlangsamen!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="202"/>
+        <location filename="src/ui/settings/user_settings.py" line="204"/>
         <source>An API key is required for downloading translations from Nexus Mods!</source>
         <translation>Ein API-Schlüssel ist zum Herunterladen von Übersetzungen von Nexus Mods erforderlich!</translation>
     </message>
@@ -2958,12 +3002,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="185"/>
+        <location filename="src/core/downloader/worker.py" line="186"/>
         <source>Downloading translation...</source>
         <translation>Wird heruntergeladen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="212"/>
+        <location filename="src/core/downloader/worker.py" line="218"/>
         <source>Installing translation...</source>
         <translation>Wird installiert...</translation>
     </message>
@@ -3139,94 +3183,94 @@ Löse diese in Vortex auf und versuche es erneut.</translation>
 <context>
     <name>mod_file</name>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="95"/>
-        <source>No Status (No Color)</source>
-        <translation>Kein Status (ohne Farbe)</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="167"/>
+        <source>Unknown</source>
+        <translation>Unbekannt</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="98"/>
-        <source>File has no Strings (No Color)</source>
-        <translation>Datei hat keine Strings (Ohne Farbe)</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="169"/>
+        <source>No Strings</source>
+        <translation>Keine Strings</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="101"/>
-        <source>File is already in target language</source>
-        <translation>Datei ist bereits in der Zielsprache</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="171"/>
+        <source>Translated</source>
+        <translation>Übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="104"/>
-        <source>Translation for file is already installed in Database</source>
-        <translation>Eine Übersetzung für die Datei ist bereits in der Datenbank installiert</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="173"/>
+        <source>Translation Installed</source>
+        <translation>Übersetzung installiert</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="107"/>
-        <source>Translation for file is installed but incomplete</source>
-        <translation>Eine Übersetzung für die Datei ist bereits in der Datenbank installiert aber unvollständig</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="175"/>
+        <source>Translation Incomplete</source>
+        <translation>Übersetzung unvollständig</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="110"/>
-        <source>Translation for file is available in Database</source>
-        <translation>Eine Übersetzung für die Datei ist in der Datenbank verfügbar</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="177"/>
+        <source>Available in Database</source>
+        <translation>In Datenbank verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="113"/>
-        <source>Translation for file is available online</source>
-        <translation>Eine Übersetzung für die Datei ist online verfügbar</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="179"/>
+        <source>Available Online</source>
+        <translation>Online verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="116"/>
-        <source>File has Strings and requires translation</source>
-        <translation>Die Datei hat Strings und benötigt eine Übersetzung</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="181"/>
+        <source>Requires Translation</source>
+        <translation>Übersetzung benötigt</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="119"/>
-        <source>No Translation for file available online or in Database</source>
-        <translation>Keine Übersetzung für die Datei online oder in der Datenbank verfügbar</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="183"/>
+        <source>No Translation Available</source>
+        <translation>Keine Übersetzung verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="138"/>
-        <source>No stateless files</source>
-        <translation>Zeige Dateien ohne Status</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="189"/>
+        <source>The status of the file is unknown.</source>
+        <translation>Der Status der Datei ist unbekannt.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="141"/>
-        <source>Show files without strings</source>
-        <translation>Dateien ohne Strings zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="193"/>
+        <source>The file has no translatable strings.</source>
+        <translation>Die Datei hat keine übersetzbaren Strings.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="144"/>
-        <source>Show files that are already in target language</source>
-        <translation>Dateien, die bereits in der Zielsprache sind, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="197"/>
+        <source>The file is already in the target language.</source>
+        <translation>Die Datei ist bereits in der Zielsprache.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="147"/>
-        <source>Show files with an installed translation</source>
-        <translation>Dateien mit installierten Übersetzungen, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="201"/>
+        <source>A translation for the file is already installed in the database.</source>
+        <translation>Eine Übersetzung für die Datei ist bereits in der Datenbank installiert.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="150"/>
-        <source>Show files with an installed but incomplete translation</source>
-        <translation>Dateien mit installierten, aber unvollständigen Übersetzungen, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="206"/>
+        <source>A translation for the file is installed but incomplete.</source>
+        <translation>Eine Übersetzung ist bereits installiert, aber unvollständig.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="154"/>
-        <source>Show files that can be translated with the database</source>
-        <translation>Dateien, die mit der Datenbank übersetzt werden können, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="210"/>
+        <source>A translation for the file is available in the database.</source>
+        <translation>Eine Übersetzung für die Datei ist in der Datenbank verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="157"/>
-        <source>Show files that have a translation available online</source>
-        <translation>Dateien, für die online eine Übersetzung verfügbar ist, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="215"/>
+        <source>A translation for the file is available online.</source>
+        <translation>Eine Übersetzung für die Datei ist online verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="160"/>
-        <source>Show files that require a translation</source>
-        <translation>Dateien, die eine Übersetzung benötigen, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="219"/>
+        <source>The file has strings and requires a translation.</source>
+        <translation>Die Datei hat Strings und benötigt eine Übersetzung.</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="163"/>
-        <source>Show files without an available translation</source>
-        <translation>Dateien, für die keine Übersetzung verfügbar ist, zeigen</translation>
+        <location filename="src/core/mod_file/translation_status.py" line="223"/>
+        <source>There is no translation available for the file online or in the database.</source>
+        <translation>Es ist keine Übersetzung für die Datei online oder in der Datenbank verfügbar.</translation>
     </message>
 </context>
 </TS>

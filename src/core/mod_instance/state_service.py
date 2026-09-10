@@ -25,8 +25,13 @@ class StateService(QObject):
     Class for managing and updating the mod file states of a mod instance.
     """
 
-    update_signal = Signal()
-    """Signal emitted everytime when the mod file states are updated."""
+    update_signal = Signal(list)
+    """
+    Signal emitted everytime when the mod file states are updated.
+    
+    Args:
+        list[ModFile]: List of updated mod files.
+    """
 
     __mod_instance: ModInstance
     """The mod instance with the mod files to update."""
@@ -170,7 +175,7 @@ class StateService(QObject):
                 modfile.status = modfile_status
                 check_state[modfile] = checked
 
-        self.update_signal.emit()
+        self.update_signal.emit(self.__mod_instance.modfiles)
 
         return check_state
 
@@ -206,7 +211,7 @@ class StateService(QObject):
 
         self.log.debug(f"Updated states for {len(states)} mod file(s).")
 
-        self.update_signal.emit()
+        self.update_signal.emit(list(states))
 
     def export_states_to_json_file(
         self, file_path: Path, check_states: dict[ModFile, bool]

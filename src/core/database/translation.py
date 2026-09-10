@@ -12,6 +12,7 @@ from typing import Any, Optional, Self, override
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from pydantic import BaseModel, Field, ValidationError
 
+from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.string.types import StringList
 from core.translation_provider.cdt_api.cdt_id import CdtModId
@@ -178,6 +179,23 @@ class Translation(BaseModel):
         """
 
         return self.get_size()
+
+    @property
+    def status(self) -> dict[Path, StringStatus]:
+        """
+        Returns the status of the translation.
+
+        Returns:
+            dict[Path, StringStatus]: Status of the translation.
+        """
+
+        return {
+            modfile_name: max(
+                (string.status for string in modfile_strings),
+                default=StringStatus.NoneStatus,
+            )
+            for modfile_name, modfile_strings in self.strings.items()
+        }
 
     def remove_duplicates(self, save: bool = True) -> None:
         """

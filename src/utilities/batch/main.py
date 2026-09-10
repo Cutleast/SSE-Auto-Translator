@@ -14,6 +14,7 @@ from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from mod_manager_lib.core.game_service import GameService
 from PySide6.QtCore import QCoreApplication, QTranslator
 from PySide6.QtWidgets import QApplication
@@ -24,7 +25,6 @@ from core.config.app_config import AppConfig
 from core.user_data.user_data_service import UserDataService
 from core.utilities.localisation import Language
 from core.utilities.temp_folder_provider import TempFolderProvider
-from ui.utilities.theme_manager import ThemeManager
 from utilities.utility import Utility
 
 from .command import BatchCommand
@@ -120,7 +120,7 @@ class Batch(Utility):
 
         UserDataService(res_path=res_path, data_path=data_path)
         Cache(cache_path, App.APP_VERSION)
-        GameService(read_resource(":/skyrimse.json"))
+        GameService(read_resource(":/sse-at/skyrimse.json"))
 
         log_file: Path = log_path / time.strftime(app_config.log_file_name)
         logger = Logger(log_file, app_config.log_format, app_config.log_date_format)
@@ -158,8 +158,12 @@ class Batch(Utility):
             app_config (AppConfig): The loaded application configuration.
         """
 
-        theme_manager = ThemeManager(app_config.accent_color, app_config.ui_mode)
-        theme_manager.apply_to_app(app)
+        ThemeManager(
+            app=app,
+            initial_primary_color=app_config.accent_color,
+            initial_ui_mode=app_config.ui_mode,
+            qss_files=ThemeManager.CORE_RES_QSS_FILES + [":/sse-at/style.qss"],
+        )
 
     def __install_translator(self, app: QApplication, app_config: AppConfig) -> None:
         """
@@ -181,7 +185,7 @@ class Batch(Utility):
             return
 
         translator = QTranslator(app)
-        res_file: str = f":/loc/{language}.qm"
+        res_file: str = f":/sse-at/loc/{language}.qm"
         if not translator.load(res_file):
             self.log.error(
                 f"Failed to load localisation for {language} from '{res_file}'."

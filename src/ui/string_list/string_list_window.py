@@ -25,7 +25,6 @@ class StringListWindow(StringListWidget):
 
         super().__init__(strings, translation_mode)
 
-        self.setMinimumSize(1400, 800)
         self.setWindowFlag(Qt.WindowType.Window, True)
         self.setWindowTitle(
             name
@@ -35,3 +34,5 @@ class StringListWindow(StringListWidget):
                 self.get_visible_item_count(),
             )
         )
+
+        self.resize(1400, 800)

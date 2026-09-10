@@ -7,7 +7,6 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
 from cutleast_core_lib.core.utilities.dynamic_default_model import default_factory
-from cutleast_core_lib.ui.utilities.ui_mode import UIMode
 
 from core.utilities.localisation import Language
 
@@ -101,8 +100,3 @@ class AppConfig(BaseAppConfig):
     @classmethod
     def _get_default_accent_color(cls) -> str:
         return "#a998d2"
-
-    @default_factory("ui_mode")
-    @classmethod
-    def _get_default_ui_mode(cls) -> UIMode:
-        return UIMode.Dark

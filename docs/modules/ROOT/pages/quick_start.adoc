@@ -59,12 +59,14 @@ SSE-AT will now load your mod list which can take a couple of minutes, depending
 .This dialog will appear more often throughout SSE-AT and displays the progress and status of the current running process.
 image::loading_modlist.png[]
 + 
+image::scanning_for_translatable_mod_files.png[]
++ 
 You should now see this window:
 +
 .The main page of SSE-AT displays your mod list and your installed translations. The label at the top right corner displays the total number of mod files that were found by SSE-AT.
 image::initial_main_page.png[]
 
-. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the highlighted image:detect_lang.svg[width=24px,height=24px] _Modlist Scan_ button in the tool bar in the top left area of the window.
+. The first thing we want to do is to scan our mod list for mods that require a translation. This also imports translations that may already be installed. Do this by clicking on the highlighted image:detect_lang.svg[width=24px,height=24px] _Scan modlist_ button in the tool bar in the top left area of the window.
 +
 .SSE-AT now scans your mod list for required and installed translations. This can take a couple of minutes depending on the size of your mod list.
 image::scanning_modlist.png[]

@@ -8,8 +8,15 @@ from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.ui.utilities.rotated_icon import rotated_icon
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
-from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QWidget
+from PySide6.QtWidgets import (
+    QApplication,
+    QGroupBox,
+    QHBoxLayout,
+    QLabel,
+    QPushButton,
+    QVBoxLayout,
+    QWidget,
+)
 
 from core.config.user_config import UserConfig
 from core.utilities.constants import DOCS_URL
@@ -32,62 +39,70 @@ class IntroductionPage(Page):
         super().__init__(parent)
 
         self._back_button.setText(self.tr("Exit"))
-        self._back_button.setIcon(rotated_icon(IconProvider.get_icon("exit"), angle=180))
+        IconProvider.bind_custom_icon(
+            self._back_button,
+            self._back_button.setIcon,
+            lambda: rotated_icon(IconProvider.get_icon("exit"), angle=180),
+        )
         self.valid_signal.emit(True)
 
         self.__init_header()
 
     def __init_header(self) -> None:
         hlayout = QHBoxLayout()
+        hlayout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self._vlayout.insertLayout(0, hlayout)
-
-        hlayout.addStretch()
 
         icon_label = QLabel()
         icon_label.setPixmap(QApplication.windowIcon().pixmap(96, 96))
         hlayout.addWidget(icon_label)
 
-        hlayout.addSpacing(15)
-
         title_label = QLabel("SSE Auto Translator".upper())
-        font = title_label.font()
-        font.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 10)
-        title_label.setFont(font)
-        title_label.setObjectName("h1")
+        title_label.setProperty("title", True)
         hlayout.addWidget(title_label)
 
-        hlayout.addStretch()
-
-        self._vlayout.insertSpacing(0, 25)
-        self._title_label.setObjectName("h2")
-        self._title_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        self._vlayout.insertWidget(
-            2, self._title_label, alignment=Qt.AlignmentFlag.AlignLeft
-        )
-        self._vlayout.insertSpacing(2, 25)
+        self._title_label.hide()
+        self._description_label.hide()
 
     @override
     def _get_title(self) -> str:
-        return self.tr("Welcome!")
+        return ""
 
     @override
     def _get_description(self) -> str:
-        return self.tr("This guide will help you setting up this tool for your modlist.")
+        return ""
 
     @override
     def _init_form(self) -> None:
         from app import App
 
-        documentation_button = LinkButton(
-            url=IntroductionPage.BASIC_USAGE_URL,
-            display_text=self.tr("Open documentation"),
-            icon=IconProvider.get_qta_icon("mdi6.file-document"),
-        )
-        self._vlayout.addWidget(documentation_button)
+        # Welcome box
+        welcome_groupbox = QGroupBox(self.tr("Welcome"))
+        self._vlayout.addWidget(welcome_groupbox)
+        welcome_vlayout = QVBoxLayout()
+        welcome_groupbox.setLayout(welcome_vlayout)
 
-        self._vlayout.addSpacing(50)
+        introduction_label = QLabel(
+            self.tr("This guide will help you setting up this tool for your modlist.")
+        )
+        introduction_label.setWordWrap(True)
+        welcome_vlayout.addWidget(introduction_label)
+
+        documentation_button = LinkButton(
+            IntroductionPage.BASIC_USAGE_URL, self.tr("Open documentation")
+        )
+        IconProvider.bind_qta_icon(
+            documentation_button, documentation_button.setIcon, "mdi6.file-document"
+        )
+        documentation_button.setAutoDefault(False)
+        welcome_vlayout.addWidget(documentation_button)
 
         # Path Limit
+        path_limit_groupbox = QGroupBox(self.tr("Windows path limit"))
+        self._vlayout.addWidget(path_limit_groupbox)
+        path_limit_vlayout = QVBoxLayout()
+        path_limit_groupbox.setLayout(path_limit_vlayout)
+
         path_limit_label = QLabel(
             self.tr(
                 "Windows has a length limit of 255 characters for paths. "
@@ -95,19 +110,21 @@ class IntroductionPage(Page):
             )
         )
         path_limit_label.setWordWrap(True)
-        self._vlayout.addWidget(path_limit_label)
+        path_limit_vlayout.addWidget(path_limit_label)
 
         fix_button = QPushButton(self.tr("Fix Windows path limit"))
         fix_button.clicked.connect(
             lambda: PathLimitFixer.disable_path_limit(App.get().res_path)
         )
-        self._vlayout.addWidget(fix_button)
+        fix_button.setAutoDefault(False)
+        path_limit_vlayout.addWidget(fix_button)
 
         if not PathLimitFixer.is_path_limit_enabled():
             fix_button.setDisabled(True)
-            self._vlayout.addWidget(
-                QLabel(self.tr("The path limit is already disabled.")),
-                alignment=Qt.AlignmentFlag.AlignHCenter,
+            fixed_label = QLabel(self.tr("The path limit is already disabled."))
+            fixed_label.setProperty("state", "success")
+            path_limit_vlayout.addWidget(
+                fixed_label, alignment=Qt.AlignmentFlag.AlignHCenter
             )
 
         self._vlayout.addStretch()

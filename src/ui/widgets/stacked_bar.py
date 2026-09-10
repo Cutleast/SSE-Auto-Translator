@@ -32,7 +32,6 @@ class StackedBar(QChartView):
 
         self.setRubberBand(self.RubberBand.NoRubberBand)
         self.setResizeAnchor(self.ViewportAnchor.AnchorViewCenter)
-        self.setContentsMargins(0, 0, 0, 0)
         self.setRenderHint(QPainter.RenderHint.LosslessImageRendering)
 
         self.__chart = QChart()

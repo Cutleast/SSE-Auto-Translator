@@ -5,13 +5,13 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QPushButton,
     QSizePolicy,
-    QTabWidget,
     QVBoxLayout,
     QWidget,
 )
@@ -50,14 +50,11 @@ class ApiSetup(QWidget):
 
         vlayout.addSpacing(10)
 
-        tab_widget = QTabWidget()
-        tab_widget.tabBar().setExpanding(True)
-        tab_widget.setObjectName("centered_tab")
+        tab_widget = TabWidget()
+        tab_widget.setTabBarAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addWidget(tab_widget, stretch=1)
 
         sso_box = QWidget()
-        sso_box.setContentsMargins(0, 0, 0, 0)
-        sso_box.setObjectName("transparent")
         sso_vlayout = QVBoxLayout()
         sso_vlayout.setContentsMargins(0, 0, 0, 0)
         sso_box.setLayout(sso_vlayout)
@@ -81,8 +78,6 @@ class ApiSetup(QWidget):
         tab_widget.addTab(sso_box, self.tr("Single-Sign-On (browser)"))
 
         api_key_box = QWidget()
-        api_key_box.setContentsMargins(0, 0, 0, 0)
-        api_key_box.setObjectName("transparent")
         api_key_vlayout = QVBoxLayout()
         api_key_vlayout.setContentsMargins(0, 0, 0, 0)
         api_key_box.setLayout(api_key_vlayout)

@@ -6,13 +6,15 @@ from typing import Optional
 
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.widgets.divider import Divider
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QMessageBox,
     QPushButton,
-    QTabWidget,
     QVBoxLayout,
     QWidget,
 )
@@ -20,6 +22,7 @@ from PySide6.QtWidgets import (
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
+from ui.utilities.icon_provider import IconProvider
 
 from .app_settings import AppSettings
 from .translator_settings import TranslatorSettings
@@ -37,11 +40,14 @@ class SettingsWidget(QWidget):
     save_signal = Signal()
     """This signal is emitted when the save button is clicked."""
 
-    changes_pending: bool = False
+    _changes_pending: bool = False
     """Whether there are unsaved changes."""
 
-    restart_required: bool = False
+    _restart_required: bool = False
     """Whether a restart is required for changes to take effect."""
+
+    _theme_update_required: bool = False
+    """Whether a theme update is required for changes to take effect."""
 
     __cache: Cache
     __app_config: AppConfig
@@ -49,7 +55,7 @@ class SettingsWidget(QWidget):
     __translator_config: TranslatorConfig
 
     __vlayout: QVBoxLayout
-    __tab_widget: QTabWidget
+    __tab_widget: TabWidget
 
     __app_settings: AppSettings
     __user_settings: UserSettings
@@ -93,29 +99,52 @@ class SettingsWidget(QWidget):
 
         self.__init_header()
         self.__init_settings()
+
+        divider = Divider()
+        self.__vlayout.addWidget(divider)
+
         self.__init_footer()
 
     def __init_header(self) -> None:
+        hlayout = QHBoxLayout()
+        hlayout.setContentsMargins(0, 0, 0, 0)
+        self.__vlayout.addLayout(hlayout)
+
+        icon_label = QLabel()
+        IconProvider.bind_qta_icon(
+            icon_label,
+            lambda icon: icon_label.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon_l,
+                    ThemeManager.get().theme.metrics.icon_l,
+                )
+            ),
+            "mdi6.cog",
+        )
+        hlayout.addWidget(icon_label)
+
         title_label = QLabel(self.tr("Settings"))
-        title_label.setObjectName("h1")
-        self.__vlayout.addWidget(title_label)
-        self.__vlayout.addSpacing(15)
+        title_label.setProperty("title", True)
+        hlayout.addWidget(title_label)
+
+        hlayout.addStretch()
 
         restart_hint_label = QLabel(
             self.tr("Settings marked with * require a restart to take effect.")
         )
+        restart_hint_label.setProperty("secondary", True)
         self.__vlayout.addWidget(restart_hint_label)
-        self.__vlayout.addSpacing(15)
 
     def __init_settings(self) -> None:
-        self.__tab_widget = QTabWidget()
-        self.__tab_widget.tabBar().setExpanding(True)
-        self.__tab_widget.tabBar().setDocumentMode(True)
+        self.__tab_widget = TabWidget()
         self.__vlayout.addWidget(self.__tab_widget)
 
         self.__app_settings = AppSettings(self.__app_config, self.__cache)
         self.__app_settings.changed_signal.connect(self._on_change)
         self.__app_settings.restart_required_signal.connect(self._on_restart_required)
+        self.__app_settings.theme_update_required_signal.connect(
+            self._on_theme_update_required
+        )
         self.__tab_widget.addTab(self.__app_settings, self.tr("App Settings"))
 
         self.__user_settings = UserSettings(self.__user_config)
@@ -133,7 +162,7 @@ class SettingsWidget(QWidget):
         )
 
     def _on_change(self) -> None:
-        self.changes_pending = True
+        self._changes_pending = True
 
         try:
             self.__app_settings.validate()
@@ -147,26 +176,29 @@ class SettingsWidget(QWidget):
             self.__save_button.setEnabled(True)
 
     def _on_restart_required(self) -> None:
-        self.restart_required = True
+        self._restart_required = True
+
+    def _on_theme_update_required(self) -> None:
+        self._theme_update_required = True
 
     def __init_footer(self) -> None:
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        cancel_button = QPushButton(self.tr("Cancel"))
-        cancel_button.clicked.connect(self.cancel_signal.emit)
-        hlayout.addWidget(cancel_button)
-
         hlayout.addStretch()
 
         self.__status_label = QLabel()
-        self.__status_label.setObjectName("critical_label")
+        self.__status_label.setProperty("state", "error")
         hlayout.addWidget(self.__status_label)
 
         self.__save_button = QPushButton(self.tr("Save"))
         self.__save_button.setDefault(True)
         self.__save_button.setDisabled(True)
         hlayout.addWidget(self.__save_button)
+
+        cancel_button = QPushButton(self.tr("Cancel"))
+        cancel_button.clicked.connect(self.cancel_signal.emit)
+        hlayout.addWidget(cancel_button)
 
     def _save(self) -> None:
         self.__app_settings.apply(self.__app_config)
@@ -177,10 +209,16 @@ class SettingsWidget(QWidget):
         self.__user_config.save()
         self.__translator_config.save()
 
-        self.changes_pending = False
+        if self._theme_update_required:
+            ThemeManager.get().set_primary_color(
+                self.__app_config.accent_color, apply=False
+            )
+            ThemeManager.get().set_ui_mode(self.__app_config.ui_mode)
+
+        self._changes_pending = False
         self.save_signal.emit()
 
-        if self.restart_required:
+        if self._restart_required:
             messagebox = QMessageBox()
             messagebox.setWindowTitle(self.tr("Restart required"))
             messagebox.setText(

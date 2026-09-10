@@ -7,6 +7,7 @@ from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.widgets.dropdown import Dropdown
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QCheckBox, QComboBox, QPushButton, QTreeWidgetItem
@@ -17,7 +18,7 @@ from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.provider import TranslationProvider
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
+from ui.utilities.icon_provider import IconProvider
 
 
 class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncompatibleMethodOverride]
@@ -92,8 +93,11 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         self.__translations_combobox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.treeWidget().setItemWidget(self, 2, self.__translations_combobox)
 
-        self.__open_translation_button = QPushButton(
-            IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), ""
+        self.__open_translation_button = IconButton()
+        IconProvider.bind_icon(
+            self.__open_translation_button,
+            self.__open_translation_button.setIcon,
+            "open_in_browser",
         )
         self.__open_translation_button.setToolTip(
             self.tr("Open translation mod page...")

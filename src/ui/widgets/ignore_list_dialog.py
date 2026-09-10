@@ -6,12 +6,13 @@ from typing import Optional
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
     QListWidget,
     QListWidgetItem,
     QPushButton,
-    QTabWidget,
     QVBoxLayout,
     QWidget,
 )
@@ -58,15 +59,15 @@ class IgnoreListDialog(QDialog):
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
 
-        tab_widget = QTabWidget()
-        tab_widget.setObjectName("centered_tab")
+        tab_widget = TabWidget()
+        tab_widget.setTabBarAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addWidget(tab_widget)
 
         user_tab = QWidget()
-        user_tab.setObjectName("transparent")
         tab_widget.addTab(user_tab, self.tr("User ignore list"))
 
         vlayout = QVBoxLayout()
+        vlayout.setContentsMargins(0, 0, 0, 0)
         user_tab.setLayout(vlayout)
 
         self.__remove_button = QPushButton(

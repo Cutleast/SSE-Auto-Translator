@@ -3,22 +3,19 @@ Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
+from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.core.utilities.truncate import raw_string
-from cutleast_core_lib.ui.utilities.tree_widget import (
-    are_children_visible,
-    iter_children,
-    iter_toplevel_items,
-)
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.column_config import TreeItem
+from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from ui.string_list.columns import StringsColumns
 
 from .string_item import StringItem
 
@@ -36,7 +33,7 @@ class StringsWidget(QTreeWidget):
     but they're mutable and their hash may change.
     """
 
-    __modfile_items: dict[Path, QTreeWidgetItem]
+    __modfile_items: dict[Path, TreeItem[ImmutableValue[Path]]]
     """
     Mapping of mod file names to their tree items.
     """
@@ -62,25 +59,18 @@ class StringsWidget(QTreeWidget):
         self.__init_ui()
         self.__init_strings(strings)
 
-    def __init_ui(self) -> None:
-        self.setAlternatingRowColors(True)
-        self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
-        self.setUniformRowHeights(True)
+        ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
+
         self.setSortingEnabled(True)
-
-        self.__init_header()
-
-    def __init_header(self) -> None:
-        self.setHeaderLabels(
-            [
-                self.tr("ID"),
-                self.tr("Original"),
-                self.tr("String"),
-            ]
-        )
-
-        self.header().setDefaultSectionSize(200)
         self.header().setSortIndicatorClearable(True)
+        self.expandAll()
+
+    def __init_ui(self) -> None:
+        StringsColumns.apply_to_tree_widget(self)
+
+        self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
+        self.header().setStretchLastSection(True)
+        self.setUniformRowHeights(True)
 
     def __init_strings(self, strings: dict[Path, StringList]) -> None:
         self.__string_items = ReferenceDict()
@@ -91,55 +81,39 @@ class StringsWidget(QTreeWidget):
         for modfile, modfile_strings in sorted(
             strings.items(), key=lambda p: p[0].name.lower()
         ):
-            modfile_item = QTreeWidgetItem([str(modfile)])
+            modfile_item = TreeItem(ImmutableValue(modfile), StringsColumns)
             self.__modfile_items[modfile] = modfile_item
 
             for string in modfile_strings:
                 if string in self.__string_items:
                     raise ValueError(f"Duplicate string: {string}")
 
-                item = self.__create_string_item(string)
+                item = StringItem(string, StringsColumns)
                 self.__string_items[string] = item
                 modfile_item.addChild(item)
 
             self.addTopLevelItem(modfile_item)
             modfile_item.setFirstColumnSpanned(True)
 
-        self.expandAll()
-        self.header().resizeSection(0, 500)
-        self.header().resizeSection(1, 400)
-        self.header().resizeSection(2, 400)
-        self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
-        self.update()
+        self.__update_displayed_strings()
 
-    def __create_string_item(self, string: String) -> StringItem:
-        item = StringItem(
-            [
-                string.display_id,
-                raw_string(string.original),
-                raw_string(
-                    string.string if string.string is not None else string.original
-                ),
-            ]
-        )
-        item.set_string(string)
-
-        item.setFont(0, QFont("Consolas"))
-
-        return item
-
-    def __get_items(self, only_visible: bool = False) -> list[QTreeWidgetItem]:
+    def __get_items(self, only_visible: bool = False) -> list[StringItem]:
         return [
             string_item
-            for modfile_item in iter_toplevel_items(self)
-            for string_item in iter_children(modfile_item)
+            for string_item in self.__string_items.values()
             if not only_visible or not string_item.isHidden()
         ]
 
-    @override
-    def update(self) -> None:  # type: ignore
+    def __on_theme_changed(self) -> None:
+        for item in self.__string_items.values():
+            item.update()
+
+        for item in self.__modfile_items.values():
+            item.update()
+
+    def __update_displayed_strings(self) -> None:
         """
-        Updates the strings widget.
+        Updates the displayed string items.
         """
 
         name_filter: Optional[str] = (
@@ -149,15 +123,11 @@ class StringsWidget(QTreeWidget):
             self.__name_filter[1] if self.__name_filter else None
         )
 
-        for string, item in self.__string_items.items():
-            item.setText(1, raw_string(string.original))
-            item.setText(
-                2,
-                raw_string(
-                    string.string if string.string is not None else string.original
-                ),
-            )
+        sorting_enabled: bool = self.isSortingEnabled()
+        if sorting_enabled:
+            self.setSortingEnabled(False)
 
+        for string, item in self.__string_items.items():
             string_text: str = string.display_id + string.original
             if string.string is not None:
                 string_text += string.string
@@ -170,12 +140,6 @@ class StringsWidget(QTreeWidget):
                 or not matches_filter(string_text, name_filter, case_sensitive or False)
             )
 
-            for c in range(5):
-                item.setForeground(
-                    c,
-                    StringStatus.get_color(string.status) or Qt.GlobalColor.white,
-                )
-
         for modfile, modfile_item in self.__modfile_items.items():
             modfile_item.setHidden(
                 not are_children_visible(modfile_item)
@@ -187,10 +151,23 @@ class StringsWidget(QTreeWidget):
                 )
             )
 
-        if self.currentItem():
-            self.scrollToItem(
-                self.currentItem(), QTreeWidget.ScrollHint.PositionAtCenter
-            )
+        if sorting_enabled:
+            self.setSortingEnabled(True)
+
+        current_item: Optional[QTreeWidgetItem] = self.currentItem()
+        if current_item is not None:
+            self.scrollToItem(current_item, QTreeWidget.ScrollHint.PositionAtCenter)
+
+    def update_string(self, string: String) -> None:
+        """
+        Updates a string item.
+
+        Args:
+            string (String): The string to update.
+        """
+
+        item: StringItem = self.__string_items[string]
+        item.update()
 
     def go_to_modfile(self, modfile: Path) -> None:
         """
@@ -201,7 +178,7 @@ class StringsWidget(QTreeWidget):
                 The path of the mod file, relative to the game's "Data" folder.
         """
 
-        item: QTreeWidgetItem = self.__modfile_items[modfile]
+        item: TreeItem[ImmutableValue[Path]] = self.__modfile_items[modfile]
         item.setSelected(True)
         self.setCurrentItem(item)
         self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)
@@ -219,7 +196,7 @@ class StringsWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.update()
+        self.__update_displayed_strings()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
@@ -230,7 +207,7 @@ class StringsWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter
-        self.update()
+        self.__update_displayed_strings()
 
     def get_selected_strings(self) -> StringList:
         """
@@ -256,7 +233,20 @@ class StringsWidget(QTreeWidget):
             item: string for string, item in self.__string_items.items()
         }
 
-        return items.get(self.currentItem())
+        current_item: Optional[QTreeWidgetItem] = self.currentItem()
+        return items.get(current_item) if current_item is not None else None
+
+    def get_visible_strings(self) -> StringList:
+        """
+        Gets a list of all currently visible strings.
+
+        Returns:
+            StringList: List of visible strings
+        """
+
+        return [
+            string for string, item in self.__string_items.items() if not item.isHidden()
+        ]
 
     def get_visible_string_count(self) -> int:
         """
@@ -298,12 +288,12 @@ class StringsWidget(QTreeWidget):
             Optional[String]: The string or None if not found.
         """
 
-        items: list[QTreeWidgetItem] = self.__get_items(only_visible)
+        items: list[StringItem] = self.__get_items(only_visible)
 
         if index >= len(items):
             return None
 
-        string_items: dict[QTreeWidgetItem, String] = {
+        string_items: dict[StringItem, String] = {
             item: string for string, item in self.__string_items.items()
         }
 
