@@ -151,9 +151,7 @@ class ModInstanceWidget(QTreeWidget):
 
         self.__state_service.update_signal.connect(self.__on_modfiles_updated)
 
-        ThemeManager.get().theme_changed.connect(
-            lambda _: self.__update_item_visibilities()
-        )
+        ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
 
         self.__load_mod_instance()
 
@@ -243,6 +241,16 @@ class ModInstanceWidget(QTreeWidget):
                 mod_item.update()
 
         self.__update_item_visibilities()
+
+    def __on_theme_changed(self) -> None:
+        for mod, mod_item in self.__mod_items.items():
+            mod_item.update()
+
+            modfile_items: list[TreeItem[ModFile]] = list(
+                self.__modfile_items.get(mod, {}).values()
+            )
+            for modfile_item in modfile_items:
+                modfile_item.update()
 
     def __update_item_visibilities(self) -> None:
         name_filter: Optional[str] = (
