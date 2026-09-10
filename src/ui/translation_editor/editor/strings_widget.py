@@ -8,6 +8,7 @@ from typing import Optional
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
@@ -58,6 +59,8 @@ class StringsWidget(QTreeWidget):
         self.__init_ui()
         self.__init_strings(strings)
 
+        ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
+
         self.setSortingEnabled(True)
         self.header().setSortIndicatorClearable(True)
         self.expandAll()
@@ -100,6 +103,13 @@ class StringsWidget(QTreeWidget):
             for string_item in self.__string_items.values()
             if not only_visible or not string_item.isHidden()
         ]
+
+    def __on_theme_changed(self) -> None:
+        for item in self.__string_items.values():
+            item.update()
+
+        for item in self.__modfile_items.values():
+            item.update()
 
     def __update_displayed_strings(self) -> None:
         """
