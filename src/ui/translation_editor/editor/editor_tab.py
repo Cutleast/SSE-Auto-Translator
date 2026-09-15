@@ -139,7 +139,7 @@ class EditorTab(QWidget):
         self.__menu.reset_translation_requested.connect(self.__reset_selected)
         self.__menu.mark_as_requested.connect(self.__set_status)
 
-        ThemeManager.get().theme_changed.connect(lambda _: self.update())
+        ThemeManager.get().theme_changed.connect(lambda _: self.__update_metadata())
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
