@@ -60,7 +60,6 @@ class StringListToolbar(QToolBar):
         self.__filter_action.setCheckable(True)
         self.__filter_action.setMenu(self.__filter_menu)
         self.__filter_action.triggered.connect(self.__on_filter_action_triggered)
-        self.addAction(self.__filter_action)
 
     def __on_filter_action_triggered(self) -> None:
         # reverse the checked state
