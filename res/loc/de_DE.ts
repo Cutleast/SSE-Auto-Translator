@@ -719,22 +719,22 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="54"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="55"/>
         <source>[Experimental]</source>
         <translation>[Experimentell]</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="54"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="55"/>
         <source>Handle Nexus Mods downloads</source>
         <translation>Mit Nexus Mods Downloads verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="134"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="135"/>
         <source>Resume</source>
         <translation>Fortsetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="136"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="137"/>
         <source>Pause</source>
         <translation>Anhalten</translation>
     </message>

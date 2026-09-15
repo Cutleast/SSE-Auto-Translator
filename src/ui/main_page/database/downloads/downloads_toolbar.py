@@ -48,6 +48,7 @@ class DownloadsToolbar(QToolBar):
         self.setFloatable(False)
 
         self.__init_actions()
+        self.set_paused(self.__paused)
 
     def __init_actions(self) -> None:
         self.__handle_nxm_action = self.addAction(
