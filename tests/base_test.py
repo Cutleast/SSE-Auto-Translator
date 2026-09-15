@@ -84,9 +84,7 @@ class BaseTest(CoreBaseTest):
         Utils.reset_singleton(WindowManager)
 
     @pytest.fixture(autouse=True)
-    def mock_web_requests(
-        self, data_folder: Path, requests_mock: RequestsMock
-    ) -> None:
+    def mock_web_requests(self, data_folder: Path, requests_mock: RequestsMock) -> None:
         """
         Registers all mocked web responses from the test data folder.
         """
@@ -234,7 +232,7 @@ class BaseTest(CoreBaseTest):
             GameService: The game service instance
         """
 
-        yield GameService(read_resource(":/skyrimse.json"))
+        yield GameService(read_resource(":/sse-at/skyrimse.json"))
 
         Utils.reset_singleton(GameService)
         logging.debug("GameService singleton reset.")  # noqa: LOG015

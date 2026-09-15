@@ -58,14 +58,16 @@ class UserSettings(SettingsPage[UserConfig]):
     @override
     def _init_ui(self) -> None:
         scroll_widget = QWidget()
-        scroll_widget.setObjectName("transparent")
         self.setWidget(scroll_widget)
 
         self.__vlayout = QVBoxLayout()
+        self.__vlayout.setContentsMargins(4, 0, 4, 0)
         scroll_widget.setLayout(self.__vlayout)
 
         self.__init_translations_settings()
         self.__init_instance_settings()
+
+        self.__vlayout.addStretch(1)
 
         self.__author_blacklist = self._initial_config.author_blacklist.copy()
 

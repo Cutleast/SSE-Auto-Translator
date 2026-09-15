@@ -44,18 +44,18 @@ class ResultDialog(QDialog):
         vlayout.addSpacing(15)
 
         title_label = QLabel(self.tr("Scan Result"))
-        title_label.setObjectName("h1")
+        title_label.setProperty("title", True)
         vlayout.addWidget(title_label)
 
         vlayout.addSpacing(15)
 
         flayout = QFormLayout()
-        flayout.setHorizontalSpacing(50)
+        flayout.setHorizontalSpacing(150)
         flayout.setFormAlignment(Qt.AlignmentFlag.AlignRight)
         vlayout.addLayout(flayout)
 
         for status, count in summary.items():
-            color: Optional[QColor] = TranslationStatus.get_color(status)
+            color: Optional[QColor] = TranslationStatus.get_fg_color(status)
 
             if color is None:
                 label = QLabel(status.get_localized_name())
@@ -67,6 +67,7 @@ class ResultDialog(QDialog):
                     f'<font color="{color_name}">{status.get_localized_name()}:</font>'
                 )
                 count_label = QLabel(f'<font color="{color_name}">{count}</font>')
+                count_label.setAlignment(Qt.AlignmentFlag.AlignRight)
                 flayout.addRow(label, count_label)
 
         vlayout.addSpacing(15)

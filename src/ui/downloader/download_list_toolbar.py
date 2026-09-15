@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from typing import override
 
-from PySide6.QtCore import QSize, Signal
+from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
 
@@ -39,32 +39,39 @@ class DownloadListToolBar(QToolBar):
     def __init__(self) -> None:
         super().__init__()
 
-        self.setIconSize(QSize(32, 32))
         self.setFloatable(False)
 
-        self.__init_filter_action()
+        self.__init_ui()
 
-        self.addSeparator()
-
-        self.__init_download_list_actions()
-
-    def __init_filter_action(self) -> None:
-        self.__filter_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.filter"),
-            self.tr("Filter items without selection options"),
-        )
-        self.__filter_action.setCheckable(True)
         self.__filter_action.triggered.connect(
             lambda: self.filter_toggled.emit(self.__filter_action.isChecked())
         )
+        self.__import_action.triggered.connect(self.import_requested.emit)
+        self.__export_action.triggered.connect(self.export_requested.emit)
+
+    def __init_ui(self) -> None:
+        self.__init_download_list_actions()
+
+        self.addSeparator()
+
+        self.__init_filter_action()
+
+    def __init_filter_action(self) -> None:
+        self.__filter_action = self.addAction(
+            self.tr("Filter items without selection options")
+        )
+        IconProvider.bind_qta_icon(
+            self.__filter_action, self.__filter_action.setIcon, "mdi6.filter"
+        )
+        self.__filter_action.setCheckable(True)
 
     def __init_download_list_actions(self) -> None:
-        self.__import_action = self.addAction(
-            IconProvider.get_qta_icon("mdi6.import"), self.tr("Import download list...")
+        self.__import_action = self.addAction(self.tr("Import download list..."))
+        IconProvider.bind_qta_icon(
+            self.__import_action, self.__import_action.setIcon, "mdi6.import"
         )
-        self.__import_action.triggered.connect(self.import_requested.emit)
 
-        self.__export_action = self.addAction(
-            IconProvider.get_qta_icon("fa5s.share"), self.tr("Export download list...")
+        self.__export_action = self.addAction(self.tr("Export download list..."))
+        IconProvider.bind_qta_icon(
+            self.__export_action, self.__export_action.setIcon, "mdi6.share"
         )
-        self.__export_action.triggered.connect(self.export_requested.emit)

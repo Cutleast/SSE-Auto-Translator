@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMessageBox, QWidget
@@ -12,7 +13,7 @@ from PySide6.QtWidgets import QMessageBox, QWidget
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
-from ui.utilities.theme_manager import ThemeManager
+from ui.utilities.icon_provider import IconProvider
 
 from .settings_widget import SettingsWidget
 
@@ -59,11 +60,22 @@ class SettingsDialog(SettingsWidget):
         Cancels dialog and asks for confirmation if changes are pending.
         """
 
-        if self.changes_pending:
+        if self._changes_pending:
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("Cancel"))
             message_box.setText(
                 self.tr("Are you sure you want to cancel? All changes will be lost.")
+            )
+            IconProvider.bind_qta_icon(
+                message_box,
+                lambda icon: message_box.setIconPixmap(
+                    icon.pixmap(
+                        ThemeManager.get().theme.metrics.icon_xl,
+                        ThemeManager.get().theme.metrics.icon_xl,
+                    )
+                ),
+                "mdi6.alert",
+                color=IconProvider.Color.Warning,
             )
             message_box.setStandardButtons(
                 QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
@@ -71,9 +83,7 @@ class SettingsDialog(SettingsWidget):
             message_box.setDefaultButton(QMessageBox.StandardButton.No)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() == QMessageBox.StandardButton.Yes:
                 event.accept()

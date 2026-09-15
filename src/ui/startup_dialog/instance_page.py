@@ -10,7 +10,7 @@ from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
     InstanceSelectorWidget,
 )
-from PySide6.QtWidgets import QCheckBox
+from PySide6.QtWidgets import QCheckBox, QGroupBox, QVBoxLayout
 
 from core.config.user_config import UserConfig
 from core.utilities.constants import GAME_ID
@@ -28,10 +28,20 @@ class InstancePage(Page):
 
     @override
     def _init_form(self) -> None:
+        modinstance_groupbox = QGroupBox(self.tr("Modlist"))
+        self._vlayout.addWidget(modinstance_groupbox)
+        modinstance_vlayout = QVBoxLayout()
+        modinstance_groupbox.setLayout(modinstance_vlayout)
+
         self.__modinstance_selector = InstanceSelectorWidget()
         self.__modinstance_selector.set_cur_game(GameService.get_game_by_id(GAME_ID))
         self.__modinstance_selector.instance_valid.connect(self.valid_signal.emit)
-        self._vlayout.addWidget(self.__modinstance_selector)
+        modinstance_vlayout.addWidget(self.__modinstance_selector)
+
+        options_groupbox = QGroupBox(self.tr("Options"))
+        self._vlayout.addWidget(options_groupbox)
+        options_vlayout = QVBoxLayout()
+        options_groupbox.setLayout(options_vlayout)
 
         self.__parse_bsas_checkbox = QCheckBox(
             self.tr(
@@ -40,7 +50,9 @@ class InstancePage(Page):
             )
         )
         self.__parse_bsas_checkbox.setChecked(True)
-        self._vlayout.addWidget(self.__parse_bsas_checkbox)
+        options_vlayout.addWidget(self.__parse_bsas_checkbox)
+
+        self._vlayout.addStretch()
 
     @override
     def _get_title(self) -> str:

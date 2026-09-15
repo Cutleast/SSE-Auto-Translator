@@ -10,6 +10,7 @@ from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
 
 from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.utilities.constants import DSD_FILE_PATTERN
 
@@ -71,6 +72,17 @@ class Mod(BaseMod):
                 and file.stem.lower() != "sse-at_output"
             )
         ]
+
+    @property
+    def status(self) -> TranslationStatus:
+        """
+        The translation status of the mod. Always the maximum status of all mod files in
+        the mod.
+        """
+
+        return max(
+            (mf.status for mf in self.modfiles), default=TranslationStatus.NoneStatus
+        )
 
     @override
     def __hash__(self) -> int:

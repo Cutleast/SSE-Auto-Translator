@@ -328,9 +328,7 @@ class TestModInstanceWidget(BaseTest):
         widget.update()
 
         # then
-        assert test_modfile_item.foreground(
-            0
-        ).color().name() == TranslationStatus.get_color(
+        assert test_modfile_item.foreground(0).color() == TranslationStatus.get_fg_color(
             TranslationStatus.RequiresTranslation
         )
 
@@ -339,9 +337,9 @@ class TestModInstanceWidget(BaseTest):
         widget.update()
 
         # then
-        assert test_modfile_item.foreground(
-            0
-        ).color().name() == TranslationStatus.get_color(TranslationStatus.IsTranslated)
+        assert test_modfile_item.foreground(0).color() == TranslationStatus.get_fg_color(
+            TranslationStatus.IsTranslated
+        )
 
     def test_get_visible_modfile_item_count(
         self, widget: ModInstanceWidget, user_data: UserData
@@ -402,8 +400,8 @@ class TestModInstanceWidget(BaseTest):
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
 
         # then
-        assert test_modfile_item.foreground(0).color().name() == (
-            TranslationStatus.get_color(test_modfile.status) or "#ffffff"
+        assert test_modfile_item.foreground(0).color() == (
+            TranslationStatus.get_fg_color(test_modfile.status)
         )
 
         # when
@@ -411,8 +409,8 @@ class TestModInstanceWidget(BaseTest):
             state_service.set_modfile_states({test_modfile: status})
 
             # then
-            assert test_modfile_item.foreground(0).color().name() == (
-                TranslationStatus.get_color(status) or "#ffffff"
+            assert test_modfile_item.foreground(0).color() == (
+                TranslationStatus.get_fg_color(status)
             )
 
     def test_database_changes_affect_modfile_items(
@@ -463,12 +461,12 @@ class TestModInstanceWidget(BaseTest):
 
         # then
         assert original_modfile.status == TranslationStatus.RequiresTranslation
-        assert original_modfile_item.foreground(0).color().name() == (
-            TranslationStatus.get_color(original_modfile.status) or "#ffffff"
+        assert original_modfile_item.foreground(0).color() == (
+            TranslationStatus.get_fg_color(original_modfile.status)
         )
         assert translated_modfile.status == TranslationStatus.IsTranslated
-        assert translated_modfile_item.foreground(0).color().name() == (
-            TranslationStatus.get_color(translated_modfile.status) or "#ffffff"
+        assert translated_modfile_item.foreground(0).color() == (
+            TranslationStatus.get_fg_color(translated_modfile.status)
         )
 
         # when
@@ -476,10 +474,10 @@ class TestModInstanceWidget(BaseTest):
 
         # then
         assert original_modfile.status == TranslationStatus.TranslationInstalled
-        assert original_modfile_item.foreground(0).color().name() == (
-            TranslationStatus.get_color(original_modfile.status) or "#ffffff"
+        assert original_modfile_item.foreground(0).color() == (
+            TranslationStatus.get_fg_color(original_modfile.status)
         )
         assert translated_modfile.status == TranslationStatus.IsTranslated
-        assert translated_modfile_item.foreground(0).color().name() == (
-            TranslationStatus.get_color(translated_modfile.status) or "#ffffff"
+        assert translated_modfile_item.foreground(0).color() == (
+            TranslationStatus.get_fg_color(translated_modfile.status)
         )

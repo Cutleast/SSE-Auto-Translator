@@ -45,7 +45,7 @@ class TempFolderProvider(Singleton):
 
         if self.__temp_folder is None or not self.__temp_folder.is_dir():
             self.__temp_folder = self.__base_path / self.__folder_name
-            self.__temp_folder.mkdir(parents=True)
+            self.__temp_folder.mkdir(parents=True, exist_ok=True)
 
         return self.__temp_folder
 

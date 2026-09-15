@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Signal
-from PySide6.QtWidgets import QTabWidget
 
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
@@ -20,7 +20,7 @@ from .downloads.downloads_tab import DownloadsTab
 from .translations.translations_tab import TranslationsTab
 
 
-class DatabaseWidget(QTabWidget):
+class DatabaseWidget(TabWidget):
     """
     Widget for translation database and download list.
     """

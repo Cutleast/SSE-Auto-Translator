@@ -6,12 +6,14 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional, cast, override
 
-from cutleast_core_lib.core.utilities.datetime import fmt_timestamp
 from cutleast_core_lib.core.utilities.filter import matches_filter
-from cutleast_core_lib.core.utilities.scale import scale_value
+from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from PySide6.QtCore import QItemSelectionModel, QSize, Qt, QUrl, Signal
 from PySide6.QtGui import QDragEnterEvent, QDragMoveEvent, QDropEvent
 from PySide6.QtWidgets import (
@@ -19,7 +21,6 @@ from PySide6.QtWidgets import (
     QApplication,
     QDialog,
     QFileDialog,
-    QHeaderView,
     QInputDialog,
     QMessageBox,
     QTreeWidget,
@@ -37,9 +38,9 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
-from ui.utilities.theme_manager import ThemeManager
-from ui.widgets.string_list.string_list_dialog import StringListWindow
+from ui.string_list.string_list_window import StringListWindow
 
+from .columns import TranslationsColumns
 from .export_dialog import ExportDialog
 from .translations_menu import TranslationsMenu
 
@@ -77,12 +78,12 @@ class TranslationsWidget(QTreeWidget):
     Context menu.
     """
 
-    __translation_items: dict[Translation, QTreeWidgetItem]
+    __translation_items: dict[Translation, TreeItem[Translation]]
     """
     Mapping of loaded translations and their tree items.
     """
 
-    __file_items: dict[Translation, dict[Path, QTreeWidgetItem]]
+    __file_items: dict[Translation, dict[Path, TreeItem[ImmutableValue[Path]]]]
     """
     Mapping of loaded translations to their file tree items.
     """
@@ -116,6 +117,12 @@ class TranslationsWidget(QTreeWidget):
 
         self.__init_ui()
 
+        self.customContextMenuRequested.connect(
+            lambda: self.__menu.open(
+                self.get_current_item(), self.__provider.is_source_available
+            )
+        )
+
         self.__menu.expand_all_clicked.connect(self.expandAll)
         self.__menu.collapse_all_clicked.connect(self.collapseAll)
         self.__menu.show_strings_requested.connect(self.__show_strings)
@@ -129,47 +136,33 @@ class TranslationsWidget(QTreeWidget):
         self.__database.add_signal.connect(self.__on_translations_added)
         self.__database.remove_signal.connect(self.__on_translations_removed)
         self.__database.rename_signal.connect(
-            lambda translation: (
-                # currently, an entire reload is required
-                self.update_translations()
-            )
+            lambda translation: self.__translation_items[translation].update()
         )
         self.__database.changed_signal.connect(self.__on_translation_changed)
 
+        ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
+
         self.__load_translations()
 
+        self.setSortingEnabled(True)
+        self.sortByColumn(TranslationsColumns.Date.index, Qt.SortOrder.DescendingOrder)
+        self.header().setSortIndicatorClearable(True)
+
     def __init_ui(self) -> None:
+        TranslationsColumns.apply_to_tree_widget(self)
+
         self.setAcceptDrops(True)
-        self.setAlternatingRowColors(True)
         self.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
         self.setExpandsOnDoubleClick(False)
+        self.setUniformRowHeights(True)
         self.itemDoubleClicked.connect(self.__item_double_clicked)
 
-        self.__init_header()
         self.__init_context_menu()
-
-    def __init_header(self) -> None:
-        self.setHeaderLabels(  # TODO: Make this configurable
-            [
-                self.tr("Name"),
-                self.tr("Version"),
-                self.tr("Source"),
-                self.tr("Date"),
-                self.tr("Size"),
-            ]
-        )
-
-        self.header().setStretchLastSection(False)
-        self.header().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
 
     def __init_context_menu(self) -> None:
         self.__menu = TranslationsMenu()
+        self.__menu.set_shortcut_target(self)
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
-        self.customContextMenuRequested.connect(
-            lambda: self.__menu.open(
-                self.get_current_item(), self.__provider.is_source_available
-            )
-        )
 
     def highlight_translation(self, translation: Translation) -> None:
         """
@@ -187,7 +180,7 @@ class TranslationsWidget(QTreeWidget):
             )
             return
 
-        tree_item = self.__translation_items[translation]
+        tree_item: TreeItem[Translation] = self.__translation_items[translation]
 
         self.selectionModel().select(
             self.indexFromItem(tree_item),
@@ -203,18 +196,13 @@ class TranslationsWidget(QTreeWidget):
         self.clear()
 
         for translation in self.__database.user_translations:
-            item: QTreeWidgetItem = self._create_translation_item(translation)
+            item: TreeItem[Translation] = self._create_translation_item(translation)
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
-        self.resizeColumnToContents(3)
-        self.update_translations()
+        self.__update()
 
-    def update_translations(self) -> None:
-        """
-        Updates the visible translations.
-        """
-
+    def __update(self) -> None:
         name_filter: Optional[str] = (
             self.__name_filter[0] if self.__name_filter else None
         )
@@ -222,9 +210,12 @@ class TranslationsWidget(QTreeWidget):
             self.__name_filter[1] if self.__name_filter else None
         )
 
+        # temporarily disable sorting to avoid performance issues
+        self.setSortingEnabled(False)
+
         for translation, translation_item in self.__translation_items.items():
-            file_items: dict[Path, QTreeWidgetItem] = self.__file_items.get(
-                translation, {}
+            file_items: dict[Path, TreeItem[ImmutableValue[Path]]] = (
+                self.__file_items.get(translation, {})
             )
 
             for file, file_item in file_items.items():
@@ -240,12 +231,14 @@ class TranslationsWidget(QTreeWidget):
                 )
             )
 
+        self.setSortingEnabled(True)  # re-enable sorting after updating
+
     def __on_translations_added(self, new_translations: list[Translation]) -> None:
         for translation in new_translations:
             if translation in self.__translation_items:
                 continue
 
-            item: QTreeWidgetItem = self._create_translation_item(translation)
+            item: TreeItem[Translation] = self._create_translation_item(translation)
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
@@ -262,7 +255,7 @@ class TranslationsWidget(QTreeWidget):
         if translation not in self.__translation_items:
             return
 
-        item: QTreeWidgetItem = self.__translation_items[translation]
+        item: TreeItem[Translation] = self.__translation_items[translation]
 
         # check for added or removed mod files
         current_files: set[Path] = set(translation.strings.keys())
@@ -277,50 +270,31 @@ class TranslationsWidget(QTreeWidget):
             )
 
         for removed_file in removed_files:
-            removed_item: Optional[QTreeWidgetItem] = self.__file_items.get(
-                translation, {}
-            ).pop(removed_file, None)
+            removed_item: Optional[TreeItem[ImmutableValue[Path]]] = (
+                self.__file_items.get(translation, {}).pop(removed_file, None)
+            )
             if removed_item is not None:
                 item.removeChild(removed_item)
 
-    def _create_translation_item(self, translation: Translation) -> QTreeWidgetItem:
-        item = QTreeWidgetItem(
-            [
-                translation.name,
-                translation.version or "",
-                (
-                    translation.source.get_localized_name()
-                    if translation.source
-                    else self.tr("Unknown")
-                ),
-                fmt_timestamp(translation.timestamp),
-                scale_value(translation.size),
-            ]
-        )
+    def _create_translation_item(
+        self, translation: Translation
+    ) -> TreeItem[Translation]:
+        item: TreeItem[Translation] = TreeItem(translation, TranslationsColumns)
         item.addChildren(
             self._create_translation_file_items(
                 translation, list(translation.strings.keys())
             )
         )
 
-        item.setToolTip(3, fmt_timestamp(translation.timestamp))
-        item.setToolTip(4, f"{translation.size} Bytes")
-
         return item
 
     def _create_translation_file_items(
         self, translation: Translation, files: list[Path]
-    ) -> list[QTreeWidgetItem]:
-        items: list[QTreeWidgetItem] = []
+    ) -> list[TreeItem[ImmutableValue[Path]]]:
+        items: list[TreeItem[ImmutableValue[Path]]] = []
         for file in files:
-            item = QTreeWidgetItem(
-                [
-                    str(file),
-                    "",  # version
-                    "",  # source
-                    "",  # date
-                    "",  # size
-                ]
+            item: TreeItem[ImmutableValue[Path]] = TreeItem(
+                ImmutableValue(file), TranslationsColumns
             )
             self.__file_items.setdefault(translation, {})[file] = item
             items.append(item)
@@ -334,6 +308,10 @@ class TranslationsWidget(QTreeWidget):
             self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
+
+    def __on_theme_changed(self) -> None:
+        for item in self.__translation_items.values():
+            item.update()
 
     @override
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
@@ -411,18 +389,15 @@ class TranslationsWidget(QTreeWidget):
             Optional[Translation]: Current item or None
         """
 
-        item: Optional[Translation | Path] = None
+        cur_item: Optional[QTreeWidgetItem] = self.currentItem()
 
-        for translation in self.__translation_items:
-            if self.__translation_items[translation].isSelected():
-                item = translation
-                break
-            for file, file_item in self.__file_items.get(translation, {}).items():
-                if file_item.isSelected():
-                    item = file
-                    break
+        if not isinstance(cur_item, TreeItem):
+            return None
 
-        return item
+        if isinstance(cur_item.item, Translation):
+            return cur_item.item
+
+        return cast(ImmutableValue[Path], cur_item.item).value
 
     @staticmethod
     def is_valid_translation_file(path: Path | str) -> bool:
@@ -456,10 +431,11 @@ class TranslationsWidget(QTreeWidget):
         current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.strings:
-            dialog = StringListWindow(
-                current_item.name, current_item.strings, translation_mode=True
+            WindowManager.get().show(
+                StringListWindow(
+                    current_item.name, current_item.strings, translation_mode=True
+                )
             )
-            dialog.show()
 
     def __edit_translation(self) -> None:
         current_item: Optional[Translation | Path] = self.get_current_item()
@@ -565,9 +541,7 @@ class TranslationsWidget(QTreeWidget):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-
-            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
+            ThemeManager.update_widget_styles(message_box)
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
@@ -609,4 +583,4 @@ class TranslationsWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.update_translations()
+        self.__update()

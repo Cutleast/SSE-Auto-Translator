@@ -4,9 +4,9 @@ Copyright (c) Cutleast
 
 from typing import override
 
-from cutleast_core_lib.ui.widgets.menu import Menu
+from cutleast_core_lib.ui.widgets.tree_menu import TreeMenu
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QAction, QCursor
+from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QTreeWidgetItem
 
 from ui.utilities.icon_provider import IconProvider
@@ -14,16 +14,10 @@ from ui.utilities.icon_provider import IconProvider
 from .download_list_item import DownloadListItem
 
 
-class DownloadListMenu(Menu):
+class DownloadListMenu(TreeMenu):
     """
     Context menu for the download list widget.
     """
-
-    expand_all_clicked = Signal()
-    """Signal emitted when the expand all button is clicked."""
-
-    collapse_all_clicked = Signal()
-    """Signal emitted when the collapse all button is clicked."""
 
     check_selected_clicked = Signal()
     """Signal emitted when the check selected button is clicked."""
@@ -41,28 +35,19 @@ class DownloadListMenu(Menu):
         self.__init_item_actions()
 
     def __init_item_actions(self) -> None:
-        expand_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
-            self.tr("Expand all"),
-        )
-        expand_all_action.triggered.connect(self.expand_all_clicked.emit)
-
-        collapse_all_action: QAction = self.addAction(
-            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
-            self.tr("Collapse all"),
-        )
-        collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
-
-        self.addSeparator()
-
         self.__uncheck_action = self.addAction(self.tr("Uncheck selected download(s)"))
-        self.__uncheck_action.setIcon(IconProvider.get_qta_icon("mdi6.close"))
+        IconProvider.bind_qta_icon(
+            self.__uncheck_action, self.__uncheck_action.setIcon, "mdi6.close"
+        )
         self.__uncheck_action.triggered.connect(self.uncheck_selected_clicked.emit)
 
         self.__check_action = self.addAction(self.tr("Check selected download(s)"))
-        self.__check_action.setIcon(IconProvider.get_qta_icon("mdi6.check"))
+        IconProvider.bind_qta_icon(
+            self.__check_action, self.__check_action.setIcon, "mdi6.check"
+        )
         self.__check_action.triggered.connect(self.check_selected_clicked.emit)
 
+    @override
     def open(self, selected_items: list[QTreeWidgetItem]) -> None:
         """
         Opens the context menu at the current cursor position.
@@ -84,4 +69,4 @@ class DownloadListMenu(Menu):
             )
         )
 
-        self.exec(QCursor.pos())
+        super().open()
