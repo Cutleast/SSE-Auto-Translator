@@ -82,7 +82,7 @@ Returning to the main window, we can now see that SSE-AT automatically generated
 .The "Translations" panel on the right-hand side now displays a whole list of automatically generated translations.
 image::modlist_scan_main_page.png[]
 
-. SSE-AT now knows which mods require a translation. We now want to search online (as previously mentioned on Nexus Mods (and CDT for French translations)) for translations that are available to download and we can do this by clicking on the now highlighted image:scan_online.svg[width=24px,height=24px] _Scan Online_ button in the same tool bar right next to the _Modlist Scan_ button we previously clicked.
+. SSE-AT now knows which mods require a translation. We now want to search online (as previously mentioned on Nexus Mods (and CDT for French translations)) for translations that are available to download and we can do this by clicking on the now highlighted image:scan_online.svg[width=24px,height=24px] _Scan online_ button in the same tool bar right next to the _Scan modlist_ button we previously clicked.
 +
 .Lean back and relax, the online scan can take up to 20 minutes, once again depending on the size of your mod list.
 image::scanning_online.png[]
