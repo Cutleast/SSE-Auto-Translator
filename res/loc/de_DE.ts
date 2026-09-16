@@ -2782,12 +2782,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Neues Element hinzufügen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Remove selected item(s)...</source>
         <translation>Ausgewählte(s) Element(e) entfernen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Del</source>
         <translation>Entf</translation>
     </message>

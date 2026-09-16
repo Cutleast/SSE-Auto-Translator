@@ -2774,12 +2774,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Remove selected item(s)...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Del</source>
         <translation type="unfinished"></translation>
     </message>
