@@ -613,7 +613,9 @@ class NexusModsApi(ProviderApi):
             raise ProviderApi.raise_mod_not_found_error(NxmModId(mod_id=mod_id))
 
         url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
-        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (get_url_identifier(url) + ".cache")
+        cache_file_path: Path = ProviderApi.CACHE_FOLDER / (
+            get_url_identifier(url) + ".cache"
+        )
 
         cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
             cache_file_path, default=None
