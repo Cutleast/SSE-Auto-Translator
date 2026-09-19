@@ -60,6 +60,7 @@ class NexusModsApi(ProviderApi):
         "Mandarin": "Chinese",
         "Simplified Chinese": "Chinese",
         "Portuguese (Brazil)": "Portuguese",
+        "Portuguese (Portugal)": "Portuguese",
         "Spanish (Spain)": "Spanish",
     }
     """Map for languages that are named differently on the Nexus Mods site."""
