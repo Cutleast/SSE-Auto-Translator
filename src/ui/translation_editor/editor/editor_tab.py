@@ -7,6 +7,7 @@ import re
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
@@ -78,6 +79,8 @@ class EditorTab(QWidget):
     __menu: EditorMenu
     __strings_widget: StringsWidget
 
+    __dialog: TranslatorDialog
+
     def __init__(
         self,
         translation: Translation,
@@ -110,6 +113,15 @@ class EditorTab(QWidget):
 
         self.__init_ui()
         self.__init_shortcuts()
+        self.__init_dialog()
+
+        self.__tool_bar.filter_changed.connect(self.__on_state_filter_changed)
+        self.__tool_bar.apply_database_requested.connect(self.__apply_database)
+        self.__tool_bar.search_and_replace_requested.connect(self.__search_and_replace)
+        self.__tool_bar.api_translation_requested.connect(self.__translate_with_api)
+        self.__tool_bar.save_requested.connect(self.__save)
+        self.__tool_bar.export_requested.connect(self.__export)
+        self.__search_bar.searchChanged.connect(self.__on_text_filter_changed)
 
         self.__strings_widget.itemSelectionChanged.connect(
             lambda: self.__tool_bar.set_edit_actions_enabled(
@@ -124,13 +136,10 @@ class EditorTab(QWidget):
                 bool(self.__strings_widget.get_selected_strings())
             )
         )
-
-        self.__tool_bar.filter_changed.connect(self.set_state_filter)
-        self.__tool_bar.apply_database_requested.connect(self.__apply_database)
-        self.__tool_bar.search_and_replace_requested.connect(self.__search_and_replace)
-        self.__tool_bar.api_translation_requested.connect(self.__translate_with_api)
-        self.__tool_bar.save_requested.connect(self.__save)
-        self.__tool_bar.export_requested.connect(self.__export)
+        self.__strings_widget.visible_string_count_changed.connect(
+            self.__on_visible_string_count_changed
+        )
+        self.__strings_widget.order_changed.connect(self.__on_index_changed)
 
         self.__menu.expand_all_clicked.connect(self.__expand_all)
         self.__menu.collapse_all_clicked.connect(self.__collapse_all)
@@ -138,6 +147,11 @@ class EditorTab(QWidget):
         self.__menu.copy_string_requested.connect(self.__copy_selected)
         self.__menu.reset_translation_requested.connect(self.__reset_selected)
         self.__menu.mark_as_requested.connect(self.__set_status)
+
+        self.__dialog.finalize_requested.connect(self.__on_finalize_requested)
+        self.__dialog.prev_requested.connect(self.__on_prev_requested)
+        self.__dialog.next_requested.connect(self.__on_next_requested)
+        self.__dialog.api_translate_requested.connect(self.__on_api_translate_requested)
 
         ThemeManager.get().theme_changed.connect(lambda _: self.__update_metadata())
 
@@ -169,7 +183,6 @@ class EditorTab(QWidget):
         self.__tool_bar.insertSeparator(first_action)
 
         self.__search_bar = SearchBar()
-        self.__search_bar.searchChanged.connect(self.set_name_filter)
         self.__tool_bar.addWidget(self.__search_bar)
 
         num_label = QLabel(self.tr("Strings") + ":")
@@ -196,6 +209,13 @@ class EditorTab(QWidget):
 
         WidgetStateManager.get().register_state(
             "editor_tab_strings_widget_header", self.__strings_widget.header()
+        )
+
+    def __init_context_menu(self) -> None:
+        self.__menu = EditorMenu()
+
+        self.__strings_widget.setContextMenuPolicy(
+            Qt.ContextMenuPolicy.CustomContextMenu
         )
 
     def __init_shortcuts(self) -> None:
@@ -226,12 +246,14 @@ class EditorTab(QWidget):
 
         reset_shortcut.activated.connect(self.__reset_selected)
 
-    def __init_context_menu(self) -> None:
-        self.__menu = EditorMenu()
-
-        self.__strings_widget.setContextMenuPolicy(
-            Qt.ContextMenuPolicy.CustomContextMenu
+    def __init_dialog(self) -> None:
+        self.__dialog = TranslatorDialog(
+            spell_check_language=self.__user_data.user_config.language
+            if self.__app_config.use_spell_check
+            else None,
         )
+        self.__dialog.set_strings_count(self.__strings_widget.get_visible_string_count())
+        WidgetStateManager.get().register_geometry("translator_dialog", self.__dialog)
 
     @property
     def changes_pending(self) -> bool:
@@ -243,7 +265,7 @@ class EditorTab(QWidget):
 
     def __edit_string(self, string: Optional[String] = None) -> None:
         """
-        Opens a string in a translator dialog.
+        Opens a string in the translator dialog.
 
         Args:
             string (Optional[String]): String to open. Defaults to the current string.
@@ -255,66 +277,84 @@ class EditorTab(QWidget):
         if string is not None:
             assert string.id in [s.id for s in self.__editor.all_strings]
 
-            dialog = TranslatorDialog(
-                parent=self,
-                initial_string=string,
-                app_config=self.__app_config,
-                user_config=self.__user_data.user_config,
-                translator=self.__translator_service,
-            )
-            dialog.update_signal.connect(
-                lambda: self.__on_strings_changed([dialog.current_string])
-            )
-            WidgetStateManager.get().register_geometry("translator_dialog", dialog)
-            WindowManager.get().show(dialog)
+            self.__dialog.set_string(string)
+            self.__dialog.set_index(self.__strings_widget.get_index_of_string(string))
 
-    def update_matching_strings(self, original: str, translation: str) -> None:
-        """
-        Update strings that are matching
-        """
+            WindowManager.get().show(self.__dialog, delete_on_close=False)
 
-        self.__editor.apply_to_matching_strings(original, translation)
+    def __on_visible_string_count_changed(self, count: int) -> None:
+        self.__dialog.set_strings_count(count)
+        self.__on_index_changed()
 
-    def get_visible_string_count(self) -> int:
-        """
-        Gets the number of visible strings.
+    def __on_index_changed(self) -> None:
+        current_string: Optional[String] = self.__dialog.current_string
+        if current_string is not None:
+            try:
+                index: int = self.__strings_widget.get_index_of_string(
+                    current_string, only_visible=True
+                )
+            except ValueError:
+                self.__goto_index(0)
+            else:
+                self.__dialog.set_index(index)
 
-        Returns:
-            int: Number of visible strings
-        """
+    def __on_next_requested(self) -> None:
+        current_string: Optional[String] = self.__dialog.current_string
 
-        count: int = self.__strings_widget.get_visible_string_count()
-        return count
+        strings_count: int = self.__strings_widget.get_visible_string_count()
+        if strings_count < 1:
+            self.__dialog.finish()
+            return
 
-    def get_index(self, string: String) -> int:
-        """
-        Gets the index of a string in the list.
+        current_index: int = -1
+        if current_string is not None:
+            try:
+                current_index = self.__strings_widget.get_index_of_string(
+                    current_string, only_visible=True
+                )
+            except ValueError:
+                pass  # string was filtered out
 
-        Args:
-            string (String): The string to get the index of.
+        new_index: int
+        if current_index == (strings_count - 1):
+            new_index = 0
+        else:
+            new_index = current_index + 1
 
-        Returns:
-            int: The index
-        """
+        self.__goto_index(new_index)
 
-        index: int = self.__strings_widget.get_index_of_string(string, only_visible=True)
-        return index
+    def __on_prev_requested(self) -> None:
+        current_string: Optional[String] = self.__dialog.current_string
 
-    def get_string(self, index: int) -> Optional[String]:
-        """
-        Gets a string from an index.
+        current_index: int = -1
+        if current_string is not None:
+            try:
+                current_index = self.__strings_widget.get_index_of_string(
+                    current_string, only_visible=True
+                )
+            except ValueError:
+                pass  # string was filtered out
 
-        Args:
-            index (int): The index.
+        strings_count: int = self.__strings_widget.get_visible_string_count()
 
-        Returns:
-            Optional[String]: The string or None if not found.
-        """
+        new_index: int
+        if current_index > 0:
+            new_index = current_index - 1
+        else:
+            new_index = strings_count - 1
 
+        self.__goto_index(new_index)
+
+    def __goto_index(self, index: int) -> None:
         string: Optional[String] = self.__strings_widget.get_string_from_index(
             index, only_visible=True
         )
-        return string
+        if string is None:
+            self.__dialog.close()
+            return
+
+        self.__dialog.set_string(string)
+        self.__dialog.set_index(index)
 
     def __on_strings_changed(self, changed_strings: StringList) -> None:
         for changed_string in changed_strings:
@@ -564,10 +604,6 @@ class EditorTab(QWidget):
             self.__editor.reset_strings(selected_items)
 
     def __copy_selected(self) -> None:
-        """
-        Copies current selected strings to clipboard.
-        """
-
         selected_strings: StringList = self.__strings_widget.get_selected_strings()
 
         clipboard_text = ""
@@ -580,28 +616,27 @@ class EditorTab(QWidget):
 
         QApplication.clipboard().setText(clipboard_text.rstrip("\n"))
 
-    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
-        """
-        Sets the name filter.
-
-        Args:
-            name_filter (str): The name to filter by.
-            case_sensitive (bool): Case sensitivity.
-        """
-
+    def __on_text_filter_changed(self, name_filter: str, case_sensitive: bool) -> None:
         self.__strings_widget.set_name_filter(name_filter, case_sensitive)
         self.__update_metadata()
 
-    def set_state_filter(self, state_filter: list[StringStatus]) -> None:
-        """
-        Sets the state filter.
-
-        Args:
-            state_filter (list[StringStatus]): The states to filter by.
-        """
-
+    def __on_state_filter_changed(self, state_filter: list[StringStatus]) -> None:
         self.__strings_widget.set_state_filter(state_filter)
         self.__update_metadata()
+
+    def __on_finalize_requested(
+        self, translated_text: str, status: StringStatus
+    ) -> None:
+        current_string: String = not_none(self.__dialog.current_string)
+        self.__editor.finalize_string(current_string, translated_text, status)
+
+    def __on_api_translate_requested(self) -> None:
+        current_string: Optional[String] = self.__dialog.current_string
+        if current_string is None:
+            return
+
+        translated_text: str = self.__editor.get_api_translation(current_string)
+        self.__dialog.set_translated_text(translated_text)
 
     def go_to_modfile(self, modfile: Path) -> None:
         """

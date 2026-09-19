@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import TYPE_CHECKING, Optional
+from typing import Optional, override
 
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
@@ -11,30 +11,24 @@ from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdi
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
-    QApplication,
     QGroupBox,
     QHBoxLayout,
     QLabel,
     QMessageBox,
     QPlainTextEdit,
+    QPushButton,
     QSplitter,
     QVBoxLayout,
     QWidget,
 )
 
-from core.config.app_config import AppConfig
-from core.config.user_config import UserConfig
 from core.string.string_status import StringStatus
 from core.string.types import String
-from core.translator.service import TranslatorService
-from core.translator.translator import Translator
 from core.user_data.user_data_service import UserDataService
+from core.utilities.game_language import GameLanguage
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
-
-if TYPE_CHECKING:
-    from .editor_tab import EditorTab
 
 
 class TranslatorDialog(QWidget):
@@ -42,111 +36,148 @@ class TranslatorDialog(QWidget):
     Dialog for translating single strings.
     """
 
-    changes_signal = Signal()
-    """Signal emitted when the current string is modified."""
+    finalize_requested = Signal(str, object)
+    """
+    Signal emitted when the user wants to finalize the current string.
+    
+    Args:
+        str: The translated text.
+        StringStatus: The translation status to apply.
+    """
 
-    update_signal = Signal()
-    """Signal emitted when the current string is saved."""
+    prev_requested = Signal()
+    """Signal emitted when the user wants to go to the previous string."""
 
-    __parent: "EditorTab"
+    next_requested = Signal()
+    """Signal emitted when the user wants to go to the next string."""
 
-    __app_config: AppConfig
-    __user_config: UserConfig
-    __translator_service: TranslatorService
+    api_translate_requested = Signal()
+    """
+    Signal emitted when the user requests to translate the current string with a
+    translator API.
+    """
 
-    __changes_pending: bool
-    __prev_text: Optional[str]
+    __spell_check_language: Optional[GameLanguage]
+    __current_string: Optional[String]
+    __current_index: int
+    __strings_count: int
 
-    __current_string: String
+    __vlayout: QVBoxLayout
+
+    __prev_button: QPushButton
+    __next_button: QPushButton
 
     __info_label: QLabel
 
-    __original_entry: QPlainTextEdit
-    __translated_entry: QPlainTextEdit | SpellCheckEdit
+    __original_edit: QPlainTextEdit
+    __translated_edit: QPlainTextEdit
 
-    def __init__(
-        self,
-        parent: "EditorTab",
-        initial_string: String,
-        app_config: AppConfig,
-        user_config: UserConfig,
-        translator: TranslatorService,
-    ) -> None:
+    __reset_button: QPushButton
+    __api_translate_button: QPushButton
+
+    __finish_button: QPushButton
+    __cancel_button: QPushButton
+
+    __complete_shortcut: QShortcut
+    __incomplete_shortcut: QShortcut
+    __no_required_shortcut: QShortcut
+
+    def __init__(self, spell_check_language: Optional[GameLanguage]) -> None:
         """
         Args:
-            parent (EditorTab): Parent tab that opened this dialog.
-            initial_string (String): The initial string to be edited.
-            app_config (AppConfig): The application configuration.
-            user_config (UserConfig): The user configuration.
-            translator (TranslatorService): The translator service.
+            spell_check_language (Optional[GameLanguage]):
+                The language to use for the spell checking in the translated text edit or
+                `None` to disable spell checking.
         """
 
-        super().__init__(QApplication.activeModalWidget())
+        super().__init__()
 
-        self.__app_config = app_config
-        self.__user_config = user_config
-        self.__translator_service = translator
-
-        self.__changes_pending = False
-        self.__prev_text = None
-
-        self.changes_signal.connect(self.__on_change)
-
-        self.__parent = parent
+        self.__spell_check_language = spell_check_language
+        self.__current_string = None
+        self.__current_index = 0
+        self.__strings_count = 0
 
         self.__init_ui()
+        self.__init_shortcuts()
 
-        self.set_string(initial_string)
+        self.__prev_button.clicked.connect(self.prev_requested.emit)
+        self.__next_button.clicked.connect(self.next_requested.emit)
+        self.__translated_edit.textChanged.connect(lambda *_: self.__on_change())
+        self.__api_translate_button.clicked.connect(self.api_translate_requested.emit)
+        self.__reset_button.clicked.connect(self.__reset_translation)
+        self.__finish_button.clicked.connect(self.finish)
+        self.__cancel_button.clicked.connect(self.close)
+
+        self.__complete_shortcut.activated.connect(
+            lambda: self.__goto_next(StringStatus.TranslationComplete)
+        )
+        self.__incomplete_shortcut.activated.connect(
+            lambda: self.__goto_next(StringStatus.TranslationIncomplete)
+        )
+        self.__no_required_shortcut.activated.connect(
+            lambda: self.__goto_next(StringStatus.NoTranslationRequired)
+        )
+
+        self.__translated_edit.setFocus()
 
     def __init_ui(self) -> None:
         self.setWindowFlags(Qt.WindowType.Window)
         self.resize(1100, 600)
-        self.closeEvent = self.cancel
 
-        vlayout = QVBoxLayout()
-        self.setLayout(vlayout)
+        self.__vlayout = QVBoxLayout()
+        self.setLayout(self.__vlayout)
 
+        self.__init_header()
+
+        self.__vlayout.addWidget(Divider())
+
+        self.__init_context_area()
+        self.__init_translation_area()
+
+        self.__vlayout.addWidget(Divider())
+
+        self.__init_footer()
+
+        ThemeManager.update_widget_styles(self)
+
+    def __init_header(self) -> None:
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(0, 0, 0, 0)
-        vlayout.addLayout(hlayout)
+        self.__vlayout.addLayout(hlayout)
 
-        prev_button = ShortcutButton(self.tr("Go to previous string"))
+        self.__prev_button = ShortcutButton(self.tr("Go to previous string"))
         IconProvider.bind_qta_icon(
-            prev_button,
-            prev_button.setIcon,
+            self.__prev_button,
+            self.__prev_button.setIcon,
             "mdi6.chevron-left",
             color=IconProvider.Color.Primary,
             scale_factor=1.5,
         )
-        prev_button.setProperty("primary", True)
-        prev_button.setProperty("transparent", True)
-        prev_button.clicked.connect(self.goto_prev)
-        prev_button.setShortcut(QKeySequence("Alt+Left"))
-        prev_button.setEnabled(self.__parent.get_visible_string_count() > 1)
-        hlayout.addWidget(prev_button)
+        self.__prev_button.setProperty("primary", True)
+        self.__prev_button.setProperty("transparent", True)
+        self.__prev_button.setShortcut(QKeySequence("Alt+Left"))
+        hlayout.addWidget(self.__prev_button)
 
         hlayout.addStretch()
 
-        next_button = ShortcutButton(self.tr("Go to next string"))
+        self.__next_button = ShortcutButton(self.tr("Go to next string"))
         IconProvider.bind_qta_icon(
-            next_button,
-            next_button.setIcon,
+            self.__next_button,
+            self.__next_button.setIcon,
             "mdi6.chevron-right",
             color=IconProvider.Color.Primary,
             scale_factor=1.5,
         )
-        next_button.setProperty("primary", True)
-        next_button.setProperty("transparent", True)
-        next_button.clicked.connect(self.goto_next)
-        next_button.setShortcut(QKeySequence("Alt+Right"))
-        next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        next_button.setEnabled(self.__parent.get_visible_string_count() > 1)
-        hlayout.addWidget(next_button)
+        self.__next_button.setProperty("primary", True)
+        self.__next_button.setProperty("transparent", True)
+        self.__next_button.setShortcut(QKeySequence("Alt+Right"))
+        self.__next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        hlayout.addWidget(self.__next_button)
 
-        vlayout.addWidget(Divider())
-
+    def __init_context_area(self) -> None:
         context_groupbox = QGroupBox(self.tr("Context"))
-        vlayout.addWidget(context_groupbox)
+        self.__vlayout.addWidget(context_groupbox)
+
         context_vlayout = QVBoxLayout()
         context_vlayout.setContentsMargins(0, 0, 0, 0)
         context_groupbox.setLayout(context_vlayout)
@@ -160,8 +191,10 @@ class TranslatorDialog(QWidget):
         self.__info_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
         context_vlayout.addWidget(self.__info_label)
 
+    def __init_translation_area(self) -> None:
         translation_groupbox = QGroupBox(self.tr("Translation"))
-        vlayout.addWidget(translation_groupbox, stretch=1)
+        self.__vlayout.addWidget(translation_groupbox, stretch=1)
+
         translation_vlayout = QVBoxLayout()
         translation_vlayout.setContentsMargins(0, 0, 0, 0)
         translation_groupbox.setLayout(translation_vlayout)
@@ -169,28 +202,26 @@ class TranslatorDialog(QWidget):
         splitter = QSplitter()
         translation_vlayout.addWidget(splitter, stretch=1)
 
-        self.__original_entry = LineNumberTextEdit()
-        self.__original_entry.setReadOnly(True)
-        splitter.addWidget(self.__original_entry)
+        self.__original_edit = LineNumberTextEdit()
+        self.__original_edit.setReadOnly(True)
+        splitter.addWidget(self.__original_edit)
 
-        if self.__app_config.use_spell_check:
-            self.__translated_entry = SpellCheckEdit(
-                language=self.__user_config.language.id,
+        if self.__spell_check_language is not None:
+            self.__translated_edit = SpellCheckEdit(
+                language=self.__spell_check_language.id,
                 user_data_path=UserDataService.get().get_data_path(),
             )
         else:
-            self.__translated_entry = LineNumberTextEdit()
-        self.__translated_entry.textChanged.connect(self.changes_signal.emit)
-        self.__translated_entry.setFocus()
-        splitter.addWidget(self.__translated_entry)
+            self.__translated_edit = LineNumberTextEdit()
+
+        splitter.addWidget(self.__translated_edit)
 
         WidgetStateManager.get().register_state("translator_dialog_splitter", splitter)
 
-        vlayout.addWidget(Divider())
-
+    def __init_footer(self) -> None:
         hlayout = QHBoxLayout()
         hlayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        vlayout.addLayout(hlayout)
+        self.__vlayout.addLayout(hlayout)
 
         info_icon = QLabel()
         IconProvider.bind_qta_icon(
@@ -220,100 +251,63 @@ class TranslatorDialog(QWidget):
         hint_label.setProperty("secondary", True)
         hlayout.addWidget(hint_label, stretch=1)
 
-        vlayout.addSpacing(10)
+        self.__vlayout.addSpacing(10)
 
         hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        self.__vlayout.addLayout(hlayout)
 
-        translate_button = ShortcutButton(self.tr("Translate with API"))
+        self.__api_translate_button = ShortcutButton(self.tr("Translate with API"))
         IconProvider.bind_qta_icon(
-            translate_button, translate_button.setIcon, "mdi6.translate"
+            self.__api_translate_button,
+            self.__api_translate_button.setIcon,
+            "mdi6.translate",
         )
-        translate_button.clicked.connect(self.__translate_with_api)
-        translate_button.setShortcut(QKeySequence("Ctrl+F5"))
-        hlayout.addWidget(translate_button)
+        self.__api_translate_button.setShortcut(QKeySequence("Ctrl+F5"))
+        hlayout.addWidget(self.__api_translate_button)
 
-        reset_button = ShortcutButton(self.tr("Reset string"))
-        IconProvider.bind_qta_icon(reset_button, reset_button.setIcon, "mdi6.undo")
-        reset_button.clicked.connect(self.__reset_translation)
-        reset_button.setShortcut(QKeySequence("F4"))
-        hlayout.addWidget(reset_button)
+        self.__reset_button = ShortcutButton(self.tr("Reset string"))
+        IconProvider.bind_qta_icon(
+            self.__reset_button, self.__reset_button.setIcon, "mdi6.undo"
+        )
+        self.__reset_button.setShortcut(QKeySequence("F4"))
+        hlayout.addWidget(self.__reset_button)
 
         hlayout.addStretch()
 
-        finish_button = ShortcutButton(self.tr("Done"))
-        finish_button.clicked.connect(lambda: self.finish())
-        finish_button.setShortcut(QKeySequence("Ctrl+Return"))
-        finish_button.setDefault(True)
-        hlayout.addWidget(finish_button)
+        self.__finish_button = ShortcutButton(self.tr("Done"))
+        self.__finish_button.setShortcut(QKeySequence("Ctrl+Return"))
+        self.__finish_button.setDefault(True)
+        hlayout.addWidget(self.__finish_button)
 
-        cancel_button = ShortcutButton(self.tr("Cancel"))
-        cancel_button.clicked.connect(self.close)
-        cancel_button.setShortcut(QKeySequence("Esc"))
-        hlayout.addWidget(cancel_button)
+        self.__cancel_button = ShortcutButton(self.tr("Cancel"))
+        self.__cancel_button.setShortcut(QKeySequence("Esc"))
+        hlayout.addWidget(self.__cancel_button)
 
-        complete_shortcut = QShortcut(QKeySequence("F1"), self)
-        complete_shortcut.activated.connect(
-            lambda: self.goto_next(StringStatus.TranslationComplete)
-        )
-
-        incomplete_shortcut = QShortcut(QKeySequence("F2"), self)
-        incomplete_shortcut.activated.connect(
-            lambda: self.goto_next(StringStatus.TranslationIncomplete)
-        )
-
-        no_required_shortcut = QShortcut(QKeySequence("F3"), self)
-        no_required_shortcut.activated.connect(
-            lambda: self.goto_next(StringStatus.NoTranslationRequired)
-        )
-
-        ThemeManager.update_widget_styles(self)
+    def __init_shortcuts(self) -> None:
+        self.__complete_shortcut = QShortcut(QKeySequence("F1"), self)
+        self.__incomplete_shortcut = QShortcut(QKeySequence("F2"), self)
+        self.__no_required_shortcut = QShortcut(QKeySequence("F3"), self)
 
     def __update_title(self) -> None:
-        visible_string_count: int = self.__parent.get_visible_string_count()
-        current_index: int = self.__parent.get_index(self.__current_string)
-
-        title: str = (
-            f"{self.__current_string.display_id} ({current_index + 1}/"
-            f"{visible_string_count})"
-        )
-        if self.__changes_pending:
-            title += "*"
+        title: str = ""
+        if self.__current_string is not None:
+            title = (
+                f"{self.__current_string.display_id}[*] ({self.__current_index + 1}/"
+                f"{self.__strings_count})"
+            )
 
         self.setWindowTitle(title)
 
     def __on_change(self) -> None:
-        new_text: str = self.__translated_entry.toPlainText()
-        if new_text != self.__prev_text:
-            self.__changes_pending = True
-            self.__update_title()
-            self.__prev_text = new_text
-
-    def __translate_with_api(self) -> None:
-        """
-        Translates string with API.
-        """
-
-        translator: Translator = self.__translator_service.get_translator()
-        translated: str = translator.translate(
-            self.__current_string.original, self.__user_config.language
-        )
-
-        self.__translated_entry.setPlainText(translated)
+        self.setWindowModified(True)
 
     def __reset_translation(self) -> None:
-        """
-        Resets string to original string.
-        """
+        if self.__current_string is not None:
+            self.__translated_edit.setPlainText(self.__current_string.original)
 
-        self.__translated_entry.setPlainText(self.__current_string.original)
-
-    def cancel(self, event: QCloseEvent) -> None:
-        """
-        Closes dialog without saving, asks for confirmation if changes are pending
-        """
-
-        if self.__changes_pending:
+    @override
+    def closeEvent(self, event: QCloseEvent) -> None:
+        if self.isWindowModified():
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("Cancel"))
             message_box.setText(
@@ -332,31 +326,30 @@ class TranslatorDialog(QWidget):
                 return
 
         event.accept()
+        self.setWindowModified(False)
 
     @property
-    def current_string(self) -> String:
-        """The current string being edited."""
+    def current_string(self) -> Optional[String]:
+        """The current string being edited or None."""
 
         return self.__current_string
 
     def set_string(
-        self,
-        string: String,
-        finalize_with_status: StringStatus | None = None,
+        self, string: String, finalize_with_status: Optional[StringStatus] = None
     ) -> None:
         """
         Sets the string to be edited.
 
         Args:
             string (String): The string to set.
-            finalize_with_status (Status | None, optional):
+            finalize_with_status (Optional[StringStatus], optional):
                 The status to finalize the current string with. Defaults to None.
         """
 
-        if finalize_with_status:
-            self.finalize_string(finalize_with_status)
+        if finalize_with_status is not None:
+            self.__finalize_string(finalize_with_status)
 
-        elif self.__changes_pending:
+        elif self.isWindowModified():
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("String was modified"))
             message_box.setText(
@@ -377,122 +370,75 @@ class TranslatorDialog(QWidget):
             )
             ThemeManager.update_widget_styles(message_box)
 
-            choice: int = message_box.exec()
-
-            if choice == QMessageBox.StandardButton.Save:
-                self.finalize_string()
-            elif choice == QMessageBox.DialogCode.Rejected:
-                return
+            match message_box.exec():
+                case QMessageBox.StandardButton.Save:
+                    self.__finalize_string()
+                case QMessageBox.DialogCode.Rejected:
+                    return
 
         self.__current_string = string
         self.__info_label.setText(self.__current_string.get_localized_info())
-        self.__original_entry.setPlainText(self.__current_string.original)
-        try:
-            self.__translated_entry.textChanged.disconnect(self.changes_signal.emit)
-        except RuntimeError:
-            pass
-        self.__translated_entry.setPlainText(
+        self.__original_edit.setPlainText(self.__current_string.original)
+        self.__translated_edit.setPlainText(
             self.__current_string.string
             if self.__current_string.string is not None
             else self.__current_string.original
         )
-        self.__translated_entry.textChanged.connect(self.changes_signal.emit)
-        self.__prev_text = self.__translated_entry.toPlainText()
-        self.__changes_pending = False
+        self.setWindowModified(False)
 
         self.__update_title()
 
-    def goto_next(
-        self,
-        finalize_with_status: StringStatus = StringStatus.TranslationComplete,
-    ) -> None:
+    def set_index(self, index: int) -> None:
         """
-        Goes to next string or closes dialog if there is no other string.
+        Sets the currently displayed index number.
 
         Args:
-            finalize_with_status (Status, optional):
-                The status to finalize the current string with. Defaults to
-                TranslationComplete.
+            index (int): The index number to display.
         """
 
-        visible_strings_count: int = self.__parent.get_visible_string_count()
+        self.__current_index = index
+        self.__update_title()
 
-        if visible_strings_count > 1:
-            current_index: int = self.__parent.get_index(self.__current_string)
-
-            new_index: int
-            if current_index == (visible_strings_count - 1):
-                new_index = 0
-            else:
-                new_index = current_index + 1
-
-            new_string: Optional[String] = self.__parent.get_string(new_index)
-
-            if new_string is None:
-                raise ValueError("Next string not found!")
-
-            self.set_string(new_string, finalize_with_status)
-
-        else:
-            self.finalize_string(finalize_with_status)
-            self.close()
-
-    def goto_prev(self) -> None:
+    def set_strings_count(self, count: int) -> None:
         """
-        Goes to previous string.
+        Sets the currently displayed amount of strings.
+
+        Args:
+            count (int): The number of strings to display.
         """
 
-        visible_strings_count: int = self.__parent.get_visible_string_count()
-        current_index: int = self.__parent.get_index(self.__current_string)
+        self.__strings_count = count
+        self.__update_title()
 
-        new_index: int
-        if current_index > 0:
-            new_index = current_index - 1
-        else:
-            new_index = visible_strings_count - 1
+        self.__prev_button.setEnabled(count > 1)
+        self.__next_button.setEnabled(count > 1)
 
-        new_string: Optional[String] = self.__parent.get_string(new_index)
+    def set_translated_text(self, text: str) -> None:
+        """
+        Sets the content of the translated text edit.
 
-        if new_string is None:
-            raise ValueError("Previous string not found!")
+        Args:
+            text (str): The new translated text.
+        """
 
-        self.set_string(new_string)
+        self.__translated_edit.setPlainText(text)
 
-    def finalize_string(
+    def __goto_next(self, status: StringStatus) -> None:
+        self.__finalize_string(status)
+        self.next_requested.emit()
+
+    def __finalize_string(
         self, status: StringStatus = StringStatus.TranslationComplete
     ) -> None:
-        """
-        Saves changes to current string and applies translation to similar strings.
-
-        Args:
-            status (Status, optional):
-                The status to finalize the current string with. Defaults to
-                TranslationComplete.
-        """
-
-        self.__current_string.status = status
-
-        if self.__changes_pending:
-            self.__current_string.string = self.__translated_entry.toPlainText()
-
-        elif status == StringStatus.NoTranslationRequired:
-            self.__current_string.string = self.__current_string.original
-
-        if status == StringStatus.TranslationComplete:
-            string: str = (
-                self.__current_string.string
-                if self.__current_string.string is not None
-                else self.__current_string.original
-            )
-            self.__parent.update_matching_strings(self.__current_string.original, string)
-
-        self.__changes_pending = False
-        self.update_signal.emit()
+        self.finalize_requested.emit(
+            self.__translated_edit.toPlainText().strip(), status
+        )
+        self.setWindowModified(False)
 
     def finish(self) -> None:
         """
-        Finalizes edited string with status "Translation Complete" and closes dialog.
+        Finishes by finalizing the current string and closing the dialog.
         """
 
-        self.finalize_string()
+        self.__finalize_string()
         self.close()

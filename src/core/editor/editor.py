@@ -191,6 +191,53 @@ class Editor(QObject):
         self.strings_changed.emit(strings)
         self.log.info("API translation complete.")
 
+    def get_api_translation(self, string: String) -> str:
+        """
+        Requests an API translation for a string without modifying it.
+
+        Args:
+            string (String): The string to get an API translation for.
+
+        Returns:
+            str: The translated text returned by the translator API.
+        """
+
+        translator: Translator = self.__translator_service.get_translator()
+        return translator.translate(string.original, self.__language)
+
+    def finalize_string(
+        self,
+        string: String,
+        translated_text: str,
+        status: StringStatus = StringStatus.TranslationComplete,
+    ) -> None:
+        """
+        Finalizes a string by applying a translated text and a status to it. Similar
+        strings are also updated, if the status is TranslationComplete.
+
+        Args:
+            string (String): The string to finalize.
+            translated_text (str): The translated text to apply.
+            status (StringStatus, optional):
+                The translation status to apply. Defaults to
+                StringStatus.TranslationComplete.
+        """
+
+        if status != StringStatus.NoTranslationRequired:
+            string.string = translated_text
+        else:
+            string.string = string.original
+
+        string.status = status
+
+        modified_strings: StringList = [string]
+        if status == StringStatus.TranslationComplete:
+            modified_strings.extend(
+                self.__apply_to_matching_strings(string.original, string.string)
+            )
+
+        self.strings_changed.emit(modified_strings)
+
     def apply_regex(
         self, strings: StringList, replace_text: str, pattern: re.Pattern
     ) -> int:
@@ -272,6 +319,15 @@ class Editor(QObject):
             int: Number of strings modified
         """
 
+        modified_strings: StringList = self.__apply_to_matching_strings(
+            original, translation
+        )
+
+        self.strings_changed.emit(modified_strings)
+
+        return len(modified_strings)
+
+    def __apply_to_matching_strings(self, original: str, translation: str) -> StringList:
         modified_strings: StringList = []
         for string in self.all_strings:
             if (
@@ -282,10 +338,9 @@ class Editor(QObject):
                 string.status = StringStatus.TranslationIncomplete
                 modified_strings.append(string)
 
-        self.strings_changed.emit(modified_strings)
         self.log.info(f"Applied translation to {len(modified_strings)} string(s).")
 
-        return len(modified_strings)
+        return modified_strings
 
     def reset_strings(self, strings: StringList) -> None:
         """
