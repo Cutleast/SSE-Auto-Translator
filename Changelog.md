@@ -1,3 +1,7 @@
+# v3.2.5 (Hotfix)
+
+- Fix SSE-AT not finding every Portuguese translation
+
 # v3.2.4 (Hotfix)
 
 - Fix SSE-AT not finding any translations due to Nexus Mods updates to mod pages
