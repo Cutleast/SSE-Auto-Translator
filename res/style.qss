@@ -38,6 +38,10 @@ EditorPage > QTreeWidget QPushButton:hover {
     border-color: ${colors.surface_pressed};
 }
 
+EditorTab > SpinnerDisplayWidget > #cancel_button {
+    padding: ${metrics.spacing_xs};
+}
+
 /* Menubar */
 MenuBar {
     background-color: ${meta.window_bg};

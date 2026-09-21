@@ -12,7 +12,8 @@ from cutleast_core_lib.core.cache.cache import Cache
 from pydantic import BaseModel
 
 from core.file_source.file_source_factory import FileSourceFactory
-from core.string.types import StringList
+from core.mod_file.context import ModFileContext
+from core.string.types import String, StringList
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
@@ -118,4 +119,16 @@ class ModFile(BaseModel, metaclass=ABCMeta):
             output_mod (bool, optional):
                 Whether the export is used in the output mod. May affect filenames.
                 Defaults to False.
+        """
+
+    @abstractmethod
+    def get_context(self, string: String) -> ModFileContext:
+        """
+        Gets the mod file-specific context for translating a string.
+
+        Args:
+            string (String): The string to the mod file-specific context for.
+
+        Returns:
+            ModFileContext: The context.
         """

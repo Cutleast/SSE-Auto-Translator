@@ -184,10 +184,12 @@ class MainWindow(QMainWindow):
                 confirmation = False
 
         if confirmation:
-            super().closeEvent(event)
-            self.__mainpage_widget.save_state()
+            if not WindowManager.get().close_all():
+                event.ignore()
+                return
 
-            WindowManager.get().close_all()
+            event.accept()
+            self.__mainpage_widget.save_state()
         else:
             event.ignore()
 

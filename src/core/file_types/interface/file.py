@@ -6,10 +6,12 @@ from pathlib import Path
 from typing import BinaryIO, Optional, override
 
 from core.file_source.file_source_factory import FileSourceFactory
+from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
-from core.string.types import StringList
+from core.string.types import String, StringList
 
+from .context import InterfaceStringContext
 from .string import InterfaceString
 
 
@@ -80,3 +82,7 @@ class InterfaceFile(ModFile):
             ),
             encoding="utf16",
         )
+
+    @override
+    def get_context(self, string: String) -> ModFileContext:
+        return InterfaceStringContext()

@@ -195,6 +195,10 @@ class EditorPage(QSplitter):
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
 
+        cancelled: bool = not tab.close_tab()
+        if cancelled:
+            return
+
         self.__tabs.pop(translation)
 
         self.__tab_list_widget.takeTopLevelItem(

@@ -90,7 +90,7 @@ class DatabaseService:
 
         cls.log.info("Loading vanilla database...")
 
-        translation = Translation(name="", path=appdb_path / language.id)
+        translation = Translation(name="Base Game", path=appdb_path / language.id)
         translation.strings  # build cache of strings by "calling" the strings property  # noqa: B018
 
         cls.log.info(

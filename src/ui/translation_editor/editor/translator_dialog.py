@@ -24,11 +24,14 @@ from PySide6.QtWidgets import (
 
 from core.string.string_status import StringStatus
 from core.string.types import String
+from core.translation_context.context import TranslationContext
 from core.user_data.user_data_service import UserDataService
 from core.utilities.game_language import GameLanguage
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
+
+from .context_widget import ContextWidget
 
 
 class TranslatorDialog(QWidget):
@@ -67,7 +70,7 @@ class TranslatorDialog(QWidget):
     __prev_button: QPushButton
     __next_button: QPushButton
 
-    __info_label: QLabel
+    __context_widget: ContextWidget
 
     __original_edit: QPlainTextEdit
     __translated_edit: QPlainTextEdit
@@ -102,6 +105,9 @@ class TranslatorDialog(QWidget):
 
         self.__prev_button.clicked.connect(self.prev_requested.emit)
         self.__next_button.clicked.connect(self.next_requested.emit)
+        self.__context_widget.translation_accepted.connect(
+            self.__translated_edit.setPlainText
+        )
         self.__translated_edit.textChanged.connect(lambda *_: self.__on_change())
         self.__api_translate_button.clicked.connect(self.api_translate_requested.emit)
         self.__reset_button.clicked.connect(self.__reset_translation)
@@ -182,14 +188,8 @@ class TranslatorDialog(QWidget):
         context_vlayout.setContentsMargins(0, 0, 0, 0)
         context_groupbox.setLayout(context_vlayout)
 
-        self.__info_label = QLabel()
-        self.__info_label.setProperty("monospace", True)
-        self.__info_label.setTextInteractionFlags(
-            Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        self.__info_label.setCursor(Qt.CursorShape.IBeamCursor)
-        self.__info_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        context_vlayout.addWidget(self.__info_label)
+        self.__context_widget = ContextWidget()
+        context_vlayout.addWidget(self.__context_widget)
 
     def __init_translation_area(self) -> None:
         translation_groupbox = QGroupBox(self.tr("Translation"))
@@ -377,7 +377,7 @@ class TranslatorDialog(QWidget):
                     return
 
         self.__current_string = string
-        self.__info_label.setText(self.__current_string.get_localized_info())
+        self.__context_widget.clear()
         self.__original_edit.setPlainText(self.__current_string.original)
         self.__translated_edit.setPlainText(
             self.__current_string.string
@@ -387,6 +387,16 @@ class TranslatorDialog(QWidget):
         self.setWindowModified(False)
 
         self.__update_title()
+
+    def set_context(self, context: TranslationContext) -> None:
+        """
+        Sets the currently display translation context.
+
+        Args:
+            context (TranslationContext): The translation context.
+        """
+
+        self.__context_widget.set_context(context)
 
     def set_index(self, index: int) -> None:
         """

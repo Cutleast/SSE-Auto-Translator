@@ -10,10 +10,12 @@ from pydantic import TypeAdapter, ValidationError
 
 from core.file_source.file_source import FileSource
 from core.file_source.file_source_factory import FileSourceFactory
+from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
-from core.string.types import StringList
+from core.string.types import String, StringList
 
+from .context import BestiaryStringContext
 from .string import BestiaryString
 
 LootData: TypeAlias = dict[str, list[tuple[str, str]]]
@@ -307,3 +309,7 @@ class BestiaryFile(ModFile):
             loot_items.append((text, category))
 
         output.write(LootDataAdapter.dump_json(data, indent=4))
+
+    @override
+    def get_context(self, string: String) -> ModFileContext:
+        return BestiaryStringContext()

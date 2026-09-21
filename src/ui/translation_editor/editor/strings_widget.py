@@ -8,6 +8,7 @@ from typing import Optional
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.typing_utils import checked_cast
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import (
@@ -294,6 +295,23 @@ class StringsWidget(QTreeWidget):
         """
 
         return self.__get_items(only_visible).index(self.__string_items[string])
+
+    def get_mod_file_of_string(self, string: String) -> Path:
+        """
+        Gets the mod file path of a string.
+
+        Args:
+            string (String): The string.
+
+        Returns:
+            Path: The mod file path as displayed in the widget.
+        """
+
+        string_item: StringItem = self.__string_items[string]
+        mod_file_item: TreeItem[ImmutableValue[Path]] = checked_cast(
+            TreeItem[ImmutableValue[Path]], string_item.parent()
+        )
+        return mod_file_item.item.value
 
     def get_string_from_index(
         self, index: int, only_visible: bool = False

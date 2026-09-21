@@ -9,13 +9,17 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.mod_instance.mod_instance import ModInstance
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from core.translation_context.builder import ContextBuilder
+from core.translation_context.context import TranslationContext
 from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
@@ -37,12 +41,13 @@ class Editor(QObject):
     __language: GameLanguage
     __database: TranslationDatabase
     __translator_service: TranslatorService
+    __context_builder: ContextBuilder
 
     __translation: Translation
     __strings_cache: dict[Path, StringList]
-    """
-    Stores a deep copy of the strings in the translation.
-    """
+    """Stores a deep copy of the strings in the translation."""
+
+    __context_cache: dict[String, TranslationContext]
 
     __changes_pending: bool
 
@@ -53,6 +58,7 @@ class Editor(QObject):
         translation: Translation,
         language: GameLanguage,
         database: TranslationDatabase,
+        mod_instance: Optional[ModInstance],
         translator_service: TranslatorService,
     ) -> None:
         """
@@ -60,6 +66,7 @@ class Editor(QObject):
             translation (Translation): The translation to edit.
             language (GameLanguage): The language of the translation.
             database (TranslationDatabase): The translation database.
+            mod_instance (Optional[ModInstance]): The loaded mod instance.
             translator_service (TranslatorService): The translator service.
         """
 
@@ -70,9 +77,11 @@ class Editor(QObject):
         self.__language = language
         self.__database = database
         self.__translator_service = translator_service
+        self.__context_builder = ContextBuilder(database, mod_instance)
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
+        self.__context_cache = {}
 
         self.__changes_pending = False
 
@@ -358,3 +367,44 @@ class Editor(QObject):
 
         self.strings_changed.emit(strings)
         self.log.info("Strings reset.")
+
+    def build_string_context(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+        """
+        Builds the translation context for all strings in the translation.
+
+        Args:
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
+        """
+
+        self.log.info("Building translation context...")
+
+        try:
+            self.__context_cache = self.__context_builder.build_context(
+                self.__strings_cache, pdisplay
+            )
+        except TaskCancelledError:
+            self.log.info("Cancelled building translation context.")
+        else:
+            self.log.info("Translation context complete.")
+
+    def get_string_context(
+        self, string: String, mod_file_path: Path
+    ) -> TranslationContext:
+        """
+        Gets the context for a string.
+
+        Args:
+            string (String): The edited string.
+            mod_file_path (Path): The mod file path of the string.
+
+        Returns:
+            TranslationContext: The translation context for the string.
+        """
+
+        if string not in self.__context_cache:
+            self.__context_cache[string] = self.__context_builder.build_single_context(
+                string, mod_file_path
+            )
+
+        return self.__context_cache[string]

@@ -11,10 +11,12 @@ from sse_plugin_interface.utilities import is_valid_string
 
 from core.database.translation_service import TranslationService
 from core.file_source.file_source_factory import FileSourceFactory
+from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
-from core.string.types import StringList
+from core.string.types import String, StringList
 
+from .context import PluginStringContext
 from .string import PluginString
 
 
@@ -167,3 +169,7 @@ class PluginFile(ModFile):
         TranslationService.save_strings_to_json_file(dsd_path, strings, indent=4)
 
         return dsd_path
+
+    @override
+    def get_context(self, string: String) -> ModFileContext:
+        return PluginStringContext()

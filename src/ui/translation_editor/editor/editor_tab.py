@@ -5,17 +5,20 @@ Copyright (c) Cutleast
 import os
 import re
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.thread import Thread
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.progress.dialog import ProgressDialog
+from cutleast_core_lib.ui.progress.spinner_display import SpinnerDisplayWidget
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
+from cutleast_core_lib.ui.widgets.help_label import HelpLabel
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QAction, QKeySequence, QShortcut
+from PySide6.QtGui import QAction, QKeySequence, QShortcut, QShowEvent
 from PySide6.QtWidgets import (
     QApplication,
     QCheckBox,
@@ -70,14 +73,19 @@ class EditorTab(QWidget):
     __user_data: UserData
     __translator_service: TranslatorService
 
+    __context_thread: Optional[Thread]
+
     __vlayout: QVBoxLayout
-    __title_label: QLabel
-    __strings_num_label: QLabel
     __tool_bar: EditorToolbar
+    __title_label: QLabel
     __search_bar: SearchBar
+    __strings_num_label: QLabel
     __bar_chart: StackedBar
     __menu: EditorMenu
     __strings_widget: StringsWidget
+
+    __context_help_label: HelpLabel
+    __context_spinner: SpinnerDisplayWidget
 
     __dialog: TranslatorDialog
 
@@ -107,9 +115,12 @@ class EditorTab(QWidget):
             translation=translation,
             language=user_data.user_config.language,
             database=user_data.database,
+            mod_instance=user_data.mod_instance,
             translator_service=translator_service,
         )
         self.__editor.strings_changed.connect(self.__on_strings_changed)
+
+        self.__context_thread = None
 
         self.__init_ui()
         self.__init_shortcuts()
@@ -163,6 +174,8 @@ class EditorTab(QWidget):
         self.__init_header()
         self.__init_strings_widget()
         self.__init_context_menu()
+        self.__init_footer()
+
         self.__update_metadata()
 
     def __init_header(self) -> None:
@@ -217,6 +230,28 @@ class EditorTab(QWidget):
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
+
+    def __init_footer(self) -> None:
+        hlayout = QHBoxLayout()
+        hlayout.setAlignment(Qt.AlignmentFlag.AlignLeft)
+        hlayout.setContentsMargins(0, 0, 0, 0)
+        self.__vlayout.addLayout(hlayout)
+
+        self.__context_help_label = HelpLabel(
+            self.tr(
+                "The translation context includes similar strings and contextual "
+                "information from the respective mod file where available and is "
+                "currently being built for all strings of the translation.<br/>"
+                "Depending on the translation size, this may take a bit of time.<p>"
+                "You can cancel this any time you want, but note that without the full "
+                "context, operations like editing strings and machine translations may "
+                "initially take a bit longer."
+            )
+        )
+        hlayout.addWidget(self.__context_help_label)
+
+        self.__context_spinner = SpinnerDisplayWidget()
+        hlayout.addWidget(self.__context_spinner)
 
     def __init_shortcuts(self) -> None:
         save_shortcut = QShortcut(QKeySequence("Ctrl+S"), self)
@@ -277,8 +312,9 @@ class EditorTab(QWidget):
         if string is not None:
             assert string.id in [s.id for s in self.__editor.all_strings]
 
-            self.__dialog.set_string(string)
-            self.__dialog.set_index(self.__strings_widget.get_index_of_string(string))
+            self.__goto_index(
+                self.__strings_widget.get_index_of_string(string, only_visible=True)
+            )
 
             WindowManager.get().show(self.__dialog, delete_on_close=False)
 
@@ -353,8 +389,13 @@ class EditorTab(QWidget):
             self.__dialog.close()
             return
 
+        mod_file_path: Path = self.__strings_widget.get_mod_file_of_string(string)
+
         self.__dialog.set_string(string)
         self.__dialog.set_index(index)
+        self.__dialog.set_context(
+            self.__editor.get_string_context(string, mod_file_path)
+        )
 
     def __on_strings_changed(self, changed_strings: StringList) -> None:
         for changed_string in changed_strings:
@@ -654,3 +695,28 @@ class EditorTab(QWidget):
 
     def __expand_all(self) -> None:
         self.__strings_widget.expandAll()
+
+    @override
+    def showEvent(self, event: QShowEvent, /) -> None:
+        super().showEvent(event)
+
+        if self.__context_thread is None:
+            self.__context_thread = Thread(
+                lambda: self.__editor.build_string_context(self.__context_spinner)
+            )
+            self.__context_thread.finished.connect(self.__context_spinner.hide)
+            self.__context_thread.finished.connect(self.__context_help_label.hide)
+            self.__context_thread.start()
+
+    def close_tab(self) -> bool:
+        """
+        Call this when the tab is closed.
+
+        Returns:
+            bool: False if the user cancelled to close the tab.
+        """
+
+        if self.__context_thread is not None and self.__context_thread.isRunning():
+            self.__context_spinner.cancel()
+
+        return self.__dialog.close()
