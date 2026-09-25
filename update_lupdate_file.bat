@@ -7,6 +7,7 @@ uv run core-lib\src\cutleast_core_lib\scripts\generate_qt_lupdate_file.py ^
 --exclude-file=core-lib\src\cutleast_core_lib\ui\resources_rc.py ^
 --relative-to=. ^
 --add-translation=res/loc/de_DE.ts ^
+--add-translation=res/loc/pt_BR.ts ^
 --add-translation=res/loc/ru_RU.ts ^
 --add-translation=res/loc/zh_CN.ts ^
 --out-file=qt_lupdate.json ^

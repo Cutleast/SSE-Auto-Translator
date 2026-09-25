@@ -13,6 +13,7 @@
         
         <!-- Localisation Files -->
         <file>loc/de_DE.qm</file>
+        <file>loc/pt_BR.qm</file>
         <file>loc/ru_RU.qm</file>
         <file>loc/zh_CN.qm</file>
 
