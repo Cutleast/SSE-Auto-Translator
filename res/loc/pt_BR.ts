@@ -11,8 +11,8 @@
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="86"/>
-        <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
-        <translation>Created by Cutleast (&lt;a href='https://www.nexusmods.com/users/65733731'&gt;NexusMods&lt;/a&gt; | &lt;a href='https://github.com/cutleast'&gt;GitHub&lt;/a&gt; | &lt;a href='https://ko-fi.com/cutleast'&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licenciado sob </translation>
+        <source>Criado por Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
+        <translation>Criado por Cutleast (&lt;a href='https://www.nexusmods.com/users/65733731'&gt;NexusMods&lt;/a&gt; | &lt;a href='https://github.com/cutleast'&gt;GitHub&lt;/a&gt; | &lt;a href='https://ko-fi.com/cutleast'&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licenciado sob </translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="93"/>
@@ -1404,8 +1404,8 @@ Clique em “Exibir detalhes” para ver o filtro usado.</translation>
     </message>
     <message>
         <location filename="src/ui/main_window.py" line="216"/>
-        <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
-        <translation>Created by Cutleast (&lt;a href='https://www.nexusmods.com/users/65733731'&gt;NexusMods&lt;/a&gt; | &lt;a href='https://github.com/cutleast'&gt;GitHub&lt;/a&gt; | &lt;a href='https://ko-fi.com/cutleast'&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Ícone por Wuerfelhusten (&lt;a href='https://www.nexusmods.com/users/122160268'&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licenciado sob Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
+        <source>Criado por Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
+        <translation>Criado por Cutleast (&lt;a href='https://www.nexusmods.com/users/65733731'&gt;NexusMods&lt;/a&gt; | &lt;a href='https://github.com/cutleast'&gt;GitHub&lt;/a&gt; | &lt;a href='https://ko-fi.com/cutleast'&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Ícone por Wuerfelhusten (&lt;a href='https://www.nexusmods.com/users/122160268'&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licenciado sob Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
     </message>
     <message>
         <location filename="src/ui/main_window.py" line="225"/>
