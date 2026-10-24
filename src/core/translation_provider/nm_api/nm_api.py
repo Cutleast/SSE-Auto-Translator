@@ -6,9 +6,12 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import re
 import webbrowser
+from collections.abc import Callable
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from pathlib import Path
 from queue import Queue
+from threading import Event
+from time import monotonic
 from typing import Any, Optional, TypeVar, override
 from urllib.parse import urljoin
 from uuid import uuid4
@@ -41,6 +44,7 @@ from .models.nm_files import NmFiles
 from .models.nm_mod import NmMod
 from .nxm_handler import NXMHandler
 from .nxm_request import NxmRequest
+from .web_session import NexusWebSession
 
 M = TypeVar("M", bound=BaseModel)
 
@@ -138,6 +142,28 @@ class NexusModsApi(ProviderApi):
     Scraper for circumventing Cloudflare protection when scraping the HTML of a
     modpage for translations.
     """
+
+    __website_session: Optional[NexusWebSession]
+
+    @override
+    def __init__(self) -> None:
+        super().__init__()
+
+        self.__website_session = None
+
+    def set_website_session(self, encrypted: Optional[str]) -> None:
+        """
+        Restores the website session associated with the configured API key.
+
+        Args:
+            encrypted (Optional[str]): Encrypted session from the shared SSO login.
+        """
+
+        self.__website_session = (
+            NexusWebSession.restore(encrypted, self.__api_key)
+            if encrypted is not None and self.__api_key is not None
+            else None
+        )
 
     def set_api_key(self, key: str) -> None:
         """
@@ -617,27 +643,31 @@ class NexusModsApi(ProviderApi):
             get_url_identifier(url) + ".cache"
         )
 
-        cached: Optional[req.Response | curl_requests.Response] = Cache.get_from_cache(
-            cache_file_path, default=None
-        )
-
-        res: req.Response | curl_requests.Response
-        if cached is None:
-            if self.__scraper is None:
-                self.__scraper = curl_requests.Session(impersonate="chrome")
-
-            headers = {
-                "User-Agent": self.user_agent,
-            }
-
-            res = self.__scraper.get(url, headers=headers)
-            self.handle_status_code(url, res.status_code)
-            Cache.save_to_cache(cache_file_path, res)
+        content: bytes
+        website_session: Optional[NexusWebSession] = self.__website_session
+        if website_session is not None:
+            status_code: int
+            status_code, content = website_session.get_page(url)
+            self.handle_status_code(url, status_code)
         else:
-            res = cached
-            self.log.debug(f"Got cached Web response for '{url}'")
+            cached: Optional[req.Response | curl_requests.Response] = (
+                Cache.get_from_cache(cache_file_path, default=None)
+            )
+            res: req.Response | curl_requests.Response
+            if cached is None:
+                if self.__scraper is None:
+                    self.__scraper = curl_requests.Session(impersonate="chrome")
 
-        html: str = res.content.decode(errors="replace")
+                headers: dict[str, str] = {"User-Agent": self.user_agent}
+                res = self.__scraper.get(url, headers=headers)
+                self.handle_status_code(url, res.status_code)
+                Cache.save_to_cache(cache_file_path, res)
+            else:
+                res = cached
+                self.log.debug(f"Got cached Web response for '{url}'")
+            content = res.content
+
+        html: str = content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
 
         language_aliases: dict[str, str] = {
@@ -671,58 +701,89 @@ class NexusModsApi(ProviderApi):
 
         return available_translations
 
-    def get_sso_key(self) -> str:
+    def get_sso_key(
+        self,
+        browser_opener: Optional[Callable[[str], None]] = None,
+        cancel_event: Optional[Event] = None,
+    ) -> str:
         """
-        Initializes SSO process and waits for API key from server.
+        Opens the SSO flow in the requested browser and waits for its API key.
 
-        Follows instructions from here: https://github.com/Nexus-Mods/sso-integration-demo
+        Args:
+            browser_opener (Optional[Callable[[str], None]], optional):
+                Browser callback. Defaults to the system browser.
+            cancel_event (Optional[Event], optional):
+                Login cancellation signal. Defaults to None.
+
+        Returns:
+            str: API key issued by Nexus Mods.
+
+        Raises:
+            InterruptedError: If the user cancels the login.
+            TimeoutError: If Nexus Mods does not complete SSO in time.
+            ValueError: If the SSO response does not contain a valid API key.
         """
-
-        res_data: dict[str, Any]
 
         self.log.info("Starting SSO process...")
+        connection: websocket.WebSocket = websocket.create_connection(
+            "wss://sso.nexusmods.com", timeout=15
+        )
+        try:
+            identifier: str = str(uuid4())
+            request_data: dict[str, Any] = {
+                "id": identifier, "token": None, "protocol": 2
+            }
+            connection.send(json.dumps(request_data).encode())
+            self.__receive_sso_response(connection, cancel_event)
+            url: str = (
+                f"https://www.nexusmods.com/sso?id={identifier}"
+                f"&application={NexusModsApi.APP_SLUG}"
+            )
+            if browser_opener is None:
+                webbrowser.open(url)
+            else:
+                browser_opener(url)
+            data: dict[str, Any] = self.__receive_sso_response(connection, cancel_event)
+            key: object = data["data"]["api_key"]
+            if not isinstance(key, str) or not key:
+                raise ValueError("Nexus Mods returned an invalid API key.")
+            self.__api_key = key
+            return self.__api_key
+        finally:
+            connection.close()
 
-        self.log.debug("Connecting to Nexus Mods SSO webserver...")
-        connection = websocket.create_connection("wss://sso.nexusmods.com")
+    @staticmethod
+    def __receive_sso_response(
+        connection: websocket.WebSocket, cancel_event: Optional[Event]
+    ) -> dict[str, Any]:
+        """
+        Waits for SSO without blocking cancellation of the embedded browser.
 
-        self.log.debug("Generating UUID v4...")
-        uuid = str(uuid4())
-        self.log.debug(f"UUID: {uuid}")
+        Args:
+            connection (websocket.WebSocket): SSO connection to receive from.
+            cancel_event (Optional[Event]): Optional cancellation signal.
 
-        self.log.debug("Requesting SSO token...")
-        request_data = {
-            "id": uuid,
-            "token": None,
-            "protocol": 2,
-        }
-        connection.send(json.dumps(request_data).encode())
+        Returns:
+            dict[str, Any]: Decoded SSO response.
 
-        response = connection.recv()
-        if isinstance(response, bytes):
-            response = response.decode()
-        res_data = json.loads(response)
-        token: str = res_data["data"]["connection_token"]  # type: ignore  # noqa: F841
+        Raises:
+            InterruptedError: If the user cancels the login.
+            TimeoutError: If no SSO response arrives in time.
+        """
 
-        self.log.debug("Opening page in Web Browser...")
-        url = f"https://www.nexusmods.com/sso?id={uuid}&application={self.APP_SLUG}"
-        webbrowser.open(url)
-
-        self.log.info("Waiting for User to sign in...")
-        connection.settimeout(600)  # Timeout of 5 minutes
-        response = connection.recv()
-        if isinstance(response, bytes):
-            response = response.decode()
-        res_data = json.loads(response)
-        api_key: str = res_data["data"]["api_key"]
-        self.log.debug("Received API key.")
-
-        connection.close()
-        self.log.debug("Connection closed.")
-
-        self.__api_key = api_key
-        self.log.info("SSO process successful.")
-
-        return self.__api_key
+        deadline: float = monotonic() + 600
+        connection.settimeout(0.5)
+        while monotonic() < deadline:
+            if cancel_event is not None and cancel_event.is_set():
+                raise InterruptedError("Nexus Mods login was cancelled.")
+            try:
+                response: str | bytes = connection.recv()
+            except websocket.WebSocketTimeoutException:
+                continue
+            if isinstance(response, bytes):
+                response = response.decode()
+            return json.loads(response)
+        raise TimeoutError("Nexus Mods login timed out.")
 
     def __get_premium_download_url(
         self, game_id: str, mod_id: int, file_id: int, server_id: str = "Nexus CDN"

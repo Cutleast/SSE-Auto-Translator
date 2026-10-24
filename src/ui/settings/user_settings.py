@@ -48,6 +48,7 @@ class UserSettings(SettingsPage[UserConfig]):
     __source_label: QLabel
     __source_box: EnumDropdown[ProviderPreference]
     __api_key_entry: KeyLineEdit
+    __website_session: Optional[str]
     __masterlist_box: QCheckBox
 
     __modinstance_selector: InstanceSelectorWidget
@@ -57,6 +58,8 @@ class UserSettings(SettingsPage[UserConfig]):
 
     @override
     def _init_ui(self) -> None:
+        self.__website_session = self._initial_config.nexus_website_session
+
         scroll_widget = QWidget()
         scroll_widget.setObjectName("transparent")
         self.setWidget(scroll_widget)
@@ -190,6 +193,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
             self.__api_key_entry.setText(dialog.get_api_key())
+            self.__website_session = dialog.get_website_session()
 
     @override
     def validate(self) -> None:
@@ -208,6 +212,7 @@ class UserSettings(SettingsPage[UserConfig]):
     def apply(self, config: UserConfig) -> None:
         config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
+        config.nexus_website_session = self.__website_session
         config.modinstance = cast(
             Optional[MO2InstanceInfo | ProfileInfo],
             self.__modinstance_selector.get_cur_instance_data(),

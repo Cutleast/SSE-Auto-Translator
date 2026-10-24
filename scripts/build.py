@@ -47,17 +47,10 @@ if __name__ == "__main__":
         icon_path=Path("res") / "icons" / "icon.ico",
         delete_list=[
             Path("Qt6DataVisualization.dll"),
-            Path("Qt6Network.dll"),
             Path("Qt6Pdf.dll"),
-            Path("Qt6Qml.dll"),
-            Path("Qt6QmlMeta.dll"),
-            Path("Qt6QmlModels.dll"),
-            Path("Qt6QmlWorkerScript.dll"),
-            Path("Qt6Quick.dll"),
             Path("Qt6VirtualKeyboard.dll"),
             Path("libcrypto-3.dll"),
             Path("PySide6") / "QtDataVisualization.pyd",
-            Path("PySide6") / "QtNetwork.pyd",
         ],
     )
     backend = Backend()

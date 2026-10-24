@@ -67,6 +67,7 @@ class ProviderManager(QObject):
         try:
             nm_api = NexusModsApi()
             nm_api.set_api_key(user_config.api_key)
+            nm_api.set_website_session(user_config.nexus_website_session)
             cls.providers.append(nm_api)
         except Exception as ex:
             cls.log.error(f"Failed to initialize Nexus Mods API: {ex}", exc_info=ex)

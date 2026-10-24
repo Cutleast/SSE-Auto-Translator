@@ -223,9 +223,11 @@ class App(BaseApp, Singleton):
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
             user_config.api_key = dialog.get_api_key()
+            user_config.nexus_website_session = dialog.get_website_session()
             user_config.save()
 
             nm_api.set_api_key(user_config.api_key)
+            nm_api.set_website_session(user_config.nexus_website_session)
 
         else:
             self.exit()
