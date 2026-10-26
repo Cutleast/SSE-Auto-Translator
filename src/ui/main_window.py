@@ -220,7 +220,7 @@ class MainWindow(QMainWindow):
             "| <a href='https://ko-fi.com/cutleast'>Ko-Fi</a>)<br><br>Icon by "
             "Wuerfelhusten (<a href='https://www.nexusmods.com/users/122160268'>"
             "NexusMods</a>)<br><br>Licensed under "
-            "Attribution-NonCommercial-NoDerivatives 4.0 International"
+            "GNU General Public License v3.0"
         )
 
         # Add translator credit if available
@@ -232,7 +232,7 @@ class MainWindow(QMainWindow):
             App.APP_NAME,
             App.APP_VERSION,
             App.windowIcon(),
-            "Attribution-NonCommercial-NoDerivatives 4.0 International",
+            "GNU General Public License v3.0",
             licenses=LICENSES,
             text=text,
         ).exec()

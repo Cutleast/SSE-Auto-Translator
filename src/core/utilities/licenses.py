@@ -1,15 +1,20 @@
 """
 This file is part of SSE Auto Translator
 by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+GNU General Public License v3.0.
 """
 
 LICENSES = {
     "7-zip": "https://www.7-zip.org/license.txt",
     "Qt6": "https://doc.qt.io/qt-6/lgpl.html",
-    "lingua-language-detector": "https://github.com/pemistahl/lingua-py/blob/main/LICENSE.txt",
+    "lingua-language-detector": "https://github.com/Modding-Forge/lingua-rs/blob/main/LICENSE",
     "qtpy": "https://github.com/spyder-ide/qtpy/blob/master/LICENSE.txt",
-    "PySide6": "https://code.qt.io/cgit/pyside/pyside-setup.git/tree/LICENSES?h=6.6.1",
+    "PySide6": "https://doc.qt.io/qtforpython-6/licenses.html",
+    "QtWebEngine / Chromium": "https://doc.qt.io/qt-6/qtwebengine-licensing.html",
+    "cutleast-core-lib": "https://github.com/Cutleast/cutleast-core-lib/blob/master/LICENSE",
+    "mod-manager-lib": "https://github.com/Cutleast/mod-manager-lib/blob/master/LICENSE",
+    "sse-plugin-interface": "https://github.com/Cutleast/sse-plugin-interface/blob/master/LICENSE",
+    "sse-bsa": "https://github.com/Cutleast/sse-bsa/blob/master/LICENSE",
     "qtawesome": "https://github.com/spyder-ide/qtawesome/blob/master/LICENSE.txt",
     "nuitka": "https://github.com/Nuitka/Nuitka/blob/develop/LICENSE.txt",
     "requests": "https://github.com/psf/requests/blob/main/LICENSE",
@@ -34,7 +39,7 @@ LICENSES = {
     "german_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/de/COPYING_GPLv3",
     "italian_libreoffice_dict": "https://www.gnu.org/licenses/gpl-3.0.html.en#license-text",
     "japanese_dict": "https://github.com/MrCorn0-0/hunspell_ja_JP",
-    "korean_libreoffice_dict": "https://www.gnu.org/licenses/lgpl-3.0.html.en#license-text",
+    "korean_libreoffice_dict": "https://www.gnu.org/licenses/gpl-3.0.html",
     "polish_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/pl_PL/README_en.txt",
     "portuguese_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/pt_BR/README_en.txt",
     "russian_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/ru_RU/README_ru_RU.txt",

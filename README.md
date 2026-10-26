@@ -63,6 +63,12 @@ If you are interested in testing pre-release versions of SSE-AT, join our Discor
 
 If you're interested in maintaining a masterlist for your language, contact us (@cutleast or @whusten) on our Discord server linked above!
 
+## License
+
+SSE Auto Translator's first-party code is licensed under [GPL-3.0](LICENSE).
+Third-party components retain their own terms; see [NOTICE.md](NOTICE.md) and
+the [dictionary notices](res/hunspell/README.md) for attribution and release details.
+
 ## Credits
 
 - Qt by [The Qt Company Ltd](https://qt.io)

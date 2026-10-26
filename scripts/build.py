@@ -8,12 +8,13 @@ Run this script from the project's root folder to build the standalone executabl
 import logging
 import re
 from pathlib import Path
-from typing import override
+from typing import Optional, override
 
 from cutleast_core_lib.builder.backends.nuitka_backend import NuitkaBackend
 from cutleast_core_lib.builder.build_config import BuildConfig
 from cutleast_core_lib.builder.build_metadata import BuildMetadata
 from cutleast_core_lib.builder.builder import Builder
+from license_bundle import prepare_license_bundle
 
 
 class Backend(NuitkaBackend):
@@ -23,6 +24,31 @@ class Backend(NuitkaBackend):
 
     # this injects the version at, e.g. `APP_VERSION: str = "development"`
     VERSION_PATTERN: re.Pattern[str] = re.compile(r'(?<=APP_VERSION: str = ")[^"]+(?=")')
+
+    @override
+    def build(
+        self,
+        main_module: Path,
+        exe_stem: str,
+        icon_path: Optional[Path],
+        metadata: BuildMetadata,
+    ) -> Path:
+        """
+        Builds the executable and includes its licensing and source materials.
+
+        Args:
+            main_module (Path): Prepared application entry point.
+            exe_stem (str): Name of the executable without its extension.
+            icon_path (Optional[Path]): Application icon.
+            metadata (BuildMetadata): Application build metadata.
+
+        Returns:
+            Path: Backend output directory, including licensing materials.
+        """
+
+        output: Path = super().build(main_module, exe_stem, icon_path, metadata)
+        prepare_license_bundle(Path.cwd(), output)
+        return output
 
     @override
     def preprocess_source(self, source_folder: Path, metadata: BuildMetadata) -> None:
