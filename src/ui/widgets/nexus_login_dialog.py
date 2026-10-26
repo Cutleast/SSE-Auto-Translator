@@ -2,10 +2,11 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from threading import Event, Thread
-from typing import Optional, override
+from typing import ClassVar, Optional, override
 
-from PySide6.QtCore import QTimer, QUrl, Signal, Slot
+from PySide6.QtCore import QDateTime, QTimer, QUrl, Signal, Slot
 from PySide6.QtNetwork import QNetworkCookie
 from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile
 from PySide6.QtWebEngineWidgets import QWebEngineView
@@ -20,6 +21,9 @@ class NexusLoginDialog(QDialog):
     """
     Obtains the API key and website session through one embedded Nexus SSO login.
     """
+
+    log: ClassVar[logging.Logger] = logging.getLogger("NexusLoginDialog")
+    """Logs failure categories without authorization payloads or tracebacks."""
 
     __open_page = Signal(str)
     """Requests navigation to the SSO authorization page on the GUI thread."""
@@ -36,6 +40,8 @@ class NexusLoginDialog(QDialog):
     __cancel_event: Event
     __cookies: dict[tuple[str, str, bytes], QNetworkCookie]
     __thread: Thread
+    __pending_api_key: Optional[str]
+    __session_timeout: QTimer
 
     api_key: Optional[str]
     """The API key obtained by the completed login."""
@@ -55,9 +61,14 @@ class NexusLoginDialog(QDialog):
         self.resize(1100, 850)
         self.api_key = None
         self.website_session = None
+        self.__pending_api_key = None
         self.__cookies = {}
         self.__cancel_event = Event()
         self.__init_ui()
+        self.__session_timeout = QTimer(self)
+        self.__session_timeout.setSingleShot(True)
+        self.__session_timeout.setInterval(30000)
+        self.__session_timeout.timeout.connect(self.__show_error)
         self.__profile.cookieStore().cookieAdded.connect(self.__on_cookie_added)
         self.__profile.cookieStore().cookieRemoved.connect(self.__on_cookie_removed)
         self.__open_page.connect(self.__navigate)
@@ -116,6 +127,11 @@ class NexusLoginDialog(QDialog):
                 bytes(cookie.name().data()),
             )
             self.__cookies[key] = QNetworkCookie(cookie)
+            if (
+                self.__pending_api_key is not None
+                and cookie.name() == b"nexusmods_session"
+            ):
+                QTimer.singleShot(0, self.__complete_login)
 
     @Slot(QNetworkCookie)
     def __on_cookie_removed(self, cookie: QNetworkCookie) -> None:
@@ -143,8 +159,9 @@ class NexusLoginDialog(QDialog):
         try:
             api = NexusModsApi()
             key: str = api.get_sso_key(self.__open_page.emit, self.__cancel_event)
-        except Exception:  # noqa: BLE001 - Isolate the SSO worker from the Qt event loop.
+        except Exception as ex:  # noqa: BLE001 - Isolate the SSO worker from Qt.
             if not self.__cancel_event.is_set():
+                self.log.error("Nexus Mods SSO failed: %s", type(ex).__name__)
                 self.__failed.emit()
         else:
             if not self.__cancel_event.is_set():
@@ -153,13 +170,39 @@ class NexusLoginDialog(QDialog):
     @Slot(str)
     def __finish_login(self, key: str) -> None:
         """
-        Returns both API and website access after the shared login completes.
+        Waits for the browser's authentication cookie after API authorization.
 
         Args:
             key (str): API key issued by the SSO server.
         """
 
         if self.__cancel_event.is_set():
+            return
+        self.__pending_api_key = key
+        self.__status_label.setText(
+            self.tr("Waiting for the Nexus Mods website session...")
+        )
+        self.__session_timeout.start()
+        self.__profile.cookieStore().loadAllCookies()
+
+    @Slot()
+    def __complete_login(self) -> None:
+        """
+        Completes SSO only after the store delivers the website authentication cookie.
+        """
+
+        key: Optional[str] = self.__pending_api_key
+        if key is None or self.__cancel_event.is_set():
+            return
+        if not any(
+            cookie.name() == b"nexusmods_session"
+            and not cookie.value().isEmpty()
+            and (
+                cookie.isSessionCookie()
+                or cookie.expirationDate() > QDateTime.currentDateTimeUtc()
+            )
+            for cookie in self.__cookies.values()
+        ):
             return
         try:
             self.website_session = NexusWebSession.encrypt(
@@ -181,6 +224,7 @@ class NexusLoginDialog(QDialog):
             self.tr("Nexus Mods login failed. Close this window and try again.")
         )
         self.__cancel_event.set()
+        self.__session_timeout.stop()
 
     @override
     def done(self, result: int) -> None:
@@ -191,6 +235,7 @@ class NexusLoginDialog(QDialog):
             result (int): Dialog result to return to the setup widget.
         """
 
+        self.__session_timeout.stop()
         self.__browser.stop()
         super().done(result)
         self.__browser.page().deleteLater()

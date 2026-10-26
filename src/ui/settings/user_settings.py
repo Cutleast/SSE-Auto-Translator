@@ -192,8 +192,15 @@ class UserSettings(SettingsPage[UserConfig]):
         dialog = ApiSetupDialog()
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
-            self.__api_key_entry.setText(dialog.get_api_key())
-            self.__website_session = dialog.get_website_session()
+            api_key: str = dialog.get_api_key()
+            website_session: Optional[str] = dialog.get_website_session()
+            api_key_changed: bool = api_key != self.__api_key_entry.text()
+            session_changed: bool = website_session != self.__website_session
+            self.__website_session = website_session
+            self.__api_key_entry.setText(api_key)
+            if session_changed and not api_key_changed:
+                self.changed_signal.emit()
+                self.restart_required_signal.emit()
 
     @override
     def validate(self) -> None:

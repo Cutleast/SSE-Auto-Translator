@@ -643,13 +643,27 @@ class NexusModsApi(ProviderApi):
             get_url_identifier(url) + ".cache"
         )
 
-        content: bytes
+        content: Optional[bytes] = None
         website_session: Optional[NexusWebSession] = self.__website_session
         if website_session is not None:
-            status_code: int
-            status_code, content = website_session.get_page(url)
-            self.handle_status_code(url, status_code)
-        else:
+            try:
+                status_code: int
+                session_content: bytes
+                status_code, session_content = website_session.get_page(url)
+            except curl_requests.RequestsError as ex:
+                self.log.warning(
+                    "Website session request failed (%s); retrying anonymously.",
+                    type(ex).__name__,
+                )
+            else:
+                if status_code == 200:
+                    content = session_content
+                else:
+                    self.log.warning(
+                        "Website session returned HTTP %s; retrying anonymously.",
+                        status_code,
+                    )
+        if content is None:
             cached: Optional[req.Response | curl_requests.Response] = (
                 Cache.get_from_cache(cache_file_path, default=None)
             )
@@ -667,6 +681,7 @@ class NexusModsApi(ProviderApi):
                 self.log.debug(f"Got cached Web response for '{url}'")
             content = res.content
 
+        assert content is not None
         html: str = content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
 
