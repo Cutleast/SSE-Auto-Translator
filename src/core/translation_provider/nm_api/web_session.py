@@ -181,3 +181,20 @@ class NexusWebSession:
                     self.__pages.pop(next(iter(self.__pages)))
                 self.__pages[url] = response.content
             return response.status_code, response.content
+
+    def is_expired(self) -> bool:
+        """
+        Checks whether the website authentication cookie is missing or expired.
+
+        Returns:
+            bool: Whether no usable authentication cookie remains.
+        """
+
+        with self.__lock:
+            return not any(
+                cookie.name == "nexusmods_session"
+                and cookie.domain in {".nexusmods.com", "www.nexusmods.com"}
+                and bool(cookie.value)
+                and not cookie.is_expired()
+                for cookie in self.__client.cookies.jar
+            )

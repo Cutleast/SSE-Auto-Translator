@@ -232,6 +232,11 @@ class App(BaseApp, Singleton):
                     "Nexus Mods website session missing; browser login required."
                 )
                 return self.__run_nm_api_key_setup(nm_api, user_config)
+            elif not nm_api.has_website_session():
+                self.log.info(
+                    "Nexus Mods website session expired; browser login required."
+                )
+                return self.__run_nm_api_key_setup(nm_api, user_config)
 
             nm_api_valid: bool = nm_api.is_api_key_valid(user_config.api_key)
 

@@ -8,7 +8,7 @@ from collections.abc import Callable
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from pathlib import Path
 from queue import Queue
-from threading import Event
+from threading import Event, Lock
 from time import monotonic
 from typing import Any, Optional, TypeVar, override
 from urllib.parse import urljoin
@@ -142,12 +142,14 @@ class NexusModsApi(ProviderApi):
     """
 
     __website_session: Optional[NexusWebSession]
+    __website_session_lock: Lock
 
     @override
     def __init__(self) -> None:
         super().__init__()
 
         self.__website_session = None
+        self.__website_session_lock = Lock()
 
     def set_website_session(self, encrypted: Optional[str]) -> None:
         """
@@ -162,6 +164,26 @@ class NexusModsApi(ProviderApi):
             if encrypted is not None and self.__api_key is not None
             else None
         )
+
+    def has_website_session(self) -> bool:
+        """
+        Checks website access and reports an expired session once.
+
+        Returns:
+            bool: Whether a non-expired website session is available.
+        """
+
+        with self.__website_session_lock:
+            session: Optional[NexusWebSession] = self.__website_session
+            if session is None:
+                return False
+
+            if not session.is_expired():
+                return True
+
+            self.__website_session = None
+
+        return False
 
     def set_api_key(self, key: str) -> None:
         """
@@ -744,7 +766,9 @@ class NexusModsApi(ProviderApi):
         try:
             identifier: str = str(uuid4())
             request_data: dict[str, Any] = {
-                "id": identifier, "token": None, "protocol": 2
+                "id": identifier,
+                "token": None,
+                "protocol": 2,
             }
             connection.send(json.dumps(request_data).encode())
             self.__receive_sso_response(connection, cancel_event)
