@@ -37,7 +37,7 @@ from ui.main_window import MainWindow
 from ui.startup_dialog.startup_dialog import StartupDialog
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.utilities.theme_manager import ThemeManager
-from ui.widgets.api_setup_dialog import ApiSetupDialog
+from ui.widgets.nexus_login_dialog import NexusLoginDialog
 
 
 class App(BaseApp, Singleton):
@@ -158,13 +158,19 @@ class App(BaseApp, Singleton):
             )
 
         retcode: int = 0
-        if self.setup_complete:
-            self.__start_main_app()
+        if self.setup_complete and self.__start_main_app():
             retcode = super().exec()
 
         return retcode
 
-    def __start_main_app(self) -> None:
+    def __start_main_app(self) -> bool:
+        """
+        Starts the main window after the required Nexus login completes.
+
+        Returns:
+            bool: Whether startup completed without cancelling authentication.
+        """
+
         app_config: AppConfig = cast(AppConfig, self.app_config)
 
         self.__user_data = ProgressDialog(
@@ -187,7 +193,8 @@ class App(BaseApp, Singleton):
         self.__component_provider = ComponentProvider(app_config, self.__user_data)
         self.__component_provider.initialize_components()
 
-        self.__check_nm_api_key(self.__user_data.user_config)
+        if not self.__check_nm_api_key(self.__user_data.user_config):
+            return False
 
         main_window: MainWindow = cast(MainWindow, self.main_window)
         main_window.initialize(
@@ -202,33 +209,71 @@ class App(BaseApp, Singleton):
         main_window.showMaximized()
 
         self.detect_path_limit()
+        return True
 
-    def __check_nm_api_key(self, user_config: UserConfig) -> None:
+    def __check_nm_api_key(self, user_config: UserConfig) -> bool:
+        """
+        Requires legacy API-only logins to obtain a shared website session once.
+
+        Args:
+            user_config (UserConfig): Stored Nexus credentials.
+
+        Returns:
+            bool: Whether authentication allows startup to continue.
+        """
+
         try:
             nm_api: NexusModsApi = ProviderManager.get_provider(NexusModsApi)
         except ValueError:
             self.log.warning("No Nexus Mods API available.")
         else:
-            nm_api_valid = nm_api.is_api_key_valid(user_config.api_key)
+            if not user_config.nexus_website_session:
+                self.log.info(
+                    "Nexus Mods website session missing; browser login required."
+                )
+                return self.__run_nm_api_key_setup(nm_api, user_config)
+
+            nm_api_valid: bool = nm_api.is_api_key_valid(user_config.api_key)
 
             if not nm_api_valid:
-                self.__run_nm_api_key_setup(nm_api, user_config)
+                return self.__run_nm_api_key_setup(nm_api, user_config)
+
+        return True
 
     def __run_nm_api_key_setup(
         self, nm_api: NexusModsApi, user_config: UserConfig
-    ) -> None:
-        self.log.error("Nexus Mods API Key is invalid!")
+    ) -> bool:
+        """
+        Saves the shared login only after successful browser authentication.
 
-        dialog = ApiSetupDialog()
+        Args:
+            nm_api (NexusModsApi): Provider to update with the new credentials.
+            user_config (UserConfig): Configuration to persist after login.
 
-        if dialog.exec() == QDialog.DialogCode.Accepted:
-            user_config.api_key = dialog.get_api_key()
+        Returns:
+            bool: Whether both API and website credentials were obtained.
+        """
+
+        dialog = NexusLoginDialog(self.main_window)
+
+        try:
+            if dialog.exec() != QDialog.DialogCode.Accepted:
+                return False
+
+            api_key: Optional[str] = dialog.api_key
+            website_session: Optional[str] = dialog.website_session
+            if not api_key or not website_session:
+                return False
+
+            user_config.api_key = api_key
+            user_config.nexus_website_session = website_session
             user_config.save()
 
             nm_api.set_api_key(user_config.api_key)
-
-        else:
-            self.exit()
+            nm_api.set_website_session(user_config.nexus_website_session)
+            return True
+        finally:
+            dialog.deleteLater()
 
     def detect_path_limit(self) -> None:
         """

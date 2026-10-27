@@ -147,4 +147,5 @@ class SetupPage(Page):
         config.language = lang
         config.provider_preference = source
         config.api_key = self.__api_setup.api_key
+        config.nexus_website_session = self.__api_setup.website_session
         config.use_masterlist = self.__masterlist_box.isChecked()
