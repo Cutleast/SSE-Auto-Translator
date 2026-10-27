@@ -5,6 +5,7 @@
   - A new embedded browser is used when logging into Nexus Mods
   - **Note:** You have to login to Nexus Mods again once after updating
   - **Note:** As a result of introducing an embedded browser, the package size has drastically increased
+- Fix missing interface translations being exported as "None"
 
 # v3.2.5 (Hotfix)
 
