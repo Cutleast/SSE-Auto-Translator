@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.14"
 
 [manifest]
@@ -1195,6 +1195,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "nuitka" },
+    { name = "packaging" },
     { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },
@@ -1234,6 +1235,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "nuitka" },
+    { name = "packaging" },
     { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },

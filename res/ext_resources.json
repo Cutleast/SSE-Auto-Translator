@@ -5,6 +5,10 @@
     "app/database/*/*.json",
     "hunspell/*.aff",
     "hunspell/*.dic",
+    "hunspell/*.md",
+    "hunspell/*.json",
+    "hunspell/licenses/*",
+    "licenses/*",
     "path_limit.reg",
     "string_records.json",
     "TaskbarLib.tlb"

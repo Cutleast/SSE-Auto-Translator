@@ -1,0 +1,83 @@
+{
+    "french": {
+        "terms": "MPL-2.0",
+        "upstream_source": "https://grammalecte.net/",
+        "notice": "licenses/french.txt",
+        "sha256": {
+            "aff": "341e586945102677552498e450d84afca55e6f2ff6d4825de796f0c5f757754b",
+            "dic": "7ed58e37db7ecf4e0bdbc9871fed87929bf43373098243c4991a7a228c462e7d"
+        }
+    },
+    "german": {
+        "terms": "GPL-2.0-only OR GPL-3.0-only",
+        "upstream_source": "https://github.com/LibreOffice/dictionaries/tree/master/de",
+        "notice": "licenses/german.txt",
+        "sha256": {
+            "aff": "58ee154c455f121f2c48555e156e5c4215d9c93c67be58be7189c7541b65b278",
+            "dic": "f49ad98698775a11e873bc6e78e744f547e1970c3ea166a9fb7336fedb0229b6"
+        }
+    },
+    "italian": {
+        "terms": "GPL-3.0-only",
+        "upstream_source": "https://github.com/LibreOffice/dictionaries/tree/master/it_IT",
+        "notice": "licenses/italian.txt",
+        "sha256": {
+            "aff": "9eb7e40baa293797ad67ec4627044be1908087c1d881474c5ddd17f146426e82",
+            "dic": "84ead98b0793c020ac57dbc28e10866bffbb54770f2fac6b3ceb002257ff30c9"
+        }
+    },
+    "japanese": {
+        "terms": "Upstream attribution notice; no SPDX license declared",
+        "upstream_source": "https://github.com/MrCorn0-0/hunspell_ja_JP",
+        "notice": "licenses/japanese.txt",
+        "sha256": {
+            "aff": "c208cbf9362fa15bb7bbce2ffd457b7ee181062b85d40e69132f14ed78a1c840",
+            "dic": "1055f94963a5fc6a27aecd85eb78fe9f8278a01322836d6731e9d42435dcab23"
+        }
+    },
+    "korean": {
+        "terms": "GPL-3.0-or-later",
+        "upstream_source": "https://github.com/spellcheck-ko/hunspell-dict-ko",
+        "notice": "licenses/korean.txt",
+        "sha256": {
+            "aff": "f45b3e75a0813b5d74eaa638a17ee2d6c3e5bd68f31f89900cf57b18e4836e70",
+            "dic": "66174416bfdcf185a977f75058ea4c8249d552bfb81668a820b57ed54606d512"
+        }
+    },
+    "polish": {
+        "terms": "See original multi-license notice",
+        "upstream_source": "https://sjp.pl/slownik/en/",
+        "notice": "licenses/polish.txt",
+        "sha256": {
+            "aff": "c668cde156c3032d4ccbd935452a2e6e839fa0efd8dec73040f18bbbe1890e20",
+            "dic": "c80b97bade53255e09aeaf632c533d8cd34562334c1cfe4766ed1d6d7739f2d9"
+        }
+    },
+    "portuguese": {
+        "terms": "LGPL-3.0 and Mozilla Public License; see original notice",
+        "upstream_source": "https://github.com/LibreOffice/dictionaries/tree/master/pt_BR",
+        "notice": "licenses/portuguese.txt",
+        "sha256": {
+            "aff": "22227f1b03e70e566e24585202c87797a4a09ae0e593fe3d5bdc9fd3b49b74e3",
+            "dic": "0781d63bb79cc7d0f89853dbe4cb14a5ce3e22145532a553e85840bfc3cb75dc"
+        }
+    },
+    "russian": {
+        "terms": "See original BSD-style notice",
+        "upstream_source": "https://github.com/LibreOffice/dictionaries/tree/master/ru_RU",
+        "notice": "licenses/russian.txt",
+        "sha256": {
+            "aff": "5fc30a382a960313b806b1723dfab46fed00d6ea276fb6b907c3bb89af9c9934",
+            "dic": "ed3fdbe6cb797af0ba83bfa1b156fc62bacd327ea9d026cd25ac689065b77466"
+        }
+    },
+    "spanish": {
+        "terms": "GPL-3.0-or-later OR LGPL-3.0-or-later OR MPL-1.1-or-later",
+        "upstream_source": "https://github.com/LibreOffice/dictionaries/tree/master/es",
+        "notice": "licenses/spanish.txt",
+        "sha256": {
+            "aff": "f56fb80b2e5fd44461be4097511d795270b58a10737c57ec2f9ca9e638cbd7b6",
+            "dic": "ea62d4a46220c7a79ce157e9e5e15f2c0fd4d4a3316b4e90040b9688827a9ba7"
+        }
+    }
+}

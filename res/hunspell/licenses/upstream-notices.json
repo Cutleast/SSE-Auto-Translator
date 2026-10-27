@@ -1,0 +1,12 @@
+{
+    "french.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/fr_FR/dictionaries/README_dict_fr.txt",
+    "german.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/de/README_de_DE_frami.txt",
+    "italian.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/it_IT/README_it_IT.txt",
+    "korean.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/ko_KR/README_ko_KR.txt",
+    "polish.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/pl_PL/README_en.txt",
+    "portuguese.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/pt_BR/README_en.txt",
+    "russian.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/ru_RU/README_ru_RU.txt",
+    "spanish.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/es/LICENSE.md",
+    "spanish-authors.txt": "https://github.com/LibreOffice/dictionaries/blob/67032ee957631908098a72edf48dc81cac27e369/es/README_hunspell_es.txt",
+    "japanese.txt": "https://github.com/MrCorn0-0/hunspell_ja_JP/blob/7752d392f4c394da220b7a98245a1e218604a0c4/README.md"
+}
