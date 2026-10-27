@@ -28,47 +28,47 @@
 <context>
     <name>ApiSetup</name>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="45"/>
+        <location filename="src/ui/widgets/api_setup.py" line="53"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
         <translation>为了从 Nexus Mods 获取翻译，该工具需要访问 Nexus Mods API。您可以通过两种方法设置访问：手动输入 API 密钥或通过 SSO（一键登录）。</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="67"/>
+        <location filename="src/ui/widgets/api_setup.py" line="75"/>
         <source>Click here to login to Nexus Mods via browser</source>
         <translation>点击此处通过浏览器登录 Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="83"/>
+        <location filename="src/ui/widgets/api_setup.py" line="97"/>
         <source>Single-Sign-On (browser)</source>
         <translation>点击此处通过浏览器登录 Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="93"/>
+        <location filename="src/ui/widgets/api_setup.py" line="107"/>
         <source>Insert your API key</source>
         <translation>输入您的 API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="97"/>
+        <location filename="src/ui/widgets/api_setup.py" line="111"/>
         <source>Check API key</source>
         <translation>检查 API 密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="110"/>
+        <location filename="src/ui/widgets/api_setup.py" line="125"/>
         <source>API key is valid!</source>
         <translation>API 密钥有效！</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="115"/>
+        <location filename="src/ui/widgets/api_setup.py" line="130"/>
         <source>API key is invalid!</source>
         <translation>API 密钥无效！</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="76"/>
+        <location filename="src/ui/widgets/api_setup.py" line="90"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation>已成功登录到N网</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="119"/>
+        <location filename="src/ui/widgets/api_setup.py" line="134"/>
         <source>Manual Setup</source>
         <translation>手动设置</translation>
     </message>
@@ -94,12 +94,12 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="245"/>
+        <location filename="src/app.py" line="290"/>
         <source>Path Limit Enabled</source>
         <translation>路径限制已启用</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="247"/>
+        <location filename="src/app.py" line="292"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -1778,6 +1778,39 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>NexusLoginDialog</name>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="60"/>
+        <source>Nexus Mods login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="87"/>
+        <source>Connecting to Nexus Mods...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="95"/>
+        <source>Cancel</source>
+        <translation type="unfinished">取消</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="110"/>
+        <source>Sign in to Nexus Mods and authorize SSE-AT to continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="183"/>
+        <source>Waiting for the Nexus Mods website session...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="225"/>
+        <source>Nexus Mods login failed. Close this window and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page</name>
     <message>
         <location filename="src/ui/startup_dialog/page.py" line="92"/>
@@ -2838,57 +2871,57 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="73"/>
+        <location filename="src/ui/settings/user_settings.py" line="76"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="118"/>
+        <location filename="src/ui/settings/user_settings.py" line="121"/>
         <source>Nexus Mods API Key</source>
         <translation>Nexus Mods API密钥</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="85"/>
+        <location filename="src/ui/settings/user_settings.py" line="88"/>
         <source>Game language</source>
         <translation>游戏语言</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="87"/>
+        <location filename="src/ui/settings/user_settings.py" line="90"/>
         <source>Translation source</source>
         <translation>翻译来源</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="115"/>
+        <location filename="src/ui/settings/user_settings.py" line="118"/>
         <source>Start API setup...</source>
         <translation>开始 API 设置...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="122"/>
+        <location filename="src/ui/settings/user_settings.py" line="125"/>
         <source>Use global masterlist from GitHub repository (recommended)</source>
         <translation>使用 GitHub 存储库中的全局主列表（推荐）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="128"/>
+        <location filename="src/ui/settings/user_settings.py" line="131"/>
         <source>Open masterlist (in browser)</source>
         <translation>打开主列表（在浏览器中）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="133"/>
+        <location filename="src/ui/settings/user_settings.py" line="136"/>
         <source>Open translation author blacklist...</source>
         <translation>打开翻译作者黑名单...</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="139"/>
+        <location filename="src/ui/settings/user_settings.py" line="142"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="155"/>
+        <location filename="src/ui/settings/user_settings.py" line="158"/>
         <source>Parse BSA archives (This may slow down app startup depending on the size of your modlist!)</source>
         <translation>解析 BSA 档案（这可能会减慢应用程序的启动速度，具体取决于您的 modlist 的大小！）</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="202"/>
+        <location filename="src/ui/settings/user_settings.py" line="213"/>
         <source>An API key is required for downloading translations from Nexus Mods!</source>
         <translation type="unfinished"></translation>
     </message>
