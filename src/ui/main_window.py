@@ -218,7 +218,7 @@ class MainWindow(QMainWindow):
             "| <a href='https://ko-fi.com/cutleast'>Ko-Fi</a>)<br><br>Icon by "
             "Wuerfelhusten (<a href='https://www.nexusmods.com/users/122160268'>"
             "NexusMods</a>)<br><br>Licensed under "
-            "Attribution-NonCommercial-NoDerivatives 4.0 International"
+            "GNU General Public License v3.0"
         )
 
         # Add translator credit if available
@@ -227,7 +227,7 @@ class MainWindow(QMainWindow):
             text += translator_info
 
         AboutDialog(
-            app_license="Attribution-NonCommercial-NoDerivatives 4.0 International",
+            app_license="GNU General Public License v3.0",
             licenses=LICENSES,
             text=text,
         ).exec()

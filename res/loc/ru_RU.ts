@@ -300,10 +300,12 @@ This feature is considered experimental because a crash might prevent it from un
     <name>BlacklistDialog</name>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
         <source>Blacklist for Translation Authors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="49"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="49"/>
         <source>This is a blacklist to exclude translations from certain authors.
 All translations from authors on this list below (case-insensitive) are ignored and do not show up when scanning online.
@@ -312,25 +314,30 @@ This list only affects translations from Nexus Mods!</source>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="61"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="61"/>
         <source>Remove selected authors from list...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="77"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="77"/>
         <source>Add author...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="81"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="81"/>
         <source>Add Author...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="82"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="82"/>
         <source>Enter author name (case-insensitive):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
@@ -338,10 +345,13 @@ This list only affects translations from Nexus Mods!</source>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="85"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="146"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="85"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="146"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="141"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="141"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
@@ -462,10 +472,12 @@ This list only affects translations from Nexus Mods!</source>
     <name>DatabaseWidget</name>
     <message>
         <location filename="src/ui/main_page/database/database_widget.py" line="73"/>
+        <location filename="src/ui/main_page/database/database_widget.py" line="73"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/main_page/database/database_widget.py" line="76"/>
         <location filename="src/ui/main_page/database/database_widget.py" line="76"/>
         <source>Downloads</source>
         <translation type="unfinished"></translation>
@@ -1100,6 +1112,7 @@ Depending on the translator API this can raise unexpected costs.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="67"/>
         <location filename="src/ui/widgets/ignore_list_dialog.py" line="67"/>
         <source>User ignore list</source>
         <translation type="unfinished"></translation>
@@ -1785,6 +1798,39 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="75"/>
         <source>Profile:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>NexusLoginDialog</name>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="60"/>
+        <source>Nexus Mods login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="87"/>
+        <source>Connecting to Nexus Mods...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="95"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="110"/>
+        <source>Sign in to Nexus Mods and authorize SSE-AT to continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="183"/>
+        <source>Waiting for the Nexus Mods website session...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="225"/>
+        <source>Nexus Mods login failed. Close this window and try again.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

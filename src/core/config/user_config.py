@@ -27,6 +27,11 @@ class UserConfig(BaseConfig):
     api_key: Annotated[str, BaseConfig.PropertyMarker.ExcludeFromLogging]
     """API key for Nexus Mods."""
 
+    nexus_website_session: Annotated[
+        Optional[str], BaseConfig.PropertyMarker.ExcludeFromLogging
+    ] = None
+    """Windows-user-encrypted website session associated with the Nexus API key."""
+
     mod_instance: Optional[MO2InstanceInfo | ProfileInfo] = Field(
         default=None, alias="modinstance", discriminator="mod_manager"
     )

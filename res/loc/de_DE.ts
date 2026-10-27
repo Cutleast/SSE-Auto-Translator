@@ -303,10 +303,12 @@ Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern kön
     <name>BlacklistDialog</name>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
         <source>Blacklist for Translation Authors</source>
         <translation>Ignorierliste für Übersetzungsautoren</translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="49"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="49"/>
         <source>This is a blacklist to exclude translations from certain authors.
 All translations from authors on this list below (case-insensitive) are ignored and do not show up when scanning online.
@@ -317,25 +319,30 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="61"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="61"/>
         <source>Remove selected authors from list...</source>
         <translation>Ausgewählte Autoren von der Liste entfernen...</translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="77"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="77"/>
         <source>Add author...</source>
         <translation>Autor hinzufügen...</translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="81"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="81"/>
         <source>Add Author...</source>
         <translation>Autor hinzufügen...</translation>
     </message>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="82"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="82"/>
         <source>Enter author name (case-insensitive):</source>
         <translation>Name eines Autoren eingeben (Groß-/Kleinschreibung wird nicht beachtet):</translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="84"/>
         <source>Ok</source>
         <translation>Ok</translation>
@@ -343,10 +350,13 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="85"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="146"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="85"/>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="146"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
+        <location filename="src/ui/settings/blacklist_dialog.py" line="141"/>
         <location filename="src/ui/settings/blacklist_dialog.py" line="141"/>
         <source>Done</source>
         <translation>Fertig</translation>
@@ -467,10 +477,12 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     <name>DatabaseWidget</name>
     <message>
         <location filename="src/ui/main_page/database/database_widget.py" line="73"/>
+        <location filename="src/ui/main_page/database/database_widget.py" line="73"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
     <message>
+        <location filename="src/ui/main_page/database/database_widget.py" line="76"/>
         <location filename="src/ui/main_page/database/database_widget.py" line="76"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
@@ -1106,6 +1118,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
         <translation>Ignorierliste</translation>
     </message>
     <message>
+        <location filename="src/ui/widgets/ignore_list_dialog.py" line="67"/>
         <location filename="src/ui/widgets/ignore_list_dialog.py" line="67"/>
         <source>User ignore list</source>
         <translation>Nutzer-eigene Ignorierliste</translation>
@@ -1796,6 +1809,39 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/modorganizer_selector_widget.py" line="75"/>
         <source>Profile:</source>
         <translation>Profil:</translation>
+    </message>
+</context>
+<context>
+    <name>NexusLoginDialog</name>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="60"/>
+        <source>Nexus Mods login</source>
+        <translation>Nexus Mods-Anmeldung</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="87"/>
+        <source>Connecting to Nexus Mods...</source>
+        <translation>Mit Nexus Mods verbinden...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="95"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="110"/>
+        <source>Sign in to Nexus Mods and authorize SSE-AT to continue.</source>
+        <translation>Melde dich bei Nexus Mods und autorisiere SSE-AT, um fortzufahren.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="183"/>
+        <source>Waiting for the Nexus Mods website session...</source>
+        <translation>Auf Nexus Mods-Webseitensitzung warten...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="225"/>
+        <source>Nexus Mods login failed. Close this window and try again.</source>
+        <translation>Nexus Mods-Anmeldung fehlgeschlagen. Schließe das Fenster und versuche es erneut.</translation>
     </message>
 </context>
 <context>

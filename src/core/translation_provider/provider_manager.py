@@ -110,6 +110,7 @@ class ProviderManager:
                 case Source.NexusMods:
                     provider = NexusModsApi()
                     provider.set_api_key(user_config.api_key)
+                    provider.set_website_session(user_config.nexus_website_session)
 
                 case Source.Confrerie:
                     provider = CDTApi()
