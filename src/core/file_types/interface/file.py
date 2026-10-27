@@ -73,7 +73,9 @@ class InterfaceFile(ModFile):
         output_file.write_text(
             "\n".join(
                 [
-                    f"{string.mcm_id}\t{string.string}"
+                    f"{string.mcm_id}\t{
+                        string.string if string.string is not None else string.original
+                    }"
                     for string in strings
                     if isinstance(string, InterfaceString)
                 ]
