@@ -184,6 +184,7 @@ class NexusLoginDialog(QDialog):
         )
         self.__session_timeout.start()
         self.__profile.cookieStore().loadAllCookies()
+        self.__complete_login()
 
     @Slot()
     def __complete_login(self) -> None:
