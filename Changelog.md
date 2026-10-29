@@ -1,3 +1,12 @@
+# v3.2.6 (Hotfix)
+
+- Fix translations for adult mods not being found
+  - This is a workaround and not a definite fix. See this forum thread for a proposed solution: https://forums.nexusmods.com/topic/13547587-add-translations-to-the-nexus-mods-api-v3-rest-endpoint/
+  - A new embedded browser is used when logging into Nexus Mods
+  - **Note:** You have to login to Nexus Mods again once after updating
+  - **Note:** As a result of introducing an embedded browser, the package size has drastically increased
+- Fix missing interface translations being exported as "None"
+
 # v3.2.5 (Hotfix)
 
 - Fix SSE-AT not finding every Portuguese translation

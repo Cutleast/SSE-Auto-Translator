@@ -8,6 +8,7 @@ from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
+    QDialog,
     QHBoxLayout,
     QLabel,
     QPushButton,
@@ -17,6 +18,8 @@ from PySide6.QtWidgets import (
 )
 
 from core.translation_provider.nm_api.nm_api import NexusModsApi
+
+from .nexus_login_dialog import NexusLoginDialog
 
 
 class ApiSetup(QWidget):
@@ -28,9 +31,14 @@ class ApiSetup(QWidget):
     is_valid: bool = False
     api_key: Optional[str] = None
 
+    website_session: Optional[str]
+    """The encrypted website session returned by the shared SSO login."""
+
     @override
     def __init__(self) -> None:
         super().__init__()
+
+        self.website_session = None
 
         vlayout = QVBoxLayout()
         vlayout.setContentsMargins(0, 0, 0, 0)
@@ -66,8 +74,14 @@ class ApiSetup(QWidget):
         )
 
         def start_sso() -> None:
-            api = NexusModsApi()
-            self.api_key = api.get_sso_key()
+            dialog = NexusLoginDialog(self)
+            try:
+                if dialog.exec() != QDialog.DialogCode.Accepted:
+                    return
+                self.api_key = dialog.api_key
+                self.website_session = dialog.website_session
+            finally:
+                dialog.deleteLater()
             sso_button.setText(self.tr("Successfully logged into Nexus Mods"))
             self.setDisabled(True)
             self.is_valid = True
@@ -98,6 +112,7 @@ class ApiSetup(QWidget):
             api_key_check_button.setText("Checking API key...")
             if NexusModsApi().is_api_key_valid(key):
                 self.api_key = key
+                self.website_session = None
                 self.is_valid = True
                 self.valid_signal.emit(True)
                 api_key_check_button.setText(self.tr("API key is valid!"))

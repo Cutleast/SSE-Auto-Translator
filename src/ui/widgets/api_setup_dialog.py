@@ -74,3 +74,11 @@ class ApiSetupDialog(QDialog):
             raise ValueError("API key is None!")
 
         return key
+
+    def get_website_session(self) -> Optional[str]:
+        """
+        Returns:
+            Optional[str]: Encrypted website session from the shared SSO login.
+        """
+
+        return self.__api_setup.website_session

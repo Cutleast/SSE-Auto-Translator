@@ -48,6 +48,7 @@ class UserSettings(SettingsPage[UserConfig]):
     __source_label: QLabel
     __source_box: EnumDropdown[ProviderPreference]
     __api_key_entry: KeyLineEdit
+    __website_session: Optional[str]
     __masterlist_box: QCheckBox
 
     __modinstance_selector: InstanceSelectorWidget
@@ -57,6 +58,8 @@ class UserSettings(SettingsPage[UserConfig]):
 
     @override
     def _init_ui(self) -> None:
+        self.__website_session = self._initial_config.nexus_website_session
+
         scroll_widget = QWidget()
         self.setWidget(scroll_widget)
 
@@ -191,7 +194,15 @@ class UserSettings(SettingsPage[UserConfig]):
         dialog = ApiSetupDialog()
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
-            self.__api_key_entry.setText(dialog.get_api_key())
+            api_key: str = dialog.get_api_key()
+            website_session: Optional[str] = dialog.get_website_session()
+            api_key_changed: bool = api_key != self.__api_key_entry.text()
+            session_changed: bool = website_session != self.__website_session
+            self.__website_session = website_session
+            self.__api_key_entry.setText(api_key)
+            if session_changed and not api_key_changed:
+                self.changed_signal.emit()
+                self.restart_required_signal.emit()
 
     @override
     def validate(self) -> None:
@@ -210,6 +221,7 @@ class UserSettings(SettingsPage[UserConfig]):
     def apply(self, config: UserConfig) -> None:
         config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
+        config.nexus_website_session = self.__website_session
         config.mod_instance = cast(
             Optional[MO2InstanceInfo | ProfileInfo],
             self.__modinstance_selector.get_cur_instance_data(),
