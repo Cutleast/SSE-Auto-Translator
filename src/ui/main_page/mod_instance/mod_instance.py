@@ -352,7 +352,7 @@ class ModInstanceWidget(QTreeWidget):
         for modfile in selected_modfiles:
             self.__user_data.masterlist.add_to_ignore_list(modfile.name)
 
-        self.__user_data.user_config.save()
+        self.__user_data.user_config_manager.save()
         self.__update_item_visibilities()
 
     def __open_modpage(self) -> None:

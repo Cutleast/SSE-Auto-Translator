@@ -6,6 +6,7 @@ from collections.abc import Generator
 from unittest.mock import patch
 
 import pytest
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.logger import Logger
 from pytestqt.qtbot import QtBot
 
@@ -24,7 +25,7 @@ class TestMainWindow(BaseTest):
     @pytest.fixture
     def widget(
         self,
-        app_config: AppConfig,
+        app_config_manager: ConfigManager[AppConfig],
         user_data: UserData,
         component_provider: ComponentProvider,
         logger: Logger,
@@ -36,7 +37,7 @@ class TestMainWindow(BaseTest):
 
         window = MainWindow()
         window.initialize(
-            app_config=app_config,
+            app_config_manager=app_config_manager,
             user_data=user_data,
             translator_service=component_provider.get_translator_service(),
             scanner=component_provider.get_scanner(),

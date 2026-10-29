@@ -6,6 +6,8 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+import jstyleson as json
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.exception_handler import ExceptionHandler
 from cutleast_core_lib.core.utilities.singleton import SingletonQObject
@@ -70,7 +72,8 @@ class UserDataService(SingletonQObject):
                 ProgressUpdate(status_text=self.tr("Loading user configuration..."))
             )
 
-        user_config = self.__load_user_config()
+        user_config_manager: ConfigManager[UserConfig] = self.__load_user_config()
+        user_config: UserConfig = user_config_manager.config
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -79,7 +82,9 @@ class UserDataService(SingletonQObject):
                 )
             )
 
-        translator_config = self.__load_translator_config()
+        translator_config_manager: ConfigManager[TranslatorConfig] = (
+            self.__load_translator_config()
+        )
 
         if pdisplay is not None:
             pdisplay.updateMainProgress(
@@ -103,8 +108,8 @@ class UserDataService(SingletonQObject):
         masterlist = self.__load_masterlist(user_config)
 
         self.__user_data = UserData(
-            user_config=user_config,
-            translator_config=translator_config,
+            user_config_manager=user_config_manager,
+            translator_config_manager=translator_config_manager,
             database=database,
             mod_instance=mod_instance,
             masterlist=masterlist,
@@ -114,15 +119,21 @@ class UserDataService(SingletonQObject):
 
         return self.__user_data
 
-    def __load_user_config(self) -> UserConfig:
+    def __load_user_config(self) -> ConfigManager[UserConfig]:
         self.log.info("Loading user configuration...")
 
-        return UserConfig.load(self.__data_path)
+        manager = ConfigManager(UserConfig, self.__data_path, self)
+        manager.print_settings_to_log()
 
-    def __load_translator_config(self) -> TranslatorConfig:
+        return manager
+
+    def __load_translator_config(self) -> ConfigManager[TranslatorConfig]:
         self.log.info("Loading translator configuration...")
 
-        return TranslatorConfig.load(self.__data_path)
+        manager = ConfigManager(TranslatorConfig, self.__data_path, self)
+        manager.print_settings_to_log()
+
+        return manager
 
     def __load_database(
         self, language: GameLanguage, pdisplay: Optional[ProgressDisplay] = None
@@ -180,10 +191,14 @@ class UserDataService(SingletonQObject):
             bool: True if the user data is not yet setup, False otherwise.
         """
 
-        return (
-            not (self.__data_path / "user" / "config.json").is_file()
-        ) or ExceptionHandler.raises_exception(
-            lambda: UserConfig.load(self.__data_path, log_settings=False)
+        config_file_path: Path = self.__data_path / UserConfig.get_config_name()
+
+        # A ConfigManager can't be used here because it falls back to a default config
+        # on invalid data and can only be created once per config class.
+        return (not config_file_path.is_file()) or ExceptionHandler.raises_exception(
+            lambda: UserConfig.model_validate(
+                json.loads(config_file_path.read_text(encoding="utf8")), by_alias=True
+            )
         )
 
     def get_user_data(self) -> UserData:

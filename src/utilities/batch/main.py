@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import NoReturn, Optional, cast, override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.logger import Logger
@@ -93,14 +94,14 @@ class Batch(Utility):
         # QApplication is required for the progress dialog (a QWidget); without the
         # flag a lightweight QCoreApplication suffices. Keep a reference to the
         # created application object for the lifetime of this batch run.
-        qt_app: QApplication | QCoreApplication  # pyright: ignore[reportUnusedVariable]
+        qt_app: QApplication | QCoreApplication
         qapp: Optional[QApplication]
         if show_progress:
             qapp = QApplication(sys.argv)
-            qt_app = qapp  # pyright: ignore[reportUnusedVariable]
+            qt_app = qapp
         else:
             qapp = None
-            qt_app = QCoreApplication(sys.argv)  # pyright: ignore[reportUnusedVariable]  # noqa: F841
+            qt_app = QCoreApplication(sys.argv)
 
         cur_path: Path = get_current_path()
         res_path: Path = cur_path / "res"
@@ -112,7 +113,7 @@ class Batch(Utility):
         cache_path: Path = data_path / "cache"
         log_path: Path = data_path / "logs"
 
-        app_config: AppConfig = AppConfig.load(data_path)
+        app_config: AppConfig = ConfigManager(AppConfig, data_path, qt_app).config
 
         if show_progress:
             self.__apply_theme(cast(QApplication, qapp), app_config)

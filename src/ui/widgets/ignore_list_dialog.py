@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
@@ -29,7 +30,7 @@ class IgnoreListDialog(QDialog):
     """
 
     __masterlist: Masterlist
-    __user_config: UserConfig
+    __user_config_manager: ConfigManager[UserConfig]
 
     __userlist_widget: QListWidget
     __remove_button: QPushButton
@@ -37,13 +38,14 @@ class IgnoreListDialog(QDialog):
     def __init__(
         self,
         masterlist: Masterlist,
-        user_config: UserConfig,
+        user_config_manager: ConfigManager[UserConfig],
         parent: Optional[QWidget] = None,
     ) -> None:
         """
         Args:
             masterlist (Masterlist): The loaded masterlist.
-            user_config (UserConfig): The user configuration.
+            user_config_manager (ConfigManager[UserConfig]):
+                Manager of the user configuration.
             parent (Optional[QWidget], optional):
                 Optional parent widget. Defaults to None.
         """
@@ -51,7 +53,7 @@ class IgnoreListDialog(QDialog):
         super().__init__(parent)
 
         self.__masterlist = masterlist
-        self.__user_config = user_config
+        self.__user_config_manager = user_config_manager
 
         self.setWindowTitle(self.tr("Ignore list"))
         self.resize(600, 500)
@@ -123,7 +125,7 @@ class IgnoreListDialog(QDialog):
                 self.__userlist_widget.indexFromItem(item).row()
             )
 
-        self.__user_config.save()
+        self.__user_config_manager.save()
 
     def __on_text_filter_change(self, text_filter: str, case_sensitive: bool) -> None:
         for rindex in range(self.__userlist_widget.count()):

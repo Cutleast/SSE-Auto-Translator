@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
@@ -26,12 +27,18 @@ class SettingsDialog(SettingsWidget):
     @override
     def __init__(
         self,
-        app_config: AppConfig,
-        user_config: UserConfig,
-        translator_config: TranslatorConfig,
+        app_config_manager: ConfigManager[AppConfig],
+        user_config_manager: ConfigManager[UserConfig],
+        translator_config_manager: ConfigManager[TranslatorConfig],
         parent: Optional[QWidget] = None,
     ) -> None:
-        super().__init__(Cache.get(), app_config, user_config, translator_config, parent)
+        super().__init__(
+            Cache.get(),
+            app_config_manager,
+            user_config_manager,
+            translator_config_manager,
+            parent,
+        )
 
         self.setWindowModality(Qt.WindowModality.WindowModal)
         self.setWindowFlag(Qt.WindowType.Window, True)

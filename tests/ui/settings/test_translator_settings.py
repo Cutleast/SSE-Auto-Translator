@@ -43,7 +43,7 @@ class TestTranslatorSettings(BaseTest):
         Returns a new `TranslatorSettings` instance for tests.
         """
 
-        return TranslatorSettings(user_data.translator_config)
+        return TranslatorSettings(user_data.translator_config_manager)
 
     def test_initial(
         self, translator_settings: TranslatorSettings, user_data: UserData
@@ -90,7 +90,7 @@ class TestTranslatorSettings(BaseTest):
         old_config: TranslatorConfig = copy(translator_config)
 
         # when
-        translator_settings.apply(translator_config)
+        translator_settings.apply()
 
         # then
         assert translator_config == old_config

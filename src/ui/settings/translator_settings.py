@@ -42,7 +42,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
     def __init_api_settings(self) -> None:
         self.__api_selector = EnumRadiobuttonsWidget(
             TranslatorApi,
-            self._initial_config.translator,
+            self._config.translator,
             orientation=Qt.Orientation.Horizontal,
         )
         self.__api_selector.currentValueChanged.connect(
@@ -52,10 +52,10 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
         api_key_label = QLabel(self.tr("Translator API key"))
         self.__api_key_entry = KeyLineEdit()
-        if self._initial_config.api_key:
-            self.__api_key_entry.setText(self._initial_config.api_key)
-        api_key_label.setEnabled(bool(self._initial_config.api_key))
-        self.__api_key_entry.setEnabled(bool(self._initial_config.api_key))
+        if self._config.api_key:
+            self.__api_key_entry.setText(self._config.api_key)
+        api_key_label.setEnabled(bool(self._config.api_key))
+        self.__api_key_entry.setEnabled(bool(self._config.api_key))
         self.__api_key_entry.textChanged.connect(lambda _: self.changed_signal.emit())
         self.__flayout.addRow(api_key_label, self.__api_key_entry)
 
@@ -71,9 +71,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__show_confirmations_box = QCheckBox(
             self.tr("Ask for confirmation before starting a batch machine translation")
         )
-        self.__show_confirmations_box.setChecked(
-            self._initial_config.show_confirmation_dialogs
-        )
+        self.__show_confirmations_box.setChecked(self._config.show_confirmation_dialogs)
         self.__show_confirmations_box.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -90,7 +88,10 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
             )
 
     @override
-    def apply(self, config: TranslatorConfig) -> None:
-        config.translator = self.__api_selector.getCurrentValue()
-        config.api_key = self.__api_key_entry.text().strip() or None
-        config.show_confirmation_dialogs = self.__show_confirmations_box.isChecked()
+    def apply(self) -> None:
+        with self._config_manager.edit():
+            self._config.translator = self.__api_selector.getCurrentValue()
+            self._config.api_key = self.__api_key_entry.text().strip() or None
+            self._config.show_confirmation_dialogs = (
+                self.__show_confirmations_box.isChecked()
+            )

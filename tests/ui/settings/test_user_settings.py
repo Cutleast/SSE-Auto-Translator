@@ -50,7 +50,7 @@ class TestUserSettings(BaseTest):
         Returns a new `UserSettings` instance for tests.
         """
 
-        return UserSettings(user_data.user_config)
+        return UserSettings(user_data.user_config_manager)
 
     def test_initial(self, user_settings: UserSettings, user_data: UserData) -> None:
         """
@@ -94,7 +94,7 @@ class TestUserSettings(BaseTest):
         old_config: UserConfig = copy(user_config)
 
         # when
-        user_settings.apply(user_config)
+        user_settings.apply()
 
         # then (we're comparing the json because direct comparison is impossible due to pyfakefs)
         assert user_config.model_dump_json() == old_config.model_dump_json()
