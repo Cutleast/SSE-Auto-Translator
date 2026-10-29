@@ -29,6 +29,9 @@ dependencies = [
     "websocket-client",
 ]
 
+[project.urls]
+"Nexus Mods" = "https://www.nexusmods.com/skyrimspecialedition/mods/111491"
+
 [dependency-groups]
 dev = [
     "nuitka",
@@ -82,7 +85,7 @@ convention = "google"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 log_cli = true
 log_cli_level = "DEBUG"
 log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
