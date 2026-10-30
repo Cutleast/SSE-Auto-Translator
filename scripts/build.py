@@ -25,6 +25,19 @@ class Backend(NuitkaBackend):
     VERSION_PATTERN: re.Pattern[str] = re.compile(r'(?<=APP_VERSION: str = ")[^"]+(?=")')
 
     @override
+    def get_additional_args(
+        self,
+        main_module: Path,
+        exe_stem: str,
+        icon_path: Path | None,
+        metadata: BuildMetadata,
+    ) -> list[str]:
+        return [
+            "--include-package=winrt",
+            "--include-package-data=winrt",
+        ]
+
+    @override
     def preprocess_source(self, source_folder: Path, metadata: BuildMetadata) -> None:
         app_module: Path = source_folder / "app.py"
         app_module.write_text(

@@ -6,6 +6,7 @@ from typing import Optional
 
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.widgets.divider import Divider
 from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
@@ -50,9 +51,9 @@ class SettingsWidget(QWidget):
     """Whether a theme update is required for changes to take effect."""
 
     __cache: Cache
-    __app_config: AppConfig
-    __user_config: UserConfig
-    __translator_config: TranslatorConfig
+    __app_config_manager: ConfigManager[AppConfig]
+    __user_config_manager: ConfigManager[UserConfig]
+    __translator_config_manager: ConfigManager[TranslatorConfig]
 
     __vlayout: QVBoxLayout
     __tab_widget: TabWidget
@@ -67,17 +68,20 @@ class SettingsWidget(QWidget):
     def __init__(
         self,
         cache: Cache,
-        app_config: AppConfig,
-        user_config: UserConfig,
-        translator_config: TranslatorConfig,
+        app_config_manager: ConfigManager[AppConfig],
+        user_config_manager: ConfigManager[UserConfig],
+        translator_config_manager: ConfigManager[TranslatorConfig],
         parent: Optional[QWidget] = None,
     ) -> None:
         """
         Args:
             cache (Cache): The application cache.
-            app_config (AppConfig): The application configuration.
-            user_config (UserConfig): The user configuration.
-            translator_config (TranslatorConfig): The translator configuration.
+            app_config_manager (ConfigManager[AppConfig]):
+                Manager of the application configuration.
+            user_config_manager (ConfigManager[UserConfig]):
+                Manager of the user configuration.
+            translator_config_manager (ConfigManager[TranslatorConfig]):
+                Manager of the translator configuration.
             parent (Optional[QWidget], optional):
                 Optional parent widget. Defaults to None.
         """
@@ -85,9 +89,9 @@ class SettingsWidget(QWidget):
         super().__init__(parent)
 
         self.__cache = cache
-        self.__app_config = app_config
-        self.__user_config = user_config
-        self.__translator_config = translator_config
+        self.__app_config_manager = app_config_manager
+        self.__user_config_manager = user_config_manager
+        self.__translator_config_manager = translator_config_manager
 
         self.__init_ui()
 
@@ -139,7 +143,7 @@ class SettingsWidget(QWidget):
         self.__tab_widget = TabWidget()
         self.__vlayout.addWidget(self.__tab_widget)
 
-        self.__app_settings = AppSettings(self.__app_config, self.__cache)
+        self.__app_settings = AppSettings(self.__app_config_manager, self.__cache)
         self.__app_settings.changed_signal.connect(self._on_change)
         self.__app_settings.restart_required_signal.connect(self._on_restart_required)
         self.__app_settings.theme_update_required_signal.connect(
@@ -147,12 +151,12 @@ class SettingsWidget(QWidget):
         )
         self.__tab_widget.addTab(self.__app_settings, self.tr("App Settings"))
 
-        self.__user_settings = UserSettings(self.__user_config)
+        self.__user_settings = UserSettings(self.__user_config_manager)
         self.__user_settings.changed_signal.connect(self._on_change)
         self.__user_settings.restart_required_signal.connect(self._on_restart_required)
         self.__tab_widget.addTab(self.__user_settings, self.tr("User Settings"))
 
-        self.__translator_settings = TranslatorSettings(self.__translator_config)
+        self.__translator_settings = TranslatorSettings(self.__translator_config_manager)
         self.__translator_settings.changed_signal.connect(self._on_change)
         self.__translator_settings.restart_required_signal.connect(
             self._on_restart_required
@@ -201,19 +205,18 @@ class SettingsWidget(QWidget):
         hlayout.addWidget(cancel_button)
 
     def _save(self) -> None:
-        self.__app_settings.apply(self.__app_config)
-        self.__user_settings.apply(self.__user_config)
-        self.__translator_settings.apply(self.__translator_config)
+        self.__app_settings.apply()
+        self.__user_settings.apply()
+        self.__translator_settings.apply()
 
-        self.__app_config.save()
-        self.__user_config.save()
-        self.__translator_config.save()
+        self.__app_config_manager.save()
+        self.__user_config_manager.save()
+        self.__translator_config_manager.save()
 
         if self._theme_update_required:
-            ThemeManager.get().set_primary_color(
-                self.__app_config.accent_color, apply=False
-            )
-            ThemeManager.get().set_ui_mode(self.__app_config.ui_mode)
+            app_config: AppConfig = self.__app_config_manager.config
+            ThemeManager.get().set_primary_color(app_config.accent_color, apply=False)
+            ThemeManager.get().set_ui_mode(app_config.ui_mode)
 
         self._changes_pending = False
         self.save_signal.emit()

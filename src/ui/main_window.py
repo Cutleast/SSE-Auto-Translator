@@ -5,16 +5,19 @@ Copyright (c) Cutleast
 import webbrowser
 from typing import override
 
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.updater import Updater
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
+from cutleast_core_lib.ui.widgets.extended_main_window import ExtendedMainWindow
+from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QCloseEvent, QShortcut
-from PySide6.QtWidgets import QMainWindow, QMessageBox, QTabWidget
+from PySide6.QtGui import QCloseEvent
+from PySide6.QtWidgets import QMessageBox, QTabWidget
 
 from core.config.app_config import AppConfig
 from core.downloader.download_manager import DownloadManager
@@ -26,6 +29,7 @@ from core.user_data.user_data import UserData
 from core.utilities.constants import DOCS_URL
 from core.utilities.licenses import LICENSES
 from ui.settings.settings_dialog import SettingsDialog
+from ui.utilities.icon_provider import IconProvider
 
 from .main_page.main_page import MainPageWidget
 from .menubar import MenuBar
@@ -34,11 +38,15 @@ from .toast_notifier import ToastNotifier
 from .translation_editor.editor_page import EditorPage
 
 
-class MainWindow(QMainWindow):
+class MainWindow(ExtendedMainWindow):
     """
     Class for main application window.
     """
 
+    KOFI_URL: str = "https://ko-fi.com/cutleast"
+    """URL to Ko-fi page."""
+
+    __app_config_manager: ConfigManager[AppConfig]
     __app_config: AppConfig
     __user_data: UserData
     __translator_service: TranslatorService
@@ -47,9 +55,9 @@ class MainWindow(QMainWindow):
     __download_manager: DownloadManager
     __state_service: StateService
 
-    __refresh_shortcut: QShortcut
-
     __menu_bar: MenuBar
+    __ko_fi_button: LinkButton
+
     __tab_widget: TabWidget
     __mainpage_widget: MainPageWidget
     __translation_editor: EditorPage
@@ -58,7 +66,7 @@ class MainWindow(QMainWindow):
 
     def initialize(
         self,
-        app_config: AppConfig,
+        app_config_manager: ConfigManager[AppConfig],
         user_data: UserData,
         translator_service: TranslatorService,
         scanner: Scanner,
@@ -68,7 +76,7 @@ class MainWindow(QMainWindow):
     ) -> None:
         """
         Args:
-            app_config (AppConfig): App configuration.
+            app_config_manager (ConfigManager[AppConfig]): App configuration manager.
             user_data (UserData): User data.
             translator_service (TranslatorService): API translator service.
             scanner (Scanner): Scanner.
@@ -77,7 +85,8 @@ class MainWindow(QMainWindow):
             state_service (StateService): State service.
         """
 
-        self.__app_config = app_config
+        self.__app_config_manager = app_config_manager
+        self.__app_config = app_config_manager.config
         self.__user_data = user_data
         self.__translator_service = translator_service
         self.__scanner = scanner
@@ -117,6 +126,14 @@ class MainWindow(QMainWindow):
         )
         self.__menu_bar.about_requested.connect(self.__show_about)
         self.__menu_bar.about_qt_requested.connect(self.__show_about_qt)
+
+        self.__ko_fi_button = LinkButton(
+            MainWindow.KOFI_URL,
+            self.tr("Support me on Ko-fi"),
+            IconProvider.get_icon("ko-fi", set_colors=False),
+        )
+        # self.__ko_fi_button.setProperty("transparent", True)
+        self.titleBar().addWidget(self.__ko_fi_button)
 
     def __init_tab_widget(self) -> None:
         self.__tab_widget = TabWidget()
@@ -195,9 +212,9 @@ class MainWindow(QMainWindow):
 
     def __open_settings(self) -> None:
         SettingsDialog(
-            app_config=self.__app_config,
-            user_config=self.__user_data.user_config,
-            translator_config=self.__user_data.translator_config,
+            app_config_manager=self.__app_config_manager,
+            user_config_manager=self.__user_data.user_config_manager,
+            translator_config_manager=self.__user_data.translator_config_manager,
             parent=self,
         ).show()
 

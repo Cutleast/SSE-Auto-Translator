@@ -8,6 +8,7 @@ from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.config.validation_utils import ValidationUtils
 from cutleast_core_lib.core.filesystem.scanner import DirectoryScanner
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
@@ -65,16 +66,17 @@ class AppSettings(SettingsPage[AppConfig]):
     __auto_create_db_translations_checkbox: QCheckBox
     __double_click_strings: QCheckBox
 
-    def __init__(self, initial_config: AppConfig, cache: Cache) -> None:
+    def __init__(self, config_manager: ConfigManager[AppConfig], cache: Cache) -> None:
         """
         Args:
-            initial_config (AppConfig): Initial configuration to load.
+            config_manager (ConfigManager[AppConfig]):
+                Manager of the configuration represented by this page.
             cache (Cache): Cache instance to manage application cache.
         """
 
         self.__cache = cache
 
-        super().__init__(initial_config)
+        super().__init__(config_manager)
 
     @override
     def _init_ui(self) -> None:
@@ -104,7 +106,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__logs_num_box = QSpinBox()
         self.__logs_num_box.installEventFilter(self)
         self.__logs_num_box.setRange(-1, 100)
-        self.__logs_num_box.setValue(self._initial_config.log_num_of_files)
+        self.__logs_num_box.setValue(self._config.log_num_of_files)
         self.__logs_num_box.valueChanged.connect(lambda _: self.changed_signal.emit())
         self.__logs_num_box.valueChanged.connect(
             lambda _: self.restart_required_signal.emit()
@@ -114,7 +116,7 @@ class AppSettings(SettingsPage[AppConfig]):
         log_level_label = QLabel("*" + self.tr("Log level"))
         basic_glayout.addWidget(log_level_label, 1, 0)
 
-        self.__log_level_box = EnumDropdown(Logger.Level, self._initial_config.log_level)
+        self.__log_level_box = EnumDropdown(Logger.Level, self._config.log_level)
         self.__log_level_box.installEventFilter(self)
         self.__log_level_box.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -127,7 +129,7 @@ class AppSettings(SettingsPage[AppConfig]):
         app_lang_label = QLabel("*" + self.tr("App language"))
         basic_glayout.addWidget(app_lang_label, 2, 0)
 
-        self.__app_lang_box = EnumDropdown(Language, self._initial_config.language)
+        self.__app_lang_box = EnumDropdown(Language, self._config.language)
         self.__app_lang_box.installEventFilter(self)
         self.__app_lang_box.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -140,7 +142,7 @@ class AppSettings(SettingsPage[AppConfig]):
         ui_mode_label = QLabel(self.tr("UI mode"))
         basic_glayout.addWidget(ui_mode_label, 3, 0)
 
-        self.__ui_mode_box = EnumDropdown(UiMode, self._initial_config.ui_mode)
+        self.__ui_mode_box = EnumDropdown(UiMode, self._config.ui_mode)
         self.__ui_mode_box.installEventFilter(self)
         self.__ui_mode_box.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -157,7 +159,7 @@ class AppSettings(SettingsPage[AppConfig]):
             [AppConfig.get_default_value("accent_color", str)]
         )
         self.__accent_color_entry.installEventFilter(self)
-        self.__accent_color_entry.setText(self._initial_config.accent_color)
+        self.__accent_color_entry.setText(self._config.accent_color)
         self.__accent_color_entry.textChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -200,7 +202,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__output_path_entry.setPlaceholderText(
             self.tr("Default: ") + str(cur_path / "SSE-AT Output")
         )
-        self.__output_path_entry.setText(str(self._initial_config.output_path or ""))
+        self.__output_path_entry.setText(str(self._config.output_path or ""))
         self.__output_path_entry.textChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -219,7 +221,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__temp_path_entry.setPlaceholderText(
             self.tr("Default: ") + (os.getenv("TEMP") or "")
         )
-        self.__temp_path_entry.setText(str(self._initial_config.temp_path or ""))
+        self.__temp_path_entry.setText(str(self._config.temp_path or ""))
         self.__temp_path_entry.textChanged.connect(lambda _: self.changed_signal.emit())
         self.__temp_path_entry.setFileMode(QFileDialog.FileMode.Directory)
         path_glayout.addWidget(self.__temp_path_entry, 1, 1)
@@ -232,9 +234,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__downloads_path_entry.setPlaceholderText(
             self.tr("Defaults to temporary folder configured above")
         )
-        self.__downloads_path_entry.setText(
-            str(self._initial_config.downloads_path or "")
-        )
+        self.__downloads_path_entry.setText(str(self._config.downloads_path or ""))
         self.__downloads_path_entry.textChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -257,7 +257,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__confidence_box.setLocale(QLocale.Language.English)
         self.__confidence_box.setRange(0, 1)
         self.__confidence_box.setSingleStep(0.05)
-        self.__confidence_box.setValue(self._initial_config.detector_confidence)
+        self.__confidence_box.setValue(self._config.detector_confidence)
         self.__confidence_box.valueChanged.connect(lambda _: self.changed_signal.emit())
         self.__confidence_box.valueChanged.connect(
             lambda _: self.restart_required_signal.emit()
@@ -277,7 +277,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__download_threads_box = QSpinBox()
         self.__download_threads_box.installEventFilter(self)
         self.__download_threads_box.setMinimum(1)
-        self.__download_threads_box.setValue(self._initial_config.download_thread_num)
+        self.__download_threads_box.setValue(self._config.download_thread_num)
         self.__download_threads_box.valueChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -294,7 +294,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__worker_threads_box = QSpinBox()
         self.__worker_threads_box.installEventFilter(self)
         self.__worker_threads_box.setMinimum(1)
-        self.__worker_threads_box.setValue(self._initial_config.worker_thread_num)
+        self.__worker_threads_box.setValue(self._config.worker_thread_num)
         self.__worker_threads_box.valueChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -316,7 +316,7 @@ class AppSettings(SettingsPage[AppConfig]):
                 "a crash might prevent it from unbinding properly."
             )
         )
-        self.__bind_nxm_checkbox.setChecked(self._initial_config.auto_bind_nxm)
+        self.__bind_nxm_checkbox.setChecked(self._config.auto_bind_nxm)
         self.__bind_nxm_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -328,7 +328,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__use_spell_check_checkbox = QCheckBox(
             self.tr("Enable spell checking in translation editor")
         )
-        self.__use_spell_check_checkbox.setChecked(self._initial_config.use_spell_check)
+        self.__use_spell_check_checkbox.setChecked(self._config.use_spell_check)
         self.__use_spell_check_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -337,9 +337,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__auto_import_checkbox = QCheckBox(
             self.tr("Automatically import installed translations into the database")
         )
-        self.__auto_import_checkbox.setChecked(
-            self._initial_config.auto_import_translations
-        )
+        self.__auto_import_checkbox.setChecked(self._config.auto_import_translations)
         self.__auto_import_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -352,7 +350,7 @@ class AppSettings(SettingsPage[AppConfig]):
             )
         )
         self.__auto_create_db_translations_checkbox.setChecked(
-            self._initial_config.auto_create_database_translations
+            self._config.auto_create_database_translations
         )
         self.__auto_create_db_translations_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -367,9 +365,7 @@ class AppSettings(SettingsPage[AppConfig]):
                 'in the modlist or a translation in the "Translations" tab'
             )
         )
-        self.__double_click_strings.setChecked(
-            self._initial_config.show_strings_on_double_click
-        )
+        self.__double_click_strings.setChecked(self._config.show_strings_on_double_click)
         self.__double_click_strings.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -399,34 +395,39 @@ class AppSettings(SettingsPage[AppConfig]):
         ValidationUtils.validate_parent_path(self.__downloads_path_entry.text())
 
     @override
-    def apply(self, config: AppConfig) -> None:
-        config.log_num_of_files = self.__logs_num_box.value()
-        config.log_level = self.__log_level_box.getCurrentValue()
-        config.language = self.__app_lang_box.getCurrentValue()
-        config.ui_mode = self.__ui_mode_box.getCurrentValue()
-        config.accent_color = self.__accent_color_entry.text()
-        config.detector_confidence = self.__confidence_box.value()
-        config.download_thread_num = self.__download_threads_box.value()
-        config.worker_thread_num = self.__worker_threads_box.value()
-        config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
-        config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
-        config.auto_import_translations = self.__auto_import_checkbox.isChecked()
-        config.auto_create_database_translations = (
-            self.__auto_create_db_translations_checkbox.isChecked()
-        )
-        config.show_strings_on_double_click = self.__double_click_strings.isChecked()
-        config.output_path = (
-            Path(self.__output_path_entry.text().strip())
-            if self.__output_path_entry.text().strip()
-            else None
-        )
-        config.temp_path = (
-            Path(self.__temp_path_entry.text().strip())
-            if self.__temp_path_entry.text().strip()
-            else None
-        )
-        config.downloads_path = (
-            Path(self.__downloads_path_entry.text().strip())
-            if self.__downloads_path_entry.text().strip()
-            else None
-        )
+    def apply(self) -> None:
+        with self._config_manager.edit():
+            self._config.log_num_of_files = self.__logs_num_box.value()
+            self._config.log_level = self.__log_level_box.getCurrentValue()
+            self._config.language = self.__app_lang_box.getCurrentValue()
+            self._config.ui_mode = self.__ui_mode_box.getCurrentValue()
+            self._config.accent_color = self.__accent_color_entry.text()
+            self._config.detector_confidence = self.__confidence_box.value()
+            self._config.download_thread_num = self.__download_threads_box.value()
+            self._config.worker_thread_num = self.__worker_threads_box.value()
+            self._config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
+            self._config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
+            self._config.auto_import_translations = (
+                self.__auto_import_checkbox.isChecked()
+            )
+            self._config.auto_create_database_translations = (
+                self.__auto_create_db_translations_checkbox.isChecked()
+            )
+            self._config.show_strings_on_double_click = (
+                self.__double_click_strings.isChecked()
+            )
+            self._config.output_path = (
+                Path(self.__output_path_entry.text().strip())
+                if self.__output_path_entry.text().strip()
+                else None
+            )
+            self._config.temp_path = (
+                Path(self.__temp_path_entry.text().strip())
+                if self.__temp_path_entry.text().strip()
+                else None
+            )
+            self._config.downloads_path = (
+                Path(self.__downloads_path_entry.text().strip())
+                if self.__downloads_path_entry.text().strip()
+                else None
+            )

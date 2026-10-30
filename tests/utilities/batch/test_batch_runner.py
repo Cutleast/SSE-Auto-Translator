@@ -14,7 +14,6 @@ from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translator.service import TranslatorService
-from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.temp_folder_provider import TempFolderProvider
 from utilities.batch.command import BatchCommand
@@ -41,6 +40,16 @@ class TestBatchRunner(BaseTest):
         )
         return dst
 
+    @pytest.fixture
+    def user_data_service(self, res_path: Path, user_data_path: Path) -> UserDataService:
+        """
+        Creates the user data service without loading the user data because
+        `BatchRunner.run()` loads it itself and its config managers can only be
+        created once.
+        """
+
+        return UserDataService(res_path, user_data_path)
+
     @pytest.fixture(autouse=True)
     def reset_runner(self) -> Generator[None, None, None]:
         """
@@ -66,7 +75,10 @@ class TestBatchRunner(BaseTest):
                 Utils.reset_singleton(singleton_cls)
 
     def test_run_basic_scan_only(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` with only `run_basic_scan=True`.
@@ -86,7 +98,10 @@ class TestBatchRunner(BaseTest):
         assert retcode == BatchRunner.EXIT_CODE_SUCCESS
 
     def test_run_build_output_mod_only(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` with only `build_output_mod=True`.
@@ -109,7 +124,10 @@ class TestBatchRunner(BaseTest):
         assert output_path.is_dir()
 
     def test_run_nothing(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` when all steps are disabled.
@@ -128,7 +146,10 @@ class TestBatchRunner(BaseTest):
         assert retcode == BatchRunner.EXIT_CODE_SUCCESS
 
     def test_run_with_nonexistent_archive_skips_gracefully(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` when a translation archive path does not exist.
@@ -155,7 +176,7 @@ class TestBatchRunner(BaseTest):
     def test_run_import_archive(
         self,
         app_config: AppConfig,
-        user_data: UserData,
+        user_data_service: UserDataService,
         test_fs: FakeFilesystem,
         data_folder: Path,
     ) -> None:
@@ -183,11 +204,14 @@ class TestBatchRunner(BaseTest):
         assert retcode == BatchRunner.EXIT_CODE_SUCCESS
         assert any(
             t.name == "Wet and Cold SE - German"
-            for t in user_data.database.user_translations
+            for t in user_data_service.get_user_data().database.user_translations
         )
 
     def test_run_returns_failure_on_exception(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests that `BatchRunner.run()` returns `EXIT_CODE_FAILURE` when an unexpected
@@ -209,7 +233,10 @@ class TestBatchRunner(BaseTest):
         assert retcode == BatchRunner.EXIT_CODE_FAILURE
 
     def test_run_with_ldialog_does_not_raise(
-        self, app_config: AppConfig, user_data: UserData, test_fs: FakeFilesystem
+        self,
+        app_config: AppConfig,
+        user_data_service: UserDataService,
+        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests that passing an `ldialog` mock to `BatchRunner.run()` does not cause any

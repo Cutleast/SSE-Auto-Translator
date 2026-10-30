@@ -78,10 +78,18 @@ class StartupDialog(QDialog):
 
         user_path: Path = self.__data_path / "user"
 
-        user_config = UserConfig.create(self.__data_path)
+        user_config: UserConfig = UserConfig.create()
         self.__instance_page.apply(user_config)
         self.__setup_page.apply(user_config)
-        user_config.save()
+
+        # The config is written directly as its ConfigManager is only created once the
+        # user data is loaded.
+        config_file_path: Path = self.__data_path / UserConfig.get_config_name()
+        config_file_path.parent.mkdir(parents=True, exist_ok=True)
+        config_file_path.write_text(
+            user_config.model_dump_json(indent=4, by_alias=True, exclude_defaults=True),
+            encoding="utf8",
+        )
 
         database_path: Path = user_path / "database" / user_config.language.id
         if not database_path.is_dir():

@@ -6,9 +6,9 @@ import webbrowser
 from typing import override
 
 from cutleast_core_lib.ui.widgets.menu import Menu
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction
-from PySide6.QtWidgets import QMenuBar, QToolButton
+from PySide6.QtWidgets import QMenuBar
 
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
@@ -48,32 +48,12 @@ class MenuBar(QMenuBar):
     GITHUB_URL: str = "https://github.com/Cutleast/SSE-Auto-Translator"
     """URL to the GitHub repository."""
 
-    KOFI_URL: str = "https://ko-fi.com/cutleast"
-    """URL to Ko-fi page."""
-
-    __ko_fi_action: QAction
-    __ko_fi_button: QToolButton
-
     @override
     def __init__(self) -> None:
         super().__init__()
 
         self.__init_file_menu()
         self.__init_help_menu()
-
-        self.__ko_fi_action = QAction(self.tr("Support me on Ko-fi"))
-        self.__ko_fi_action.setIcon(IconProvider.get_icon("ko-fi", set_colors=False))
-        self.__ko_fi_action.setObjectName("ko-fi")
-        self.__ko_fi_action.setToolTip(MenuBar.KOFI_URL)
-        self.__ko_fi_action.triggered.connect(lambda: webbrowser.open(MenuBar.KOFI_URL))
-
-        self.__ko_fi_button = QToolButton()
-        self.__ko_fi_button.setDefaultAction(self.__ko_fi_action)
-        self.__ko_fi_button.setAutoRaise(True)
-        self.__ko_fi_button.setToolButtonStyle(
-            Qt.ToolButtonStyle.ToolButtonTextBesideIcon
-        )
-        self.setCornerWidget(self.__ko_fi_button, Qt.Corner.TopRightCorner)
 
     def __init_file_menu(self) -> None:
         file_menu = Menu(title=self.tr("File"))

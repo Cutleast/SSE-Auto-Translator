@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-from pathlib import Path
 from typing import Annotated, Optional, override
 
 from cutleast_core_lib.core.config.base_config import BaseConfig
@@ -58,26 +57,16 @@ class UserConfig(BaseConfig):
     """Whether to parse the BSA archives of a modlist."""
 
     @staticmethod
-    def create(user_config_path: Path) -> "UserConfig":
+    def create() -> UserConfig:
         """
         Creates a new blank user config. Explicitely setting the attributes is strongly
         recommended.
-
-        Args:
-            user_config_path (Path): Path to folder with user configuration.
 
         Returns:
             UserConfig: The created user config
         """
 
-        config = UserConfig(
-            _config_path=user_config_path,
-            language=GameLanguage.German,
-            api_key="",
-        )
-        config._config_path = user_config_path
-
-        return config
+        return UserConfig(language=GameLanguage.German, api_key="")
 
     @override
     @staticmethod

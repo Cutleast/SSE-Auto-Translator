@@ -14,6 +14,7 @@ from unittest.mock import MagicMock
 
 import jstyleson as json
 import pytest
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.env_resolver import resolve
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.qt_res_provider import read_resource
@@ -29,6 +30,7 @@ from mod_manager_lib.core.mod_manager.vortex.leveldb import LevelDB
 from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from pyfakefs.fake_filesystem import FakeFilesystem
 from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication
 from pytest_mock import MockerFixture
 from requests_mock import Mocker as RequestsMock
 
@@ -150,17 +152,29 @@ class BaseTest(CoreBaseTest):
         return Path(data_folder / "data")  # wrap in Path for pyfakefs
 
     @pytest.fixture
-    def app_config(self, data_folder: Path) -> AppConfig:
+    def app_config_manager(
+        self, data_folder: Path, qapp: QApplication
+    ) -> ConfigManager[AppConfig]:
         """
-        Loads and returns the test app configuration.
+        Loads the test app configuration and returns its manager.
         """
 
-        app_config = AppConfig.load(data_folder)
-        app_config.temp_path = self.tmp_folder()
-        app_config.debug_mode = True
-        app_config.worker_thread_num = 1  # disable multithreading for tests
+        manager = ConfigManager(AppConfig, data_folder, qapp)
 
-        return app_config
+        with manager.edit():
+            manager.config.temp_path = self.tmp_folder()
+            manager.config.debug_mode = True
+            manager.config.worker_thread_num = 1  # disable multithreading for tests
+
+        return manager
+
+    @pytest.fixture
+    def app_config(self, app_config_manager: ConfigManager[AppConfig]) -> AppConfig:
+        """
+        Returns the test app configuration.
+        """
+
+        return app_config_manager.config
 
     @pytest.fixture(autouse=True)
     def modinstance_loader(self, sync_executor: ExecutorPatcher) -> ModInstanceLoader:

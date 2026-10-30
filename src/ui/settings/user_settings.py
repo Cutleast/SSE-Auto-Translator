@@ -58,7 +58,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
     @override
     def _init_ui(self) -> None:
-        self.__website_session = self._initial_config.nexus_website_session
+        self.__website_session = self._config.nexus_website_session
 
         scroll_widget = QWidget()
         self.setWidget(scroll_widget)
@@ -72,7 +72,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
         self.__vlayout.addStretch(1)
 
-        self.__author_blacklist = self._initial_config.author_blacklist.copy()
+        self.__author_blacklist = self._config.author_blacklist.copy()
 
     def __init_translations_settings(self) -> None:
         translations_group = QGroupBox(self.tr("Translations"))
@@ -80,7 +80,7 @@ class UserSettings(SettingsPage[UserConfig]):
         translations_flayout = QFormLayout()
         translations_group.setLayout(translations_flayout)
 
-        self.__lang_box = EnumDropdown(GameLanguage, self._initial_config.language)
+        self.__lang_box = EnumDropdown(GameLanguage, self._config.language)
         self.__lang_box.installEventFilter(self)
         self.__lang_box.currentValueChanged.connect(self.__on_lang_change)
         self.__lang_box.currentValueChanged.connect(lambda _: self.changed_signal.emit())
@@ -90,12 +90,10 @@ class UserSettings(SettingsPage[UserConfig]):
         translations_flayout.addRow("*" + self.tr("Game language"), self.__lang_box)
 
         self.__source_label = QLabel("*" + self.tr("Translation source"))
-        self.__source_label.setEnabled(
-            self._initial_config.language == GameLanguage.French
-        )
+        self.__source_label.setEnabled(self._config.language == GameLanguage.French)
 
         self.__source_box = EnumDropdown(
-            ProviderPreference, self._initial_config.provider_preference
+            ProviderPreference, self._config.provider_preference
         )
         self.__source_box.installEventFilter(self)
         self.__source_box.currentValueChanged.connect(
@@ -104,14 +102,12 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__source_box.currentValueChanged.connect(
             lambda _: self.restart_required_signal.emit()
         )
-        self.__source_box.setEnabled(
-            self._initial_config.language == GameLanguage.French
-        )
+        self.__source_box.setEnabled(self._config.language == GameLanguage.French)
         translations_flayout.addRow(self.__source_label, self.__source_box)
 
         api_key_hlayout = QHBoxLayout()
         self.__api_key_entry = KeyLineEdit()
-        self.__api_key_entry.setText(self._initial_config.api_key)
+        self.__api_key_entry.setText(self._config.api_key)
         self.__api_key_entry.textChanged.connect(lambda _: self.changed_signal.emit())
         self.__api_key_entry.textChanged.connect(
             lambda _: self.restart_required_signal.emit()
@@ -126,7 +122,7 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__masterlist_box.setText(
             self.tr("Use global masterlist from GitHub repository (recommended)")
         )
-        self.__masterlist_box.setChecked(self._initial_config.use_masterlist)
+        self.__masterlist_box.setChecked(self._config.use_masterlist)
         self.__masterlist_box.stateChanged.connect(lambda _: self.changed_signal.emit())
         open_masterlist_button = LinkButton(
             "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists",
@@ -148,9 +144,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
         self.__modinstance_selector = InstanceSelectorWidget()
         self.__modinstance_selector.set_cur_game(GameService.get_game_by_id(GAME_ID))
-        self.__modinstance_selector.set_cur_instance_data(
-            self._initial_config.mod_instance
-        )
+        self.__modinstance_selector.set_cur_instance_data(self._config.mod_instance)
         self.__modinstance_selector.changed.connect(self.changed_signal.emit)
         self.__modinstance_selector.changed.connect(self.restart_required_signal.emit)
         instance_vlayout.addWidget(self.__modinstance_selector)
@@ -161,7 +155,7 @@ class UserSettings(SettingsPage[UserConfig]):
                 "size of your modlist!)"
             )
         )
-        self.__parse_bsas_checkbox.setChecked(self._initial_config.parse_bsa_archives)
+        self.__parse_bsas_checkbox.setChecked(self._config.parse_bsa_archives)
         self.__parse_bsas_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
@@ -186,7 +180,7 @@ class UserSettings(SettingsPage[UserConfig]):
 
         if (
             dialog.exec() == QDialog.DialogCode.Accepted
-            and self.__author_blacklist != self._initial_config.author_blacklist
+            and self.__author_blacklist != self._config.author_blacklist
         ):
             self.changed_signal.emit()
 
@@ -218,15 +212,16 @@ class UserSettings(SettingsPage[UserConfig]):
             )
 
     @override
-    def apply(self, config: UserConfig) -> None:
-        config.language = self.__lang_box.getCurrentValue()
-        config.api_key = self.__api_key_entry.text()
-        config.nexus_website_session = self.__website_session
-        config.mod_instance = cast(
-            Optional[MO2InstanceInfo | ProfileInfo],
-            self.__modinstance_selector.get_cur_instance_data(),
-        )
-        config.use_masterlist = self.__masterlist_box.isChecked()
-        config.provider_preference = self.__source_box.getCurrentValue()
-        config.author_blacklist = self.__author_blacklist
-        config.parse_bsa_archives = self.__parse_bsas_checkbox.isChecked()
+    def apply(self) -> None:
+        with self._config_manager.edit():
+            self._config.language = self.__lang_box.getCurrentValue()
+            self._config.api_key = self.__api_key_entry.text()
+            self._config.nexus_website_session = self.__website_session
+            self._config.mod_instance = cast(
+                Optional[MO2InstanceInfo | ProfileInfo],
+                self.__modinstance_selector.get_cur_instance_data(),
+            )
+            self._config.use_masterlist = self.__masterlist_box.isChecked()
+            self._config.provider_preference = self.__source_box.getCurrentValue()
+            self._config.author_blacklist = self.__author_blacklist
+            self._config.parse_bsa_archives = self.__parse_bsas_checkbox.isChecked()

@@ -560,7 +560,7 @@ class EditorTab(QWidget):
             if dialog.exec() == QDialog.DialogCode.Accepted:
                 if do_not_show_again_checkbox.isChecked():
                     self.__user_data.translator_config.show_confirmation_dialogs = False
-                    self.__user_data.translator_config.save()
+                    self.__user_data.translator_config_manager.save()
             else:
                 return
 

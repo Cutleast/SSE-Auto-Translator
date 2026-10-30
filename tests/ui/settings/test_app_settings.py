@@ -7,6 +7,7 @@ from copy import copy
 import pytest
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.browse_edit import BrowseLineEdit
@@ -78,13 +79,13 @@ class TestAppSettings(BaseTest):
 
     @pytest.fixture
     def app_settings(
-        self, cache: Cache, app_config: AppConfig, qtbot: QtBot
+        self, cache: Cache, app_config_manager: ConfigManager[AppConfig], qtbot: QtBot
     ) -> AppSettings:
         """
         Returns a new `AppSettings` instance for tests.
         """
 
-        return AppSettings(app_config, cache)
+        return AppSettings(app_config_manager, cache)
 
     def test_initial(self, app_settings: AppSettings, app_config: AppConfig) -> None:
         """
@@ -169,7 +170,7 @@ class TestAppSettings(BaseTest):
         old_config: AppConfig = copy(app_config)
 
         # when
-        app_settings.apply(app_config)
+        app_settings.apply()
 
         # then
         assert app_config == old_config

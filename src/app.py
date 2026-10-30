@@ -11,6 +11,7 @@ from typing import Optional, cast, override
 from cutleast_core_lib.base_app import BaseApp
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
@@ -105,11 +106,13 @@ class App(BaseApp, Singleton):
         super()._init()
 
     @override
-    def _load_app_config(self) -> BaseAppConfig:
-        app_config = AppConfig.load(self.data_path)
-        app_config.debug_mode = getattr(self.args, "debug_mode", False)
+    def _init_app_config_manager(self) -> ConfigManager[BaseAppConfig]:
+        manager = ConfigManager(AppConfig, self.data_path, self)
+        manager.config.debug_mode = getattr(self.args, "debug_mode", False)
+        manager.print_settings_to_log()
 
-        return app_config
+        # ConfigManager is invariant in its config type
+        return cast(ConfigManager[BaseAppConfig], manager)
 
     @override
     def _init_main_window(self) -> MainWindow:
@@ -189,12 +192,12 @@ class App(BaseApp, Singleton):
         self.__component_provider = ComponentProvider(app_config, self.__user_data)
         self.__component_provider.initialize_components()
 
-        if not self.__check_nm_api_key(self.__user_data.user_config):
+        if not self.__check_nm_api_key(self.__user_data.user_config_manager):
             return False
 
         main_window: MainWindow = cast(MainWindow, self.main_window)
         main_window.initialize(
-            app_config=cast(AppConfig, self.app_config),
+            app_config_manager=cast(ConfigManager[AppConfig], self.app_config_manager),
             user_data=self.__user_data,
             translator_service=self.__component_provider.get_translator_service(),
             scanner=self.__component_provider.get_scanner(),
@@ -209,9 +212,11 @@ class App(BaseApp, Singleton):
         self.detect_path_limit()
         return True
 
-    def __check_nm_api_key(self, user_config: UserConfig) -> bool:
+    def __check_nm_api_key(self, user_config_manager: ConfigManager[UserConfig]) -> bool:
         if self.__component_provider is None:
             raise ValueError("Component provider is not initialized.")
+
+        user_config: UserConfig = user_config_manager.config
 
         try:
             nm_api: NexusModsApi = self.__component_provider.get_provider().get_provider(
@@ -224,29 +229,30 @@ class App(BaseApp, Singleton):
                 self.log.info(
                     "Nexus Mods website session missing; browser login required."
                 )
-                return self.__run_nm_api_key_setup(nm_api, user_config)
+                return self.__run_nm_api_key_setup(nm_api, user_config_manager)
             elif not nm_api.has_website_session():
                 self.log.info(
                     "Nexus Mods website session expired; browser login required."
                 )
-                return self.__run_nm_api_key_setup(nm_api, user_config)
+                return self.__run_nm_api_key_setup(nm_api, user_config_manager)
 
             nm_api_valid: bool = nm_api.is_api_key_valid(user_config.api_key)
 
             if not nm_api_valid:
-                return self.__run_nm_api_key_setup(nm_api, user_config)
+                return self.__run_nm_api_key_setup(nm_api, user_config_manager)
 
         return True
 
     def __run_nm_api_key_setup(
-        self, nm_api: NexusModsApi, user_config: UserConfig
+        self, nm_api: NexusModsApi, user_config_manager: ConfigManager[UserConfig]
     ) -> bool:
         """
         Saves the shared login only after successful browser authentication.
 
         Args:
             nm_api (NexusModsApi): Provider to update with the new credentials.
-            user_config (UserConfig): Configuration to persist after login.
+            user_config_manager (ConfigManager[UserConfig]):
+                Manager of the configuration to persist after login.
 
         Returns:
             bool: Whether both API and website credentials were obtained.
@@ -263,9 +269,11 @@ class App(BaseApp, Singleton):
             if not api_key or not website_session:
                 return False
 
-            user_config.api_key = api_key
-            user_config.nexus_website_session = website_session
-            user_config.save()
+            user_config: UserConfig = user_config_manager.config
+            with user_config_manager.edit():
+                user_config.api_key = api_key
+                user_config.nexus_website_session = website_session
+            user_config_manager.save()
 
             nm_api.set_api_key(user_config.api_key)
             nm_api.set_website_session(user_config.nexus_website_session)

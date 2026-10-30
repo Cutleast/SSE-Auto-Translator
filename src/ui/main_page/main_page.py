@@ -332,10 +332,10 @@ class MainPageWidget(QWidget):
 
         IgnoreListDialog(
             masterlist=self.__user_data.masterlist,
-            user_config=self.__user_data.user_config,
+            user_config_manager=self.__user_data.user_config_manager,
             parent=QApplication.activeModalWidget(),
         ).exec()
-        self.__user_data.user_config.save()
+        self.__user_data.user_config_manager.save()
 
         self.__modinstance_widget.update()
 

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from cutleast_core_lib.core.config.manager import ConfigManager
 from pydantic import BaseModel
 
 from core.config.translator_config import TranslatorConfig
@@ -16,11 +17,11 @@ class UserData(BaseModel, frozen=True, arbitrary_types_allowed=True):
     Model for holding the loaded user data.
     """
 
-    user_config: UserConfig
-    """The user configuration."""
+    user_config_manager: ConfigManager[UserConfig]
+    """The manager of the user configuration."""
 
-    translator_config: TranslatorConfig
-    """The API translator configuration."""
+    translator_config_manager: ConfigManager[TranslatorConfig]
+    """The manager of the API translator configuration."""
 
     database: TranslationDatabase
     """The translation database for the configured language."""
@@ -30,3 +31,15 @@ class UserData(BaseModel, frozen=True, arbitrary_types_allowed=True):
 
     masterlist: Masterlist
     """The configured masterlist."""
+
+    @property
+    def user_config(self) -> UserConfig:
+        """The user configuration."""
+
+        return self.user_config_manager.config
+
+    @property
+    def translator_config(self) -> TranslatorConfig:
+        """The API translator configuration."""
+
+        return self.translator_config_manager.config
