@@ -1365,57 +1365,62 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="138"/>
+        <location filename="src/ui/main_window.py" line="132"/>
+        <source>Support me on Ko-fi</source>
+        <translation type="unfinished">在 Ko-fi 上支持我</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_window.py" line="152"/>
         <source>Modlist</source>
         <translation>Mod列表</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="144"/>
+        <location filename="src/ui/main_window.py" line="158"/>
         <source>Translation Editor</source>
         <translation>翻译编辑器</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="167"/>
+        <location filename="src/ui/main_window.py" line="181"/>
         <source>Exit?</source>
         <translation>退出？</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="179"/>
+        <location filename="src/ui/main_window.py" line="193"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="182"/>
+        <location filename="src/ui/main_window.py" line="196"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="211"/>
+        <location filename="src/ui/main_window.py" line="225"/>
         <source>No Updates Available</source>
         <translation>当前已是最新版本</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="212"/>
+        <location filename="src/ui/main_window.py" line="226"/>
         <source>There are no updates available.</source>
         <translation>没有可用的更新。</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="219"/>
+        <location filename="src/ui/main_window.py" line="233"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under GNU General Public License v3.0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="228"/>
+        <location filename="src/ui/main_window.py" line="242"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;请在此处填写您的翻译者信息。&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="239"/>
+        <location filename="src/ui/main_window.py" line="253"/>
         <source>About Qt</source>
         <translation>关于 Qt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="170"/>
+        <location filename="src/ui/main_window.py" line="184"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation>您确定要退出吗？编辑器中仍有未保存的翻译内容。所有未保存的更改都将丢失！</translation>
     </message>
@@ -1423,67 +1428,62 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="79"/>
+        <location filename="src/ui/menubar.py" line="59"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="88"/>
+        <location filename="src/ui/menubar.py" line="68"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="82"/>
+        <location filename="src/ui/menubar.py" line="62"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="93"/>
+        <location filename="src/ui/menubar.py" line="73"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="104"/>
+        <location filename="src/ui/menubar.py" line="84"/>
         <source>Check for updates...</source>
         <translation>检查更新...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="97"/>
+        <location filename="src/ui/menubar.py" line="77"/>
         <source>Show documentation...</source>
         <translation>打开使用文档...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="64"/>
-        <source>Support me on Ko-fi</source>
-        <translation type="unfinished">在 Ko-fi 上支持我</translation>
-    </message>
-    <message>
-        <location filename="src/ui/menubar.py" line="112"/>
+        <location filename="src/ui/menubar.py" line="92"/>
         <source>Fix Windows path limit...</source>
         <translation>修复 Windows 路径限制...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="122"/>
+        <location filename="src/ui/menubar.py" line="102"/>
         <source>Get support on our Discord server...</source>
         <translation>在我们的 Discord 服务器上获取支持...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="128"/>
+        <location filename="src/ui/menubar.py" line="108"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>在 Nexus Mods 上打开 Mod 页面...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="133"/>
+        <location filename="src/ui/menubar.py" line="113"/>
         <source>View source code on GitHub...</source>
         <translation>在 GitHub 上查看源代码...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="140"/>
+        <location filename="src/ui/menubar.py" line="120"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="146"/>
+        <location filename="src/ui/menubar.py" line="126"/>
         <source>About Qt</source>
         <translation>关于 Qt</translation>
     </message>

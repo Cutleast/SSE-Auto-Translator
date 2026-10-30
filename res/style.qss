@@ -40,13 +40,14 @@ EditorPage > QTreeWidget QPushButton:hover {
 
 /* Menubar */
 MenuBar {
-    background-color: ${meta.window_bg};
-    border-bottom: ${metrics.border_width} solid ${colors.border};
+    background-color: ${colors.bg_base};
+    padding-left: 0px;
 }
 MenuBar::item {
-    background-color: ${meta.window_bg};
+    background-color: ${colors.bg_base};
 }
-MenuBar > QToolButton {
+
+MainWindow > TitleBar > QPushButton {
     background-color: transparent;
     border: none;
     padding: ${metrics.spacing_xs} ${metrics.spacing_s};
