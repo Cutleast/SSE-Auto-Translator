@@ -137,7 +137,7 @@ class PluginFile(ModFile):
             tuple[PluginString, StringReference]: String and its editable reference.
 
         Raises:
-            ValueError: A string's record is missing or its ID is ambiguous.
+            ValueError: The record of a string is missing.
         """
 
         indexes = StringIndexes()
@@ -181,7 +181,13 @@ class PluginFile(ModFile):
                 ),
             )
             if string.id in seen_ids:
-                raise ValueError(f"Duplicate plugin string ID '{string.display_id}'.")
+                # Malformed records may contain the same string subrecord twice. Only
+                # the first one is kept, so that the rest of the plugin stays usable.
+                log.warning(
+                    f"Skipping duplicate plugin string '{string.display_id}' in "
+                    f"'{self.name}'."
+                )
+                continue
 
             seen_ids.add(string.id)
             yield string, reference

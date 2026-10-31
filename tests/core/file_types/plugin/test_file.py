@@ -288,3 +288,47 @@ class TestPluginFile(BaseTest):
         assert entries[9] in related_strings
         assert entries[11] in related_strings
         assert entries[0] not in related_strings
+
+    def test_duplicate_strings_are_skipped(self, tmp_path: Path) -> None:
+        """
+        Tests that a malformed record with two responses of the same number doesn't
+        prevent extracting the other strings of the plugin.
+        """
+
+        # given
+        plugin_path: Path = tmp_path / "Duplicate.esp"
+        with (
+            PluginWriter(Game.SKYRIM_SE) as writer,
+            WritableGroup.new("DIAL") as topic_group,
+            WritableRecord.new("DIAL", form_id=0x800) as topic,
+            WritableGroup.new(pack("<I", 0x800), group_type=7) as children,
+            WritableRecord.new("INFO", form_id=0x801) as info,
+        ):
+            topic.add_subrecord("EDID", b"Topic\0")
+            topic.add_subrecord("FULL", b"Topic text\0")
+            topic.add_subrecord("DATA", pack("<BBH", 0, 0, 0))
+            topic.add_subrecord("SNAM", b"CUST")
+            info.add_subrecord("ENAM", pack("<HH", 0, 0))
+            info.add_subrecord(
+                "TRDT",
+                pack("<II4sB3sIB3s", 0, 50, bytes(4), 1, bytes(3), 0, 0, bytes(3)),
+            )
+            info.add_subrecord("NAM1", b"First response\0")
+            info.add_subrecord("NAM1", b"Second response\0")
+
+            topic_group.add_record(topic)
+            children.add_record(info)
+            topic_group.add_group(children)
+            writer.add_group(topic_group)
+            plugin_path.write_bytes(writer.write_to_bytes())
+
+        plugin_file = PluginFile(name=plugin_path.name, full_path=plugin_path)
+
+        # when
+        strings: StringList = plugin_file.get_strings()
+
+        # then
+        assert [string.original for string in strings] == [
+            "Topic text",
+            "First response",
+        ]
