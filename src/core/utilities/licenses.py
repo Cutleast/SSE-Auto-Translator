@@ -28,6 +28,7 @@ LICENSES: dict[str, str] = {
     "chunspell-next": "https://github.com/Modding-Forge/chunspell-next/blob/master/LICENSE",
     "comtypes": "https://github.com/enthought/comtypes/blob/main/LICENSE.txt",
     "rapidfuzz": "https://github.com/rapidfuzz/RapidFuzz/blob/main/LICENSE",
+    "bethkit": "https://github.com/Modding-Forge/bethkit.py/blob/master/LICENSE",
 
     "french_libreoffice_dict": "http://www.mozilla.org/MPL/2.0/",
     "german_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/de/COPYING_GPLv3",
