@@ -735,7 +735,12 @@ class EditorTab(QWidget):
             bool: False if the user cancelled to close the tab.
         """
 
+        # The context is only discarded once the tab is actually closed, as it is never
+        # built again for a tab that stays open.
+        if not self.__dialog.close():
+            return False
+
         if self.__context_thread is not None and self.__context_thread.isRunning():
             self.__context_spinner.cancel()
 
-        return self.__dialog.close()
+        return True
