@@ -152,6 +152,7 @@ class NexusLoginDialog(QDialog):
 
         self.__status_label = QLabel(self.tr("Connecting to Nexus Mods..."))
         self.__status_label.setWordWrap(True)
+        self.__status_label.setOpenExternalLinks(True)
         layout.addWidget(self.__status_label)
 
         self.__cancel_button = QPushButton(self.tr("Cancel"))
