@@ -1443,27 +1443,27 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="210"/>
+        <location filename="src/ui/main_window.py" line="227"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="211"/>
+        <location filename="src/ui/main_window.py" line="228"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="218"/>
-        <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
-        <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Logo von Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter Attribution-NonCommercial-NoDerivatives 4.0 International</translation>
+        <location filename="src/ui/main_window.py" line="235"/>
+        <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under GNU General Public License v3.0</source>
+        <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;) &lt;br&gt;&lt;br&gt;Icon von Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizenziert unter der GNU General Public License v3.0</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="227"/>
+        <location filename="src/ui/main_window.py" line="244"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="238"/>
+        <location filename="src/ui/main_window.py" line="255"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -1908,22 +1908,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>PluginString</name>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="72"/>
+        <location filename="src/core/file_types/plugin/string.py" line="89"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="76"/>
+        <location filename="src/core/file_types/plugin/string.py" line="93"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="79"/>
+        <location filename="src/core/file_types/plugin/string.py" line="96"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="81"/>
+        <location filename="src/core/file_types/plugin/string.py" line="98"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -2272,14 +2272,6 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
 </context>
 <context>
-    <name>SpinnerDisplayWidget</name>
-    <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/progress/spinner_display.py" line="57"/>
-        <source>Cancel</source>
-        <translation>Abbrechen</translation>
-    </message>
-</context>
-<context>
     <name>StartupDialog</name>
     <message>
         <location filename="src/ui/startup_dialog/startup_dialog.py" line="46"/>
@@ -2457,19 +2449,19 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <name>StringsColumns</name>
     <message>
         <location filename="src/ui/string_list/columns.py" line="32"/>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="68"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="69"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
         <location filename="src/ui/string_list/columns.py" line="51"/>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="79"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="80"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
         <location filename="src/ui/string_list/columns.py" line="70"/>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="90"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="91"/>
         <source>String</source>
         <translation>String</translation>
     </message>

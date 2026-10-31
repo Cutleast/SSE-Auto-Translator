@@ -205,6 +205,16 @@ class TestPluginString:
             "Form ID: 00123456|Skyrim.esm\nEditor ID: TestString\nType: BOOK FULL\n"
             "Index: 1",
         ),
+        (
+            PluginString(
+                original="Journal entry",
+                status=StringStatus.TranslationRequired,
+                form_id="00123456|Skyrim.esm",
+                type="QUST CNAM",
+                index=0xA1B2C,
+            ),
+            "Form ID: 00123456|Skyrim.esm\nType: QUST CNAM\nIndex: 000A1B2C",
+        ),
     ]
 
     @pytest.mark.parametrize("string, expected_output", LOCALIZED_INFO_DATA)

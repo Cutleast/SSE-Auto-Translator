@@ -7,19 +7,16 @@ import logging
 import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 from pathlib import Path
-from typing import Any, NoReturn, Optional, override
+from typing import ClassVar, NoReturn, Optional, override
 
+from bethkit import StringFileKind, StringTable
 from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from sse_bsa import BSAArchive
-from sse_plugin_interface.plugin import SSEPlugin as Plugin
-from sse_plugin_interface.plugin_string import PluginString
 
-from core.file_types.plugin.file import PluginFile
-from core.string.base_string import BaseString
-from core.string_table_parser.string_table import StringTable
-from core.string_table_parser.string_table_parser import StringTableParser
+from core.file_source.file_source_factory import FileSourceFactory
+from core.file_types.plugin.file import ExternalStringId, PluginFile
+from core.file_types.plugin.string import PluginString
 from core.utilities.constants import BASE_GAME_PLUGINS
-from core.utilities.filesystem import split_path_with_bsa
 from utilities.utility import Utility
 
 
@@ -53,6 +50,13 @@ class DbGen(Utility):
     processed in this order because the patch file is newer and should overwrite
     the interface file.
     """
+
+    STRING_FILE_KINDS: ClassVar[dict[str, StringFileKind]] = {
+        ".strings": StringFileKind.STRINGS,
+        ".dlstrings": StringFileKind.DL_STRINGS,
+        ".ilstrings": StringFileKind.IL_STRINGS,
+    }
+    """Supported string-table formats indexed by filename suffix."""
 
     @override
     def __repr__(self) -> str:
@@ -131,11 +135,11 @@ class DbGen(Utility):
 
         self.log.info("Creating translation database...")
 
-        original_string_tables: dict[str, dict[int, str]] = self.get_string_tables(
-            input_folder_path, input_folder_path, "english"
+        original_string_tables: dict[str, dict[ExternalStringId, str]] = (
+            self.get_string_tables(input_folder_path, input_folder_path, "english")
         )
-        translated_string_tables: dict[str, dict[int, str]] = self.get_string_tables(
-            input_folder_path, strings_folder_path, language_name
+        translated_string_tables: dict[str, dict[ExternalStringId, str]] = (
+            self.get_string_tables(input_folder_path, strings_folder_path, language_name)
         )
         plugin_paths: list[Path] = [
             plugin
@@ -145,15 +149,17 @@ class DbGen(Utility):
         ]
 
         self.log.debug("Extracting string ids from plugins...")
-        string_ids: dict[Path, dict[int, BaseString]] = {}
+        string_ids: dict[Path, dict[ExternalStringId, list[PluginString]]] = {}
         for plugin_path in plugin_paths:
             string_ids[plugin_path] = self.extract_string_ids(plugin_path)
 
         if output_folder_path is None:
             output_folder_path = Path("dbgen_output")
 
-        database: dict[str, list[dict[str, str | int | None]]] = self.map_string_tables(
-            string_ids, original_string_tables, translated_string_tables
+        database: dict[str, list[dict[str, Optional[str | int]]]] = (
+            self.map_string_tables(
+                string_ids, original_string_tables, translated_string_tables
+            )
         )
 
         self.log.info(f"Writing database to '{output_folder_path}'...")
@@ -172,7 +178,7 @@ class DbGen(Utility):
 
     def get_string_tables(
         self, plugins_folder_path: Path, strings_folder_path: Path, language_name: str
-    ) -> dict[str, dict[int, str]]:
+    ) -> dict[str, dict[ExternalStringId, str]]:
         """
         Maps plugins in the specified plugins folder to the strings files
         in the strings folder and extracts the string tables for the specified language.
@@ -183,8 +189,8 @@ class DbGen(Utility):
             language_name (str): Name of the language.
 
         Returns:
-            dict[str, dict[int, str]]:
-                Dictionary with plugin names, string ids and strings
+            dict[str, dict[ExternalStringId, str]]:
+                Referenced strings indexed by plugin name, table kind and string ID.
         """
 
         self.log.debug(
@@ -199,40 +205,42 @@ class DbGen(Utility):
             f"Extracting string tables for {len(strings_files)} "
             f"plugin(s) for language '{language_name}'..."
         )
-        string_tables: dict[str, dict[int, str]] = {}
+        string_tables: dict[str, dict[ExternalStringId, str]] = {}
         for plugin_path, string_table_paths in strings_files.items():
             string_tables[plugin_path.name.lower()] = self.extract_string_tables(
-                string_table_paths, language_name
+                string_table_paths,
+                language_name,
+                set(self.extract_string_ids(plugin_path)),
             )
 
         return string_tables
 
     def map_string_tables(
         self,
-        string_ids: dict[Path, dict[int, BaseString]],
-        original_string_tables: dict[str, dict[int, str]],
-        translated_string_tables: dict[str, dict[int, str]],
-    ) -> dict[str, list[dict[str, str | int | None]]]:
+        string_ids: dict[Path, dict[ExternalStringId, list[PluginString]]],
+        original_string_tables: dict[str, dict[ExternalStringId, str]],
+        translated_string_tables: dict[str, dict[ExternalStringId, str]],
+    ) -> dict[str, list[dict[str, Optional[str | int]]]]:
         """
         Maps string ids to the specified original string tables
         and translated string tables.
 
         Args:
-            string_ids (dict[Path, dict[int, String]]):
-                Dictionary with plugin paths, string ids and strings
-            original_string_tables (dict[str, dict[int, str]]):
-                Dictionary with plugin names, string ids and original strings
-            translated_string_tables (dict[str, dict[int, str]]):
-                Dictionary with plugin names, string ids and translated strings
+            string_ids (dict[Path, dict[ExternalStringId, list[PluginString]]]):
+                All referencing strings grouped by plugin, table kind and string ID.
+            original_string_tables (dict[str, dict[ExternalStringId, str]]):
+                Original text for each plugin's table kinds and string IDs.
+            translated_string_tables (dict[str, dict[ExternalStringId, str]]):
+                Translated text for each plugin's table kinds and string IDs.
 
         Returns:
-            dict[str, list[dict[str, str | int | None]]]:
+            dict[str, list[dict[str, Optional[str | int]]]]:
                 Dictionary with plugin names and list of database-ready strings
         """
 
         self.log.info("Mapping strings to string ids...")
 
-        database: dict[str, list[dict[str, Any]]] = {}
+        database: dict[str, list[dict[str, Optional[str | int]]]] = {}
         for plugin_path, strings in string_ids.items():
             plugin_name: str = plugin_path.name.lower()
 
@@ -250,13 +258,15 @@ class DbGen(Utility):
                 )
                 continue
 
-            original_string_table: dict[int, str] = original_string_tables[plugin_name]
-            translated_string_table: dict[int, str] = translated_string_tables[
+            original_string_table: dict[ExternalStringId, str] = original_string_tables[
                 plugin_name
             ]
+            translated_string_table: dict[ExternalStringId, str] = (
+                translated_string_tables[plugin_name]
+            )
 
-            plugin_strings: list[dict[str, str | int | None]] = []
-            for string_id, string in strings.items():
+            plugin_strings: list[dict[str, Optional[str | int]]] = []
+            for string_id, references in strings.items():
                 if string_id not in original_string_table:
                     self.log.warning(
                         f"String id {string_id} is not in original string table. "
@@ -271,12 +281,13 @@ class DbGen(Utility):
                     )
                     continue
 
-                string_data: dict[str, str | int | None] = string.model_dump(
-                    mode="json", exclude={"status"}, exclude_defaults=True
-                )
-                string_data["original"] = original_string_table[string_id]
-                string_data["string"] = translated_string_table[string_id]
-                plugin_strings.append(string_data)
+                for string in references:
+                    string_data: dict[str, Optional[str | int]] = string.model_dump(
+                        mode="json", exclude={"status"}, exclude_defaults=True
+                    )
+                    string_data["original"] = original_string_table[string_id]
+                    string_data["string"] = translated_string_table[string_id]
+                    plugin_strings.append(string_data)
 
             if plugin_strings:
                 database[plugin_name] = plugin_strings
@@ -339,9 +350,10 @@ class DbGen(Utility):
                         for f in DbGen.get_strings_files_from_bsa(bsa_file, plugin.stem)
                     ]
 
-            result.setdefault(plugin, []).extend(
-                strings_folder_path.glob(f"{plugin.stem}_*.*strings")
-            )
+            for folder in (strings_folder_path, strings_folder_path / "Strings"):
+                result.setdefault(plugin, []).extend(
+                    folder.glob(f"{plugin.stem}_*.*strings")
+                )
 
         return result
 
@@ -367,53 +379,75 @@ class DbGen(Utility):
 
     @FunctionCache.cache
     def extract_string_tables(
-        self, strings_files: list[Path], language: str
-    ) -> dict[int, str]:
+        self,
+        strings_files: list[Path],
+        language: str,
+        string_ids: set[ExternalStringId],
+    ) -> dict[ExternalStringId, str]:
         """
-        Extracts the string tables from the specified strings files
-        for the specifed plugin stem and language.
+        Reads referenced strings directly from loose files or BSA streams.
 
         Args:
-            strings_files (list[Path]): List of strings files for this plugin
-            language (str): Language to extract strings for
+            strings_files (list[Path]): Ordered string-table paths for this plugin.
+            language (str): Language to extract strings for.
+            string_ids (set[ExternalStringId]): Required table kinds and string IDs.
 
         Returns:
-            dict[int, str]: Dictionary with string ids and strings
+            dict[ExternalStringId, str]: Non-empty referenced strings.
         """
 
-        string_tables: dict[int, str] = {}
+        string_tables: dict[ExternalStringId, str] = {}
 
-        for strings_file in filter(
-            lambda f: language.lower() in f.name.lower(), strings_files
-        ):
-            bsa_path: Optional[Path]
-            bsa_string_file: Optional[Path]
-            bsa_path, bsa_string_file = split_path_with_bsa(strings_file)
+        for strings_file in strings_files:
+            if not strings_file.stem.lower().endswith(f"_{language.lower()}"):
+                continue
 
-            if bsa_string_file is None:
-                raise ValueError("Strings file must not be a BSA file!")
-
+            kind: StringFileKind = DbGen.STRING_FILE_KINDS[strings_file.suffix.lower()]
             self.log.info(f"Extracting strings from '{strings_file.name}'...")
-            parser = StringTableParser(strings_file)
+            with (
+                FileSourceFactory.for_file_path(
+                    strings_file
+                ).get_file_stream() as stream,
+                StringTable.from_stream(stream, kind) as table,
+            ):
+                for key in string_ids:
+                    if key[0] != kind:
+                        continue
 
-            string_table: StringTable
-            if bsa_path is not None:
-                archive = BSAArchive(bsa_path)
-                string_table = parser.parse(
-                    archive.get_file_stream(str(bsa_string_file).replace("\\", "/"))
-                )
-            else:
-                with strings_file.open("rb") as stream:
-                    string_table = parser.parse(stream)
+                    data: Optional[bytes] = table.get(key[1])
+                    if data is None:
+                        continue
 
-            additional_strings: dict[int, str] = string_table.extract_strings()
-            string_tables.update(additional_strings)
-            self.log.info(f"Extracted {len(additional_strings)} string(s).")
+                    text: str = DbGen.__decode_string(data.removesuffix(b"\0"))
+                    if text.strip():
+                        string_tables[key] = text
 
         return string_tables
 
+    @staticmethod
+    def __decode_string(data: bytes) -> str:
+        """
+        Decodes table payloads using the existing legacy encoding fallbacks.
+
+        Args:
+            data (bytes): String payload without its terminator.
+
+        Returns:
+            str: Decoded text.
+        """
+
+        for encoding in ("utf-8", "cp1250", "cp1252", "cp1251"):
+            try:
+                return data.decode(encoding)
+            except UnicodeDecodeError:
+                continue
+
+        return data.decode("utf-8", errors="ignore")
+
     @FunctionCache.cache
-    def extract_string_ids(self, plugin_path: Path) -> dict[int, BaseString]:
+    def extract_string_ids(
+        self, plugin_path: Path
+    ) -> dict[ExternalStringId, list[PluginString]]:
         """
         Parses and extracts string ids from the specified plugin.
 
@@ -421,19 +455,18 @@ class DbGen(Utility):
             plugin_path (Path): Path to the plugin
 
         Returns:
-            dict[int, String]: Dictionary with string ids and strings
+            dict[ExternalStringId, list[PluginString]]:
+                All referencing strings grouped by table kind and external ID.
         """
 
         self.log.info(f"Extracting string ids from '{plugin_path.name}'...")
 
-        plugin = Plugin.from_file(plugin_path)
-        strings: list[PluginString] = plugin.extract_strings(extract_localized=True)
-        string_ids: dict[int, BaseString] = {
-            int(string.original): string
-            for string in PluginFile.convert_sse_plugin_strings(strings)
-        }
+        plugin_file = PluginFile(name=plugin_path.name, full_path=plugin_path)
+        string_ids: dict[ExternalStringId, list[PluginString]] = (
+            plugin_file.extract_external_string_ids()
+        )
 
-        self.log.info(f"Extracted {len(string_ids)} string(s).")
+        self.log.info(f"Extracted {len(string_ids)} external string ID(s).")
 
         return string_ids
 

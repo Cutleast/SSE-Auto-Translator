@@ -45,6 +45,18 @@ wheels = [
 ]
 
 [[package]]
+name = "bethkit"
+version = "2.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/59/d9/33a18e565954b94009cb5b3f6ec580d3dae8081e7911bd29125df9e627bd/bethkit-2.5.0-py3-none-manylinux_2_34_x86_64.whl", hash = "sha256:b4191938fef4478c0074c24bcada0a45fde41f2c294e0007428f9072ca7ab638", size = 3155869, upload-time = "2026-10-17T12:44:43.748Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/bd/f22003eb8ec86ff14c2814f417561d1379199752dc49aa7dd3ea529e3932/bethkit-2.5.0-py3-none-win_amd64.whl", hash = "sha256:630c8f893defd90b42ebcd40b55f297f072815b52c442303e6b8792d724d4927", size = 3070696, upload-time = "2026-10-17T12:44:45.368Z" },
+]
+
+[[package]]
 name = "brotli"
 version = "1.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1585,6 +1597,7 @@ version = "3.2.6"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
+    { name = "bethkit" },
     { name = "chunspell-next" },
     { name = "curl-cffi" },
     { name = "cutleast-core-lib" },
@@ -1603,7 +1616,6 @@ dependencies = [
     { name = "pyzmq" },
     { name = "rapidfuzz" },
     { name = "sse-bsa" },
-    { name = "sse-plugin-interface" },
     { name = "websocket-client" },
 ]
 
@@ -1625,6 +1637,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4" },
+    { name = "bethkit" },
     { name = "chunspell-next" },
     { name = "curl-cffi" },
     { name = "cutleast-core-lib", editable = "core-lib" },
@@ -1643,7 +1656,6 @@ requires-dist = [
     { name = "pyzmq" },
     { name = "rapidfuzz" },
     { name = "sse-bsa" },
-    { name = "sse-plugin-interface" },
     { name = "websocket-client" },
 ]
 
@@ -1673,15 +1685,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4f/d0/6932badd71d68b45b36615a1accc29adee5d54381fae1c574a2d71136161/sse_bsa-1.1.0.tar.gz", hash = "sha256:9f7329dd3894588687229cfa5e22023154e54a548f76797a384626ea2d588004", size = 2123559, upload-time = "2025-10-16T19:47:28.456Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/32/c0/0a9932c38391d6e887156fb3ded29efaf201e54d7c74e4c8ecc348553f5c/sse_bsa-1.1.0-py3-none-any.whl", hash = "sha256:b433b06ac43cc51b6b519f3164c63732efd2ace0d05555cbdc73852521260755", size = 16030, upload-time = "2025-10-16T19:47:24.464Z" },
-]
-
-[[package]]
-name = "sse-plugin-interface"
-version = "1.0.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/53/7d/358ab97f38a59184974fd61d2ca50e078908cc0cf3e5ff9541d63bece35d/sse_plugin_interface-1.0.1.tar.gz", hash = "sha256:e18540910ddb04ea73427b7ffb187edb417dc0dfcf10ce49b654ea1b82c760cf", size = 560802, upload-time = "2025-12-19T16:35:03.167Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d2/d5/1b0d62aae702f165ee2bc8e086d3ebe88b6c834cf8611be8ec215c8253b9/sse_plugin_interface-1.0.1-py3-none-any.whl", hash = "sha256:e3e01d603ef75609dc6738c1b6d651a20b17a06c50640c8bf13c600184922af3", size = 17715, upload-time = "2025-12-19T16:35:02.323Z" },
 ]
 
 [[package]]

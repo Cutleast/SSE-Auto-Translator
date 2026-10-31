@@ -1,3 +1,0 @@
-"""
-Copyright (c) Cutleast
-"""
