@@ -192,15 +192,18 @@ class PluginFile(ModFile):
 
         Returns:
             dict[ExternalStringId, list[PluginString]]:
-                All referencing strings grouped by table kind and external ID.
+                All referencing strings grouped by table kind and external ID. Empty
+                for plugins that are not localized.
 
         Raises:
-            ValueError: The plugin is not localized or a string has no ID.
+            ValueError: A string of the localized plugin has no ID.
         """
 
         with self.__get_plugin() as plugin:
+            # Plugins that are not localized don't reference any external strings.
             if not plugin.is_localized:
-                raise ValueError(f"Plugin '{self.name}' is not localized.")
+                log.info(f"Plugin '{self.name}' is not localized.")
+                return {}
 
             with self.__get_context(plugin) as context:
                 strings: dict[ExternalStringId, list[PluginString]] = {}

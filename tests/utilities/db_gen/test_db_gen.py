@@ -109,6 +109,29 @@ class TestDbGen(BaseTest):
         assert db_data[0]["string"]
         assert db_data[0]["original"] != db_data[0]["string"]
 
+    def test_create_database_skips_plugins_that_are_not_localized(
+        self, data_folder: Path, tmp_path: Path
+    ) -> None:
+        """
+        Tests that `utilities.db_gen.main.DbGen.create_database()` skips plugins that
+        are not localized instead of aborting.
+        """
+
+        # given
+        db_gen = DbGen()
+        data_path: Path = data_folder / "db_gen"
+        input_folder: Path = tmp_path / "orig"
+        shutil.copytree(data_path / "orig", input_folder)
+        shutil.copy(data_folder / "esp2dsd" / "orig" / "WetandCold.esp", input_folder)
+        output_path: Path = tmp_path / "db_gen_test"
+
+        # when
+        db_gen.create_database(input_folder, data_path / "trans", "german", output_path)
+
+        # then
+        assert (output_path / "_resourcepack.esl.json").is_file()
+        assert not (output_path / "wetandcold.esp.json").exists()
+
     def test_get_strings_files_from_bsa(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.get_strings_files_from_bsa()`.
