@@ -31,9 +31,9 @@ class StringsColumns(ColumnEnum):
     Id = ColumnConfig[String | ImmutableValue[Path]](
         title_supplier=lambda: QApplication.translate("StringsColumns", "ID"),
         display_text_getter=lambda item: (
-            item.id if isinstance(item, String) else str(item.value)
+            item.display_id if isinstance(item, String) else str(item.value)
         ),
-        tooltip_getter=lambda item: item.id if isinstance(item, String) else "",
+        tooltip_getter=lambda item: item.display_id if isinstance(item, String) else "",
         foreground_color_getter=lambda item: (
             item.status.get_fg_color() if isinstance(item, String) else None
         ),
