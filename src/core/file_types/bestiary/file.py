@@ -3,16 +3,22 @@ Copyright (c) Cutleast
 """
 
 import re
+from enum import Enum, auto
 from pathlib import Path
 from typing import Any, BinaryIO, ClassVar, Optional, TypeAlias, override
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from pydantic import TypeAdapter, ValidationError
+from PySide6.QtWidgets import QApplication
 
 from core.file_source.file_source import FileSource
 from core.file_source.file_source_factory import FileSourceFactory
+from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
-from core.string.types import StringList
+from core.string.types import String, StringList
+from core.translation_context.context_property import ContextProperty
+from core.translation_context.related_string import RelatedString
 
 from .string import BestiaryString
 
@@ -33,6 +39,36 @@ class BestiaryFile(ModFile):
     """
     Class for Dragonborn's Bestiary files (data/interface/creatures/**/*.json).
     """
+
+    class EntryKind(Enum):
+        """
+        Kinds of strings in a creature entry of the bestiary.
+        """
+
+        Name = auto()
+        """The name of the creature."""
+
+        Description = auto()
+        """The description of the creature."""
+
+        Loot = auto()
+        """An item that the creature drops."""
+
+        def get_localized_name(self) -> str:
+            """
+            Gets the localized name of this kind.
+
+            Returns:
+                str: The localized name.
+            """
+
+            match self:
+                case BestiaryFile.EntryKind.Name:
+                    return QApplication.translate("BestiaryFile", "Creature name")
+                case BestiaryFile.EntryKind.Description:
+                    return QApplication.translate("BestiaryFile", "Creature description")
+                case BestiaryFile.EntryKind.Loot:
+                    return QApplication.translate("BestiaryFile", "Loot item")
 
     LOOT_KEY: ClassVar[str] = "loot"
     """Name of the key attribute in a bestiary loot file."""
@@ -307,3 +343,139 @@ class BestiaryFile(ModFile):
             loot_items.append((text, category))
 
         output.write(LootDataAdapter.dump_json(data, indent=4))
+
+    @override
+    @classmethod
+    def get_string_contexts(
+        cls,
+        mod_file_path: Path,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+    ) -> ReferenceDict[String, ModFileContext]:
+        # Each creature has its own folder containing its entry file and its loot file.
+        folder_strings: list[tuple[Path, BestiaryString]] = [
+            (path, string)
+            for path, file_strings in all_strings.items()
+            if path.parent == mod_file_path.parent
+            for string in file_strings
+            if isinstance(string, BestiaryString)
+        ]
+
+        contexts: ReferenceDict[String, ModFileContext] = ReferenceDict()
+        for string in strings:
+            if isinstance(string, BestiaryString):
+                contexts[string] = BestiaryFile.__get_string_context(
+                    string, folder_strings
+                )
+
+        return contexts
+
+    @staticmethod
+    def __get_string_context(
+        string: BestiaryString, folder_strings: list[tuple[Path, BestiaryString]]
+    ) -> ModFileContext:
+        """
+        Builds the context for a single bestiary string.
+
+        Args:
+            string (BestiaryString): String to build the context for.
+            folder_strings (list[tuple[Path, BestiaryString]]):
+                All strings of the creature's folder with their mod file paths.
+
+        Returns:
+            ModFileContext: The context for the string.
+        """
+
+        kind: Optional[BestiaryFile.EntryKind] = BestiaryFile.get_entry_kind(
+            string.bestiary_id
+        )
+        if kind is None:
+            return ModFileContext()
+
+        related_kinds: list[BestiaryFile.EntryKind]
+        properties: list[ContextProperty] = []
+        match kind:
+            case BestiaryFile.EntryKind.Name:
+                related_kinds = [BestiaryFile.EntryKind.Description]
+            case BestiaryFile.EntryKind.Description:
+                related_kinds = [BestiaryFile.EntryKind.Name]
+            case BestiaryFile.EntryKind.Loot:
+                related_kinds = [
+                    BestiaryFile.EntryKind.Name,
+                    BestiaryFile.EntryKind.Loot,
+                ]
+                properties = BestiaryFile.__get_loot_properties(string.bestiary_id)
+
+        related_strings: list[RelatedString] = []
+        for path, folder_string in folder_strings:
+            folder_kind: Optional[BestiaryFile.EntryKind] = BestiaryFile.get_entry_kind(
+                folder_string.bestiary_id
+            )
+            if folder_string.id == string.id or folder_kind not in related_kinds:
+                continue
+
+            related_strings.append(
+                RelatedString(
+                    relation=folder_kind.get_localized_name(),
+                    string=folder_string,
+                    mod_file=path,
+                )
+            )
+
+        return ModFileContext(
+            string_kind=QApplication.translate("BestiaryFile", "Bestiary")
+            + " - "
+            + kind.get_localized_name(),
+            properties=properties,
+            related_strings=related_strings,
+        )
+
+    @staticmethod
+    def __get_loot_properties(bestiary_id: str) -> list[ContextProperty]:
+        """
+        Gets the category and the position of a loot item from its ID.
+
+        Args:
+            bestiary_id (str): ID of the loot item string.
+
+        Returns:
+            list[ContextProperty]: The category and the position of the loot item.
+        """
+
+        match: Optional[re.Match[str]] = BestiaryFile.LOOT_ID_PATTERN.match(bestiary_id)
+        if match is None:
+            return []
+
+        return [
+            ContextProperty(
+                label=QApplication.translate("BestiaryFile", "Category"),
+                value=match.group("category"),
+            ),
+            ContextProperty(
+                label=QApplication.translate("BestiaryFile", "Position"),
+                value=f"{int(match.group('index')) + 1}/{match.group('count')}",
+            ),
+        ]
+
+    @staticmethod
+    def get_entry_kind(bestiary_id: str) -> Optional[BestiaryFile.EntryKind]:
+        """
+        Determines the kind of a bestiary string from its ID.
+
+        Args:
+            bestiary_id (str): ID of the bestiary string.
+
+        Returns:
+            Optional[EntryKind]: The kind of the string or None if it is unknown.
+        """
+
+        if BestiaryFile.LOOT_ID_PATTERN.match(bestiary_id):
+            return BestiaryFile.EntryKind.Loot
+
+        if bestiary_id.endswith(BestiaryFile.ENTRY_NAME_SUFFIX):
+            return BestiaryFile.EntryKind.Name
+
+        if bestiary_id.endswith(BestiaryFile.ENTRY_DESC_SUFFIX):
+            return BestiaryFile.EntryKind.Description
+
+        return None

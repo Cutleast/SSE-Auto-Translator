@@ -8,6 +8,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "beautifulsoup4",
+    "bethkit",
     "chunspell-next",
     "curl-cffi",
     "cutleast-core-lib",
@@ -24,8 +25,8 @@ dependencies = [
     "pyuac",
     "pywin32",
     "pyzmq",
+    "rapidfuzz",
     "sse-bsa",
-    "sse-plugin-interface",
     "websocket-client",
 ]
 
@@ -88,7 +89,7 @@ log_cli_level = "DEBUG"
 log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
 
 [tool.pyright]
-include = ["src", "tests"]
+include = ["src", "tests", "core-lib/src"]
 typeCheckingMode = "strict"
 exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py", "**/node_modules", "**/.*", ".venv"]
 stubPath = "./stubs"

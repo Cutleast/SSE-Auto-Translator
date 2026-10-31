@@ -48,7 +48,16 @@ class PluginString(BaseString):
         - `index`
         """
 
-        return f"{self.form_id[2:].lower()}###{self.editor_id}###{self.type}###{self.index}"
+        return f"{self.record_id}###{self.editor_id}###{self.type}###{self.index}"
+
+    @property
+    def record_id(self) -> str:
+        """
+        Identifies the record of the string independently of the load order. Consists
+        of the lowered `form_id` without master index (first two digits).
+        """
+
+        return self.form_id[2:].lower()
 
     @property
     @override
@@ -62,9 +71,26 @@ class PluginString(BaseString):
         fields.append(self.type)
 
         if self.index is not None:
-            fields.append(str(self.index))
+            fields.append(self.__format_index(self.index))
 
         return " - ".join(fields)
+
+    def __format_index(self, index: int) -> str:
+        """
+        Formats an index for display.
+
+        Args:
+            index (int): Index to format.
+
+        Returns:
+            str: Hexadecimal journal entry hash or decimal index.
+        """
+
+        # Journal indexes are hashes, other indexes match the numbers shown in xEdit.
+        if self.type == "QUST CNAM":
+            return f"{index:08X}"
+
+        return str(index)
 
     @override
     def get_localized_info(self) -> str:
@@ -79,7 +105,7 @@ class PluginString(BaseString):
         info += QApplication.translate("PluginString", "Type") + ": " + self.type + "\n"
         if self.index is not None:
             info += QApplication.translate("PluginString", "Index") + ": "
-            info += str(self.index)
+            info += self.__format_index(self.index)
 
         return info.strip("\n")
 

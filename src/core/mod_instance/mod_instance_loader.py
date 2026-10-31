@@ -100,7 +100,7 @@ class ModInstanceLoader(QObject):
             )
         ]
 
-        mod_instance = ModInstance(instance.display_name, mods)
+        mod_instance = ModInstance(instance.display_name, mods, instance.game_folder)
 
         self.log.info(
             f"Loaded mod instance with {len(mod_instance.mods)} mod(s) and "

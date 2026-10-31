@@ -9,13 +9,18 @@ from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.mod_instance.mod_instance import ModInstance
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from core.translation_context.builder import ContextBuilder
+from core.translation_context.context import TranslationContext
 from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
@@ -37,12 +42,13 @@ class Editor(QObject):
     __language: GameLanguage
     __database: TranslationDatabase
     __translator_service: TranslatorService
+    __context_builder: ContextBuilder
 
     __translation: Translation
     __strings_cache: dict[Path, StringList]
-    """
-    Stores a deep copy of the strings in the translation.
-    """
+    """Stores a deep copy of the strings in the translation."""
+
+    __context_cache: ReferenceDict[String, TranslationContext]
 
     __changes_pending: bool
 
@@ -53,6 +59,7 @@ class Editor(QObject):
         translation: Translation,
         language: GameLanguage,
         database: TranslationDatabase,
+        mod_instance: Optional[ModInstance],
         translator_service: TranslatorService,
     ) -> None:
         """
@@ -60,6 +67,7 @@ class Editor(QObject):
             translation (Translation): The translation to edit.
             language (GameLanguage): The language of the translation.
             database (TranslationDatabase): The translation database.
+            mod_instance (Optional[ModInstance]): The loaded mod instance.
             translator_service (TranslatorService): The translator service.
         """
 
@@ -70,9 +78,11 @@ class Editor(QObject):
         self.__language = language
         self.__database = database
         self.__translator_service = translator_service
+        self.__context_builder = ContextBuilder(database, mod_instance)
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
+        self.__context_cache = ReferenceDict()
 
         self.__changes_pending = False
 
@@ -191,6 +201,53 @@ class Editor(QObject):
         self.strings_changed.emit(strings)
         self.log.info("API translation complete.")
 
+    def get_api_translation(self, string: String) -> str:
+        """
+        Requests an API translation for a string without modifying it.
+
+        Args:
+            string (String): The string to get an API translation for.
+
+        Returns:
+            str: The translated text returned by the translator API.
+        """
+
+        translator: Translator = self.__translator_service.get_translator()
+        return translator.translate(string.original, self.__language)
+
+    def finalize_string(
+        self,
+        string: String,
+        translated_text: str,
+        status: StringStatus = StringStatus.TranslationComplete,
+    ) -> None:
+        """
+        Finalizes a string by applying a translated text and a status to it. Similar
+        strings are also updated, if the status is TranslationComplete.
+
+        Args:
+            string (String): The string to finalize.
+            translated_text (str): The translated text to apply.
+            status (StringStatus, optional):
+                The translation status to apply. Defaults to
+                StringStatus.TranslationComplete.
+        """
+
+        if status != StringStatus.NoTranslationRequired:
+            string.string = translated_text
+        else:
+            string.string = string.original
+
+        string.status = status
+
+        modified_strings: StringList = [string]
+        if status == StringStatus.TranslationComplete:
+            modified_strings.extend(
+                self.__apply_to_matching_strings(string.original, string.string)
+            )
+
+        self.strings_changed.emit(modified_strings)
+
     def apply_regex(
         self, strings: StringList, replace_text: str, pattern: re.Pattern
     ) -> int:
@@ -272,6 +329,15 @@ class Editor(QObject):
             int: Number of strings modified
         """
 
+        modified_strings: StringList = self.__apply_to_matching_strings(
+            original, translation
+        )
+
+        self.strings_changed.emit(modified_strings)
+
+        return len(modified_strings)
+
+    def __apply_to_matching_strings(self, original: str, translation: str) -> StringList:
         modified_strings: StringList = []
         for string in self.all_strings:
             if (
@@ -282,10 +348,9 @@ class Editor(QObject):
                 string.status = StringStatus.TranslationIncomplete
                 modified_strings.append(string)
 
-        self.strings_changed.emit(modified_strings)
         self.log.info(f"Applied translation to {len(modified_strings)} string(s).")
 
-        return len(modified_strings)
+        return modified_strings
 
     def reset_strings(self, strings: StringList) -> None:
         """
@@ -303,3 +368,44 @@ class Editor(QObject):
 
         self.strings_changed.emit(strings)
         self.log.info("Strings reset.")
+
+    def build_string_context(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+        """
+        Builds the translation context for all strings in the translation.
+
+        Args:
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
+        """
+
+        self.log.info("Building translation context...")
+
+        try:
+            self.__context_cache = self.__context_builder.build_context(
+                self.__strings_cache, pdisplay
+            )
+        except TaskCancelledError:
+            self.log.info("Cancelled building translation context.")
+        else:
+            self.log.info("Translation context complete.")
+
+    def get_string_context(
+        self, string: String, mod_file_path: Path
+    ) -> TranslationContext:
+        """
+        Gets the context for a string.
+
+        Args:
+            string (String): The edited string.
+            mod_file_path (Path): The mod file path of the string.
+
+        Returns:
+            TranslationContext: The translation context for the string.
+        """
+
+        if string not in self.__context_cache:
+            self.__context_cache[string] = self.__context_builder.build_single_context(
+                string, mod_file_path, self.__strings_cache
+            )
+
+        return self.__context_cache[string]

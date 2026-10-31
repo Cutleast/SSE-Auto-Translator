@@ -3,7 +3,6 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
 from pathlib import Path
 from typing import Optional
 
@@ -34,17 +33,6 @@ class TranslationService:
             dict[Path, StringList]: Map of mod file names to their list of strings.
         """
 
-        # pre-process legacy files
-        legacy_files: list[Path] = list(translation_folder.glob("*.ats"))
-        for legacy_file in legacy_files:
-            try:
-                cls.process_legacy_file(legacy_file)
-            except Exception as ex:
-                cls.log.error(
-                    f"Failed to process legacy file '{legacy_file}': {ex}", exc_info=ex
-                )
-
-        # then load the entire translation at once
         json_files: list[Path] = list(translation_folder.rglob("*.json"))
         strings: dict[Path, StringList] = {}
         for json_file in json_files:
@@ -59,27 +47,6 @@ class TranslationService:
                 cls.log.error(
                     f"Failed to load strings from file '{json_file}': {ex}", exc_info=ex
                 )
-
-        return strings
-
-    @classmethod
-    def process_legacy_file(cls, legacy_ats_file_path: Path) -> StringList:
-        """
-        Processes a legacy .ats file by loading and converting its strings, deleting the
-        original .ats file and resaving the strings to a new .json file.
-
-        Args:
-            legacy_ats_file_path (Path): Path to the legacy .ats file.
-
-        Returns:
-            StringList: List of strings.
-        """
-
-        strings: StringList = StringLoader.load_strings_from_legacy_file(
-            legacy_ats_file_path
-        )
-        cls.save_strings_to_json_file(legacy_ats_file_path.with_suffix(".json"), strings)
-        os.unlink(legacy_ats_file_path)
 
         return strings
 

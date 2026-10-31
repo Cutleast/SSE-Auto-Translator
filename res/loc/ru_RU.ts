@@ -297,6 +297,39 @@ This feature is considered experimental because a crash might prevent it from un
     </message>
 </context>
 <context>
+    <name>BestiaryFile</name>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="66"/>
+        <source>Creature name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="68"/>
+        <source>Creature description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="70"/>
+        <source>Loot item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="425"/>
+        <source>Bestiary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="450"/>
+        <source>Category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/bestiary/file.py" line="454"/>
+        <source>Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BlacklistDialog</name>
     <message>
         <location filename="src/ui/settings/blacklist_dialog.py" line="41"/>
@@ -374,6 +407,20 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
+    <name>ContextBuilder</name>
+    <message>
+        <location filename="src/core/translation_context/builder.py" line="177"/>
+        <source>Building translation context...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_context/builder.py" line="242"/>
+        <location filename="src/core/translation_context/builder.py" line="302"/>
+        <source>Searching similar strings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ContextMenu</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="109"/>
@@ -393,6 +440,54 @@ This list only affects translations from Nexus Mods!</source>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="134"/>
         <source>Paste item</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ContextWidget</name>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="66"/>
+        <source>Similarity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="74"/>
+        <source>Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="119"/>
+        <source>Relation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="208"/>
+        <source>No context available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="254"/>
+        <source>Double click on a similar string to apply its translation to the current string.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="274"/>
+        <source>Double click on a related string to open it. Strings that are not part of the current string list are copied to the clipboard instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="320"/>
+        <source>Notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="383"/>
+        <source>Related Strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="379"/>
+        <source>Similar Strings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -744,7 +839,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="175"/>
+        <location filename="src/core/editor/editor.py" line="184"/>
         <source>Translating with API...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -795,7 +890,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="240"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="244"/>
         <source>Close translation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -803,12 +898,17 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="175"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="205"/>
         <source>Strings</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="246"/>
+        <source>The translation context includes similar strings and contextual information from the respective mod file where available and is currently being built for all strings of the translation.&lt;br/&gt;Depending on the translation size, this may take a bit of time.&lt;p&gt;You can cancel this any time you want, but note that without the full context, operations like editing strings and machine translations may initially take a bit longer.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="377"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="477"/>
         <source>Translated %n string from database.</source>
         <comment>Translated %n strings from database.</comment>
         <translation type="unfinished">
@@ -818,22 +918,22 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="391"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="491"/>
         <source>Search and Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="405"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="505"/>
         <source>Case sensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="444"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="544"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="451"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
         <source>Are you sure you want to translate %n string via translator API?
 Depending on the translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n strings via translator API?
@@ -845,94 +945,94 @@ Depending on the translator API this can raise unexpected costs.</comment>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="500"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="600"/>
         <source>Save before export?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="503"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="603"/>
         <source>Do you want to save the translation before exporting? Unsaved changes are not exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="512"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="612"/>
         <source>Export only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="515"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="615"/>
         <source>Save and export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="523"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="623"/>
         <source>Export Translation (DSD Format only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="551"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="651"/>
         <source>Reset selected String(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="374"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="536"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="474"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="636"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="160"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="191"/>
         <source>Translation Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="400"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="500"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="403"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="503"/>
         <source>Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="415"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="515"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="420"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="520"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="575"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="470"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="570"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="467"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="567"/>
         <source>Don&apos;t show again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="537"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="637"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="553"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="653"/>
         <source>Are you sure you want to reset the selected string(s)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="559"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="659"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="560"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="660"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1157,6 +1257,24 @@ Depending on the translator API this can raise unexpected costs.</comment>
     <message>
         <location filename="mod-manager-lib/src/mod_manager_lib/ui/instance_selector/instance_selector_widget.py" line="102"/>
         <source>Mod manager:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InterfaceFile</name>
+    <message>
+        <location filename="src/core/file_types/interface/file.py" line="107"/>
+        <source>Interface text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/interface/file.py" line="150"/>
+        <source>Previous entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/interface/file.py" line="152"/>
+        <source>Next entry</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1388,27 +1506,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="225"/>
+        <location filename="src/ui/main_window.py" line="227"/>
         <source>No Updates Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="226"/>
+        <location filename="src/ui/main_window.py" line="228"/>
         <source>There are no updates available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="233"/>
+        <location filename="src/ui/main_window.py" line="235"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under GNU General Public License v3.0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="242"/>
+        <location filename="src/ui/main_window.py" line="244"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="253"/>
+        <location filename="src/ui/main_window.py" line="255"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1843,24 +1961,465 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
-    <name>PluginString</name>
+    <name>PluginContextExtractor</name>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="72"/>
-        <source>Form ID</source>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="245"/>
+        <source>Topic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="76"/>
-        <source>Editor ID</source>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="257"/>
+        <source>Speaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="79"/>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="272"/>
+        <source>Emotion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="281"/>
+        <source>Previous dialogue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="447"/>
+        <source>Response</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="476"/>
+        <source>Quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="503"/>
+        <source>Quest type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="575"/>
+        <source>Quest stage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="582"/>
+        <source>Completes the quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="586"/>
+        <source>Fails the quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="591"/>
+        <source>Stage result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="619"/>
+        <source>Book type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="621"/>
+        <source>Note or scroll</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="623"/>
+        <source>Book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="634"/>
+        <source>A skill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="639"/>
+        <source>Teaches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="667"/>
+        <source>Weapon type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="680"/>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="735"/>
+        <source>Template</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="685"/>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="740"/>
+        <source>Enchantment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="724"/>
+        <source>Armor type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="770"/>
+        <source>Race</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="775"/>
+        <source>Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="803"/>
+        <source>Spell type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="832"/>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1383"/>
+        <source>Poison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="834"/>
+        <source>Food</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="836"/>
+        <source>Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="840"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/file_types/plugin/string.py" line="81"/>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="879"/>
+        <source>Effects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="909"/>
+        <source>School</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="934"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="936"/>
+        <source>Message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="938"/>
+        <source>Notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="967"/>
+        <source>Ammunition type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="971"/>
+        <source>Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="973"/>
+        <source>Bolt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1007"/>
+        <source>Words of power</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1031"/>
+        <source>Ingredient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1036"/>
+        <source>Parent location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1041"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1046"/>
+        <source>Parent worldspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1257"/>
+        <source>Sex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1259"/>
+        <source>Female</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1261"/>
+        <source>Male</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1278"/>
+        <source>Neutral</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1279"/>
+        <source>Anger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1280"/>
+        <source>Disgust</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1281"/>
+        <source>Fear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1282"/>
+        <source>Sad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1283"/>
+        <source>Happy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1284"/>
+        <source>Surprise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1285"/>
+        <source>Puzzled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1303"/>
+        <source>Main quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1304"/>
+        <source>Mages Guild</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1305"/>
+        <source>Thieves Guild</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1306"/>
+        <source>Dark Brotherhood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1307"/>
+        <source>Companions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1308"/>
+        <source>Miscellaneous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1309"/>
+        <source>Daedric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1310"/>
+        <source>Side quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1311"/>
+        <source>Civil War</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1312"/>
+        <source>Dawnguard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1313"/>
+        <source>Dragonborn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1331"/>
+        <source>Hand to hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1332"/>
+        <source>Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1333"/>
+        <source>Dagger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1334"/>
+        <source>War axe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1335"/>
+        <source>Mace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1336"/>
+        <source>Greatsword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1337"/>
+        <source>Battleaxe or warhammer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1338"/>
+        <source>Bow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1339"/>
+        <source>Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1340"/>
+        <source>Crossbow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1358"/>
+        <source>Light armor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1359"/>
+        <source>Heavy armor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1360"/>
+        <source>Clothing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1378"/>
+        <source>Spell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1379"/>
+        <source>Disease</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1380"/>
+        <source>Power</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1381"/>
+        <source>Lesser power</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1382"/>
+        <source>Ability</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1384"/>
+        <source>Addiction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1385"/>
+        <source>Shout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1403"/>
+        <source>Alteration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1404"/>
+        <source>Conjuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1405"/>
+        <source>Destruction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1406"/>
+        <source>Illusion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/context_extractor.py" line="1407"/>
+        <source>Restoration</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PluginString</name>
+    <message>
+        <location filename="src/core/file_types/plugin/string.py" line="98"/>
+        <source>Form ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string.py" line="102"/>
+        <source>Editor ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string.py" line="105"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string.py" line="107"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2384,24 +2943,326 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>StringTypeNames</name>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="28"/>
+        <source>Activator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="29"/>
+        <source>Potion/Food</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="30"/>
+        <source>Ammunition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="31"/>
+        <source>Apparatus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="32"/>
+        <source>Armor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="33"/>
+        <source>Skill/Actor value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="34"/>
+        <source>Book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="35"/>
+        <source>Cell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="36"/>
+        <source>Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="37"/>
+        <source>Container</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="38"/>
+        <source>Dialogue topic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="39"/>
+        <source>Door</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="40"/>
+        <source>Enchantment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="41"/>
+        <source>Explosion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="42"/>
+        <source>Faction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="43"/>
+        <source>Flora</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="44"/>
+        <source>Furniture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="45"/>
+        <source>Game setting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="46"/>
+        <source>Hazard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="47"/>
+        <source>Dialogue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="48"/>
+        <source>Ingredient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="49"/>
+        <source>Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="50"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="51"/>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="52"/>
+        <source>Loading screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="53"/>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="54"/>
+        <source>Magic effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="55"/>
+        <source>Misc item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="56"/>
+        <source>NPC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="57"/>
+        <source>Perk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="58"/>
+        <source>Projectile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="59"/>
+        <source>Quest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="60"/>
+        <source>Race</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="61"/>
+        <source>Placed object</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="62"/>
+        <source>Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="63"/>
+        <source>Scroll</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="64"/>
+        <source>Shout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="65"/>
+        <source>Soul gem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="66"/>
+        <source>Spell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="67"/>
+        <source>Talking activator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="68"/>
+        <source>Tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="69"/>
+        <source>Water</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="70"/>
+        <source>Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="71"/>
+        <source>Word of power</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="72"/>
+        <source>Worldspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="91"/>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="96"/>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="104"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="92"/>
+        <source>Book text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="93"/>
+        <source>Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="94"/>
+        <source>Response</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="95"/>
+        <source>Player prompt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="97"/>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="106"/>
+        <source>Button text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="98"/>
+        <source>Entry text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="99"/>
+        <source>Journal entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="100"/>
+        <source>Objective</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="101"/>
+        <source>Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="105"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="107"/>
+        <source>Activation text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/file_types/plugin/string_type_names.py" line="108"/>
+        <source>Short name</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>StringsColumns</name>
     <message>
-        <location filename="src/ui/string_list/columns.py" line="31"/>
+        <location filename="src/ui/string_list/columns.py" line="32"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="80"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="125"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/string_list/columns.py" line="50"/>
+        <location filename="src/ui/string_list/columns.py" line="51"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="91"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="136"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/string_list/columns.py" line="64"/>
+        <location filename="src/ui/string_list/columns.py" line="70"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="102"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="147"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/string_list/columns.py" line="81"/>
+        <location filename="src/ui/string_list/columns.py" line="94"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2690,83 +3551,98 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="228"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="260"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="250"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="318"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="279"/>
+        <source>F1: Complete  -  F2: Incomplete  -  F3: No translation required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="297"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="358"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="113"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="173"/>
         <source>Go to previous string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="130"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="188"/>
         <source>Go to next string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="236"/>
-        <source>Reset string</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="211"/>
-        <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="148"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="203"/>
         <source>Context</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="163"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="214"/>
         <source>Translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="244"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="249"/>
+        <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="270"/>
+        <source>Reset string</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="283"/>
+        <source>Press F1 (translation complete), F2 (translation incomplete/work in progress) or F3 (no translation required) to finalize the string and go to the next one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="292"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="320"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="346"/>
+        <source>Matching placeholders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="360"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="366"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="327"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="367"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="361"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="400"/>
         <source>String was modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="364"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="403"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="373"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="412"/>
         <source>Don&apos;t save and continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="376"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="415"/>
         <source>Save and continue</source>
         <translation type="unfinished"></translation>
     </message>

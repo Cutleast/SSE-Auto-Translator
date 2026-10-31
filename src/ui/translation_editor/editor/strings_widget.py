@@ -8,9 +8,14 @@ from typing import Optional
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.typing_utils import checked_cast
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import TreeItem
-from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
+from cutleast_core_lib.ui.utilities.tree_widget import (
+    are_children_visible,
+    iter_all_items,
+)
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.string.string_status import StringStatus
@@ -24,6 +29,17 @@ class StringsWidget(QTreeWidget):
     """
     Class for strings widget in an editor tab.
     """
+
+    visible_string_count_changed = Signal(int)
+    """
+    Signal emitted when the number of visible strings has changed.
+
+    Args:
+        int: The new amount of visible strings.
+    """
+
+    order_changed = Signal()
+    """Signal emitted when the order of visible strings has changed."""
 
     __string_items: ReferenceDict[String, StringItem]
     """
@@ -58,6 +74,10 @@ class StringsWidget(QTreeWidget):
 
         self.__init_ui()
         self.__init_strings(strings)
+
+        self.header().sortIndicatorChanged.connect(
+            lambda *_: self.order_changed.emit(), Qt.ConnectionType.QueuedConnection
+        )
 
         ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
 
@@ -98,11 +118,14 @@ class StringsWidget(QTreeWidget):
         self.__update_displayed_strings()
 
     def __get_items(self, only_visible: bool = False) -> list[StringItem]:
-        return [
-            string_item
-            for string_item in self.__string_items.values()
-            if not only_visible or not string_item.isHidden()
-        ]
+        result: list[StringItem] = []
+        for item in iter_all_items(self):
+            if isinstance(item, StringItem) and (
+                not only_visible or not item.isHidden()
+            ):
+                result.append(item)
+
+        return result
 
     def __on_theme_changed(self) -> None:
         for item in self.__string_items.values():
@@ -157,6 +180,8 @@ class StringsWidget(QTreeWidget):
         current_item: Optional[QTreeWidgetItem] = self.currentItem()
         if current_item is not None:
             self.scrollToItem(current_item, QTreeWidget.ScrollHint.PositionAtCenter)
+
+        self.visible_string_count_changed.emit(self.get_visible_string_count())
 
     def update_string(self, string: String) -> None:
         """
@@ -244,9 +269,7 @@ class StringsWidget(QTreeWidget):
             StringList: List of visible strings
         """
 
-        return [
-            string for string, item in self.__string_items.items() if not item.isHidden()
-        ]
+        return [s.item for s in self.__get_items(only_visible=True)]
 
     def get_visible_string_count(self) -> int:
         """
@@ -256,7 +279,7 @@ class StringsWidget(QTreeWidget):
             int: Number of visible strings
         """
 
-        return len(self.__get_items(only_visible=True))
+        return len(self.get_visible_strings())
 
     def get_index_of_string(self, string: String, only_visible: bool = False) -> int:
         """
@@ -272,6 +295,23 @@ class StringsWidget(QTreeWidget):
         """
 
         return self.__get_items(only_visible).index(self.__string_items[string])
+
+    def get_mod_file_of_string(self, string: String) -> Path:
+        """
+        Gets the mod file path of a string.
+
+        Args:
+            string (String): The string.
+
+        Returns:
+            Path: The mod file path as displayed in the widget.
+        """
+
+        string_item: StringItem = self.__string_items[string]
+        mod_file_item: TreeItem[ImmutableValue[Path]] = checked_cast(
+            TreeItem[ImmutableValue[Path]], string_item.parent()
+        )
+        return mod_file_item.item.value
 
     def get_string_from_index(
         self, index: int, only_visible: bool = False

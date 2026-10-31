@@ -5,11 +5,13 @@ Copyright (c) Cutleast
 from pathlib import Path
 
 import pytest
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 
 from core.file_types.bestiary.file import BestiaryFile
 from core.file_types.bestiary.string import BestiaryString
+from core.mod_file.context import ModFileContext
 from core.string.string_status import StringStatus
-from core.string.types import StringList
+from core.string.types import String, StringList
 from tests.core.core_test import CoreTest
 
 
@@ -250,3 +252,51 @@ class TestBestiaryFile(CoreTest):
 
         # then
         assert read_back_strings == strings_to_dump
+
+    def test_get_string_contexts(self) -> None:
+        """
+        Tests that loot items are related to the name of their creature.
+        """
+
+        # given
+        creature_folder = Path("interface") / "creatures" / "golems" / "ash spawn"
+        entry_path: Path = creature_folder / "ash spawn.json"
+        loot_path: Path = creature_folder / "ash spawn_LOOT.json"
+        name = BestiaryString(original="ASH SPAWN", bestiary_id="ash spawn-name")
+        description = BestiaryString(
+            original="Ash Spawns are...", bestiary_id="ash spawn-description"
+        )
+        first_loot = BestiaryString(
+            original="spawn ash", bestiary_id="ash spawn_LOOT-0/2-ingredient"
+        )
+        second_loot = BestiaryString(
+            original="ore", bestiary_id="ash spawn_LOOT-1/2-ore"
+        )
+        other_creature = BestiaryString(original="CHICKEN", bestiary_id="chicken-name")
+        all_strings: dict[Path, StringList] = {
+            entry_path: [name, description],
+            loot_path: [first_loot, second_loot],
+            Path("interface") / "creatures" / "animals" / "chicken" / "chicken.json": [
+                other_creature
+            ],
+        }
+
+        # when
+        contexts: ReferenceDict[String, ModFileContext] = (
+            BestiaryFile.get_string_contexts(loot_path, [first_loot], all_strings)
+        )
+
+        # then
+        context: ModFileContext = contexts[first_loot]
+        assert [related.string for related in context.related_strings] == [
+            name,
+            second_loot,
+        ]
+        assert [related.mod_file for related in context.related_strings] == [
+            entry_path,
+            loot_path,
+        ]
+        assert [(item.label, item.value) for item in context.properties] == [
+            ("Category", "ingredient"),
+            ("Position", "1/2"),
+        ]

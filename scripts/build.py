@@ -33,6 +33,8 @@ class Backend(NuitkaBackend):
         metadata: BuildMetadata,
     ) -> list[str]:
         return [
+            "--include-package=bethkit",
+            "--include-package-data=bethkit",
             "--include-package=winrt",
             "--include-package-data=winrt",
         ]

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import html
 from pathlib import Path
 
 from cutleast_core_lib.core.utilities.lazy import Lazy
@@ -30,9 +31,9 @@ class StringsColumns(ColumnEnum):
     Id = ColumnConfig[String | ImmutableValue[Path]](
         title_supplier=lambda: QApplication.translate("StringsColumns", "ID"),
         display_text_getter=lambda item: (
-            item.id if isinstance(item, String) else str(item.value)
+            item.display_id if isinstance(item, String) else str(item.value)
         ),
-        tooltip_getter=lambda item: item.id if isinstance(item, String) else "",
+        tooltip_getter=lambda item: item.display_id if isinstance(item, String) else "",
         foreground_color_getter=lambda item: (
             item.status.get_fg_color() if isinstance(item, String) else None
         ),
@@ -53,6 +54,11 @@ class StringsColumns(ColumnEnum):
             if isinstance(item, String)
             else ""
         ),
+        tooltip_getter=lambda item: (
+            html.escape(item.original, quote=False).replace("\n", "<br/>")
+            if isinstance(item, String)
+            else ""
+        ),
         foreground_color_getter=lambda item: (
             item.status.get_fg_color() if isinstance(item, String) else None
         ),
@@ -67,6 +73,13 @@ class StringsColumns(ColumnEnum):
                 item.string if item.string is not None else item.original,
                 max_length=MAX_STRING_LENGTH,
             )
+            if isinstance(item, String)
+            else ""
+        ),
+        tooltip_getter=lambda item: (
+            html.escape(
+                item.string if item.string is not None else item.original, quote=False
+            ).replace("\n", "<br/>")
             if isinstance(item, String)
             else ""
         ),
