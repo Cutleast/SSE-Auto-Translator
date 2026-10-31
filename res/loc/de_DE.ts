@@ -1783,32 +1783,42 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>NexusLoginDialog</name>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="60"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="141"/>
+        <source>The native login helper is missing. Reinstall SSE-AT.</source>
+        <translation>Der native Anmeldehelper fehlt. Installiere SSE-AT neu.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="148"/>
         <source>Nexus Mods login</source>
         <translation>Nexus Mods-Anmeldung</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="87"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="153"/>
         <source>Connecting to Nexus Mods...</source>
         <translation>Mit Nexus Mods verbinden...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="95"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="158"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="110"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="174"/>
         <source>Sign in to Nexus Mods and authorize SSE-AT to continue.</source>
         <translation>Melde dich bei Nexus Mods und autorisiere SSE-AT, um fortzufahren.</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="183"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="269"/>
         <source>Waiting for the Nexus Mods website session...</source>
         <translation>Auf Nexus Mods-Webseitensitzung warten...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/nexus_login_dialog.py" line="225"/>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="308"/>
+        <source>Microsoft Edge WebView2 Runtime is required. Install the Evergreen Runtime from https://developer.microsoft.com/microsoft-edge/webview2 and try again.</source>
+        <translation>Die Microsoft Edge WebView2-Laufzeitumgebung ist erforderlich. Installiere die Evergreen-Laufzeitumgebung unter https://developer.microsoft.com/microsoft-edge/webview2 und versuche es erneut.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/nexus_login_dialog.py" line="415"/>
         <source>Nexus Mods login failed. Close this window and try again.</source>
         <translation>Nexus Mods-Anmeldung fehlgeschlagen. Schließe das Fenster und versuche es erneut.</translation>
     </message>
