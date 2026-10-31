@@ -40,6 +40,7 @@ from core.database.translation import Translation
 from core.editor.editor import Editor
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from core.translation_context.related_string import RelatedString
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from ui.string_list.columns import StringsColumns
@@ -163,6 +164,9 @@ class EditorTab(QWidget):
         self.__dialog.prev_requested.connect(self.__on_prev_requested)
         self.__dialog.next_requested.connect(self.__on_next_requested)
         self.__dialog.api_translate_requested.connect(self.__on_api_translate_requested)
+        self.__dialog.related_string_requested.connect(
+            self.__on_related_string_requested
+        )
 
         ThemeManager.get().theme_changed.connect(lambda _: self.__update_metadata())
 
@@ -380,6 +384,21 @@ class EditorTab(QWidget):
             new_index = strings_count - 1
 
         self.__goto_index(new_index)
+
+    def __on_related_string_requested(self, related_string: RelatedString) -> None:
+        try:
+            index: int = self.__strings_widget.get_index_of_string(
+                related_string.string, only_visible=True
+            )
+        except KeyError, ValueError:
+            # The string is part of another translation or hidden by the current
+            # filter, so its translation is offered for reuse instead.
+            QApplication.clipboard().setText(
+                related_string.string.string or related_string.string.original
+            )
+            return
+
+        self.__goto_index(index)
 
     def __goto_index(self, index: int) -> None:
         string: Optional[String] = self.__strings_widget.get_string_from_index(

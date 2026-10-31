@@ -14,6 +14,7 @@ from pydantic import BaseModel
 from core.file_source.file_source_factory import FileSourceFactory
 from core.mod_file.context import ModFileContext
 from core.string.types import String, StringList
+from core.translation_context.reference_resolver import ReferenceResolver
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
@@ -121,14 +122,49 @@ class ModFile(BaseModel, metaclass=ABCMeta):
                 Defaults to False.
         """
 
+    @classmethod
     @abstractmethod
-    def get_context(self, string: String) -> ModFileContext:
+    def get_string_contexts(
+        cls,
+        mod_file_path: Path,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+    ) -> dict[String, ModFileContext]:
         """
-        Gets the mod file-specific context for translating a string.
+        Builds the mod file-specific context that can be derived from the strings alone,
+        without reading the mod file itself.
 
         Args:
-            string (String): The string to the mod file-specific context for.
+            mod_file_path (Path):
+                Path of the mod file containing the strings, relative to the game's
+                "Data" folder.
+            strings (StringList): Strings to build the context for.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
 
         Returns:
-            ModFileContext: The context.
+            dict[String, ModFileContext]: The context for each string.
         """
+
+    def get_contexts(
+        self,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+        resolver: ReferenceResolver,
+    ) -> dict[String, ModFileContext]:
+        """
+        Builds the mod file-specific context for strings of this mod file. Subclasses may
+        read the mod file for additional context.
+
+        Args:
+            strings (StringList): Strings to build the context for.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
+            resolver (ReferenceResolver):
+                Resolver for records referenced by the mod file.
+
+        Returns:
+            dict[String, ModFileContext]: The context for each string.
+        """
+
+        return self.get_string_contexts(self.path, strings, all_strings)

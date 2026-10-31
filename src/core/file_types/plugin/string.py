@@ -48,7 +48,16 @@ class PluginString(BaseString):
         - `index`
         """
 
-        return f"{self.form_id[2:].lower()}###{self.editor_id}###{self.type}###{self.index}"
+        return f"{self.record_id}###{self.editor_id}###{self.type}###{self.index}"
+
+    @property
+    def record_id(self) -> str:
+        """
+        Identifies the record of the string independently of the load order. Consists
+        of the lowered `form_id` without master index (first two digits).
+        """
+
+        return self.form_id[2:].lower()
 
     @property
     @override

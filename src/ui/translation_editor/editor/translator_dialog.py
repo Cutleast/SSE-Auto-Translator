@@ -2,9 +2,11 @@
 Copyright (c) Cutleast
 """
 
+import html
 from typing import Optional, override
 
 from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.widgets.divider import Divider
 from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
@@ -22,9 +24,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from core.string.placeholder_parser import PlaceholderParser
 from core.string.string_status import StringStatus
 from core.string.types import String
 from core.translation_context.context import TranslationContext
+from core.translation_context.related_string import RelatedString
 from core.user_data.user_data_service import UserDataService
 from core.utilities.game_language import GameLanguage
 from ui.utilities.icon_provider import IconProvider
@@ -60,8 +64,17 @@ class TranslatorDialog(QWidget):
     translator API.
     """
 
+    related_string_requested = Signal(RelatedString)
+    """
+    Signal emitted when the user wants to open a string related to the current string.
+
+    Args:
+        RelatedString: The related string to open.
+    """
+
     __spell_check_language: Optional[GameLanguage]
     __current_string: Optional[String]
+    __placeholders: list[str]
     __current_index: int
     __strings_count: int
 
@@ -74,6 +87,7 @@ class TranslatorDialog(QWidget):
 
     __original_edit: QPlainTextEdit
     __translated_edit: QPlainTextEdit
+    __placeholders_label: QLabel
 
     __reset_button: QPushButton
     __api_translate_button: QPushButton
@@ -97,6 +111,7 @@ class TranslatorDialog(QWidget):
 
         self.__spell_check_language = spell_check_language
         self.__current_string = None
+        self.__placeholders = []
         self.__current_index = 0
         self.__strings_count = 0
 
@@ -108,6 +123,10 @@ class TranslatorDialog(QWidget):
         self.__context_widget.translation_accepted.connect(
             self.__translated_edit.setPlainText
         )
+        self.__context_widget.related_string_activated.connect(
+            self.related_string_requested.emit
+        )
+        ThemeManager.get().theme_changed.connect(lambda *_: self.__update_placeholders())
         self.__translated_edit.textChanged.connect(lambda *_: self.__on_change())
         self.__api_translate_button.clicked.connect(self.api_translate_requested.emit)
         self.__reset_button.clicked.connect(self.__reset_translation)
@@ -218,41 +237,23 @@ class TranslatorDialog(QWidget):
 
         WidgetStateManager.get().register_state("translator_dialog_splitter", splitter)
 
-    def __init_footer(self) -> None:
-        hlayout = QHBoxLayout()
-        hlayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        self.__vlayout.addLayout(hlayout)
-
-        info_icon = QLabel()
-        IconProvider.bind_qta_icon(
-            info_icon,
-            lambda icon: info_icon.setPixmap(
-                icon.pixmap(
-                    ThemeManager.get().theme.metrics.icon,
-                    ThemeManager.get().theme.metrics.icon,
-                )
-            ),
-            "mdi6.information",
-            color=IconProvider.Color.Secondary,
+        self.__placeholders_label = QLabel()
+        self.__placeholders_label.setTextFormat(Qt.TextFormat.RichText)
+        self.__placeholders_label.setWordWrap(True)
+        self.__placeholders_label.setTextInteractionFlags(
+            Qt.TextInteractionFlag.TextSelectableByMouse
         )
-        hlayout.addWidget(info_icon)
-
-        hint_label = QLabel(
+        self.__placeholders_label.setProperty("secondary", True)
+        self.__placeholders_label.setToolTip(
             self.tr(
-                "Press F1 (translation complete), F2 (translation incomplete/work in "
-                "progress) or F3 (no translation required) to finalize the string and "
-                "go to the next one."
+                "Highlighted placeholders occur a different number of times in the "
+                "translation than in the original (translation/original)."
             )
         )
-        hint_label.setWordWrap(True)
-        hint_label.setAlignment(
-            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
-        )
-        hint_label.setProperty("secondary", True)
-        hlayout.addWidget(hint_label, stretch=1)
+        self.__placeholders_label.hide()
+        translation_vlayout.addWidget(self.__placeholders_label)
 
-        self.__vlayout.addSpacing(10)
-
+    def __init_footer(self) -> None:
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
@@ -263,6 +264,7 @@ class TranslatorDialog(QWidget):
             "mdi6.translate",
         )
         self.__api_translate_button.setShortcut(QKeySequence("Ctrl+F5"))
+        self.__api_translate_button.setProperty("transparent", True)
         hlayout.addWidget(self.__api_translate_button)
 
         self.__reset_button = ShortcutButton(self.tr("Reset string"))
@@ -270,9 +272,22 @@ class TranslatorDialog(QWidget):
             self.__reset_button, self.__reset_button.setIcon, "mdi6.undo"
         )
         self.__reset_button.setShortcut(QKeySequence("F4"))
+        self.__reset_button.setProperty("transparent", True)
         hlayout.addWidget(self.__reset_button)
 
-        hlayout.addStretch()
+        hint_label = QLabel(
+            self.tr("F1: Complete  -  F2: Incomplete  -  F3: No translation required")
+        )
+        hint_label.setToolTip(
+            self.tr(
+                "Press F1 (translation complete), F2 (translation incomplete/work in "
+                "progress) or F3 (no translation required) to finalize the string and "
+                "go to the next one."
+            )
+        )
+        hint_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        hint_label.setProperty("secondary", True)
+        hlayout.addWidget(hint_label, stretch=1)
 
         self.__finish_button = ShortcutButton(self.tr("Done"))
         self.__finish_button.setShortcut(QKeySequence("Ctrl+Return"))
@@ -300,6 +315,37 @@ class TranslatorDialog(QWidget):
 
     def __on_change(self) -> None:
         self.setWindowModified(True)
+        self.__update_placeholders()
+
+    def __update_placeholders(self) -> None:
+        theme: Theme = ThemeManager.get().theme
+        error_color: str = theme.resolve(theme.colors.error_fg)
+        original_counts: dict[str, int] = PlaceholderParser.count(
+            self.__current_string.original if self.__current_string is not None else ""
+        )
+        translated_counts: dict[str, int] = PlaceholderParser.count(
+            self.__translated_edit.toPlainText()
+        )
+
+        formatted_placeholders: list[str] = []
+        for placeholder in self.__placeholders:
+            original_count: int = original_counts.get(placeholder, 0)
+            translated_count: int = translated_counts.get(placeholder, 0)
+
+            formatted_placeholder: str = (
+                f"{html.escape(placeholder)} ({translated_count}/{original_count})"
+            )
+            if translated_count != original_count:
+                formatted_placeholder = (
+                    f"<b style='color: {error_color};'>{formatted_placeholder}</b>"
+                )
+
+            formatted_placeholders.append(formatted_placeholder)
+
+        self.__placeholders_label.setText(
+            self.tr("Matching placeholders:") + " " + " | ".join(formatted_placeholders)
+        )
+        self.__placeholders_label.setVisible(bool(self.__placeholders))
 
     def __reset_translation(self) -> None:
         if self.__current_string is not None:
@@ -378,6 +424,7 @@ class TranslatorDialog(QWidget):
 
         self.__current_string = string
         self.__context_widget.clear()
+        self.__placeholders = []
         self.__original_edit.setPlainText(self.__current_string.original)
         self.__translated_edit.setPlainText(
             self.__current_string.string
@@ -397,6 +444,9 @@ class TranslatorDialog(QWidget):
         """
 
         self.__context_widget.set_context(context)
+
+        self.__placeholders = context.placeholders
+        self.__update_placeholders()
 
     def set_index(self, index: int) -> None:
         """

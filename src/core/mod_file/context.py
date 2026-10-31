@@ -2,23 +2,27 @@
 Copyright (c) Cutleast
 """
 
-from abc import ABC
+from typing import Optional
 
-from pydantic import BaseModel
-from PySide6.QtWidgets import QApplication
+from pydantic import BaseModel, Field
+
+from core.translation_context.context_property import ContextProperty
+from core.translation_context.related_string import RelatedString
 
 
-class ModFileContext(BaseModel, ABC, frozen=True):
+class ModFileContext(BaseModel, frozen=True):
     """
-    Base model for the mod file context for a string translation.
+    The mod file-specific context for a string translation.
     """
 
-    @property
-    def display_text(self) -> str:
-        """A display text (formatted in HTML) describing the context."""
+    string_kind: Optional[str] = None
+    """A localized description of what the string is, for eg. "Weapon - Name"."""
 
-        return (
-            "<i>"
-            + QApplication.translate("ModFileContext", "No context available.")
-            + "</i>"
-        )
+    properties: list[ContextProperty] = Field(default_factory=list[ContextProperty])
+    """Labeled facts about the string, like its speaker or quest."""
+
+    notes: list[str] = Field(default_factory=list[str])
+    """Free-form notes from the mod author, like voice acting directions."""
+
+    related_strings: list[RelatedString] = Field(default_factory=list[RelatedString])
+    """Strings related to the string, like other strings of the same record."""

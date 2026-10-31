@@ -404,7 +404,7 @@ class Editor(QObject):
 
         if string not in self.__context_cache:
             self.__context_cache[string] = self.__context_builder.build_single_context(
-                string, mod_file_path
+                string, mod_file_path, self.__strings_cache
             )
 
         return self.__context_cache[string]

@@ -30,17 +30,28 @@ class ModInstance:
     List of all installed mods in this instance.
     """
 
+    game_folder: Optional[Path]
+    """
+    Installation folder of the game, which contains the base game files in its "Data"
+    folder.
+    """
+
     __modfiles_by_path: Optional[dict[Path, list[ModFile]]] = None
 
-    def __init__(self, display_name: str, mods: list[Mod]) -> None:
+    def __init__(
+        self, display_name: str, mods: list[Mod], game_folder: Optional[Path] = None
+    ) -> None:
         """
         Args:
             display_name (str): Display name of this instance.
             mods (list[Mod]): List of all installed mods in this instance.
+            game_folder (Optional[Path], optional):
+                Installation folder of the game. Defaults to None.
         """
 
         self.display_name = display_name
         self.mods = mods
+        self.game_folder = game_folder
 
     @property
     def modfiles(self) -> list[ModFile]:

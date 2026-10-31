@@ -10,7 +10,8 @@ from bethkit import Game, PluginWriter, WritableGroup, WritableRecord
 
 from core.file_types.plugin.file import PluginFile
 from core.file_types.plugin.string import PluginString
-from core.string.types import StringList
+from core.mod_file.context import ModFileContext
+from core.string.types import String, StringList
 from tests.base_test import BaseTest
 
 
@@ -221,3 +222,69 @@ class TestPluginFile(BaseTest):
 
         # then
         assert [cast(PluginString, string).type for string in strings] == ["FACT FULL"]
+
+    def test_get_string_contexts(self) -> None:
+        """
+        Tests that the context of a plugin string contains the other strings of its
+        record, independently of the load order index.
+        """
+
+        # given
+        mod_file_path = Path("Test.esp")
+        name = PluginString(
+            form_id="05000833|Test.esp", type="WEAP FULL", original="Elite Wolf Bow"
+        )
+        description = PluginString(
+            form_id="0A000833|Test.esp", type="WEAP DESC", original="A sturdy bow."
+        )
+        other_record = PluginString(
+            form_id="05000834|Test.esp", type="WEAP FULL", original="Elite Wolf Sword"
+        )
+        strings: StringList = [name, description, other_record]
+
+        # when
+        contexts: dict[String, ModFileContext] = PluginFile.get_string_contexts(
+            mod_file_path, [description], {mod_file_path: strings}
+        )
+
+        # then
+        context: ModFileContext = contexts[description]
+        assert context.string_kind == "Weapon - Description"
+        assert [related.string for related in context.related_strings] == [name]
+        assert [related.relation for related in context.related_strings] == ["Name"]
+
+    def test_get_string_contexts_limits_siblings(self) -> None:
+        """
+        Tests that names are preferred over the nearest repeated strings of a record.
+        """
+
+        # given
+        mod_file_path = Path("Test.esp")
+        quest_name = PluginString(
+            form_id="05000001|Test.esp", type="QUST FULL", original="Quest"
+        )
+        entries: list[PluginString] = [
+            PluginString(
+                form_id="05000001|Test.esp",
+                type="QUST CNAM",
+                index=index,
+                original=f"Entry {index}",
+            )
+            for index in range(20)
+        ]
+        strings: StringList = [quest_name, *entries]
+
+        # when
+        contexts: dict[String, ModFileContext] = PluginFile.get_string_contexts(
+            mod_file_path, [entries[10]], {mod_file_path: strings}
+        )
+
+        # then
+        related_strings: list[String] = [
+            related.string for related in contexts[entries[10]].related_strings
+        ]
+        assert len(related_strings) == PluginFile.MAX_SIBLINGS
+        assert related_strings[0] == quest_name
+        assert entries[9] in related_strings
+        assert entries[11] in related_strings
+        assert entries[0] not in related_strings

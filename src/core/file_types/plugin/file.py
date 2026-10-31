@@ -3,11 +3,13 @@ Copyright (c) Cutleast
 """
 
 import logging
+import time
 from collections.abc import Iterator
 from pathlib import Path
-from typing import Optional, TypeAlias, override
+from typing import ClassVar, Optional, TypeAlias, override
 
 from bethkit import (
+    BethkitError,
     Game,
     LocalizationEditor,
     Plugin,
@@ -26,10 +28,13 @@ from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
+from core.translation_context.reference_resolver import ReferenceResolver
+from core.translation_context.related_string import RelatedString
 
-from .context import PluginStringContext
+from .context_extractor import PluginContextExtractor
 from .string import PluginString
 from .string_indexes import StringIndexes
+from .string_type_names import StringTypeNames
 from .utilities import IGNORED_STRING_TYPES, is_valid_string
 
 ExternalStringId: TypeAlias = tuple[StringFileKind, int]
@@ -42,6 +47,9 @@ class PluginFile(ModFile):
     """
     Class for plugin files (*.esp, *.esm, *.esl).
     """
+
+    MAX_SIBLINGS: ClassVar[int] = 10
+    """Maximum number of other strings of the same record shown as related strings."""
 
     @property
     @override
@@ -311,5 +319,152 @@ class PluginFile(ModFile):
         return dsd_path
 
     @override
-    def get_context(self, string: String) -> ModFileContext:
-        return PluginStringContext()
+    def get_contexts(
+        self,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+        resolver: ReferenceResolver,
+    ) -> dict[String, ModFileContext]:
+        contexts: dict[String, ModFileContext] = self.get_string_contexts(
+            self.path, strings, all_strings
+        )
+        requested_strings: list[PluginString] = [
+            string
+            for string in strings
+            if isinstance(string, PluginString)
+            and PluginContextExtractor.supports(string)
+        ]
+        if not requested_strings:
+            return contexts
+
+        start: float = time.time()
+        try:
+            # The records are looked up by their form IDs instead of iterating all
+            # strings of the plugin, which is slower and fails for plugins with
+            # malformed records elsewhere, like Skyrim.esm.
+            with self.__get_plugin() as plugin:
+                extractor = PluginContextExtractor(plugin, resolver, self.name)
+                for string in requested_strings:
+                    contexts[string] = PluginFile.__merge_contexts(
+                        contexts[string], extractor.extract(string)
+                    )
+
+        except BethkitError as ex:
+            log.warning(
+                f"Failed to extract context from '{self.name}': {ex}", exc_info=ex
+            )
+
+        log.debug(
+            f"Extracted context for {len(requested_strings)} string(s) from "
+            f"'{self.name}' in {time.time() - start:.2f} second(s)."
+        )
+
+        return contexts
+
+    @staticmethod
+    def __merge_contexts(
+        string_context: ModFileContext, record_context: ModFileContext
+    ) -> ModFileContext:
+        """
+        Merges the context extracted from a plugin's records into the context derived
+        from its strings.
+
+        Args:
+            string_context (ModFileContext): Context derived from the strings.
+            record_context (ModFileContext): Context extracted from the records.
+
+        Returns:
+            ModFileContext: The merged context.
+        """
+
+        related_ids: set[str] = {
+            related.string.id for related in record_context.related_strings
+        }
+
+        return string_context.__replace__(
+            properties=record_context.properties,
+            notes=record_context.notes,
+            related_strings=(
+                record_context.related_strings
+                + [
+                    related
+                    for related in string_context.related_strings
+                    if related.string.id not in related_ids
+                ]
+            ),
+        )
+
+    @override
+    @classmethod
+    def get_string_contexts(
+        cls,
+        mod_file_path: Path,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+    ) -> dict[String, ModFileContext]:
+        records: dict[str, list[PluginString]] = {}
+        for string in all_strings.get(mod_file_path, strings):
+            if isinstance(string, PluginString):
+                records.setdefault(string.record_id, []).append(string)
+
+        contexts: dict[String, ModFileContext] = {}
+        for string in strings:
+            if not isinstance(string, PluginString):
+                continue
+
+            siblings: list[PluginString] = PluginFile.__get_siblings(
+                string, records.get(string.record_id, [])
+            )
+            contexts[string] = ModFileContext(
+                string_kind=StringTypeNames.get_string_kind(string.type),
+                related_strings=[
+                    RelatedString(
+                        relation=(
+                            StringTypeNames.get_field_name(sibling.type) or sibling.type
+                        ),
+                        string=sibling,
+                        mod_file=mod_file_path,
+                    )
+                    for sibling in siblings
+                ],
+            )
+
+        return contexts
+
+    @staticmethod
+    def __get_siblings(
+        string: PluginString, record_strings: list[PluginString]
+    ) -> list[PluginString]:
+        """
+        Selects the other strings of a string's record that are shown as its context.
+
+        Unindexed strings like names and descriptions are preferred over repeated
+        strings like journal entries, which are preferred by their distance to the
+        string.
+
+        Args:
+            string (PluginString): String to get the siblings for.
+            record_strings (list[PluginString]):
+                All strings of the record, including the string itself.
+
+        Returns:
+            list[PluginString]: The selected siblings in their record order.
+        """
+
+        position: int = next(
+            (index for index, item in enumerate(record_strings) if item.id == string.id),
+            0,
+        )
+        candidates: list[tuple[int, PluginString]] = [
+            (index, sibling)
+            for index, sibling in enumerate(record_strings)
+            if sibling.id != string.id
+        ]
+        candidates.sort(
+            key=lambda item: (item[1].index is not None, abs(item[0] - position))
+        )
+        selected: list[tuple[int, PluginString]] = sorted(
+            candidates[: PluginFile.MAX_SIBLINGS], key=lambda item: item[0]
+        )
+
+        return [sibling for _, sibling in selected]

@@ -11,17 +11,20 @@ import numpy as np
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
-from rapidfuzz import fuzz, process
+from rapidfuzz import process, utils
 
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.file_types.file_type import FileType
 from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
+from core.string.placeholder_parser import PlaceholderParser
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translation_context.context import TranslationContext
+from core.translation_context.reference_resolver import ReferenceResolver
 from core.translation_context.similar_string import SimilarString
 
 FuzzyKey: TypeAlias = tuple[Translation, Path, String]
@@ -44,7 +47,7 @@ class ContextBuilder(QObject):
     FUZZY_SCORE_CUTOFF: int = 80
     """Minimum fuzzy matching score."""
 
-    FUZZY_BATCH_SIZE: int = 32
+    FUZZY_BATCH_SIZE: int = 256
     """Size of each fuzzy search batch."""
 
     FUZZY_WORKERS: int = 8
@@ -52,6 +55,7 @@ class ContextBuilder(QObject):
 
     __database: TranslationDatabase
     __mod_instance: Optional[ModInstance]
+    __resolver: Optional[ReferenceResolver]
 
     log: logging.Logger = logging.getLogger("ContextBuilder")
 
@@ -69,9 +73,10 @@ class ContextBuilder(QObject):
 
         self.__database = database
         self.__mod_instance = mod_instance
+        self.__resolver = None
 
     def build_single_context(
-        self, string: String, mod_file_path: Path
+        self, string: String, mod_file_path: Path, all_strings: dict[Path, StringList]
     ) -> TranslationContext:
         """
         Builds the context for a single string.
@@ -79,22 +84,51 @@ class ContextBuilder(QObject):
         Args:
             string (String): The string to build the context for.
             mod_file_path (Path): The mod file path that the string originates from.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
 
         Returns:
             TranslationContext: The translation context for the string.
         """
 
-        return self.build_context({mod_file_path: [string]})[string]
+        return self.__build({mod_file_path: [string]}, all_strings)[string]
 
     def build_context(
         self, strings: dict[Path, StringList], pdisplay: Optional[ProgressDisplay] = None
+    ) -> dict[String, TranslationContext]:
+        """
+        Builds translation contexts for all strings of a translation.
+
+        Args:
+            strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
+
+        Raises:
+            TaskCancelledError: If the operation is cancelled.
+
+        Returns:
+            dict[String, TranslationContext]:
+                Dictionary with translation contexts for each string.
+        """
+
+        return self.__build(strings, strings, pdisplay)
+
+    def __build(
+        self,
+        strings: dict[Path, StringList],
+        all_strings: dict[Path, StringList],
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> dict[String, TranslationContext]:
         """
         Builds translation contexts for multiple strings.
 
         Args:
             strings (dict[Path, StringList]):
-                Dictionary with string lists per mod file path.
+                Strings to build the contexts for per mod file path.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
@@ -108,9 +142,9 @@ class ContextBuilder(QObject):
 
         start: float = time.time()
 
-        items: list[tuple[Path, String]] = [
-            (mod_file_path, string)
-            for mod_file_path, mod_file_strings in strings.items()
+        items: list[String] = [
+            string
+            for mod_file_strings in strings.values()
             for string in mod_file_strings
         ]
 
@@ -120,22 +154,21 @@ class ContextBuilder(QObject):
         choices: dict[FuzzyKey, str] = self.__get_choices()
         query_strings: list[String] = [
             string
-            for _, string in items
+            for string in items
             if len(string.original) <= ContextBuilder.MAX_FUZZY_LENGTH
         ]
         similar_strings: dict[String, list[SimilarString]] = self.__search_similar_batch(
             query_strings, choices, pdisplay
         )
 
-        result: dict[String, TranslationContext] = {}
-        for index, (mod_file_path, string) in enumerate(items, start=1):
-            mod_file_context: Optional[ModFileContext] = self.__get_mod_file_context(
-                string, mod_file_path
-            )
-
-            result[string] = TranslationContext(
-                similar_strings=similar_strings.get(string, []),
-                mod_file_context=mod_file_context,
+        mod_file_contexts: dict[String, ModFileContext] = {}
+        for index, (mod_file_path, mod_file_strings) in enumerate(
+            strings.items(), start=1
+        ):
+            mod_file_contexts.update(
+                self.__get_mod_file_contexts(
+                    mod_file_path, mod_file_strings, all_strings
+                )
             )
 
             if pdisplay is not None:
@@ -143,9 +176,17 @@ class ContextBuilder(QObject):
                     ProgressUpdate(
                         status_text=self.tr("Building translation context..."),
                         value=index,
-                        maximum=len(items),
+                        maximum=len(strings),
                     )
                 )
+
+        result: dict[String, TranslationContext] = {}
+        for string in items:
+            result[string] = TranslationContext(
+                similar_strings=similar_strings.get(string, []),
+                mod_file_context=mod_file_contexts.get(string, ModFileContext()),
+                placeholders=PlaceholderParser.parse(string.original),
+            )
 
         duration: float = time.time() - start
 
@@ -182,8 +223,15 @@ class ContextBuilder(QObject):
 
         start: float = time.time()
 
-        choice_keys: list[FuzzyKey] = list(choices)
-        choice_values: list[str] = list(choices.values())
+        # Normalizing once up front avoids normalizing every choice again per batch.
+        # Choices consisting only of punctuation would match each other perfectly.
+        processed_choices: dict[FuzzyKey, str] = {
+            key: processed_choice
+            for key, choice in choices.items()
+            if (processed_choice := utils.default_process(choice))
+        }
+        choice_keys: list[FuzzyKey] = list(processed_choices)
+        choice_values: list[str] = list(processed_choices.values())
 
         result: dict[String, list[SimilarString]] = {}
         total: int = len(strings)
@@ -203,14 +251,13 @@ class ContextBuilder(QObject):
             ]
 
             queries: list[str] = [
-                string.original[: ContextBuilder.MAX_FUZZY_LENGTH]
+                utils.default_process(string.original[: ContextBuilder.MAX_FUZZY_LENGTH])
                 for string in batch_strings
             ]
 
             scores: np.ndarray = process.cdist(
                 queries,
                 choice_values,
-                scorer=fuzz.WRatio,
                 score_cutoff=ContextBuilder.FUZZY_SCORE_CUTOFF,
                 dtype=np.uint8,
                 workers=ContextBuilder.FUZZY_WORKERS,
@@ -267,24 +314,94 @@ class ContextBuilder(QObject):
 
         return result
 
-    def __get_mod_file_context(
-        self, string: String, mod_file_path: Path
-    ) -> Optional[ModFileContext]:
+    def __get_mod_file_contexts(
+        self,
+        mod_file_path: Path,
+        strings: StringList,
+        all_strings: dict[Path, StringList],
+    ) -> dict[String, ModFileContext]:
         """
-        Gets the mod file-specific context for a string.
+        Gets the mod file-specific contexts for strings of a single mod file. Reads the
+        original mod file for additional context if it is available in the mod instance
+        or in the game's "Data" folder.
 
         Args:
-            string (String): String to get the context for.
-            mod_file_path (Path): Mod file path containing the string.
+            mod_file_path (Path): Mod file path containing the strings.
+            strings (StringList): Strings to get the contexts for.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
 
         Returns:
-            Optional[ModFileContext]: Mod file context if one is available.
+            dict[String, ModFileContext]: The context for each string.
+        """
+
+        file_type: Optional[FileType] = next(
+            (
+                file_type
+                for file_type in FileType
+                if strings and isinstance(strings[0], file_type.get_string_type_cls())
+            ),
+            None,
+        )
+        if file_type is None:
+            return {}
+
+        original_mod_file: Optional[ModFile] = self.__get_original_mod_file(
+            mod_file_path, file_type
+        )
+        if original_mod_file is not None:
+            return original_mod_file.get_contexts(
+                strings, all_strings, self.__get_resolver(all_strings)
+            )
+
+        return file_type.get_file_type_cls().get_string_contexts(
+            mod_file_path, strings, all_strings
+        )
+
+    def __get_resolver(self, all_strings: dict[Path, StringList]) -> ReferenceResolver:
+        """
+        Gets the resolver for referenced records, which is created on first use.
+
+        Args:
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
+
+        Returns:
+            ReferenceResolver: The resolver.
+        """
+
+        if self.__resolver is None:
+            # The edited strings take precedence over their copies in the database.
+            self.__resolver = ReferenceResolver(
+                [all_strings]
+                + [
+                    translation.strings
+                    for translation in self.__database.user_translations
+                ]
+                + [self.__database.vanilla_translation.strings]
+            )
+
+        return self.__resolver
+
+    def __get_original_mod_file(
+        self, mod_file_path: Path, file_type: FileType
+    ) -> Optional[ModFile]:
+        """
+        Gets the original mod file from the loaded mod instance. Base game files are
+        taken from the game's "Data" folder as they are not part of any mod.
+
+        Args:
+            mod_file_path (Path): Path of the mod file.
+            file_type (FileType): Type of the mod file.
+
+        Returns:
+            Optional[ModFile]: The original mod file if it is available.
         """
 
         if self.__mod_instance is None:
             return None
 
-        original_mod_file: Optional[ModFile] = self.__mod_instance.get_modfile(
+        mod_file: Optional[ModFile] = self.__mod_instance.get_modfile(
             mod_file_path,
             ignore_states=[
                 state
@@ -297,10 +414,15 @@ class ContextBuilder(QObject):
             ],
         )
 
-        if original_mod_file is None:
-            return None
+        game_folder: Optional[Path] = self.__mod_instance.game_folder
+        if mod_file is None and game_folder is not None:
+            base_game_file_path: Path = game_folder / "Data" / mod_file_path
+            if base_game_file_path.is_file():
+                mod_file = file_type.get_file_type_cls()(
+                    name=base_game_file_path.name, full_path=base_game_file_path
+                )
 
-        return original_mod_file.get_context(string)
+        return mod_file
 
     def __get_choices(self) -> dict[FuzzyKey, str]:
         """

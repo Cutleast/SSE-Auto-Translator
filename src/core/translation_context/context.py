@@ -2,8 +2,6 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
-
 from pydantic import BaseModel
 
 from core.mod_file.context import ModFileContext
@@ -19,5 +17,8 @@ class TranslationContext(BaseModel, frozen=True):
     similar_strings: list[SimilarString]
     """A list of similar strings."""
 
-    mod_file_context: Optional[ModFileContext]
-    """The mod file-specific context, if available."""
+    mod_file_context: ModFileContext
+    """The mod file-specific context."""
+
+    placeholders: list[str]
+    """Placeholders and markup in the original string that have to be kept."""
