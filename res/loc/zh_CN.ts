@@ -418,22 +418,22 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>ContextWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="54"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="55"/>
         <source>Similarity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="62"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="63"/>
         <source>Source</source>
         <translation type="unfinished">来源</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="142"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="145"/>
         <source>Similar Strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/context_widget.py" line="187"/>
+        <location filename="src/ui/translation_editor/editor/context_widget.py" line="190"/>
         <source>Double click on a similar string above to apply its translation to the current string.</source>
         <translation type="unfinished"></translation>
     </message>

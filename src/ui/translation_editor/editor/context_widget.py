@@ -8,6 +8,7 @@ from typing import cast, override
 from cutleast_core_lib.core.utilities.truncate import raw_string
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.utilities.column_config import (
     ColumnConfig,
     ColumnEnum,
@@ -126,6 +127,8 @@ class ContextWidget(QWidget):
             )
         )
 
+        ThemeManager.get().theme_changed.connect(self.__on_theme_changed)
+
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
         self.__vlayout.setContentsMargins(0, 0, 0, 0)
@@ -203,6 +206,10 @@ class ContextWidget(QWidget):
             "similar_strings_section", self.__similar_strings_section
         )
 
+    def __on_theme_changed(self, theme: Theme) -> None:
+        for item in self.__similar_strings_items.values():
+            item.update()
+
     def set_context(self, context: TranslationContext) -> None:
         """
         Sets the currently displayed translation context.
@@ -221,6 +228,7 @@ class ContextWidget(QWidget):
         for similar_string in context.similar_strings:
             item = TreeItem(similar_string, ContextWidget.SimilarStringColumns)
             self.__similar_strings_widget.addTopLevelItem(item)
+            self.__similar_strings_items[similar_string] = item
 
     def clear(self) -> None:
         """
