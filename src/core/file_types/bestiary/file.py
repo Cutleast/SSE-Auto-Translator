@@ -7,6 +7,7 @@ from enum import Enum, auto
 from pathlib import Path
 from typing import Any, BinaryIO, ClassVar, Optional, TypeAlias, override
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from pydantic import TypeAdapter, ValidationError
 from PySide6.QtWidgets import QApplication
 
@@ -350,7 +351,7 @@ class BestiaryFile(ModFile):
         mod_file_path: Path,
         strings: StringList,
         all_strings: dict[Path, StringList],
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         # Each creature has its own folder containing its entry file and its loot file.
         folder_strings: list[tuple[Path, BestiaryString]] = [
             (path, string)
@@ -360,7 +361,7 @@ class BestiaryFile(ModFile):
             if isinstance(string, BestiaryString)
         ]
 
-        contexts: dict[String, ModFileContext] = {}
+        contexts: ReferenceDict[String, ModFileContext] = ReferenceDict()
         for string in strings:
             if isinstance(string, BestiaryString):
                 contexts[string] = BestiaryFile.__get_string_context(

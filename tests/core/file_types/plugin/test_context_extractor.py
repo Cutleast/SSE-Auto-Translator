@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pytest
 from bethkit import Game, PluginWriter, WritableGroup, WritableRecord
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 
 from core.file_types.plugin.file import PluginFile
 from core.file_types.plugin.string import PluginString
@@ -216,7 +217,7 @@ class TestPluginContextExtractor:
             [all_strings, TestPluginContextExtractor.VANILLA_STRINGS]
         )
 
-        contexts: dict[String, ModFileContext] = plugin_file.get_contexts(
+        contexts: ReferenceDict[String, ModFileContext] = plugin_file.get_contexts(
             strings, all_strings, resolver
         )
 
@@ -392,7 +393,7 @@ class TestPluginContextExtractor:
         all_strings: dict[Path, StringList] = {Path(plugin_path.name): [string]}
 
         # when
-        contexts: dict[String, ModFileContext] = plugin_file.get_contexts(
+        contexts: ReferenceDict[String, ModFileContext] = plugin_file.get_contexts(
             [string], all_strings, ReferenceResolver([all_strings])
         )
 

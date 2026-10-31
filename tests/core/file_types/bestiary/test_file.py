@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from pathlib import Path
 
 import pytest
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 
 from core.file_types.bestiary.file import BestiaryFile
 from core.file_types.bestiary.string import BestiaryString
@@ -281,8 +282,8 @@ class TestBestiaryFile(CoreTest):
         }
 
         # when
-        contexts: dict[String, ModFileContext] = BestiaryFile.get_string_contexts(
-            loot_path, [first_loot], all_strings
+        contexts: ReferenceDict[String, ModFileContext] = (
+            BestiaryFile.get_string_contexts(loot_path, [first_loot], all_strings)
         )
 
         # then

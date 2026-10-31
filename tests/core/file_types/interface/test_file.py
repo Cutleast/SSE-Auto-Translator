@@ -4,6 +4,8 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+
 from core.file_types.interface.file import InterfaceFile
 from core.file_types.interface.string import InterfaceString
 from core.mod_file.context import ModFileContext
@@ -28,8 +30,10 @@ class TestInterfaceFile:
         ]
 
         # when
-        contexts: dict[String, ModFileContext] = InterfaceFile.get_string_contexts(
-            mod_file_path, strings, {mod_file_path: strings}
+        contexts: ReferenceDict[String, ModFileContext] = (
+            InterfaceFile.get_string_contexts(
+                mod_file_path, strings, {mod_file_path: strings}
+            )
         )
 
         # then

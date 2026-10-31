@@ -9,6 +9,7 @@ from typing import Optional, TypeAlias
 
 import numpy as np
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
 from rapidfuzz import process, utils
@@ -95,7 +96,7 @@ class ContextBuilder(QObject):
 
     def build_context(
         self, strings: dict[Path, StringList], pdisplay: Optional[ProgressDisplay] = None
-    ) -> dict[String, TranslationContext]:
+    ) -> ReferenceDict[String, TranslationContext]:
         """
         Builds translation contexts for all strings of a translation.
 
@@ -109,7 +110,7 @@ class ContextBuilder(QObject):
             TaskCancelledError: If the operation is cancelled.
 
         Returns:
-            dict[String, TranslationContext]:
+            ReferenceDict[String, TranslationContext]:
                 Dictionary with translation contexts for each string.
         """
 
@@ -120,7 +121,7 @@ class ContextBuilder(QObject):
         strings: dict[Path, StringList],
         all_strings: dict[Path, StringList],
         pdisplay: Optional[ProgressDisplay] = None,
-    ) -> dict[String, TranslationContext]:
+    ) -> ReferenceDict[String, TranslationContext]:
         """
         Builds translation contexts for multiple strings.
 
@@ -136,7 +137,7 @@ class ContextBuilder(QObject):
             TaskCancelledError: If the operation is cancelled.
 
         Returns:
-            dict[String, TranslationContext]:
+            ReferenceDict[String, TranslationContext]:
                 Dictionary with translation contexts for each string.
         """
 
@@ -149,7 +150,7 @@ class ContextBuilder(QObject):
         ]
 
         if not items:
-            return {}
+            return ReferenceDict()
 
         choices: dict[FuzzyKey, str] = self.__get_choices()
         query_strings: list[String] = [
@@ -157,11 +158,11 @@ class ContextBuilder(QObject):
             for string in items
             if len(string.original) <= ContextBuilder.MAX_FUZZY_LENGTH
         ]
-        similar_strings: dict[String, list[SimilarString]] = self.__search_similar_batch(
-            query_strings, choices, pdisplay
+        similar_strings: ReferenceDict[String, list[SimilarString]] = (
+            self.__search_similar_batch(query_strings, choices, pdisplay)
         )
 
-        mod_file_contexts: dict[String, ModFileContext] = {}
+        mod_file_contexts: ReferenceDict[String, ModFileContext] = ReferenceDict()
         for index, (mod_file_path, mod_file_strings) in enumerate(
             strings.items(), start=1
         ):
@@ -180,7 +181,7 @@ class ContextBuilder(QObject):
                     )
                 )
 
-        result: dict[String, TranslationContext] = {}
+        result: ReferenceDict[String, TranslationContext] = ReferenceDict()
         for string in items:
             result[string] = TranslationContext(
                 similar_strings=similar_strings.get(string, []),
@@ -201,7 +202,7 @@ class ContextBuilder(QObject):
         strings: list[String],
         choices: dict[FuzzyKey, str],
         pdisplay: Optional[ProgressDisplay] = None,
-    ) -> dict[String, list[SimilarString]]:
+    ) -> ReferenceDict[String, list[SimilarString]]:
         """
         Searches similar strings in cancellable batches.
 
@@ -217,7 +218,7 @@ class ContextBuilder(QObject):
                 If the operation is cancelled through the progress display.
 
         Returns:
-            dict[String, list[SimilarString]]:
+            ReferenceDict[String, list[SimilarString]]:
                 Up to five similar strings for each query.
         """
 
@@ -233,7 +234,7 @@ class ContextBuilder(QObject):
         choice_keys: list[FuzzyKey] = list(processed_choices)
         choice_values: list[str] = list(processed_choices.values())
 
-        result: dict[String, list[SimilarString]] = {}
+        result: ReferenceDict[String, list[SimilarString]] = ReferenceDict()
         total: int = len(strings)
 
         if pdisplay is not None:
@@ -319,7 +320,7 @@ class ContextBuilder(QObject):
         mod_file_path: Path,
         strings: StringList,
         all_strings: dict[Path, StringList],
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         """
         Gets the mod file-specific contexts for strings of a single mod file. Reads the
         original mod file for additional context if it is available in the mod instance
@@ -332,7 +333,7 @@ class ContextBuilder(QObject):
                 All strings of the edited translation per mod file path.
 
         Returns:
-            dict[String, ModFileContext]: The context for each string.
+            ReferenceDict[String, ModFileContext]: The context for each string.
         """
 
         file_type: Optional[FileType] = next(
@@ -344,7 +345,7 @@ class ContextBuilder(QObject):
             None,
         )
         if file_type is None:
-            return {}
+            return ReferenceDict()
 
         original_mod_file: Optional[ModFile] = self.__get_original_mod_file(
             mod_file_path, file_type

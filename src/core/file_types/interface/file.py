@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import BinaryIO, ClassVar, Optional, override
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from PySide6.QtWidgets import QApplication
 
 from core.file_source.file_source_factory import FileSourceFactory
@@ -97,7 +98,7 @@ class InterfaceFile(ModFile):
         mod_file_path: Path,
         strings: StringList,
         all_strings: dict[Path, StringList],
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         # Entries are usually grouped by MCM page and option, which makes the adjacent
         # entries the most helpful context.
         file_strings: StringList = all_strings.get(mod_file_path, strings)
@@ -106,7 +107,7 @@ class InterfaceFile(ModFile):
         }
         string_kind: str = QApplication.translate("InterfaceFile", "Interface text")
 
-        contexts: dict[String, ModFileContext] = {}
+        contexts: ReferenceDict[String, ModFileContext] = ReferenceDict()
         for string in strings:
             related_strings: list[RelatedString] = []
             index: Optional[int] = indexes.get(string.id)

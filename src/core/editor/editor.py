@@ -10,6 +10,7 @@ from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
@@ -47,7 +48,7 @@ class Editor(QObject):
     __strings_cache: dict[Path, StringList]
     """Stores a deep copy of the strings in the translation."""
 
-    __context_cache: dict[String, TranslationContext]
+    __context_cache: ReferenceDict[String, TranslationContext]
 
     __changes_pending: bool
 
@@ -81,7 +82,7 @@ class Editor(QObject):
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
-        self.__context_cache = {}
+        self.__context_cache = ReferenceDict()
 
         self.__changes_pending = False
 

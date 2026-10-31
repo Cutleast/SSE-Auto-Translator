@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from pydantic import BaseModel
 
 from core.file_source.file_source_factory import FileSourceFactory
@@ -129,7 +130,7 @@ class ModFile(BaseModel, metaclass=ABCMeta):
         mod_file_path: Path,
         strings: StringList,
         all_strings: dict[Path, StringList],
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         """
         Builds the mod file-specific context that can be derived from the strings alone,
         without reading the mod file itself.
@@ -143,7 +144,7 @@ class ModFile(BaseModel, metaclass=ABCMeta):
                 All strings of the edited translation per mod file path.
 
         Returns:
-            dict[String, ModFileContext]: The context for each string.
+            ReferenceDict[String, ModFileContext]: The context for each string.
         """
 
     def get_contexts(
@@ -151,7 +152,7 @@ class ModFile(BaseModel, metaclass=ABCMeta):
         strings: StringList,
         all_strings: dict[Path, StringList],
         resolver: ReferenceResolver,
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         """
         Builds the mod file-specific context for strings of this mod file. Subclasses may
         read the mod file for additional context.
@@ -164,7 +165,7 @@ class ModFile(BaseModel, metaclass=ABCMeta):
                 Resolver for records referenced by the mod file.
 
         Returns:
-            dict[String, ModFileContext]: The context for each string.
+            ReferenceDict[String, ModFileContext]: The context for each string.
         """
 
         return self.get_string_contexts(self.path, strings, all_strings)

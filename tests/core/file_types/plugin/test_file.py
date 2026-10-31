@@ -7,6 +7,7 @@ from struct import pack
 from typing import cast
 
 from bethkit import Game, PluginWriter, WritableGroup, WritableRecord
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 
 from core.file_types.plugin.file import PluginFile
 from core.file_types.plugin.string import PluginString
@@ -243,7 +244,7 @@ class TestPluginFile(BaseTest):
         strings: StringList = [name, description, other_record]
 
         # when
-        contexts: dict[String, ModFileContext] = PluginFile.get_string_contexts(
+        contexts: ReferenceDict[String, ModFileContext] = PluginFile.get_string_contexts(
             mod_file_path, [description], {mod_file_path: strings}
         )
 
@@ -275,7 +276,7 @@ class TestPluginFile(BaseTest):
         strings: StringList = [quest_name, *entries]
 
         # when
-        contexts: dict[String, ModFileContext] = PluginFile.get_string_contexts(
+        contexts: ReferenceDict[String, ModFileContext] = PluginFile.get_string_contexts(
             mod_file_path, [entries[10]], {mod_file_path: strings}
         )
 

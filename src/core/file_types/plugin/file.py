@@ -20,6 +20,7 @@ from bethkit import (
     StringIdentity,
     StringReference,
 )
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.core.utilities.typing_utils import not_none
 
 from core.database.translation_service import TranslationService
@@ -333,8 +334,8 @@ class PluginFile(ModFile):
         strings: StringList,
         all_strings: dict[Path, StringList],
         resolver: ReferenceResolver,
-    ) -> dict[String, ModFileContext]:
-        contexts: dict[String, ModFileContext] = self.get_string_contexts(
+    ) -> ReferenceDict[String, ModFileContext]:
+        contexts: ReferenceDict[String, ModFileContext] = self.get_string_contexts(
             self.path, strings, all_strings
         )
         requested_strings: list[PluginString] = [
@@ -410,13 +411,13 @@ class PluginFile(ModFile):
         mod_file_path: Path,
         strings: StringList,
         all_strings: dict[Path, StringList],
-    ) -> dict[String, ModFileContext]:
+    ) -> ReferenceDict[String, ModFileContext]:
         records: dict[str, list[PluginString]] = {}
         for string in all_strings.get(mod_file_path, strings):
             if isinstance(string, PluginString):
                 records.setdefault(string.record_id, []).append(string)
 
-        contexts: dict[String, ModFileContext] = {}
+        contexts: ReferenceDict[String, ModFileContext] = ReferenceDict()
         for string in strings:
             if not isinstance(string, PluginString):
                 continue
