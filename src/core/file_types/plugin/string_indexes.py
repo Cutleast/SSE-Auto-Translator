@@ -17,6 +17,11 @@ class StringIndexes:
     Entries that are otherwise identical within a stage are numbered by occurrence.
     """
 
+    INDEXED_SIGNATURES: frozenset[bytes] = frozenset(
+        {b"INFO", b"QUST", b"PERK", b"MESG"}
+    )
+    """Record types whose strings carry a repetition index."""
+
     __form_id: Optional[int]
     __indexes: dict[int, int]
 
@@ -36,22 +41,29 @@ class StringIndexes:
             Optional[int]: Index, or None for a non-repeated string.
         """
 
-        if record.signature not in [b"INFO", b"QUST", b"PERK", b"MESG"]:
-            return None
-
-        if self.__form_id != record.form_id:
-            self.__indexes = StringIndexes.__scan(record)
-            self.__form_id = record.form_id
+        form_id: int = record.form_id
+        if self.__form_id != form_id:
+            record_signature: bytes = record.signature
+            self.__indexes = (
+                StringIndexes.__scan(record, record_signature)
+                if record_signature in StringIndexes.INDEXED_SIGNATURES
+                else {}
+            )
+            self.__form_id = form_id
 
         return self.__indexes.get(subrecord_index)
 
     @staticmethod
-    def __scan(record: Record) -> dict[int, int]:
+    def __scan(record: Record, record_signature: bytes) -> dict[int, int]:
         """
         Indexes repeated strings in a single pass through a record.
 
+        Subrecord signatures are copied in one native call; payloads are only read at
+        the positions whose content affects an index.
+
         Args:
             record (Record): Source record.
+            record_signature (bytes): Signature of the source record.
 
         Returns:
             dict[int, int]: String indexes keyed by subrecord position.
@@ -68,14 +80,13 @@ class StringIndexes:
         conditions: list[bytes] = []
         occurrences: dict[bytes, int] = {}
 
-        for position, subrecord in enumerate(record):
-            signature: bytes = subrecord.signature
-            match record.signature:
+        for position, signature in enumerate(record.subrecord_signatures()):
+            match record_signature:
                 case b"INFO":
                     match signature:
                         case b"TRDT":
                             response = int.from_bytes(
-                                subrecord.raw_bytes[12:13], "little"
+                                record.subrecord_at(position).raw_bytes[12:13], "little"
                             )
                         case b"NAM1":
                             indexes[position] = response
@@ -84,14 +95,14 @@ class StringIndexes:
                     match signature:
                         case b"INDX":
                             # Only the stage number; the stage flags are no identity.
-                            stage = subrecord.raw_bytes[:2]
+                            stage = record.subrecord_at(position).raw_bytes[:2]
                             conditions = []
                         case b"QSDT":
                             conditions = []
                         case b"CTDA":
-                            conditions.append(subrecord.raw_bytes)
+                            conditions.append(record.subrecord_at(position).raw_bytes)
                         case b"CIS1" | b"CIS2" if conditions:
-                            data: bytes = subrecord.raw_bytes
+                            data: bytes = record.subrecord_at(position).raw_bytes
                             conditions[-1] += (
                                 signature + len(data).to_bytes(4, "little") + data
                             )
@@ -113,7 +124,9 @@ class StringIndexes:
                             )
                         case b"QOBJ":
                             objective = int.from_bytes(
-                                subrecord.raw_bytes[:2], "little", signed=True
+                                record.subrecord_at(position).raw_bytes[:2],
+                                "little",
+                                signed=True,
                             )
                         case b"NNAM":
                             indexes[position] = objective
@@ -121,14 +134,16 @@ class StringIndexes:
                 case b"PERK":
                     if pending_button is not None and signature == b"EPF3":
                         indexes[pending_button] = int.from_bytes(
-                            subrecord.raw_bytes[2:], "little"
+                            record.subrecord_at(position).raw_bytes[2:], "little"
                         )
 
                     pending_button = None
 
                     match signature:
                         case b"EPFT":
-                            perk_type = int.from_bytes(subrecord.raw_bytes[:1], "little")
+                            perk_type = int.from_bytes(
+                                record.subrecord_at(position).raw_bytes[:1], "little"
+                            )
                         case b"EPFD":
                             indexes[position] = perk_text
                             if perk_type == 7:

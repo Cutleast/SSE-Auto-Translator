@@ -45,10 +45,11 @@ def is_camel_case(text: str) -> bool:
     if len(text) < 3:
         return False
 
+    # The C-level checks run first so that most texts never reach the generator.
     return (
-        any(char.isupper() and char.isalpha() for char in text[2:])
+        text.isalnum()
         and not text.isupper()
-        and text.isalnum()
+        and any(char.isupper() and char.isalpha() for char in text[2:])
     )
 
 
@@ -86,4 +87,7 @@ def is_valid_string(text: str) -> bool:
     if is_camel_case(text) or is_snake_case(text):
         return False
 
-    return all(char.isprintable() or char in CHAR_WHITELIST for char in text)
+    # Fully printable texts are accepted without checking each character in Python.
+    return text.isprintable() or all(
+        char.isprintable() or char in CHAR_WHITELIST for char in text
+    )
