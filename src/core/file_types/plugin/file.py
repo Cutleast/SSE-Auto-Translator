@@ -143,6 +143,16 @@ class PluginFile(ModFile):
 
         indexes = StringIndexes()
         seen_ids: set[str] = set()
+        masters: list[str] = plugin.masters
+
+        # Strings arrive grouped by record, so record metadata is read only once per
+        # record instead of once per string.
+        record_form_id: Optional[int] = None
+        record: Optional[Record] = None
+        record_type: str = ""
+        editor_id: Optional[str] = None
+        subrecord_signatures: tuple[bytes, ...] = ()
+
         for reference in plugin.iter_strings(context, preserve_opaque_nontext=True):
             text: Optional[str] = reference.text
             if reference.string_id is not None:
@@ -152,25 +162,27 @@ class PluginFile(ModFile):
                 continue
 
             identity: StringIdentity = reference.identity
-            record: Record = not_none(plugin.find_record(identity.form_id))
+            if record is None or identity.form_id != record_form_id:
+                record = not_none(plugin.find_record(identity.form_id))
+                record_form_id = identity.form_id
+                record_type = record.signature.decode("ascii")
+                editor_id = record.editor_id
+                subrecord_signatures = record.subrecord_signatures()
 
             master_index: int = identity.form_id >> 24
             master: str = (
-                plugin.masters[master_index]
-                if master_index < len(plugin.masters)
-                else self.name
+                masters[master_index] if master_index < len(masters) else self.name
             )
 
-            record_type: str = record.signature.decode("ascii")
-            subrecord_type: str = record.subrecord_at(
-                identity.subrecord_index
-            ).signature.decode("ascii")
+            subrecord_type: str = subrecord_signatures[identity.subrecord_index].decode(
+                "ascii"
+            )
             string_type: str = f"{record_type} {subrecord_type}"
             if string_type in IGNORED_STRING_TYPES:
                 continue
 
             string = PluginString(
-                editor_id=record.editor_id,
+                editor_id=editor_id,
                 form_id=f"{identity.form_id:08X}|{master}",
                 index=indexes.get(record, identity.subrecord_index),
                 type=string_type,
