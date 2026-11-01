@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import string
+import unicodedata
 from pathlib import Path
 from typing import Optional
 
@@ -75,9 +76,7 @@ class SpellCheckEdit(QPlainTextEdit):
 
             for sug in reversed(self.__checker.get_suggestions(word)):
                 action = QAction(sug)
-                action.triggered.connect(
-                    lambda _, s=sug: self.__replace_word(cursor, s)
-                )
+                action.triggered.connect(lambda _, s=sug: self.__replace_word(cursor, s))
                 menu.insertAction(menu.actions()[0], action)
 
         menu.exec(self.mapToGlobal(point))
@@ -85,7 +84,7 @@ class SpellCheckEdit(QPlainTextEdit):
     def __on_text_changed(self) -> None:
         text: str = self.toPlainText()
 
-        if not text or text[-1:] not in string.punctuation + string.whitespace:
+        if not text or not SpellCheckEdit.__is_separator(text[-1]):
             return
 
         # block textChanged signal to avoid recursion
@@ -99,7 +98,7 @@ class SpellCheckEdit(QPlainTextEdit):
         text: str = self.toPlainText()
 
         for word in text.split():
-            stripped: str = word.strip(string.punctuation + string.whitespace)
+            stripped: str = SpellCheckEdit.__strip_separators(word)
             pos: int = text.find(stripped, cursor.position())
 
             if pos == -1:
@@ -124,6 +123,48 @@ class SpellCheckEdit(QPlainTextEdit):
     def __replace_word(self, cursor: QTextCursor, suggestion: str) -> None:
         cursor.insertText(suggestion)
         self.setTextCursor(cursor)
+
+    @staticmethod
+    def __is_separator(char: str) -> bool:
+        """
+        Checks whether a character separates words for spell checking.
+
+        Besides ASCII punctuation and whitespace, this includes all Unicode
+        punctuation, for example typographic quotes like '„', '“' and '»'.
+
+        Args:
+            char (str): Single character to check.
+
+        Returns:
+            bool: Whether the character is punctuation or whitespace.
+        """
+
+        return (
+            char in string.punctuation
+            or char.isspace()
+            or unicodedata.category(char).startswith("P")
+        )
+
+    @staticmethod
+    def __strip_separators(word: str) -> str:
+        """
+        Removes leading and trailing separators from a word.
+
+        Args:
+            word (str): Word to strip.
+
+        Returns:
+            str: The word without surrounding punctuation and whitespace.
+        """
+
+        start: int = 0
+        end: int = len(word)
+        while start < end and SpellCheckEdit.__is_separator(word[start]):
+            start += 1
+        while end > start and SpellCheckEdit.__is_separator(word[end - 1]):
+            end -= 1
+
+        return word[start:end]
 
     def __add_word_to_dictionary(self, word: str) -> None:
         self.__checker.add_word_to_dictionary(word)
