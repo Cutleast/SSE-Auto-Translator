@@ -151,6 +151,7 @@ class PluginFile(ModFile):
         record: Optional[Record] = None
         record_type: str = ""
         editor_id: Optional[str] = None
+        editor_id_loaded: bool = False
         subrecord_signatures: tuple[bytes, ...] = ()
 
         for reference in plugin.iter_strings(context, preserve_opaque_nontext=True):
@@ -166,7 +167,7 @@ class PluginFile(ModFile):
                 record = not_none(plugin.find_record(identity.form_id))
                 record_form_id = identity.form_id
                 record_type = record.signature.decode("ascii")
-                editor_id = record.editor_id
+                editor_id_loaded = False
                 subrecord_signatures = record.subrecord_signatures()
 
             master_index: int = identity.form_id >> 24
@@ -180,6 +181,12 @@ class PluginFile(ModFile):
             string_type: str = f"{record_type} {subrecord_type}"
             if string_type in IGNORED_STRING_TYPES:
                 continue
+
+            # The editor ID is only read for records with strings that are not ignored,
+            # so an undecodable editor ID of an ignored record cannot fail extraction.
+            if not editor_id_loaded:
+                editor_id = record.editor_id
+                editor_id_loaded = True
 
             string = PluginString(
                 editor_id=editor_id,
