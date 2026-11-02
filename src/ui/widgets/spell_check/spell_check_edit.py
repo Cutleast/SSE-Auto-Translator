@@ -2,7 +2,9 @@
 Copyright (c) Cutleast
 """
 
+import re
 import string
+import unicodedata
 from pathlib import Path
 from typing import Optional
 
@@ -23,6 +25,13 @@ class SpellCheckEdit(QPlainTextEdit):
 
     CURSOR_Y_OFFSET = 9
     """Y-offset to adjust for mouse click hotspot."""
+
+    WORD_PATTERN: re.Pattern[str] = re.compile(r"\w+(?:['’-]\w+)*")
+    """
+    Matches a single word to spell check. Any punctuation separates words, except
+    apostrophes and hyphens between letters, so that "„Wort“,„Zwei“" yields two
+    words while "don't" and "E-Mail" stay whole.
+    """
 
     __checker: SpellChecker
 
@@ -75,9 +84,7 @@ class SpellCheckEdit(QPlainTextEdit):
 
             for sug in reversed(self.__checker.get_suggestions(word)):
                 action = QAction(sug)
-                action.triggered.connect(
-                    lambda _, s=sug: self.__replace_word(cursor, s)
-                )
+                action.triggered.connect(lambda _, s=sug: self.__replace_word(cursor, s))
                 menu.insertAction(menu.actions()[0], action)
 
         menu.exec(self.mapToGlobal(point))
@@ -85,7 +92,7 @@ class SpellCheckEdit(QPlainTextEdit):
     def __on_text_changed(self) -> None:
         text: str = self.toPlainText()
 
-        if not text or text[-1:] not in string.punctuation + string.whitespace:
+        if not text or not SpellCheckEdit.__is_separator(text[-1]):
             return
 
         # block textChanged signal to avoid recursion
@@ -93,30 +100,49 @@ class SpellCheckEdit(QPlainTextEdit):
             self.__apply_spell_check()
 
     def __apply_spell_check(self) -> None:
+        """
+        Underlines every misspelled word and removes outdated underlines.
+        """
+
         cursor: QTextCursor = self.textCursor()
-        cursor.setPosition(0)
 
-        text: str = self.toPlainText()
+        # Reset all formats first, so that separators never keep an old underline.
+        cursor.select(QTextCursor.SelectionType.Document)
+        cursor.setCharFormat(QTextCharFormat())
 
-        for word in text.split():
-            stripped: str = word.strip(string.punctuation + string.whitespace)
-            pos: int = text.find(stripped, cursor.position())
+        error_format = QTextCharFormat()
+        error_format.setUnderlineColor(Qt.GlobalColor.red)
+        error_format.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
 
-            if pos == -1:
+        for match in SpellCheckEdit.WORD_PATTERN.finditer(self.toPlainText()):
+            if self.__checker.is_correct(match.group()):
                 continue
 
-            cursor.setPosition(pos)
-            cursor.select(QTextCursor.SelectionType.WordUnderCursor)
-
-            fmt = QTextCharFormat()
-            if not self.__checker.is_correct(stripped):
-                fmt.setUnderlineColor(Qt.GlobalColor.red)
-                fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
-
-            cursor.setCharFormat(fmt)
+            cursor.setPosition(match.start())
+            cursor.setPosition(match.end(), QTextCursor.MoveMode.KeepAnchor)
+            cursor.setCharFormat(error_format)
 
     def __get_word_at_point(self, point: QPoint) -> tuple[str, QTextCursor]:
+        """
+        Gets the word at a widget position, using the same word boundaries as the
+        spell check.
+
+        Args:
+            point (QPoint): Position in widget coordinates.
+
+        Returns:
+            tuple[str, QTextCursor]: The word and a cursor selecting it.
+        """
+
         cursor: QTextCursor = self.cursorForPosition(point)
+        position: int = cursor.position()
+
+        for match in SpellCheckEdit.WORD_PATTERN.finditer(self.toPlainText()):
+            if match.start() <= position <= match.end():
+                cursor.setPosition(match.start())
+                cursor.setPosition(match.end(), QTextCursor.MoveMode.KeepAnchor)
+                return match.group(), cursor
+
         cursor.select(QTextCursor.SelectionType.WordUnderCursor)
 
         return cursor.selectedText(), cursor
@@ -124,6 +150,27 @@ class SpellCheckEdit(QPlainTextEdit):
     def __replace_word(self, cursor: QTextCursor, suggestion: str) -> None:
         cursor.insertText(suggestion)
         self.setTextCursor(cursor)
+
+    @staticmethod
+    def __is_separator(char: str) -> bool:
+        """
+        Checks whether a character separates words for spell checking.
+
+        Besides ASCII punctuation and whitespace, this includes all Unicode
+        punctuation, for example typographic quotes like '„', '“' and '»'.
+
+        Args:
+            char (str): Single character to check.
+
+        Returns:
+            bool: Whether the character is punctuation or whitespace.
+        """
+
+        return (
+            char in string.punctuation
+            or char.isspace()
+            or unicodedata.category(char).startswith("P")
+        )
 
     def __add_word_to_dictionary(self, word: str) -> None:
         self.__checker.add_word_to_dictionary(word)
