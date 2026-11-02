@@ -1,0 +1,342 @@
+name: Publish release
+
+# Publishes a tagged release:
+#   1. Validates the tag and determines the branch it was created on.
+#   2. Builds and verifies the release archive.
+#   3. Uploads stable releases as a new version of the existing Nexus Mods file
+#      (no Nexus Mods changelog entry; the file description links the changelog).
+#   4. Creates the GitHub Release (prereleases are only published there).
+#   5. Commits update.json with the new version and Nexus Mods file ID to the tag's
+#      branch. The application reads update.json from the default branch, so users
+#      are offered the update once that branch is merged into it.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to publish (e.g. v3.2.7)"
+        type: string
+        required: true
+      build_run_id:
+        description: "Run ID of a successful build of this tag to reuse (blank rebuilds)"
+        type: string
+        required: false
+
+permissions:
+  contents: read
+  # Required to reuse the archive of an earlier run via `build_run_id`.
+  actions: read
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+  NEXUS_GAME_DOMAIN: skyrimspecialedition
+  NEXUS_MOD_ID: "111491"
+  # API file ID of the main file ("Advanced" > "File ID" on Nexus Mods). Every
+  # release is uploaded as a new version of this file.
+  NEXUS_FILE_ID: "3176167"
+  RELEASE_HELPER_DEPS: --with pydantic==2.13.4 --with semantic-version==2.10.0
+
+jobs:
+  prepare:
+    name: Validate release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      version: ${{ steps.metadata.outputs.version }}
+      tag: ${{ steps.metadata.outputs.tag }}
+      prerelease: ${{ steps.metadata.outputs.prerelease }}
+      display_name: ${{ steps.metadata.outputs.display_name }}
+      archive_path: ${{ steps.metadata.outputs.archive_path }}
+      archive_name: ${{ steps.metadata.outputs.archive_name }}
+      target_branch: ${{ steps.metadata.outputs.target_branch }}
+    steps:
+      - name: Check out tag with all branches
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+
+      - name: Validate tag, branch and changelog
+        id: metadata
+        run: |
+          commit="$(git rev-parse "refs/tags/${RELEASE_TAG}^{commit}")"
+          uv run --no-project --python 3.14 ${RELEASE_HELPER_DEPS} \
+            python -m scripts.release prepare \
+              --tag "${RELEASE_TAG}" \
+              --commit "${commit}" \
+              --default-branch "${{ github.event.repository.default_branch }}" \
+              --changes-file "${RUNNER_TEMP}/changes.md" \
+              --github-output "${GITHUB_OUTPUT}"
+
+      - name: Keep changelog section
+        uses: actions/upload-artifact@v5
+        with:
+          name: release-changes
+          path: ${{ runner.temp }}/changes.md
+          if-no-files-found: error
+          retention-days: 7
+
+  build:
+    name: Build release archive
+    needs: prepare
+    if: inputs.build_run_id == ''
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out tag and submodules
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+        with:
+          enable-cache: true
+
+      - name: Install locked dependencies
+        run: uv sync --locked
+
+      - name: Build release archive
+        shell: cmd
+        run: build.bat
+
+      - name: Verify release archive
+        run: >-
+          uv run python -m scripts.release verify-archive
+          --tag "${{ env.RELEASE_TAG }}"
+          --checksum-file dist/SHA256SUMS.txt
+
+      - name: Keep release archive
+        uses: actions/upload-artifact@v5
+        with:
+          name: release-archive
+          path: |
+            ${{ needs.prepare.outputs.archive_path }}
+            dist/SHA256SUMS.txt
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 30
+
+  nexus:
+    name: Publish to Nexus Mods
+    needs: [prepare, build]
+    if: >-
+      always() && !cancelled()
+      && needs.prepare.result == 'success'
+      && needs.prepare.outputs.prerelease == 'false'
+      && vars.NEXUS_UPLOAD_ENABLED == 'true'
+      && (needs.build.result == 'success'
+          || (needs.build.result == 'skipped' && inputs.build_run_id != ''))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    environment: nexus-production
+    concurrency:
+      group: nexus-upload
+      cancel-in-progress: false
+    outputs:
+      public_file_id: ${{ steps.lookup.outputs.public_file_id }}
+      download_url: ${{ steps.lookup.outputs.download_url }}
+    steps:
+      - name: Check out release helpers
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          sparse-checkout: scripts
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+
+      - name: Download verified release archive
+        uses: actions/download-artifact@v5
+        with:
+          name: release-archive
+          path: release
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.build_run_id || github.run_id }}
+
+      - name: Verify archive checksum
+        working-directory: release
+        run: sha256sum --check --strict SHA256SUMS.txt
+
+      - name: Check whether this version was already published
+        id: resolve
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+        run: >-
+          uv run --no-project --python 3.14 ${RELEASE_HELPER_DEPS}
+          python -m scripts.release nexus-resolve
+          --file-id "${NEXUS_FILE_ID}"
+          --version "${{ needs.prepare.outputs.version }}"
+          --github-output "${GITHUB_OUTPUT}"
+
+      - name: Upload new version of the Nexus Mods file
+        id: upload
+        if: steps.resolve.outputs.already_published != 'true'
+        uses: Nexus-Mods/upload-action@98532f7670c27cbecc78fae03fa3e278147827e2 # v1.0.0-beta.11
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ env.NEXUS_FILE_ID }}
+          filename: release/${{ needs.prepare.outputs.archive_name }}
+          version: ${{ needs.prepare.outputs.tag }}
+          display_name: ${{ needs.prepare.outputs.display_name }} ${{ needs.prepare.outputs.tag }}
+          description: "Please read the [url=https://docs.moddingforge.com/sse-at/quick_start.html]instructions[/url]![url=https://github.com/Cutleast/SSE-Auto-Translator/blob/master/Changelog.md]Changelog[/url]"
+          category: main
+          allow_mod_manager_download: true
+          show_requirements_pop_up: false
+          update_mod_version: true
+          archive_existing_version: false
+          # No `mod_id`/`changelog`: the Nexus Mods changelog is not maintained by
+          # this workflow.
+
+      - name: Look up public file ID of the new version
+        id: lookup
+        env:
+          NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+        run: >-
+          uv run --no-project --python 3.14 ${RELEASE_HELPER_DEPS}
+          python -m scripts.release nexus-lookup
+          --file-id "${NEXUS_FILE_ID}"
+          --version-id "${{ steps.upload.outputs.version_id || steps.resolve.outputs.version_id }}"
+          --version "${{ needs.prepare.outputs.tag }}"
+          --game-domain "${NEXUS_GAME_DOMAIN}"
+          --mod-id "${NEXUS_MOD_ID}"
+          --github-output "${GITHUB_OUTPUT}"
+
+  github-release:
+    name: Publish GitHub Release
+    needs: [prepare, build, nexus]
+    if: >-
+      always() && !cancelled()
+      && needs.prepare.result == 'success'
+      && (needs.nexus.result == 'success'
+          || (needs.prepare.outputs.prerelease == 'true' && needs.build.result == 'success'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out release helpers
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          sparse-checkout: scripts
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+
+      - name: Download changelog section
+        uses: actions/download-artifact@v5
+        with:
+          name: release-changes
+          path: ${{ runner.temp }}
+
+      - name: Download verified release archive
+        uses: actions/download-artifact@v5
+        with:
+          name: release-archive
+          path: release
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.build_run_id || github.run_id }}
+
+      - name: Create release notes
+        run: >-
+          uv run --no-project --python 3.14 ${RELEASE_HELPER_DEPS}
+          python -m scripts.release notes
+          --changes-file "${RUNNER_TEMP}/changes.md"
+          --download-url "${{ needs.nexus.outputs.download_url }}"
+          --notes-file "${RUNNER_TEMP}/release-notes.md"
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PRERELEASE: ${{ needs.prepare.outputs.prerelease }}
+        run: |
+          set -euo pipefail
+          flags=()
+          if [[ "${PRERELEASE}" == "true" ]]; then
+            flags+=(--prerelease --latest=false)
+          fi
+          if gh release view "${RELEASE_TAG}" > /dev/null 2>&1; then
+            gh release edit "${RELEASE_TAG}" --title "${RELEASE_TAG}" \
+              --notes-file "${RUNNER_TEMP}/release-notes.md" "${flags[@]}"
+          else
+            gh release create "${RELEASE_TAG}" --verify-tag --title "${RELEASE_TAG}" \
+              --notes-file "${RUNNER_TEMP}/release-notes.md" "${flags[@]}"
+          fi
+          gh release upload "${RELEASE_TAG}" release/*.zip release/SHA256SUMS.txt --clobber
+
+  update-json:
+    name: Update update.json on the release branch
+    needs: [prepare, nexus]
+    if: always() && !cancelled() && needs.nexus.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      TARGET_BRANCH: ${{ needs.prepare.outputs.target_branch }}
+      DOWNLOAD_URL: ${{ needs.nexus.outputs.download_url }}
+      PUBLIC_FILE_ID: ${{ needs.nexus.outputs.public_file_id }}
+    steps:
+      - name: Check out target branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.prepare.outputs.target_branch }}
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+
+      - name: Commit update.json to the target branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # The tagged commit only contains the previous update.json, because the new
+          # Nexus Mods file ID exists only after the upload. Retry if the branch moved.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "${TARGET_BRANCH}"
+            git reset --hard "origin/${TARGET_BRANCH}"
+
+            uv run --no-project --python 3.14 ${RELEASE_HELPER_DEPS} \
+              python -m scripts.release update-json \
+                --version "${RELEASE_TAG}" \
+                --download-url "${DOWNLOAD_URL}" \
+                --file-id "${PUBLIC_FILE_ID}"
+
+            git add -- update.json
+            if git diff --cached --quiet; then
+              echo "update.json is already up to date."
+              exit 0
+            fi
+
+            git commit -m "Update update.json for ${RELEASE_TAG}"
+            if git push origin "HEAD:${TARGET_BRANCH}"; then
+              echo "Committed update.json for ${RELEASE_TAG} to ${TARGET_BRANCH}." \
+                >> "${GITHUB_STEP_SUMMARY}"
+              exit 0
+            fi
+
+            echo "Push to ${TARGET_BRANCH} was rejected; retrying (${attempt}/5)."
+            sleep $((attempt * 5))
+          done
+
+          echo "Failed to push update.json to ${TARGET_BRANCH}." >&2
+          exit 1
