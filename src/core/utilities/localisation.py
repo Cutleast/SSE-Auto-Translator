@@ -21,6 +21,7 @@ class Language(Enum):
     Chinese = "zh_CN"
     English = "en_US"
     German = "de_DE"
+    Portuguese = "pt_BR"
     # Russian = "ru_RU"
 
 
