@@ -24,16 +24,16 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.string.placeholder_parser import PlaceholderParser
 from core.string.string_status import StringStatus
 from core.string.types import String
 from core.translation_context.context import TranslationContext
-from core.translation_context.related_string import RelatedString
+from core.translation_context.related import RelatedString
 from core.user_data.user_data_service import UserDataService
 from core.utilities.game_language import GameLanguage
+from core.utilities.text import Occurrences, get_placeholders
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
-from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
+from ui.widgets.spell_check_edit import SpellCheckEdit
 
 from .context_widget import ContextWidget
 
@@ -74,7 +74,6 @@ class TranslatorDialog(QWidget):
 
     __spell_check_language: Optional[GameLanguage]
     __current_string: Optional[String]
-    __placeholders: list[str]
     __current_index: int
     __strings_count: int
 
@@ -111,7 +110,6 @@ class TranslatorDialog(QWidget):
 
         self.__spell_check_language = spell_check_language
         self.__current_string = None
-        self.__placeholders = []
         self.__current_index = 0
         self.__strings_count = 0
 
@@ -147,7 +145,7 @@ class TranslatorDialog(QWidget):
 
     def __init_ui(self) -> None:
         self.setWindowFlags(Qt.WindowType.Window)
-        self.resize(1100, 600)
+        self.resize(1500, 800)
 
         self.__vlayout = QVBoxLayout()
         self.setLayout(self.__vlayout)
@@ -320,17 +318,17 @@ class TranslatorDialog(QWidget):
     def __update_placeholders(self) -> None:
         theme: Theme = ThemeManager.get().theme
         error_color: str = theme.resolve(theme.colors.error_fg)
-        original_counts: dict[str, int] = PlaceholderParser.count(
+        original_placeholders: Occurrences = get_placeholders(
             self.__current_string.original if self.__current_string is not None else ""
         )
-        translated_counts: dict[str, int] = PlaceholderParser.count(
+        translation_placeholders: Occurrences = get_placeholders(
             self.__translated_edit.toPlainText()
         )
 
         formatted_placeholders: list[str] = []
-        for placeholder in self.__placeholders:
-            original_count: int = original_counts.get(placeholder, 0)
-            translated_count: int = translated_counts.get(placeholder, 0)
+        for placeholder in original_placeholders:
+            original_count: int = original_placeholders.get(placeholder, 0)
+            translated_count: int = translation_placeholders.get(placeholder, 0)
 
             formatted_placeholder: str = (
                 f"{html.escape(placeholder)} ({translated_count}/{original_count})"
@@ -345,7 +343,7 @@ class TranslatorDialog(QWidget):
         self.__placeholders_label.setText(
             self.tr("Matching placeholders:") + " " + " | ".join(formatted_placeholders)
         )
-        self.__placeholders_label.setVisible(bool(self.__placeholders))
+        self.__placeholders_label.setVisible(bool(original_placeholders))
 
     def __reset_translation(self) -> None:
         if self.__current_string is not None:
@@ -445,7 +443,6 @@ class TranslatorDialog(QWidget):
 
         self.__context_widget.set_context(context)
 
-        self.__placeholders = context.placeholders
         self.__update_placeholders()
 
     def set_index(self, index: int) -> None:

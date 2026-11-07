@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import BinaryIO, ClassVar, Optional, override
 
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.typing_utils import coalesce
 from PySide6.QtWidgets import QApplication
 
 from core.file_source.file_source_factory import FileSourceFactory
@@ -13,7 +14,7 @@ from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.translation_context.related_string import RelatedString
+from core.translation_context.related import RelatedString
 
 from .string import InterfaceString
 
@@ -81,9 +82,7 @@ class InterfaceFile(ModFile):
         output_file.write_text(
             "\n".join(
                 [
-                    f"{string.mcm_id}\t{
-                        string.string if string.string is not None else string.original
-                    }"
+                    f"{string.mcm_id}\t{coalesce(string.string, string.original)}"
                     for string in strings
                     if isinstance(string, InterfaceString)
                 ]

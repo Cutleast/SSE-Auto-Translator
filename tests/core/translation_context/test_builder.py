@@ -7,6 +7,7 @@ from unittest.mock import MagicMock
 
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 
+from core.config.translator_config import TranslatorConfig
 from core.database.database import TranslationDatabase
 from core.file_types.plugin.string import PluginString
 from core.string.string_status import StringStatus
@@ -30,12 +31,13 @@ class TestContextBuilder:
         database = MagicMock(spec=TranslationDatabase)
         database.vanilla_translation.strings = {}
         database.user_translations = []
+        config = MagicMock(spec=TranslatorConfig)
         string = PluginString(
             form_id="05000833|Test.esp", type="WEAP FULL", original="Elite Wolf Bow"
         )
         strings: dict[Path, StringList] = {Path("Test.esp"): [string]}
         contexts: ReferenceDict[String, TranslationContext] = ContextBuilder(
-            database
+            database, config
         ).build_context(strings)
 
         # when

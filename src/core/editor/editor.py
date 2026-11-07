@@ -60,6 +60,7 @@ class Editor(QObject):
         language: GameLanguage,
         database: TranslationDatabase,
         mod_instance: Optional[ModInstance],
+        translator_config: TranslatorConfig,
         translator_service: TranslatorService,
     ) -> None:
         """
@@ -68,6 +69,7 @@ class Editor(QObject):
             language (GameLanguage): The language of the translation.
             database (TranslationDatabase): The translation database.
             mod_instance (Optional[ModInstance]): The loaded mod instance.
+            translator_config (TranslatorConfig): The translator configuration.
             translator_service (TranslatorService): The translator service.
         """
 
@@ -78,7 +80,9 @@ class Editor(QObject):
         self.__language = language
         self.__database = database
         self.__translator_service = translator_service
-        self.__context_builder = ContextBuilder(database, mod_instance)
+        self.__context_builder = ContextBuilder(
+            database, translator_config, mod_instance
+        )
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)

@@ -21,7 +21,7 @@ from bethkit import (
     StringReference,
 )
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
-from cutleast_core_lib.core.utilities.typing_utils import not_none
+from cutleast_core_lib.core.utilities.typing_utils import coalesce, not_none
 
 from core.database.translation_service import TranslationService
 from core.file_source.file_source_factory import FileSourceFactory
@@ -30,7 +30,7 @@ from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translation_context.reference_resolver import ReferenceResolver
-from core.translation_context.related_string import RelatedString
+from core.translation_context.related import RelatedString
 
 from .context_extractor import PluginContextExtractor
 from .string import PluginString
@@ -277,9 +277,7 @@ class PluginFile(ModFile):
                             f"Could not locate plugin string '{string.display_id}'."
                         )
 
-                    replacement: str = (
-                        string.string if string.string is not None else string.original
-                    )
+                    replacement: str = coalesce(string.string, string.original)
                     if replacement != reference.text:
                         editor.replace(reference, replacement)
 

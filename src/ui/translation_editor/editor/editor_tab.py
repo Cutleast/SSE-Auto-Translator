@@ -117,6 +117,7 @@ class EditorTab(QWidget):
             language=user_data.user_config.language,
             database=user_data.database,
             mod_instance=user_data.mod_instance,
+            translator_config=user_data.translator_config,
             translator_service=translator_service,
         )
         self.__editor.strings_changed.connect(self.__on_strings_changed)

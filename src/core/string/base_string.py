@@ -62,6 +62,13 @@ class BaseString(BaseModel, ABC):
             str: Localized information/attributes of this string.
         """
 
+    @property
+    @abstractmethod
+    def is_name(self) -> bool:
+        """
+        If this string is a name suitable for a glossary.
+        """
+
     @model_validator(mode="before")
     @classmethod
     def check_translated_string(cls, data: T) -> T:
