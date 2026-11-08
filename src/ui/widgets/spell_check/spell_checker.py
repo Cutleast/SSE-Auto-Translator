@@ -42,7 +42,9 @@ class SpellChecker:
     def is_correct(self, word: str) -> bool:
         """
         Checks if the specified word is correctly spelled.
-        Also returns `True` if no dictionary is loaded.
+        Also returns `True` if no dictionary is loaded or if the word contains
+        characters that the dictionary's encoding cannot represent, because such a
+        word cannot be checked against the dictionary.
 
         Args:
             word (str): The word to check.
@@ -51,12 +53,20 @@ class SpellChecker:
             bool: `True` if the word is correctly spelled, `False` otherwise.
         """
 
-        return self.__hunspell is None or self.__hunspell.spell(word)
+        if self.__hunspell is None:
+            return True
+
+        try:
+            return self.__hunspell.spell(word)
+        except UnicodeEncodeError:
+            self.log.debug(f"Skipping word that the dictionary cannot encode: '{word}'")
+            return True
 
     def get_suggestions(self, word: str) -> list[str]:
         """
         Gets a list of suggestions for the specified word.
-        Returns an empty list if no dictionary is loaded.
+        Returns an empty list if no dictionary is loaded or if the word contains
+        characters that the dictionary's encoding cannot represent.
 
         Args:
             word (str): The word to get suggestions for.
@@ -66,13 +76,18 @@ class SpellChecker:
         """
 
         if self.__hunspell:
-            return list(self.__hunspell.suggest(word))
+            try:
+                return list(self.__hunspell.suggest(word))
+            except UnicodeEncodeError:
+                return []
 
         return []
 
     def add_word_to_dictionary(self, word: str) -> None:
         """
         Adds a word to the custom user dictionary (persistently).
+        Words with characters that the dictionary's encoding cannot represent are
+        not added.
 
         Args:
             word (str): The word to add.
@@ -83,6 +98,16 @@ class SpellChecker:
 
         word = word.strip()
         if not word:
+            return
+
+        # Only persist words that the loaded dictionary can actually accept.
+        try:
+            self.__hunspell.add(word)
+        except UnicodeEncodeError:
+            self.log.warning(
+                f"Cannot add '{word}' to the user dictionary: the dictionary's "
+                "encoding cannot represent it."
+            )
             return
 
         if not self.__user_dic_path.is_file():
@@ -102,7 +127,6 @@ class SpellChecker:
             # Rewrite file with updated count
             content = f"{len(words)}\n" + "\n".join(sorted(words))
             self.__user_dic_path.write_text(content, encoding="utf-8")
-            self.__hunspell.add(word)
             self.log.debug(f"Added word '{word}' to user dictionary.")
 
     def __load_user_dictionary(self) -> None:
