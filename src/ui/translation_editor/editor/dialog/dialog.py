@@ -5,18 +5,27 @@ Copyright (c) Cutleast
 import html
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.debounce import debounce
+from cutleast_core_lib.core.utilities.typing_utils import coalesce, not_none
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.widgets.divider import Divider
+from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.help_label import HelpLabel
 from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
-from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
+from PySide6.QtCore import QSignalBlocker, Qt, Signal
+from PySide6.QtGui import (
+    QCloseEvent,
+    QKeySequence,
+    QShortcut,
+    QTextCharFormat,
+    QTextCursor,
+)
 from PySide6.QtWidgets import (
     QGroupBox,
     QHBoxLayout,
     QLabel,
-    QMessageBox,
     QPlainTextEdit,
     QPushButton,
     QSplitter,
@@ -24,18 +33,16 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from core.editor.models import EditorString
 from core.string.string_status import StringStatus
-from core.string.types import String
 from core.translation_context.context import TranslationContext
 from core.translation_context.related import RelatedString
-from core.user_data.user_data_service import UserDataService
-from core.utilities.game_language import GameLanguage
 from core.utilities.text import Occurrences, get_placeholders
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
-from ui.widgets.spell_check_edit import SpellCheckEdit
 
-from .context_widget import ContextWidget
+from .context import ContextWidget
+from .diagnostics_widget import DiagnosticsWidget
 
 
 class TranslatorDialog(QWidget):
@@ -43,14 +50,25 @@ class TranslatorDialog(QWidget):
     Dialog for translating single strings.
     """
 
-    finalize_requested = Signal(str, object)
+    text_changed = Signal(EditorString, str)
     """
-    Signal emitted when the user wants to finalize the current string.
-    
+    Signal emitted (debounced) when the user changed the translated text of a string.
+
     Args:
-        str: The translated text.
-        StringStatus: The translation status to apply.
+        EditorString: The string whose text was changed.
+        str: The new translated text.
     """
+
+    status_change_requested = Signal(StringStatus)
+    """
+    Signal emitted when the user selected another status for the current string.
+
+    Args:
+        StringStatus: The status to apply.
+    """
+
+    reset_requested = Signal()
+    """Signal emitted when the user wants to reset the current string."""
 
     prev_requested = Signal()
     """Signal emitted when the user wants to go to the previous string."""
@@ -72,10 +90,20 @@ class TranslatorDialog(QWidget):
         RelatedString: The related string to open.
     """
 
-    __spell_check_language: Optional[GameLanguage]
-    __current_string: Optional[String]
+    add_word_to_dict_requested = Signal(str)
+    """
+    Signal emitted when the user wants to add a word to the dictionary.
+
+    Args:
+        str: The word to add.
+    """
+
+    __current_string: Optional[EditorString]
     __current_index: int
     __strings_count: int
+    __loading_string: bool
+    __pending_text_string: Optional[EditorString]
+    __text_revision: int
 
     __vlayout: QVBoxLayout
 
@@ -88,30 +116,28 @@ class TranslatorDialog(QWidget):
     __translated_edit: QPlainTextEdit
     __placeholders_label: QLabel
 
+    __diagnostics_widget: DiagnosticsWidget
+
     __reset_button: QPushButton
     __api_translate_button: QPushButton
 
-    __finish_button: QPushButton
-    __cancel_button: QPushButton
+    __status_dropdown: EnumDropdown[StringStatus]
+    __close_button: QPushButton
 
     __complete_shortcut: QShortcut
     __incomplete_shortcut: QShortcut
     __no_required_shortcut: QShortcut
 
-    def __init__(self, spell_check_language: Optional[GameLanguage]) -> None:
-        """
-        Args:
-            spell_check_language (Optional[GameLanguage]):
-                The language to use for the spell checking in the translated text edit or
-                `None` to disable spell checking.
-        """
-
+    @override
+    def __init__(self) -> None:
         super().__init__()
 
-        self.__spell_check_language = spell_check_language
         self.__current_string = None
         self.__current_index = 0
         self.__strings_count = 0
+        self.__loading_string = False
+        self.__pending_text_string = None
+        self.__text_revision = 0
 
         self.__init_ui()
         self.__init_shortcuts()
@@ -124,21 +150,34 @@ class TranslatorDialog(QWidget):
         self.__context_widget.related_string_activated.connect(
             self.related_string_requested.emit
         )
+        self.__diagnostics_widget.replace_requested.connect(self.__replace)
+        self.__diagnostics_widget.insert_at_cursor_requested.connect(
+            self.__insert_at_cursor
+        )
+        self.__diagnostics_widget.add_to_dictionary_requested.connect(
+            self.__add_to_dictionary
+        )
         ThemeManager.get().theme_changed.connect(lambda *_: self.__update_placeholders())
         self.__translated_edit.textChanged.connect(lambda *_: self.__on_change())
-        self.__api_translate_button.clicked.connect(self.api_translate_requested.emit)
-        self.__reset_button.clicked.connect(self.__reset_translation)
-        self.__finish_button.clicked.connect(self.finish)
-        self.__cancel_button.clicked.connect(self.close)
+        self.__api_translate_button.clicked.connect(self.__on_api_translate_clicked)
+        self.__reset_button.clicked.connect(self.__on_reset_clicked)
+        self.__status_dropdown.currentValueChanged.connect(self.__on_status_selected)
+        self.__close_button.clicked.connect(self.close)
 
         self.__complete_shortcut.activated.connect(
-            lambda: self.__goto_next(StringStatus.TranslationComplete)
+            lambda: self.__status_dropdown.setCurrentValue(
+                StringStatus.TranslationComplete
+            )
         )
         self.__incomplete_shortcut.activated.connect(
-            lambda: self.__goto_next(StringStatus.TranslationIncomplete)
+            lambda: self.__status_dropdown.setCurrentValue(
+                StringStatus.TranslationIncomplete
+            )
         )
         self.__no_required_shortcut.activated.connect(
-            lambda: self.__goto_next(StringStatus.NoTranslationRequired)
+            lambda: self.__status_dropdown.setCurrentValue(
+                StringStatus.NoTranslationRequired
+            )
         )
 
         self.__translated_edit.setFocus()
@@ -209,31 +248,43 @@ class TranslatorDialog(QWidget):
         context_vlayout.addWidget(self.__context_widget)
 
     def __init_translation_area(self) -> None:
+        main_splitter = QSplitter()
+        self.__vlayout.addWidget(main_splitter, stretch=1)
+
         translation_groupbox = QGroupBox(self.tr("Translation"))
-        self.__vlayout.addWidget(translation_groupbox, stretch=1)
+        main_splitter.addWidget(translation_groupbox)
 
         translation_vlayout = QVBoxLayout()
         translation_vlayout.setContentsMargins(0, 0, 0, 0)
         translation_groupbox.setLayout(translation_vlayout)
 
-        splitter = QSplitter()
-        translation_vlayout.addWidget(splitter, stretch=1)
+        text_splitter = QSplitter()
+        translation_vlayout.addWidget(text_splitter, stretch=1)
 
         self.__original_edit = LineNumberTextEdit()
         self.__original_edit.setReadOnly(True)
-        splitter.addWidget(self.__original_edit)
+        text_splitter.addWidget(self.__original_edit)
 
-        if self.__spell_check_language is not None:
-            self.__translated_edit = SpellCheckEdit(
-                language=self.__spell_check_language.id,
-                user_data_path=UserDataService.get().get_data_path(),
-            )
-        else:
-            self.__translated_edit = LineNumberTextEdit()
+        self.__translated_edit = LineNumberTextEdit()
+        text_splitter.addWidget(self.__translated_edit)
 
-        splitter.addWidget(self.__translated_edit)
+        WidgetStateManager.get().register_state(
+            "translator_dialog_text_splitter", text_splitter
+        )
 
-        WidgetStateManager.get().register_state("translator_dialog_splitter", splitter)
+        diagnostics_groupbox = QGroupBox(self.tr("Diagnostics"))
+        main_splitter.addWidget(diagnostics_groupbox)
+
+        diagnostics_vlayout = QVBoxLayout()
+        diagnostics_vlayout.setContentsMargins(0, 0, 0, 0)
+        diagnostics_groupbox.setLayout(diagnostics_vlayout)
+
+        self.__diagnostics_widget = DiagnosticsWidget()
+        diagnostics_vlayout.addWidget(self.__diagnostics_widget)
+
+        WidgetStateManager.get().register_state(
+            "translator_dialog_main_splitter", main_splitter
+        )
 
         self.__placeholders_label = QLabel()
         self.__placeholders_label.setTextFormat(Qt.TextFormat.RichText)
@@ -273,28 +324,29 @@ class TranslatorDialog(QWidget):
         self.__reset_button.setProperty("transparent", True)
         hlayout.addWidget(self.__reset_button)
 
-        hint_label = QLabel(
-            self.tr("F1: Complete  -  F2: Incomplete  -  F3: No translation required")
-        )
-        hint_label.setToolTip(
+        hlayout.addStretch()
+
+        status_help_label = HelpLabel(
             self.tr(
-                "Press F1 (translation complete), F2 (translation incomplete/work in "
-                "progress) or F3 (no translation required) to finalize the string and "
-                "go to the next one."
+                "F1: Translation complete\n"
+                "F2: Translation incomplete\n"
+                "F3: No translation required\n"
+                "F4: Reset string"
             )
         )
-        hint_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        hint_label.setProperty("secondary", True)
-        hlayout.addWidget(hint_label, stretch=1)
+        hlayout.addWidget(status_help_label)
 
-        self.__finish_button = ShortcutButton(self.tr("Done"))
-        self.__finish_button.setShortcut(QKeySequence("Ctrl+Return"))
-        self.__finish_button.setDefault(True)
-        hlayout.addWidget(self.__finish_button)
+        status_label = QLabel(self.tr("Status") + ":")
+        hlayout.addWidget(status_label)
 
-        self.__cancel_button = ShortcutButton(self.tr("Cancel"))
-        self.__cancel_button.setShortcut(QKeySequence("Esc"))
-        hlayout.addWidget(self.__cancel_button)
+        self.__status_dropdown = EnumDropdown(
+            StringStatus, StringStatus.TranslationRequired
+        )
+        hlayout.addWidget(self.__status_dropdown)
+
+        self.__close_button = ShortcutButton(self.tr("Close"))
+        self.__close_button.setShortcut(QKeySequence("Esc"))
+        hlayout.addWidget(self.__close_button)
 
     def __init_shortcuts(self) -> None:
         self.__complete_shortcut = QShortcut(QKeySequence("F1"), self)
@@ -305,21 +357,96 @@ class TranslatorDialog(QWidget):
         title: str = ""
         if self.__current_string is not None:
             title = (
-                f"{self.__current_string.display_id}[*] ({self.__current_index + 1}/"
-                f"{self.__strings_count})"
+                f"{self.__current_string.string.display_id} "
+                f"({self.__current_index + 1}/{self.__strings_count})"
             )
 
         self.setWindowTitle(title)
 
     def __on_change(self) -> None:
-        self.setWindowModified(True)
         self.__update_placeholders()
+
+        if self.__loading_string or self.__current_string is None:
+            return
+
+        self.__pending_text_string = self.__current_string
+        self.__text_revision += 1
+        self.__write_back_text_debounced(self.__text_revision)
+
+    @debounce(200)
+    def __write_back_text_debounced(self, revision: int) -> None:
+        """
+        Writes the edited text back once the user stopped typing.
+
+        Args:
+            revision (int):
+                The text revision at scheduling time. Outdated revisions are ignored.
+        """
+
+        if revision == self.__text_revision:
+            self.__write_back_text()
+
+    def __write_back_text(self) -> None:
+        """
+        Immediately writes the edited text back to its string, if a write-back is
+        pending, and invalidates the scheduled one.
+        """
+
+        string: Optional[EditorString] = self.__pending_text_string
+        self.__cancel_text_write_back()
+
+        if string is not None:
+            self.text_changed.emit(string, self.__translated_edit.toPlainText().strip())
+
+    def __cancel_text_write_back(self) -> None:
+        """
+        Discards a pending write-back of the edited text.
+        """
+
+        self.__pending_text_string = None
+        self.__text_revision += 1
+
+    def __on_status_selected(self, status: StringStatus) -> None:
+        # The status may depend on the text, e.g. when the translation of a completed
+        # string is applied to matching strings.
+        self.__write_back_text()
+        self.status_change_requested.emit(status)
+
+    def __on_reset_clicked(self) -> None:
+        self.__cancel_text_write_back()
+        self.reset_requested.emit()
+
+    def __on_api_translate_clicked(self) -> None:
+        self.__cancel_text_write_back()
+        self.api_translate_requested.emit()
+
+    def __replace(self, old: str, new: str) -> None:
+        text: str = self.__translated_edit.toPlainText()
+
+        if old not in text:
+            return
+
+        self.__write_back_text()
+        self.__translated_edit.setPlainText(text.replace(old, new))
+
+    def __insert_at_cursor(self, text: str) -> None:
+        self.__translated_edit.textCursor().insertText(text)
+
+    def __add_to_dictionary(self, word: str) -> None:
+        self.add_word_to_dict_requested.emit(word)
+
+    @override
+    def closeEvent(self, event: QCloseEvent) -> None:
+        self.__write_back_text()
+        super().closeEvent(event)
 
     def __update_placeholders(self) -> None:
         theme: Theme = ThemeManager.get().theme
         error_color: str = theme.resolve(theme.colors.error_fg)
         original_placeholders: Occurrences = get_placeholders(
-            self.__current_string.original if self.__current_string is not None else ""
+            self.__current_string.string.original
+            if self.__current_string is not None
+            else ""
         )
         translation_placeholders: Occurrences = get_placeholders(
             self.__translated_edit.toPlainText()
@@ -345,93 +472,93 @@ class TranslatorDialog(QWidget):
         )
         self.__placeholders_label.setVisible(bool(original_placeholders))
 
-    def __reset_translation(self) -> None:
-        if self.__current_string is not None:
-            self.__translated_edit.setPlainText(self.__current_string.original)
-
-    @override
-    def closeEvent(self, event: QCloseEvent) -> None:
-        if self.isWindowModified():
-            message_box = QMessageBox(self)
-            message_box.setWindowTitle(self.tr("Cancel"))
-            message_box.setText(
-                self.tr("Are you sure you want to cancel? All changes will be lost!")
-            )
-            message_box.setStandardButtons(
-                QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
-            )
-            message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-            message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
-            message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            ThemeManager.update_widget_styles(message_box)
-
-            if message_box.exec() != QMessageBox.StandardButton.Yes:
-                event.ignore()
-                return
-
-        event.accept()
-        self.setWindowModified(False)
-
     @property
-    def current_string(self) -> Optional[String]:
+    def current_string(self) -> Optional[EditorString]:
         """The current string being edited or None."""
 
         return self.__current_string
 
-    def set_string(
-        self, string: String, finalize_with_status: Optional[StringStatus] = None
-    ) -> None:
+    def set_string(self, string: EditorString) -> None:
         """
         Sets the string to be edited.
 
         Args:
-            string (String): The string to set.
-            finalize_with_status (Optional[StringStatus], optional):
-                The status to finalize the current string with. Defaults to None.
+            string (EditorString): The string to set.
         """
 
-        if finalize_with_status is not None:
-            self.__finalize_string(finalize_with_status)
-
-        elif self.isWindowModified():
-            message_box = QMessageBox(self)
-            message_box.setWindowTitle(self.tr("String was modified"))
-            message_box.setText(
-                self.tr(
-                    "String was modified. Do you want to save it before switching to "
-                    "another string?"
-                )
-            )
-            message_box.setStandardButtons(
-                QMessageBox.StandardButton.Save | QMessageBox.StandardButton.No
-            )
-            message_box.setDefaultButton(QMessageBox.StandardButton.Save)
-            message_box.button(QMessageBox.StandardButton.No).setText(
-                self.tr("Don't save and continue")
-            )
-            message_box.button(QMessageBox.StandardButton.Save).setText(
-                self.tr("Save and continue")
-            )
-            ThemeManager.update_widget_styles(message_box)
-
-            match message_box.exec():
-                case QMessageBox.StandardButton.Save:
-                    self.__finalize_string()
-                case QMessageBox.DialogCode.Rejected:
-                    return
+        self.__write_back_text()
 
         self.__current_string = string
         self.__context_widget.clear()
-        self.__placeholders = []
-        self.__original_edit.setPlainText(self.__current_string.original)
-        self.__translated_edit.setPlainText(
-            self.__current_string.string
-            if self.__current_string.string is not None
-            else self.__current_string.original
-        )
-        self.setWindowModified(False)
+        self.__original_edit.setPlainText(string.string.original)
+        self.__load_string_values(force_text=True)
 
         self.__update_title()
+
+    def refresh_from_string(self) -> None:
+        """
+        Reloads the translated text and the status from the current string, for example
+        after the string was changed outside of the dialog. The text edit is only
+        updated if its text differs from the string's text to keep the cursor position.
+        """
+
+        if self.__current_string is not None:
+            self.__load_string_values(force_text=False)
+
+    def __load_string_values(self, force_text: bool) -> None:
+        """
+        Displays the translated text and the status of the current string without
+        writing them back to the string.
+
+        Args:
+            force_text (bool):
+                Whether to set the text even if it equals the displayed text.
+        """
+
+        string: EditorString = not_none(self.__current_string)
+        text: str = coalesce(string.string.string, string.string.original)
+
+        # A pending write-back means that the displayed text is newer than the string's.
+        if force_text or (
+            self.__pending_text_string is None
+            and self.__translated_edit.toPlainText().strip() != text
+        ):
+            self.__loading_string = True
+            try:
+                self.__translated_edit.setPlainText(text)
+            finally:
+                self.__loading_string = False
+
+        with QSignalBlocker(self.__status_dropdown):
+            self.__status_dropdown.setCurrentValue(string.string.status)
+
+        if string.diagnostics is not None:
+            self.__diagnostics_widget.set_diagnostics(string.diagnostics, text)
+            self.__highlight_unknown_words(list(string.diagnostics.unknown_words))
+        else:
+            self.__diagnostics_widget.clear()
+            self.__highlight_unknown_words([])
+
+    def __highlight_unknown_words(self, words: list[str]) -> None:
+        cursor: QTextCursor = self.__translated_edit.textCursor()
+        cursor.setPosition(0)
+
+        text: str = self.__translated_edit.toPlainText()
+
+        cursor.select(QTextCursor.SelectionType.Document)
+        cursor.setCharFormat(QTextCharFormat())  # clear any highlighting
+
+        for word in words:
+            cursor.setPosition(0)
+            pos: int
+            while (pos := text.find(word, cursor.position())) != -1:
+                cursor.setPosition(pos)
+                cursor.select(QTextCursor.SelectionType.WordUnderCursor)
+
+                fmt = QTextCharFormat()
+                fmt.setUnderlineColor(Qt.GlobalColor.red)
+                fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
+                cursor.setCharFormat(fmt)
 
     def set_context(self, context: TranslationContext) -> None:
         """
@@ -442,7 +569,6 @@ class TranslatorDialog(QWidget):
         """
 
         self.__context_widget.set_context(context)
-
         self.__update_placeholders()
 
     def set_index(self, index: int) -> None:
@@ -469,33 +595,3 @@ class TranslatorDialog(QWidget):
 
         self.__prev_button.setEnabled(count > 1)
         self.__next_button.setEnabled(count > 1)
-
-    def set_translated_text(self, text: str) -> None:
-        """
-        Sets the content of the translated text edit.
-
-        Args:
-            text (str): The new translated text.
-        """
-
-        self.__translated_edit.setPlainText(text)
-
-    def __goto_next(self, status: StringStatus) -> None:
-        self.__finalize_string(status)
-        self.next_requested.emit()
-
-    def __finalize_string(
-        self, status: StringStatus = StringStatus.TranslationComplete
-    ) -> None:
-        self.finalize_requested.emit(
-            self.__translated_edit.toPlainText().strip(), status
-        )
-        self.setWindowModified(False)
-
-    def finish(self) -> None:
-        """
-        Finishes by finalizing the current string and closing the dialog.
-        """
-
-        self.__finalize_string()
-        self.close()

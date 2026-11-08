@@ -13,6 +13,9 @@ WORD_PATTERN: re.Pattern[str] = re.compile(r"[^\W\d_]+")
 MARKUP_PATTERN: re.Pattern[str] = re.compile(r"<[^>]*>|\[[^\]]*\]|\{[^}]*\}")
 """Pattern for markup and placeholders that are not considered natural-language text."""
 
+NON_TEXT_PATTERN: re.Pattern[str] = re.compile(r"[^\w\s'’-]|[\d_]")
+"""Pattern for numbers and special characters that are not part of words."""
+
 PLACEHOLDER_PATTERN: re.Pattern[str] = re.compile(
     # Tags like <Alias=Player>, <Global=X>, <mag>, <dur> or HTML markup in books.
     r"<[^<>\n]+>"
@@ -23,6 +26,15 @@ PLACEHOLDER_PATTERN: re.Pattern[str] = re.compile(
     re.IGNORECASE,
 )
 """Pattern matching a single placeholder."""
+
+SENTENCE_END_CHARACTERS: str = ".!?:…"
+"""Characters ending a sentence, so that the following word starts a new one."""
+
+LINE_BREAK_CHARACTERS: str = "\r\n"
+"""Characters ending a line, so that the following word starts a new one."""
+
+OPENING_CHARACTERS: str = "\"'“”„‘’‚«»([{-–—*•"
+"""Characters that may precede the first word of a sentence, like quotes or bullets."""
 
 type Occurrences = dict[str, int]
 """A dictionary of terms and occurence count."""
@@ -40,6 +52,21 @@ def plain_text(text: str) -> str:
     """
 
     return MARKUP_PATTERN.sub(" ", text)
+
+
+def remove_non_text(text: str) -> str:
+    """
+    Removes all markup, numbers and special characters from a text, except for
+    apostrophes and hyphens within words, and collapses the remaining whitespace.
+
+    Args:
+        text (str): The text to clean.
+
+    Returns:
+        str: The text consisting only of words.
+    """
+
+    return " ".join(NON_TEXT_PATTERN.sub(" ", plain_text(text)).split()).strip(" '’-")
 
 
 def normalize_word(word: str) -> str:
@@ -120,6 +147,55 @@ def find_term(
         return None
 
     return pattern.search(plain_text(text), start)
+
+
+def find_all_terms(text: str, term: str, inflected: bool = True) -> list[re.Match[str]]:
+    """
+    Searches a term in a text, ignoring case, markup and inflection suffixes.
+    Similar to `find_term`, but returns a list of all matches, instead of just the first
+    one.
+
+    Args:
+        text (str): The text to search.
+        term (str): The term to search for.
+        inflected (bool, optional):
+            Whether to consider inflection suffixes. Defaults to True.
+
+    Returns:
+        list[re.Match[str]]: The matches or an empty list if the term is not found.
+    """
+
+    pattern: Optional[re.Pattern[str]] = _compile_term(term, inflected)
+    if pattern is None:
+        return []
+
+    return list(pattern.finditer(plain_text(text)))
+
+
+def is_at_sentence_start(text: str, match: re.Match[str]) -> bool:
+    """
+    Checks if a match is at the start of a sentence. This is the case if it is only
+    preceded by whitespace and opening characters, like quotes, brackets or bullets,
+    which follow the start of the text, a line break or a sentence-ending punctuation.
+
+    Args:
+        text (str): The text that was searched for the match.
+        match (re.Match[str]): The match to check.
+
+    Returns:
+        bool: True if the match is at the start of a sentence, False otherwise.
+    """
+
+    for character in reversed(text[: match.start()]):
+        if character in LINE_BREAK_CHARACTERS:
+            return True
+
+        if character.isspace() or character in OPENING_CHARACTERS:
+            continue
+
+        return character in SENTENCE_END_CHARACTERS
+
+    return True
 
 
 def count_words(text: str, to_count: list[str]) -> Occurrences:

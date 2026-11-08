@@ -43,6 +43,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
     __deepl_api_key_entry: KeyLineEdit
 
     __show_confirmations_box: QCheckBox
+    __max_requests_box: SpinBox
     __glossary_editor: TreeWidgetEditor[GlossaryTerm]
 
     @override
@@ -94,6 +95,22 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         )
         api_glayout.addWidget(self.__show_confirmations_box, 1, 0, 1, 2)
 
+        max_requests_label = QLabel(
+            self.tr(
+                "Maximum number of parallel requests (if parallel requests are "
+                "supported by the selected translator)"
+            )
+        )
+        max_requests_label.setWordWrap(True)
+        api_glayout.addWidget(max_requests_label, 2, 0)
+
+        self.__max_requests_box = SpinBox()
+        self.__max_requests_box.setRange(1, 32)
+        self.__max_requests_box.setValue(self._config.max_parallel_requests)
+        self.__max_requests_box.valueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
+        api_glayout.addWidget(self.__max_requests_box, 2, 1)
 
         glossary_widget = QWidget()
         glossary_vlayout = QVBoxLayout()
@@ -130,7 +147,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         label.setProperty("subtitle", True)
 
         section_widget = SectionAreaWidget(label, glossary_widget)
-        api_glayout.addWidget(section_widget, 4, 0, 1, 2)
+        api_glayout.addWidget(section_widget, 3, 0, 1, 2)
 
         WidgetStateManager.get().register_state(
             "translator_settings_glossary", section_widget
@@ -222,4 +239,5 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
             self._config.show_confirmation_dialogs = (
                 self.__show_confirmations_box.isChecked()
             )
+            self._config.max_parallel_requests = self.__max_requests_box.value()
             self._config.glossary = self.__get_glossary()

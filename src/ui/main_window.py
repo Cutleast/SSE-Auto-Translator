@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import webbrowser
+from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.config.manager import ConfigManager
@@ -49,6 +50,7 @@ class MainWindow(ExtendedMainWindow):
     __app_config_manager: ConfigManager[AppConfig]
     __app_config: AppConfig
     __user_data: UserData
+    __user_data_path: Path
     __translator_service: TranslatorService
     __scanner: Scanner
     __provider: TranslationProvider
@@ -68,6 +70,7 @@ class MainWindow(ExtendedMainWindow):
         self,
         app_config_manager: ConfigManager[AppConfig],
         user_data: UserData,
+        user_data_path: Path,
         translator_service: TranslatorService,
         scanner: Scanner,
         provider: TranslationProvider,
@@ -78,6 +81,7 @@ class MainWindow(ExtendedMainWindow):
         Args:
             app_config_manager (ConfigManager[AppConfig]): App configuration manager.
             user_data (UserData): User data.
+            user_data_path (Path): Path to the user data directory.
             translator_service (TranslatorService): API translator service.
             scanner (Scanner): Scanner.
             provider (TranslationProvider): Translation provider.
@@ -88,6 +92,7 @@ class MainWindow(ExtendedMainWindow):
         self.__app_config_manager = app_config_manager
         self.__app_config = app_config_manager.config
         self.__user_data = user_data
+        self.__user_data_path = user_data_path
         self.__translator_service = translator_service
         self.__scanner = scanner
         self.__provider = provider
@@ -152,7 +157,7 @@ class MainWindow(ExtendedMainWindow):
         self.__tab_widget.addTab(self.__mainpage_widget, self.tr("Modlist"))
 
         self.__translation_editor = EditorPage(
-            self.__app_config, self.__user_data, self.__translator_service
+            self.__user_data, self.__user_data_path, self.__translator_service
         )
         self.__tab_widget.addTab(
             self.__translation_editor, self.tr("Translation Editor")

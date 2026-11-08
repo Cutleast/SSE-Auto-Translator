@@ -7,14 +7,13 @@ from __future__ import annotations
 from enum import IntEnum
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.colored_enum import ColoredEnum
 from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.theme.models.types import ThemeAlias
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
-
-from ..utilities.colored_enum import ColoredEnum
 
 
 class StringStatus(IntEnum, LocalizedEnum, ColoredEnum):

@@ -18,16 +18,24 @@ class SpellChecker:
     log: logging.Logger = logging.getLogger("SpellChecker")
 
     __hunspell: Optional[Hunspell]
-    __user_dic_path: Path
+    __user_dic_path: Optional[Path]
 
-    def __init__(self, language: str, user_data_path: Path) -> None:
+    def __init__(self, language: Optional[str], user_data_path: Optional[Path]) -> None:
         """
         Args:
-            language (str): The lowered name of the language to load the dictionary for.
-            user_data_path (Path): Path to the user data directory.
+            language (Optional[str]):
+                The lowered name of the language to load the dictionary for. If None,
+                the built-in English dictionary is loaded.
+            user_data_path (Optional[Path]):
+                Path to the user data directory or None to not use the custom user
+                dictionary.
         """
 
-        self.__user_dic_path = user_data_path / "hunspell" / f"{language}.dic"
+        self.__user_dic_path = (
+            user_data_path / "hunspell" / f"{language}.dic"
+            if user_data_path is not None
+            else None
+        )
 
         try:
             self.__hunspell = self._load_hunspell(language)
@@ -78,7 +86,7 @@ class SpellChecker:
             word (str): The word to add.
         """
 
-        if not self.__hunspell:
+        if not self.__hunspell or self.__user_dic_path is None:
             return
 
         word = word.strip()
@@ -110,7 +118,7 @@ class SpellChecker:
         Loads the custom user dictionary if it exists.
         """
 
-        if not self.__hunspell:
+        if not self.__hunspell or self.__user_dic_path is None:
             return
 
         if self.__user_dic_path.is_file():
@@ -124,15 +132,20 @@ class SpellChecker:
 
     @staticmethod
     @FunctionCache.cache
-    def _load_hunspell(language: str) -> Hunspell:
+    def _load_hunspell(language: Optional[str]) -> Hunspell:
         """
         Loads the Hunspell dictionary for the specified language.
 
         Args:
-            language (str): The language to load the dictionary for.
+            language (Optional[str]):
+                The language to load the dictionary for. If None, the built-in English
+                dictionary is loaded.
 
         Returns:
             Hunspell: The loaded Hunspell dictionary.
         """
 
-        return Hunspell(language, hunspell_data_dir="./res/hunspell")
+        if language is not None:
+            return Hunspell(language, hunspell_data_dir="./res/hunspell")
+
+        return Hunspell()

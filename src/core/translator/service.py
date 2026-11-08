@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import Optional
+
 from cutleast_core_lib.core.utilities.singleton import Singleton
 
 from core.config.translator_config import TranslatorConfig
@@ -19,6 +21,7 @@ class TranslatorService(Singleton):
     """
 
     __translator_config: TranslatorConfig
+    __translator: Optional[Translator]
 
     def __init__(self, translator_config: TranslatorConfig) -> None:
         """
@@ -29,6 +32,7 @@ class TranslatorService(Singleton):
         super().__init__()
 
         self.__translator_config = translator_config
+        self.__translator = None
 
     def get_translator(self) -> Translator:
         """
@@ -45,4 +49,7 @@ class TranslatorService(Singleton):
             self.__translator_config.translator
         ]
 
-        return translator_cls(self.__translator_config)
+        if not isinstance(self.__translator, translator_cls):
+            self.__translator = translator_cls(self.__translator_config)
+
+        return self.__translator

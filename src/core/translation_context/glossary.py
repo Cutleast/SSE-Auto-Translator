@@ -26,7 +26,13 @@ from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.string.string_status import StringStatus
 from core.string.types import StringList
-from core.utilities.text import find_term, get_words, normalize_word, plain_text
+from core.utilities.text import (
+    find_term,
+    get_words,
+    normalize_word,
+    plain_text,
+    remove_non_text,
+)
 
 
 class TranslationGlossary(QObject):
@@ -36,17 +42,14 @@ class TranslationGlossary(QObject):
     length.
     """
 
+    MIN_TERM_LENGTH: int = 3
+    """Minimum length of a term's plain text. Shorter terms are ignored."""
+
     MAX_TERM_WORDS: int = 5
     """Maximum number of words of a term. Longer terms are ignored."""
 
     MAX_EXAMPLE_LENGTH: int = 150
     """Maximum length of an example. Longer ones are too costly for the prompt."""
-
-    MAX_WORD_FREQUENCY: int = 1000
-    """
-    Maximum number of examples containing a word to be indexed. More frequent words are
-    too common to narrow down the examples for a term.
-    """
 
     class TermSource(LocalizedEnum):
         """
@@ -201,15 +204,14 @@ class TranslationGlossary(QObject):
                 and string.is_name
                 and not string.original.islower()
             ):
-                if not (
-                    0
-                    < len(get_words(string.original))
-                    <= TranslationGlossary.MAX_TERM_WORDS
+                original: str = remove_non_text(string.original)
+                if len(original) < TranslationGlossary.MIN_TERM_LENGTH or not (
+                    0 < len(get_words(original)) <= TranslationGlossary.MAX_TERM_WORDS
                 ):
                     continue
 
-                counter: Counter[str] = names.setdefault(string.original, Counter())
-                counter.update([not_none(string.string)])
+                counter: Counter[str] = names.setdefault(original, Counter())
+                counter.update([remove_non_text(not_none(string.string))])
 
         return {name: counter.most_common(1)[0][0] for name, counter in names.items()}
 
@@ -259,11 +261,7 @@ class TranslationGlossary(QObject):
                 if key:
                     index.setdefault(key, []).append(example)
 
-        return {
-            key: key_examples
-            for key, key_examples in index.items()
-            if len(key_examples) <= TranslationGlossary.MAX_WORD_FREQUENCY
-        }
+        return {key: key_examples for key, key_examples in index.items()}
 
     def __find_example(
         self,
@@ -424,10 +422,7 @@ class TranslationGlossary(QObject):
 
             matching_terms: list[TranslationGlossary.Term] = []
             for term in glossary:
-                if (
-                    not term.keys.issubset(text_keys)
-                    or term.original.lower().strip() == search_text.strip()
-                ):
+                if not term.keys.issubset(text_keys):
                     continue
 
                 match: Optional[re.Match[str]] = find_term(

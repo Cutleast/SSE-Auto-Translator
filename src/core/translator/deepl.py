@@ -10,6 +10,7 @@ from cutleast_core_lib.core.utilities.typing_utils import checked_cast
 from core.config.translator_config import TranslatorConfig
 from core.utilities.game_language import GameLanguage
 
+from .models import TranslationRequest
 from .translator import Translator
 
 
@@ -30,20 +31,20 @@ class DeepLTranslator(Translator):
     def __init__(self, config: TranslatorConfig) -> None:
         super().__init__(config)
 
-        if config.api_key is None:
+        if config.deepl_api_key is None:
             raise RuntimeError("DeepL API key is required!")
 
-        self.__translator = deepl.Translator(config.api_key)
+        self.__translator = deepl.Translator(config.deepl_api_key)
 
     @override
-    def translate_uncached(self, text: str, dst: GameLanguage) -> str:
+    def _process_request(self, request: TranslationRequest) -> str:
         src_code: str = deepl.Language.ENGLISH
-        dst_code: str = self.get_lang_code(dst)
+        dst_code: str = self.get_lang_code(request.dst)
 
         return checked_cast(
             deepl.TextResult,
             self.__translator.translate_text(
-                text, source_lang=src_code, target_lang=dst_code
+                request.text, source_lang=src_code, target_lang=dst_code
             ),
         ).text
 
