@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 from concurrent.futures import Future, as_completed
 from pathlib import Path
-from typing import Optional
+from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.multithreading.progress import (
     ProgressUpdate,
@@ -28,6 +28,7 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.string.base_string import BaseString
 from core.string.search_filter import SearchFilter, matches_filter
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
@@ -38,6 +39,9 @@ from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
 
 from .detector import LangDetector, Language
+
+_StringKey: TypeAlias = tuple[str, StringStatus, Optional[str]]
+"""Fields that decide `BaseString` equality."""
 
 
 class Scanner(QObject):
@@ -121,9 +125,13 @@ class Scanner(QObject):
             for string in self.__database.strings
             if string.status != StringStatus.TranslationRequired
         )
-        database_originals: list[str] = unique(
-            string.original for string in database_strings
-        )
+        database_originals: set[str] = {string.original for string in database_strings}
+
+        # String hashes include the original text but equality ignores it, so the
+        # equality-relevant fields serve as lookup keys instead of the strings.
+        database_string_keys: set[_StringKey] = {
+            Scanner.__get_string_key(string) for string in database_strings
+        }
 
         scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = {}
         failed_modfiles: int = 0
@@ -141,7 +149,7 @@ class Scanner(QObject):
                         lambda ucb, m=mod, mf=modfile: self.__basic_scan_modfile(
                             mod=m,
                             modfile=mf,
-                            database_strings=database_strings,
+                            database_string_keys=database_string_keys,
                             database_originals=database_originals,
                             update_callback=ucb,
                         )
@@ -164,12 +172,26 @@ class Scanner(QObject):
 
         return scan_result
 
+    @staticmethod
+    def __get_string_key(string: BaseString) -> _StringKey:
+        """
+        Creates a hashable key that is equal for exactly the strings that compare equal.
+
+        Args:
+            string (BaseString): String to create the key for.
+
+        Returns:
+            _StringKey: The ID, status and translated text of the string.
+        """
+
+        return (string.id, string.status, string.string)
+
     def __basic_scan_modfile(
         self,
         mod: Mod,
         modfile: ModFile,
-        database_strings: StringList,
-        database_originals: list[str],
+        database_string_keys: set[_StringKey],
+        database_originals: set[str],
         update_callback: Optional[UpdateCallback] = None,
     ) -> TranslationStatus:
         modfile_path_text: str = f"{mod.name} > {modfile.name}"
@@ -214,7 +236,7 @@ class Scanner(QObject):
 
             elif any(
                 string.original not in database_originals
-                and string not in database_strings
+                and Scanner.__get_string_key(string) not in database_string_keys
                 for string in modfile_strings
             ):
                 status = TranslationStatus.RequiresTranslation
