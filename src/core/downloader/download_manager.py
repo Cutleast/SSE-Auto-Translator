@@ -28,6 +28,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, TranslationProvider
 from core.translation_provider.source import Source
+from core.utilities.temp_folder_provider import TempFolderProvider
 
 from .file_download import FileDownload
 from .mod_info import ModInfo
@@ -125,6 +126,7 @@ class DownloadManager(QObject):
     __app_config: AppConfig
     __user_config: UserConfig
     __masterlist: Masterlist
+    __temp_folder_provider: TempFolderProvider
 
     log: logging.Logger = logging.getLogger("DownloadManager")
 
@@ -136,6 +138,7 @@ class DownloadManager(QObject):
         app_config: AppConfig,
         user_config: UserConfig,
         masterlist: Masterlist,
+        temp_folder_provider: TempFolderProvider,
     ) -> None:
         """
         Args:
@@ -145,6 +148,8 @@ class DownloadManager(QObject):
             app_config (AppConfig): The application configuration.
             user_config (UserConfig): The user configuration.
             masterlist (Masterlist): The loaded masterlist.
+            temp_folder_provider (TempFolderProvider):
+                Provider for the temporary folder used by the download workers.
         """
 
         super().__init__()
@@ -160,6 +165,7 @@ class DownloadManager(QObject):
         self.__app_config = app_config
         self.__user_config = user_config
         self.__masterlist = masterlist
+        self.__temp_folder_provider = temp_folder_provider
 
         self.finished.connect(self.stopped.emit)
 
@@ -223,6 +229,7 @@ class DownloadManager(QObject):
                 provider=self.__provider,
                 database=self.__database,
                 mod_instance=self.__mod_instance,
+                temp_folder_provider=self.__temp_folder_provider,
             )
             for i in range(self.__thread_num)
         ]

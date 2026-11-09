@@ -3,10 +3,10 @@ Copyright (c) Cutleast
 """
 
 from fnmatch import fnmatch
+from functools import cached_property
 from pathlib import Path
 from typing import Optional, Self, override
 
-from cutleast_core_lib.core.cache.function_cache import FunctionCache
 from mod_manager_lib.core.instance.mod import Mod as BaseMod
 
 from core.mod_file.mod_file import ModFile
@@ -38,8 +38,7 @@ class Mod(BaseMod):
 
         return self.display_name
 
-    @property
-    @FunctionCache.cache
+    @cached_property
     def mod_id(self) -> Optional[NxmModId]:
         """The mod id of the mod identifying it at Nexus Mods."""
 
@@ -57,8 +56,7 @@ class Mod(BaseMod):
 
         return self.metadata.version
 
-    @property
-    @FunctionCache.cache
+    @cached_property
     def dsd_files(self) -> list[Path]:
         """
         List of all DSD files in the mod, excluding the ones from generated Output mod.

@@ -2,52 +2,99 @@
 Copyright (c) Cutleast
 """
 
+from collections.abc import Generator
 from pathlib import Path
+from typing import ClassVar
 
-import jstyleson as json
 import pytest
 from cutleast_core_lib.core.cache.cache import Cache
-from cutleast_core_lib.core.config.manager import ConfigManager
-from cutleast_core_lib.core.utilities.env_resolver import resolve
-from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.core.config.manager import (
+    ConfigManager,
+    _config_managers,  # pyright: ignore[reportPrivateUsage]
+)
+from cutleast_core_lib.core.utilities.singleton import Singleton
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from mod_manager_lib.core.game_service import GameService
-from mod_manager_lib.core.mod_manager.apis import ModManagerApi
-from mod_manager_lib.core.mod_manager.modorganizer.instance_info import (
-    MO2InstanceInfo,
-)
-from mod_manager_lib.core.mod_manager.vortex.leveldb import LevelDB
-from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 from pytest_mock import MockerFixture
 from requests_mock import Mocker as RequestsMock
 
-from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.user_data.user_data import UserData
-from core.user_data.user_data_service import UserDataService
-from core.utilities.constants import GAME_ID
 from core.utilities.temp_folder_provider import TempFolderProvider
 
-from .setup.mock_plyvel import MockPlyvelDB
-from .setup.mocked_web_response import MockedWebResponse
-from .setup.paths import DATA_PATH, RES_PATH
-from .setup.sandbox import Sandbox
+from .setup.global_state import GlobalState
+from .setup.paths import DATA_PATH
 from .setup.sync_executor import ExecutorPatcher, SynchronousExecutor
 
 
 class BaseTest:
     """
-    Base class for tests that need the application's test data or components.
+    Base class for tests that need the application's infrastructure singletons
+    (theme, windows, widget states, games) or its configuration.
 
-    Process-wide isolation (working directory, environment, singletons, caches) is
-    provided for all tests by the fixtures in `tests/conftest.py`.
+    It only provides infrastructure. Domain objects are created by the tests
+    themselves, preferably with `tests.setup.data_factory.DataFactory`; tests that
+    need the complete test user data derive from
+    `tests.integration_test.IntegrationTest` instead.
     """
+
+    SESSION_SINGLETONS: ClassVar[frozenset[type[Singleton]]] = frozenset(
+        {GameService, IconProvider, ThemeManager}
+    )
+    """Singletons that are created once per test session and never reset."""
+
+    @pytest.fixture(autouse=True)
+    def infrastructure(
+        self,
+        session_theme_manager: ThemeManager,
+        session_game_service: GameService,
+        tmp_path: Path,
+        requests_mock: RequestsMock,
+    ) -> Generator[None]:
+        """
+        Provides the infrastructure singletons and resets all other singletons and
+        process-wide caches after the test, regardless of the test's fixtures.
+        Unregistered web requests fail because of `requests_mock`.
+
+        Args:
+            session_theme_manager (ThemeManager): The session-wide theme manager.
+            session_game_service (GameService): The session-wide game service.
+            tmp_path (Path): The temporary folder of the test.
+            requests_mock (RequestsMock): The `requests_mock` fixture.
+        """
+
+        GlobalState.reset_singletons(BaseTest.SESSION_SINGLETONS)
+        WindowManager()
+        WidgetStateManager(tmp_path)
+        Cache(tmp_path / "cache", "development")
+
+        yield
+
+        GlobalState.delete_widgets()
+        GlobalState.reset_singletons(BaseTest.SESSION_SINGLETONS)
+        GlobalState.clear_function_cache()
+        _config_managers.clear()
+
+    @pytest.fixture(autouse=True)
+    def mock_icons(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """
+        Mocks the icon provider as the icon resources may lead to access violations
+        from within Qt.
+
+        Args:
+            monkeypatch (pytest.MonkeyPatch): The monkeypatch fixture.
+        """
+
+        from ui.utilities.icon_provider import IconProvider as AppIconProvider
+
+        monkeypatch.setattr(AppIconProvider, "get_res_icon", lambda *a, **k: QIcon())
 
     @pytest.fixture
     def data_folder(self) -> Path:
@@ -61,110 +108,15 @@ class BaseTest:
         return DATA_PATH
 
     @pytest.fixture
-    def res_path(self) -> Path:
+    def cache(self) -> Cache:
         """
-        Returns the path to the test resource folder. It contains a small vanilla
-        translation database instead of the full one shipped with the application.
+        Returns the application cache located in the temporary folder of the test.
 
         Returns:
-            Path: The path to the test resource folder.
+            Cache: The cache.
         """
 
-        return RES_PATH
-
-    @pytest.fixture
-    def user_data_path(self, sandbox: Sandbox, tmp_path: Path) -> Path:
-        """
-        Creates a mutable copy of the test user data folder for the current test.
-
-        Args:
-            sandbox (Sandbox): The session-wide sandbox.
-            tmp_path (Path): The temporary folder of the test.
-
-        Returns:
-            Path: The path to the user data folder.
-        """
-
-        return sandbox.create_user_data(DATA_PATH, tmp_path / "data")
-
-    @pytest.fixture(autouse=True)
-    def window_manager(self) -> WindowManager:
-        """
-        Provides a WindowManager instance for testing.
-
-        Returns:
-            WindowManager: The window manager.
-        """
-
-        return WindowManager()
-
-    @pytest.fixture(autouse=True)
-    def widget_state_manager(self, tmp_path: Path) -> WidgetStateManager:
-        """
-        Provides a WidgetStateManager instance that stores its states in the temporary
-        folder of the test.
-
-        Args:
-            tmp_path (Path): The temporary folder of the test.
-
-        Returns:
-            WidgetStateManager: The widget state manager.
-        """
-
-        return WidgetStateManager(tmp_path)
-
-    @pytest.fixture(autouse=True)
-    def mock_web_requests(
-        self, web_responses: list[MockedWebResponse], requests_mock: RequestsMock
-    ) -> None:
-        """
-        Registers all recorded web responses from the test data folder.
-
-        Args:
-            web_responses (list[MockedWebResponse]): The recorded web responses.
-            requests_mock (RequestsMock): The `requests_mock` fixture.
-        """
-
-        for response in web_responses:
-            response.register(requests_mock)
-
-    @pytest.fixture(autouse=True)
-    def mock_icons(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """
-        Mocks the icon provider as the icon resources may lead to access violations
-        from within Qt.
-
-        Args:
-            monkeypatch (pytest.MonkeyPatch): The monkeypatch fixture.
-        """
-
-        from ui.utilities.icon_provider import IconProvider
-
-        monkeypatch.setattr(IconProvider, "get_res_icon", lambda *a, **k: QIcon())
-
-    @pytest.fixture
-    def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
-        """
-        Replaces `ProgressExecutor` with a synchronous implementation for the duration
-        of a single test. To patch already imported modules, use the returned `patch`
-        function.
-
-        Args:
-            mocker (MockerFixture): The mocker fixture.
-
-        Returns:
-            ExecutorPatcher: Function to patch the executor of a module.
-        """
-
-        mock_instance = SynchronousExecutor()
-
-        def patch(obj: object) -> SynchronousExecutor:
-            mocker.patch(
-                obj.__module__ + ".ProgressExecutor", return_value=mock_instance
-            )
-            return mock_instance
-
-        return patch
+        return Cache.get()
 
     @pytest.fixture
     def app_config_manager(
@@ -205,41 +157,6 @@ class BaseTest:
         return app_config_manager.config
 
     @pytest.fixture
-    def user_data(self, res_path: Path, user_data_path: Path) -> UserData:
-        """
-        Loads and returns the test user data.
-
-        Args:
-            res_path (Path): The path to the test resource folder.
-            user_data_path (Path): The path to the user data folder.
-
-        Returns:
-            UserData: The loaded user data.
-        """
-
-        return UserDataService(res_path, user_data_path).load()
-
-    @pytest.fixture
-    def component_provider(
-        self, app_config: AppConfig, user_data: UserData
-    ) -> ComponentProvider:
-        """
-        Returns a component provider with all components initialized.
-
-        Args:
-            app_config (AppConfig): The test app configuration.
-            user_data (UserData): The test user data.
-
-        Returns:
-            ComponentProvider: The component provider.
-        """
-
-        provider = ComponentProvider(app_config, user_data)
-        provider.initialize_components()
-
-        return provider
-
-    @pytest.fixture
     def temp_folder_provider(self, tmp_path: Path) -> TempFolderProvider:
         """
         Returns a temp folder provider located in the temporary folder of the test.
@@ -254,128 +171,32 @@ class BaseTest:
         return TempFolderProvider("SSE-AT_temp", tmp_path / "temp")
 
     @pytest.fixture
-    def logger(self) -> Logger:
+    def sync_executor(self, mocker: MockerFixture) -> ExecutorPatcher:
         """
-        Returns an application logger writing to the working directory of the test.
-        It is closed and detached automatically after the test.
-
-        Returns:
-            Logger: The logger instance.
-        """
-
-        return Logger(Path("logs") / "test.log")
-
-    @pytest.fixture
-    def cache(self) -> Cache:
-        """
-        Returns the application cache located in the working directory of the test.
-
-        Returns:
-            Cache: The cache.
-        """
-
-        return Cache(Path("test_cache"), "development")
-
-    @pytest.fixture
-    def mo2_instance_info(self, sandbox: Sandbox) -> MO2InstanceInfo:
-        """
-        Returns the instance info of the test instance as a portable MO2 instance.
-
-        Args:
-            sandbox (Sandbox): The session-wide sandbox.
-
-        Returns:
-            MO2InstanceInfo: The instance info of the test instance.
-        """
-
-        base_folder: Path = sandbox.mo2_instance_path
-
-        return MO2InstanceInfo(
-            display_name="Portable",
-            game=GameService.get_game_by_id(GAME_ID),
-            profile="Default",
-            is_global=False,
-            base_folder=base_folder,
-            mods_folder=base_folder / "mods",
-            profiles_folder=base_folder / "profiles",
-            mod_manager=ModManagerApi.ModOrganizer,
-        )
-
-    @pytest.fixture
-    def global_mo2_instance_info(self, sandbox: Sandbox) -> MO2InstanceInfo:
-        """
-        Returns the instance info of the test instance as a global MO2 instance.
-
-        Args:
-            sandbox (Sandbox): The session-wide sandbox.
-
-        Returns:
-            MO2InstanceInfo: The instance info of the test instance.
-        """
-
-        base_folder: Path = (
-            resolve(Path("%LOCALAPPDATA%")) / "ModOrganizer" / Sandbox.MO2_INSTANCE_NAME
-        )
-
-        return MO2InstanceInfo(
-            display_name=Sandbox.MO2_INSTANCE_NAME,
-            game=GameService.get_game_by_id(GAME_ID),
-            profile="Default",
-            is_global=True,
-            base_folder=base_folder,
-            mods_folder=base_folder / "mods",
-            profiles_folder=base_folder / "profiles",
-            mod_manager=ModManagerApi.ModOrganizer,
-        )
-
-    @pytest.fixture
-    def vortex_profile_info(self) -> ProfileInfo:
-        """
-        Returns the Vortex profile info of the test instance.
-
-        Returns:
-            ProfileInfo: The profile info of the test instance.
-        """
-
-        return ProfileInfo(
-            display_name="Test Instance (1a2b3c4d)",
-            game=GameService.get_game_by_id(GAME_ID),
-            id="1a2b3c4d",
-            mod_manager=ModManagerApi.Vortex,
-        )
-
-    @pytest.fixture
-    def vortex_db(
-        self, mocker: MockerFixture, sandbox: Sandbox, data_folder: Path
-    ) -> MockPlyvelDB:
-        """
-        Mocks the `plyvel.DB` class and redirects it to an in-memory database with the
-        test instance whose staging folder points into the sandbox.
+        Replaces `ProgressExecutor` with a synchronous implementation for the duration
+        of a single test. To patch already imported modules, use the returned `patch`
+        function.
 
         Args:
             mocker (MockerFixture): The mocker fixture.
-            sandbox (Sandbox): The session-wide sandbox.
-            data_folder (Path): The path to the test data folder.
 
         Returns:
-            MockPlyvelDB: The mocked database.
+            ExecutorPatcher: Function to patch the executor of a module.
         """
 
-        state_json: str = sandbox.localize_vortex_database(
-            (data_folder / "state.v2.json").read_text("utf-8")
-        )
-        flat_data: dict[str, str] = LevelDB.flatten_nested_dict(json.loads(state_json))
-        mock_instance = MockPlyvelDB(
-            {k.encode(): v.encode() for k, v in flat_data.items()}
-        )
+        mock_instance = SynchronousExecutor()
 
-        mocker.patch("plyvel_next.DB", return_value=mock_instance)
+        def patch(obj: object) -> SynchronousExecutor:
+            mocker.patch(
+                obj.__module__ + ".ProgressExecutor", return_value=mock_instance
+            )
+            return mock_instance
 
-        return mock_instance
+        return patch
 
     def get_mod_by_name(self, mod_name: str, mod_instance: ModInstance) -> Mod:
         """
-        Gets a mod by its name from the loaded mod instance.
+        Gets a mod by its name from the specified mod instance.
 
         Args:
             mod_name (str): The name of the mod

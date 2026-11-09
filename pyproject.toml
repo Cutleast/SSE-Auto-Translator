@@ -88,6 +88,9 @@ pythonpath = ["src"]
 log_cli = true
 log_cli_level = "DEBUG"
 log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
+markers = [
+    "integration: tests that need the full test user data and test mod instances",
+]
 
 [tool.pyright]
 venvPath = "."

@@ -59,6 +59,11 @@ class ComponentProvider(Singleton):
 
         NXMHandler(subprocess.list2cmdline(get_execution_info()[0]))
 
+        self.__temp_folder_provider = TempFolderProvider(
+            folder_name=f"SSE-AT_temp-{time.strftime('%Y-%m-%d_%H-%M-%S')}",
+            base_path=self.__app_config.temp_path,
+        )
+
         self.__provider = TranslationProvider(self.__user_data.user_config)
 
         self.__translator_service = TranslatorService(
@@ -85,11 +90,7 @@ class ComponentProvider(Singleton):
             app_config=self.__app_config,
             user_config=self.__user_data.user_config,
             masterlist=self.__user_data.masterlist,
-        )
-
-        self.__temp_folder_provider = TempFolderProvider(
-            folder_name=f"SSE-AT_temp-{time.strftime('%Y-%m-%d_%H-%M-%S')}",
-            base_path=self.__app_config.temp_path,
+            temp_folder_provider=self.__temp_folder_provider,
         )
 
         self.log.info("Initialization complete.")

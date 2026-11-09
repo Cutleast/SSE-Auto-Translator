@@ -2,17 +2,21 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 from cutleast_core_lib.test.utils import Utils
 from PySide6.QtGui import QAction
 from pytest_mock import MockerFixture
 from pytestqt.qtbot import QtBot
 
 from core.config.app_config import AppConfig
+from core.config.user_config import UserConfig
 from core.downloader.download_manager import DownloadManager
 from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.provider_preference import ProviderPreference
-from core.user_data.user_data import UserData
+from core.utilities.temp_folder_provider import TempFolderProvider
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
 from ui.main_page.database.downloads.downloads_tab import DownloadsTab
 from ui.main_page.database.downloads.downloads_toolbar import DownloadsToolbar
 
@@ -31,7 +35,8 @@ class TestDownloadsTab(BaseTest):
     def test_initializes_without_provider(
         self,
         app_config: AppConfig,
-        user_data: UserData,
+        temp_folder_provider: TempFolderProvider,
+        tmp_path: Path,
         qtbot: QtBot,
         mocker: MockerFixture,
     ) -> None:
@@ -40,25 +45,28 @@ class TestDownloadsTab(BaseTest):
 
         Args:
             app_config (AppConfig): Application configuration.
-            user_data (UserData): User data containing the configuration.
+            temp_folder_provider (TempFolderProvider): The temp folder provider.
+            tmp_path (Path): The temporary folder of the test.
             qtbot (QtBot): Fixture for Qt widgets.
             mocker (MockerFixture): Fixture for mocking dependencies.
         """
 
         # given
-        user_data.user_config.provider_preference = ProviderPreference.OnlyNexusMods
+        user_config: UserConfig = DataFactory.user_config()
+        user_config.provider_preference = ProviderPreference.OnlyNexusMods
         mocker.patch(
             "core.translation_provider.provider_manager.NexusModsApi",
             side_effect=RuntimeError,
         )
-        provider = TranslationProvider(user_data.user_config)
+        provider = TranslationProvider(user_config)
         download_manager = DownloadManager(
-            database=user_data.database,
-            mod_instance=user_data.mod_instance,
+            database=DataFactory.database(tmp_path),
+            mod_instance=DataFactory.mod_instance([]),
             provider=provider,
             app_config=app_config,
-            user_config=user_data.user_config,
-            masterlist=user_data.masterlist,
+            user_config=user_config,
+            masterlist=DataFactory.masterlist(),
+            temp_folder_provider=temp_folder_provider,
         )
 
         # when

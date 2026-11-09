@@ -18,3 +18,6 @@ RES_PATH: Path = DATA_PATH / "res"
 The folder with the application resources for tests. It contains a small vanilla
 translation database instead of the full one shipped with the application.
 """
+
+DICTIONARY_PATH: Path = PROJECT_PATH / "res" / "hunspell"
+"""The (read-only) folder with the Hunspell dictionaries of the application."""

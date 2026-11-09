@@ -22,11 +22,11 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
-from tests.base_test import BaseTest
+from tests.integration_test import IntegrationTest
 from ui.main_page.mod_instance.mod_instance import ModInstanceWidget
 
 
-class TestModInstanceWidget(BaseTest):
+class TestModInstanceWidget(IntegrationTest):
     """
     Tests `ui.main_page.mod_instance.mod_instance.ModInstanceWidget`.
     """

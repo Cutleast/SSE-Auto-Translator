@@ -16,6 +16,8 @@ from core.string.string_status import StringStatus
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
+from tests.setup.paths import DICTIONARY_PATH
 from ui.translation_editor.editor.dialog.dialog import TranslatorDialog
 from ui.translation_editor.editor.editor_tab import EditorTab
 from ui.translation_editor.editor.strings_widget import StringsWidget
@@ -39,32 +41,31 @@ class TestEditorTab(BaseTest):
     """The name of the edited test translation."""
 
     @pytest.fixture
-    def editor_tab(
-        self, user_data: UserData, user_data_path: Path, qtbot: QtBot
-    ) -> EditorTab:
+    def editor_tab(self, tmp_path: Path, qtbot: QtBot) -> EditorTab:
         """
         Creates and shows an editor tab for the test translation and waits until the
         background initialization of the editor is finished.
 
         Args:
-            user_data (UserData): The test user data.
-            user_data_path (Path): The path to the test user data.
+            tmp_path (Path): The temporary folder of the test.
             qtbot (QtBot): The Qt bot fixture.
 
         Returns:
             EditorTab: The editor tab.
         """
 
-        translation: Translation = next(
-            translation
-            for translation in user_data.database.user_translations
-            if translation.name == TestEditorTab.TRANSLATION_NAME
+        translation: Translation = DataFactory.stored_translation(
+            TestEditorTab.TRANSLATION_NAME, tmp_path
+        )
+        user_data: UserData = DataFactory.user_data(
+            tmp_path / "user", DataFactory.database(tmp_path, [translation])
         )
         editor_tab = EditorTab(
             translation,
             user_data,
             MagicMock(spec=TranslatorService),
-            user_data_path,
+            tmp_path / "user",
+            DICTIONARY_PATH,
         )
         qtbot.addWidget(editor_tab)
         editor_tab.show()

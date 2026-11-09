@@ -11,10 +11,11 @@ from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
 from core.string.types import StringList
-from core.user_data.user_data import UserData
+from tests.setup.data_factory import DataFactory
 from tests.setup.sync_executor import ExecutorPatcher
 
 from ..core_test import CoreTest
@@ -26,16 +27,17 @@ class TestDatabaseUpdater(CoreTest):
     """
 
     def test_update_translation_resets_changed_strings_and_saves(
-        self, user_data: UserData
+        self, tmp_path: Path
     ) -> None:
         """
         Tests `DatabaseUpdater.update_translation()`.
         """
 
         # given
-        modfile: ModFile = self.get_modfile_from_mod_name(
-            "RS Children Overhaul", "RSChildren.esp", user_data.mod_instance
-        )
+        mod: Mod = DataFactory.instance_mod("RS Children Overhaul")
+        mod_instance: ModInstance = DataFactory.mod_instance([mod])
+        database: TranslationDatabase = DataFactory.database(tmp_path)
+        modfile: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
         original_strings: StringList = modfile.get_strings()
         translation_strings: StringList = [
             string.model_copy(deep=True) for string in original_strings
@@ -47,9 +49,9 @@ class TestDatabaseUpdater(CoreTest):
         translation: Translation = DatabaseService.create_blank_translation(
             name="Smoke Update Translation",
             strings={modfile.path: translation_strings},
-            database=user_data.database,
+            database=database,
         )
-        updater = DatabaseUpdater(user_data.database, user_data.mod_instance)
+        updater = DatabaseUpdater(database, mod_instance)
 
         # when
         updated_modfile_states: dict[ModFile, TranslationStatus] = (
@@ -73,22 +75,20 @@ class TestDatabaseUpdater(CoreTest):
         )
 
     def test_update_database_translations_adds_missing_modfiles(
-        self, user_data: UserData, sync_executor: ExecutorPatcher
+        self, tmp_path: Path, sync_executor: ExecutorPatcher
     ) -> None:
         """
         Tests `DatabaseUpdater.update_database_translations()`.
         """
 
         # given
-        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.mod_instance)
-        modfile: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
-        database = TranslationDatabase(
-            userdb_path=user_data.database.userdb_path,
-            appdb_path=user_data.database.appdb_path,
-            language=user_data.database.language,
-            vanilla_translation=user_data.database.vanilla_translation,
-            user_translations=[],
+        mod: Mod = DataFactory.instance_mod("RS Children Overhaul")
+        # a mod without translation must be skipped
+        mod_instance: ModInstance = DataFactory.mod_instance(
+            [mod, DataFactory.mod("Unrelated Mod")]
         )
+        modfile: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
+        database: TranslationDatabase = DataFactory.database(tmp_path)
         for current_modfile in mod.modfiles:
             if current_modfile.path != modfile.path:
                 current_modfile.status = TranslationStatus.RequiresTranslation
@@ -104,7 +104,7 @@ class TestDatabaseUpdater(CoreTest):
         )
         database.user_translations.append(translation)
 
-        updater = DatabaseUpdater(database, user_data.mod_instance)
+        updater = DatabaseUpdater(database, mod_instance)
         sync_executor(updater)
 
         # when

@@ -12,10 +12,10 @@ from core.user_data.user_data_service import UserDataService
 from utilities.batch.command import BatchCommand
 from utilities.batch.runner import BatchRunner
 
-from ...base_test import BaseTest
+from ...integration_test import IntegrationTest
 
 
-class TestBatchRunner(BaseTest):
+class TestBatchRunner(IntegrationTest):
     """
     Tests `utilities.batch.runner.BatchRunner`.
     """

@@ -45,6 +45,20 @@ class StringExtractor(QObject):
 
     log: logging.Logger = logging.getLogger("StringExtractor")
 
+    __temp_folder_provider: TempFolderProvider
+
+    def __init__(self, temp_folder_provider: TempFolderProvider) -> None:
+        """
+        Args:
+            temp_folder_provider (TempFolderProvider):
+                Provider for the temporary folder that files from archives are
+                extracted to.
+        """
+
+        super().__init__()
+
+        self.__temp_folder_provider = temp_folder_provider
+
     def extract_strings(
         self,
         input: Path,
@@ -191,7 +205,7 @@ class StringExtractor(QObject):
 
             to_extract[file_path] = file
 
-        out_folder: Path = TempFolderProvider.get().get_temp_folder()
+        out_folder: Path = self.__temp_folder_provider.get_temp_folder()
         out_folder /= get_file_identifier(archive_path)
         out_folder.mkdir(parents=True, exist_ok=True)
 
@@ -363,7 +377,7 @@ class StringExtractor(QObject):
         if not isinstance(source, Archive):
             return
 
-        out_folder: Path = TempFolderProvider.get().get_temp_folder()
+        out_folder: Path = self.__temp_folder_provider.get_temp_folder()
         out_folder /= get_file_identifier(source.path)
         out_folder.mkdir(parents=True, exist_ok=True)
 

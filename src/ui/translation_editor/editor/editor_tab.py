@@ -95,6 +95,7 @@ class EditorTab(QWidget):
         user_data: UserData,
         translator_service: TranslatorService,
         user_data_path: Path,
+        dictionary_path: Path,
     ) -> None:
         """
         Args:
@@ -103,6 +104,7 @@ class EditorTab(QWidget):
             user_data (UserData): The user data.
             translator_service (TranslatorService): The translator service.
             user_data_path (Path): The path to the user data directory.
+            dictionary_path (Path): The folder with the Hunspell dictionaries.
         """
 
         super().__init__()
@@ -119,6 +121,7 @@ class EditorTab(QWidget):
             translator_config=user_data.translator_config,
             translator_service=translator_service,
             user_data_path=user_data_path,
+            dictionary_path=dictionary_path,
         )
         self.__editor.strings_changed.connect(self.__on_strings_changed)
         self.__editor.strings_modified.connect(self.__on_strings_modified)

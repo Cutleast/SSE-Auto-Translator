@@ -14,10 +14,11 @@ from core.mod_file.context import ModFileContext
 from core.translation_context.context import TranslationContext
 from core.translation_context.glossary import TranslationGlossary
 from core.utilities.game_language import GameLanguage
-from tests.setup.paths import PROJECT_PATH
+from tests.base_test import BaseTest
+from tests.setup.paths import DICTIONARY_PATH
 
 
-class TestTranslationValidator:
+class TestTranslationValidator(BaseTest):
     """
     Tests `core.editor.validator.TranslationValidator`.
     """
@@ -57,7 +58,7 @@ class TestTranslationValidator:
         """
 
         # given
-        validator = TranslationValidator(tmp_path)
+        validator = TranslationValidator(tmp_path, DICTIONARY_PATH)
         context: TranslationContext = TestTranslationValidator.create_context()
 
         # when
@@ -77,7 +78,7 @@ class TestTranslationValidator:
         """
 
         # given
-        validator = TranslationValidator(tmp_path)
+        validator = TranslationValidator(tmp_path, DICTIONARY_PATH)
         context: TranslationContext = TestTranslationValidator.create_context()
 
         # when
@@ -125,7 +126,7 @@ class TestTranslationValidator:
         """
 
         # given
-        validator = TranslationValidator(tmp_path)
+        validator = TranslationValidator(tmp_path, DICTIONARY_PATH)
         context: TranslationContext = TestTranslationValidator.create_context(
             {"Whiterun": "Weißlauf", "Hold": "Fürstentum"}
         )
@@ -144,18 +145,14 @@ class TestTranslationValidator:
         else:
             assert actual_severities == [expected_severity]
 
-    def test_finds_unknown_words(
-        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-    ) -> None:
+    def test_finds_unknown_words(self, tmp_path: Path) -> None:
         """
         Tests that misspelled words are reported while words from the context and
         non-English words from the original text are considered known.
         """
 
         # given
-        # the dictionaries are loaded relative to the working directory
-        monkeypatch.chdir(PROJECT_PATH)
-        validator = TranslationValidator(tmp_path)
+        validator = TranslationValidator(tmp_path, DICTIONARY_PATH)
         context: TranslationContext = TestTranslationValidator.create_context(
             {"Whiterun": "Weißlauf"}
         )
@@ -171,17 +168,14 @@ class TestTranslationValidator:
         # then
         assert list(diagnostics.unknown_words) == ["Schwrt"]
 
-    def test_word_added_to_user_dictionary_is_known(
-        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-    ) -> None:
+    def test_word_added_to_user_dictionary_is_known(self, tmp_path: Path) -> None:
         """
         Tests that a word added to the user dictionary is no longer reported and
         persisted in the user data folder.
         """
 
         # given
-        monkeypatch.chdir(PROJECT_PATH)
-        validator = TranslationValidator(tmp_path)
+        validator = TranslationValidator(tmp_path, DICTIONARY_PATH)
         context: TranslationContext = TestTranslationValidator.create_context()
         added_words: list[str] = []
         validator.word_added_to_user_dictionary.connect(added_words.append)

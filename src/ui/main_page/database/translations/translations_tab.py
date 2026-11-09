@@ -44,6 +44,7 @@ from core.translation_provider.provider import TranslationProvider
 from core.utilities.constants import SUPPORTED_ARCHIVE_TYPES
 from core.utilities.exceptions import NoOriginalModFound
 from core.utilities.filesystem import relative_data_path
+from core.utilities.temp_folder_provider import TempFolderProvider
 from ui.string_list.string_list_window import StringListWindow
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.string_search_dialog import StringSearchDialog
@@ -290,7 +291,9 @@ class TranslationsTab(QWidget):
         for file in files:
             if file.suffix.lower() in SUPPORTED_ARCHIVE_TYPES:
                 strings = ProgressDialog(
-                    lambda pdisplay, f=file: StringExtractor().extract_strings(
+                    lambda pdisplay, f=file: StringExtractor(
+                        TempFolderProvider.get()
+                    ).extract_strings(
                         input=f,
                         mod_instance=self.__mod_instance,
                         language=self.__database.language,

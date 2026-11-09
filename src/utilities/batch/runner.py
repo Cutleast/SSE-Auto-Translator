@@ -214,7 +214,8 @@ class BatchRunner(Singleton):
 
         database: TranslationDatabase = self.__user_data.database
         mod_instance: ModInstance = self.__user_data.mod_instance
-        extractor = StringExtractor()
+        assert self.__component_provider is not None
+        extractor = StringExtractor(self.__component_provider.get_temp_folder_provider())
 
         for a, archive_path in enumerate(archives):
             if pdisplay is not None:

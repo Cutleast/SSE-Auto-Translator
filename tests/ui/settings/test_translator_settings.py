@@ -3,9 +3,11 @@ Copyright (c) Cutleast
 """
 
 from copy import copy
+from pathlib import Path
 
 import pytest
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_selector import EnumSelector
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
@@ -14,8 +16,8 @@ from pytestqt.qtbot import QtBot
 
 from core.config.translator_config import TranslatorConfig
 from core.translator.apis import TranslatorApi
-from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
 from ui.settings.translator_settings import TranslatorSettings
 
 
@@ -40,27 +42,45 @@ class TestTranslatorSettings(BaseTest):
     )
 
     @pytest.fixture
+    def translator_config_manager(
+        self, tmp_path: Path
+    ) -> ConfigManager[TranslatorConfig]:
+        """
+        Creates a manager for a default TranslatorConfig.
+
+        Args:
+            tmp_path (Path): The temporary folder of the test.
+
+        Returns:
+            ConfigManager[TranslatorConfig]: The config manager.
+        """
+
+        return DataFactory.config_manager(TranslatorConfig(), tmp_path)
+
+    @pytest.fixture
     def translator_settings(
-        self, user_data: UserData, qtbot: QtBot
+        self, translator_config_manager: ConfigManager[TranslatorConfig], qtbot: QtBot
     ) -> TranslatorSettings:
         """
         Returns a new `TranslatorSettings` instance for tests.
         """
 
-        translator_settings = TranslatorSettings(user_data.translator_config_manager)
+        translator_settings = TranslatorSettings(translator_config_manager)
         qtbot.addWidget(translator_settings)
 
         return translator_settings
 
     def test_initial(
-        self, translator_settings: TranslatorSettings, user_data: UserData
+        self,
+        translator_settings: TranslatorSettings,
+        translator_config_manager: ConfigManager[TranslatorConfig],
     ) -> None:
         """
         Tests the initial state of the `TranslatorSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = user_data.translator_config
+        translator_config: TranslatorConfig = translator_config_manager.config
 
         api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_SELECTOR
@@ -91,14 +111,16 @@ class TestTranslatorSettings(BaseTest):
         )
 
     def test_apply(
-        self, translator_settings: TranslatorSettings, user_data: UserData
+        self,
+        translator_settings: TranslatorSettings,
+        translator_config_manager: ConfigManager[TranslatorConfig],
     ) -> None:
         """
         Tests the `apply` method of the `AppSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = user_data.translator_config
+        translator_config: TranslatorConfig = translator_config_manager.config
         old_config: TranslatorConfig = copy(translator_config)
 
         # when

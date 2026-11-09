@@ -47,18 +47,21 @@ class TranslationValidator(QObject):
     """Lock that serializes the spell checks of parallel requests."""
 
     __user_data_path: Path
+    __dictionary_path: Path
     __english_spell_checker: SpellChecker
     __spell_checkers: dict[GameLanguage, SpellChecker]
 
-    def __init__(self, user_data_path: Path) -> None:
+    def __init__(self, user_data_path: Path, dictionary_path: Path) -> None:
         """
         Args:
             user_data_path (Path): Path to the user data directory.
+            dictionary_path (Path): The folder with the Hunspell dictionaries.
         """
 
         super().__init__()
 
         self.__user_data_path = user_data_path
+        self.__dictionary_path = dictionary_path
         self.__english_spell_checker = SpellChecker(language=None, user_data_path=None)
         self.__spell_checkers = {}
 
@@ -262,7 +265,7 @@ class TranslationValidator(QObject):
     def __get_spell_checker(self, language: GameLanguage) -> SpellChecker:
         if language not in self.__spell_checkers:
             self.__spell_checkers[language] = SpellChecker(
-                language.id, self.__user_data_path
+                language.id, self.__user_data_path, self.__dictionary_path
             )
 
         return self.__spell_checkers[language]

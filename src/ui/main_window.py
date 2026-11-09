@@ -51,6 +51,7 @@ class MainWindow(ExtendedMainWindow):
     __app_config: AppConfig
     __user_data: UserData
     __user_data_path: Path
+    __dictionary_path: Path
     __translator_service: TranslatorService
     __scanner: Scanner
     __provider: TranslationProvider
@@ -71,6 +72,7 @@ class MainWindow(ExtendedMainWindow):
         app_config_manager: ConfigManager[AppConfig],
         user_data: UserData,
         user_data_path: Path,
+        dictionary_path: Path,
         translator_service: TranslatorService,
         scanner: Scanner,
         provider: TranslationProvider,
@@ -82,6 +84,7 @@ class MainWindow(ExtendedMainWindow):
             app_config_manager (ConfigManager[AppConfig]): App configuration manager.
             user_data (UserData): User data.
             user_data_path (Path): Path to the user data directory.
+            dictionary_path (Path): The folder with the Hunspell dictionaries.
             translator_service (TranslatorService): API translator service.
             scanner (Scanner): Scanner.
             provider (TranslationProvider): Translation provider.
@@ -93,6 +96,7 @@ class MainWindow(ExtendedMainWindow):
         self.__app_config = app_config_manager.config
         self.__user_data = user_data
         self.__user_data_path = user_data_path
+        self.__dictionary_path = dictionary_path
         self.__translator_service = translator_service
         self.__scanner = scanner
         self.__provider = provider
@@ -157,7 +161,10 @@ class MainWindow(ExtendedMainWindow):
         self.__tab_widget.addTab(self.__mainpage_widget, self.tr("Modlist"))
 
         self.__translation_editor = EditorPage(
-            self.__user_data, self.__user_data_path, self.__translator_service
+            self.__user_data,
+            self.__user_data_path,
+            self.__dictionary_path,
+            self.__translator_service,
         )
         self.__tab_widget.addTab(
             self.__translation_editor, self.tr("Translation Editor")

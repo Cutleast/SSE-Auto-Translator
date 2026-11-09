@@ -41,6 +41,7 @@ class EditorPage(QSplitter):
 
     __user_data: UserData
     __user_data_path: Path
+    __dictionary_path: Path
     __translator_service: TranslatorService
 
     __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
@@ -55,12 +56,14 @@ class EditorPage(QSplitter):
         self,
         user_data: UserData,
         user_data_path: Path,
+        dictionary_path: Path,
         translator_service: TranslatorService,
     ) -> None:
         """
         Args:
             user_data (UserData): The user data.
             user_data_path (Path): The path to the user data directory.
+            dictionary_path (Path): The folder with the Hunspell dictionaries.
             translator_service (TranslatorService): The translator service.
         """
 
@@ -68,6 +71,7 @@ class EditorPage(QSplitter):
 
         self.__user_data = user_data
         self.__user_data_path = user_data_path
+        self.__dictionary_path = dictionary_path
         self.__translator_service = translator_service
 
         self.__init_ui()
@@ -230,6 +234,7 @@ class EditorPage(QSplitter):
                 user_data=self.__user_data,
                 translator_service=self.__translator_service,
                 user_data_path=self.__user_data_path,
+                dictionary_path=self.__dictionary_path,
             )
             translation_tab.changed_signal.connect(self.__update_tab_labels)
             translation_tab.close_signal.connect(self.close_translation)

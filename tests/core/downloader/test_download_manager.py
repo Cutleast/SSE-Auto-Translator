@@ -11,6 +11,7 @@ from pytestqt.qtbot import QtBot
 from requests_mock import Mocker as RequestsMock
 
 from core.config.app_config import AppConfig
+from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
@@ -18,8 +19,9 @@ from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.source import Source
-from core.user_data.user_data import UserData
+from core.utilities.temp_folder_provider import TempFolderProvider
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
 
 
 class TestDownloadManager(BaseTest):
@@ -52,20 +54,37 @@ class TestDownloadManager(BaseTest):
         return provider
 
     @pytest.fixture
+    def database(self, tmp_path: Path) -> TranslationDatabase:
+        """
+        Creates an empty translation database.
+
+        Args:
+            tmp_path (Path): The temporary folder of the test.
+
+        Returns:
+            TranslationDatabase: The database.
+        """
+
+        return DataFactory.database(tmp_path)
+
+    @pytest.fixture
     def download_manager(
         self,
-        user_data: UserData,
+        database: TranslationDatabase,
         app_config: AppConfig,
         provider: MagicMock,
+        temp_folder_provider: TempFolderProvider,
         tmp_path: Path,
     ) -> Generator[DownloadManager]:
         """
-        Creates and starts a download manager and stops it after the test.
+        Creates and starts a download manager for a mod instance with the original mod
+        of the test translation and stops it after the test.
 
         Args:
-            user_data (UserData): The test user data.
+            database (TranslationDatabase): The translation database.
             app_config (AppConfig): The test app configuration.
             provider (MagicMock): The mocked translation provider.
+            temp_folder_provider (TempFolderProvider): The temp folder provider.
             tmp_path (Path): The temporary folder of the test.
 
         Yields:
@@ -74,12 +93,13 @@ class TestDownloadManager(BaseTest):
 
         app_config.downloads_path = tmp_path / "downloads"
         download_manager = DownloadManager(
-            user_data.database,
-            user_data.mod_instance,
+            database,
+            DataFactory.mod_instance([DataFactory.instance_mod("Wet and Cold SE")]),
             provider,
             app_config,
-            user_data.user_config,
-            user_data.masterlist,
+            DataFactory.user_config(),
+            DataFactory.masterlist(),
+            temp_folder_provider,
         )
         download_manager.start()
 
@@ -110,11 +130,10 @@ class TestDownloadManager(BaseTest):
             source=Source.NexusMods,
         )
 
-    @pytest.mark.usefixtures("temp_folder_provider")
     def test_download_installs_translation(
         self,
         download_manager: DownloadManager,
-        user_data: UserData,
+        database: TranslationDatabase,
         data_folder: Path,
         requests_mock: RequestsMock,
         qtbot: QtBot,
@@ -131,11 +150,6 @@ class TestDownloadManager(BaseTest):
             content=archive_data,
             headers={"Content-Length": str(len(archive_data))},
         )
-        # Remove the installed translation so that it doesn't conflict with the
-        # downloaded one.
-        user_data.mod_instance.mods.remove(
-            self.get_mod_by_name("Wet and Cold SE - German", user_data.mod_instance)
-        )
         download: FileDownload = TestDownloadManager.create_download()
         finished: list[FileDownload] = []
         failures: list[Exception] = []
@@ -151,17 +165,16 @@ class TestDownloadManager(BaseTest):
         assert finished == [download]
         translation: Translation = next(
             translation
-            for translation in user_data.database.user_translations
+            for translation in database.user_translations
             if translation.name == TestDownloadManager.TRANSLATION_NAME
         )
         assert Path("wetandcold.esp") in translation.strings
         assert (translation.path / "wetandcold.esp.json").is_file()
 
-    @pytest.mark.usefixtures("temp_folder_provider")
     def test_failed_download_is_reported(
         self,
         download_manager: DownloadManager,
-        user_data: UserData,
+        database: TranslationDatabase,
         requests_mock: RequestsMock,
         qtbot: QtBot,
     ) -> None:
@@ -171,7 +184,7 @@ class TestDownloadManager(BaseTest):
 
         # given
         requests_mock.get(TestDownloadManager.DOWNLOAD_URL, status_code=404)
-        translations_before: int = len(user_data.database.user_translations)
+        translations_before: int = len(database.user_translations)
         download: FileDownload = TestDownloadManager.create_download()
 
         # when
@@ -183,4 +196,4 @@ class TestDownloadManager(BaseTest):
         # then
         assert blocker.args is not None
         assert blocker.args[0] is download
-        assert len(user_data.database.user_translations) == translations_before
+        assert len(database.user_translations) == translations_before
