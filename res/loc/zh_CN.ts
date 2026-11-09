@@ -598,62 +598,62 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DiagnosticsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="98"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="100"/>
         <source>Issues:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="190"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="192"/>
         <source>Missing placeholder &apos;{placeholder}&apos; ({count})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="194"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="196"/>
         <source>The placeholder &apos;{placeholder}&apos; is missing {count} times.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="197"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="199"/>
         <source>Insert at current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="205"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="207"/>
         <source>The term &apos;{term}&apos; is not present in the translation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="210"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="212"/>
         <source>Reason:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="220"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="222"/>
         <source>Glossary term &apos;{term}&apos; not in translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="260"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="262"/>
         <source>Unknown word &apos;{word}&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="262"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="264"/>
         <source>The word &apos;{word}&apos; is not a known word in the target language dictionary, the context or the glossary.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="240"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="242"/>
         <source>Add to dictionary</source>
         <translation type="unfinished">添加到词典</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="225"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="227"/>
         <source>Replace original term</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="252"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="254"/>
         <source>Accept suggestion</source>
         <translation type="unfinished"></translation>
     </message>

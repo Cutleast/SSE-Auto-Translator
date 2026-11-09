@@ -73,6 +73,8 @@ class DiagnosticsWidget(QWidget):
         self.__name_filter = None
         self.__severity_filter = None
 
+        self.setMinimumWidth(340)
+
         self.__init_ui()
 
         self.__tool_bar.filter_changed.connect(self.__on_severity_filter_changed)
