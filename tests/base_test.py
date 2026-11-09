@@ -32,6 +32,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.user_data.user_data import UserData
 from core.user_data.user_data_service import UserDataService
 from core.utilities.constants import GAME_ID
+from core.utilities.temp_folder_provider import TempFolderProvider
 
 from .setup.mock_plyvel import MockPlyvelDB
 from .setup.mocked_web_response import MockedWebResponse
@@ -237,6 +238,20 @@ class BaseTest:
         provider.initialize_components()
 
         return provider
+
+    @pytest.fixture
+    def temp_folder_provider(self, tmp_path: Path) -> TempFolderProvider:
+        """
+        Returns a temp folder provider located in the temporary folder of the test.
+
+        Args:
+            tmp_path (Path): The temporary folder of the test.
+
+        Returns:
+            TempFolderProvider: The temp folder provider.
+        """
+
+        return TempFolderProvider("SSE-AT_temp", tmp_path / "temp")
 
     @pytest.fixture
     def logger(self) -> Logger:

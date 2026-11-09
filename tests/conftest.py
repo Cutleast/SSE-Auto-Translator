@@ -118,6 +118,10 @@ def isolated_environment(
 
     monkeypatch.setenv("LOCALAPPDATA", str(sandbox.local_app_data_path))
     monkeypatch.setenv("APPDATA", str(sandbox.app_data_path))
+    temp_dir: Path = tmp_path / "temp"
+    temp_dir.mkdir()
+    monkeypatch.setenv("TEMP", str(temp_dir))
+    monkeypatch.setenv("TMP", str(temp_dir))
     # This path is resolved once when the module is imported.
     monkeypatch.setattr(
         ModOrganizer, "appdata_path", sandbox.local_app_data_path / "ModOrganizer"

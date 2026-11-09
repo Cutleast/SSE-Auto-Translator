@@ -43,8 +43,7 @@ class TestStringExtractor(CoreTest):
         assert translation_strings
         assert Path("WetandCold.esp") in translation_strings
 
-    # TODO: Fix this test
-    @pytest.mark.skip("Conflict between fake filesystem and the 7-zip executable")
+    @pytest.mark.usefixtures("temp_folder_provider")
     def test_extract_strings_from_archive(
         self, data_folder: Path, user_data: UserData
     ) -> None:
