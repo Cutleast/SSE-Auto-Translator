@@ -1,0 +1,66 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    name: pytest (Windows)
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out repository and submodules
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Compile Qt translations
+        shell: pwsh
+        run: |
+          Get-ChildItem res/loc/*.ts | ForEach-Object {
+            uv run --no-sync pyside6-lrelease $_.FullName -qm ($_.FullName -replace '\.ts$', '.qm')
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+
+      - name: Compile Qt resources
+        run: |
+          uv run --no-sync python core-lib/scripts/compile_resources.py
+          uv run --no-sync pyside6-rcc res/resources.qrc -o src/resources_rc.py
+
+      - name: Run tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: >-
+          uv run --no-sync pytest
+          -o log_cli=false
+          -ra
+          --durations=50
+          --junitxml=test-results/junit.xml
+
+      - name: Upload test results
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
+          if-no-files-found: ignore
