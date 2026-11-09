@@ -77,7 +77,7 @@ class TestDbGen(BaseTest):
         assert plugin_name in string_tables
         assert len(string_tables[plugin_name]) > 0
 
-    def test_create_database(self, data_folder: Path) -> None:
+    def test_create_database(self, data_folder: Path, tmp_path: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.create_database()`.
         """
@@ -85,7 +85,6 @@ class TestDbGen(BaseTest):
         # given
         db_gen = DbGen()
         data_path: Path = data_folder / "db_gen"
-        tmp_path: Path = self.tmp_folder()
         input_folder: Path = data_path / "orig"
         strings_folder: Path = data_path / "trans"
         output_path: Path = tmp_path / "db_gen_test"

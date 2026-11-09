@@ -81,7 +81,10 @@ class TestAppSettings(BaseTest):
         Returns a new `AppSettings` instance for tests.
         """
 
-        return AppSettings(app_config_manager, cache)
+        app_settings = AppSettings(app_config_manager, cache)
+        qtbot.addWidget(app_settings)
+
+        return app_settings
 
     def test_initial(self, app_settings: AppSettings, app_config: AppConfig) -> None:
         """

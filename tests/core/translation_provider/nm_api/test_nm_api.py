@@ -48,7 +48,7 @@ class TestNexusModsApi(CoreTest):
             (
                 True,  # translation version starts with original mod version
                 True,  # translation_timestamp > original_mod_timestamp
-                1759338600,  # translation_timestamp
+                int(to_timestamp("01.10.2025 19:10")),  # translation_timestamp
             ),
         ),
     ]
@@ -169,7 +169,7 @@ class TestNexusModsApi(CoreTest):
             ("Spanish (Spain)", "spanish", [42, 43]),
             ("Portuguese", "portuguese", [42, 43]),
             ("Spanish", "spanish", [42, 43]),
-            ("Portuguese (Portugal)", "portuguese", []),
+            ("Portuguese (Portugal)", "portuguese", [42, 43]),
             ("Traditional Chinese", "chinese", []),
         ],
     )

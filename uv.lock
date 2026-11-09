@@ -1730,7 +1730,6 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "nuitka" },
-    { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-cov" },
@@ -1772,7 +1771,6 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "nuitka" },
-    { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-cov" },

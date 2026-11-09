@@ -50,7 +50,10 @@ class TestUserSettings(BaseTest):
         Returns a new `UserSettings` instance for tests.
         """
 
-        return UserSettings(user_data.user_config_manager)
+        user_settings = UserSettings(user_data.user_config_manager)
+        qtbot.addWidget(user_settings)
+
+        return user_settings
 
     def test_initial(self, user_settings: UserSettings, user_data: UserData) -> None:
         """
@@ -96,8 +99,8 @@ class TestUserSettings(BaseTest):
         # when
         user_settings.apply()
 
-        # then (we're comparing the json because direct comparison is impossible due to pyfakefs)
-        assert user_config.model_dump_json() == old_config.model_dump_json()
+        # then
+        assert user_config == old_config
 
     def test_validate_raises_for_missing_nexus_api_key(
         self, user_settings: UserSettings

@@ -41,7 +41,7 @@ class TestModInstanceLoader(CoreTest):
         )
 
         # then
-        assert mod_instance.display_name == "Portable > Default"
+        assert mod_instance.display_name == "Portable: Default"
         assert len(mod_instance.mods) == 10
         assert len(mod_instance.modfiles) == 19
 
@@ -61,7 +61,7 @@ class TestModInstanceLoader(CoreTest):
         )
 
         # then
-        assert mod_instance.display_name == "Test Instance > Default"
+        assert mod_instance.display_name == "Test Instance: Default"
         assert len(mod_instance.mods) == 10
         assert len(mod_instance.modfiles) == 19
 

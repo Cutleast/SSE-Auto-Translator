@@ -34,14 +34,14 @@ class TestEsp2Dsd(BaseTest):
         assert len(plugins) == 1
         assert plugins[translated_plugin_path] == original_plugin_path
 
-    def test_convert(self, data_folder: Path) -> None:
+    def test_convert(self, data_folder: Path, tmp_path: Path) -> None:
         """
         Tests `utilities.esp2dsd.main.Esp2Dsd.convert()` on some dummy plugins.
         """
 
         # given
         esp2dsd = Esp2Dsd()
-        temp_path: Path = self.tmp_folder()
+        temp_path: Path = tmp_path
         data_path: Path = data_folder / "esp2dsd"
         translated_plugin_path: Path = data_path / "trans" / "WetandCold.esp"
         original_plugin_path: Path = data_path / "orig" / "WetandCold.esp"
