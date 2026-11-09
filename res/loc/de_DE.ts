@@ -937,8 +937,8 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Wird mit API übersetzt...</translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="557"/>
-        <location filename="src/core/editor/editor.py" line="574"/>
+        <location filename="src/core/editor/editor.py" line="560"/>
+        <location filename="src/core/editor/editor.py" line="577"/>
         <source>Running translation diagnostics...</source>
         <translation>Übersetzungsdiagnosen werden durchgeführt...</translation>
     </message>
@@ -2702,44 +2702,44 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="115"/>
-        <location filename="src/core/scanner/scanner.py" line="133"/>
+        <location filename="src/core/scanner/scanner.py" line="119"/>
+        <location filename="src/core/scanner/scanner.py" line="141"/>
         <source>Scanning modlist...</source>
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="508"/>
+        <location filename="src/core/scanner/scanner.py" line="530"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="255"/>
-        <location filename="src/core/scanner/scanner.py" line="294"/>
+        <location filename="src/core/scanner/scanner.py" line="277"/>
+        <location filename="src/core/scanner/scanner.py" line="316"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="181"/>
+        <location filename="src/core/scanner/scanner.py" line="203"/>
         <source>{item_name}: Extracting strings...</source>
         <translation>{item_name}: Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="202"/>
+        <location filename="src/core/scanner/scanner.py" line="224"/>
         <source>{item_name}: Detecting language...</source>
         <translation>{item_name}: Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="420"/>
+        <location filename="src/core/scanner/scanner.py" line="442"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="569"/>
+        <location filename="src/core/scanner/scanner.py" line="591"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="624"/>
+        <location filename="src/core/scanner/scanner.py" line="646"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
@@ -3867,47 +3867,52 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="309"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="321"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="210"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="222"/>
         <source>Go to previous string</source>
         <translation>Zum vorherigen String gehen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="225"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="237"/>
         <source>Go to next string</source>
         <translation>Zum nächsten String gehen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="240"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="252"/>
         <source>Context</source>
         <translation>Kontext</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="254"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="266"/>
         <source>Translation</source>
         <translation>Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="275"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="287"/>
         <source>Diagnostics</source>
         <translation>Diagnose</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="298"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="310"/>
         <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
         <translation>Hervorgehobene Platzhalter kommen in der Übersetzung nicht genauso oft vor wie im Original (Übersetzung/Original).</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="319"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="331"/>
         <source>Reset string</source>
         <translation>String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="331"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="341"/>
+        <source>Sync identical strings</source>
+        <translation>Identische Strings synchronisieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="353"/>
         <source>F1: Translation complete
 F2: Translation incomplete
 F3: No translation required
@@ -3918,17 +3923,22 @@ F3: Keine Übersetzung erforderlich
 F4: String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="339"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="523"/>
+        <source>Sync identical strings ({count} more)</source>
+        <translation>Identische Strings synchronisieren ({count} weitere)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="361"/>
         <source>Status</source>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="347"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="369"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="471"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="497"/>
         <source>Matching placeholders:</source>
         <translation>Übereinstimmende Platzhalter:</translation>
     </message>

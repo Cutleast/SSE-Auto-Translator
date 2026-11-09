@@ -273,26 +273,36 @@ class Editor(QObject):
         result: TranslationResult = translator.translate(request, update_callback)
         return result.translated_text
 
-    def set_translated_text(self, string: EditorString, translated_text: str) -> None:
+    def set_translated_text(
+        self, string: EditorString, translated_text: str, sync_identical: bool
+    ) -> None:
         """
         Applies a translated text to a string without changing its status.
 
         Args:
             string (EditorString): The string to update.
             translated_text (str): The translated text to apply.
+            sync_identical (bool): Whether to sync identical strings.
         """
 
         if string.string.string == translated_text:
             return
 
-        string.string.string = translated_text
-        string.diagnostics = None
-        self.__update_string_diagnostics(string)
+        modified_strings: list[EditorString] = [string]
+        if sync_identical:
+            modified_strings += self.get_sync_candidates(string)
 
-        self.strings_changed.emit([string])
+        for modified_string in modified_strings:
+            modified_string.string.string = translated_text
+            modified_string.diagnostics = None
+            self.__update_string_diagnostics(modified_string)
+
+        self.strings_changed.emit(modified_strings)
         self.strings_modified.emit()
 
-    def set_string_status(self, string: EditorString, status: StringStatus) -> None:
+    def set_string_status(
+        self, string: EditorString, status: StringStatus, sync_identical: bool
+    ) -> None:
         """
         Applies a status to a single string. Strings with no translation required get
         their original text as translation and the translation of completed strings is
@@ -301,30 +311,26 @@ class Editor(QObject):
         Args:
             string (EditorString): The string to update.
             status (StringStatus): The status to apply.
+            sync_identical (bool): Whether to sync identical strings.
         """
 
         if string.string.status == status:
             return
 
-        if status == StringStatus.NoTranslationRequired or (
-            status != StringStatus.TranslationRequired and string.string.string is None
-        ):
-            string.string.string = string.string.original
-
-        string.string.status = status
-        string.diagnostics = None
-        self.__update_string_diagnostics(string)
-
         modified_strings: list[EditorString] = [string]
-        if (
-            status == StringStatus.TranslationComplete
-            and string.string.string is not None
-        ):
-            modified_strings.extend(
-                self.__apply_to_matching_strings(
-                    string.string.original, string.string.string
-                )
-            )
+        if sync_identical:
+            modified_strings += self.get_sync_candidates(string)
+
+        for modified_string in modified_strings:
+            if status == StringStatus.NoTranslationRequired or (
+                status != StringStatus.TranslationRequired
+                and modified_string.string.string is None
+            ):
+                modified_string.string.string = string.string.original
+
+            modified_string.string.status = status
+            modified_string.diagnostics = None
+            self.__update_string_diagnostics(modified_string)
 
         self.strings_changed.emit(modified_strings)
         self.strings_modified.emit()
@@ -434,51 +440,48 @@ class Editor(QObject):
 
         return len(modified_strings)
 
-    def apply_to_matching_strings(self, original: str, translation: str) -> int:
+    def get_sync_candidates(self, string: EditorString) -> list[EditorString]:
         """
-        Applies translation to strings that are matching.
+        Gets a list of strings whose original text is identical to a given one and whose
+        status is not `StringStatus.TranslationComplete`.
 
         Args:
-            original (str): The original string
-            translation (str): The translation
+            string (EditorString): The current string.
 
         Returns:
-            int: Number of strings modified
+            list[EditorString]: The list of synchronization candidates.
         """
 
-        modified_strings: list[EditorString] = self.__apply_to_matching_strings(
-            original, translation
-        )
-
-        self.strings_changed.emit(modified_strings)
-
-        return len(modified_strings)
-
-    def __apply_to_matching_strings(
-        self, original: str, translation: str
-    ) -> list[EditorString]:
-        modified_strings: list[EditorString] = []
-        for string in self.all_strings:
+        return [
+            s
+            for s in self.all_strings
             if (
-                string.string.original == original
-                and string.string.status != StringStatus.TranslationComplete
-            ):
-                string.string.string = translation
-                string.string.status = StringStatus.TranslationIncomplete
-                string.diagnostics = None
-                self.__update_string_diagnostics(string)
-                modified_strings.append(string)
+                s is not string and s.string.original == string.string.original
+                # and s.string.status != StringStatus.TranslationComplete
+            )
+        ]
 
-        self.log.info(f"Applied translation to {len(modified_strings)} string(s).")
+    def reset_string(self, string: EditorString, sync_identical: bool) -> None:
+        """
+        Resets the translation and the status of a string.
 
-        return modified_strings
+        Args:
+            string (EditorString): The string to reset.
+            sync_identical (bool): Whether to sync identical strings.
+        """
+
+        strings: list[EditorString] = [string]
+        if sync_identical:
+            strings += self.get_sync_candidates(string)
+
+        self.reset_strings(strings)
 
     def reset_strings(self, strings: list[EditorString]) -> None:
         """
         Resets the translation and the status of a list of strings.
 
         Args:
-            strings (list[EditorString]): List of strings
+            strings (list[EditorString]): List of strings.
         """
 
         self.log.info(f"Resetting {len(strings)} string(s)...")

@@ -401,7 +401,7 @@ class EditorTab(QWidget):
             return
 
         self.__strings_widget.select_string(string)
-        self.__dialog.set_string(string)
+        self.__dialog.set_string(string, len(self.__editor.get_sync_candidates(string)))
         self.__dialog.set_index(index)
         self.__dialog.set_context(self.__editor.get_string_context(string))
 
@@ -685,25 +685,29 @@ class EditorTab(QWidget):
         self.__update_metadata()
 
     def __on_dialog_text_changed(
-        self, string: EditorString, translated_text: str
+        self, string: EditorString, translated_text: str, sync_identical: bool
     ) -> None:
         # Edits that were reverted before they were written back don't count as edits.
         current_text: str = coalesce(string.string.string, string.string.original)
         if translated_text == current_text:
             return
 
-        self.__editor.set_translated_text(string, translated_text)
-        self.__editor.set_string_status(string, StringStatus.TranslationIncomplete)
+        self.__editor.set_translated_text(string, translated_text, sync_identical)
+        self.__editor.set_string_status(
+            string, StringStatus.TranslationIncomplete, sync_identical
+        )
 
-    def __on_dialog_status_changed(self, status: StringStatus) -> None:
+    def __on_dialog_status_changed(
+        self, status: StringStatus, sync_identical: bool
+    ) -> None:
         current_string: EditorString = not_none(self.__dialog.current_string)
-        self.__editor.set_string_status(current_string, status)
+        self.__editor.set_string_status(current_string, status, sync_identical)
 
-    def __on_dialog_reset_requested(self) -> None:
+    def __on_dialog_reset_requested(self, sync_identical: bool) -> None:
         current_string: EditorString = not_none(self.__dialog.current_string)
-        self.__editor.reset_strings([current_string])
+        self.__editor.reset_string(current_string, sync_identical)
 
-    def __on_api_translate_requested(self) -> None:
+    def __on_api_translate_requested(self, sync_identical: bool) -> None:
         current_string: Optional[EditorString] = self.__dialog.current_string
         if current_string is None:
             return
@@ -712,9 +716,11 @@ class EditorTab(QWidget):
             lambda pdisplay: self.__editor.get_api_translation(current_string, pdisplay),
             self.__dialog,
         ).run()
-        self.__editor.set_translated_text(current_string, translated_text)
+        self.__editor.set_translated_text(
+            current_string, translated_text, sync_identical
+        )
         self.__editor.set_string_status(
-            current_string, StringStatus.TranslationIncomplete
+            current_string, StringStatus.TranslationIncomplete, sync_identical
         )
 
     def go_to_modfile(self, modfile: Path) -> None:

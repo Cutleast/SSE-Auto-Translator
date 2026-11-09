@@ -937,8 +937,8 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation>使用 API 翻译中...</translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="557"/>
-        <location filename="src/core/editor/editor.py" line="574"/>
+        <location filename="src/core/editor/editor.py" line="560"/>
+        <location filename="src/core/editor/editor.py" line="577"/>
         <source>Running translation diagnostics...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2696,44 +2696,44 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="115"/>
-        <location filename="src/core/scanner/scanner.py" line="133"/>
+        <location filename="src/core/scanner/scanner.py" line="119"/>
+        <location filename="src/core/scanner/scanner.py" line="141"/>
         <source>Scanning modlist...</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="508"/>
+        <location filename="src/core/scanner/scanner.py" line="530"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="255"/>
-        <location filename="src/core/scanner/scanner.py" line="294"/>
+        <location filename="src/core/scanner/scanner.py" line="277"/>
+        <location filename="src/core/scanner/scanner.py" line="316"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="181"/>
+        <location filename="src/core/scanner/scanner.py" line="203"/>
         <source>{item_name}: Extracting strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="202"/>
+        <location filename="src/core/scanner/scanner.py" line="224"/>
         <source>{item_name}: Detecting language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="420"/>
+        <location filename="src/core/scanner/scanner.py" line="442"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="569"/>
+        <location filename="src/core/scanner/scanner.py" line="591"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="624"/>
+        <location filename="src/core/scanner/scanner.py" line="646"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>
@@ -3858,47 +3858,52 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="309"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="321"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="210"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="222"/>
         <source>Go to previous string</source>
         <translation>跳至上一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="225"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="237"/>
         <source>Go to next string</source>
         <translation>跳至下一个字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="240"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="252"/>
         <source>Context</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="254"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="266"/>
         <source>Translation</source>
         <translation type="unfinished">翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="275"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="287"/>
         <source>Diagnostics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="298"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="310"/>
         <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="319"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="331"/>
         <source>Reset string</source>
         <translation>重置字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="331"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="341"/>
+        <source>Sync identical strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="353"/>
         <source>F1: Translation complete
 F2: Translation incomplete
 F3: No translation required
@@ -3906,17 +3911,22 @@ F4: Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="339"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="523"/>
+        <source>Sync identical strings ({count} more)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="361"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="347"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="369"/>
         <source>Close</source>
         <translation type="unfinished">关闭</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="471"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="497"/>
         <source>Matching placeholders:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -23,6 +23,7 @@ from PySide6.QtGui import (
     QTextCursor,
 )
 from PySide6.QtWidgets import (
+    QCheckBox,
     QGroupBox,
     QHBoxLayout,
     QLabel,
@@ -50,25 +51,32 @@ class TranslatorDialog(QWidget):
     Dialog for translating single strings.
     """
 
-    text_changed = Signal(EditorString, str)
+    text_changed = Signal(EditorString, str, bool)
     """
     Signal emitted (debounced) when the user changed the translated text of a string.
 
     Args:
         EditorString: The string whose text was changed.
         str: The new translated text.
+        bool: Whether to synchronize identical strings.
     """
 
-    status_change_requested = Signal(StringStatus)
+    status_change_requested = Signal(StringStatus, bool)
     """
     Signal emitted when the user selected another status for the current string.
 
     Args:
         StringStatus: The status to apply.
+        bool: Whether to synchronize identical strings.
     """
 
-    reset_requested = Signal()
-    """Signal emitted when the user wants to reset the current string."""
+    reset_requested = Signal(bool)
+    """
+    Signal emitted when the user wants to reset the current string.
+    
+    Args:
+        bool: Whether to synchronize identical strings.
+    """
 
     prev_requested = Signal()
     """Signal emitted when the user wants to go to the previous string."""
@@ -76,10 +84,13 @@ class TranslatorDialog(QWidget):
     next_requested = Signal()
     """Signal emitted when the user wants to go to the next string."""
 
-    api_translate_requested = Signal()
+    api_translate_requested = Signal(bool)
     """
     Signal emitted when the user requests to translate the current string with a
     translator API.
+
+    Args:
+        bool: Whether to synchronize identical strings.
     """
 
     related_string_requested = Signal(RelatedString)
@@ -121,6 +132,7 @@ class TranslatorDialog(QWidget):
     __reset_button: QPushButton
     __api_translate_button: QPushButton
 
+    __sync_strings_box: QCheckBox
     __status_dropdown: EnumDropdown[StringStatus]
     __close_button: QPushButton
 
@@ -324,6 +336,16 @@ class TranslatorDialog(QWidget):
         self.__reset_button.setProperty("transparent", True)
         hlayout.addWidget(self.__reset_button)
 
+        hlayout.addWidget(Divider(Qt.Orientation.Vertical))
+
+        self.__sync_strings_box = QCheckBox(self.tr("Sync identical strings"))
+        self.__sync_strings_box.setChecked(True)
+        hlayout.addWidget(self.__sync_strings_box)
+
+        WidgetStateManager.get().register_checkbox(
+            "translator_dialog_sync_checkbox", self.__sync_strings_box
+        )
+
         hlayout.addStretch()
 
         status_help_label = HelpLabel(
@@ -396,7 +418,11 @@ class TranslatorDialog(QWidget):
         self.__cancel_text_write_back()
 
         if string is not None:
-            self.text_changed.emit(string, self.__translated_edit.toPlainText().strip())
+            self.text_changed.emit(
+                string,
+                self.__translated_edit.toPlainText().strip(),
+                self.__sync_strings_box.isChecked(),
+            )
 
     def __cancel_text_write_back(self) -> None:
         """
@@ -410,15 +436,15 @@ class TranslatorDialog(QWidget):
         # The status may depend on the text, e.g. when the translation of a completed
         # string is applied to matching strings.
         self.__write_back_text()
-        self.status_change_requested.emit(status)
+        self.status_change_requested.emit(status, self.__sync_strings_box.isChecked())
 
     def __on_reset_clicked(self) -> None:
         self.__cancel_text_write_back()
-        self.reset_requested.emit()
+        self.reset_requested.emit(self.__sync_strings_box.isChecked())
 
     def __on_api_translate_clicked(self) -> None:
         self.__cancel_text_write_back()
-        self.api_translate_requested.emit()
+        self.api_translate_requested.emit(self.__sync_strings_box.isChecked())
 
     def __replace(self, old: str, new: str) -> None:
         text: str = self.__translated_edit.toPlainText()
@@ -478,12 +504,14 @@ class TranslatorDialog(QWidget):
 
         return self.__current_string
 
-    def set_string(self, string: EditorString) -> None:
+    def set_string(self, string: EditorString, sync_candidates: int) -> None:
         """
         Sets the string to be edited.
 
         Args:
             string (EditorString): The string to set.
+            sync_candidates (int):
+                The number of identical strings that may be synchronized.
         """
 
         self.__write_back_text()
@@ -491,6 +519,11 @@ class TranslatorDialog(QWidget):
         self.__current_string = string
         self.__context_widget.clear()
         self.__original_edit.setPlainText(string.string.original)
+        self.__sync_strings_box.setText(
+            self.tr("Sync identical strings ({count} more)").format(
+                count=sync_candidates
+            )
+        )
         self.__load_string_values(force_text=True)
 
         self.__update_title()
