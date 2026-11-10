@@ -57,3 +57,83 @@ It will also invalidate strings where the original text has changed in the mod f
 In addition to that, if a mod got a new mod file through an update, that also requires a translation, it will automatically be added to an existing translation for that mod.
 After the update is complete, the mod files that had new strings are marked in purple (= _Translation incomplete_) in the mod list. +
 Now you can open the translation in the editor (if it is already open, you have to close it and open it again) and translate the new strings.
+
+[#llm-translation]
+== Translate with an LLM
+
+Besides Google Translator and DeepL, SSE-AT can translate strings with a large language model (LLM).
+Any local server or cloud provider with an OpenAI-compatible API is supported, for eg.
+LM Studio, Ollama, OpenAI, Google Gemini, Anthropic or OpenRouter.
+
+In contrast to the other translators, the LLM gets the same context that the editor displays for a string, like its kind, speaker, notes, related strings and existing translations of similar strings.
+Additionally, it gets official translations of the base game: names occurring in the string, sentences using its rarer words and examples of the same kind of string.
+
+=== Setup
+
+. Open the settings, go to _Translator Settings_ and select _LLM (OpenAI-compatible)_ as _Translator API_.
+. Enter the _Base URL_ of the server or provider or pick one of the presets.
+. Enter the name of the _Model_ as listed by the server or provider.
+. Enter an _API key_ if your provider requires one.
+Local servers usually don't.
+
+TIP: For local servers, use `127.0.0.1` instead of `localhost` in the base URL.
+On Windows, `localhost` can delay every new connection by a few seconds.
+
+When using a local server, keep these things in mind:
+
+* Use a general instruct model, for eg.
+Gemma or Mistral Small.
+Specialized translation models like TranslateGemma ignore instructions and context.
+* Quantizations between Q4 and Q6 (or QAT models) offer a good balance between quality and memory usage.
+Heavier quantizations noticeably reduce the quality.
+* Disable the "thinking" or "reasoning" of the model if possible.
+It improves the translations only slightly but makes them many times slower.
+* To translate several strings at once, allow parallel requests on the server (for eg. _Max concurrent predictions_ in LM Studio or `OLLAMA_NUM_PARALLEL` for Ollama) and adjust _Parallel requests_ in SSE-AT accordingly.
+
+=== Translate strings
+
+* *Single string:* Click on _Translate with API_ (`Ctrl+F5`) in the dialog for editing a string.
+If the string was already translated with the LLM before, it is translated again and the previous translation is sent along as unsatisfying, so that the LLM translates it differently.
+* *Multiple strings:* Select the strings and click on _Translate with API_ in the toolbar.
+Translations are cached, so translating the same strings again returns the same results.
+To get new translations, right click on the strings and click on _Translate again with API (ignore cache)_ instead.
+
+In both cases, you can enter optional instructions for the LLM, for eg. a form of address or a term to use.
+
+The translations are checked automatically.
+If they contain words that are not in the dictionary of the game language or lack names that are kept unchanged in the base game, the LLM is asked to correct them.
+This can be disabled in the translator settings.
+
+=== Glossary
+
+In the translator settings, you can define your own glossary.
+Add a term with the _Add new item..._ button (+), edit it with a double click and remove selected terms with the `Del` key.
+Each term consists of an original and its translation, for eg. _hold_ and _Fürstentum_.
+The terms take precedence over the names from the base game and are matched case-insensitively.
+Add plurals as separate terms if their translation differs, for eg. `holds = Fürstentümer`.
+
+[#llm-prompt-tips]
+=== Tips for specific languages
+
+LLMs tend to translate some terms or forms of address differently from the official translations of the base game.
+Use the glossary or the instructions to correct them.
+
+.*German*
+[%collapsible]
+====
+--
+* NPCs address the player with the capitalized polite form _Ihr_ / _Euch_ / _Euer_.
+Mention the capitalization in instructions, otherwise LLMs often use the plural _ihr_ / _euch_.
+Quest objectives, however, use the _du_ imperative (_Lies das Tagebuch._).
+
+To apply these two tips to all translations, append a rule like this to the end of the _System prompt_ in the translator settings:
+
+[source,text]
+----
+- NPCs address the player with the capitalized polite form "Ihr", "Euch", "Euer"
+  and "Eure", never with "du" or the lowercase plural "ihr" / "euch". Quest
+  objectives use the "du" imperative like the official translations, for eg.
+  "Lies das Tagebuch."
+----
+--
+====

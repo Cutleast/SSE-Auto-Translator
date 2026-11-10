@@ -19,6 +19,7 @@ dependencies = [
     "lingua-language-detector",
     "lz4",
     "mod-manager-lib",
+    "openai",
     "plyvel-next",
     "PySide6==6.11.2",  # spinboxes have a padding issue in 6.11.3 and 6.12.0
     "pytz",

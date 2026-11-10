@@ -176,6 +176,7 @@ class Translator(QObject, AbstractBase):
         """
 
         data: str = f"{self.__class__.__name__}-{request.model_dump_json()}"
+        data += self._config.model_dump_json()
 
         return sha256_hash(data.encode())
 

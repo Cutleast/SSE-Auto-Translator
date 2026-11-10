@@ -3847,21 +3847,30 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslatorApi</name>
     <message>
-        <location filename="src/core/translator/apis.py" line="24"/>
         <location filename="src/core/translator_claude.old/apis.py" line="27"/>
         <source>Google Translator (free)</source>
         <translation>Google-Übersetzer (kostenlos)</translation>
     </message>
     <message>
-        <location filename="src/core/translator/apis.py" line="29"/>
         <location filename="src/core/translator_claude.old/apis.py" line="32"/>
         <source>DeepL (API key required)</source>
         <translation>DeepL (API-Schlüssel erforderlich)</translation>
     </message>
     <message>
+        <location filename="src/core/translator/apis.py" line="33"/>
         <location filename="src/core/translator_claude.old/apis.py" line="37"/>
         <source>LLM (OpenAI-compatible)</source>
         <translation>LLM (OpenAI-kompatibel)</translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/apis.py" line="27"/>
+        <source>Google Translator</source>
+        <translation>Google-Übersetzer</translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/apis.py" line="30"/>
+        <source>DeepL</source>
+        <translation>DeepL</translation>
     </message>
 </context>
 <context>
@@ -3946,57 +3955,133 @@ F4: String zurücksetzen</translation>
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="73"/>
+        <location filename="src/ui/settings/translator_settings.py" line="137"/>
         <source>Preferred translator API</source>
         <translation>Bevorzugte Übersetzer-API</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="179"/>
+        <location filename="src/ui/settings/translator_settings.py" line="231"/>
+        <location filename="src/ui/settings/translator_settings.py" line="284"/>
         <source>API key</source>
         <translation>API-Schlüssel</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="66"/>
+        <location filename="src/ui/settings/translator_settings.py" line="130"/>
         <source>Translator</source>
         <translation>Übersetzer</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="100"/>
+        <location filename="src/ui/settings/translator_settings.py" line="158"/>
         <source>Maximum number of parallel requests (if parallel requests are supported by the selected translator)</source>
         <translation>Maximale Anzahl an parallelen Anfragen (wenn parallele Anfragen vom ausgewählten Übersetzer unterstützt werden)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="122"/>
+        <location filename="src/ui/settings/translator_settings.py" line="177"/>
         <source>The glossary is a dictionary of terms that tell the translator how to substitute an original term. The terms are matched case-insensitively and take precedence over names from other translations. They must match the game language. Add plurals as separate terms if their translation differs.</source>
         <translation>Das Glossar ist ein Verzeichnis von Begriffen, das dem Übersetzer angibt, wie ein Originalbegriff zu ersetzen ist. Die Begriffe werden ohne Berücksichtigung der Groß-/Kleinschreibung abgeglichen und haben Vorrang vor Bezeichnungen aus anderen Übersetzungen. Sie müssen mit der Sprache des Spiels übereinstimmen. Füge Pluralformen als separate Begriffe hinzu, wenn sich deren Übersetzung unterscheidet.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="157"/>
+        <location filename="src/ui/settings/translator_settings.py" line="209"/>
         <source>DeepL settings</source>
         <translation>DeepL-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="166"/>
+        <location filename="src/ui/settings/translator_settings.py" line="218"/>
         <source>DeepL requires an API key and charges based on the number of characters translated. You can obtain a free API key that includes a monthly budget of 500k free translated characters here:</source>
         <translation>DeepL benötigt einen API-Schlüssel und berechnet die Kosten anhand der Anzahl der übersetzten Zeichen. Einen kostenlosen API-Schlüssel mit einem monatlichen Kontingent von 500.000 kostenlosen übersetzten Zeichen erhältst du hier:</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="213"/>
+        <location filename="src/ui/settings/translator_settings.py" line="243"/>
+        <source>LLM settings</source>
+        <translation>LLM-Einstellungen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="252"/>
+        <source>An LLM provides the highest-quality machine translations but requires additional setup to work. You have the choice between a cloud provider like OpenAI, Anthropic or Google Gemini and a self-hosted LLM in LM Studio or Ollama. In short: Any OpenAI-compatible LLM provider can be setup here.&lt;br/&gt;For additional instructions see the documentation:</source>
+        <translation>Ein LLM liefert maschinelle Übersetzungen von höchster Qualität, erfordert jedoch zusätzliche Einrichtungsschritte, um zu funktionieren. Du hast die Wahl zwischen einem Cloud-Anbieter wie OpenAI, Anthropic oder Google Gemini und einem selbst gehosteten LLM in LM Studio oder Ollama. Kurz gesagt: Jeder OpenAI-kompatible LLM-Anbieter kann hier eingerichtet werden.&lt;br/&gt;Weitere Informationen findest du in der Dokumentation:</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="267"/>
+        <source>Base URL</source>
+        <translation>Basis-URL</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="275"/>
+        <source>Custom</source>
+        <translation>Benutzerdefiniert</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="289"/>
+        <source>Not required for most local providers</source>
+        <translation>Für die meisten lokalen Anbieter nicht erforderlich</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="294"/>
+        <source>Model</source>
+        <translation>Modell</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="314"/>
+        <source>Fetch model list</source>
+        <translation>Modellliste abrufen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="318"/>
+        <source>Fetching model list...</source>
+        <translation>Modellliste wird abgerufen...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="339"/>
+        <source>The system prompt represents the base instructions and is sent to the LLM with every translation request. Here you can append special instructions or guidelines for the LLM to follow when translating strings. &quot;{language}&quot; is replaced with the game language.&lt;br/&gt;Check out the documentation for some tips on how to tweak this:</source>
+        <translation>Der System-Prompt enthält die grundlegenden Anweisungen und wird bei jeder Übersetzungsanfrage an das LLM gesendet. Hier kannst du spezielle Anweisungen oder Richtlinien hinzufügen, die das LLM bei der Übersetzung von Strings befolgen soll. &quot;{language}&quot; wird durch die Sprache des Spiels ersetzt.&lt;br/&gt;In der Dokumentation findest du einige Tipps, wie du dies anpassen kannst:</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="358"/>
+        <source>Reset to default</source>
+        <translation>Auf Standard zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="370"/>
+        <source>System prompt</source>
+        <translation>System-Prompt</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="461"/>
         <source>The glossary contains the term multiple times:</source>
         <translation>Das Glossar enthält diesen Begriff mehrfach:</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="146"/>
+        <location filename="src/ui/settings/translator_settings.py" line="492"/>
+        <source>A base URL is required for the LLM translator!</source>
+        <translation>Eine Basis-URL wird für den LLM-Übersetzer benötigt!</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="497"/>
+        <source>A model is required for the LLM translator!</source>
+        <translation>Ein Modell wird für den LLM-Übersetzer benötigt!</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="198"/>
         <source>Glossary</source>
         <translation>Glossar</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="90"/>
+        <location filename="src/ui/settings/translator_settings.py" line="151"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
         <translation>Nach Bestätigung fragen, bevor eine Massenübersetzung gestartet wird</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="229"/>
+        <location filename="src/ui/settings/translator_settings.py" line="322"/>
+        <source>Temperature (if supported by the provider)</source>
+        <translation>Temperatur (wenn vom Anbieter unterstützt)</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="328"/>
+        <source>Provider default</source>
+        <translation>Anbieterstandard</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/translator_settings.py" line="487"/>
         <source>An API key is required for DeepL translator!</source>
         <translation>Ein API-Schlüssel ist für den DeepL-Übersetzer erforderlich!</translation>
     </message>
@@ -4424,6 +4509,11 @@ Löse diese in Vortex auf und versuche es erneut.</translation>
         <location filename="src/core/translator_claude.old/exceptions.py" line="18"/>
         <source>Failed to connect to the configured LLM provider. Please ensure, that the address and the API key are correct and try again.</source>
         <translation>Die Verbindung zum konfigurierten LLM-Anbieter konnte nicht hergestellt werden. Bitte stelle sicher, dass die Adresse und der API-Schlüssel korrekt sind, und versuche es erneut.</translation>
+    </message>
+    <message>
+        <location filename="src/core/translator/exceptions.py" line="32"/>
+        <source>Translation was cut off due to the model&apos;s token limit. Please try again.</source>
+        <translation>Die Übersetzung wurde aufgrund des Token-Limits des Modells abgebrochen. Bitte versuche es erneut.</translation>
     </message>
 </context>
 <context>

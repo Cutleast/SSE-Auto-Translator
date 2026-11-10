@@ -9,6 +9,7 @@ import googletrans
 import googletrans.models
 from cutleast_core_lib.core.utilities.typing_utils import checked_cast
 
+from core.config.translator_config import TranslatorConfig
 from core.translator.models.request import TranslationRequest
 from core.utilities.game_language import GameLanguage
 
@@ -26,17 +27,24 @@ class GoogleTranslator(Translator):
         GameLanguage.Portuguese: "pt",
     }
 
+    __translator: googletrans.Translator
+
+    @override
+    def __init__(self, config: TranslatorConfig) -> None:
+        super().__init__(config)
+
+        self.__translator = googletrans.Translator()
+
     @override
     def _process_request(self, request: TranslationRequest) -> str:
         dst_code: str = self.get_lang_code(request.dst)
 
         async def _run() -> str:
-            async with googletrans.Translator() as translator:
-                translated = checked_cast(
-                    googletrans.models.Translated,
-                    await translator.translate(request.text, dest=dst_code, src="en"),
-                )
-                return translated.text
+            translated = checked_cast(
+                googletrans.models.Translated,
+                await self.__translator.translate(request.text, dest=dst_code, src="en"),
+            )
+            return translated.text
 
         return asyncio.run(_run())
 

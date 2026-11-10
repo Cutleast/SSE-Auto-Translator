@@ -25,7 +25,7 @@ In addition, SSE Auto Translator offers an integrated editor that can be used to
 * Combined database to automatically translate mod files that are completely covered by Vanilla strings or other installed translations
 * Built-in editor for creating and editing translations
 ** Search and eeplace feature
-** Built-in support for Google Translator (free) and DeepL API (API Key required)
+** Built-in support for Google Translator (free), DeepL API (API Key required) and xref:editor.adoc#llm-translation[LLMs] (local or cloud, OpenAI-compatible API)
 ** Export feature to share your own translations
 * Import feature for manually installing translations
 * Ignore list feature to completely ignore mod files that are falsely marked as "Translation Required"
