@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Debug SSE-AT" type="PythonConfigurationType" factoryName="Python">
-    <module name="SSE-Auto-Translator" />
+    <module name="sse-auto-translator" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -12,6 +12,9 @@
     <option name="IS_MODULE_SDK" value="true" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <option name="RUN_TOOL" value="" />
+    <option name="RUN_AS_SCRIPT" value="" />
     <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
     <option name="PARAMETERS" value="--debug-mode" />
     <option name="SHOW_COMMAND_LINE" value="false" />
@@ -20,7 +23,7 @@
     <option name="REDIRECT_INPUT" value="false" />
     <option name="INPUT_FILE" value="" />
     <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="compile-qrc" run_configuration_type="ShConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="prepare-resources" run_configuration_type="PythonConfigurationType" />
     </method>
   </configuration>
 </component>
