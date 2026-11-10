@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Project" pattern="file[sse-auto-translator]:src//*||file[sse-auto-translator]:tests//*||file[sse-auto-translator]:scripts//*||file[cutleast-core-lib]:src//*||file[mod-manager-lib]:src//*" />
+</component>

@@ -1,0 +1,11 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="RIGHT_MARGIN" value="89" />
+    <XML>
+      <option name="XML_KEEP_LINE_BREAKS_IN_TEXT" value="true" />
+    </XML>
+    <codeStyleSettings language="XML">
+      <option name="WRAP_LONG_LINES" value="false" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>
