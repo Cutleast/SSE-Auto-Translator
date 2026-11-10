@@ -2,10 +2,10 @@
   <configuration default="false" name="launch-built-exe" type="ShConfigurationType" folderName="Tasks">
     <option name="SCRIPT_TEXT" value="" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/SSE-AT/SSE-AT.exe" />
+    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/dist/SSE-AT/SSE-AT.exe" />
     <option name="SCRIPT_OPTIONS" value="" />
     <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/SSE-AT" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/dist/SSE-AT" />
     <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
     <option name="INTERPRETER_PATH" value="cmd.exe" />
     <option name="INTERPRETER_OPTIONS" value="/c" />
