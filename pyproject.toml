@@ -89,6 +89,8 @@ log_cli_level = "DEBUG"
 log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
 
 [tool.pyright]
+venvPath = "."
+venv = ".venv"
 include = ["src", "tests", "core-lib/src"]
 typeCheckingMode = "strict"
 exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py", "**/node_modules", "**/.*", ".venv"]

@@ -1,0 +1,11 @@
+# User-specific PyCharm files
+/workspace.xml
+/usage.statistics.xml
+/shelf/
+/dictionaries/
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
+/copilot*.xml
+# Contains the machine-specific Python interpreter name
+/misc.xml
