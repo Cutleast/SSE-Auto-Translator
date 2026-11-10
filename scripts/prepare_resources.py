@@ -9,7 +9,7 @@ from pathlib import Path
 PROJECT_DIR: Path = Path(__file__).resolve().parent.parent
 """The root directory of the project."""
 
-BATCH_SCRIPTS: list[str] = ["update_qts.bat", "compile_qts.bat", "compile_qrc.bat"]
+BATCH_SCRIPTS: list[str] = ["update_lupdate_file.bat", "update_qts.bat", "compile_qts.bat", "compile_qrc.bat"]
 """
 The batch scripts that prepare the translations and Qt resources, in execution order.
 """
