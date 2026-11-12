@@ -32,6 +32,7 @@ class TestContextBuilder:
         database.vanilla_translation.strings = {}
         database.user_translations = []
         config = MagicMock(spec=TranslatorConfig)
+        config.glossary = {}
         string = PluginString(
             form_id="05000833|Test.esp", type="WEAP FULL", original="Elite Wolf Bow"
         )
