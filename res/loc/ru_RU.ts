@@ -2760,27 +2760,27 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <name>SettingsDialog</name>
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="45"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="56"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="55"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="71"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="74"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="73"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="91"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="90"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="92"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="91"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

@@ -44,7 +44,6 @@ class SettingsDialog(SettingsWidget):
         self.setWindowFlag(Qt.WindowType.Window, True)
         self.setWindowTitle(self.tr("Settings"))
         self.setObjectName("root")
-        self.setMinimumSize(1200, 800)
         self.resize(1200, 800)
 
         self.cancel_signal.connect(self.close)
