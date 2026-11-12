@@ -2112,7 +2112,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
     <name>PluginContextExtractor</name>
     <message>
         <location filename="src/core/file_types/plugin/context_extractor.py" line="245"/>
-        <source>Topic</source>
+        <source>Player Dialogue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3177,7 +3177,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/core/file_types/plugin/string_type_names.py" line="38"/>
-        <source>Dialogue topic</source>
+        <source>Player dialogue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

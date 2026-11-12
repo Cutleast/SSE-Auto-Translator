@@ -122,18 +122,15 @@ Use the glossary or the instructions to correct them.
 [%collapsible]
 ====
 --
-* NPCs address the player with the capitalized polite form _Ihr_ / _Euch_ / _Euer_.
+* Dialogues and in-lore texts (e.g. books, letters, etc.) use the capitalized polite form _Ihr_ / _Euch_ / _Euer_.
+Everything else mostly uses the lowercase direct "du" form.
 Mention the capitalization in instructions, otherwise LLMs often use the plural _ihr_ / _euch_.
-Quest objectives, however, use the _du_ imperative (_Lies das Tagebuch._).
 
 To apply these two tips to all translations, append a rule like this to the end of the _System prompt_ in the translator settings:
 
 [source,text]
 ----
-- NPCs address the player with the capitalized polite form "Ihr", "Euch", "Euer"
-  and "Eure", never with "du" or the lowercase plural "ihr" / "euch". Quest
-  objectives use the "du" imperative like the official translations, for eg.
-  "Lies das Tagebuch."
+- Dialogues and in-lore texts (e.g. books, letters) use the capitalized polite form "Ihr", "Euch", "Euer" and "Eure", never with "du" or the lowercase plural "ihr" / "euch". Everything else that is displayed in a UI to the player, incl. message boxes or quest objectives uses the lowercased "du" form.
 ----
 --
 ====

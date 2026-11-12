@@ -242,7 +242,7 @@ class PluginContextExtractor:
             related_strings += self.__resolve_related(
                 topic.form_id,
                 "DIAL FULL",
-                QApplication.translate("PluginContextExtractor", "Topic"),
+                QApplication.translate("PluginContextExtractor", "Player Dialogue"),
             )
             properties += self.__get_quest_property(topic)
 

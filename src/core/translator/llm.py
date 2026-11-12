@@ -164,20 +164,23 @@ class LlmTranslator(Translator):
             LlmTranslator.LANGUAGE_PLACEHOLDER, request.dst.name
         )
 
-        user_prompt: str = "\n\n".join(
-            [
-                LlmTranslator.__build_mod_file_context_section(
-                    request.context.mod_file_context
-                ),
-                LlmTranslator.__build_similar_section(request.context.similar_strings),
-                LlmTranslator.__build_glossary_section(request.context.glossary_terms),
                 f"{LlmTranslator.TEXT_HEADING}\n{request.text}",
-            ]
-        )
+        user_prompt_sections: list[str] = [
+            LlmTranslator.__build_mod_file_context_section(
+                request.context.mod_file_context
+            ),
+            LlmTranslator.__build_similar_section(request.context.similar_strings),
+            LlmTranslator.__build_glossary_section(request.context.glossary_terms),
+        ]
 
         if request.instructions is not None:
-            user_prompt += "\n\nAdditional instructions: "
-            user_prompt += request.instructions
+            user_prompt_sections.append(
+                f"{LlmTranslator.INSTRUCTIONS_HEADING}\n{request.instructions}"
+            )
+
+        user_prompt_sections.append(f"{LlmTranslator.TEXT_HEADING}\n{request.text}")
+
+        user_prompt: str = "\n\n".join(user_prompt_sections)
 
         return [
             {"role": "system", "content": system_prompt},

@@ -2118,8 +2118,8 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     <name>PluginContextExtractor</name>
     <message>
         <location filename="src/core/file_types/plugin/context_extractor.py" line="245"/>
-        <source>Topic</source>
-        <translation>Thema</translation>
+        <source>Player Dialogue</source>
+        <translation>Spielerdialog</translation>
     </message>
     <message>
         <location filename="src/core/file_types/plugin/context_extractor.py" line="257"/>
@@ -3184,8 +3184,8 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="src/core/file_types/plugin/string_type_names.py" line="38"/>
-        <source>Dialogue topic</source>
-        <translation>Dialogthema</translation>
+        <source>Player dialogue</source>
+        <translation>Spielerdialog</translation>
     </message>
     <message>
         <location filename="src/core/file_types/plugin/string_type_names.py" line="39"/>
