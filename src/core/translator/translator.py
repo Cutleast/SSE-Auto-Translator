@@ -142,7 +142,7 @@ class Translator(QObject, AbstractBase):
             max_workers=(
                 self._config.max_parallel_requests
                 if self.supports_parallel_requests()
-                else 0
+                else 1
             ),
         ) as executor:
             executor.set_main_progress_text(self.tr("Translating with API..."))
