@@ -404,18 +404,18 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>ContextBuilder</name>
     <message>
-        <location filename="src/core/translation_context/builder.py" line="186"/>
+        <location filename="src/core/translation_context/builder.py" line="203"/>
         <source>Building translation context...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/builder.py" line="195"/>
+        <location filename="src/core/translation_context/builder.py" line="212"/>
         <source>Collecting glossary terms...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/builder.py" line="271"/>
-        <location filename="src/core/translation_context/builder.py" line="330"/>
+        <location filename="src/core/translation_context/builder.py" line="288"/>
+        <location filename="src/core/translation_context/builder.py" line="347"/>
         <source>Searching similar strings...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -931,13 +931,13 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="228"/>
+        <location filename="src/core/editor/editor.py" line="230"/>
         <source>Translating with API...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="606"/>
-        <location filename="src/core/editor/editor.py" line="623"/>
+        <location filename="src/core/editor/editor.py" line="614"/>
+        <location filename="src/core/editor/editor.py" line="631"/>
         <source>Running translation diagnostics...</source>
         <translation type="unfinished"></translation>
     </message>

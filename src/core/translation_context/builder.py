@@ -124,6 +124,23 @@ class ContextBuilder(QObject):
 
         return self.__build(strings, strings, pdisplay)
 
+    def get_glossary_terms(
+        self, texts: list[str], all_strings: dict[Path, StringList]
+    ) -> list[list[TranslationGlossary.Term]]:
+        """
+        Collects the glossary terms that appear in each of the specified texts.
+
+        Args:
+            texts (list[str]): The texts to collect the glossary terms for.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
+
+        Returns:
+            list[list[TranslationGlossary.Term]]: The glossary terms of each text.
+        """
+
+        return self.__get_glossary().get_terms_of_strings(texts, all_strings)
+
     def __build(
         self,
         strings: dict[Path, StringList],

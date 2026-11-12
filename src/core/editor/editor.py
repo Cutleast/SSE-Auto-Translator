@@ -22,14 +22,16 @@ from core.database.translation import Translation
 from core.editor.models.diagnostics import TranslationDiagnostics
 from core.mod_instance.mod_instance import ModInstance
 from core.string.string_status import StringStatus
-from core.string.types import String
+from core.string.types import String, StringList
 from core.translation_context.builder import ContextBuilder
 from core.translation_context.context import TranslationContext
+from core.translation_context.glossary import TranslationGlossary
 from core.translator.models.request import TranslationRequest
 from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
+from core.utilities.text import find_term, plain_text, remove_non_text
 
 from .models import EditorString
 from .validator import TranslationValidator
@@ -203,7 +205,7 @@ class Editor(QObject):
             string.diagnostics = None
             self.__update_string_diagnostics(string)
 
-        self.strings_changed.emit(strings)
+        self.strings_changed.emit(strings + self.__refresh_glossary_terms(strings))
         self.strings_modified.emit()
         self.log.info(f"Updated status for {len(strings)} string(s).")
 
@@ -254,6 +256,10 @@ class Editor(QObject):
             self.strings_changed.emit(strings)
             self.strings_modified.emit()
             self.log.info("API translation complete.")
+
+        affected_strings: list[EditorString] = self.__refresh_glossary_terms(strings)
+        if affected_strings:
+            self.strings_changed.emit(affected_strings)
 
     def get_api_translation(
         self,
@@ -340,6 +346,7 @@ class Editor(QObject):
             modified_string.diagnostics = None
             self.__update_string_diagnostics(modified_string)
 
+        modified_strings += self.__refresh_glossary_terms(modified_strings)
         self.strings_changed.emit(modified_strings)
         self.strings_modified.emit()
 
@@ -375,6 +382,7 @@ class Editor(QObject):
             modified_string.diagnostics = None
             self.__update_string_diagnostics(modified_string)
 
+        modified_strings += self.__refresh_glossary_terms(modified_strings)
         self.strings_changed.emit(modified_strings)
         self.strings_modified.emit()
 
@@ -407,7 +415,9 @@ class Editor(QObject):
                 self.__update_string_diagnostics(string)
                 modified_strings.append(string)
 
-        self.strings_changed.emit(modified_strings)
+        self.strings_changed.emit(
+            modified_strings + self.__refresh_glossary_terms(modified_strings)
+        )
         self.strings_modified.emit()
         self.log.info("Regex applied.")
 
@@ -477,7 +487,9 @@ class Editor(QObject):
                     modified_strings.append(string)
 
         if modified_strings:
-            self.strings_changed.emit(modified_strings)
+            self.strings_changed.emit(
+                modified_strings + self.__refresh_glossary_terms(modified_strings)
+            )
             self.strings_modified.emit()
 
         self.log.info("Database applied.")
@@ -537,7 +549,7 @@ class Editor(QObject):
             string.string.status = StringStatus.TranslationRequired
             string.diagnostics = None
 
-        self.strings_changed.emit(strings)
+        self.strings_changed.emit(strings + self.__refresh_glossary_terms(strings))
         self.strings_modified.emit()
         self.log.info("Strings reset.")
 
@@ -571,11 +583,7 @@ class Editor(QObject):
         try:
             contexts: ReferenceDict[String, TranslationContext] = (
                 self.__context_builder.build_context(
-                    {
-                        mod_file_path: [s.string for s in mod_file_strings]
-                        for mod_file_path, mod_file_strings in self.strings.items()
-                    },
-                    pdisplay,
+                    self.__get_all_string_lists(), pdisplay
                 )
             )
 
@@ -658,14 +666,91 @@ class Editor(QObject):
             string.context = self.__context_builder.build_single_context(
                 string.string,
                 string.mod_file_path,
-                {
-                    mod_file_path: [s.string for s in mod_file_strings]
-                    for mod_file_path, mod_file_strings in self.strings.items()
-                },
+                self.__get_all_string_lists(),
             )
             self.strings_changed.emit([string])
 
         return string.context
+
+    def __get_all_string_lists(self) -> dict[Path, StringList]:
+        """
+        Gets the current strings of the edited translation per mod file path.
+
+        Returns:
+            dict[Path, StringList]: The strings per mod file path.
+        """
+
+        return {
+            mod_file_path: [s.string for s in mod_file_strings]
+            for mod_file_path, mod_file_strings in self.__strings.items()
+        }
+
+    def __refresh_glossary_terms(
+        self, modified_strings: list[EditorString]
+    ) -> list[EditorString]:
+        """
+        Recollects the glossary terms of all strings with a built context that contain
+        one of the modified names, as their glossary terms would be outdated otherwise.
+        The diagnostics of those strings are updated as well.
+
+        Args:
+            modified_strings (list[EditorString]): The strings that were modified.
+
+        Returns:
+            list[EditorString]: The strings whose glossary terms were recollected.
+        """
+
+        names: list[str] = [
+            remove_non_text(string.string.original)
+            for string in modified_strings
+            if string.string.is_name
+        ]
+        if not names:
+            return []
+
+        affected_strings: list[EditorString] = [
+            string
+            for string in self.all_strings
+            if string.context is not None and self.__contains_any_name(string, names)
+        ]
+        if not affected_strings:
+            return []
+
+        all_glossary_terms: list[list[TranslationGlossary.Term]] = (
+            self.__context_builder.get_glossary_terms(
+                [string.string.original for string in affected_strings],
+                self.__get_all_string_lists(),
+            )
+        )
+        for string, glossary_terms in zip(affected_strings, all_glossary_terms):
+            assert string.context is not None
+
+            string.context = string.context.__replace__(glossary_terms=glossary_terms)
+            string.diagnostics = None
+            self.__update_string_diagnostics(string)
+
+        self.log.debug(f"Refreshed glossary terms of {len(affected_strings)} string(s).")
+
+        return affected_strings
+
+    def __contains_any_name(self, string: EditorString, names: list[str]) -> bool:
+        """
+        Checks whether the original text of a string contains any of the specified
+        names, using the same matching as the translation glossary.
+
+        Args:
+            string (EditorString): The string to check.
+            names (list[str]): The names to search for.
+
+        Returns:
+            bool: Whether the original text contains any of the names.
+        """
+
+        search_text: str = plain_text(string.string.original.lower())
+
+        return any(
+            find_term(search_text, name, inflected=False) is not None for name in names
+        )
 
     def __is_qualified_for_diagnostics(self, string: EditorString) -> bool:
         return (
