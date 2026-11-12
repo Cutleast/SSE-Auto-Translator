@@ -114,11 +114,20 @@ class LlmTranslator(Translator):
         prompt: list[ChatCompletionMessageParam] = self.__build_prompt(request)
 
         try:
-            return self.__process_completion(
-                self.__client.chat.completions.create(
-                    model=self.__model, messages=prompt, temperature=self.__temperature
+            if self.__temperature is not None:
+                return self.__process_completion(
+                    self.__client.chat.completions.create(
+                        model=self.__model,
+                        messages=prompt,
+                        temperature=self.__temperature,
+                    )
                 )
-            )
+            else:
+                return self.__process_completion(
+                    self.__client.chat.completions.create(
+                        model=self.__model, messages=prompt
+                    )
+                )
 
         except BadRequestError as ex:
             if "temperature" not in str(ex).lower() or self.__temperature is None:
