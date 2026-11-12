@@ -193,7 +193,14 @@ class Editor(QObject):
         """
 
         for string in strings:
+            if status == StringStatus.NoTranslationRequired or (
+                status != StringStatus.TranslationRequired
+                and string.string.string is None
+            ):
+                string.string.string = string.string.original
+
             string.string.status = status
+            string.diagnostics = None
             self.__update_string_diagnostics(string)
 
         self.strings_changed.emit(strings)
@@ -396,6 +403,7 @@ class Editor(QObject):
 
             if src != string.string.string:
                 string.string.status = StringStatus.TranslationIncomplete
+                string.diagnostics = None
                 self.__update_string_diagnostics(string)
                 modified_strings.append(string)
 

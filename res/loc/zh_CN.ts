@@ -937,13 +937,13 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="221"/>
+        <location filename="src/core/editor/editor.py" line="228"/>
         <source>Translating with API...</source>
         <translation>使用 API 翻译中...</translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="598"/>
-        <location filename="src/core/editor/editor.py" line="615"/>
+        <location filename="src/core/editor/editor.py" line="606"/>
+        <location filename="src/core/editor/editor.py" line="623"/>
         <source>Running translation diagnostics...</source>
         <translation type="unfinished"></translation>
     </message>
