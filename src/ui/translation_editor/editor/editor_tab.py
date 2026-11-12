@@ -709,8 +709,8 @@ class EditorTab(QWidget):
 
         clipboard_text = ""
         for string in selected_strings:
-            for col in StringsColumns.get_columns(type(string)):
-                clipboard_text += col.get_copy_text(string) + "\t"
+            for col in StringsColumns.get_columns(type(string.string)):
+                clipboard_text += col.get_copy_text(string.string) + "\t"
 
             clipboard_text = clipboard_text.rstrip("\t")
             clipboard_text += "\n"
