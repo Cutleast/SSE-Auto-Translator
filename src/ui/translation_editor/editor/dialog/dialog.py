@@ -28,6 +28,7 @@ from PySide6.QtGui import (
     QShortcut,
     QTextCharFormat,
     QTextCursor,
+    QTextDocument,
 )
 from PySide6.QtWidgets import (
     QApplication,
@@ -626,16 +627,14 @@ class TranslatorDialog(ExtendedWindow):
             cursor: QTextCursor = self.__translated_edit.textCursor()
             cursor.setPosition(0)
 
-            text: str = self.__translated_edit.toPlainText()
+            document: QTextDocument = self.__translated_edit.document()
 
             cursor.select(QTextCursor.SelectionType.Document)
             cursor.setCharFormat(QTextCharFormat())  # clear any highlighting
 
             for word in words:
                 cursor.setPosition(0)
-                pos: int
-                while (pos := text.find(word, cursor.position())) != -1:
-                    cursor.setPosition(pos)
+                while not (cursor := document.find(word, cursor.position())).isNull():
                     cursor.select(QTextCursor.SelectionType.WordUnderCursor)
 
                     fmt = QTextCharFormat()

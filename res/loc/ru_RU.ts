@@ -3859,42 +3859,42 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="363"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="364"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="294"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="295"/>
         <source>Context</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="308"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="309"/>
         <source>Translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="329"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="330"/>
         <source>Diagnostics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="352"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="353"/>
         <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="373"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="374"/>
         <source>Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="383"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="384"/>
         <source>Sync identical strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="395"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="396"/>
         <source>F1: Translation complete
 F2: Translation incomplete
 F3: No translation required
@@ -3902,37 +3902,37 @@ F4: Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="570"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="571"/>
         <source>Sync identical strings ({count} more)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="403"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="404"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="247"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="248"/>
         <source>Copy ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="266"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="267"/>
         <source>Previous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="279"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="280"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="411"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="412"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="544"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="545"/>
         <source>Matching placeholders:</source>
         <translation type="unfinished"></translation>
     </message>
