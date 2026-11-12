@@ -573,25 +573,30 @@ class TranslatorDialog(QWidget):
             self.__highlight_unknown_words([])
 
     def __highlight_unknown_words(self, words: list[str]) -> None:
-        cursor: QTextCursor = self.__translated_edit.textCursor()
-        cursor.setPosition(0)
+        self.__loading_string = True
 
-        text: str = self.__translated_edit.toPlainText()
-
-        cursor.select(QTextCursor.SelectionType.Document)
-        cursor.setCharFormat(QTextCharFormat())  # clear any highlighting
-
-        for word in words:
+        try:
+            cursor: QTextCursor = self.__translated_edit.textCursor()
             cursor.setPosition(0)
-            pos: int
-            while (pos := text.find(word, cursor.position())) != -1:
-                cursor.setPosition(pos)
-                cursor.select(QTextCursor.SelectionType.WordUnderCursor)
 
-                fmt = QTextCharFormat()
-                fmt.setUnderlineColor(Qt.GlobalColor.red)
-                fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
-                cursor.setCharFormat(fmt)
+            text: str = self.__translated_edit.toPlainText()
+
+            cursor.select(QTextCursor.SelectionType.Document)
+            cursor.setCharFormat(QTextCharFormat())  # clear any highlighting
+
+            for word in words:
+                cursor.setPosition(0)
+                pos: int
+                while (pos := text.find(word, cursor.position())) != -1:
+                    cursor.setPosition(pos)
+                    cursor.select(QTextCursor.SelectionType.WordUnderCursor)
+
+                    fmt = QTextCharFormat()
+                    fmt.setUnderlineColor(Qt.GlobalColor.red)
+                    fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
+                    cursor.setCharFormat(fmt)
+        finally:
+            self.__loading_string = False
 
     def set_context(self, context: TranslationContext) -> None:
         """
