@@ -618,42 +618,47 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
         <translation>An Cursorposition einfügen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="207"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="209"/>
         <source>The term &apos;{term}&apos; is not present in the translation.</source>
         <translation>Der Begriff &apos;{term}&apos; ist nicht in der Übersetzung vorhanden.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="212"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="213"/>
+        <source>The term &apos;{term}&apos; does not appear verbatim in the translation.</source>
+        <translation>Der Begriff &quot;{term}&quot; kommt in der Übersetzung nicht wörtlich vor.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="218"/>
         <source>Reason:</source>
         <translation>Grund:</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="222"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="228"/>
         <source>Glossary term &apos;{term}&apos; not in translation</source>
         <translation>Glossarbegriff &apos;{term}&apos; nicht in Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="262"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="268"/>
         <source>Unknown word &apos;{word}&apos;</source>
         <translation>Unbekanntes Wort &apos;{word}&apos;</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="264"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="270"/>
         <source>The word &apos;{word}&apos; is not a known word in the target language dictionary, the context or the glossary.</source>
         <translation>Das Wort &quot;{word}&quot; ist weder im Wörterbuch der Zielsprache noch im Kontext oder im Glossar enthalten.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="242"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="248"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="227"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="233"/>
         <source>Replace original term</source>
         <translation>Originalen Begriff ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="254"/>
+        <location filename="src/ui/translation_editor/editor/dialog/diagnostics_widget.py" line="260"/>
         <source>Accept suggestion</source>
         <translation>Vorschlag akzeptieren</translation>
     </message>
@@ -3568,22 +3573,22 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslationDiagnostics</name>
     <message>
-        <location filename="src/core/editor/models/diagnostics.py" line="63"/>
+        <location filename="src/core/editor/models/diagnostics.py" line="61"/>
         <source>Severity</source>
         <translation>Schweregrad</translation>
     </message>
     <message>
-        <location filename="src/core/editor/models/diagnostics.py" line="71"/>
+        <location filename="src/core/editor/models/diagnostics.py" line="69"/>
         <source>Unknown words</source>
         <translation>Unbekannte Wörter</translation>
     </message>
     <message>
-        <location filename="src/core/editor/models/diagnostics.py" line="79"/>
+        <location filename="src/core/editor/models/diagnostics.py" line="77"/>
         <source>Glossary issues</source>
         <translation>Glossarprobleme</translation>
     </message>
     <message>
-        <location filename="src/core/editor/models/diagnostics.py" line="87"/>
+        <location filename="src/core/editor/models/diagnostics.py" line="85"/>
         <source>Missing placeholders</source>
         <translation>Fehlende Platzhalter</translation>
     </message>
@@ -3621,12 +3626,12 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Der Begriff kommt aus der Übersetzungsdatenbank.</translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/glossary.py" line="390"/>
+        <location filename="src/core/translation_context/glossary.py" line="386"/>
         <source>Collecting glossary terms...</source>
         <translation>Glossarbegriffe werden gesammelt...</translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/glossary.py" line="412"/>
+        <location filename="src/core/translation_context/glossary.py" line="408"/>
         <source>Scanning for glossary terms...</source>
         <translation>Nach Glossarbegriffen scannen...</translation>
     </message>

@@ -320,8 +320,7 @@ class TranslationGlossary(QObject):
     ) -> TranslationGlossary.Term:
         """
         Adds the most similar example to a term found in a text, preferring examples
-        from the currently edited translation over those from the database. Terms that
-        are kept unchanged get no example as their usage is evident.
+        from the currently edited translation over those from the database.
 
         Args:
             term (TranslationGlossary.Term): The term found in the text.
@@ -332,9 +331,6 @@ class TranslationGlossary(QObject):
         Returns:
             TranslationGlossary.Term: The term with an example, if one was found.
         """
-
-        if term.original == term.translated:
-            return term
 
         example: Optional[TranslationGlossary.Example] = self.__find_example(
             term, text, mod_examples

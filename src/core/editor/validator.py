@@ -17,10 +17,13 @@ from core.utilities.text import (
     Occurrences,
     find_all_terms,
     find_term,
+    find_term_stems,
     get_placeholders,
+    get_word_stems,
     get_words,
     is_at_sentence_start,
     plain_text,
+    stem_word,
 )
 
 from .models import GlossaryIssue, Severity, TranslationDiagnostics
@@ -84,7 +87,7 @@ class TranslationValidator(QObject):
             translated, original, dst, context
         )
         glossary_issues: list[GlossaryIssue] = self.__validate_glossary_terms(
-            translated, original, context.glossary_terms
+            translated, original, dst, context.glossary_terms
         )
         missing_placeholders: Occurrences = self.__validate_placeholders(
             translated, original
@@ -122,16 +125,23 @@ class TranslationValidator(QObject):
         return missing_placeholders
 
     def __validate_glossary_terms(
-        self, translated: str, original: str, terms: list[TranslationGlossary.Term]
+        self,
+        translated: str,
+        original: str,
+        dst: GameLanguage,
+        terms: list[TranslationGlossary.Term],
     ) -> list[GlossaryIssue]:
         """
         Finds glossary terms that occur in the original text but whose translation is
         missing in the translated text, because they were translated differently or lost.
-        Longer terms take precedence over shorter terms they contain.
+        Longer terms take precedence over shorter terms they contain. Translations that
+        only occur with a changed stem or within compounds lower the severity by one
+        level.
 
         Args:
             translated (str): The translated text.
             original (str): The original text.
+            dst (GameLanguage): The destination language.
             terms (list[TranslationGlossary.Term]): The glossary terms.
 
         Returns:
@@ -158,7 +168,12 @@ class TranslationValidator(QObject):
                     + remaining_original[match.end() :]
                 )
 
-            if find_term(translated, term.translated) is not None:
+            if (
+                find_term(
+                    translated, term.translated, word_boundaries=dst.uses_word_boundaries
+                )
+                is not None
+            ):
                 continue
 
             with TranslationValidator.SPELL_CHECK_LOCK:
@@ -183,6 +198,11 @@ class TranslationValidator(QObject):
                     severity = Severity.Warning
                 elif any(sentence_starts):
                     severity = Severity.Notice
+
+            if severity is not None and find_term_stems(
+                translated, term.translated, dst.stemmer_algorithm, dst.min_stem_length
+            ):
+                severity = Severity.Notice if severity == Severity.Warning else None
 
             if severity is not None:
                 issues.append(GlossaryIssue(term=term, severity=severity))
@@ -214,7 +234,7 @@ class TranslationValidator(QObject):
         """
 
         known_words: set[str] = {
-            word.lower()
+            stem_word(word, dst.stemmer_algorithm)
             for known_text in (
                 self.__get_non_english_words(original)
                 + self.__get_known_context_terms(context)
@@ -230,7 +250,13 @@ class TranslationValidator(QObject):
             return {
                 word: spell_checker.get_suggestions(word)
                 for word in dict.fromkeys(words)
-                if word.lower() not in known_words and not spell_checker.is_correct(word)
+                if not any(
+                    stem in known_words
+                    for stem in get_word_stems(
+                        word, dst.stemmer_algorithm, dst.loose_suffixes
+                    )
+                )
+                and not spell_checker.is_correct(word)
             }
 
     def __get_spell_checker(self, language: GameLanguage) -> SpellChecker:

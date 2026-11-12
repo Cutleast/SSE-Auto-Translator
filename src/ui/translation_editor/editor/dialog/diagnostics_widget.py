@@ -203,9 +203,15 @@ class DiagnosticsWidget(QWidget):
     def __create_glossary_issue(
         self, glossary_issue: GlossaryIssue, text: str
     ) -> DiagnosticsCard.DiagnosticsIssue:
-        description: str = self.tr(
-            "The term '{term}' is not present in the translation."
-        ).format(term=glossary_issue.term.translated)
+        description: str
+        if glossary_issue.severity >= Severity.Warning:
+            description = self.tr(
+                "The term '{term}' is not present in the translation."
+            ).format(term=glossary_issue.term.translated)
+        else:
+            description = self.tr(
+                "The term '{term}' does not appear verbatim in the translation."
+            ).format(term=glossary_issue.term.translated)
 
         if glossary_issue.reason is not None:
             description += "\n"

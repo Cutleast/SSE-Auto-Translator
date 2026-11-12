@@ -43,10 +43,8 @@ class TranslationDiagnostics(BaseModel, frozen=True):
         if self.missing_placeholders:
             return Severity.Error
 
-        if self.glossary_issues and any(
-            issue.severity >= Severity.Warning for issue in self.glossary_issues
-        ):
-            return Severity.Warning
+        if self.glossary_issues:
+            return max(issue.severity for issue in self.glossary_issues)
 
         if self.unknown_words:
             return Severity.Notice

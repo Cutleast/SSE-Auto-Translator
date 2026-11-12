@@ -27,6 +27,7 @@ dependencies = [
     "pywin32",
     "pyzmq",
     "rapidfuzz",
+    "snowballstemmer",
     "sse-bsa",
     "websocket-client",
 ]
