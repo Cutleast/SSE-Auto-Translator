@@ -4023,22 +4023,22 @@ F4: Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="370"/>
+        <location filename="src/ui/settings/translator_settings.py" line="376"/>
         <source>System prompt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="461"/>
+        <location filename="src/ui/settings/translator_settings.py" line="467"/>
         <source>The glossary contains the term multiple times:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="492"/>
+        <location filename="src/ui/settings/translator_settings.py" line="498"/>
         <source>A base URL is required for the LLM translator!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="497"/>
+        <location filename="src/ui/settings/translator_settings.py" line="503"/>
         <source>A model is required for the LLM translator!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4063,7 +4063,7 @@ F4: Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="487"/>
+        <location filename="src/ui/settings/translator_settings.py" line="493"/>
         <source>An API key is required for DeepL translator!</source>
         <translation type="unfinished"></translation>
     </message>

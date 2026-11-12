@@ -4035,22 +4035,22 @@ F4: String zurücksetzen</translation>
         <translation>Auf Standard zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="370"/>
+        <location filename="src/ui/settings/translator_settings.py" line="376"/>
         <source>System prompt</source>
         <translation>System-Prompt</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="461"/>
+        <location filename="src/ui/settings/translator_settings.py" line="467"/>
         <source>The glossary contains the term multiple times:</source>
         <translation>Das Glossar enthält diesen Begriff mehrfach:</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="492"/>
+        <location filename="src/ui/settings/translator_settings.py" line="498"/>
         <source>A base URL is required for the LLM translator!</source>
         <translation>Eine Basis-URL wird für den LLM-Übersetzer benötigt!</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="497"/>
+        <location filename="src/ui/settings/translator_settings.py" line="503"/>
         <source>A model is required for the LLM translator!</source>
         <translation>Ein Modell wird für den LLM-Übersetzer benötigt!</translation>
     </message>
@@ -4075,7 +4075,7 @@ F4: String zurücksetzen</translation>
         <translation>Anbieterstandard</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="487"/>
+        <location filename="src/ui/settings/translator_settings.py" line="493"/>
         <source>An API key is required for DeepL translator!</source>
         <translation>Ein API-Schlüssel ist für den DeepL-Übersetzer erforderlich!</translation>
     </message>

@@ -363,6 +363,12 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
             "mdi6.undo",
             color=IconProvider.Color.Destructive,
         )
+        default_system_prompt: str = TranslatorConfig.get_default_value(
+            "llm_system_prompt", str
+        )
+        self.__llm_reset_prompt_button.setEnabled(
+            self.__llm_system_prompt_edit.toPlainText().strip() != default_system_prompt
+        )
         prompt_vlayout.addWidget(
             self.__llm_reset_prompt_button, alignment=Qt.AlignmentFlag.AlignRight
         )
