@@ -175,6 +175,7 @@ class EditorTab(QWidget):
         )
         self.__dialog.add_word_to_dict_requested.connect(self.__editor.add_word_to_dict)
 
+        self.__update_metadata()
         ThemeManager.get().theme_changed.connect(lambda _: self.__update_metadata())
 
     def __init_ui(self) -> None:
@@ -186,8 +187,6 @@ class EditorTab(QWidget):
         self.__init_strings_widget()
         self.__init_context_menu()
         self.__init_footer()
-
-        self.__update_metadata()
 
     def __init_header(self) -> None:
         self.__tool_bar = EditorToolbar()
@@ -436,6 +435,7 @@ class EditorTab(QWidget):
         self.__strings_num_label.setText(str(len(visible_strings)))
         self.__bar_chart.setValues(list(summary.values()))
         self.__bar_chart.setColors([s.get_base_color() for s in StringStatus])
+        self.__dialog.set_states_summary(summary)
 
         num_tooltip = ""
 

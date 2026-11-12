@@ -6,12 +6,19 @@ import html
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.debounce import debounce
-from cutleast_core_lib.core.utilities.typing_utils import coalesce, not_none
+from cutleast_core_lib.core.utilities.typing_utils import (
+    checked_cast,
+    coalesce,
+    not_none,
+)
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
+from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.divider import Divider
+from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.extended_window import ExtendedWindow
 from cutleast_core_lib.ui.widgets.help_label import HelpLabel
 from cutleast_core_lib.ui.widgets.line_number_text_edit import LineNumberTextEdit
 from PySide6.QtCore import QSignalBlocker, Qt, Signal
@@ -23,12 +30,14 @@ from PySide6.QtGui import (
     QTextCursor,
 )
 from PySide6.QtWidgets import (
+    QApplication,
     QCheckBox,
     QGroupBox,
     QHBoxLayout,
     QLabel,
     QPlainTextEdit,
     QPushButton,
+    QSizePolicy,
     QSplitter,
     QVBoxLayout,
     QWidget,
@@ -41,12 +50,13 @@ from core.translation_context.related import RelatedString
 from core.utilities.text import Occurrences, get_placeholders
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
+from ui.widgets.stacked_bar import StackedBar
 
 from .context import ContextWidget
 from .diagnostics_widget import DiagnosticsWidget
 
 
-class TranslatorDialog(QWidget):
+class TranslatorDialog(ExtendedWindow):
     """
     Dialog for translating single strings.
     """
@@ -116,10 +126,14 @@ class TranslatorDialog(QWidget):
     __pending_text_string: Optional[EditorString]
     __text_revision: int
 
-    __vlayout: QVBoxLayout
-
+    __title_bar_label: QLabel
+    __copy_id_button: QPushButton
+    __status_bar_chart: StackedBar
+    __position_label: QLabel
     __prev_button: QPushButton
     __next_button: QPushButton
+
+    __vlayout: QVBoxLayout
 
     __context_widget: ContextWidget
 
@@ -154,6 +168,7 @@ class TranslatorDialog(QWidget):
         self.__init_ui()
         self.__init_shortcuts()
 
+        self.__copy_id_button.clicked.connect(self.__copy_id)
         self.__prev_button.clicked.connect(self.prev_requested.emit)
         self.__next_button.clicked.connect(self.next_requested.emit)
         self.__context_widget.translation_accepted.connect(
@@ -195,15 +210,15 @@ class TranslatorDialog(QWidget):
         self.__translated_edit.setFocus()
 
     def __init_ui(self) -> None:
-        self.setWindowFlags(Qt.WindowType.Window)
         self.resize(1500, 800)
 
+        self.__init_title_bar()
+
+        widget = QWidget()
+        self.setCentralWidget(widget)
+
         self.__vlayout = QVBoxLayout()
-        self.setLayout(self.__vlayout)
-
-        self.__init_header()
-
-        self.__vlayout.addWidget(Divider())
+        widget.setLayout(self.__vlayout)
 
         self.__init_context_area()
         self.__init_translation_area()
@@ -212,14 +227,43 @@ class TranslatorDialog(QWidget):
 
         self.__init_footer()
 
-        ThemeManager.update_widget_styles(self)
+    def __init_title_bar(self) -> None:
+        self.titleBar().setTitleVisible(False)
+        self.setTallTitleBar(True)
 
-    def __init_header(self) -> None:
-        hlayout = QHBoxLayout()
-        hlayout.setContentsMargins(0, 0, 0, 0)
-        self.__vlayout.addLayout(hlayout)
+        self.__title_bar_label = ElidedLabel()
+        self.__title_bar_label.setAttribute(
+            Qt.WidgetAttribute.WA_TransparentForMouseEvents
+        )
+        self.__title_bar_label.setSizePolicy(
+            QSizePolicy.Policy.Preferred,
+            self.__title_bar_label.sizePolicy().verticalPolicy(),
+        )
+        self.__title_bar_label.setMinimumWidth(1)  # required, so that the widget shrinks
+        self.__title_bar_label.setProperty("monospace", True)
+        self.titleBar().addWidget(self.__title_bar_label)
 
-        self.__prev_button = ShortcutButton(self.tr("Go to previous string"))
+        self.__copy_id_button = CopyButton()
+        self.__copy_id_button.setToolTip(self.tr("Copy ID"))
+        self.__copy_id_button.setProperty("transparent", True)
+        self.titleBar().addWidget(self.__copy_id_button)
+
+        self.titleBar().addStretch()
+        checked_cast(QHBoxLayout, self.titleBar().layout()).addSpacing(25)
+
+        self.__status_bar_chart = StackedBar(
+            values=[0 for _ in StringStatus],
+            colors=[s.get_base_color() for s in StringStatus],
+        )
+        self.__status_bar_chart.setFixedWidth(250)
+        self.__status_bar_chart.setFixedHeight(8)
+        self.titleBar().addWidget(self.__status_bar_chart)
+
+        self.__position_label = QLabel()
+        self.__position_label.setProperty("emphasized", True)
+        self.titleBar().addWidget(self.__position_label)
+
+        self.__prev_button = ShortcutButton(self.tr("Previous"))
         IconProvider.bind_qta_icon(
             self.__prev_button,
             self.__prev_button.setIcon,
@@ -230,11 +274,9 @@ class TranslatorDialog(QWidget):
         self.__prev_button.setProperty("primary", True)
         self.__prev_button.setProperty("transparent", True)
         self.__prev_button.setShortcut(QKeySequence("Alt+Left"))
-        hlayout.addWidget(self.__prev_button)
+        self.titleBar().addWidget(self.__prev_button)
 
-        hlayout.addStretch()
-
-        self.__next_button = ShortcutButton(self.tr("Go to next string"))
+        self.__next_button = ShortcutButton(self.tr("Next"))
         IconProvider.bind_qta_icon(
             self.__next_button,
             self.__next_button.setIcon,
@@ -246,7 +288,7 @@ class TranslatorDialog(QWidget):
         self.__next_button.setProperty("transparent", True)
         self.__next_button.setShortcut(QKeySequence("Alt+Right"))
         self.__next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        hlayout.addWidget(self.__next_button)
+        self.titleBar().addWidget(self.__next_button)
 
     def __init_context_area(self) -> None:
         context_groupbox = QGroupBox(self.tr("Context"))
@@ -378,12 +420,17 @@ class TranslatorDialog(QWidget):
     def __update_title(self) -> None:
         title: str = ""
         if self.__current_string is not None:
-            title = (
-                f"{self.__current_string.string.display_id} "
-                f"({self.__current_index + 1}/{self.__strings_count})"
-            )
+            title = self.__current_string.string.display_id
 
-        self.setWindowTitle(title)
+        position: str = f"{self.__current_index + 1} / {self.__strings_count}"
+
+        self.setWindowTitle(title + f" ({position})")
+        self.__title_bar_label.setText(title)
+        self.__position_label.setText(position)
+
+    def __copy_id(self) -> None:
+        if self.__current_string is not None:
+            QApplication.clipboard().setText(self.__current_string.string.display_id)
 
     def __on_change(self) -> None:
         self.__update_placeholders()
@@ -633,3 +680,27 @@ class TranslatorDialog(QWidget):
 
         self.__prev_button.setEnabled(count > 1)
         self.__next_button.setEnabled(count > 1)
+
+    def set_states_summary(self, summary: dict[StringStatus, int]) -> None:
+        """
+        Sets the currently displayed summary of the translation status.
+
+        Args:
+            summary (dict[StringStatus, int]): The summary of the translation status.
+        """
+
+        self.__status_bar_chart.setValues(list(summary.values()))
+        self.__status_bar_chart.setColors([s.get_base_color() for s in StringStatus])
+
+        num_tooltip: str = ""
+        for status, count in summary.items():
+            color: str = status.get_fg_color().name()
+
+            num_tooltip += (
+                f"<tr><td><font color='{color}'>{status.get_localized_name()}:"
+                f"</font></td><td align=right><font color='{color}'>{count}"
+                "</font></td></tr>"
+            )
+
+        self.__status_bar_chart.setToolTip(num_tooltip)
+        self.__position_label.setToolTip(num_tooltip)
