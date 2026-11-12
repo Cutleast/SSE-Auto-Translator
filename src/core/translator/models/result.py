@@ -2,12 +2,10 @@
 Copyright (c) Cutleast
 """
 
-from typing import TYPE_CHECKING
 
 from pydantic import BaseModel
 
-if TYPE_CHECKING:
-    from .request import TranslationRequest
+from .request import TranslationRequest
 
 
 class TranslationResult(BaseModel, frozen=True):

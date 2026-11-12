@@ -2,16 +2,13 @@
 Copyright (c) Cutleast
 """
 
-from typing import TYPE_CHECKING, Optional
+from typing import Optional
 
 from cutleast_core_lib.core.utilities.hash import sha256_hash
 from pydantic import BaseModel
 
 from core.translation_context.context import TranslationContext
 from core.utilities.game_language import GameLanguage
-
-if TYPE_CHECKING:
-    from .result import TranslationResult
 
 
 class TranslationRequest(BaseModel, frozen=True):
@@ -32,8 +29,11 @@ class TranslationRequest(BaseModel, frozen=True):
     instructions: Optional[str] = None
     """Optional additional instructions for the translation."""
 
-    old_result: Optional[TranslationResult] = None
-    """A previous translation result of the text, if this request is a retry."""
+    old_translation: Optional[str] = None
+    """
+    A previous translation of the text. If given, the translator is instructed to
+    improve or correct it.
+    """
 
     @property
     def id(self) -> str:

@@ -9,6 +9,3 @@ __all__ = [
     "TranslationRequest",
     "TranslationResult",
 ]
-
-TranslationRequest.model_rebuild()
-TranslationResult.model_rebuild()

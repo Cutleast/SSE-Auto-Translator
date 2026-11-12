@@ -93,16 +93,11 @@ It improves the translations only slightly but makes them many times slower.
 === Translate strings
 
 * *Single string:* Click on _Translate with API_ (`Ctrl+F5`) in the dialog for editing a string.
-If the string was already translated with the LLM before, it is translated again and the previous translation is sent along as unsatisfying, so that the LLM translates it differently.
+If the string was already translated with the LLM before, it is translated again and the previous translation is sent along with the instruction to correct or improve it, so that the LLM translates it differently.
 * *Multiple strings:* Select the strings and click on _Translate with API_ in the toolbar.
-Translations are cached, so translating the same strings again returns the same results.
-To get new translations, right click on the strings and click on _Translate again with API (ignore cache)_ instead.
 
-In both cases, you can enter optional instructions for the LLM, for eg. a form of address or a term to use.
-
-The translations are checked automatically.
-If they contain words that are not in the dictionary of the game language or lack names that are kept unchanged in the base game, the LLM is asked to correct them.
-This can be disabled in the translator settings.
+Translations with the same prompt are cached, so translating the same strings again returns the same results.
+To get a different translation, you can always enter optional instructions for the LLM, for eg. a form of address or a term to use.
 
 === Glossary
 

@@ -200,13 +200,17 @@ class Editor(QObject):
         self.log.info(f"Updated status for {len(strings)} string(s).")
 
     def translate_with_api(
-        self, strings: list[EditorString], pdisplay: Optional[ProgressDisplay]
+        self,
+        strings: list[EditorString],
+        additional_instructions: Optional[str],
+        pdisplay: Optional[ProgressDisplay],
     ) -> None:
         """
         Translates a list of strings with a translator API.
 
         Args:
             strings (list[EditorString]): Strings to translate.
+            additional_instructions (Optional[str]): Additional user instructions.
             pdisplay (Optional[ProgressDisplay]):
                 Optional progress display, defaults to None.
         """
@@ -222,15 +226,14 @@ class Editor(QObject):
 
         self.log.info(f"Used translator API: {translator.__class__.__name__}")
 
-        requests: dict[TranslationRequest, EditorString] = {
-            TranslationRequest(
-                text=string.string.original,
-                dst=self.__language,
-                context=self.get_string_context(string),
-            ): string
-            for string in strings
-        }
-        results: dict[TranslationRequest, TranslationResult] = (
+        requests: ReferenceDict[TranslationRequest, EditorString] = ReferenceDict()
+        for string in strings:
+            request: TranslationRequest = self.__create_api_translation_request(
+                string, additional_instructions
+            )
+            requests[request] = string
+
+        results: Mapping[TranslationRequest, TranslationResult] = (
             translator.batch_translate(list(requests.keys()), pdisplay)
         )
 
@@ -245,13 +248,17 @@ class Editor(QObject):
             self.log.info("API translation complete.")
 
     def get_api_translation(
-        self, string: EditorString, pdisplay: Optional[ProgressDisplay] = None
+        self,
+        string: EditorString,
+        additional_instructions: Optional[str],
+        pdisplay: Optional[ProgressDisplay] = None,
     ) -> str:
         """
         Requests an API translation for a string without modifying it.
 
         Args:
             string (EditorString): The string to get an API translation for.
+            additional_instructions (Optional[str]): Additional user instructions.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
@@ -265,13 +272,41 @@ class Editor(QObject):
             if pdisplay is not None:
                 pdisplay.updateMainProgress(update)
 
-        request = TranslationRequest(
-            text=string.string.original,
-            dst=self.__language,
-            context=self.get_string_context(string),
+        request: TranslationRequest = self.__create_api_translation_request(
+            string, additional_instructions
         )
         result: TranslationResult = translator.translate(request, update_callback)
         return result.translated_text
+
+    def __create_api_translation_request(
+        self, string: EditorString, additional_instructions: Optional[str] = None
+    ) -> TranslationRequest:
+        """
+        Creates an API translation request for a string. Appends the current translated
+        text, if there is one and it differs from the original text.
+
+        Args:
+            string (EditorString): The string to create an API translation request for.
+            additional_instructions (Optional[str], optional):
+                Additional user instructions. Defaults to None.
+
+        Returns:
+            TranslationRequest: The created API translation request.
+        """
+
+        return TranslationRequest(
+            text=string.string.original,
+            dst=self.__language,
+            context=self.get_string_context(string),
+            instructions=additional_instructions,
+            old_translation=(
+                string.string.string
+                if self.__translator_service.get_translator().supports_corrections()
+                and string.string.string is not None
+                and string.string.string != string.string.original
+                else None
+            ),
+        )
 
     def set_translated_text(
         self, string: EditorString, translated_text: str, sync_identical: bool

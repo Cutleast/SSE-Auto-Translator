@@ -68,6 +68,11 @@ class LlmTranslator(Translator):
     INSTRUCTIONS_HEADING: str = "Instructions of the user for this translation:"
     """The heading that precedes additional instructions of the user."""
 
+    CORRECTION_HEADING: str = (
+        "Correct or improve upon this previous translation of the text:"
+    )
+    """The heading that precedes the correction section of the prompt."""
+
     MAX_RELATED_STRINGS: int = 10
     """Maximum number of related strings included in the user prompt."""
 
@@ -164,13 +169,13 @@ class LlmTranslator(Translator):
             LlmTranslator.LANGUAGE_PLACEHOLDER, request.dst.name
         )
 
-                f"{LlmTranslator.TEXT_HEADING}\n{request.text}",
         user_prompt_sections: list[str] = [
             LlmTranslator.__build_mod_file_context_section(
                 request.context.mod_file_context
             ),
             LlmTranslator.__build_similar_section(request.context.similar_strings),
             LlmTranslator.__build_glossary_section(request.context.glossary_terms),
+            LlmTranslator.__build_correction_section(request.old_translation),
         ]
 
         if request.instructions is not None:
@@ -301,6 +306,27 @@ class LlmTranslator(Translator):
 
             lines.append(line)
 
+        return "\n".join(lines)
+
+    @staticmethod
+    def __build_correction_section(old_translation: Optional[str]) -> str:
+        """
+        Builds the prompt section for correcting or improving on an old translated text.
+
+        Args:
+            old_translation (Optional[str]): The old translation or None.
+
+        Returns:
+            str: The prompt section.
+        """
+
+        if old_translation is None or not old_translation.strip():
+            return ""
+
+        lines: list[str] = [LlmTranslator.CORRECTION_HEADING]
+        lines.append(
+            format_string(old_translation, LlmTranslator.MAX_CONTEXT_STRING_LENGTH)
+        )
         return "\n".join(lines)
 
     @staticmethod

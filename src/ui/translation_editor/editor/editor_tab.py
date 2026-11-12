@@ -17,7 +17,7 @@ from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
 from cutleast_core_lib.ui.widgets.help_label import HelpLabel
 from cutleast_core_lib.ui.widgets.search_bar import SearchBar
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import QByteArray, Qt, Signal
 from PySide6.QtGui import QAction, QKeySequence, QShortcut, QShowEvent
 from PySide6.QtWidgets import (
     QApplication,
@@ -26,6 +26,7 @@ from PySide6.QtWidgets import (
     QFileDialog,
     QFormLayout,
     QHBoxLayout,
+    QInputDialog,
     QLabel,
     QLineEdit,
     QMessageBox,
@@ -66,10 +67,11 @@ class EditorTab(QWidget):
     This signal gets emitted when tab is to be closed.
     """
 
-    __editor: Editor
-
     __translation: Translation
     __user_data: UserData
+    __translator_service: TranslatorService
+
+    __editor: Editor
 
     __init_thread: Optional[Thread]
 
@@ -107,6 +109,7 @@ class EditorTab(QWidget):
 
         self.__translation = translation
         self.__user_data = user_data
+        self.__translator_service = translator_service
 
         self.__editor = Editor(
             translation=translation,
@@ -581,12 +584,50 @@ class EditorTab(QWidget):
             else:
                 return
 
+        additional_instructions: Optional[str]
+        continue_: bool
+        additional_instructions, continue_ = self.__prompt_additional_instructions()
+
+        if not continue_:
+            return
+
         ProgressDialog(
             lambda pdisplay: self.__editor.translate_with_api(
-                selected_strings, pdisplay
+                selected_strings, additional_instructions, pdisplay
             ),
             QApplication.activeModalWidget(),
         ).run()
+
+    def __prompt_additional_instructions(self) -> tuple[Optional[str], bool]:
+        """
+        Prompts the user for additional instructions, if supported by the currently
+        configured translator API.
+
+        Returns:
+            tuple[Optional[str], bool]:
+                The additional instructions and if the user chose to continue.
+        """
+
+        if self.__translator_service.get_translator().supports_instructions():
+            dialog = QInputDialog()
+            dialog.setLabelText(self.tr("Additional instructions for the translator:"))
+            dialog.setInputMode(QInputDialog.InputMode.TextInput)
+            dialog.setOkButtonText(self.tr("Continue"))
+            dialog.setCancelButtonText(self.tr("Cancel"))
+
+            WidgetStateManager.get().register_custom(
+                "editor_tab/additional_instructions_text",
+                lambda: QByteArray(dialog.textValue().encode()),
+                lambda state: dialog.setTextValue(bytes(state.data()).decode()),
+                dialog,
+            )
+
+            if dialog.exec() == QDialog.DialogCode.Accepted:
+                return dialog.textValue().strip() or None, True
+            else:
+                return None, False
+
+        return None, True
 
     def __export(self) -> None:
         """
@@ -712,8 +753,17 @@ class EditorTab(QWidget):
         if current_string is None:
             return
 
+        additional_instructions: Optional[str]
+        continue_: bool
+        additional_instructions, continue_ = self.__prompt_additional_instructions()
+
+        if not continue_:
+            return
+
         translated_text: str = ProgressDialog(
-            lambda pdisplay: self.__editor.get_api_translation(current_string, pdisplay),
+            lambda pdisplay: self.__editor.get_api_translation(
+                current_string, additional_instructions, pdisplay
+            ),
             self.__dialog,
         ).run()
         self.__editor.set_translated_text(

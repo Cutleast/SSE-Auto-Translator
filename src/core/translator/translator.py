@@ -7,6 +7,7 @@ from __future__ import annotations
 import html
 import logging
 from abc import abstractmethod
+from collections.abc import Mapping
 from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, cast, final
@@ -20,6 +21,7 @@ from cutleast_core_lib.core.multithreading.progress import (
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
 from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
 from cutleast_core_lib.core.utilities.hash import sha256_hash
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.core.utilities.truncate import truncate_string
 from cutleast_core_lib.core.utilities.typing_utils import AbstractBase
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
@@ -121,7 +123,7 @@ class Translator(QObject, AbstractBase):
         self,
         requests: list[TranslationRequest],
         pdisplay: Optional[ProgressDisplay] = None,
-    ) -> dict[TranslationRequest, TranslationResult]:
+    ) -> Mapping[TranslationRequest, TranslationResult]:
         """
         Translates multiple texts from a source language to a destination language.
 
@@ -131,10 +133,10 @@ class Translator(QObject, AbstractBase):
                 Optional progress display. Defaults to None.
 
         Returns:
-            dict[TranslationRequest, TranslationResult]: The translation results.
+            Mapping[TranslationRequest, TranslationResult]: The translation results.
         """
 
-        results: list[TranslationResult] = []
+        results: Mapping[TranslationRequest, TranslationResult] = ReferenceDict()
         with ProgressExecutor(
             pdisplay,
             max_workers=(
@@ -151,18 +153,18 @@ class Translator(QObject, AbstractBase):
             }
 
             for future in as_completed(futures):
+                request: TranslationRequest = futures[future]
                 try:
-                    results.append(future.result())
+                    results[request] = future.result()
                 except TaskCancelledError:
                     raise
                 except Exception as ex:
-                    request: TranslationRequest = futures[future]
                     self.log.error(
                         f"Failed to process translation request '{request}': {ex}",
                         exc_info=ex,
                     )
 
-        return {result.request: result for result in results}
+        return results
 
     def _get_cache_id(self, request: TranslationRequest) -> str:
         """
