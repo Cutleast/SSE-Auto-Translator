@@ -942,8 +942,8 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <translation>Wird mit API übersetzt...</translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="560"/>
-        <location filename="src/core/editor/editor.py" line="577"/>
+        <location filename="src/core/editor/editor.py" line="598"/>
+        <location filename="src/core/editor/editor.py" line="615"/>
         <source>Running translation diagnostics...</source>
         <translation>Übersetzungsdiagnosen werden durchgeführt...</translation>
     </message>

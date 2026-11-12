@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import re
+from collections.abc import Mapping
 from copy import copy
 from pathlib import Path
 from typing import Optional
@@ -491,8 +492,10 @@ class Editor(QObject):
             s
             for s in self.all_strings
             if (
-                s is not string and s.string.original == string.string.original
-                # and s.string.status != StringStatus.TranslationComplete
+                s is not string
+                and s.string.original == string.string.original
+                and s.string.string == string.string.string
+                and s.string.status == string.string.status
             )
         ]
 

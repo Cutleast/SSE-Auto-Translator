@@ -936,8 +936,8 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/editor/editor.py" line="560"/>
-        <location filename="src/core/editor/editor.py" line="577"/>
+        <location filename="src/core/editor/editor.py" line="598"/>
+        <location filename="src/core/editor/editor.py" line="615"/>
         <source>Running translation diagnostics...</source>
         <translation type="unfinished"></translation>
     </message>
