@@ -3,13 +3,14 @@ Copyright (c) Cutleast
 """
 
 import asyncio
-from typing import ClassVar, Optional, final, override
+from typing import ClassVar, final, override
 
 import googletrans
 import googletrans.models
 from cutleast_core_lib.core.utilities.typing_utils import checked_cast
-from cutleast_core_lib.core.utilities.unique import unique
 
+from core.config.translator_config import TranslatorConfig
+from core.translator.models.request import TranslationRequest
 from core.utilities.game_language import GameLanguage
 
 from .translator import Translator
@@ -26,68 +27,26 @@ class GoogleTranslator(Translator):
         GameLanguage.Portuguese: "pt",
     }
 
+    __translator: googletrans.Translator
+
     @override
-    def translate_uncached(self, text: str, dst: GameLanguage) -> str:
-        """
-        Translates a single text using the Google Translator API.
+    def __init__(self, config: TranslatorConfig) -> None:
+        super().__init__(config)
 
-        Args:
-            text (str): The text to translate.
-            dst (GameLanguage): The destination language.
+        self.__translator = googletrans.Translator()
 
-        Returns:
-            str: The translated text.
-        """
-
-        dst_code: str = self.get_lang_code(dst)
+    @override
+    def _process_request(self, request: TranslationRequest) -> str:
+        dst_code: str = self.get_lang_code(request.dst)
 
         async def _run() -> str:
-            async with googletrans.Translator() as translator:
-                translated = checked_cast(
-                    googletrans.models.Translated,
-                    await translator.translate(text, dest=dst_code, src="en"),
-                )
-                return translated.text
+            translated = checked_cast(
+                googletrans.models.Translated,
+                await self.__translator.translate(request.text, dest=dst_code, src="en"),
+            )
+            return translated.text
 
         return asyncio.run(_run())
-
-    @override
-    def mass_translate(self, texts: list[str], dst: GameLanguage) -> dict[str, str]:
-        """
-        Translates multiple texts in a single API call where possible.
-
-        Args:
-            texts (list[str]): The texts to translate.
-            dst (GameLanguage): The destination language.
-
-        Returns:
-            dict[str, str]: Mapping of original text to its translation.
-        """
-
-        result: dict[str, str] = {}
-        dst_code: str = self.get_lang_code(dst)
-
-        to_translate: list[str] = []
-        for text in unique(texts):
-            cached: Optional[str] = self._get_from_cache(text, dst)
-            if cached is not None:
-                result[text] = cached
-            else:
-                to_translate.append(text)
-
-        if not to_translate:
-            return result
-
-        async def _run() -> list[googletrans.models.Translated]:
-            async with googletrans.Translator() as translator:
-                return await translator.translate(to_translate, dest=dst_code, src="en")
-
-        translated_items: list[googletrans.models.Translated] = asyncio.run(_run())
-        for item in translated_items:
-            self._add_to_cache(item.origin, item.text, dst)
-            result[item.origin] = item.text
-
-        return result
 
     @staticmethod
     def get_lang_code(language: GameLanguage) -> str:

@@ -75,6 +75,18 @@ class PluginString(BaseString):
 
         return " - ".join(fields)
 
+    @property
+    @override
+    def is_name(self) -> bool:
+        record_type: str
+        field_type: str
+        record_type, field_type = self.type.split(" ", 1)
+
+        if record_type in ["DIAL", "QUST"]:
+            return False
+
+        return field_type in ["FULL", "SHRT"]
+
     def __format_index(self, index: int) -> str:
         """
         Formats an index for display.

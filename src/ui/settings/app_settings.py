@@ -61,7 +61,6 @@ class AppSettings(SettingsPage[AppConfig]):
     __download_threads_box: QSpinBox
     __worker_threads_box: QSpinBox
     __bind_nxm_checkbox: QCheckBox
-    __use_spell_check_checkbox: QCheckBox
     __auto_import_checkbox: QCheckBox
     __auto_create_db_translations_checkbox: QCheckBox
     __double_click_strings: QCheckBox
@@ -325,15 +324,6 @@ class AppSettings(SettingsPage[AppConfig]):
         )
         behavior_glayout.addWidget(self.__bind_nxm_checkbox, 3, 0, 1, 2)
 
-        self.__use_spell_check_checkbox = QCheckBox(
-            self.tr("Enable spell checking in translation editor")
-        )
-        self.__use_spell_check_checkbox.setChecked(self._config.use_spell_check)
-        self.__use_spell_check_checkbox.stateChanged.connect(
-            lambda _: self.changed_signal.emit()
-        )
-        behavior_glayout.addWidget(self.__use_spell_check_checkbox, 4, 0, 1, 2)
-
         self.__auto_import_checkbox = QCheckBox(
             self.tr("Automatically import installed translations into the database")
         )
@@ -341,7 +331,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__auto_import_checkbox.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
-        behavior_glayout.addWidget(self.__auto_import_checkbox, 5, 0, 1, 2)
+        behavior_glayout.addWidget(self.__auto_import_checkbox, 4, 0, 1, 2)
 
         self.__auto_create_db_translations_checkbox = QCheckBox(
             self.tr(
@@ -356,7 +346,7 @@ class AppSettings(SettingsPage[AppConfig]):
             lambda _: self.changed_signal.emit()
         )
         behavior_glayout.addWidget(
-            self.__auto_create_db_translations_checkbox, 6, 0, 1, 2
+            self.__auto_create_db_translations_checkbox, 5, 0, 1, 2
         )
 
         self.__double_click_strings = QCheckBox(
@@ -369,7 +359,7 @@ class AppSettings(SettingsPage[AppConfig]):
         self.__double_click_strings.stateChanged.connect(
             lambda _: self.changed_signal.emit()
         )
-        behavior_glayout.addWidget(self.__double_click_strings, 7, 0, 1, 2)
+        behavior_glayout.addWidget(self.__double_click_strings, 6, 0, 1, 2)
 
     def __clear_cache(self) -> None:
         self.__cache.clear_caches()
@@ -406,7 +396,6 @@ class AppSettings(SettingsPage[AppConfig]):
             self._config.download_thread_num = self.__download_threads_box.value()
             self._config.worker_thread_num = self.__worker_threads_box.value()
             self._config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
-            self._config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
             self._config.auto_import_translations = (
                 self.__auto_import_checkbox.isChecked()
             )

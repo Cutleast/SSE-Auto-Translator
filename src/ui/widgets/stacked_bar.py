@@ -2,22 +2,31 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from collections.abc import Sequence
+from typing import Optional, override
 
-from PySide6.QtCharts import QBarSet, QChart, QChartView, QHorizontalPercentBarSeries
-from PySide6.QtCore import QMargins, Qt
-from PySide6.QtGui import QColor, QPainter
+from PySide6.QtCore import QEasingCurve, QRectF, QSize, Qt, QVariantAnimation
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPaintEvent
+from PySide6.QtWidgets import QSizePolicy, QWidget
 
 
-class StackedBar(QChartView):
+class StackedBar(QWidget):
     """
-    Class for stacked bar for displaying data ratios.
+    Horizontal stacked bar with rounded ends for displaying data ratios.
     """
 
-    __chart: QChart
-    __series: QHorizontalPercentBarSeries
+    ANIMATION_DURATION: int = 500
+    """The duration of the transition between two sets of values in milliseconds."""
 
-    __bar_sets: list[QBarSet]
+    FALLBACK_COLOR: QColor = QColor(Qt.GlobalColor.lightGray)
+    """The color used for segments without a color and for an empty bar."""
+
+    __start_values: list[float]
+    __target_values: list[float]
+    __displayed_values: list[float]
+    __colors: list[QColor]
+
+    __animation: QVariantAnimation
 
     def __init__(self, values: list[int], colors: Optional[list[QColor]] = None) -> None:
         """
@@ -30,34 +39,21 @@ class StackedBar(QChartView):
 
         super().__init__()
 
-        self.setRubberBand(self.RubberBand.NoRubberBand)
-        self.setResizeAnchor(self.ViewportAnchor.AnchorViewCenter)
-        self.setRenderHint(QPainter.RenderHint.LosslessImageRendering)
+        self.__target_values = [float(value) for value in values]
+        self.__start_values = list(self.__target_values)
+        self.__displayed_values = list(self.__target_values)
+        self.__colors = []
+        self.setColors(colors or [None for _ in values])
 
-        self.__chart = QChart()
-        self.__chart.setMargins(QMargins(0, 0, 0, 0))
-        self.__chart.layout().setContentsMargins(0, 0, 0, 0)
-        self.__chart.setBackgroundRoundness(0)
-        self.__chart.setBackgroundVisible(False)
-        self.__chart.legend().hide()
-        self.__chart.setAnimationOptions(QChart.AnimationOption.SeriesAnimations)
-        self.setChart(self.__chart)
-        self.__series = QHorizontalPercentBarSeries()
-        self.__series.setBarWidth(2)
-        self.__chart.addSeries(self.__series)
+        self.__animation = QVariantAnimation(self)
+        self.__animation.setStartValue(0.0)
+        self.__animation.setEndValue(1.0)
+        self.__animation.setDuration(StackedBar.ANIMATION_DURATION)
+        self.__animation.setEasingCurve(QEasingCurve.Type.OutCubic)
 
-        self.__bar_sets = []
-        for v, value in enumerate(values):
-            bar_set = QBarSet("")
-            bar_set.append(value)
+        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
-            if colors is not None:
-                color: QColor = colors[v]
-                bar_set.setColor(color)
-
-            bar_set.setBorderColor(Qt.GlobalColor.transparent)
-            self.__series.append(bar_set)
-            self.__bar_sets.append(bar_set)
+        self.__animation.valueChanged.connect(self.__on_animation_step)
 
     def setValues(self, values: list[int]) -> None:
         """
@@ -65,19 +61,65 @@ class StackedBar(QChartView):
             values (list[int]): The values to display.
         """
 
-        for v, value in enumerate(values):
-            bar_set = self.__bar_sets[v]
-            bar_set.remove(0)
-            bar_set.append(value)
+        self.__animation.stop()
+        self.__start_values = list(self.__displayed_values)
+        self.__target_values = [float(value) for value in values]
+        self.__animation.start()
 
-    def setColors(self, colors: list) -> None:
+    def setColors(self, colors: Sequence[Optional[QColor]]) -> None:
         """
         Args:
-            colors (list): The colors to set for the bar sets.
+            colors (Sequence[Optional[QColor]]):
+                The colors to set for the segments. `None` falls back to light gray.
         """
 
-        for c, color in enumerate(colors):
-            bar_set = self.__bar_sets[c]
-            if color is None:
-                color = Qt.GlobalColor.lightGray
-            bar_set.setColor(color)
+        self.__colors = [
+            StackedBar.FALLBACK_COLOR if color is None else QColor(color)
+            for color in colors
+        ]
+        self.update()
+
+    @override
+    def sizeHint(self) -> QSize:
+        return QSize(250, 8)
+
+    @override
+    def paintEvent(self, event: QPaintEvent) -> None:
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setPen(Qt.PenStyle.NoPen)
+
+        bar_rect = QRectF(self.rect())
+        radius: float = bar_rect.height() / 2
+        outline = QPainterPath()
+        outline.addRoundedRect(bar_rect, radius, radius)
+
+        total: float = sum(self.__displayed_values)
+        if total <= 0:
+            painter.fillPath(outline, StackedBar.FALLBACK_COLOR)
+            return
+
+        x: float = bar_rect.left()
+        for value, color in zip(self.__displayed_values, self.__colors):
+            width: float = bar_rect.width() * value / total
+            if width <= 0:
+                continue
+
+            segment = QPainterPath()
+            segment.addRect(QRectF(x, bar_rect.top(), width, bar_rect.height()))
+            painter.fillPath(outline.intersected(segment), color)
+            x += width
+
+    def __on_animation_step(self, progress: float) -> None:
+        """
+        Interpolates the displayed values between the start and target values.
+
+        Args:
+            progress (float): Progress of the animation, ranging from 0.0 to 1.0.
+        """
+
+        self.__displayed_values = [
+            start + (target - start) * progress
+            for start, target in zip(self.__start_values, self.__target_values)
+        ]
+        self.update()

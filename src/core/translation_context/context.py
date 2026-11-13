@@ -2,11 +2,12 @@
 Copyright (c) Cutleast
 """
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from core.mod_file.context import ModFileContext
 
-from .similar_string import SimilarString
+from .glossary import TranslationGlossary
+from .similar import SimilarString
 
 
 class TranslationContext(BaseModel, frozen=True):
@@ -20,5 +21,5 @@ class TranslationContext(BaseModel, frozen=True):
     mod_file_context: ModFileContext
     """The mod file-specific context."""
 
-    placeholders: list[str]
-    """Placeholders and markup in the original string that have to be kept."""
+    glossary_terms: list[TranslationGlossary.Term] = Field(default_factory=list)
+    """List of translation terms to be followed in the translation."""

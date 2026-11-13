@@ -133,3 +133,8 @@ TranslatorDialog QGroupBox::title {
     padding-top: 0px;
     subcontrol-origin: border;
 }
+
+DiagnosticsCard {
+    background-color: ${colors.surface};
+    border-radius: ${metrics.radius_l};
+}

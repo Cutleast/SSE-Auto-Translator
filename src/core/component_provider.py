@@ -61,7 +61,9 @@ class ComponentProvider(Singleton):
 
         self.__provider = TranslationProvider(self.__user_data.user_config)
 
-        self.__translator_service = TranslatorService(self.__user_data.translator_config)
+        self.__translator_service = TranslatorService(
+            self.__user_data.translator_config_manager
+        )
 
         self.__state_service = StateService(
             self.__user_data.mod_instance, self.__user_data.database

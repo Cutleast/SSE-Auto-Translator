@@ -18,7 +18,6 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
-from core.config.app_config import AppConfig
 from core.database.translation import Translation
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
@@ -40,8 +39,8 @@ class EditorPage(QSplitter):
         int: New number of open tabs.
     """
 
-    __app_config: AppConfig
     __user_data: UserData
+    __user_data_path: Path
     __translator_service: TranslatorService
 
     __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
@@ -54,21 +53,21 @@ class EditorPage(QSplitter):
 
     def __init__(
         self,
-        app_config: AppConfig,
         user_data: UserData,
+        user_data_path: Path,
         translator_service: TranslatorService,
     ) -> None:
         """
         Args:
-            app_config (AppConfig): The application configuration.
             user_data (UserData): The user data.
+            user_data_path (Path): The path to the user data directory.
             translator_service (TranslatorService): The translator service.
         """
 
         super().__init__()
 
-        self.__app_config = app_config
         self.__user_data = user_data
+        self.__user_data_path = user_data_path
         self.__translator_service = translator_service
 
         self.__init_ui()
@@ -156,7 +155,7 @@ class EditorPage(QSplitter):
         for tab, item in self.__tabs.values():
             if tab.changes_pending and not item.text(0).endswith("*"):
                 item.setText(0, item.text(0) + "*")
-            else:
+            elif not tab.changes_pending:
                 item.setText(0, item.text(0).removesuffix("*"))
 
             font: QFont = item.font(0)
@@ -228,9 +227,9 @@ class EditorPage(QSplitter):
 
             translation_tab = EditorTab(
                 translation=translation,
-                app_config=self.__app_config,
                 user_data=self.__user_data,
                 translator_service=self.__translator_service,
+                user_data_path=self.__user_data_path,
             )
             translation_tab.changed_signal.connect(self.__update_tab_labels)
             translation_tab.close_signal.connect(self.close_translation)

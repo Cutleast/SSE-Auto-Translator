@@ -6,8 +6,8 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from core.translation_context.context_property import ContextProperty
-from core.translation_context.related_string import RelatedString
+from core.translation_context.property import ContextProperty
+from core.translation_context.related import RelatedString
 
 
 class ModFileContext(BaseModel, frozen=True):

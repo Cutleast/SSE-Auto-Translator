@@ -11,12 +11,12 @@ from pydantic import BaseModel
 from PySide6.QtWidgets import QApplication
 
 from core.mod_file.context import ModFileContext
-from core.translation_context.context_property import ContextProperty
+from core.translation_context.property import ContextProperty
 from core.translation_context.reference_resolver import (
     ReferenceResolver,
     ResolvedString,
 )
-from core.translation_context.related_string import RelatedString
+from core.translation_context.related import RelatedString
 
 from .string import PluginString
 from .string_indexes import StringIndexes
@@ -242,7 +242,7 @@ class PluginContextExtractor:
             related_strings += self.__resolve_related(
                 topic.form_id,
                 "DIAL FULL",
-                QApplication.translate("PluginContextExtractor", "Topic"),
+                QApplication.translate("PluginContextExtractor", "Player Dialogue"),
             )
             properties += self.__get_quest_property(topic)
 

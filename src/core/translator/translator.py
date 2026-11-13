@@ -4,19 +4,35 @@ Copyright (c) Cutleast
 
 from __future__ import annotations
 
+import html
 import logging
-from abc import ABC, abstractmethod
+from abc import abstractmethod
+from collections.abc import Mapping
+from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, cast, final
 
 from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.multithreading.progress import (
+    ProgressUpdate,
+    UpdateCallback,
+    update,
+)
+from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
 from cutleast_core_lib.core.utilities.hash import sha256_hash
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.truncate import truncate_string
+from cutleast_core_lib.core.utilities.typing_utils import AbstractBase
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
+from PySide6.QtCore import QObject
 
 from core.config.translator_config import TranslatorConfig
-from core.utilities.game_language import GameLanguage
+
+from .models import TranslationRequest, TranslationResult
 
 
-class Translator(ABC):
+class Translator(QObject, AbstractBase):
     """
     Base class for translator APIs that generate automated machine translations.
 
@@ -40,6 +56,8 @@ class Translator(ABC):
             config (TranslatorConfig): The app-wide translator configuration.
         """
 
+        super().__init__()
+
         self._config = config
 
         self.log = logging.getLogger(self.__class__.__name__)
@@ -47,98 +65,150 @@ class Translator(ABC):
     @final
     @Cache.persistent_cache(
         cache_subfolder=CACHE_FOLDER,
-        id_generator=lambda self, text, dst: cast(Translator, self).get_cache_id(
-            text, dst
-        ),
+        id_generator=lambda self, request, update_callback: cast(
+            Translator, self
+        )._get_cache_id(request),
         max_age=CACHE_MAX_AGE,
     )
-    def translate(self, text: str, dst: GameLanguage) -> str:
+    def translate(
+        self,
+        request: TranslationRequest,
+        update_callback: Optional[UpdateCallback] = None,
+    ) -> TranslationResult:
         """
         Translates a single text from a source language to a destination language.
 
         Args:
-            text (str): The text to translate.
-            dst (GameLanguage): The destination language.
+            request (TranslationRequest): The translation request.
+            update_callback (Optional[UpdateCallback], optional):
+                Optional progress callback. Defaults to None.
 
         Returns:
-            str: The translated text.
+            TranslationResult: The translation result.
         """
 
-        return self.translate_uncached(text, dst)
-
-    def _get_from_cache(self, text: str, dst: GameLanguage) -> Optional[str]:
-        """
-        Gets a translation result from the cache.
-
-        Args:
-            text (str): The text to translate.
-            dst (GameLanguage): The destination language.
-
-        Returns:
-            str: The translated text.
-        """
-
-        cache_file_path: Path = Translator.CACHE_FOLDER / (
-            Translator.get_cache_id(self, text, dst) + ".cache"
+        progress_req_text: str = html.escape(
+            truncate_string(request.text, 50), quote=False
         )
-        return Cache.get_from_cache(
-            cache_file_path, max_age=Translator.CACHE_MAX_AGE, default=None
+        update(
+            update_callback,
+            ProgressUpdate(
+                status_text=self.tr("Translating '{0}'...").format(progress_req_text),
+                value=0,
+                maximum=0,
+            ),
         )
 
-    def _add_to_cache(self, text: str, translation: str, dst: GameLanguage) -> None:
-        """
-        Adds a translation result to the cache.
+        translated_text: str = self._process_request(request)
 
-        Args:
-            text (str): The text to translate.
-            translation (str): The translated text.
-            dst (GameLanguage): The destination language.
-        """
+        result = TranslationResult(request=request, translated_text=translated_text)
 
-        cache_file_path: Path = Translator.CACHE_FOLDER / (
-            Translator.get_cache_id(self, text, dst) + ".cache"
-        )
-        Cache.save_to_cache(cache_file_path, translation)
+        return result
 
     @abstractmethod
-    def translate_uncached(self, text: str, dst: GameLanguage) -> str:
+    def _process_request(self, request: TranslationRequest) -> str:
         """
-        Translates a single text from a source language to a destination language.
+        Processes a translation request by translating its text to the destination
+        language while including additional context and instructions, if supported by
+        this translator.
 
         Args:
-            text (str): The text to translate.
-            dst (GameLanguage): The destination language.
+            request (TranslationRequest): The translation request.
 
         Returns:
             str: The translated text.
         """
 
-    def mass_translate(self, texts: list[str], dst: GameLanguage) -> dict[str, str]:
+    def batch_translate(
+        self,
+        requests: list[TranslationRequest],
+        pdisplay: Optional[ProgressDisplay] = None,
+    ) -> Mapping[TranslationRequest, TranslationResult]:
         """
         Translates multiple texts from a source language to a destination language.
 
         Args:
-            texts (list[str]): The texts to translate.
-            dst (GameLanguage): The destination language.
+            requests (list[TranslationRequest]): The list of translation requests.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
-            dict[str, str]: Mapping of original text to its translation.
+            Mapping[TranslationRequest, TranslationResult]: The translation results.
         """
 
-        return {text: self.translate(text, dst) for text in texts}
+        results: Mapping[TranslationRequest, TranslationResult] = ReferenceDict()
+        with ProgressExecutor(
+            pdisplay,
+            max_workers=(
+                self._config.max_parallel_requests
+                if self.supports_parallel_requests()
+                else 1
+            ),
+        ) as executor:
+            executor.set_main_progress_text(self.tr("Translating with API..."))
 
-    def get_cache_id(self: Translator, text: str, dst: GameLanguage) -> str:
+            futures: dict[Future[TranslationResult], TranslationRequest] = {
+                executor.submit(lambda uc, req=request: self.translate(req, uc)): request
+                for request in requests
+            }
+
+            for future in as_completed(futures):
+                request: TranslationRequest = futures[future]
+                try:
+                    results[request] = future.result()
+                except TaskCancelledError:
+                    raise
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to process translation request '{request}': {ex}",
+                        exc_info=ex,
+                    )
+
+        return results
+
+    def _get_cache_id(self, request: TranslationRequest) -> str:
         """
         Generates an ID for a cache file for a single translation request.
 
         Args:
-            text (str): The text to translate.
-            dst (GameLanguage): The destination language.
+            request (TranslationRequest): The translation request.
 
         Returns:
-            str: The translated text.
+            str: The cache ID.
         """
 
-        data: str = f"{self.__class__.__name__}-{text}-{dst.name}"
+        data: str = f"{self.__class__.__name__}-{request.model_dump_json()}"
+        data += self._config.model_dump_json()
 
         return sha256_hash(data.encode())
+
+    @classmethod
+    def supports_parallel_requests(cls) -> bool:
+        """
+        Returns:
+            bool: If this translator supports parallel requests.
+        """
+
+        return False
+
+    @classmethod
+    def supports_corrections(cls) -> bool:
+        """
+        Returns:
+            bool:
+                If this translator supports correction requests for previous
+                translations.
+        """
+
+        return False
+
+    @classmethod
+    def supports_instructions(cls) -> bool:
+        """
+        Returns:
+            bool:
+                If this translator supports additional translation instructions per
+                string.
+        """
+
+        return False

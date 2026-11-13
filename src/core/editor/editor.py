@@ -4,26 +4,46 @@ Copyright (c) Cutleast
 
 import logging
 import re
-from copy import copy, deepcopy
+from collections.abc import Mapping
+from copy import copy
 from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.core.utilities.typing_utils import coalesce
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
+from core.config.translator_config import TranslatorConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.editor.models.diagnostics import TranslationDiagnostics
 from core.mod_instance.mod_instance import ModInstance
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translation_context.builder import ContextBuilder
 from core.translation_context.context import TranslationContext
+from core.translation_context.glossary import TranslationGlossary
+from core.translator.models.request import TranslationRequest
+from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
+from core.utilities.text import (
+    find_term,
+    get_words,
+    normalize_word,
+    plain_text,
+    remove_non_text,
+)
+
+from .models import EditorString
+from .validator import TranslationValidator
+
+_NameIndex = dict[str, list[tuple[str, frozenset[str]]]]
+"""Names with their normalized words, indexed by one of those words."""
 
 
 class Editor(QObject):
@@ -36,19 +56,26 @@ class Editor(QObject):
     Signal emitted when any of the strings in the translation change.
 
     Args:
-        StringList: The list of strings that changed.
+        list[EditorString]: The list of strings that changed.
     """
+
+    strings_modified = Signal()
+    """Signal emitted when any string is modified."""
+
+    MAX_PROGRESS_TEXT_LENGTH: int = 50
+    """Maximum length of a text that is displayed in a progress bar."""
+
+    DIAGNOSTICS_STATUS: list[StringStatus] = [StringStatus.TranslationIncomplete]
+    """List of string status, that qualify a string for diagnostics."""
 
     __language: GameLanguage
     __database: TranslationDatabase
     __translator_service: TranslatorService
     __context_builder: ContextBuilder
+    __validator: TranslationValidator
 
     __translation: Translation
-    __strings_cache: dict[Path, StringList]
-    """Stores a deep copy of the strings in the translation."""
-
-    __context_cache: ReferenceDict[String, TranslationContext]
+    __strings: dict[Path, list[EditorString]]
 
     __changes_pending: bool
 
@@ -60,7 +87,9 @@ class Editor(QObject):
         language: GameLanguage,
         database: TranslationDatabase,
         mod_instance: Optional[ModInstance],
+        translator_config: TranslatorConfig,
         translator_service: TranslatorService,
+        user_data_path: Path,
     ) -> None:
         """
         Args:
@@ -68,7 +97,9 @@ class Editor(QObject):
             language (GameLanguage): The language of the translation.
             database (TranslationDatabase): The translation database.
             mod_instance (Optional[ModInstance]): The loaded mod instance.
+            translator_config (TranslatorConfig): The translator configuration.
             translator_service (TranslatorService): The translator service.
+            user_data_path (Path): The path to the user data directory.
         """
 
         super().__init__()
@@ -78,22 +109,34 @@ class Editor(QObject):
         self.__language = language
         self.__database = database
         self.__translator_service = translator_service
-        self.__context_builder = ContextBuilder(database, mod_instance)
+        self.__context_builder = ContextBuilder(
+            database, translator_config, mod_instance
+        )
+        self.__validator = TranslationValidator(user_data_path)
 
-        # Make a deep copy to prevent immediately modifying the translation
-        self.__strings_cache = deepcopy(self.__translation.strings)
-        self.__context_cache = ReferenceDict()
-
+        self.__strings = {
+            mod_file_path: [
+                EditorString(string=string.model_copy(), mod_file_path=mod_file_path)
+                for string in mod_file_strings
+            ]
+            for mod_file_path, mod_file_strings in translation.strings.items()
+        }
         self.__changes_pending = False
 
-        self.strings_changed.connect(lambda _: self.__on_change())
+        self.__validator.word_added_to_user_dictionary.connect(
+            self.__on_word_added_to_user_dict
+        )
+        self.strings_modified.connect(self.__on_change)
 
     def save(self) -> None:
         """
         Saves changes to the translation.
         """
 
-        self.__translation.strings = self.__strings_cache
+        self.__translation.strings = {
+            mod_file_path: [string.string for string in strings]
+            for mod_file_path, strings in self.__strings.items()
+        }
         self.__translation.save()
 
         self.log.info(f"Saved translation '{self.__translation.name}'.")
@@ -111,32 +154,30 @@ class Editor(QObject):
         return self.__changes_pending
 
     @property
-    def strings(self) -> dict[Path, StringList]:
+    def strings(self) -> dict[Path, list[EditorString]]:
         """
         Map of plugin names to their list of strings.
         Returns their current editing state.
         """
 
-        return copy(self.__strings_cache)
+        return copy(self.__strings)
 
     @property
-    def all_strings(self) -> StringList:
+    def all_strings(self) -> list[EditorString]:
         """
         List of all strings.
         """
 
-        return [
-            string for strings in self.__strings_cache.values() for string in strings
-        ]
+        return [string for strings in self.__strings.values() for string in strings]
 
     def get_string_states_summary(
-        self, strings: Optional[StringList] = None
+        self, strings: Optional[list[EditorString]] = None
     ) -> dict[StringStatus, int]:
         """
         Get a summary of string states.
 
         Args:
-            strings (Optional[StringList], optional):
+            strings (Optional[list[EditorString]], optional):
                 List of strings to summarize. If None, summarizes all strings. Defaults
                 to None.
 
@@ -149,33 +190,46 @@ class Editor(QObject):
             strings = self.all_strings
 
         return {
-            state: len([string for string in strings if string.status == state])
+            state: len([string for string in strings if string.string.status == state])
             for state in StringStatus
         }
 
-    def set_status(self, strings: StringList, status: StringStatus) -> None:
+    def set_status(self, strings: list[EditorString], status: StringStatus) -> None:
         """
         Sets the status of a list of strings.
 
         Args:
-            strings (StringList): List of strings
+            strings (list[EditorString]): List of strings
             status (Status): The status to set
         """
 
         for string in strings:
-            string.status = status
+            if status == StringStatus.NoTranslationRequired or (
+                status != StringStatus.TranslationRequired
+                and string.string.string is None
+            ):
+                string.string.string = string.string.original
 
-        self.strings_changed.emit(strings)
+            string.string.status = status
+            string.diagnostics = None
+            self.__update_string_diagnostics(string)
+
+        self.strings_changed.emit(strings + self.__refresh_glossary_terms(strings))
+        self.strings_modified.emit()
         self.log.info(f"Updated status for {len(strings)} string(s).")
 
     def translate_with_api(
-        self, strings: StringList, pdisplay: Optional[ProgressDisplay]
+        self,
+        strings: list[EditorString],
+        additional_instructions: Optional[str],
+        pdisplay: Optional[ProgressDisplay],
     ) -> None:
         """
         Translates a list of strings with a translator API.
 
         Args:
-            strings (StringList): List of strings
+            strings (list[EditorString]): Strings to translate.
+            additional_instructions (Optional[str]): Additional user instructions.
             pdisplay (Optional[ProgressDisplay]):
                 Optional progress display, defaults to None.
         """
@@ -191,71 +245,164 @@ class Editor(QObject):
 
         self.log.info(f"Used translator API: {translator.__class__.__name__}")
 
-        texts: list[str] = [selected_string.original for selected_string in strings]
-        result: dict[str, str] = translator.mass_translate(texts, self.__language)
-
+        requests: ReferenceDict[TranslationRequest, EditorString] = ReferenceDict()
         for string in strings:
-            string.string = result[string.original]
-            string.status = StringStatus.TranslationIncomplete
+            request: TranslationRequest = self.__create_api_translation_request(
+                string, additional_instructions
+            )
+            requests[request] = string
 
-        self.strings_changed.emit(strings)
-        self.log.info("API translation complete.")
+        results: Mapping[TranslationRequest, TranslationResult] = (
+            translator.batch_translate(list(requests.keys()), pdisplay)
+        )
 
-    def get_api_translation(self, string: String) -> str:
+        for request, result in results.items():
+            string: EditorString = requests[request]
+            string.string.string = result.translated_text
+            string.string.status = StringStatus.TranslationIncomplete
+            string.diagnostics = None
+            self.__update_string_diagnostics(string)
+            self.strings_changed.emit(strings)
+            self.strings_modified.emit()
+            self.log.info("API translation complete.")
+
+        affected_strings: list[EditorString] = self.__refresh_glossary_terms(strings)
+        if affected_strings:
+            self.strings_changed.emit(affected_strings)
+
+    def get_api_translation(
+        self,
+        string: EditorString,
+        additional_instructions: Optional[str],
+        pdisplay: Optional[ProgressDisplay] = None,
+    ) -> str:
         """
         Requests an API translation for a string without modifying it.
 
         Args:
-            string (String): The string to get an API translation for.
+            string (EditorString): The string to get an API translation for.
+            additional_instructions (Optional[str]): Additional user instructions.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
 
         Returns:
             str: The translated text returned by the translator API.
         """
 
         translator: Translator = self.__translator_service.get_translator()
-        return translator.translate(string.original, self.__language)
 
-    def finalize_string(
-        self,
-        string: String,
-        translated_text: str,
-        status: StringStatus = StringStatus.TranslationComplete,
-    ) -> None:
+        def update_callback(update: ProgressUpdate) -> None:
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(update)
+
+        request: TranslationRequest = self.__create_api_translation_request(
+            string, additional_instructions
+        )
+        result: TranslationResult = translator.translate(request, update_callback)
+        return result.translated_text
+
+    def __create_api_translation_request(
+        self, string: EditorString, additional_instructions: Optional[str] = None
+    ) -> TranslationRequest:
         """
-        Finalizes a string by applying a translated text and a status to it. Similar
-        strings are also updated, if the status is TranslationComplete.
+        Creates an API translation request for a string. Appends the current translated
+        text, if there is one and it differs from the original text.
 
         Args:
-            string (String): The string to finalize.
-            translated_text (str): The translated text to apply.
-            status (StringStatus, optional):
-                The translation status to apply. Defaults to
-                StringStatus.TranslationComplete.
+            string (EditorString): The string to create an API translation request for.
+            additional_instructions (Optional[str], optional):
+                Additional user instructions. Defaults to None.
+
+        Returns:
+            TranslationRequest: The created API translation request.
         """
 
-        if status != StringStatus.NoTranslationRequired:
-            string.string = translated_text
-        else:
-            string.string = string.original
+        return TranslationRequest(
+            text=string.string.original,
+            dst=self.__language,
+            context=self.get_string_context(string),
+            instructions=additional_instructions,
+            old_translation=(
+                string.string.string
+                if self.__translator_service.get_translator().supports_corrections()
+                and string.string.string is not None
+                and string.string.string != string.string.original
+                else None
+            ),
+        )
 
-        string.status = status
+    def set_translated_text(
+        self, string: EditorString, translated_text: str, sync_identical: bool
+    ) -> None:
+        """
+        Applies a translated text to a string without changing its status.
 
-        modified_strings: StringList = [string]
-        if status == StringStatus.TranslationComplete:
-            modified_strings.extend(
-                self.__apply_to_matching_strings(string.original, string.string)
-            )
+        Args:
+            string (EditorString): The string to update.
+            translated_text (str): The translated text to apply.
+            sync_identical (bool): Whether to sync identical strings.
+        """
 
+        if string.string.string == translated_text:
+            return
+
+        modified_strings: list[EditorString] = [string]
+        if sync_identical:
+            modified_strings += self.get_sync_candidates(string)
+
+        for modified_string in modified_strings:
+            modified_string.string.string = translated_text
+            modified_string.diagnostics = None
+            self.__update_string_diagnostics(modified_string)
+
+        modified_strings += self.__refresh_glossary_terms(modified_strings)
         self.strings_changed.emit(modified_strings)
+        self.strings_modified.emit()
+
+    def set_string_status(
+        self, string: EditorString, status: StringStatus, sync_identical: bool
+    ) -> None:
+        """
+        Applies a status to a single string. Strings with no translation required get
+        their original text as translation and the translation of completed strings is
+        also applied to other strings with the same original text.
+
+        Args:
+            string (EditorString): The string to update.
+            status (StringStatus): The status to apply.
+            sync_identical (bool): Whether to sync identical strings.
+        """
+
+        if string.string.status == status:
+            return
+
+        modified_strings: list[EditorString] = [string]
+        if sync_identical:
+            modified_strings += self.get_sync_candidates(string)
+
+        for modified_string in modified_strings:
+            if status == StringStatus.NoTranslationRequired or (
+                status != StringStatus.TranslationRequired
+                and modified_string.string.string is None
+            ):
+                modified_string.string.string = string.string.original
+
+            modified_string.string.status = status
+            modified_string.diagnostics = None
+            self.__update_string_diagnostics(modified_string)
+
+        modified_strings += self.__refresh_glossary_terms(modified_strings)
+        self.strings_changed.emit(modified_strings)
+        self.strings_modified.emit()
 
     def apply_regex(
-        self, strings: StringList, replace_text: str, pattern: re.Pattern
+        self, strings: list[EditorString], replace_text: str, pattern: re.Pattern
     ) -> int:
         """
         Applies a regex to a list of strings.
 
         Args:
-            strings (StringList): List of strings
+            strings (list[EditorString]): List of strings
             replace_text (str): Replacer text
             pattern (re.Pattern): Regex pattern
 
@@ -265,109 +412,167 @@ class Editor(QObject):
 
         self.log.info(f"Applying regex to {len(strings)} string(s)...")
 
-        modified_strings: StringList = []
+        modified_strings: list[EditorString] = []
         for string in strings:
-            src: str = string.string if string.string is not None else string.original
+            src: str = coalesce(string.string.string, string.string.original)
             res: str = pattern.sub(replace_text, src)
-            string.string = res
+            string.string.string = res
 
-            if src != string.string:
-                string.status = StringStatus.TranslationIncomplete
+            if src != string.string.string:
+                string.string.status = StringStatus.TranslationIncomplete
+                string.diagnostics = None
+                self.__update_string_diagnostics(string)
                 modified_strings.append(string)
 
-        self.strings_changed.emit(modified_strings)
+        self.strings_changed.emit(
+            modified_strings + self.__refresh_glossary_terms(modified_strings)
+        )
+        self.strings_modified.emit()
         self.log.info("Regex applied.")
 
         return len(modified_strings)
 
-    def apply_database(self, strings: StringList) -> int:
+    def apply_database(self, strings: list[EditorString]) -> int:
         """
         Applies database to a list of strings.
 
         Args:
-            strings (StringList): List of strings
+            strings (list[EditorString]): List of strings.
 
         Returns:
-            int: Number of strings modified
+            int: Number of strings modified.
         """
 
         self.log.info(f"Applying database to {len(strings)} string(s)...")
 
         database_originals: dict[str, String] = {
-            string.original: string for string in self.__database.strings
+            string.original: string
+            for string in self.__database.strings
+            if string.status
+            in [
+                StringStatus.NoTranslationRequired,
+                StringStatus.TranslationComplete,
+                StringStatus.NoneStatus,  # TODO: Remove when implementing issue #137
+            ]
         }
         database_strings: dict[str, String] = {
-            string.id: string for string in self.__database.strings
+            string.id: string
+            for string in self.__database.strings
+            if string.status
+            in [
+                StringStatus.NoTranslationRequired,
+                StringStatus.TranslationComplete,
+                StringStatus.NoneStatus,  # TODO: Remove when implementing issue #137
+            ]
         }
 
-        modified_strings: StringList = []
+        modified_strings: list[EditorString] = []
         for string in strings:
-            if string.id in database_strings:
-                string.string = database_strings[string.id].string
-                string.status = StringStatus.TranslationComplete
-                modified_strings.append(string)
+            if string.string.status not in [
+                StringStatus.TranslationRequired,
+                StringStatus.TranslationIncomplete,
+            ]:
+                continue
 
-            elif string.original in database_originals:
-                string.string = database_originals[string.original].string
-                string.status = StringStatus.TranslationIncomplete
-                modified_strings.append(string)
+            if string.string.id in database_strings:
+                database_string: String = database_strings[string.string.id]
+                if string.string.string != database_string.string:
+                    string.string.string = database_string.string
+                    string.string.status = (
+                        StringStatus.TranslationComplete
+                        # TODO: Remove when implementing issue #137
+                        if database_string.status == StringStatus.NoneStatus
+                        else database_string.status
+                    )
+                    self.__update_string_diagnostics(string)
+                    modified_strings.append(string)
 
-        self.strings_changed.emit(modified_strings)
+            elif string.string.original in database_originals:
+                database_string: String = database_originals[string.string.original]
+                if string.string.string != database_string.string:
+                    string.string.string = database_string.string
+                    string.string.status = StringStatus.TranslationIncomplete
+                    self.__update_string_diagnostics(string)
+                    modified_strings.append(string)
+
+        if modified_strings:
+            self.strings_changed.emit(
+                modified_strings + self.__refresh_glossary_terms(modified_strings)
+            )
+            self.strings_modified.emit()
+
         self.log.info("Database applied.")
 
         return len(modified_strings)
 
-    def apply_to_matching_strings(self, original: str, translation: str) -> int:
+    def get_sync_candidates(self, string: EditorString) -> list[EditorString]:
         """
-        Applies translation to strings that are matching.
+        Gets a list of strings whose original text is identical to a given one and whose
+        status is not `StringStatus.TranslationComplete`.
 
         Args:
-            original (str): The original string
-            translation (str): The translation
+            string (EditorString): The current string.
 
         Returns:
-            int: Number of strings modified
+            list[EditorString]: The list of synchronization candidates.
         """
 
-        modified_strings: StringList = self.__apply_to_matching_strings(
-            original, translation
-        )
-
-        self.strings_changed.emit(modified_strings)
-
-        return len(modified_strings)
-
-    def __apply_to_matching_strings(self, original: str, translation: str) -> StringList:
-        modified_strings: StringList = []
-        for string in self.all_strings:
+        return [
+            s
+            for s in self.all_strings
             if (
-                string.original == original
-                and string.status != StringStatus.TranslationComplete
-            ):
-                string.string = translation
-                string.status = StringStatus.TranslationIncomplete
-                modified_strings.append(string)
+                s is not string
+                and s.string.original == string.string.original
+                and s.string.string == string.string.string
+                and s.string.status == string.string.status
+            )
+        ]
 
-        self.log.info(f"Applied translation to {len(modified_strings)} string(s).")
+    def reset_string(self, string: EditorString, sync_identical: bool) -> None:
+        """
+        Resets the translation and the status of a string.
 
-        return modified_strings
+        Args:
+            string (EditorString): The string to reset.
+            sync_identical (bool): Whether to sync identical strings.
+        """
 
-    def reset_strings(self, strings: StringList) -> None:
+        strings: list[EditorString] = [string]
+        if sync_identical:
+            strings += self.get_sync_candidates(string)
+
+        self.reset_strings(strings)
+
+    def reset_strings(self, strings: list[EditorString]) -> None:
         """
         Resets the translation and the status of a list of strings.
 
         Args:
-            strings (StringList): List of strings
+            strings (list[EditorString]): List of strings.
         """
 
         self.log.info(f"Resetting {len(strings)} string(s)...")
 
         for string in strings:
-            string.string = None
-            string.status = StringStatus.TranslationRequired
+            string.string.string = None
+            string.string.status = StringStatus.TranslationRequired
+            string.diagnostics = None
 
-        self.strings_changed.emit(strings)
+        self.strings_changed.emit(strings + self.__refresh_glossary_terms(strings))
+        self.strings_modified.emit()
         self.log.info("Strings reset.")
+
+    def initialize(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+        """
+        Builds the translation context and runs diagnostics on qualified strings.
+
+        Args:
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
+        """
+
+        self.build_string_context(pdisplay)
+        self.run_string_diagnostics(pdisplay)
 
     def build_string_context(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
         """
@@ -380,32 +585,318 @@ class Editor(QObject):
 
         self.log.info("Building translation context...")
 
+        editor_strings: dict[String, EditorString] = {
+            s.string: s for s in self.all_strings
+        }
+
         try:
-            self.__context_cache = self.__context_builder.build_context(
-                self.__strings_cache, pdisplay
+            contexts: ReferenceDict[String, TranslationContext] = (
+                self.__context_builder.build_context(
+                    self.__get_all_string_lists(), pdisplay
+                )
             )
+
         except TaskCancelledError:
             self.log.info("Cancelled building translation context.")
         else:
+            for string, context in contexts.items():
+                editor_strings[string].context = context
+
+            self.strings_changed.emit(self.all_strings)
+
             self.log.info("Translation context complete.")
 
-    def get_string_context(
-        self, string: String, mod_file_path: Path
-    ) -> TranslationContext:
+    def run_string_diagnostics(self, pdisplay: Optional[ProgressDisplay] = None) -> None:
+        """
+        Runs diagnostics on all qualified strings.
+
+        Args:
+            pdisplay (Optional[ProgressDisplay], optional):
+                Optional progress display. Defaults to None.
+        """
+
+        self.log.info("Running translation diagnostics...")
+
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(
+                    status_text=self.tr("Running translation diagnostics..."),
+                    value=0,
+                    maximum=0,
+                )
+            )
+
+        qualified_strings: list[EditorString] = [
+            string
+            for string in self.all_strings
+            if self.__is_qualified_for_diagnostics(string)
+        ]
+
+        for s, string in enumerate(qualified_strings):
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(
+                        status_text=(
+                            self.tr("Running translation diagnostics...")
+                            + f"{s + 1}/{len(qualified_strings)}"
+                        ),
+                        value=s + 1,
+                        maximum=len(qualified_strings),
+                    )
+                )
+
+            assert string.string.string is not None
+            assert string.context is not None
+
+            string.diagnostics = self.__validator.validate_translated_text(
+                string.string.original,
+                string.string.string,
+                self.__language,
+                string.context,
+            )
+            self.strings_changed.emit([string])
+
+        self.log.info(
+            f"Run translation diagnostics for {len(qualified_strings)} string(s)."
+        )
+
+    def get_string_context(self, string: EditorString) -> TranslationContext:
         """
         Gets the context for a string.
 
         Args:
-            string (String): The edited string.
-            mod_file_path (Path): The mod file path of the string.
+            string (EditorString): The edited string.
 
         Returns:
             TranslationContext: The translation context for the string.
         """
 
-        if string not in self.__context_cache:
-            self.__context_cache[string] = self.__context_builder.build_single_context(
-                string, mod_file_path, self.__strings_cache
+        if string.context is None:
+            string.context = self.__context_builder.build_single_context(
+                string.string,
+                string.mod_file_path,
+                self.__get_all_string_lists(),
             )
+            self.strings_changed.emit([string])
 
-        return self.__context_cache[string]
+        return string.context
+
+    def __get_all_string_lists(self) -> dict[Path, StringList]:
+        """
+        Gets the current strings of the edited translation per mod file path.
+
+        Returns:
+            dict[Path, StringList]: The strings per mod file path.
+        """
+
+        return {
+            mod_file_path: [s.string for s in mod_file_strings]
+            for mod_file_path, mod_file_strings in self.__strings.items()
+        }
+
+    def __refresh_glossary_terms(
+        self, modified_strings: list[EditorString]
+    ) -> list[EditorString]:
+        """
+        Recollects the glossary terms of all strings with a built context that contain
+        one of the modified names, as their glossary terms would be outdated otherwise.
+        The diagnostics of those strings are updated as well.
+
+        Args:
+            modified_strings (list[EditorString]): The strings that were modified.
+
+        Returns:
+            list[EditorString]: The strings whose glossary terms were recollected.
+        """
+
+        names: list[str] = [
+            remove_non_text(string.string.original)
+            for string in modified_strings
+            if string.string.is_name
+        ]
+        name_index: _NameIndex = Editor.__build_name_index(names)
+        if not name_index:
+            return []
+
+        affected_strings: list[EditorString] = [
+            string
+            for string in self.all_strings
+            if string.context is not None
+            and Editor.__contains_any_name(string, name_index)
+        ]
+        if not affected_strings:
+            return []
+
+        all_glossary_terms: list[list[TranslationGlossary.Term]] = (
+            self.__context_builder.get_glossary_terms(
+                [string.string.original for string in affected_strings],
+                self.__get_all_string_lists(),
+            )
+        )
+        for string, glossary_terms in zip(affected_strings, all_glossary_terms):
+            assert string.context is not None
+
+            string.context = string.context.__replace__(glossary_terms=glossary_terms)
+            string.diagnostics = None
+            self.__update_string_diagnostics(string)
+
+        self.log.debug(f"Refreshed glossary terms of {len(affected_strings)} string(s).")
+
+        return affected_strings
+
+    @staticmethod
+    def __build_name_index(names: list[str]) -> _NameIndex:
+        """
+        Indexes names by one of their normalized words, so that only names whose words
+        can occur in a text have to be searched in it. Names without words are left out
+        as they can never be found in a text.
+
+        Args:
+            names (list[str]): The names to index.
+
+        Returns:
+            _NameIndex: The names with their normalized words by index key.
+        """
+
+        index: _NameIndex = {}
+        for name in names:
+            keys: frozenset[str] = frozenset(
+                normalize_word(word.lower()) for word in get_words(name)
+            )
+            if not keys:
+                continue
+
+            # Longer words are usually rarer and therefore yield fewer candidates.
+            index_key: str = max(keys, key=len)
+            index.setdefault(index_key, []).append((name, keys))
+
+        return index
+
+    @staticmethod
+    def __contains_any_name(string: EditorString, name_index: _NameIndex) -> bool:
+        """
+        Checks whether the original text of a string contains any of the indexed names,
+        using the same matching as the translation glossary.
+
+        Args:
+            string (EditorString): The string to check.
+            name_index (_NameIndex): The index of the names to search for.
+
+        Returns:
+            bool: Whether the original text contains any of the names.
+        """
+
+        search_text: str = plain_text(string.string.original.lower())
+        text_keys: frozenset[str] = frozenset(
+            normalize_word(word) for word in get_words(search_text)
+        )
+
+        for key in text_keys:
+            for name, name_keys in name_index.get(key, ()):
+                if not name_keys.issubset(text_keys):
+                    continue
+
+                if find_term(search_text, name, inflected=False) is not None:
+                    return True
+
+        return False
+
+    def __is_qualified_for_diagnostics(self, string: EditorString) -> bool:
+        return (
+            string.string.status in Editor.DIAGNOSTICS_STATUS
+            and string.string.string is not None
+            and string.context is not None
+        )
+
+    def __update_string_diagnostics(self, string: EditorString) -> bool:
+        """
+        Updates the diagnostics for a string.
+
+        Args:
+            string (EditorString): The string.
+
+        Returns:
+            bool: If the diagnostics for the string have changed.
+        """
+
+        if not self.__is_qualified_for_diagnostics(string):
+            string.diagnostics = None
+            return True
+
+        elif string.diagnostics is None:
+            assert string.string.string is not None
+            assert string.context is not None
+
+            string.diagnostics = self.__validator.validate_translated_text(
+                string.string.original,
+                string.string.string,
+                self.__language,
+                string.context,
+            )
+            return True
+
+        return False
+
+    def get_string_diagnostics(
+        self, string: EditorString
+    ) -> Optional[TranslationDiagnostics]:
+        """
+        Gets the diagnostics for a string.
+
+        Args:
+            string (EditorString): The edited string.
+
+        Returns:
+            Optional[TranslationDiagnostics]: The diagnostics for the string.
+        """
+
+        if self.__update_string_diagnostics(string):
+            self.strings_changed.emit([string])
+
+        return string.diagnostics
+
+    def get_editor_string(self, string: String) -> EditorString:
+        """
+        Gets the editor string object for a string.
+
+        Args:
+            string (String): The string.
+
+        Raises:
+            KeyError: If the string does not belong to the current translation.
+
+        Returns:
+            EditorString: The editor string object.
+        """
+
+        editor_strings: ReferenceDict[String, EditorString] = ReferenceDict(
+            {s.string: s for s in self.all_strings}
+        )
+
+        return editor_strings[string]
+
+    def add_word_to_dict(self, word: str) -> None:
+        """
+        Reruns the diagnostics of all strings that reported the specified word as
+        unknown, for example after it was added to the dictionary.
+
+        Args:
+            word (str): The word that is now known.
+        """
+
+        self.__validator.add_word_to_user_dictionary(word, self.__language)
+
+    def __on_word_added_to_user_dict(self, word: str) -> None:
+        affected_strings: list[EditorString] = [
+            string
+            for string in self.all_strings
+            if string.diagnostics is not None
+            and word in string.diagnostics.unknown_words
+        ]
+
+        for string in affected_strings:
+            string.diagnostics = None
+            self.__update_string_diagnostics(string)
+
+        if affected_strings:
+            self.strings_changed.emit(affected_strings)

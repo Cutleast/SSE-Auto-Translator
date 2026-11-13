@@ -48,8 +48,12 @@ class Backend(NuitkaBackend):
         return [
             "--include-package=bethkit",
             "--include-package-data=bethkit",
+            "--include-package-data=bethkit:bethkit_ffi.dll",
+            "--include-package=openai",
+            "--include-package-data=openai",
             "--include-package=winrt",
             "--include-package-data=winrt",
+            f"--nofollow-import-to={','.join(Backend.EXCLUDED_QT_MODULES)}",
         ]
 
     @override
@@ -66,19 +70,6 @@ class Backend(NuitkaBackend):
         self.log.info(
             f"Injected version '{metadata.project_version}' into '{app_module}'."
         )
-
-    @override
-    def get_additional_args(
-        self,
-        main_module: Path,
-        exe_stem: str,
-        icon_path: Optional[Path],
-        metadata: BuildMetadata,
-    ) -> list[str]:
-        return [
-            *super().get_additional_args(main_module, exe_stem, icon_path, metadata),
-            f"--nofollow-import-to={','.join(Backend.EXCLUDED_QT_MODULES)}",
-        ]
 
     @override
     def build(

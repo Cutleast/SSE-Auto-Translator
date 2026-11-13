@@ -35,7 +35,7 @@ class StringTypeNames:
             "CELL": QApplication.translate("StringTypeNames", "Cell"),
             "CLAS": QApplication.translate("StringTypeNames", "Class"),
             "CONT": QApplication.translate("StringTypeNames", "Container"),
-            "DIAL": QApplication.translate("StringTypeNames", "Dialogue topic"),
+            "DIAL": QApplication.translate("StringTypeNames", "Player dialogue"),
             "DOOR": QApplication.translate("StringTypeNames", "Door"),
             "ENCH": QApplication.translate("StringTypeNames", "Enchantment"),
             "EXPL": QApplication.translate("StringTypeNames", "Explosion"),

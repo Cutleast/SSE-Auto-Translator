@@ -29,8 +29,9 @@ from PySide6.QtWidgets import (
 
 from core.mod_file.context import ModFileContext
 from core.translation_context.context import TranslationContext
-from core.translation_context.related_string import RelatedString
-from core.translation_context.similar_string import SimilarString
+from core.translation_context.glossary import TranslationGlossary
+from core.translation_context.related import RelatedString
+from core.translation_context.similar import SimilarString
 from ui.string_list.columns import ID_FONT, MAX_STRING_LENGTH
 
 
@@ -155,8 +156,47 @@ class ContextWidget(QWidget):
             initial_width=300,
         )
 
+    class GlossaryTermColumns(ColumnEnum):
+        """
+        Columns for the glossary terms widget.
+        """
+
+        Source = ColumnConfig[TranslationGlossary.Term | TranslationGlossary.Example](
+            title_supplier=lambda: QApplication.translate("ContextWidget", "Source"),
+            display_text_getter=lambda item: item.source.get_localized_name(),
+            tooltip_getter=lambda item: item.source.get_localized_description(),
+            initial_width=150,
+        )
+        Original = ColumnConfig[TranslationGlossary.Term | TranslationGlossary.Example](
+            title_supplier=lambda: QApplication.translate("ContextWidget", "Original"),
+            display_text_getter=lambda item: raw_string(
+                item.original, max_length=MAX_STRING_LENGTH
+            ),
+            tooltip_getter=lambda item: html.escape(
+                raw_string(item.original, max_length=None), quote=False
+            ),
+            initial_width=300,
+        )
+        Translation = ColumnConfig[
+            TranslationGlossary.Term | TranslationGlossary.Example
+        ](
+            title_supplier=lambda: QApplication.translate(
+                "ContextWidget", "Translation"
+            ),
+            display_text_getter=lambda item: raw_string(
+                item.translated, max_length=MAX_STRING_LENGTH
+            ),
+            tooltip_getter=lambda item: html.escape(
+                raw_string(item.translated, max_length=None), quote=False
+            ),
+            initial_width=300,
+        )
+
     __similar_strings_items: list[TreeItem[SimilarString]]
     __related_strings_items: list[TreeItem[RelatedString]]
+    __glossary_terms_items: list[
+        TreeItem[TranslationGlossary.Term | TranslationGlossary.Example]
+    ]
     __preferred_tab: Optional[int]
 
     __vlayout: QVBoxLayout
@@ -170,6 +210,8 @@ class ContextWidget(QWidget):
     __related_strings_widget: QTreeWidget
     __similar_strings_tab_index: int
     __similar_strings_widget: QTreeWidget
+    __glossary_terms_tab_index: int
+    __glossary_terms_widget: QTreeWidget
 
     @override
     def __init__(self) -> None:
@@ -177,6 +219,7 @@ class ContextWidget(QWidget):
 
         self.__similar_strings_items = []
         self.__related_strings_items = []
+        self.__glossary_terms_items = []
         self.__preferred_tab = None
 
         self.__init_ui()
@@ -280,12 +323,26 @@ class ContextWidget(QWidget):
             "related_strings_widget_header", self.__related_strings_widget.header()
         )
 
+        self.__glossary_terms_widget = QTreeWidget()
+        ContextWidget.GlossaryTermColumns.apply_to_tree_widget(
+            self.__glossary_terms_widget
+        )
+        self.__glossary_terms_tab_index = self.__tab_widget.addTab(
+            self.__glossary_terms_widget, ""
+        )
+        WidgetStateManager.get().register_state(
+            "glossary_terms_widget_header", self.__glossary_terms_widget.header()
+        )
+
     def __on_theme_changed(self, theme: Theme) -> None:
         for similar_item in self.__similar_strings_items:
             similar_item.update()
 
         for related_item in self.__related_strings_items:
             related_item.update()
+
+        for glossary_item in self.__glossary_terms_items:
+            glossary_item.update()
 
     def __on_related_string_double_clicked(self, item: QTreeWidgetItem) -> None:
         self.related_string_activated.emit(cast(TreeItem[RelatedString], item).item)
@@ -334,6 +391,22 @@ class ContextWidget(QWidget):
             self.__similar_strings_widget.addTopLevelItem(similar_item)
             self.__similar_strings_items.append(similar_item)
 
+        for glossary_term in context.glossary_terms:
+            term_item = TreeItem[TranslationGlossary.Term | TranslationGlossary.Example](
+                glossary_term, ContextWidget.GlossaryTermColumns
+            )
+            self.__glossary_terms_widget.addTopLevelItem(term_item)
+            self.__glossary_terms_items.append(term_item)
+
+            if glossary_term.example is not None:
+                example_item = TreeItem[
+                    TranslationGlossary.Term | TranslationGlossary.Example
+                ](glossary_term.example, ContextWidget.GlossaryTermColumns)
+                term_item.addChild(example_item)
+                self.__glossary_terms_items.append(example_item)
+
+        self.__glossary_terms_widget.expandAll()
+
         self.__update_tabs()
 
         self.__no_context_label.setVisible(
@@ -373,6 +446,13 @@ class ContextWidget(QWidget):
 
         similar_count: int = len(self.__similar_strings_items)
         related_count: int = len(self.__related_strings_items)
+        term_count: int = len(
+            [
+                item
+                for item in self.__glossary_terms_items
+                if isinstance(item.item, TranslationGlossary.Term)
+            ]
+        )
 
         self.__tab_widget.setTabText(
             self.__similar_strings_tab_index,
@@ -382,19 +462,27 @@ class ContextWidget(QWidget):
             self.__related_strings_tab_index,
             self.tr("Related Strings") + f" ({related_count})",
         )
+        self.__tab_widget.setTabText(
+            self.__glossary_terms_tab_index,
+            self.tr("Glossary Terms") + f" ({term_count})",
+        )
         self.__tab_widget.setTabEnabled(
             self.__similar_strings_tab_index, similar_count > 0
         )
         self.__tab_widget.setTabEnabled(
             self.__related_strings_tab_index, related_count > 0
         )
-        self.__tab_widget.setVisible(similar_count > 0 or related_count > 0)
+        self.__tab_widget.setTabEnabled(self.__glossary_terms_tab_index, term_count > 0)
+        self.__tab_widget.setVisible(
+            similar_count > 0 or related_count > 0 or term_count > 0
+        )
 
         visible_tabs: list[int] = [
             tab
             for tab, count in [
                 (self.__similar_strings_tab_index, similar_count),
                 (self.__related_strings_tab_index, related_count),
+                (self.__glossary_terms_tab_index, term_count),
             ]
             if count > 0
         ]
@@ -417,3 +505,5 @@ class ContextWidget(QWidget):
         self.__related_strings_items.clear()
         self.__similar_strings_widget.clear()
         self.__similar_strings_items.clear()
+        self.__glossary_terms_widget.clear()
+        self.__glossary_terms_items.clear()

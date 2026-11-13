@@ -17,8 +17,8 @@ from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
-from core.translation_context.context_property import ContextProperty
-from core.translation_context.related_string import RelatedString
+from core.translation_context.property import ContextProperty
+from core.translation_context.related import RelatedString
 
 from .string import BestiaryString
 

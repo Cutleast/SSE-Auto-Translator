@@ -11,7 +11,7 @@ dependencies = [
     "bethkit",
     "chunspell-next",
     "curl-cffi",
-    "cutleast-core-lib",
+    "cutleast-core-lib[all]",
     "deepl",
     "googletrans",
     "legacy-cgi",
@@ -19,13 +19,15 @@ dependencies = [
     "lingua-language-detector",
     "lz4",
     "mod-manager-lib",
+    "openai",
     "plyvel-next",
-    "PySide6",
+    "PySide6==6.11.2",  # spinboxes have a padding issue in 6.11.3 and 6.12.0
     "pytz",
     "pyuac",
     "pywin32",
     "pyzmq",
     "rapidfuzz",
+    "snowballstemmer",
     "sse-bsa",
     "websocket-client",
 ]
@@ -52,7 +54,7 @@ members = [
 ]
 
 [tool.uv.sources]
-cutleast-core-lib = { workspace = true }
+cutleast-core-lib = { workspace = true, editable = true }
 mod-manager-lib = { workspace = true }
 lingua-language-detector = { url = "https://github.com/Modding-Forge/lingua-rs/releases/download/v2.2.0-2/lingua_language_detector-2.2.0.post2-cp314-cp314-win_amd64.whl" }
 

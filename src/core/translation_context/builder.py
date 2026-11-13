@@ -14,6 +14,7 @@ from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
 from rapidfuzz import process, utils
 
+from core.config.translator_config import TranslatorConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.file_types.file_type import FileType
@@ -21,12 +22,12 @@ from core.mod_file.context import ModFileContext
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
-from core.string.placeholder_parser import PlaceholderParser
 from core.string.string_status import StringStatus
 from core.string.types import String, StringList
 from core.translation_context.context import TranslationContext
+from core.translation_context.glossary import TranslationGlossary
 from core.translation_context.reference_resolver import ReferenceResolver
-from core.translation_context.similar_string import SimilarString
+from core.translation_context.similar import SimilarString
 
 FuzzyKey: TypeAlias = tuple[Translation, Path, String]
 
@@ -55,17 +56,22 @@ class ContextBuilder(QObject):
     """Number of workers used by the fuzzy searcher."""
 
     __database: TranslationDatabase
+    __translator_config: TranslatorConfig
     __mod_instance: Optional[ModInstance]
     __resolver: Optional[ReferenceResolver]
 
     log: logging.Logger = logging.getLogger("ContextBuilder")
 
     def __init__(
-        self, database: TranslationDatabase, mod_instance: Optional[ModInstance] = None
+        self,
+        database: TranslationDatabase,
+        translator_config: TranslatorConfig,
+        mod_instance: Optional[ModInstance] = None,
     ) -> None:
         """
         Args:
             database (TranslationDatabase): The loaded translation database.
+            translator_config (TranslatorConfig): The translation configuration.
             mod_instance (Optional[ModInstance]):
                 The loaded mod instance for mod file-specific context.
         """
@@ -73,8 +79,10 @@ class ContextBuilder(QObject):
         super().__init__()
 
         self.__database = database
+        self.__translator_config = translator_config
         self.__mod_instance = mod_instance
         self.__resolver = None
+        self.__glossary = None
 
     def build_single_context(
         self, string: String, mod_file_path: Path, all_strings: dict[Path, StringList]
@@ -115,6 +123,23 @@ class ContextBuilder(QObject):
         """
 
         return self.__build(strings, strings, pdisplay)
+
+    def get_glossary_terms(
+        self, texts: list[str], all_strings: dict[Path, StringList]
+    ) -> list[list[TranslationGlossary.Term]]:
+        """
+        Collects the glossary terms that appear in each of the specified texts.
+
+        Args:
+            texts (list[str]): The texts to collect the glossary terms for.
+            all_strings (dict[Path, StringList]):
+                All strings of the edited translation per mod file path.
+
+        Returns:
+            list[list[TranslationGlossary.Term]]: The glossary terms of each text.
+        """
+
+        return self.__get_glossary().get_terms_of_strings(texts, all_strings)
 
     def __build(
         self,
@@ -181,12 +206,32 @@ class ContextBuilder(QObject):
                     )
                 )
 
+        if pdisplay is not None:
+            pdisplay.updateMainProgress(
+                ProgressUpdate(
+                    status_text=self.tr("Collecting glossary terms..."),
+                    value=0,
+                    maximum=0,
+                )
+            )
+
+        def update_callback(upd: ProgressUpdate) -> None:
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(upd)
+
+        glossary: TranslationGlossary = self.__get_glossary()
+        all_glossary_terms: list[list[TranslationGlossary.Term]] = (
+            glossary.get_terms_of_strings(
+                [string.original for string in items], all_strings, update_callback
+            )
+        )
+
         result: ReferenceDict[String, TranslationContext] = ReferenceDict()
-        for string in items:
+        for string, glossary_terms in zip(items, all_glossary_terms):
             result[string] = TranslationContext(
                 similar_strings=similar_strings.get(string, []),
                 mod_file_context=mod_file_contexts.get(string, ModFileContext()),
-                placeholders=PlaceholderParser.parse(string.original),
+                glossary_terms=glossary_terms,
             )
 
         duration: float = time.time() - start
@@ -252,8 +297,7 @@ class ContextBuilder(QObject):
             ]
 
             queries: list[str] = [
-                utils.default_process(string.original[: ContextBuilder.MAX_FUZZY_LENGTH])
-                for string in batch_strings
+                utils.default_process(string.original) for string in batch_strings
             ]
 
             scores: np.ndarray = process.cdist(
@@ -383,6 +427,14 @@ class ContextBuilder(QObject):
             )
 
         return self.__resolver
+
+    def __get_glossary(self) -> TranslationGlossary:
+        if self.__glossary is None:
+            self.__glossary = TranslationGlossary(
+                self.__translator_config, self.__database
+            )
+
+        return self.__glossary
 
     def __get_original_mod_file(
         self, mod_file_path: Path, file_type: FileType

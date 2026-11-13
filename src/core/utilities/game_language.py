@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from enum import Enum
-from typing import override
+from typing import Optional, override
 
 
 class GameLanguage(Enum):
@@ -44,6 +44,51 @@ class GameLanguage(Enum):
         }
 
         return ISO_CODES[self]
+
+    @property
+    def uses_word_boundaries(self) -> bool:
+        """
+        Whether words are separated by spaces, which is not the case for Chinese and
+        Japanese.
+        """
+
+        return self not in (GameLanguage.Chinese, GameLanguage.Japanese)
+
+    @property
+    def stemmer_algorithm(self) -> Optional[str]:
+        """The name of the Snowball stemmer algorithm or None if there is none."""
+
+        if self in (GameLanguage.Chinese, GameLanguage.Japanese, GameLanguage.Korean):
+            return None
+
+        return self.id
+
+    @property
+    def min_stem_length(self) -> int:
+        """
+        The minimum length of a word stem to be searched within other words, as shorter
+        stems match too many unrelated words.
+        """
+
+        # Hangul syllables carry about as much information as two latin letters
+        return 2 if self == GameLanguage.Korean else 4
+
+    @property
+    def loose_suffixes(self) -> tuple[str, ...]:
+        """
+        Suffixes that the Snowball stemmer of this language does not remove from every
+        word, like the "s" of genitives and loanword plurals in "Vaerminas" or "Jarls".
+        """
+
+        if self in (
+            GameLanguage.German,
+            GameLanguage.Italian,
+            GameLanguage.Portuguese,
+            GameLanguage.Spanish,
+        ):
+            return ("s",)
+
+        return ()
 
     @property
     def id(self) -> str:
