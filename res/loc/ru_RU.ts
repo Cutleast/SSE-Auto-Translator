@@ -3626,7 +3626,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/glossary.py" line="408"/>
+        <location filename="src/core/translation_context/glossary.py" line="412"/>
         <source>Scanning for glossary terms...</source>
         <translation type="unfinished"></translation>
     </message>

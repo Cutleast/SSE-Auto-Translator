@@ -3638,7 +3638,7 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Glossarbegriffe werden gesammelt...</translation>
     </message>
     <message>
-        <location filename="src/core/translation_context/glossary.py" line="408"/>
+        <location filename="src/core/translation_context/glossary.py" line="412"/>
         <source>Scanning for glossary terms...</source>
         <translation>Nach Glossarbegriffen scannen...</translation>
     </message>

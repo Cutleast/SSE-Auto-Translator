@@ -400,6 +400,10 @@ class TranslationGlossary(QObject):
             )
         )
 
+        term_index: dict[str, list[int]] = TranslationGlossary.__build_term_index(
+            glossary
+        )
+
         result: list[list[TranslationGlossary.Term]] = []
         for t, text in enumerate(texts, start=1):
             update(
@@ -417,7 +421,10 @@ class TranslationGlossary(QObject):
             )
 
             matching_terms: list[TranslationGlossary.Term] = []
-            for term in glossary:
+            for term_id in TranslationGlossary.__get_candidate_ids(
+                text_keys, term_index
+            ):
+                term: TranslationGlossary.Term = glossary[term_id]
                 if not term.keys.issubset(text_keys):
                     continue
 
@@ -439,6 +446,60 @@ class TranslationGlossary(QObject):
             result.append(matching_terms)
 
         return result
+
+    @staticmethod
+    def __build_term_index(
+        glossary: list[TranslationGlossary.Term],
+    ) -> dict[str, list[int]]:
+        """
+        Indexes the terms of a glossary by the rarest of their keys, so that only terms
+        that can occur in a text have to be checked. Terms without keys are left out as
+        they contain no words and can therefore never be found in a text.
+
+        Args:
+            glossary (list[TranslationGlossary.Term]): The glossary to index.
+
+        Returns:
+            dict[str, list[int]]:
+                The positions of the terms in the glossary by index key, in ascending
+                order.
+        """
+
+        key_counts: Counter[str] = Counter(key for term in glossary for key in term.keys)
+
+        index: dict[str, list[int]] = {}
+        for term_id, term in enumerate(glossary):
+            if not term.keys:
+                continue
+
+            rarest_key: str = min(term.keys, key=lambda key: key_counts[key])
+            index.setdefault(rarest_key, []).append(term_id)
+
+        return index
+
+    @staticmethod
+    def __get_candidate_ids(
+        text_keys: frozenset[str], term_index: dict[str, list[int]]
+    ) -> list[int]:
+        """
+        Gets the positions of all glossary terms that may occur in a text. As every term
+        is indexed by one of its keys, each term whose keys are all contained in the
+        text is a candidate. The candidates have to be checked in glossary order, as
+        found terms are removed from the text to avoid overlaps with shorter terms.
+
+        Args:
+            text_keys (frozenset[str]): The normalized words of the text.
+            term_index (dict[str, list[int]]): The term index of the glossary.
+
+        Returns:
+            list[int]: The positions of the candidate terms in ascending order.
+        """
+
+        candidate_ids: set[int] = set()
+        for key in text_keys:
+            candidate_ids.update(term_index.get(key, ()))
+
+        return sorted(candidate_ids)
 
     def get_glossary(
         self, translation_strings: dict[Path, StringList]
