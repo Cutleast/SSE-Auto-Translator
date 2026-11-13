@@ -96,7 +96,9 @@ class TestTranslationValidator(BaseTest):
         "original, translated, expected_severity",
         [
             # lore-specific term (not in the English dictionary)
-            ("Travel to Whiterun.", "Reise nach Weisslauf.", Severity.Warning),
+            ("Travel to Whiterun.", "Reise nach Flusswald.", Severity.Warning),
+            # a translation that only matches the stem of the term
+            ("Travel to Whiterun.", "Reise nach Weisslauf.", Severity.Notice),
             ("Travel to Whiterun.", "Reise nach Weißlauf.", None),
             # ambiguous term at the start of a sentence
             ("Hold the line!", "Haltet die Stellung!", Severity.Notice),

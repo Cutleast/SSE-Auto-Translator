@@ -9,7 +9,6 @@ from unittest.mock import patch
 import pytest
 from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.logger import Logger
-from pytest_mock import MockerFixture
 from pytestqt.qtbot import QtBot
 
 from core.component_provider import ComponentProvider
@@ -34,16 +33,10 @@ class TestMainWindow(IntegrationTest):
         component_provider: ComponentProvider,
         logger: Logger,
         qtbot: QtBot,
-        mocker: MockerFixture,
     ) -> Generator[MainWindow]:
         """
         Fixture to create and provide a `MainWindow` instance for testing.
         """
-
-        # The native title bar requires the Windows App Runtime and a real window
-        # handle, neither of which is available when rendering off-screen.
-        mocker.patch("native_titlebar.main_window.windows.ensureRuntime")
-        mocker.patch("native_titlebar.main_window._integration.WindowIntegration.attach")
 
         window = MainWindow()
         window.initialize(

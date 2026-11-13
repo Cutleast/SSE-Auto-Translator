@@ -260,7 +260,7 @@ class TestPluginContextExtractor:
             "Emotion": "Anger (50)",
         }
         assert context.notes == ["(proudly)"]
-        assert context.related_strings[0].relation == "Topic"
+        assert context.related_strings[0].relation == "Player Dialogue"
         assert context.related_strings[0].string.original == "What do you sell?"
 
     def test_dialogue_with_speaker(self, contexts: dict[str, ModFileContext]) -> None:

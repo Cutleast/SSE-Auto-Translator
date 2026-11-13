@@ -109,7 +109,7 @@ class TestEditorTab(BaseTest):
 
         # when
         with qtbot.waitSignal(editor_tab.changed_signal):
-            dialog.text_changed.emit(string, "Geänderter Text")
+            dialog.text_changed.emit(string, "Geänderter Text", False)
 
         # then
         assert editor_tab.changes_pending

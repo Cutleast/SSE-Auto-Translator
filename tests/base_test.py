@@ -83,6 +83,20 @@ class BaseTest:
         _config_managers.clear()
 
     @pytest.fixture(autouse=True)
+    def mock_native_titlebar(self, mocker: MockerFixture) -> None:
+        """
+        Disables the native title bar of windows as it requires the Windows App
+        Runtime and a real window handle, neither of which is available when rendering
+        off-screen.
+
+        Args:
+            mocker (MockerFixture): The mocker fixture.
+        """
+
+        mocker.patch("native_titlebar.platform.windows.ensureRuntime")
+        mocker.patch("native_titlebar._integration.WindowIntegration.attach")
+
+    @pytest.fixture(autouse=True)
     def mock_icons(self, monkeypatch: pytest.MonkeyPatch) -> None:
         """
         Mocks the icon provider as the icon resources may lead to access violations
