@@ -31,10 +31,19 @@ from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
 from core.translator.translator import Translator
 from core.utilities.game_language import GameLanguage
-from core.utilities.text import find_term, plain_text, remove_non_text
+from core.utilities.text import (
+    find_term,
+    get_words,
+    normalize_word,
+    plain_text,
+    remove_non_text,
+)
 
 from .models import EditorString
 from .validator import TranslationValidator
+
+_NameIndex = dict[str, list[tuple[str, frozenset[str]]]]
+"""Names with their normalized words, indexed by one of those words."""
 
 
 class Editor(QObject):
@@ -705,13 +714,15 @@ class Editor(QObject):
             for string in modified_strings
             if string.string.is_name
         ]
-        if not names:
+        name_index: _NameIndex = Editor.__build_name_index(names)
+        if not name_index:
             return []
 
         affected_strings: list[EditorString] = [
             string
             for string in self.all_strings
-            if string.context is not None and self.__contains_any_name(string, names)
+            if string.context is not None
+            and Editor.__contains_any_name(string, name_index)
         ]
         if not affected_strings:
             return []
@@ -733,24 +744,62 @@ class Editor(QObject):
 
         return affected_strings
 
-    def __contains_any_name(self, string: EditorString, names: list[str]) -> bool:
+    @staticmethod
+    def __build_name_index(names: list[str]) -> _NameIndex:
         """
-        Checks whether the original text of a string contains any of the specified
-        names, using the same matching as the translation glossary.
+        Indexes names by one of their normalized words, so that only names whose words
+        can occur in a text have to be searched in it. Names without words are left out
+        as they can never be found in a text.
+
+        Args:
+            names (list[str]): The names to index.
+
+        Returns:
+            _NameIndex: The names with their normalized words by index key.
+        """
+
+        index: _NameIndex = {}
+        for name in names:
+            keys: frozenset[str] = frozenset(
+                normalize_word(word.lower()) for word in get_words(name)
+            )
+            if not keys:
+                continue
+
+            # Longer words are usually rarer and therefore yield fewer candidates.
+            index_key: str = max(keys, key=len)
+            index.setdefault(index_key, []).append((name, keys))
+
+        return index
+
+    @staticmethod
+    def __contains_any_name(string: EditorString, name_index: _NameIndex) -> bool:
+        """
+        Checks whether the original text of a string contains any of the indexed names,
+        using the same matching as the translation glossary.
 
         Args:
             string (EditorString): The string to check.
-            names (list[str]): The names to search for.
+            name_index (_NameIndex): The index of the names to search for.
 
         Returns:
             bool: Whether the original text contains any of the names.
         """
 
         search_text: str = plain_text(string.string.original.lower())
-
-        return any(
-            find_term(search_text, name, inflected=False) is not None for name in names
+        text_keys: frozenset[str] = frozenset(
+            normalize_word(word) for word in get_words(search_text)
         )
+
+        for key in text_keys:
+            for name, name_keys in name_index.get(key, ()):
+                if not name_keys.issubset(text_keys):
+                    continue
+
+                if find_term(search_text, name, inflected=False) is not None:
+                    return True
+
+        return False
 
     def __is_qualified_for_diagnostics(self, string: EditorString) -> bool:
         return (
