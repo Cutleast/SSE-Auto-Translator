@@ -173,7 +173,9 @@ class BaseTest:
     @pytest.fixture
     def temp_folder_provider(self, tmp_path: Path) -> TempFolderProvider:
         """
-        Returns a temp folder provider located in the temporary folder of the test.
+        Initializes the temp folder provider singleton in the temporary folder of the
+        test. It is not created automatically, as `ComponentProvider` creates its own
+        instance in integration tests.
 
         Args:
             tmp_path (Path): The temporary folder of the test.

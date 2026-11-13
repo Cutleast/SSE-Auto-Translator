@@ -4,12 +4,13 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
+import pytest
+
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string.string_extractor import StringExtractor
 from core.string.types import StringList
 from core.utilities.game_language import GameLanguage
-from core.utilities.temp_folder_provider import TempFolderProvider
 from tests.setup.data_factory import DataFactory
 
 from ..core_test import CoreTest
@@ -38,15 +39,14 @@ class TestStringExtractor(CoreTest):
         assert translation_strings
         assert Path("WetandCold.esp") in translation_strings
 
-    def test_extract_strings_from_archive(
-        self, data_folder: Path, temp_folder_provider: TempFolderProvider
-    ) -> None:
+    @pytest.mark.usefixtures("temp_folder_provider")
+    def test_extract_strings_from_archive(self, data_folder: Path) -> None:
         """
         Tests `StringExtractor.extract_strings()` with a translation archive.
         """
 
         # given
-        extractor = StringExtractor(temp_folder_provider)
+        extractor = StringExtractor()
         mod_instance: ModInstance = DataFactory.mod_instance(
             [DataFactory.instance_mod("Wet and Cold SE")]
         )

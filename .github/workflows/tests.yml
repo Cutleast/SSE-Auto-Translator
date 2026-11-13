@@ -34,18 +34,13 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked
 
-      - name: Compile Qt translations
-        shell: pwsh
+      - name: Prepare resources
+        shell: cmd
         run: |
-          Get-ChildItem res/loc/*.ts | ForEach-Object {
-            uv run --no-sync pyside6-lrelease $_.FullName -qm ($_.FullName -replace '\.ts$', '.qm')
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          }
-
-      - name: Compile Qt resources
-        run: |
-          uv run --no-sync python core-lib/scripts/compile_resources.py
-          uv run --no-sync pyside6-rcc res/resources.qrc -o src/resources_rc.py
+          call update_lupdate_file.bat || exit /b 1
+          call update_qts.bat || exit /b 1
+          call compile_qts.bat || exit /b 1
+          call compile_qrc.bat || exit /b 1
 
       - name: Run tests
         env:

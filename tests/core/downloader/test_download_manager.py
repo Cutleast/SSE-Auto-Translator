@@ -84,7 +84,8 @@ class TestDownloadManager(BaseTest):
             database (TranslationDatabase): The translation database.
             app_config (AppConfig): The test app configuration.
             provider (MagicMock): The mocked translation provider.
-            temp_folder_provider (TempFolderProvider): The temp folder provider.
+            temp_folder_provider (TempFolderProvider):
+                The temp folder provider singleton that the workers use for downloads.
             tmp_path (Path): The temporary folder of the test.
 
         Yields:
@@ -99,7 +100,6 @@ class TestDownloadManager(BaseTest):
             app_config,
             DataFactory.user_config(),
             DataFactory.masterlist(),
-            temp_folder_provider,
         )
         download_manager.start()
 

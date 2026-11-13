@@ -14,7 +14,6 @@ from core.config.user_config import UserConfig
 from core.downloader.download_manager import DownloadManager
 from core.translation_provider.provider import TranslationProvider
 from core.translation_provider.provider_preference import ProviderPreference
-from core.utilities.temp_folder_provider import TempFolderProvider
 from tests.base_test import BaseTest
 from tests.setup.data_factory import DataFactory
 from ui.main_page.database.downloads.downloads_tab import DownloadsTab
@@ -35,7 +34,6 @@ class TestDownloadsTab(BaseTest):
     def test_initializes_without_provider(
         self,
         app_config: AppConfig,
-        temp_folder_provider: TempFolderProvider,
         tmp_path: Path,
         qtbot: QtBot,
         mocker: MockerFixture,
@@ -45,7 +43,6 @@ class TestDownloadsTab(BaseTest):
 
         Args:
             app_config (AppConfig): Application configuration.
-            temp_folder_provider (TempFolderProvider): The temp folder provider.
             tmp_path (Path): The temporary folder of the test.
             qtbot (QtBot): Fixture for Qt widgets.
             mocker (MockerFixture): Fixture for mocking dependencies.
@@ -66,7 +63,6 @@ class TestDownloadsTab(BaseTest):
             app_config=app_config,
             user_config=user_config,
             masterlist=DataFactory.masterlist(),
-            temp_folder_provider=temp_folder_provider,
         )
 
         # when

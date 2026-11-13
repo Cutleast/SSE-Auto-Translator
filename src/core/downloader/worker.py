@@ -102,7 +102,6 @@ class Worker(QThread):
     __provider: TranslationProvider
     __database: TranslationDatabase
     __mod_instance: ModInstance
-    __temp_folder_provider: TempFolderProvider
 
     def __init__(
         self,
@@ -113,7 +112,6 @@ class Worker(QThread):
         provider: TranslationProvider,
         database: TranslationDatabase,
         mod_instance: ModInstance,
-        temp_folder_provider: TempFolderProvider,
     ) -> None:
         """
         Args:
@@ -124,9 +122,6 @@ class Worker(QThread):
             provider (TranslationProvider): The translation provider.
             database (TranslationDatabase): The translation database.
             mod_instance (ModInstance): The loaded mod instance.
-            temp_folder_provider (TempFolderProvider):
-                Provider for the temporary folder that is used for downloads if no
-                downloads folder is configured and for extracting archives.
         """
 
         super().__init__()
@@ -141,7 +136,6 @@ class Worker(QThread):
         self.__provider = provider
         self.__database = database
         self.__mod_instance = mod_instance
-        self.__temp_folder_provider = temp_folder_provider
 
     def __process_download(self, download: FileDownload) -> None:
         """
@@ -157,7 +151,7 @@ class Worker(QThread):
 
         downloads_folder: Path = (
             self.__app_config.downloads_path
-            or self.__temp_folder_provider.get_temp_folder()
+            or TempFolderProvider.get().get_temp_folder()
         )
         downloads_folder.mkdir(parents=True, exist_ok=True)
         mod_file: Path = downloads_folder / file_name
@@ -226,9 +220,7 @@ class Worker(QThread):
         )
 
         try:
-            strings: dict[Path, StringList] = StringExtractor(
-                self.__temp_folder_provider
-            ).extract_strings(
+            strings: dict[Path, StringList] = StringExtractor().extract_strings(
                 input=downloaded_file,
                 mod_instance=self.__mod_instance,
                 language=self.__database.language,
