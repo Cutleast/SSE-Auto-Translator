@@ -7,7 +7,11 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
+
 from core.database.database import TranslationDatabase
+from core.database.database_reload_result import DatabaseReloadResult
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
 from core.file_types.plugin.string import PluginString
@@ -201,9 +205,10 @@ class TestDatabaseService(CoreTest):
         database.reload_signal.connect(lambda t, m: reloaded.append((t, m)))
 
         # when
-        DatabaseService.reload_database(database)
+        result: DatabaseReloadResult = DatabaseService.reload_database(database)
 
         # then
+        assert result == DatabaseReloadResult(reloaded=2, added=0, removed=0, failed=0)
         reloaded_translation: Translation = next(
             t for t in database.user_translations if t.name.startswith("Wet and Cold")
         )
@@ -307,3 +312,71 @@ class TestDatabaseService(CoreTest):
         ]
         assert [t.name for t in removed[0]] == ["Wet and Cold SE - German"]
         assert (db_path / "Wet and Cold SE - German").is_dir()
+
+    def test_reload_database_keeps_translation_with_malformed_file(
+        self, tmp_path: Path
+    ) -> None:
+        """
+        Tests that `DatabaseService.reload_database()` leaves a translation unchanged
+        and reports an alert if one of its files is malformed.
+        """
+
+        # given
+        database: TranslationDatabase = TestDatabaseService.__load_database_copy(
+            tmp_path
+        )
+        translation: Translation = next(
+            t for t in database.user_translations if t.name.startswith("Wet and Cold")
+        )
+        old_strings: dict[Path, StringList] = translation.strings
+        (translation.path / "WetandCold.esp.json").write_text("{", encoding="utf-8")
+
+        reloaded: list[tuple[list[Translation], list[Path]]] = []
+        database.reload_signal.connect(lambda t, m: reloaded.append((t, m)))
+
+        # when
+        result: DatabaseReloadResult = DatabaseService.reload_database(database)
+
+        # then
+        assert result == DatabaseReloadResult(reloaded=1, added=0, removed=0, failed=1)
+        assert translation in database.user_translations
+        assert translation.strings is old_strings
+        assert translation not in reloaded[0][0]
+        assert reloaded[0][1] == []
+
+        alerts: list[Alert] = AlertManager.get().alerts
+        assert len(alerts) == 1
+        assert alerts[0].severity == Alert.Severity.Error
+        assert translation.name in alerts[0].title
+
+    def test_reload_database_keeps_translation_with_invalid_index_entry(
+        self, tmp_path: Path
+    ) -> None:
+        """
+        Tests that `DatabaseService.reload_database()` keeps a translation whose index
+        entry is present but invalid.
+        """
+
+        # given
+        database: TranslationDatabase = TestDatabaseService.__load_database_copy(
+            tmp_path
+        )
+        index_path: Path = database.userdb_path / database.language.id / "index.json"
+        index_data: list[dict[str, Any]] = json.loads(
+            index_path.read_text(encoding="utf-8")
+        )
+        for entry in index_data:
+            entry["timestamp"] = "invalid"
+        index_path.write_text(json.dumps(index_data), encoding="utf-8")
+
+        removed: list[list[Translation]] = []
+        database.remove_signal.connect(removed.append)
+
+        # when
+        result: DatabaseReloadResult = DatabaseService.reload_database(database)
+
+        # then
+        assert result == DatabaseReloadResult(reloaded=0, added=0, removed=0, failed=2)
+        assert len(database.user_translations) == 2
+        assert removed == []
+        assert len(AlertManager.get().alerts) == 2

@@ -697,6 +697,29 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
+    <name>DatabaseService</name>
+    <message>
+        <location filename="src/core/database/database_service.py" line="327"/>
+        <source>Failed to reload translation &apos;{name}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/database_service.py" line="330"/>
+        <source>The translation &apos;{name}&apos; could not be reloaded from disk and was left unchanged.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/database_service.py" line="337"/>
+        <source>Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/database_service.py" line="338"/>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DatabaseUpdater</name>
     <message>
         <location filename="src/core/database/database_updater.py" line="89"/>
@@ -3896,74 +3919,84 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="151"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="152"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="164"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="165"/>
         <source>Installed Translations:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="209"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="210"/>
         <source>You can import translations by dragging and dropping mod archives into the list above.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="224"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="225"/>
         <source>Base Game + AE CC Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="247"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="248"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="255"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="256"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="257"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="258"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="276"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="281"/>
+        <source>{num} translation(s) could not be reloaded and were left unchanged. Check the alerts for details.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="287"/>
+        <source>Database reloaded with errors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="294"/>
         <source>Database reloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="277"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="276"/>
         <source>Successfully reloaded {num} translation(s) from disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="297"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="313"/>
         <source>Mod archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="301"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="317"/>
         <source>Import Translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="386"/>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="395"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="402"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="411"/>
         <source>Database update complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="388"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="404"/>
         <source>Successfully updated translations for {num} mod file(s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="396"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="412"/>
         <source>All translations are up-to-date.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3999,42 +4032,42 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="454"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="462"/>
         <source>Rename translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="455"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="463"/>
         <source>Enter new translation name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="458"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="466"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="459"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="467"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="499"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="507"/>
         <source>Export translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="517"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="525"/>
         <source>Export successful!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="518"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="526"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="529"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="537"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation type="unfinished">
@@ -4044,7 +4077,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="536"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="544"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation type="unfinished">
@@ -4054,12 +4087,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="545"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="553"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="546"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="554"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

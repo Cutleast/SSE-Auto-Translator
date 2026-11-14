@@ -203,35 +203,43 @@ class TranslationsWidget(QTreeWidget):
         self.__update()
 
     def __update(self) -> None:
-        name_filter: Optional[str] = (
-            self.__name_filter[0] if self.__name_filter else None
-        )
-        case_sensitive: Optional[bool] = (
-            self.__name_filter[1] if self.__name_filter else None
-        )
-
         # temporarily disable sorting to avoid performance issues
         self.setSortingEnabled(False)
 
         for translation, translation_item in self.__translation_items.items():
-            file_items: dict[Path, TreeItem[ImmutableValue[Path]]] = (
-                self.__file_items.get(translation, {})
-            )
-
-            for file, file_item in file_items.items():
-                file_item.setHidden(
-                    not matches_filter(str(file), name_filter, case_sensitive or False)
-                )
-
-            translation_item.setHidden(
-                name_filter is not None
-                and not are_children_visible(translation_item)
-                and not matches_filter(
-                    translation.name, name_filter, case_sensitive or False
-                )
-            )
+            self.__apply_name_filter(translation, translation_item)
 
         self.setSortingEnabled(True)  # re-enable sorting after updating
+
+    def __apply_name_filter(
+        self, translation: Translation, translation_item: TreeItem[Translation]
+    ) -> None:
+        """
+        Applies the current name filter to the item of a translation and its file items.
+
+        Args:
+            translation (Translation): The translation to apply the filter to.
+            translation_item (TreeItem[Translation]): The item of the translation.
+        """
+
+        name_filter: Optional[str] = (
+            self.__name_filter[0] if self.__name_filter else None
+        )
+        case_sensitive: bool = self.__name_filter[1] if self.__name_filter else False
+
+        file_items: dict[Path, TreeItem[ImmutableValue[Path]]] = self.__file_items.get(
+            translation, {}
+        )
+        for file, file_item in file_items.items():
+            file_item.setHidden(
+                not matches_filter(str(file), name_filter, case_sensitive)
+            )
+
+        translation_item.setHidden(
+            name_filter is not None
+            and not are_children_visible(translation_item)
+            and not matches_filter(translation.name, name_filter, case_sensitive)
+        )
 
     def __on_translations_added(self, new_translations: list[Translation]) -> None:
         for translation in new_translations:
@@ -277,7 +285,7 @@ class TranslationsWidget(QTreeWidget):
                 item.removeChild(removed_item)
 
         item.update()
-        self.__update()
+        self.__apply_name_filter(translation, item)
 
     def _create_translation_item(
         self, translation: Translation

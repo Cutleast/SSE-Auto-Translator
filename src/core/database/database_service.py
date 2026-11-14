@@ -9,9 +9,14 @@ from pathlib import Path
 from typing import Any, Optional
 
 import jstyleson as json
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
+from cutleast_core_lib.core.utilities.exceptions import format_exception
 from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
+from pydantic import ValidationError
+from PySide6.QtWidgets import QApplication
 
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
@@ -23,6 +28,7 @@ from core.translation_provider.source import Source
 from core.utilities.game_language import GameLanguage
 
 from .database import TranslationDatabase
+from .database_reload_result import DatabaseReloadResult
 
 
 class DatabaseService:
@@ -160,18 +166,22 @@ class DatabaseService:
     @classmethod
     def reload_database(
         cls, database: TranslationDatabase, pdisplay: Optional[ProgressDisplay] = None
-    ) -> None:
+    ) -> DatabaseReloadResult:
         """
         Reloads the user translations of the specified database from disk to apply
         changes that were made outside of the application. Existing translation objects
         are updated in-place, translations that were added to the index file are added
         and translations that were removed from the index file are removed from the
-        database (without deleting their files).
+        database (without deleting their files). Translations that fail to load are
+        left unchanged and reported as alerts to the `AlertManager`.
 
         Args:
             database (TranslationDatabase): The database to reload.
             pdisplay (Optional[ProgressDisplay], optional):
                 Progress display to report the progress to. Defaults to None.
+
+        Returns:
+            DatabaseReloadResult: Summary of the reload.
 
         ## Emitted Signals:
             `TranslationDatabase.add_signal(translations)`:
@@ -179,9 +189,11 @@ class DatabaseService:
             `TranslationDatabase.remove_signal(translations)`:
                 With the translations that were removed from the index file.
             `TranslationDatabase.changed_signal(translation)`:
-                For every translation that was already in the database.
+                For every successfully reloaded translation that was already in the
+                database.
             `TranslationDatabase.reload_signal(translations, removed_modfiles)`:
-                With the reloaded translations that were already in the database.
+                With the successfully reloaded translations that were already in the
+                database.
             `TranslationDatabase.update_signal()`: Always.
         """
 
@@ -193,12 +205,19 @@ class DatabaseService:
             translation.id: translation for translation in database.user_translations
         }
 
+        # The path of a user translation is derived from its name, so the name is
+        # sufficient to identify it. This also keeps translations whose index entry
+        # is present but fails to load.
+        indexed_names: set[str] = {
+            str(entry["name"]).lower() for entry in index_data if "name" in entry
+        }
+
         added_translations: list[Translation] = []
         reloaded_translations: list[Translation] = []
         removed_modfiles: list[Path] = []
-        loaded_ids: set[str] = set()
+        failed_count: int = 0
         for i, translation_data in enumerate(index_data):
-            name: str = translation_data.get("name", "")
+            name: str = str(translation_data.get("name", ""))
 
             if pdisplay is not None:
                 pdisplay.updateMainProgress(
@@ -213,8 +232,6 @@ class DatabaseService:
                 loaded_translation = Translation.from_index_data(
                     translation_data, db_path
                 )
-                loaded_ids.add(loaded_translation.id)
-
                 existing_translation: Optional[Translation] = existing_translations.get(
                     loaded_translation.id
                 )
@@ -228,15 +245,14 @@ class DatabaseService:
                         )
                     )
                     reloaded_translations.append(existing_translation)
-            except Exception as ex:
-                cls.log.error(
-                    f"Failed to reload translation '{name}': {ex}", exc_info=ex
-                )
+            except (KeyError, OSError, ValidationError) as ex:
+                failed_count += 1
+                cls.__report_reload_failure(name, db_path / name, ex)
 
         removed_translations: list[Translation] = [
             translation
-            for translation_id, translation in existing_translations.items()
-            if translation_id not in loaded_ids
+            for translation in existing_translations.values()
+            if translation.name.lower() not in indexed_names
         ]
 
         cls.__apply_reload(
@@ -247,37 +263,82 @@ class DatabaseService:
             removed_modfiles,
         )
 
-        cls.log.info(
-            f"Reloaded database: {len(reloaded_translations)} translation(s) reloaded, "
-            f"{len(added_translations)} added and {len(removed_translations)} removed."
+        result = DatabaseReloadResult(
+            reloaded=len(reloaded_translations),
+            added=len(added_translations),
+            removed=len(removed_translations),
+            failed=failed_count,
         )
+        cls.log.info(f"Reloaded database: {result}")
+
+        return result
 
     @classmethod
     def __reload_translation(
         cls, existing_translation: Translation, loaded_translation: Translation
     ) -> list[Path]:
         """
-        Updates an existing translation in-place with the metadata of a freshly loaded
-        translation and reloads its strings from disk.
+        Reloads the strings of an existing translation from disk and updates it
+        in-place with the metadata of a freshly loaded translation. The translation is
+        left unchanged if its strings fail to load.
 
         Args:
             existing_translation (Translation): Translation that is in the database.
             loaded_translation (Translation):
                 Translation with the same ID that was freshly loaded from the index file.
 
+        Raises:
+            OSError: If a file of the translation could not be read.
+            ValidationError: If a file of the translation contains invalid data.
+
         Returns:
             list[Path]: Paths of mod files that are no longer covered by the translation.
         """
 
         old_modfiles: set[Path] = set(existing_translation.strings)
+        existing_translation.reload_strings()
 
         existing_translation.mod_id = loaded_translation.mod_id
         existing_translation.version = loaded_translation.version
         existing_translation.source = loaded_translation.source
         existing_translation.timestamp = loaded_translation.timestamp
-        existing_translation.reload_strings()
 
         return list(old_modfiles - set(existing_translation.strings))
+
+    @classmethod
+    def __report_reload_failure(
+        cls, name: str, path: Path, ex: KeyError | OSError | ValidationError
+    ) -> None:
+        """
+        Logs a translation that failed to reload and reports it as an alert.
+
+        Args:
+            name (str): The name of the translation.
+            path (Path): The path to the translation's folder.
+            ex (KeyError | OSError | ValidationError):
+                The exception that caused the failure.
+        """
+
+        cls.log.error(f"Failed to reload translation '{name}': {ex}", exc_info=ex)
+
+        AlertManager.get().add_alert(
+            Alert(
+                severity=Alert.Severity.Error,
+                title=QApplication.translate(
+                    "DatabaseService", "Failed to reload translation '{name}'"
+                ).format(name=name),
+                summary=QApplication.translate(
+                    "DatabaseService",
+                    "The translation '{name}' could not be reloaded from disk and was "
+                    "left unchanged.",
+                ).format(name=name),
+                details=format_exception(ex),
+                context={
+                    QApplication.translate("DatabaseService", "Translation"): name,
+                    QApplication.translate("DatabaseService", "Path"): str(path),
+                },
+            )
+        )
 
     @classmethod
     def __apply_reload(

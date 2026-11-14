@@ -160,15 +160,19 @@ class Translation(BaseModel):
 
     def reload_strings(self) -> None:
         """
-        Discards the cached strings and size of the translation and reloads the strings
-        from the translation's folder.
+        Reloads the strings of the translation from the translation's folder and
+        discards its cached size. The cached strings are only replaced if all files of
+        the translation could be loaded successfully.
+
+        Raises:
+            OSError: If a file of the translation could not be read.
+            ValidationError: If a file of the translation contains invalid data.
         """
 
-        self.strings_ = None
+        self.strings_ = TranslationService.load_translation_strings(
+            self.path, raise_errors=True
+        )
         Translation.get_size.cache_clear()
-
-        # build cache of strings by "calling" the strings property
-        self.strings  # noqa: B018
 
     @lru_cache  # noqa: B019
     def get_size(self) -> int:

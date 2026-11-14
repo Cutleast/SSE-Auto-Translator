@@ -21,13 +21,20 @@ class TranslationService:
 
     @classmethod
     def load_translation_strings(
-        cls, translation_folder: Path
+        cls, translation_folder: Path, raise_errors: bool = False
     ) -> dict[Path, StringList]:
         """
         Loads the strings for a translation from the specified folder.
 
         Args:
             translation_folder (Path): Path to the folder with the translation's files.
+            raise_errors (bool, optional):
+                Whether to raise errors when a file fails to load instead of logging and
+                skipping it. Defaults to False.
+
+        Raises:
+            OSError: If `raise_errors` is True and a file could not be read.
+            ValidationError: If `raise_errors` is True and a file contains invalid data.
 
         Returns:
             dict[Path, StringList]: Map of mod file names to their list of strings.
@@ -44,6 +51,9 @@ class TranslationService:
                     json_file
                 )
             except Exception as ex:
+                if raise_errors:
+                    raise
+
                 cls.log.error(
                     f"Failed to load strings from file '{json_file}': {ex}", exc_info=ex
                 )
