@@ -22,11 +22,11 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.translation_provider.provider import TranslationProvider
 from core.user_data.user_data import UserData
-from tests.base_test import BaseTest
+from tests.integration_test import IntegrationTest
 from ui.main_page.mod_instance.mod_instance import ModInstanceWidget
 
 
-class TestModInstanceWidget(BaseTest):
+class TestModInstanceWidget(IntegrationTest):
     """
     Tests `ui.main_page.mod_instance.mod_instance.ModInstanceWidget`.
     """
@@ -206,6 +206,9 @@ class TestModInstanceWidget(BaseTest):
         """
 
         # given
+        state_service: StateService = Utils.get_private_field(
+            widget, *TestModInstanceWidget.STATE_SERVICE
+        )
         mod_items: dict[Mod, QTreeWidgetItem] = Utils.get_private_field(
             widget, *TestModInstanceWidget.MOD_ITEMS
         )
@@ -218,7 +221,9 @@ class TestModInstanceWidget(BaseTest):
         test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
         test_mod_item: QTreeWidgetItem = mod_items[test_mod]
         test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
-        test_modfile.status = TranslationStatus.RequiresTranslation
+        state_service.set_modfile_states(
+            {test_modfile: TranslationStatus.RequiresTranslation}
+        )
         test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
 
         # when
@@ -230,8 +235,7 @@ class TestModInstanceWidget(BaseTest):
         assert not test_modfile_item.isHidden()
 
         # when
-        test_modfile.status = TranslationStatus.IsTranslated
-        widget.update()
+        state_service.set_modfile_states({test_modfile: TranslationStatus.IsTranslated})
 
         # then
         assert not test_separator_item.isHidden()
@@ -308,38 +312,6 @@ class TestModInstanceWidget(BaseTest):
 
         # then
         self.assert_all_items_visible(widget)
-
-    def test_update(self, widget: ModInstanceWidget, user_data: UserData) -> None:
-        """
-        Tests the update method.
-        """
-
-        # given
-        modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
-            Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
-        )
-
-        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", user_data.mod_instance)
-        test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
-        test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
-
-        # when
-        test_modfile.status = TranslationStatus.RequiresTranslation
-        widget.update()
-
-        # then
-        assert test_modfile_item.foreground(0).color() == TranslationStatus.get_fg_color(
-            TranslationStatus.RequiresTranslation
-        )
-
-        # when
-        test_modfile.status = TranslationStatus.IsTranslated
-        widget.update()
-
-        # then
-        assert test_modfile_item.foreground(0).color() == TranslationStatus.get_fg_color(
-            TranslationStatus.IsTranslated
-        )
 
     def test_get_visible_modfile_item_count(
         self, widget: ModInstanceWidget, user_data: UserData
@@ -423,6 +395,9 @@ class TestModInstanceWidget(BaseTest):
         """
 
         # given
+        state_service: StateService = Utils.get_private_field(
+            widget, *TestModInstanceWidget.STATE_SERVICE
+        )
         database: TranslationDatabase = user_data.database
         modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
             Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
@@ -434,7 +409,6 @@ class TestModInstanceWidget(BaseTest):
         original_modfile: ModFile = self.get_modfile_from_mod(
             original_mod, "WetandCold.esp"
         )
-        original_modfile.status = TranslationStatus.TranslationInstalled
         original_modfile_item: QTreeWidgetItem = modfile_items[original_mod][
             original_modfile
         ]
@@ -444,11 +418,16 @@ class TestModInstanceWidget(BaseTest):
         translated_modfile: ModFile = self.get_modfile_from_mod(
             translated_mod, "WetandCold.esp"
         )
-        translated_modfile.status = TranslationStatus.IsTranslated
         translated_modfile_item: QTreeWidgetItem = modfile_items[translated_mod][
             translated_modfile
         ]
 
+        state_service.set_modfile_states(
+            {
+                original_modfile: TranslationStatus.TranslationInstalled,
+                translated_modfile: TranslationStatus.IsTranslated,
+            }
+        )
         test_translation: Optional[Translation] = (
             database.get_translation_by_modfile_path(original_modfile.path)
         )

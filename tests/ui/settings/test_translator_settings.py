@@ -3,19 +3,21 @@ Copyright (c) Cutleast
 """
 
 from copy import copy
+from pathlib import Path
 
 import pytest
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_selector import EnumSelector
 from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
-from PySide6.QtWidgets import QCheckBox
+from PySide6.QtWidgets import QCheckBox, QGroupBox
 from pytestqt.qtbot import QtBot
 
 from core.config.translator_config import TranslatorConfig
 from core.translator.apis import TranslatorApi
-from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
 from ui.settings.translator_settings import TranslatorSettings
 
 
@@ -28,7 +30,11 @@ class TestTranslatorSettings(BaseTest):
         "api_selector",
         EnumSelector[TranslatorApi],
     )
-    API_KEY_ENTRY: tuple[str, type[KeyLineEdit]] = "api_key_entry", KeyLineEdit
+    DEEPL_GROUP: tuple[str, type[QGroupBox]] = "deepl_group", QGroupBox
+    DEEPL_API_KEY_ENTRY: tuple[str, type[KeyLineEdit]] = (
+        "deepl_api_key_entry",
+        KeyLineEdit,
+    )
 
     SHOW_CONFIRMATIONS_BOX: tuple[str, type[QCheckBox]] = (
         "show_confirmations_box",
@@ -36,30 +42,54 @@ class TestTranslatorSettings(BaseTest):
     )
 
     @pytest.fixture
+    def translator_config_manager(
+        self, tmp_path: Path
+    ) -> ConfigManager[TranslatorConfig]:
+        """
+        Creates a manager for a default TranslatorConfig.
+
+        Args:
+            tmp_path (Path): The temporary folder of the test.
+
+        Returns:
+            ConfigManager[TranslatorConfig]: The config manager.
+        """
+
+        return DataFactory.config_manager(TranslatorConfig(), tmp_path)
+
+    @pytest.fixture
     def translator_settings(
-        self, user_data: UserData, qtbot: QtBot
+        self, translator_config_manager: ConfigManager[TranslatorConfig], qtbot: QtBot
     ) -> TranslatorSettings:
         """
         Returns a new `TranslatorSettings` instance for tests.
         """
 
-        return TranslatorSettings(user_data.translator_config_manager)
+        translator_settings = TranslatorSettings(translator_config_manager)
+        qtbot.addWidget(translator_settings)
+
+        return translator_settings
 
     def test_initial(
-        self, translator_settings: TranslatorSettings, user_data: UserData
+        self,
+        translator_settings: TranslatorSettings,
+        translator_config_manager: ConfigManager[TranslatorConfig],
     ) -> None:
         """
         Tests the initial state of the `TranslatorSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = user_data.translator_config
+        translator_config: TranslatorConfig = translator_config_manager.config
 
         api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_SELECTOR
         )
-        api_key_entry: KeyLineEdit = Utils.get_private_field(
-            translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
+        deepl_group: QGroupBox = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.DEEPL_GROUP
+        )
+        deepl_api_key_entry: KeyLineEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.DEEPL_API_KEY_ENTRY
         )
 
         show_confirmations_box: QCheckBox = Utils.get_private_field(
@@ -68,10 +98,12 @@ class TestTranslatorSettings(BaseTest):
 
         # then
         assert api_selector.getCurrentValue() == translator_config.translator
-        assert api_key_entry.isEnabled() == (
+        assert (not deepl_group.isHidden()) == (
             translator_config.translator == TranslatorApi.DeepL
         )
-        assert (api_key_entry.text().strip() or None) == translator_config.api_key
+        assert (
+            deepl_api_key_entry.text().strip() or None
+        ) == translator_config.deepl_api_key
 
         assert (
             show_confirmations_box.isChecked()
@@ -79,14 +111,16 @@ class TestTranslatorSettings(BaseTest):
         )
 
     def test_apply(
-        self, translator_settings: TranslatorSettings, user_data: UserData
+        self,
+        translator_settings: TranslatorSettings,
+        translator_config_manager: ConfigManager[TranslatorConfig],
     ) -> None:
         """
         Tests the `apply` method of the `AppSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = user_data.translator_config
+        translator_config: TranslatorConfig = translator_config_manager.config
         old_config: TranslatorConfig = copy(translator_config)
 
         # when
@@ -106,11 +140,11 @@ class TestTranslatorSettings(BaseTest):
         api_selector: EnumSelector[TranslatorApi] = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_SELECTOR
         )
-        api_key_entry: KeyLineEdit = Utils.get_private_field(
-            translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
+        deepl_api_key_entry: KeyLineEdit = Utils.get_private_field(
+            translator_settings, *TestTranslatorSettings.DEEPL_API_KEY_ENTRY
         )
         api_selector.setCurrentValue(TranslatorApi.DeepL)
-        api_key_entry.setText("   ")
+        deepl_api_key_entry.setText("   ")
 
         # when / then
         with pytest.raises(ConfigValidationError, match="API key is required for DeepL"):

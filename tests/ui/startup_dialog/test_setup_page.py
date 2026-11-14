@@ -53,6 +53,7 @@ class TestSetupPage(BaseTest):
 
         # when
         setup_page = SetupPage()
+        qtbot.addWidget(setup_page)
         lang_dropdown: EnumPlaceholderDropdown[GameLanguage] = Utils.get_private_field(
             setup_page, *TestSetupPage.LANG_DROPDOWN
         )

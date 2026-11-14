@@ -38,7 +38,7 @@ class TestPluginFile(BaseTest):
         assert all(isinstance(string, PluginString) for string in strings)
         assert len({string.id for string in strings}) == len(strings)
 
-    def test_dump_strings(self, data_folder: Path) -> None:
+    def test_dump_strings(self, data_folder: Path, tmp_path: Path) -> None:
         """
         Tests replacing a serialized string using its stable application ID.
         """
@@ -57,7 +57,7 @@ class TestPluginFile(BaseTest):
         strings = [
             PluginString.model_validate_json(item.model_dump_json()) for item in strings
         ]
-        output_folder: Path = self.tmp_folder() / "bethkit-plugin-output"
+        output_folder: Path = tmp_path / "bethkit-plugin-output"
         output_folder.mkdir(parents=True, exist_ok=True)
 
         # when

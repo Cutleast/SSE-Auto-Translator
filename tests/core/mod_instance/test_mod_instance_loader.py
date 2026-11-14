@@ -16,11 +16,11 @@ from mod_manager_lib.core.mod_manager.vortex.profile_info import ProfileInfo
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.mod_instance_loader import ModInstanceLoader
 from core.utilities.game_language import GameLanguage
-from tests.core.core_test import CoreTest
+from tests.integration_test import IntegrationTest
 from tests.setup.mock_plyvel import MockPlyvelDB
 
 
-class TestModInstanceLoader(CoreTest):
+class TestModInstanceLoader(IntegrationTest):
     """
     Tests `core.mod_instance.mod_instance_loader.ModInstanceLoader`.
     """
@@ -41,7 +41,7 @@ class TestModInstanceLoader(CoreTest):
         )
 
         # then
-        assert mod_instance.display_name == "Portable > Default"
+        assert mod_instance.display_name == "Portable: Default"
         assert len(mod_instance.mods) == 10
         assert len(mod_instance.modfiles) == 19
 
@@ -61,7 +61,7 @@ class TestModInstanceLoader(CoreTest):
         )
 
         # then
-        assert mod_instance.display_name == "Test Instance > Default"
+        assert mod_instance.display_name == "Test Instance: Default"
         assert len(mod_instance.mods) == 10
         assert len(mod_instance.modfiles) == 19
 

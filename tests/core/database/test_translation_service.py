@@ -18,13 +18,13 @@ class TestTranslationService(CoreTest):
     Tests `core.database.translation_service.TranslationService`.
     """
 
-    def test_save_strings_to_json_file(self) -> None:
+    def test_save_strings_to_json_file(self, tmp_path: Path) -> None:
         """
         Tests `TranslationService.save_strings_to_json_file()`.
         """
 
         # given
-        json_file_path: Path = self.tmp_folder() / "strings.json"
+        json_file_path: Path = tmp_path / "strings.json"
         strings: StringList = [
             PluginString(
                 form_id="1",

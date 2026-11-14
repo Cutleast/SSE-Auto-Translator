@@ -14,8 +14,9 @@ from core.mod_instance.mod import Mod
 from core.string.string_extractor import StringExtractor
 from core.string.string_status import StringStatus
 from core.string.types import StringList
-from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
+from tests.setup.data_factory import DataFactory
+from tests.setup.paths import DATA_PATH, RES_PATH
 
 from ..core_test import CoreTest
 
@@ -25,14 +26,14 @@ class TestDatabaseService(CoreTest):
     Tests `core.database.database_service.DatabaseService`.
     """
 
-    def test_load_database(self, res_path: Path, user_data_path: Path) -> None:
+    def test_load_database(self) -> None:
         """
         Tests `DatabaseService.load_database()`.
         """
 
         # given
-        appdb_path: Path = res_path / "app" / "database"
-        userdb_path: Path = user_data_path / "user" / "database"
+        appdb_path: Path = RES_PATH / "app" / "database"
+        userdb_path: Path = DATA_PATH / "data" / "user" / "database"
         language: GameLanguage = GameLanguage.German
 
         # when
@@ -47,16 +48,16 @@ class TestDatabaseService(CoreTest):
             "Wet and Cold SE - German",
         ]
 
-    def test_create_translation_for_mod(self, user_data: UserData) -> None:
+    def test_create_translation_for_mod(self, tmp_path: Path) -> None:
         """
         Tests `DatabaseService.create_translation_for_mod()`.
         """
 
         # given
-        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.mod_instance)
+        mod: Mod = DataFactory.instance_mod("RS Children Overhaul")
         main_esp: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
         main_esp.status = TranslationStatus.TranslationAvailableInDatabase
-        database: TranslationDatabase = user_data.database
+        database: TranslationDatabase = DataFactory.database(tmp_path)
 
         # when
         created_translation: Translation = DatabaseService.create_translation_for_mod(
@@ -80,16 +81,16 @@ class TestDatabaseService(CoreTest):
         assert len(created_translation.strings) == 1
         assert sorted(created_translation.strings.keys()) == [Path("RSChildren.esp")]
 
-    def test_create_translation_for_mod_file(self, user_data: UserData) -> None:
+    def test_create_translation_for_mod_file(self, tmp_path: Path) -> None:
         """
         Tests `DatabaseService.create_translation_for_mod()`.
         """
 
         # given
-        modfile: ModFile = self.get_modfile_from_mod_name(
-            "RS Children Overhaul", "RSChildren.esp", user_data.mod_instance
+        modfile: ModFile = self.get_modfile_from_mod(
+            DataFactory.instance_mod("RS Children Overhaul"), "RSChildren.esp"
         )
-        database: TranslationDatabase = user_data.database
+        database: TranslationDatabase = DataFactory.database(tmp_path)
 
         # when
         created_translation: Translation = (
@@ -102,19 +103,15 @@ class TestDatabaseService(CoreTest):
         assert created_translation.name == "RSChildren.esp - German"
         assert list(created_translation.strings.keys()) == [Path("RSChildren.esp")]
 
-    def test_create_translation_from_mod(self, user_data: UserData) -> None:
+    def test_create_translation_from_mod(self, tmp_path: Path) -> None:
         """
         Tests `DatabaseService.create_translation_from_mod()`.
         """
 
         # given
-        original_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE", user_data.mod_instance
-        )
-        translated_mod: Mod = self.get_mod_by_name(
-            "Wet and Cold SE - German", user_data.mod_instance
-        )
-        database: TranslationDatabase = user_data.database
+        original_mod: Mod = DataFactory.instance_mod("Wet and Cold SE")
+        translated_mod: Mod = DataFactory.instance_mod("Wet and Cold SE - German")
+        database: TranslationDatabase = DataFactory.database(tmp_path)
 
         # when
         translation_strings: dict[Path, StringList] = (

@@ -2,43 +2,23 @@
 Copyright (c) Cutleast
 """
 
-from collections.abc import Generator
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
-from cutleast_core_lib.test.utils import Utils
-from pyfakefs.fake_filesystem import FakeFilesystem
 
-from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translator.service import TranslatorService
 from core.user_data.user_data_service import UserDataService
-from core.utilities.temp_folder_provider import TempFolderProvider
 from utilities.batch.command import BatchCommand
 from utilities.batch.runner import BatchRunner
 
-from ...base_test import BaseTest
+from ...integration_test import IntegrationTest
 
 
-class TestBatchRunner(BaseTest):
+class TestBatchRunner(IntegrationTest):
     """
     Tests `utilities.batch.runner.BatchRunner`.
     """
-
-    @pytest.fixture
-    def user_data_path(self, test_fs: FakeFilesystem, data_folder: Path) -> Path:
-        """
-        Overrides the base fixture to mount user data as writable so that
-        database writes during a scan succeed.
-        """
-
-        dst = Path("C:\\user_data_rw")
-        test_fs.add_real_directory(
-            data_folder / "data", target_path=str(dst), read_only=False
-        )
-        return dst
 
     @pytest.fixture
     def user_data_service(self, res_path: Path, user_data_path: Path) -> UserDataService:
@@ -50,35 +30,10 @@ class TestBatchRunner(BaseTest):
 
         return UserDataService(res_path, user_data_path)
 
-    @pytest.fixture(autouse=True)
-    def reset_runner(self) -> Generator[None, None, None]:
-        """
-        Resets all singletons that `BatchRunner` creates during execution so that each
-        test starts with a clean state. Runs both before and after each test to ensure
-        isolation from tests in other classes that may leave singletons alive.
-        """
-
-        self.__reset_singletons()
-        yield
-        self.__reset_singletons()
-
-    def __reset_singletons(self) -> None:
-        for singleton_cls in (
-            BatchRunner,
-            ComponentProvider,
-            NXMHandler,
-            TempFolderProvider,
-            TranslatorService,
-            UserDataService,
-        ):
-            if singleton_cls.has_instance():
-                Utils.reset_singleton(singleton_cls)
-
     def test_run_basic_scan_only(
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` with only `run_basic_scan=True`.
@@ -101,7 +56,7 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
+        tmp_path: Path,
     ) -> None:
         """
         Tests `BatchRunner.run()` with only `build_output_mod=True`.
@@ -111,7 +66,7 @@ class TestBatchRunner(BaseTest):
         """
 
         # given
-        output_path: Path = self.tmp_folder() / "output_mod_test"
+        output_path: Path = tmp_path / "output_mod_test"
         app_config.output_path = output_path
         command = BatchCommand(run_basic_scan=False, build_output_mod=True)
         runner = BatchRunner(app_config, command)
@@ -127,7 +82,6 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` when all steps are disabled.
@@ -149,7 +103,6 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests `BatchRunner.run()` when a translation archive path does not exist.
@@ -177,7 +130,6 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
         data_folder: Path,
     ) -> None:
         """
@@ -211,7 +163,6 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests that `BatchRunner.run()` returns `EXIT_CODE_FAILURE` when an unexpected
@@ -236,7 +187,6 @@ class TestBatchRunner(BaseTest):
         self,
         app_config: AppConfig,
         user_data_service: UserDataService,
-        test_fs: FakeFilesystem,
     ) -> None:
         """
         Tests that passing an `ldialog` mock to `BatchRunner.run()` does not cause any

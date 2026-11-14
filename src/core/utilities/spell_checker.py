@@ -20,7 +20,12 @@ class SpellChecker:
     __hunspell: Optional[Hunspell]
     __user_dic_path: Optional[Path]
 
-    def __init__(self, language: Optional[str], user_data_path: Optional[Path]) -> None:
+    def __init__(
+        self,
+        language: Optional[str],
+        user_data_path: Optional[Path],
+        dictionary_path: Optional[Path] = None,
+    ) -> None:
         """
         Args:
             language (Optional[str]):
@@ -29,6 +34,9 @@ class SpellChecker:
             user_data_path (Optional[Path]):
                 Path to the user data directory or None to not use the custom user
                 dictionary.
+            dictionary_path (Optional[Path], optional):
+                Path to the folder with the Hunspell dictionaries. Required if
+                `language` is not None. Defaults to None.
         """
 
         self.__user_dic_path = (
@@ -38,7 +46,7 @@ class SpellChecker:
         )
 
         try:
-            self.__hunspell = self._load_hunspell(language)
+            self.__hunspell = self._load_hunspell(language, dictionary_path)
             self.__load_user_dictionary()
             self.log.debug(f"Hunspell dictionary loaded for: {language}")
         except (FileNotFoundError, OSError) as ex:
@@ -156,7 +164,9 @@ class SpellChecker:
 
     @staticmethod
     @FunctionCache.cache
-    def _load_hunspell(language: Optional[str]) -> Hunspell:
+    def _load_hunspell(
+        language: Optional[str], dictionary_path: Optional[Path]
+    ) -> Hunspell:
         """
         Loads the Hunspell dictionary for the specified language.
 
@@ -164,12 +174,20 @@ class SpellChecker:
             language (Optional[str]):
                 The language to load the dictionary for. If None, the built-in English
                 dictionary is loaded.
+            dictionary_path (Optional[Path]):
+                Path to the folder with the Hunspell dictionaries.
+
+        Raises:
+            FileNotFoundError: When no dictionary folder is specified for a language.
 
         Returns:
             Hunspell: The loaded Hunspell dictionary.
         """
 
         if language is not None:
-            return Hunspell(language, hunspell_data_dir="./res/hunspell")
+            if dictionary_path is None:
+                raise FileNotFoundError(f"No dictionary folder for '{language}'.")
+
+            return Hunspell(language, hunspell_data_dir=str(dictionary_path))
 
         return Hunspell()

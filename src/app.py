@@ -200,6 +200,7 @@ class App(BaseApp, Singleton):
             app_config_manager=cast(ConfigManager[AppConfig], self.app_config_manager),
             user_data=self.__user_data,
             user_data_path=self.__user_data_service.get_data_path(),
+            dictionary_path=self.res_path / "hunspell",
             translator_service=self.__component_provider.get_translator_service(),
             scanner=self.__component_provider.get_scanner(),
             provider=self.__component_provider.get_provider(),

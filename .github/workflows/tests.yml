@@ -1,0 +1,61 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    name: pytest (Windows)
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out repository and submodules
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Prepare resources
+        shell: cmd
+        run: |
+          call update_lupdate_file.bat || exit /b 1
+          call update_qts.bat || exit /b 1
+          call compile_qts.bat || exit /b 1
+          call compile_qrc.bat || exit /b 1
+
+      - name: Run tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: >-
+          uv run --no-sync pytest
+          -o log_cli=false
+          -ra
+          --durations=50
+          --junitxml=test-results/junit.xml
+
+      - name: Upload test results
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
+          if-no-files-found: ignore

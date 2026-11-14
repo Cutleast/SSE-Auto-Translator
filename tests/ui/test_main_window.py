@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 from collections.abc import Generator
+from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -13,11 +14,12 @@ from pytestqt.qtbot import QtBot
 from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.user_data.user_data import UserData
-from tests.base_test import BaseTest
+from tests.integration_test import IntegrationTest
+from tests.setup.paths import DICTIONARY_PATH
 from ui.main_window import MainWindow
 
 
-class TestMainWindow(BaseTest):
+class TestMainWindow(IntegrationTest):
     """
     Tests `ui.main_window.MainWindow`.
     """
@@ -27,6 +29,7 @@ class TestMainWindow(BaseTest):
         self,
         app_config_manager: ConfigManager[AppConfig],
         user_data: UserData,
+        user_data_path: Path,
         component_provider: ComponentProvider,
         logger: Logger,
         qtbot: QtBot,
@@ -39,6 +42,8 @@ class TestMainWindow(BaseTest):
         window.initialize(
             app_config_manager=app_config_manager,
             user_data=user_data,
+            user_data_path=user_data_path,
+            dictionary_path=DICTIONARY_PATH,
             translator_service=component_provider.get_translator_service(),
             scanner=component_provider.get_scanner(),
             provider=component_provider.get_provider(),

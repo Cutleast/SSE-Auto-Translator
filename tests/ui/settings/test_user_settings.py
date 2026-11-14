@@ -3,9 +3,11 @@ Copyright (c) Cutleast
 """
 
 from copy import copy
+from pathlib import Path
 
 import pytest
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.test.utils import Utils
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 from mod_manager_lib.ui.instance_selector.instance_selector_widget import (
@@ -16,9 +18,9 @@ from pytestqt.qtbot import QtBot
 
 from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
-from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 from tests.base_test import BaseTest
+from tests.setup.data_factory import DataFactory
 from ui.settings.user_settings import UserSettings
 
 
@@ -45,20 +47,41 @@ class TestUserSettings(BaseTest):
     )
 
     @pytest.fixture
-    def user_settings(self, user_data: UserData, qtbot: QtBot) -> UserSettings:
+    def user_config_manager(self, tmp_path: Path) -> ConfigManager[UserConfig]:
+        """
+        Creates a manager for a default UserConfig.
+
+        Args:
+            tmp_path (Path): The temporary folder of the test.
+
+        Returns:
+            ConfigManager[UserConfig]: The config manager.
+        """
+
+        return DataFactory.config_manager(DataFactory.user_config(), tmp_path)
+
+    @pytest.fixture
+    def user_settings(
+        self, user_config_manager: ConfigManager[UserConfig], qtbot: QtBot
+    ) -> UserSettings:
         """
         Returns a new `UserSettings` instance for tests.
         """
 
-        return UserSettings(user_data.user_config_manager)
+        user_settings = UserSettings(user_config_manager)
+        qtbot.addWidget(user_settings)
 
-    def test_initial(self, user_settings: UserSettings, user_data: UserData) -> None:
+        return user_settings
+
+    def test_initial(
+        self, user_settings: UserSettings, user_config_manager: ConfigManager[UserConfig]
+    ) -> None:
         """
         Tests the initial state of the `UserSettings` instance.
         """
 
         # given
-        user_config: UserConfig = user_data.user_config
+        user_config: UserConfig = user_config_manager.config
 
         lang_box: EnumDropdown[GameLanguage] = Utils.get_private_field(
             user_settings, *TestUserSettings.LANG_BOX
@@ -84,20 +107,22 @@ class TestUserSettings(BaseTest):
         assert api_key_entry.text() == user_config.api_key
         assert masterlist_box.isChecked() == user_config.use_masterlist
 
-    def test_apply(self, user_settings: UserSettings, user_data: UserData) -> None:
+    def test_apply(
+        self, user_settings: UserSettings, user_config_manager: ConfigManager[UserConfig]
+    ) -> None:
         """
         Tests the `apply` method of the `UserSettings` instance.
         """
 
         # given
-        user_config: UserConfig = user_data.user_config
+        user_config: UserConfig = user_config_manager.config
         old_config: UserConfig = copy(user_config)
 
         # when
         user_settings.apply()
 
-        # then (we're comparing the json because direct comparison is impossible due to pyfakefs)
-        assert user_config.model_dump_json() == old_config.model_dump_json()
+        # then
+        assert user_config == old_config
 
     def test_validate_raises_for_missing_nexus_api_key(
         self, user_settings: UserSettings

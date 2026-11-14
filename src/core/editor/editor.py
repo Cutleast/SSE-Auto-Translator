@@ -90,6 +90,7 @@ class Editor(QObject):
         translator_config: TranslatorConfig,
         translator_service: TranslatorService,
         user_data_path: Path,
+        dictionary_path: Path,
     ) -> None:
         """
         Args:
@@ -100,6 +101,7 @@ class Editor(QObject):
             translator_config (TranslatorConfig): The translator configuration.
             translator_service (TranslatorService): The translator service.
             user_data_path (Path): The path to the user data directory.
+            dictionary_path (Path): The folder with the Hunspell dictionaries.
         """
 
         super().__init__()
@@ -112,7 +114,7 @@ class Editor(QObject):
         self.__context_builder = ContextBuilder(
             database, translator_config, mod_instance
         )
-        self.__validator = TranslationValidator(user_data_path)
+        self.__validator = TranslationValidator(user_data_path, dictionary_path)
 
         self.__strings = {
             mod_file_path: [

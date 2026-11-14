@@ -1,0 +1,135 @@
+[
+    {
+        "original": "Dremora",
+        "form_id": "00017008|Skyrim.esm",
+        "type": "CLAS FULL",
+        "editor_id": "EncClassDremoraMelee",
+        "string": "Dremora"
+    },
+    {
+        "original": "Thief",
+        "form_id": "0010FC39|Skyrim.esm",
+        "type": "CLAS FULL",
+        "editor_id": "TrainerMarksmanJourneyman",
+        "string": "Dieb"
+    },
+    {
+        "original": "Horse",
+        "form_id": "0010F71E|Skyrim.esm",
+        "type": "CLAS FULL",
+        "editor_id": "EncClassHorse",
+        "string": "Pferd"
+    },
+    {
+        "original": "Dragon",
+        "form_id": "0002F201|Skyrim.esm",
+        "type": "CLAS FULL",
+        "editor_id": "EncClassDragon",
+        "string": "Drache"
+    },
+    {
+        "original": "Wolf",
+        "form_id": "00106C10|Skyrim.esm",
+        "type": "RACE FULL",
+        "editor_id": "C06WolfSpiritRace",
+        "string": "Wolf"
+    },
+    {
+        "original": "Fortify Carry Weight",
+        "form_id": "0010CED9|Skyrim.esm",
+        "type": "MGEF FULL",
+        "editor_id": "AbFortifyCarryWeight",
+        "string": "Tragfähigkeit verstärken"
+    },
+    {
+        "original": "Healing",
+        "form_id": "0008CB03|Skyrim.esm",
+        "type": "SPEL FULL",
+        "editor_id": "HealingRightHand",
+        "string": "Heilung"
+    },
+    {
+        "original": "Whiterun",
+        "form_id": "000F146F|Skyrim.esm",
+        "type": "ACTI FULL",
+        "editor_id": "CWMapFlagBlueWhiterun",
+        "string": "Weißlauf"
+    },
+    {
+        "original": "Riverwood",
+        "form_id": "000F0857|Skyrim.esm",
+        "type": "ACTI FULL",
+        "editor_id": "CWMapFlagRedRiverwood",
+        "string": "Flusswald"
+    },
+    {
+        "original": "Solitude",
+        "form_id": "000F0842|Skyrim.esm",
+        "type": "ACTI FULL",
+        "editor_id": "CWMapFlagRedSolitude",
+        "string": "Einsamkeit"
+    },
+    {
+        "original": "Fur Boots",
+        "form_id": "000A6D7F|Skyrim.esm",
+        "type": "ARMO FULL",
+        "editor_id": "ArmorStormcloakBoots",
+        "string": "Fellstiefel"
+    },
+    {
+        "original": "Iron Armor",
+        "form_id": "00012E49|Skyrim.esm",
+        "type": "ARMO FULL",
+        "editor_id": "ArmorIronCuirass",
+        "string": "Eisenrüstung"
+    },
+    {
+        "original": "Gold",
+        "form_id": "0000000F|Skyrim.esm",
+        "type": "MISC FULL",
+        "editor_id": "Gold001",
+        "string": "Gold"
+    },
+    {
+        "original": "Hunting Bow",
+        "form_id": "0010E2DD|Skyrim.esm",
+        "type": "WEAP FULL",
+        "editor_id": "FollowerHuntingBow",
+        "string": "Jagdbogen"
+    },
+    {
+        "original": "Elven Bow",
+        "form_id": "0001399D|Skyrim.esm",
+        "type": "WEAP FULL",
+        "editor_id": "ElvenBow",
+        "string": "Elfenbogen"
+    },
+    {
+        "original": "Steel Dagger",
+        "form_id": "00013986|Skyrim.esm",
+        "type": "WEAP FULL",
+        "editor_id": "SteelDagger",
+        "string": "Stahldolch"
+    },
+    {
+        "original": "Iron Sword",
+        "form_id": "00012EB7|Skyrim.esm",
+        "type": "WEAP FULL",
+        "editor_id": "IronSword",
+        "string": "Eisenschwert"
+    },
+    {
+        "original": "Skyrim",
+        "form_id": "00069E2B|Skyrim.esm",
+        "type": "REGN RDMP",
+        "editor_id": "WeatherJaphetsFolly",
+        "string": "Himmelsrand"
+    },
+    {
+        "original": "Snow",
+        "form_id": "00046B89|Skyrim.esm",
+        "type": "WOOP TNAM",
+        "editor_id": "WordOd",
+        "string": "Schnee"
+    }
+]

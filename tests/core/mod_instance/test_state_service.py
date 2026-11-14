@@ -11,7 +11,7 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
-from core.user_data.user_data import UserData
+from tests.setup.data_factory import DataFactory
 
 from ..core_test import CoreTest
 
@@ -21,15 +21,17 @@ class TestStateService(CoreTest):
     Tests `core.mod_instance.state_service.StateService`.
     """
 
-    def test_database_change_updates_modfile_states(self, user_data: UserData) -> None:
+    def test_database_change_updates_modfile_states(self, tmp_path: Path) -> None:
         """
         Tests that adding or removing a translation from the database updates the
         affected mod file states.
         """
 
         # given
-        database: TranslationDatabase = user_data.database
-        mod_instance: ModInstance = user_data.mod_instance
+        database: TranslationDatabase = DataFactory.database(tmp_path)
+        mod_instance: ModInstance = DataFactory.mod_instance(
+            [DataFactory.instance_mod("Ordinator - Perks of Skyrim")]
+        )
         new_translation: Translation = DatabaseService.create_blank_translation(
             "A new translation",
             strings={Path("Ordinator - Perks of Skyrim.esp"): []},
