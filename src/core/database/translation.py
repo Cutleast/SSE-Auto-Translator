@@ -158,6 +158,18 @@ class Translation(BaseModel):
     def strings(self, strings: dict[Path, StringList]) -> None:
         self.strings_ = strings
 
+    def reload_strings(self) -> None:
+        """
+        Discards the cached strings and size of the translation and reloads the strings
+        from the translation's folder.
+        """
+
+        self.strings_ = None
+        Translation.get_size.cache_clear()
+
+        # build cache of strings by "calling" the strings property
+        self.strings  # noqa: B018
+
     @lru_cache  # noqa: B019
     def get_size(self) -> int:
         """

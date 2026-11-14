@@ -61,6 +61,17 @@ class TranslationDatabase(QObject):
         Translation: The changed translation.
     """
 
+    reload_signal = Signal(list, list)
+    """
+    This signal gets emitted when translations that were already in the database got
+    reloaded from disk.
+
+    Args:
+        list[Translation]: The reloaded translations.
+        list[Path]:
+            Paths of mod files that are no longer covered by the reloaded translations.
+    """
+
     userdb_path: Path
     """The path to the user database directory (language not included)."""
 

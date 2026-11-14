@@ -276,6 +276,9 @@ class TranslationsWidget(QTreeWidget):
             if removed_item is not None:
                 item.removeChild(removed_item)
 
+        item.update()
+        self.__update()
+
     def _create_translation_item(
         self, translation: Translation
     ) -> TreeItem[Translation]:

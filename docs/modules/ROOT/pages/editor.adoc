@@ -58,6 +58,19 @@ In addition to that, if a mod got a new mod file through an update, that also re
 After the update is complete, the mod files that had new strings are marked in purple (= _Translation incomplete_) in the mod list. +
 Now you can open the translation in the editor (if it is already open, you have to close it and open it again) and translate the new strings.
 
+== Edit a translation outside of SSE-AT
+
+Translations are stored as JSON files in SSE-AT's user database (`data/user/database/<language>`), one folder per translation and one JSON file per mod file.
+To open the folder of a translation, make a right click on it in the "Translations" list and click on _Open in Explorer..._ .
+You can edit these files with any external tool, for eg. a text editor or a script.
+The list of installed translations is stored in the `index.json` file in the same folder.
+
+After editing the files, click on _Reload database from disk_ in the translations toolbar on the xref:main_page.adoc[main page].
+SSE-AT then reloads all translations and updates the states of the affected mod files in the mod list.
+
+WARNING: Translations that are open in the editor are not updated by the reload.
+Close them before reloading and open them again afterwards, otherwise saving them in the editor overwrites your external changes.
+
 [#llm-translation]
 == Translate with an LLM
 

@@ -119,6 +119,7 @@ class TranslationsTab(QWidget):
             self.__show_vanilla_strings
         )
         self.__toolbar.search_database_requested.connect(self.__search_database)
+        self.__toolbar.reload_database_requested.connect(self.__reload_database)
         self.__toolbar.local_import_requested.connect(self.__import_local_translation)
         self.__toolbar.update_translations_requested.connect(
             self.__update_translation_database
@@ -259,6 +260,25 @@ class TranslationsTab(QWidget):
                     details=str(filter),
                     yesno=False,
                 ).exec()
+
+    def __reload_database(self) -> None:
+        """
+        Reloads the user translations of the database from disk to apply changes that
+        were made outside of the application.
+        """
+
+        ProgressDialog(
+            lambda pdisplay: DatabaseService.reload_database(self.__database, pdisplay)
+        ).run()
+
+        QMessageBox.information(
+            QApplication.activeModalWidget(),
+            self.tr("Database reloaded"),
+            self.tr("Successfully reloaded {num} translation(s) from disk.").format(
+                num=len(self.__database.user_translations)
+            ),
+            buttons=QMessageBox.StandardButton.Ok,
+        )
 
     def __import_local_translation(self, files: Optional[list[Path]] = None) -> None:
         """

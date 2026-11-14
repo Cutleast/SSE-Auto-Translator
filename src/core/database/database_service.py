@@ -9,7 +9,9 @@ from pathlib import Path
 from typing import Any, Optional
 
 import jstyleson as json
+from cutleast_core_lib.core.multithreading.progress import ProgressUpdate
 from cutleast_core_lib.core.utilities.unique import unique
+from cutleast_core_lib.ui.progress.display import ProgressDisplay
 
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
@@ -117,17 +119,8 @@ class DatabaseService:
         cls.log.info("Loading user database...")
 
         db_path: Path = userdb_path / language.id
-        index_path: Path = db_path / "index.json"
-
-        if not index_path.is_file():
-            with index_path.open("w", encoding="utf8") as index_file:
-                json.dump([], index_file)
-
-        with index_path.open(encoding="utf8") as index_file:
-            translation_list: list[dict[str, Any]] = json.load(index_file)
-
         translations: list[Translation] = []
-        for translation_data in translation_list:
+        for translation_data in cls.__load_index_data(db_path):
             name: str = translation_data["name"]
             try:
                 translation = Translation.from_index_data(translation_data, db_path)
@@ -139,6 +132,198 @@ class DatabaseService:
         cls.log.info(f"Loaded {len(translations)} user translation(s).")
 
         return translations
+
+    @classmethod
+    def __load_index_data(cls, db_path: Path) -> list[dict[str, Any]]:
+        """
+        Loads the raw index data of the user database at the specified path. Creates an
+        empty index file if there is none.
+
+        Args:
+            db_path (Path): Path to the user database directory of a language.
+
+        Returns:
+            list[dict[str, Any]]: List of raw translation entries from the index file.
+        """
+
+        index_path: Path = db_path / "index.json"
+
+        if not index_path.is_file():
+            with index_path.open("w", encoding="utf8") as index_file:
+                json.dump([], index_file)
+
+        with index_path.open(encoding="utf8") as index_file:
+            translation_list: list[dict[str, Any]] = json.load(index_file)
+
+        return translation_list
+
+    @classmethod
+    def reload_database(
+        cls, database: TranslationDatabase, pdisplay: Optional[ProgressDisplay] = None
+    ) -> None:
+        """
+        Reloads the user translations of the specified database from disk to apply
+        changes that were made outside of the application. Existing translation objects
+        are updated in-place, translations that were added to the index file are added
+        and translations that were removed from the index file are removed from the
+        database (without deleting their files).
+
+        Args:
+            database (TranslationDatabase): The database to reload.
+            pdisplay (Optional[ProgressDisplay], optional):
+                Progress display to report the progress to. Defaults to None.
+
+        ## Emitted Signals:
+            `TranslationDatabase.add_signal(translations)`:
+                With the translations that were added to the index file.
+            `TranslationDatabase.remove_signal(translations)`:
+                With the translations that were removed from the index file.
+            `TranslationDatabase.changed_signal(translation)`:
+                For every translation that was already in the database.
+            `TranslationDatabase.reload_signal(translations, removed_modfiles)`:
+                With the reloaded translations that were already in the database.
+            `TranslationDatabase.update_signal()`: Always.
+        """
+
+        cls.log.info(f"Reloading translation database for '{database.language}'...")
+
+        db_path: Path = database.userdb_path / database.language.id
+        index_data: list[dict[str, Any]] = cls.__load_index_data(db_path)
+        existing_translations: dict[str, Translation] = {
+            translation.id: translation for translation in database.user_translations
+        }
+
+        added_translations: list[Translation] = []
+        reloaded_translations: list[Translation] = []
+        removed_modfiles: list[Path] = []
+        loaded_ids: set[str] = set()
+        for i, translation_data in enumerate(index_data):
+            name: str = translation_data.get("name", "")
+
+            if pdisplay is not None:
+                pdisplay.updateMainProgress(
+                    ProgressUpdate(
+                        status_text=f"{name} ({i + 1}/{len(index_data)})",
+                        value=i,
+                        maximum=len(index_data),
+                    )
+                )
+
+            try:
+                loaded_translation = Translation.from_index_data(
+                    translation_data, db_path
+                )
+                loaded_ids.add(loaded_translation.id)
+
+                existing_translation: Optional[Translation] = existing_translations.get(
+                    loaded_translation.id
+                )
+                if existing_translation is None:
+                    loaded_translation.reload_strings()
+                    added_translations.append(loaded_translation)
+                else:
+                    removed_modfiles.extend(
+                        cls.__reload_translation(
+                            existing_translation, loaded_translation
+                        )
+                    )
+                    reloaded_translations.append(existing_translation)
+            except Exception as ex:
+                cls.log.error(
+                    f"Failed to reload translation '{name}': {ex}", exc_info=ex
+                )
+
+        removed_translations: list[Translation] = [
+            translation
+            for translation_id, translation in existing_translations.items()
+            if translation_id not in loaded_ids
+        ]
+
+        cls.__apply_reload(
+            database,
+            added_translations,
+            reloaded_translations,
+            removed_translations,
+            removed_modfiles,
+        )
+
+        cls.log.info(
+            f"Reloaded database: {len(reloaded_translations)} translation(s) reloaded, "
+            f"{len(added_translations)} added and {len(removed_translations)} removed."
+        )
+
+    @classmethod
+    def __reload_translation(
+        cls, existing_translation: Translation, loaded_translation: Translation
+    ) -> list[Path]:
+        """
+        Updates an existing translation in-place with the metadata of a freshly loaded
+        translation and reloads its strings from disk.
+
+        Args:
+            existing_translation (Translation): Translation that is in the database.
+            loaded_translation (Translation):
+                Translation with the same ID that was freshly loaded from the index file.
+
+        Returns:
+            list[Path]: Paths of mod files that are no longer covered by the translation.
+        """
+
+        old_modfiles: set[Path] = set(existing_translation.strings)
+
+        existing_translation.mod_id = loaded_translation.mod_id
+        existing_translation.version = loaded_translation.version
+        existing_translation.source = loaded_translation.source
+        existing_translation.timestamp = loaded_translation.timestamp
+        existing_translation.reload_strings()
+
+        return list(old_modfiles - set(existing_translation.strings))
+
+    @classmethod
+    def __apply_reload(
+        cls,
+        database: TranslationDatabase,
+        added_translations: list[Translation],
+        reloaded_translations: list[Translation],
+        removed_translations: list[Translation],
+        removed_modfiles: list[Path],
+    ) -> None:
+        """
+        Applies the result of a database reload to the specified database and emits the
+        respective signals.
+
+        Args:
+            database (TranslationDatabase): The reloaded database.
+            added_translations (list[Translation]): Translations to add.
+            reloaded_translations (list[Translation]):
+                Translations that were already in the database and got reloaded.
+            removed_translations (list[Translation]): Translations to remove.
+            removed_modfiles (list[Path]):
+                Paths of mod files that are no longer covered by the reloaded
+                translations.
+        """
+
+        for translation in removed_translations:
+            database.user_translations.remove(translation)
+            cls.log.info(f"Removed translation '{translation.name}' from database.")
+
+        for translation in added_translations:
+            database.user_translations.append(translation)
+            cls.log.info(f"Added translation '{translation.name}' to database.")
+
+        if removed_translations:
+            database.remove_signal.emit(removed_translations)
+
+        if added_translations:
+            database.add_signal.emit(added_translations)
+
+        for translation in reloaded_translations:
+            database.changed_signal.emit(translation)
+
+        if reloaded_translations:
+            database.reload_signal.emit(reloaded_translations, removed_modfiles)
+
+        database.update_signal.emit()
 
     @classmethod
     def save_database(cls, database: TranslationDatabase) -> None:
