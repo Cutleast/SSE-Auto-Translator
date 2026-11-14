@@ -9,6 +9,8 @@ from typing import override
 from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from cutleast_core_lib.core.utilities.updater import Updater
+from cutleast_core_lib.ui.alerts.button import AlertButton
+from cutleast_core_lib.ui.alerts.widget import AlertWidget
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
@@ -59,6 +61,8 @@ class MainWindow(ExtendedMainWindow):
     __state_service: StateService
 
     __menu_bar: MenuBar
+    __alert_button: AlertButton
+    __alerts_window: AlertWidget
     __ko_fi_button: LinkButton
 
     __tab_widget: TabWidget
@@ -135,6 +139,15 @@ class MainWindow(ExtendedMainWindow):
         )
         self.__menu_bar.about_requested.connect(self.__show_about)
         self.__menu_bar.about_qt_requested.connect(self.__show_about_qt)
+
+        self.__alert_button = AlertButton()
+        self.__alert_button.clicked.connect(self.__open_alerts_window)
+        self.titleBar().addWidget(self.__alert_button)
+
+        self.__alerts_window = AlertWidget()
+        self.__alerts_window.setWindowTitle(self.tr("Current alerts"))
+        self.__alerts_window.resize(1200, 600)
+        WidgetStateManager.get().register_geometry("alerts_window", self.__alerts_window)
 
         self.__ko_fi_button = LinkButton(
             MainWindow.KOFI_URL,
@@ -265,6 +278,9 @@ class MainWindow(ExtendedMainWindow):
 
     def __show_about_qt(self) -> None:
         QMessageBox.aboutQt(self, self.tr("About Qt"))
+
+    def __open_alerts_window(self) -> None:
+        WindowManager.get().show(self.__alerts_window, delete_on_close=False)
 
     def __on_editor_tab_count_change(self, new_tab_count: int) -> None:
         if new_tab_count > 0:

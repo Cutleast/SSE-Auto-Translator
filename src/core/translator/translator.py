@@ -12,6 +12,8 @@ from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, cast, final
 
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.multithreading.progress import (
     ProgressUpdate,
@@ -19,7 +21,10 @@ from cutleast_core_lib.core.multithreading.progress import (
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
-from cutleast_core_lib.core.utilities.exceptions import TaskCancelledError
+from cutleast_core_lib.core.utilities.exceptions import (
+    TaskCancelledError,
+    format_exception,
+)
 from cutleast_core_lib.core.utilities.hash import sha256_hash
 from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.core.utilities.truncate import truncate_string
@@ -162,6 +167,27 @@ class Translator(QObject, AbstractBase):
                     self.log.error(
                         f"Failed to process translation request '{request}': {ex}",
                         exc_info=ex,
+                    )
+                    AlertManager.get().add_alert(
+                        Alert(
+                            severity=Alert.Severity.Error,
+                            title=self.tr(
+                                "Failed to process translation request for '{name}'"
+                            ).format(name=truncate_string(request.text, 50)),
+                            summary=self.tr(
+                                "The translation request for the text '{name}' has "
+                                "failed."
+                            ).format(name=truncate_string(request.text, 50)),
+                            details=format_exception(ex),
+                            context={
+                                self.tr("Translator API"): self.__class__.__name__,
+                                self.tr("Destination language"): request.dst.name,
+                                self.tr("Instructions"): request.instructions or "",
+                                self.tr("Old translation"): (
+                                    truncate_string(request.old_translation or "", 50)
+                                ),
+                            },
+                        )
                     )
 
         return results
