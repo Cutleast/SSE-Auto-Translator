@@ -15,6 +15,7 @@ from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 
+from ..string.string_status import StringStatus
 from .mod_instance import ModInstance
 
 StateCache: TypeAlias = dict[Path, tuple[bool, TranslationStatus]]
@@ -80,17 +81,16 @@ class StateService(QObject):
 
             for modfile in translation.strings:
                 original_modfiles: list[ModFile] = self.__mod_instance.get_modfiles(
-                    modfile=modfile,
-                    ignore_states=[
-                        TranslationStatus.TranslationInstalled,
-                        TranslationStatus.IsTranslated,
-                    ],
+                    modfile=modfile, ignore_states=[TranslationStatus.IsTranslated]
                 )
 
                 for original_modfile in original_modfiles:
                     modfile_states[original_modfile] = (
                         TranslationStatus.TranslationInstalled
-                        if translation.is_complete
+                        if (
+                            translation.status[modfile]
+                            <= StringStatus.TranslationComplete
+                        )
                         else TranslationStatus.TranslationIncomplete
                     )
 

@@ -2903,13 +2903,13 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="574"/>
+        <location filename="src/core/scanner/scanner.py" line="577"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="304"/>
-        <location filename="src/core/scanner/scanner.py" line="343"/>
+        <location filename="src/core/scanner/scanner.py" line="307"/>
+        <location filename="src/core/scanner/scanner.py" line="346"/>
         <source>Scanning online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
@@ -2925,14 +2925,14 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="184"/>
-        <location filename="src/core/scanner/scanner.py" line="409"/>
-        <location filename="src/core/scanner/scanner.py" line="770"/>
+        <location filename="src/core/scanner/scanner.py" line="412"/>
+        <location filename="src/core/scanner/scanner.py" line="773"/>
         <source>Mod</source>
         <translation>Mod</translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="185"/>
-        <location filename="src/core/scanner/scanner.py" line="410"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Mod file</source>
         <translation>Moddatei</translation>
     </message>
@@ -2947,37 +2947,37 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
         <translation>{item_name}: Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="401"/>
+        <location filename="src/core/scanner/scanner.py" line="404"/>
         <source>Failed to search for translation for &apos;{name}&apos; online</source>
         <translation>Die Online-Suche nach einer Übersetzung für &apos;{name}&apos; ist fehlgeschlagen.</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="404"/>
+        <location filename="src/core/scanner/scanner.py" line="407"/>
         <source>The online search for a translation for the mod file&apos;{file_name}&apos; from the mod &apos;{mod_name}&apos; has failed.</source>
         <translation>Die Online-Suche nach einer Übersetzung für die Moddatei &apos;{file_name}&apos; aus der Mod &apos;{mod_name}&apos; ist fehlgeschlagen.</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="486"/>
+        <location filename="src/core/scanner/scanner.py" line="489"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="635"/>
+        <location filename="src/core/scanner/scanner.py" line="638"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="690"/>
+        <location filename="src/core/scanner/scanner.py" line="693"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="764"/>
+        <location filename="src/core/scanner/scanner.py" line="767"/>
         <source>No original mod installed for translation &apos;{name}&apos;</source>
         <translation>Für die Übersetzung &apos;{name}&apos; ist keine Original-Mod installiert.</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="767"/>
+        <location filename="src/core/scanner/scanner.py" line="770"/>
         <source>The installed translation &apos;{name}&apos; could not be imported, because no original mod is installed for it.</source>
         <translation>Die installierte Übersetzung &apos;{name}&apos; konnte nicht importiert werden, da dafür keine Original-Mod installiert ist.</translation>
     </message>

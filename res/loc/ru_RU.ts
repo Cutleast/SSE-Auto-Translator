@@ -2888,13 +2888,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="574"/>
+        <location filename="src/core/scanner/scanner.py" line="577"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="304"/>
-        <location filename="src/core/scanner/scanner.py" line="343"/>
+        <location filename="src/core/scanner/scanner.py" line="307"/>
+        <location filename="src/core/scanner/scanner.py" line="346"/>
         <source>Scanning online for available translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2910,14 +2910,14 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="184"/>
-        <location filename="src/core/scanner/scanner.py" line="409"/>
-        <location filename="src/core/scanner/scanner.py" line="770"/>
+        <location filename="src/core/scanner/scanner.py" line="412"/>
+        <location filename="src/core/scanner/scanner.py" line="773"/>
         <source>Mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="185"/>
-        <location filename="src/core/scanner/scanner.py" line="410"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Mod file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2932,37 +2932,37 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="401"/>
+        <location filename="src/core/scanner/scanner.py" line="404"/>
         <source>Failed to search for translation for &apos;{name}&apos; online</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="404"/>
+        <location filename="src/core/scanner/scanner.py" line="407"/>
         <source>The online search for a translation for the mod file&apos;{file_name}&apos; from the mod &apos;{mod_name}&apos; has failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="486"/>
+        <location filename="src/core/scanner/scanner.py" line="489"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="635"/>
+        <location filename="src/core/scanner/scanner.py" line="638"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="690"/>
+        <location filename="src/core/scanner/scanner.py" line="693"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="764"/>
+        <location filename="src/core/scanner/scanner.py" line="767"/>
         <source>No original mod installed for translation &apos;{name}&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="767"/>
+        <location filename="src/core/scanner/scanner.py" line="770"/>
         <source>The installed translation &apos;{name}&apos; could not be imported, because no original mod is installed for it.</source>
         <translation type="unfinished"></translation>
     </message>

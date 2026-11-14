@@ -257,7 +257,10 @@ class Scanner(QObject):
             if installed_translation is not None:
                 status = (
                     TranslationStatus.TranslationInstalled
-                    if installed_translation.is_complete
+                    if (
+                        installed_translation.status[modfile.path]
+                        <= StringStatus.TranslationComplete
+                    )
                     else TranslationStatus.TranslationIncomplete
                 )
 
