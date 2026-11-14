@@ -661,42 +661,42 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DatabaseColumns</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="66"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="69"/>
         <source>Name</source>
         <translation type="unfinished">名称</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="79"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="82"/>
         <source>Version</source>
         <translation type="unfinished">版本</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="89"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="92"/>
         <source>Source</source>
         <translation type="unfinished">来源</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="102"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="105"/>
         <source>Date</source>
         <translation type="unfinished">日期</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="115"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="118"/>
         <source>Size</source>
         <translation type="unfinished">大小</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="129"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="132"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="132"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="135"/>
         <source>Translation Incomplete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/columns.py" line="137"/>
+        <location filename="src/ui/main_page/database/translations/columns.py" line="140"/>
         <source>Translation Complete</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2895,13 +2895,13 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在扫描Mod列表...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="567"/>
+        <location filename="src/core/scanner/scanner.py" line="577"/>
         <source>Importing translations...</source>
         <translation>正在导入翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="297"/>
-        <location filename="src/core/scanner/scanner.py" line="336"/>
+        <location filename="src/core/scanner/scanner.py" line="307"/>
+        <location filename="src/core/scanner/scanner.py" line="346"/>
         <source>Scanning online for available translations...</source>
         <translation>在线搜索可用的翻译...</translation>
     </message>
@@ -2917,14 +2917,14 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="184"/>
-        <location filename="src/core/scanner/scanner.py" line="402"/>
-        <location filename="src/core/scanner/scanner.py" line="763"/>
+        <location filename="src/core/scanner/scanner.py" line="412"/>
+        <location filename="src/core/scanner/scanner.py" line="773"/>
         <source>Mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/core/scanner/scanner.py" line="185"/>
-        <location filename="src/core/scanner/scanner.py" line="403"/>
+        <location filename="src/core/scanner/scanner.py" line="413"/>
         <source>Mod file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2939,37 +2939,37 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="394"/>
+        <location filename="src/core/scanner/scanner.py" line="404"/>
         <source>Failed to search for translation for &apos;{name}&apos; online</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="397"/>
+        <location filename="src/core/scanner/scanner.py" line="407"/>
         <source>The online search for a translation for the mod file&apos;{file_name}&apos; from the mod &apos;{mod_name}&apos; has failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="479"/>
+        <location filename="src/core/scanner/scanner.py" line="489"/>
         <source>Searching modlist for strings...</source>
         <translation>正在搜索Mod列表中的字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="628"/>
+        <location filename="src/core/scanner/scanner.py" line="638"/>
         <source>Creating database translations...</source>
         <translation>正在创建数据库翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="683"/>
+        <location filename="src/core/scanner/scanner.py" line="693"/>
         <source>Scanning for installed translations...</source>
         <translation>正在扫描已安装的翻译文件...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="757"/>
+        <location filename="src/core/scanner/scanner.py" line="767"/>
         <source>No original mod installed for translation &apos;{name}&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="760"/>
+        <location filename="src/core/scanner/scanner.py" line="770"/>
         <source>The installed translation &apos;{name}&apos; could not be imported, because no original mod is installed for it.</source>
         <translation type="unfinished"></translation>
     </message>

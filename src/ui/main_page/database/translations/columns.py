@@ -25,10 +25,11 @@ def get_translation_item_bg_color(
     if not isinstance(item, Translation):
         return None
 
-    if any(status > StringStatus.TranslationComplete for status in item.status.values()):
-        return StringStatus.TranslationIncomplete.get_bg_color()
-
-    return StringStatus.TranslationComplete.get_bg_color()
+    return (
+        StringStatus.TranslationComplete.get_bg_color()
+        if item.is_complete
+        else StringStatus.TranslationIncomplete.get_bg_color()
+    )
 
 
 def get_translation_item_hover_bg_color(
@@ -39,10 +40,11 @@ def get_translation_item_hover_bg_color(
     if not isinstance(item, Translation):
         return None
 
-    if any(status > StringStatus.TranslationComplete for status in item.status.values()):
-        return StringStatus.TranslationIncomplete.get_highlighted_bg_color()
-
-    return StringStatus.TranslationComplete.get_highlighted_bg_color()
+    return (
+        StringStatus.TranslationComplete.get_highlighted_bg_color()
+        if item.is_complete
+        else StringStatus.TranslationIncomplete.get_highlighted_bg_color()
+    )
 
 
 def get_translation_item_fg_color(
@@ -53,10 +55,11 @@ def get_translation_item_fg_color(
     if not isinstance(item, Translation):
         return None
 
-    if any(status > StringStatus.TranslationComplete for status in item.status.values()):
-        return StringStatus.TranslationIncomplete.get_fg_color()
-
-    return StringStatus.TranslationComplete.get_fg_color()
+    return (
+        StringStatus.TranslationComplete.get_fg_color()
+        if item.is_complete
+        else StringStatus.TranslationIncomplete.get_fg_color()
+    )
 
 
 class TranslationsColumns(ColumnEnum):

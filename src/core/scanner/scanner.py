@@ -251,8 +251,18 @@ class Scanner(QObject):
 
         status: TranslationStatus
         if self.__detector.requires_translation(modfile_strings):
-            if self.__database.get_translation_by_modfile_path(modfile.path) is not None:
-                status = TranslationStatus.TranslationInstalled
+            installed_translation: Optional[Translation] = (
+                self.__database.get_translation_by_modfile_path(modfile.path)
+            )
+            if installed_translation is not None:
+                status = (
+                    TranslationStatus.TranslationInstalled
+                    if (
+                        installed_translation.status[modfile.path]
+                        <= StringStatus.TranslationComplete
+                    )
+                    else TranslationStatus.TranslationIncomplete
+                )
 
             elif any(
                 string.original not in database_originals
