@@ -90,6 +90,8 @@ class StateService(QObject):
                 for original_modfile in original_modfiles:
                     modfile_states[original_modfile] = (
                         TranslationStatus.TranslationInstalled
+                        if translation.is_complete
+                        else TranslationStatus.TranslationIncomplete
                     )
 
         self.set_modfile_states(modfile_states)

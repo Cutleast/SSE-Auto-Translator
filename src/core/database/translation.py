@@ -197,6 +197,14 @@ class Translation(BaseModel):
             for modfile_name, modfile_strings in self.strings.items()
         }
 
+    @property
+    def is_complete(self) -> bool:
+        """If no mod file of this translation has untranslated strings."""
+
+        return not any(
+            status > StringStatus.TranslationComplete for status in self.status.values()
+        )
+
     def remove_duplicates(self, save: bool = True) -> None:
         """
         Removes duplicate strings from the translation.
