@@ -2,15 +2,19 @@
 Copyright (c) Cutleast
 """
 
+import shutil
 from pathlib import Path
 from typing import Any
 
 import pytest
+from pydantic import ValidationError
 
 from core.database.translation import Translation
+from core.string.types import StringList
 from core.translation_provider.cdt_api.cdt_id import CdtModId
 from core.translation_provider.nm_api.nxm_id import NxmModId
 from core.translation_provider.source import Source
+from tests.setup.paths import DATA_PATH
 
 from ..core_test import CoreTest
 
@@ -141,3 +145,51 @@ class TestTranslation(CoreTest):
         assert translation.source == expected_translation.source
         if compare_timestamp:
             assert translation.timestamp == expected_translation.timestamp
+
+    def test_reload_strings(self, tmp_path: Path) -> None:
+        """
+        Tests that `Translation.reload_strings()` discards the cached strings and
+        reloads them from disk.
+        """
+
+        # given
+        translation_path: Path = tmp_path / "Wet and Cold SE - German"
+        shutil.copytree(
+            DATA_PATH / "data" / "user" / "database" / "German" / translation_path.name,
+            translation_path,
+        )
+        translation = Translation(name=translation_path.name, path=translation_path)
+        assert list(translation.strings) == [Path("WetandCold.esp")]
+
+        shutil.copy(
+            translation_path / "WetandCold.esp.json", translation_path / "Other.esp.json"
+        )
+
+        # when
+        translation.reload_strings()
+
+        # then
+        assert sorted(translation.strings) == [Path("Other.esp"), Path("WetandCold.esp")]
+
+    def test_reload_strings_keeps_cache_on_malformed_file(self, tmp_path: Path) -> None:
+        """
+        Tests that `Translation.reload_strings()` raises an error and keeps the cached
+        strings if a file of the translation is malformed.
+        """
+
+        # given
+        translation_path: Path = tmp_path / "Wet and Cold SE - German"
+        shutil.copytree(
+            DATA_PATH / "data" / "user" / "database" / "German" / translation_path.name,
+            translation_path,
+        )
+        translation = Translation(name=translation_path.name, path=translation_path)
+        old_strings: dict[Path, StringList] = translation.strings
+        (translation_path / "WetandCold.esp.json").write_text("{", encoding="utf-8")
+
+        # when
+        with pytest.raises(ValidationError):
+            translation.reload_strings()
+
+        # then
+        assert translation.strings is old_strings

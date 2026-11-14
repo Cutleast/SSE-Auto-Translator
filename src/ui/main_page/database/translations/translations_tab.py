@@ -27,6 +27,7 @@ from PySide6.QtWidgets import (
 
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
+from core.database.database_reload_result import DatabaseReloadResult
 from core.database.database_service import DatabaseService
 from core.database.database_updater import DatabaseUpdater
 from core.database.translation import Translation
@@ -119,6 +120,7 @@ class TranslationsTab(QWidget):
             self.__show_vanilla_strings
         )
         self.__toolbar.search_database_requested.connect(self.__search_database)
+        self.__toolbar.reload_database_requested.connect(self.__reload_database)
         self.__toolbar.local_import_requested.connect(self.__import_local_translation)
         self.__toolbar.update_translations_requested.connect(
             self.__update_translation_database
@@ -259,6 +261,40 @@ class TranslationsTab(QWidget):
                     details=str(filter),
                     yesno=False,
                 ).exec()
+
+    def __reload_database(self) -> None:
+        """
+        Reloads the user translations of the database from disk to apply changes that
+        were made outside of the application.
+        """
+
+        result: DatabaseReloadResult = ProgressDialog(
+            lambda pdisplay: DatabaseService.reload_database(self.__database, pdisplay)
+        ).run()
+
+        message: str = self.tr(
+            "Successfully reloaded {num} translation(s) from disk."
+        ).format(num=result.reloaded + result.added)
+
+        if result.failed:
+            message += "\n" + self.tr(
+                "{num} translation(s) could not be reloaded and were left unchanged. "
+                "Check the alerts for details."
+            ).format(num=result.failed)
+
+            QMessageBox.warning(
+                QApplication.activeModalWidget(),
+                self.tr("Database reloaded with errors"),
+                message,
+                buttons=QMessageBox.StandardButton.Ok,
+            )
+        else:
+            QMessageBox.information(
+                QApplication.activeModalWidget(),
+                self.tr("Database reloaded"),
+                message,
+                buttons=QMessageBox.StandardButton.Ok,
+            )
 
     def __import_local_translation(self, files: Optional[list[Path]] = None) -> None:
         """

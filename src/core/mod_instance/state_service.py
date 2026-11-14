@@ -59,6 +59,7 @@ class StateService(QObject):
 
         self.__database.add_signal.connect(self.__on_translations_added)
         self.__database.remove_signal.connect(self.__on_translations_removed)
+        self.__database.reload_signal.connect(self.__on_translations_reloaded)
 
     def __on_translations_added(self, translations: list[Translation]) -> None:
         """
@@ -72,11 +73,57 @@ class StateService(QObject):
             f"Updating mod file states for {len(translations)} added translation(s)..."
         )
 
+        self.set_modfile_states(self.__get_states_for_translations(translations))
+
+    def __on_translations_reloaded(
+        self, translations: list[Translation], removed_modfiles: list[Path]
+    ) -> None:
+        """
+        Handles the event when translations in the database were reloaded from disk.
+
+        Args:
+            translations (list[Translation]): The reloaded translations.
+            removed_modfiles (list[Path]):
+                Paths of mod files that are no longer covered by the reloaded
+                translations.
+        """
+
+        self.log.debug(
+            f"Updating mod file states for {len(translations)} reloaded translation(s)..."
+        )
+
+        modfile_states: dict[ModFile, TranslationStatus] = {}
+        for modfile_path in removed_modfiles:
+            # the mod file might still be covered by another translation
+            if self.__database.get_translation_by_modfile_path(modfile_path) is not None:
+                continue
+
+            for original_modfile in self.__mod_instance.get_modfiles(
+                modfile_path, ignore_states=[TranslationStatus.IsTranslated]
+            ):
+                modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
+
+        modfile_states.update(self.__get_states_for_translations(translations))
+        self.set_modfile_states(modfile_states)
+
+    def __get_states_for_translations(
+        self, translations: list[Translation]
+    ) -> dict[ModFile, TranslationStatus]:
+        """
+        Determines the states of the original mod files covered by the specified
+        translations.
+
+        Args:
+            translations (list[Translation]): The translations to determine states for.
+
+        Returns:
+            dict[ModFile, TranslationStatus]: The determined mod file states.
+        """
+
         modfile_states: dict[ModFile, TranslationStatus] = {}
         for translation in translations:
             self.log.debug(
-                f"Translation '{translation.name}' added to database. Updating affected "
-                "mod file states..."
+                f"Updating mod file states affected by translation '{translation.name}'..."
             )
 
             for modfile in translation.strings:
@@ -94,7 +141,7 @@ class StateService(QObject):
                         else TranslationStatus.TranslationIncomplete
                     )
 
-        self.set_modfile_states(modfile_states)
+        return modfile_states
 
     def __on_translations_removed(self, translations: list[Translation]) -> None:
         """

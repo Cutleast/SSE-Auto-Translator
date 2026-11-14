@@ -22,6 +22,9 @@ class TranslationsToolbar(QToolBar):
     search_database_requested = Signal()
     """Signal emitted when the user clicks on the search database action."""
 
+    reload_database_requested = Signal()
+    """Signal emitted when the user clicks on the reload database action."""
+
     local_import_requested = Signal()
     """Signal emitted when the user clicks on the local import action."""
 
@@ -55,6 +58,14 @@ class TranslationsToolbar(QToolBar):
             search_database_action, search_database_action.setIcon, "search"
         )
         search_database_action.triggered.connect(self.search_database_requested.emit)
+
+        reload_database_action: QAction = self.addAction(
+            self.tr("Reload database from disk")
+        )
+        IconProvider.bind_qta_icon(
+            reload_database_action, reload_database_action.setIcon, "mdi6.refresh"
+        )
+        reload_database_action.triggered.connect(self.reload_database_requested.emit)
 
         self.addSeparator()
 
