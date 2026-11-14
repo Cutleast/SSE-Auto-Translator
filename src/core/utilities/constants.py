@@ -98,6 +98,7 @@ AE_CC_PLUGINS = [
     "ccafdsse001-dwesanctuary.esm",
     "ccasvsse001-almsivi.esm",
     "ccbgssse001-fish.esm",
+    "_resourcepack.esl",
 ]
 """
 A list of all Creation Club plugins that came with the AE update and upgrade.
