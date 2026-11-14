@@ -7,12 +7,15 @@ from concurrent.futures import Future, as_completed
 from pathlib import Path
 from typing import Optional, TypeAlias
 
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.multithreading.progress import (
     ProgressUpdate,
     UpdateCallback,
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.core.utilities.exceptions import format_exception
 from cutleast_core_lib.core.utilities.unique import unique
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject
@@ -165,6 +168,23 @@ class Scanner(QObject):
                     self.log.error(
                         f"Failed to scan '{mod.name}' > '{modfile.name}': {ex}",
                         exc_info=ex,
+                    )
+                    AlertManager.get().add_alert(
+                        Alert(
+                            severity=Alert.Severity.Error,
+                            title=self.tr("Failed to scan '{name}'").format(
+                                name=f"{mod.name} > {modfile.name}"
+                            ),
+                            summary=self.tr(
+                                "The mod file '{file_name}' from the mod '{mod_name}' "
+                                "could not be scanned."
+                            ).format(file_name=modfile.path, mod_name=mod.name),
+                            details=format_exception(ex),
+                            context={
+                                self.tr("Mod"): mod.name,
+                                self.tr("Mod file"): str(modfile.path),
+                            },
+                        )
                     )
 
         self.log.info("Modlist scan complete.")
@@ -367,6 +387,23 @@ class Scanner(QObject):
                     exc_info=ex,
                 )
                 result[modfile] = TranslationStatus.NoTranslationAvailable
+                AlertManager.get().add_alert(
+                    Alert(
+                        severity=Alert.Severity.Error,
+                        title=self.tr(
+                            "Failed to search for translation for '{name}' online"
+                        ).format(name=f"{mod.name} > {modfile.name}"),
+                        summary=self.tr(
+                            "The online search for a translation for the mod file"
+                            "'{file_name}' from the mod '{mod_name}' has failed."
+                        ).format(file_name=modfile.path, mod_name=mod.name),
+                        details=format_exception(ex),
+                        context={
+                            self.tr("Mod"): mod.name,
+                            self.tr("Mod file"): str(modfile.path),
+                        },
+                    )
+                )
 
         return result
 
@@ -712,6 +749,19 @@ class Scanner(QObject):
             if modfile_paths:
                 self.log.warning(
                     f"No original mod found for installed translation '{mod.name}'!"
+                )
+                AlertManager.get().add_alert(
+                    Alert(
+                        severity=Alert.Severity.Warning,
+                        title=self.tr(
+                            "No original mod installed for translation '{name}'"
+                        ).format(name=mod.name),
+                        summary=self.tr(
+                            "The installed translation '{name}' could not be imported, "
+                            "because no original mod is installed for it."
+                        ).format(name=mod.name),
+                        context={self.tr("Mod"): mod.name},
+                    )
                 )
 
         return original_mod

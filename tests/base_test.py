@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import ClassVar
 
 import pytest
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.manager import (
     ConfigManager,
@@ -74,6 +75,7 @@ class BaseTest:
         WindowManager()
         WidgetStateManager(tmp_path)
         Cache(tmp_path / "cache", "development")
+        AlertManager()
 
         yield
 

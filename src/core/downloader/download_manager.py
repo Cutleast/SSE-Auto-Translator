@@ -8,12 +8,15 @@ from pathlib import Path
 from queue import Queue
 from typing import Optional, TypeAlias
 
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.multithreading.progress import (
     ProgressUpdate,
     UpdateCallback,
     update,
 )
 from cutleast_core_lib.core.multithreading.progress_executor import ProgressExecutor
+from cutleast_core_lib.core.utilities.exceptions import format_exception
 from cutleast_core_lib.ui.progress.display import ProgressDisplay
 from PySide6.QtCore import QObject, Signal
 
@@ -473,6 +476,32 @@ class DownloadManager(QObject):
                     self.log.error(
                         f"Failed to get details for {translation_id}: {ex}",
                         exc_info=ex,
+                    )
+
+                    url: Optional[str] = None
+                    try:
+                        url = self.__provider.get_modpage_url(translation_id, source)
+                    except:  # noqa: E722, S110
+                        pass
+
+                    AlertManager.get().add_alert(
+                        Alert(
+                            severity=Alert.Severity.Warning,
+                            title=self.tr(
+                                "Failed to fetch details for available translation "
+                                "'{id}'"
+                            ).format(id=translation_id),
+                            summary=self.tr(
+                                "An error occured while fetching the details for the "
+                                "available translation '{id}'."
+                            ).format(id=translation_id),
+                            details=format_exception(ex),
+                            context={
+                                self.tr("URL"): url or self.tr("Unknown"),
+                                self.tr("Original mod"): mod.name,
+                                self.tr("Original mod file"): str(modfile.path),
+                            },
+                        )
                     )
                     continue
 

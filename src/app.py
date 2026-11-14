@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Optional, cast, override
 
 from cutleast_core_lib.base_app import BaseApp
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
 from cutleast_core_lib.core.config.manager import ConfigManager
@@ -226,6 +228,17 @@ class App(BaseApp, Singleton):
             )
         except ValueError:
             self.log.warning("No Nexus Mods API available.")
+
+            AlertManager.get().add_alert(
+                Alert(
+                    severity=Alert.Severity.Error,
+                    title=self.tr("No Nexus Mods API available"),
+                    summary=self.tr(
+                        "No Nexus Mods API is available. Online features might be "
+                        "limited."
+                    ),
+                )
+            )
         else:
             if not user_config.nexus_website_session:
                 self.log.info(
@@ -310,6 +323,20 @@ class App(BaseApp, Singleton):
 
             if reply == QMessageBox.StandardButton.Yes:
                 PathLimitFixer.disable_path_limit(self.res_path)
+            else:
+                AlertManager.get().add_alert(
+                    Alert(
+                        severity=Alert.Severity.Warning,
+                        title=self.tr("Path Limit Enabled"),
+                        summary=self.tr(
+                            "The NTFS path length limit is enabled and paths longer "
+                            "than 255 characters will cause issues. Would you like to "
+                            "disable it now (admin rights may be required)? "
+                            "A reboot is required for this to take effect.\n\n"
+                            "You can disable it under Help > Fix Windows Path Limit."
+                        ),
+                    )
+                )
 
     @override
     def clean(self) -> None:
