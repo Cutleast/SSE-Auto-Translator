@@ -477,6 +477,13 @@ class DownloadManager(QObject):
                         f"Failed to get details for {translation_id}: {ex}",
                         exc_info=ex,
                     )
+
+                    url: Optional[str] = None
+                    try:
+                        url = self.__provider.get_modpage_url(translation_id, source)
+                    except:  # noqa: E722, S110
+                        pass
+
                     AlertManager.get().add_alert(
                         Alert(
                             severity=Alert.Severity.Warning,
@@ -490,9 +497,7 @@ class DownloadManager(QObject):
                             ).format(id=translation_id),
                             details=format_exception(ex),
                             context={
-                                self.tr("Url"): self.__provider.get_modpage_url(
-                                    translation_id, source
-                                ),
+                                self.tr("URL"): url or self.tr("Unknown"),
                                 self.tr("Original mod"): mod.name,
                                 self.tr("Original mod file"): str(modfile.path),
                             },
