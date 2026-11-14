@@ -999,27 +999,32 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="484"/>
+        <location filename="src/core/downloader/download_manager.py" line="491"/>
         <source>Failed to fetch details for available translation &apos;{id}&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="488"/>
+        <location filename="src/core/downloader/download_manager.py" line="495"/>
         <source>An error occured while fetching the details for the available translation &apos;{id}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="493"/>
-        <source>Url</source>
+        <location filename="src/core/downloader/download_manager.py" line="500"/>
+        <source>URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="496"/>
+        <location filename="src/core/downloader/download_manager.py" line="500"/>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/downloader/download_manager.py" line="501"/>
         <source>Original mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="497"/>
+        <location filename="src/core/downloader/download_manager.py" line="502"/>
         <source>Original mod file</source>
         <translation type="unfinished"></translation>
     </message>
