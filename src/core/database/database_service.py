@@ -15,7 +15,6 @@ from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.string.types import StringList
 from core.translation_provider.source import Source
@@ -475,7 +474,6 @@ class DatabaseService:
 
             for string in modfile_strings:
                 string.string = string.original
-                string.status = StringStatus.TranslationRequired
 
             if apply_db:
                 StringUtils.match_strings(
@@ -536,7 +534,6 @@ class DatabaseService:
         modfile_strings: StringList = modfile.get_strings()
         for string in modfile_strings:
             string.string = string.original
-            string.status = StringStatus.TranslationRequired
 
         if apply_db:
             StringUtils.match_strings(
