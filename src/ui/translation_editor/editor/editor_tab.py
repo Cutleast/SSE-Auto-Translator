@@ -41,6 +41,7 @@ from core.editor.editor import Editor
 from core.editor.models import EditorString
 from core.string.string_status import StringStatus
 from core.translation_context.related import RelatedString
+from core.translator.models.excerpt import TranslationExcerpt
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from ui.string_list.columns import StringsColumns
@@ -173,6 +174,9 @@ class EditorTab(QWidget):
         self.__dialog.prev_requested.connect(self.__on_prev_requested)
         self.__dialog.next_requested.connect(self.__on_next_requested)
         self.__dialog.api_translate_requested.connect(self.__on_api_translate_requested)
+        self.__dialog.api_translate_selection_requested.connect(
+            self.__on_api_translate_selection_requested
+        )
         self.__dialog.related_string_requested.connect(
             self.__on_related_string_requested
         )
@@ -756,25 +760,69 @@ class EditorTab(QWidget):
         if current_string is None:
             return
 
-        additional_instructions: Optional[str]
-        continue_: bool
-        additional_instructions, continue_ = self.__prompt_additional_instructions()
-
-        if not continue_:
+        translated_text: Optional[str] = self.__request_api_translation(current_string)
+        if translated_text is None:
             return
 
-        translated_text: str = ProgressDialog(
-            lambda pdisplay: self.__editor.get_api_translation(
-                current_string, additional_instructions, pdisplay
-            ),
-            self.__dialog,
-        ).run()
         self.__editor.set_translated_text(
             current_string, translated_text, sync_identical
         )
         self.__editor.set_string_status(
             current_string, StringStatus.TranslationIncomplete, sync_identical
         )
+
+    def __on_api_translate_selection_requested(
+        self, excerpt: TranslationExcerpt, sync_identical: bool
+    ) -> None:
+        current_string: Optional[EditorString] = self.__dialog.current_string
+        if current_string is None:
+            return
+
+        translated_text: Optional[str] = self.__request_api_translation(
+            current_string, excerpt
+        )
+        if translated_text is None:
+            return
+
+        # The dialog writes the complete text back to the string.
+        self.__dialog.replace_selected_part(translated_text)
+        self.__editor.set_string_status(
+            current_string, StringStatus.TranslationIncomplete, sync_identical
+        )
+
+    def __request_api_translation(
+        self, string: EditorString, excerpt: Optional[TranslationExcerpt] = None
+    ) -> Optional[str]:
+        """
+        Prompts the user for additional instructions, if supported, and requests an
+        API translation for a string or a part of its translation while displaying the
+        progress.
+
+        Args:
+            string (EditorString): The string to translate.
+            excerpt (Optional[TranslationExcerpt], optional):
+                Selected part of the string's translation that should be translated
+                instead of the entire string. Defaults to None.
+
+        Returns:
+            Optional[str]: The translated text or None if the user cancelled.
+        """
+
+        additional_instructions: Optional[str]
+        continue_: bool
+        additional_instructions, continue_ = self.__prompt_additional_instructions()
+
+        if not continue_:
+            return None
+
+        translated_text: str = ProgressDialog(
+            lambda pdisplay: self.__editor.get_api_translation(
+                string, additional_instructions, excerpt, pdisplay
+            ),
+            self.__dialog,
+        ).run()
+
+        return translated_text
 
     def go_to_modfile(self, modfile: Path) -> None:
         """

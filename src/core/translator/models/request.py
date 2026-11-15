@@ -10,6 +10,8 @@ from pydantic import BaseModel
 from core.translation_context.context import TranslationContext
 from core.utilities.game_language import GameLanguage
 
+from .excerpt import TranslationExcerpt
+
 
 class TranslationRequest(BaseModel, frozen=True):
     """
@@ -33,6 +35,12 @@ class TranslationRequest(BaseModel, frozen=True):
     """
     A previous translation of the text. If given, the translator is instructed to
     improve or correct it.
+    """
+
+    excerpt: Optional[TranslationExcerpt] = None
+    """
+    The selected part of an existing translation, if only that part should be
+    translated. In this case, `text` contains only the selected part.
     """
 
     @property
