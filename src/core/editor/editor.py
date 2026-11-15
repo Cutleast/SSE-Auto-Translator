@@ -26,6 +26,7 @@ from core.string.types import String, StringList
 from core.translation_context.builder import ContextBuilder
 from core.translation_context.context import TranslationContext
 from core.translation_context.glossary import TranslationGlossary
+from core.translator.models.excerpt import TranslationExcerpt
 from core.translator.models.request import TranslationRequest
 from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
@@ -276,6 +277,7 @@ class Editor(QObject):
         self,
         string: EditorString,
         additional_instructions: Optional[str],
+        excerpt: Optional[TranslationExcerpt] = None,
         pdisplay: Optional[ProgressDisplay] = None,
     ) -> str:
         """
@@ -284,11 +286,16 @@ class Editor(QObject):
         Args:
             string (EditorString): The string to get an API translation for.
             additional_instructions (Optional[str]): Additional user instructions.
+            excerpt (Optional[TranslationExcerpt], optional):
+                Selected part of the current translation that should be translated
+                instead of the entire string. Defaults to None.
             pdisplay (Optional[ProgressDisplay], optional):
                 Optional progress display. Defaults to None.
 
         Returns:
-            str: The translated text returned by the translator API.
+            str:
+                The translated text returned by the translator API. If an excerpt is
+                specified, this is only the translation of the excerpt.
         """
 
         translator: Translator = self.__translator_service.get_translator()
@@ -297,9 +304,20 @@ class Editor(QObject):
             if pdisplay is not None:
                 pdisplay.updateMainProgress(update)
 
-        request: TranslationRequest = self.__create_api_translation_request(
-            string, additional_instructions
-        )
+        request: TranslationRequest
+        if excerpt is not None:
+            request = TranslationRequest(
+                text=excerpt.text,
+                dst=self.__language,
+                context=self.get_string_context(string),
+                instructions=additional_instructions,
+                excerpt=excerpt,
+            )
+        else:
+            request = self.__create_api_translation_request(
+                string, additional_instructions
+            )
+
         result: TranslationResult = translator.translate(request, update_callback)
         return result.translated_text
 

@@ -17,7 +17,7 @@ from core.translation_context.glossary import TranslationGlossary
 from core.translation_context.similar import SimilarString
 
 from .exceptions import LlmConnectionError, LlmReplyCutOffError
-from .models import TranslationRequest
+from .models import TranslationExcerpt, TranslationRequest
 from .translator import Translator
 from .utils import format_pair, format_string
 
@@ -73,6 +73,31 @@ class LlmTranslator(Translator):
     )
     """The heading that precedes the correction section of the prompt."""
 
+    EXCERPT_ORIGINAL_HEADING: str = (
+        "Only a part of the current translation of the following original text "
+        "should be translated:"
+    )
+    """The heading that precedes the full original text of an excerpt."""
+
+    EXCERPT_TRANSLATION_HEADING: str = (
+        "Current translation of the text with the part to replace being marked with "
+        "{open_marker} and {close_marker}:"
+    )
+    """The heading that precedes the current translation containing the excerpt."""
+
+    EXCERPT_TEXT_HEADING: str = (
+        "Marked part to translate or rephrase. Reply only with its replacement that "
+        "fits seamlessly into the surrounding translation, without the markers and "
+        "without the surrounding text:"
+    )
+    """The heading that precedes the excerpt text in the user prompt."""
+
+    EXCERPT_OPEN_MARKER: str = "⟦"
+    """The marker that precedes the excerpt in the current translation."""
+
+    EXCERPT_CLOSE_MARKER: str = "⟧"
+    """The marker that follows the excerpt in the current translation."""
+
     MAX_RELATED_STRINGS: int = 10
     """Maximum number of related strings included in the user prompt."""
 
@@ -96,7 +121,7 @@ class LlmTranslator(Translator):
     def __init__(self, config: TranslatorConfig) -> None:
         super().__init__(config)
 
-        if not config.llm_base_url is not None:
+        if config.llm_base_url is None:
             raise RuntimeError("LLM base URL is required!")
 
         if not config.llm_model:
@@ -112,6 +137,29 @@ class LlmTranslator(Translator):
     @override
     def _process_request(self, request: TranslationRequest) -> str:
         prompt: list[ChatCompletionMessageParam] = self.__build_prompt(request)
+        translation: str = self.__request_translation(prompt)
+
+        if request.excerpt is not None:
+            translation = LlmTranslator.__remove_excerpt_markers(translation)
+
+            if not translation:
+                raise RuntimeError(f"Model '{self.__model}' returned no translation.")
+
+        return translation
+
+    def __request_translation(self, prompt: list[ChatCompletionMessageParam]) -> str:
+        """
+        Sends a prompt to the model and returns its processed reply.
+
+        Args:
+            prompt (list[ChatCompletionMessageParam]): The system and user prompt.
+
+        Raises:
+            LlmConnectionError: The connection to the provider failed.
+
+        Returns:
+            str: The processed reply of the model.
+        """
 
         try:
             if self.__temperature is not None:
@@ -139,7 +187,7 @@ class LlmTranslator(Translator):
                 "temperature..."
             )
             self.__temperature = None
-            return self._process_request(request)
+            return self.__request_translation(prompt)
 
         except APIConnectionError as ex:
             raise LlmConnectionError from ex
@@ -159,6 +207,24 @@ class LlmTranslator(Translator):
             raise RuntimeError(f"Model '{self.__model}' returned no translation.")
 
         return translation
+
+    @staticmethod
+    def __remove_excerpt_markers(translation: str) -> str:
+        """
+        Removes excerpt markers that the model may have kept around its reply.
+
+        Args:
+            translation (str): The reply of the model.
+
+        Returns:
+            str: The reply without enclosing excerpt markers.
+        """
+
+        translation = translation.strip()
+        translation = translation.removeprefix(LlmTranslator.EXCERPT_OPEN_MARKER)
+        translation = translation.removesuffix(LlmTranslator.EXCERPT_CLOSE_MARKER)
+
+        return translation.strip()
 
     def __build_prompt(
         self, request: TranslationRequest
@@ -187,14 +253,26 @@ class LlmTranslator(Translator):
             LlmTranslator.__build_correction_section(request.old_translation),
         ]
 
+        if request.excerpt is not None:
+            user_prompt_sections.append(
+                LlmTranslator.__build_excerpt_section(request.excerpt)
+            )
+
         if request.instructions is not None:
             user_prompt_sections.append(
                 f"{LlmTranslator.INSTRUCTIONS_HEADING}\n{request.instructions}"
             )
 
-        user_prompt_sections.append(f"{LlmTranslator.TEXT_HEADING}\n{request.text}")
+        text_heading: str = (
+            LlmTranslator.EXCERPT_TEXT_HEADING
+            if request.excerpt is not None
+            else LlmTranslator.TEXT_HEADING
+        )
+        user_prompt_sections.append(f"{text_heading}\n{request.text}")
 
-        user_prompt: str = "\n\n".join(user_prompt_sections)
+        user_prompt: str = "\n\n".join(
+            section for section in user_prompt_sections if section
+        )
 
         return [
             {"role": "system", "content": system_prompt},
@@ -315,6 +393,40 @@ class LlmTranslator(Translator):
 
             lines.append(line)
 
+        return "\n".join(lines)
+
+    @staticmethod
+    def __build_excerpt_section(excerpt: TranslationExcerpt) -> str:
+        """
+        Builds the prompt section for translating only a part of an existing
+        translation.
+
+        Args:
+            excerpt (TranslationExcerpt): The excerpt to translate.
+
+        Returns:
+            str: The prompt section.
+        """
+
+        translation_heading: str = LlmTranslator.EXCERPT_TRANSLATION_HEADING.format(
+            open_marker=LlmTranslator.EXCERPT_OPEN_MARKER,
+            close_marker=LlmTranslator.EXCERPT_CLOSE_MARKER,
+        )
+        marked_translation: str = (
+            excerpt.prefix
+            + LlmTranslator.EXCERPT_OPEN_MARKER
+            + excerpt.text
+            + LlmTranslator.EXCERPT_CLOSE_MARKER
+            + excerpt.suffix
+        )
+
+        lines: list[str] = [
+            LlmTranslator.EXCERPT_ORIGINAL_HEADING,
+            excerpt.original_text,
+            "",
+            translation_heading,
+            marked_translation,
+        ]
         return "\n".join(lines)
 
     @staticmethod

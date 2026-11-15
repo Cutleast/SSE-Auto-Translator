@@ -8,6 +8,7 @@ from typing import Optional
 from unittest.mock import MagicMock
 
 import pytest
+from cutleast_core_lib.test.utils import Utils
 
 from core.config.translator_config import TranslatorConfig
 from core.database.database import TranslationDatabase
@@ -22,6 +23,9 @@ from core.mod_instance.mod import Mod
 from core.string.string_status import StringStatus
 from core.string.types import StringList
 from core.translation_context.glossary import TranslationGlossary
+from core.translator.models.excerpt import TranslationExcerpt
+from core.translator.models.request import TranslationRequest
+from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
 from core.utilities.game_language import GameLanguage
 from tests.base_test import BaseTest
@@ -116,6 +120,41 @@ class TestEditor(BaseTest):
                 editor.all_strings, translation.strings[TestEditor.MOD_FILE_PATH]
             )
         )
+
+    def test_api_translation_of_excerpt(self, editor: Editor) -> None:
+        """
+        Tests that an API translation of an excerpt requests only the excerpt without
+        a previous translation to correct.
+        """
+
+        # given
+        string: EditorString = editor.all_strings[0]
+        excerpt = TranslationExcerpt(
+            text="part",
+            prefix="Ein ",
+            suffix=" Text",
+            original_text=string.string.original,
+        )
+        translator_service: MagicMock = Utils.get_private_field(
+            editor, "translator_service", MagicMock
+        )
+        translator: MagicMock = translator_service.get_translator.return_value
+        translator.supports_corrections.return_value = True
+        translator.translate.side_effect = lambda request, _: TranslationResult(
+            request=request, translated_text="Teil"
+        )
+
+        # when
+        result: str = editor.get_api_translation(string, "Instructions", excerpt)
+
+        # then
+        request: TranslationRequest = translator.translate.call_args.args[0]
+        assert result == "Teil"
+        assert request.text == "part"
+        assert request.excerpt == excerpt
+        assert request.instructions == "Instructions"
+        assert request.old_translation is None
+        assert string.string.string != "Teil"
 
     def test_completed_string_is_synchronized_to_identical_strings(
         self, editor: Editor

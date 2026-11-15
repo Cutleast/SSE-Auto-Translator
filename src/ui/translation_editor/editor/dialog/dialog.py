@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import html
+import logging
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.debounce import debounce
@@ -48,6 +49,7 @@ from core.editor.models import EditorString
 from core.string.string_status import StringStatus
 from core.translation_context.context import TranslationContext
 from core.translation_context.related import RelatedString
+from core.translator.models.excerpt import TranslationExcerpt
 from core.utilities.text import Occurrences, get_placeholders
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
@@ -104,6 +106,17 @@ class TranslatorDialog(ExtendedWindow):
         bool: Whether to synchronize identical strings.
     """
 
+    api_translate_selection_requested = Signal(TranslationExcerpt, bool)
+    """
+    Signal emitted when the user requests to translate only the selected part of the
+    current translation with a translator API. The translated part should be passed to
+    `replace_selected_part()`.
+
+    Args:
+        TranslationExcerpt: The selected part of the current translation.
+        bool: Whether to synchronize identical strings.
+    """
+
     related_string_requested = Signal(RelatedString)
     """
     Signal emitted when the user wants to open a string related to the current string.
@@ -120,12 +133,19 @@ class TranslatorDialog(ExtendedWindow):
         str: The word to add.
     """
 
+    log: logging.Logger = logging.getLogger("TranslatorDialog")
+
     __current_string: Optional[EditorString]
     __current_index: int
     __strings_count: int
     __loading_string: bool
     __pending_text_string: Optional[EditorString]
     __text_revision: int
+    __pending_selection: Optional[tuple[int, int, str]]
+    """
+    Start, end and text of the selection whose translation was requested, used to
+    verify that it is still unchanged when the translated part is inserted.
+    """
 
     __title_bar_label: QLabel
     __copy_id_button: QPushButton
@@ -165,6 +185,7 @@ class TranslatorDialog(ExtendedWindow):
         self.__loading_string = False
         self.__pending_text_string = None
         self.__text_revision = 0
+        self.__pending_selection = None
 
         self.__init_ui()
         self.__init_shortcuts()
@@ -187,6 +208,9 @@ class TranslatorDialog(ExtendedWindow):
         )
         ThemeManager.get().theme_changed.connect(lambda *_: self.__update_placeholders())
         self.__translated_edit.textChanged.connect(lambda *_: self.__on_change())
+        self.__translated_edit.selectionChanged.connect(
+            self.__update_api_translate_button
+        )
         self.__api_translate_button.clicked.connect(self.__on_api_translate_clicked)
         self.__reset_button.clicked.connect(self.__on_reset_clicked)
         self.__status_dropdown.currentValueChanged.connect(self.__on_status_selected)
@@ -491,8 +515,141 @@ class TranslatorDialog(ExtendedWindow):
         self.reset_requested.emit(self.__sync_strings_box.isChecked())
 
     def __on_api_translate_clicked(self) -> None:
-        self.__cancel_text_write_back()
-        self.api_translate_requested.emit(self.__sync_strings_box.isChecked())
+        excerpt: Optional[TranslationExcerpt] = self.__get_selected_excerpt()
+
+        if excerpt is None:
+            self.__cancel_text_write_back()
+            self.api_translate_requested.emit(self.__sync_strings_box.isChecked())
+            return
+
+        # The excerpt refers to the displayed text, so the string must be up-to-date.
+        self.__write_back_text()
+
+        cursor: QTextCursor = self.__translated_edit.textCursor()
+        self.__pending_selection = (
+            cursor.selectionStart(),
+            cursor.selectionEnd(),
+            cursor.selection().toPlainText(),
+        )
+        self.api_translate_selection_requested.emit(
+            excerpt, self.__sync_strings_box.isChecked()
+        )
+
+    def __get_selected_excerpt(self) -> Optional[TranslationExcerpt]:
+        """
+        Creates an excerpt from the selected part of the translated text. Whitespace at
+        the borders of the selection is moved to the surrounding text.
+
+        Returns:
+            Optional[TranslationExcerpt]:
+                The excerpt or None if there is no current string or no selected text
+                apart from whitespace.
+        """
+
+        cursor: QTextCursor = self.__translated_edit.textCursor()
+        if self.__current_string is None or not cursor.hasSelection():
+            return None
+
+        selected_text: str = cursor.selection().toPlainText()
+        stripped_text: str = selected_text.strip()
+        if not stripped_text:
+            return None
+
+        leading_whitespace: str = selected_text[
+            : len(selected_text) - len(selected_text.lstrip())
+        ]
+        trailing_whitespace: str = selected_text[len(selected_text.rstrip()) :]
+
+        return TranslationExcerpt(
+            text=stripped_text,
+            prefix=(
+                self.__get_text_between(0, cursor.selectionStart()) + leading_whitespace
+            ),
+            suffix=(
+                trailing_whitespace
+                + self.__get_text_between(
+                    cursor.selectionEnd(),
+                    self.__translated_edit.document().characterCount() - 1,
+                )
+            ),
+            original_text=self.__current_string.string.original,
+        )
+
+    def __get_text_between(self, start: int, end: int) -> str:
+        """
+        Gets the plain text between two positions of the translated text. Positions
+        are counted by Qt in UTF-16 code units and must not be used to slice Python
+        strings directly.
+
+        Args:
+            start (int): The start position.
+            end (int): The end position.
+
+        Returns:
+            str: The plain text between both positions.
+        """
+
+        cursor = QTextCursor(self.__translated_edit.document())
+        cursor.setPosition(start)
+        cursor.setPosition(end, QTextCursor.MoveMode.KeepAnchor)
+
+        return cursor.selection().toPlainText()
+
+    def replace_selected_part(self, translated_text: str) -> None:
+        """
+        Replaces the part of the translated text, whose translation was requested via
+        `api_translate_selection_requested`, and writes the result back immediately.
+        Whitespace at the borders of the original selection is preserved. The inserted
+        text is selected afterwards.
+
+        Args:
+            translated_text (str): The translation of the selected part.
+        """
+
+        pending_selection: Optional[tuple[int, int, str]] = self.__pending_selection
+        self.__pending_selection = None
+
+        if pending_selection is None:
+            self.log.warning("No selected part is pending to be replaced.")
+            return
+
+        start, end, selected_text = pending_selection
+        if self.__get_text_between(start, end) != selected_text:
+            self.log.warning(
+                "The selected part changed while it was translated. Discarding the "
+                f"translation '{translated_text}'..."
+            )
+            return
+
+        leading_whitespace: str = selected_text[
+            : len(selected_text) - len(selected_text.lstrip())
+        ]
+        trailing_whitespace: str = selected_text[len(selected_text.rstrip()) :]
+
+        cursor: QTextCursor = self.__translated_edit.textCursor()
+        cursor.beginEditBlock()
+        cursor.setPosition(start)
+        cursor.setPosition(end, QTextCursor.MoveMode.KeepAnchor)
+        cursor.insertText(leading_whitespace)
+        inserted_start: int = cursor.position()
+        cursor.insertText(translated_text.strip())
+        inserted_end: int = cursor.position()
+        cursor.insertText(trailing_whitespace)
+        cursor.endEditBlock()
+
+        cursor.setPosition(inserted_start)
+        cursor.setPosition(inserted_end, QTextCursor.MoveMode.KeepAnchor)
+        self.__translated_edit.setTextCursor(cursor)
+
+        self.__write_back_text()
+
+    def __update_api_translate_button(self) -> None:
+        if self.__get_selected_excerpt() is not None:
+            self.__api_translate_button.setText(
+                self.tr("Translate selected part with API")
+            )
+        else:
+            self.__api_translate_button.setText(self.tr("Translate with API"))
 
     def __replace(self, old: str, new: str) -> None:
         text: str = self.__translated_edit.toPlainText()
@@ -609,6 +766,8 @@ class TranslatorDialog(ExtendedWindow):
                 self.__translated_edit.setPlainText(text)
             finally:
                 self.__loading_string = False
+
+            self.__update_api_translate_button()
 
         with QSignalBlocker(self.__status_dropdown):
             self.__status_dropdown.setCurrentValue(string.string.status)

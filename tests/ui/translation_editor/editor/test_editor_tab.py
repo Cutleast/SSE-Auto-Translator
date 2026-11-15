@@ -7,12 +7,17 @@ from unittest.mock import MagicMock
 
 import pytest
 from cutleast_core_lib.test.utils import Utils
+from PySide6.QtGui import QTextCursor
+from PySide6.QtWidgets import QPlainTextEdit, QPushButton
+from pytest_mock import MockerFixture
 from pytestqt.qtbot import QtBot
 
 from core.database.translation import Translation
 from core.editor.editor import Editor
 from core.editor.models.editor_string import EditorString
 from core.string.string_status import StringStatus
+from core.translator.models.request import TranslationRequest
+from core.translator.models.result import TranslationResult
 from core.translator.service import TranslatorService
 from core.user_data.user_data import UserData
 from tests.base_test import BaseTest
@@ -114,6 +119,62 @@ class TestEditorTab(BaseTest):
         # then
         assert editor_tab.changes_pending
         assert string.string.string == "Geänderter Text"
+        assert string.string.status == StringStatus.TranslationIncomplete
+
+    def test_api_translation_replaces_only_selected_part(
+        self, editor_tab: EditorTab, mocker: MockerFixture
+    ) -> None:
+        """
+        Tests that the API translation button translates only the selected part of the
+        translated text and states this in its text.
+        """
+
+        # given
+        editor: Editor = Utils.get_private_field(editor_tab, *TestEditorTab.EDITOR)
+        dialog: TranslatorDialog = Utils.get_private_field(
+            editor_tab, *TestEditorTab.DIALOG
+        )
+        translated_edit: QPlainTextEdit = Utils.get_private_field(
+            dialog, "translated_edit", QPlainTextEdit
+        )
+        api_translate_button: QPushButton = Utils.get_private_field(
+            dialog, "api_translate_button", QPushButton
+        )
+        translator_service: MagicMock = Utils.get_private_field(
+            editor_tab, "translator_service", MagicMock
+        )
+        translator: MagicMock = translator_service.get_translator.return_value
+        translator.supports_instructions.return_value = False
+        translator.translate.side_effect = lambda request, _: TranslationResult(
+            request=request, translated_text="schönes"
+        )
+        mocker.patch(
+            "ui.translation_editor.editor.editor_tab.ProgressDialog",
+            side_effect=lambda function, _: MagicMock(run=lambda: function(MagicMock())),
+        )
+
+        string: EditorString = editor.all_strings[0]
+        dialog.set_string(string, 0)
+        translated_edit.setPlainText("Ein beautiful Schwert")
+        cursor: QTextCursor = translated_edit.textCursor()
+        cursor.setPosition(3)
+        cursor.setPosition(14, QTextCursor.MoveMode.KeepAnchor)
+        translated_edit.setTextCursor(cursor)
+
+        # when
+        button_text: str = api_translate_button.text()
+        api_translate_button.click()
+
+        # then
+        request: TranslationRequest = translator.translate.call_args.args[0]
+        assert button_text == "Translate selected part with API"
+        assert request.text == "beautiful"
+        assert request.excerpt is not None
+        assert request.excerpt.prefix == "Ein "
+        assert request.excerpt.suffix == " Schwert"
+        assert translated_edit.toPlainText() == "Ein schönes Schwert"
+        assert translated_edit.textCursor().selection().toPlainText() == "schönes"
+        assert string.string.string == "Ein schönes Schwert"
         assert string.string.status == StringStatus.TranslationIncomplete
 
     def test_close_tab(self, editor_tab: EditorTab) -> None:
