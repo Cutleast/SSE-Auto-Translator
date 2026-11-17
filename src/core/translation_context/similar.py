@@ -7,7 +7,6 @@ from typing import Annotated
 
 from pydantic import BaseModel, Field
 
-from core.database.translation import Translation
 from core.string.types import String
 
 
@@ -22,8 +21,8 @@ class SimilarString(BaseModel, frozen=True):
     score: Annotated[float, Field(ge=0.0, le=100.0)]
     """The fuzzy similarity score in percent."""
 
-    translation: Translation
-    """The translation that the string originates from."""
+    translation_name: str
+    """The name of the translation that the string originates from."""
 
     mod_file: Path
     """The mod file that the string originates from."""

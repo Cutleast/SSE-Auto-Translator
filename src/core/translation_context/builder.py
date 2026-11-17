@@ -329,7 +329,7 @@ class ContextBuilder(QObject):
                         SimilarString(
                             string=candidate,
                             score=float(row[candidate_index]),
-                            translation=translation,
+                            translation_name=translation.name,
                             mod_file=mod_file,
                         )
                     )
