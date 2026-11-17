@@ -3237,7 +3237,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="226"/>
+        <location filename="src/core/string/string_extractor.py" line="227"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -146,7 +146,8 @@ class StringExtractor(QObject):
                 modfile_path: Path = tasks[future]
                 try:
                     modfile_strings: StringList = future.result()
-                    result[modfile_path] = modfile_strings
+                    if modfile_strings:
+                        result[modfile_path] = modfile_strings
                 except Exception as ex:
                     self.log.error(
                         f"Failed to process '{modfile_path}': {ex}", exc_info=ex

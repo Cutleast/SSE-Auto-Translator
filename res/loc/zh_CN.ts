@@ -3244,7 +3244,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         <translation>正在从&apos;{0}&apos;提取字符串...</translation>
     </message>
     <message>
-        <location filename="src/core/string/string_extractor.py" line="226"/>
+        <location filename="src/core/string/string_extractor.py" line="227"/>
         <source>Processing &apos;{0}&apos;...</source>
         <translation>正在处理 &apos;{0}&apos;...</translation>
     </message>
