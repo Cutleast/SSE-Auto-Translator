@@ -7,6 +7,7 @@ from unittest.mock import MagicMock
 
 import pytest
 from cutleast_core_lib.test.utils import Utils
+from cutleast_core_lib.ui.utilities.text_edit_history import TextEditHistory
 from PySide6.QtGui import QTextCursor
 from PySide6.QtWidgets import QPlainTextEdit, QPushButton
 from pytest_mock import MockerFixture
@@ -41,6 +42,9 @@ class TestEditorTab(BaseTest):
 
     DIALOG: tuple[str, type[TranslatorDialog]] = "dialog", TranslatorDialog
     """Identifier for accessing the private dialog field."""
+
+    HISTORY: tuple[str, type[TextEditHistory]] = "history", TextEditHistory
+    """Identifier for accessing the private history field of the translator dialog."""
 
     TRANSLATION_NAME: str = "Wet and Cold SE - German"
     """The name of the edited test translation."""
@@ -176,6 +180,130 @@ class TestEditorTab(BaseTest):
         assert translated_edit.textCursor().selection().toPlainText() == "schönes"
         assert string.string.string == "Ein schönes Schwert"
         assert string.string.status == StringStatus.TranslationIncomplete
+
+        # when
+        translated_edit.undo()
+
+        # then
+        assert translated_edit.toPlainText() == "Ein beautiful Schwert"
+
+    def test_api_translation_is_undoable_and_recorded(
+        self, editor_tab: EditorTab, mocker: MockerFixture
+    ) -> None:
+        """
+        Tests that an API translation of the entire string is applied directly, recorded
+        as revision in the edit history and can be undone.
+        """
+
+        # given
+        editor: Editor = Utils.get_private_field(editor_tab, *TestEditorTab.EDITOR)
+        dialog: TranslatorDialog = Utils.get_private_field(
+            editor_tab, *TestEditorTab.DIALOG
+        )
+        history: TextEditHistory = Utils.get_private_field(
+            dialog, *TestEditorTab.HISTORY
+        )
+        translated_edit: QPlainTextEdit = Utils.get_private_field(
+            dialog, "translated_edit", QPlainTextEdit
+        )
+        api_translate_button: QPushButton = Utils.get_private_field(
+            dialog, "api_translate_button", QPushButton
+        )
+        translator_service: MagicMock = Utils.get_private_field(
+            editor_tab, "translator_service", MagicMock
+        )
+        translator: MagicMock = translator_service.get_translator.return_value
+        translator.supports_instructions.return_value = False
+        translator.translate.side_effect = lambda request, _: TranslationResult(
+            request=request, translated_text="Ein schönes Schwert"
+        )
+        mocker.patch(
+            "ui.translation_editor.editor.editor_tab.ProgressDialog",
+            side_effect=lambda function, _: MagicMock(run=lambda: function(MagicMock())),
+        )
+
+        string: EditorString = editor.all_strings[0]
+        dialog.set_string(string, 0)
+        translated_edit.setPlainText("Ein Schwert")
+
+        # when
+        api_translate_button.click()
+
+        # then
+        assert translated_edit.toPlainText() == "Ein schönes Schwert"
+        assert string.string.string == "Ein schönes Schwert"
+        assert string.string.status == StringStatus.TranslationIncomplete
+        assert [revision.text for revision in history.revisions][-2:] == [
+            "Ein Schwert",
+            "Ein schönes Schwert",
+        ]
+
+        # when
+        translated_edit.undo()
+
+        # then
+        assert translated_edit.toPlainText() == "Ein Schwert"
+
+    def test_history_is_cleared_on_string_change(self, editor_tab: EditorTab) -> None:
+        """
+        Tests that the edit history only contains the loaded text after another string
+        was loaded.
+        """
+
+        # given
+        editor: Editor = Utils.get_private_field(editor_tab, *TestEditorTab.EDITOR)
+        dialog: TranslatorDialog = Utils.get_private_field(
+            editor_tab, *TestEditorTab.DIALOG
+        )
+        history: TextEditHistory = Utils.get_private_field(
+            dialog, *TestEditorTab.HISTORY
+        )
+        translated_edit: QPlainTextEdit = Utils.get_private_field(
+            dialog, "translated_edit", QPlainTextEdit
+        )
+        dialog.set_string(editor.all_strings[0], 0)
+        translated_edit.setPlainText("Geänderter Text")
+        history.commit()
+
+        # when
+        dialog.set_string(editor.all_strings[1], 0)
+
+        # then
+        assert [revision.text for revision in history.revisions] == [
+            translated_edit.toPlainText()
+        ]
+
+    def test_reset_is_undoable(self, editor_tab: EditorTab) -> None:
+        """
+        Tests that resetting the current string in the translator dialog can be undone.
+        """
+
+        # given
+        editor: Editor = Utils.get_private_field(editor_tab, *TestEditorTab.EDITOR)
+        dialog: TranslatorDialog = Utils.get_private_field(
+            editor_tab, *TestEditorTab.DIALOG
+        )
+        translated_edit: QPlainTextEdit = Utils.get_private_field(
+            dialog, "translated_edit", QPlainTextEdit
+        )
+        reset_button: QPushButton = Utils.get_private_field(
+            dialog, "reset_button", QPushButton
+        )
+        string: EditorString = editor.all_strings[0]
+        dialog.set_string(string, 0)
+        dialog.text_changed.emit(string, "Geänderter Text", False)
+
+        # when
+        reset_button.click()
+
+        # then
+        assert translated_edit.toPlainText() != "Geänderter Text"
+
+        # when
+        translated_edit.undo()
+
+        # then
+        assert translated_edit.toPlainText() == "Geänderter Text"
 
     def test_close_tab(self, editor_tab: EditorTab) -> None:
         """

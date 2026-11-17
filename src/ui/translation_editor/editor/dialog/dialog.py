@@ -15,6 +15,8 @@ from cutleast_core_lib.core.utilities.typing_utils import (
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.theme.models.theme import Theme
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
+from cutleast_core_lib.ui.utilities.text_edit import replace_text
+from cutleast_core_lib.ui.utilities.text_edit_history import TextEditHistory
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.divider import Divider
 from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
@@ -41,6 +43,7 @@ from PySide6.QtWidgets import (
     QPushButton,
     QSizePolicy,
     QSplitter,
+    QTextEdit,
     QVBoxLayout,
     QWidget,
 )
@@ -160,6 +163,7 @@ class TranslatorDialog(ExtendedWindow):
 
     __original_edit: QPlainTextEdit
     __translated_edit: QPlainTextEdit
+    __history: TextEditHistory
     __placeholders_label: QLabel
 
     __diagnostics_widget: DiagnosticsWidget
@@ -193,9 +197,7 @@ class TranslatorDialog(ExtendedWindow):
         self.__copy_id_button.clicked.connect(self.__copy_id)
         self.__prev_button.clicked.connect(self.prev_requested.emit)
         self.__next_button.clicked.connect(self.next_requested.emit)
-        self.__context_widget.translation_accepted.connect(
-            self.__translated_edit.setPlainText
-        )
+        self.__context_widget.translation_accepted.connect(self.__replace_text)
         self.__context_widget.related_string_activated.connect(
             self.related_string_requested.emit
         )
@@ -346,6 +348,8 @@ class TranslatorDialog(ExtendedWindow):
 
         self.__translated_edit = LineNumberTextEdit()
         text_splitter.addWidget(self.__translated_edit)
+
+        self.__history = TextEditHistory(self.__translated_edit)
 
         WidgetStateManager.get().register_state(
             "translator_dialog_text_splitter", text_splitter
@@ -517,13 +521,13 @@ class TranslatorDialog(ExtendedWindow):
     def __on_api_translate_clicked(self) -> None:
         excerpt: Optional[TranslationExcerpt] = self.__get_selected_excerpt()
 
+        # The translation is compared to the displayed text, so the string must be
+        # up-to-date.
+        self.__write_back_text()
+
         if excerpt is None:
-            self.__cancel_text_write_back()
             self.api_translate_requested.emit(self.__sync_strings_box.isChecked())
             return
-
-        # The excerpt refers to the displayed text, so the string must be up-to-date.
-        self.__write_back_text()
 
         cursor: QTextCursor = self.__translated_edit.textCursor()
         self.__pending_selection = (
@@ -595,12 +599,24 @@ class TranslatorDialog(ExtendedWindow):
 
         return cursor.selection().toPlainText()
 
+    def apply_translated_text(self, translated_text: str) -> None:
+        """
+        Applies a new translated text as an undoable change and writes it back
+        immediately.
+
+        Args:
+            translated_text (str): The new translated text.
+        """
+
+        self.__replace_text(translated_text.strip())
+        self.__write_back_text()
+
     def replace_selected_part(self, translated_text: str) -> None:
         """
         Replaces the part of the translated text, whose translation was requested via
-        `api_translate_selection_requested`, and writes the result back immediately.
-        Whitespace at the borders of the original selection is preserved. The inserted
-        text is selected afterwards.
+        `api_translate_selection_requested`, as an undoable change and writes the result
+        back immediately. Whitespace at the borders of the original selection is
+        preserved. The inserted text is selected afterwards.
 
         Args:
             translated_text (str): The translation of the selected part.
@@ -626,6 +642,7 @@ class TranslatorDialog(ExtendedWindow):
         ]
         trailing_whitespace: str = selected_text[len(selected_text.rstrip()) :]
 
+        self.__history.commit()
         cursor: QTextCursor = self.__translated_edit.textCursor()
         cursor.beginEditBlock()
         cursor.setPosition(start)
@@ -636,6 +653,7 @@ class TranslatorDialog(ExtendedWindow):
         inserted_end: int = cursor.position()
         cursor.insertText(trailing_whitespace)
         cursor.endEditBlock()
+        self.__history.commit()
 
         cursor.setPosition(inserted_start)
         cursor.setPosition(inserted_end, QTextCursor.MoveMode.KeepAnchor)
@@ -658,7 +676,23 @@ class TranslatorDialog(ExtendedWindow):
             return
 
         self.__write_back_text()
-        self.__translated_edit.setPlainText(text.replace(old, new))
+        self.__replace_text(text.replace(old, new))
+
+    def __replace_text(self, text: str) -> None:
+        """
+        Replaces the entire translated text as a single undoable change and records it
+        as an own revision in the edit history.
+
+        Args:
+            text (str): The new translated text.
+        """
+
+        if self.__translated_edit.toPlainText() == text:
+            return
+
+        self.__history.commit()
+        replace_text(self.__translated_edit, text)
+        self.__history.commit()
 
     def __insert_at_cursor(self, text: str) -> None:
         self.__translated_edit.textCursor().insertText(text)
@@ -730,6 +764,7 @@ class TranslatorDialog(ExtendedWindow):
             )
         )
         self.__load_string_values(force_text=True)
+        self.__history.clear()
 
         self.__update_title()
 
@@ -763,7 +798,12 @@ class TranslatorDialog(ExtendedWindow):
         ):
             self.__loading_string = True
             try:
-                self.__translated_edit.setPlainText(text)
+                # Loading another string starts a new undo history while refreshing the
+                # current string must stay undoable.
+                if force_text:
+                    self.__translated_edit.setPlainText(text)
+                else:
+                    self.__replace_text(text)
             finally:
                 self.__loading_string = False
 
@@ -780,28 +820,31 @@ class TranslatorDialog(ExtendedWindow):
             self.__highlight_unknown_words([])
 
     def __highlight_unknown_words(self, words: list[str]) -> None:
-        self.__loading_string = True
+        """
+        Underlines unknown words in the translated text. Extra selections are used
+        instead of character formats as the latter would be part of the undo history.
 
-        try:
-            cursor: QTextCursor = self.__translated_edit.textCursor()
-            cursor.setPosition(0)
+        Args:
+            words (list[str]): The unknown words to highlight.
+        """
 
-            document: QTextDocument = self.__translated_edit.document()
+        document: QTextDocument = self.__translated_edit.document()
+        underline_format = QTextCharFormat()
+        underline_format.setUnderlineColor(Qt.GlobalColor.red)
+        underline_format.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
 
-            cursor.select(QTextCursor.SelectionType.Document)
-            cursor.setCharFormat(QTextCharFormat())  # clear any highlighting
+        selections: list[QTextEdit.ExtraSelection] = []
+        for word in words:
+            cursor = QTextCursor(document)
+            while not (cursor := document.find(word, cursor.position())).isNull():
+                cursor.select(QTextCursor.SelectionType.WordUnderCursor)
 
-            for word in words:
-                cursor.setPosition(0)
-                while not (cursor := document.find(word, cursor.position())).isNull():
-                    cursor.select(QTextCursor.SelectionType.WordUnderCursor)
+                selection = QTextEdit.ExtraSelection()
+                selection.cursor = cursor
+                selection.format = underline_format
+                selections.append(selection)
 
-                    fmt = QTextCharFormat()
-                    fmt.setUnderlineColor(Qt.GlobalColor.red)
-                    fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
-                    cursor.setCharFormat(fmt)
-        finally:
-            self.__loading_string = False
+        self.__translated_edit.setExtraSelections(selections)
 
     def set_context(self, context: TranslationContext) -> None:
         """
