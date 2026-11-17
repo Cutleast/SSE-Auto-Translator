@@ -122,14 +122,15 @@ class TranslationsTab(QWidget):
         self.__toolbar.search_database_requested.connect(self.__search_database)
         self.__toolbar.reload_database_requested.connect(self.__reload_database)
         self.__toolbar.local_import_requested.connect(self.__import_local_translation)
-        self.__toolbar.update_translations_requested.connect(
-            self.__update_translation_database
-        )
+        self.__toolbar.update_translations_requested.connect(self.__update_translations)
 
         self.__translations_widget.edit_translation_requested.connect(
             self.edit_translation_requested.emit
         )
         self.__translations_widget.files_dropped.connect(self.__import_local_translation)
+        self.__translations_widget.update_translations_requested.connect(
+            self.__update_translations
+        )
 
         self.__database.update_signal.connect(self.__update)
         self.__update()
@@ -374,10 +375,16 @@ class TranslationsTab(QWidget):
                 else:
                     raise NoOriginalModFound
 
-    def __update_translation_database(self) -> None:
+    def __update_translations(
+        self, translations: Optional[list[Translation]] = None
+    ) -> None:
         """
         Updates the translation database by updating existing translations and adding
         missing mod files to existing translations.
+
+        Args:
+            translations (Optional[list[Translation]], optional):
+                The translations to update. Defaults to None (all user translations).
         """
 
         thread_num: Optional[int] = (
@@ -388,6 +395,7 @@ class TranslationsTab(QWidget):
 
         scan_result: dict[ModFile, TranslationStatus] = ProgressDialog(
             lambda pdisplay: self.__database_updater.update_database_translations(
+                translations=translations,
                 keep_deleted=self.__app_config.keep_deleted_strings,
                 add_missing_files=self.__app_config.add_missing_modfiles,
                 thread_num=thread_num,

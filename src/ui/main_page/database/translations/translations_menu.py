@@ -34,6 +34,9 @@ class TranslationsMenu(TreeMenu):
     export_translation_requested = Signal()
     """Signal emitted when the user clicks on the export translation action."""
 
+    update_translations_requested = Signal()
+    """Signal emitted when the user clicks on the update translations action."""
+
     delete_translation_requested = Signal()
     """Signal emitted when the user clicks on the delete translation action."""
 
@@ -47,6 +50,7 @@ class TranslationsMenu(TreeMenu):
     __edit_translation_action: QAction
     __rename_translation_action: QAction
     __export_translation_action: QAction
+    __update_translations_action: QAction
     __delete_translation_action: QAction
     __open_modpage_action: QAction
     __open_in_explorer_action: QAction
@@ -67,6 +71,9 @@ class TranslationsMenu(TreeMenu):
         )
         self.__export_translation_action.triggered.connect(
             self.export_translation_requested.emit
+        )
+        self.__update_translations_action.triggered.connect(
+            self.update_translations_requested.emit
         )
         self.__delete_translation_action.triggered.connect(
             self.delete_translation_requested.emit
@@ -106,6 +113,15 @@ class TranslationsMenu(TreeMenu):
             self.__export_translation_action,
             self.__export_translation_action.setIcon,
             "mdi6.share",
+        )
+
+        self.__update_translations_action = self.addAction(
+            self.tr("Update translation from installed mods")
+        )
+        IconProvider.bind_qta_icon(
+            self.__update_translations_action,
+            self.__update_translations_action.setIcon,
+            "mdi6.book-refresh-outline",
         )
 
         self.__delete_translation_action = self.addAction(
@@ -186,6 +202,9 @@ class TranslationsMenu(TreeMenu):
             isinstance(current_item, Translation)
         )
         self.__export_translation_action.setVisible(
+            isinstance(current_item, Translation)
+        )
+        self.__update_translations_action.setVisible(
             isinstance(current_item, Translation)
         )
         self.__delete_translation_action.setVisible(

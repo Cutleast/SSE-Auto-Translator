@@ -200,16 +200,27 @@ class StringUtils:
         translation_map: dict[str, String] = {
             string.id: string for string in translation_strings
         }
+        translation_by_originals: dict[str, str] = {
+            string.original: string.string
+            for string in translation_strings
+            if string.string is not None and string.string != string.original
+        }
 
         changed: bool = False
         for original_string in original_strings:
             translated_string: Optional[String] = translation_map.get(original_string.id)
 
             if translated_string is None:
-                # string is missing -> add it and mark as "translation required"
+                # string is missing -> add it
                 new_string: String = copy(original_string)
-                new_string.status = StringStatus.TranslationRequired
-                new_string.string = new_string.original
+
+                # try to translate it by original text
+                if new_string.original in translation_by_originals:
+                    new_string.string = translation_by_originals[new_string.original]
+                    new_string.status = StringStatus.TranslationIncomplete
+                else:
+                    new_string.status = StringStatus.TranslationRequired
+
                 translation_map[new_string.id] = new_string
                 translation_strings.append(new_string)
                 changed = True
