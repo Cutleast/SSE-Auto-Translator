@@ -282,7 +282,7 @@ You can disable it under Help &gt; Fix Windows Path Limit.</source>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="156"/>
         <location filename="src/ui/settings/app_settings.py" line="380"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
-        <translation>强调色必须是有效的十六进制颜色代码！</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="128"/>
@@ -345,7 +345,7 @@ This feature is considered experimental because a crash might prevent it from un
     <message>
         <location filename="src/ui/settings/app_settings.py" line="154"/>
         <source>Accent color</source>
-        <translation>强调色</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="172"/>
@@ -3810,6 +3810,71 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>TextDiffView</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_diff_view.py" line="57"/>
+        <source>Before</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_diff_view.py" line="60"/>
+        <source>After</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextEditHistory</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/text_edit_history.py" line="92"/>
+        <source>Edit history</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextHistoryDialog</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="74"/>
+        <source>Edit history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="103"/>
+        <source>Compare with previous revision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="109"/>
+        <source>Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="113"/>
+        <source>Close</source>
+        <translation type="unfinished">关闭</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="128"/>
+        <source>(current)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="152"/>
+        <source>Previous revision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="152"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="157"/>
+        <source>Selected revision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="157"/>
+        <source>Current text</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ToastNotifier</name>
     <message>
         <location filename="src/ui/toast_notifier.py" line="35"/>
@@ -4163,43 +4228,43 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="388"/>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="657"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="392"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="670"/>
         <source>Translate with API</source>
         <translation>使用 API 进行翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="319"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="321"/>
         <source>Context</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="333"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="335"/>
         <source>Translation</source>
         <translation type="unfinished">翻译</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="354"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="358"/>
         <source>Diagnostics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="377"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="381"/>
         <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="398"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="402"/>
         <source>Reset string</source>
         <translation>重置字符串</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="408"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="412"/>
         <source>Sync identical strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="420"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="424"/>
         <source>F1: Translation complete
 F2: Translation incomplete
 F3: No translation required
@@ -4207,42 +4272,42 @@ F4: Reset string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="654"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="667"/>
         <source>Translate selected part with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="733"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="762"/>
         <source>Sync identical strings ({count} more)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="428"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="432"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="272"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="274"/>
         <source>Copy ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="291"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="293"/>
         <source>Previous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="304"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="306"/>
         <source>Next</source>
         <translation type="unfinished">下一步</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="436"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="440"/>
         <source>Close</source>
         <translation type="unfinished">关闭</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="707"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="736"/>
         <source>Matching placeholders:</source>
         <translation type="unfinished"></translation>
     </message>

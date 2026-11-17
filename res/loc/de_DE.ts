@@ -3819,6 +3819,71 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
 </context>
 <context>
+    <name>TextDiffView</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_diff_view.py" line="57"/>
+        <source>Before</source>
+        <translation>Vorher</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_diff_view.py" line="60"/>
+        <source>After</source>
+        <translation>Nachher</translation>
+    </message>
+</context>
+<context>
+    <name>TextEditHistory</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/text_edit_history.py" line="92"/>
+        <source>Edit history</source>
+        <translation>Bearbeitungsverlauf</translation>
+    </message>
+</context>
+<context>
+    <name>TextHistoryDialog</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="74"/>
+        <source>Edit history</source>
+        <translation>Bearbeitungsverlauf</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="103"/>
+        <source>Compare with previous revision</source>
+        <translation>Mit vorheriger Revision vergleichen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="109"/>
+        <source>Restore</source>
+        <translation>Wiederherstellen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="113"/>
+        <source>Close</source>
+        <translation>Schließen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="128"/>
+        <source>(current)</source>
+        <translation>(aktuell)</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="152"/>
+        <source>Previous revision</source>
+        <translation>Vorherige Revision</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="152"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="157"/>
+        <source>Selected revision</source>
+        <translation>Ausgewählter Revision</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/text_history_dialog.py" line="157"/>
+        <source>Current text</source>
+        <translation>Aktueller Text</translation>
+    </message>
+</context>
+<context>
     <name>ToastNotifier</name>
     <message>
         <location filename="src/ui/toast_notifier.py" line="35"/>
@@ -4174,43 +4239,43 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="388"/>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="657"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="392"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="670"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="319"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="321"/>
         <source>Context</source>
         <translation>Kontext</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="333"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="335"/>
         <source>Translation</source>
         <translation>Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="354"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="358"/>
         <source>Diagnostics</source>
         <translation>Diagnose</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="377"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="381"/>
         <source>Highlighted placeholders occur a different number of times in the translation than in the original (translation/original).</source>
         <translation>Hervorgehobene Platzhalter kommen in der Übersetzung nicht genauso oft vor wie im Original (Übersetzung/Original).</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="398"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="402"/>
         <source>Reset string</source>
         <translation>String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="408"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="412"/>
         <source>Sync identical strings</source>
         <translation>Identische Strings synchronisieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="420"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="424"/>
         <source>F1: Translation complete
 F2: Translation incomplete
 F3: No translation required
@@ -4221,42 +4286,42 @@ F3: Keine Übersetzung erforderlich
 F4: String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="654"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="667"/>
         <source>Translate selected part with API</source>
         <translation>Markierten Teil mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="733"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="762"/>
         <source>Sync identical strings ({count} more)</source>
         <translation>Identische Strings synchronisieren ({count} weitere)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="428"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="432"/>
         <source>Status</source>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="272"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="274"/>
         <source>Copy ID</source>
         <translation>ID kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="291"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="293"/>
         <source>Previous</source>
         <translation>Zurück</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="304"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="306"/>
         <source>Next</source>
         <translation>Weiter</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="436"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="440"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="707"/>
+        <location filename="src/ui/translation_editor/editor/dialog/dialog.py" line="736"/>
         <source>Matching placeholders:</source>
         <translation>Übereinstimmende Platzhalter:</translation>
     </message>

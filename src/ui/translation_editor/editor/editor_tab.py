@@ -764,12 +764,9 @@ class EditorTab(QWidget):
         if translated_text is None:
             return
 
-        self.__editor.set_translated_text(
-            current_string, translated_text, sync_identical
-        )
-        self.__editor.set_string_status(
-            current_string, StringStatus.TranslationIncomplete, sync_identical
-        )
+        # The dialog applies the translation as an undoable change and writes it back,
+        # which also marks the string as incomplete.
+        self.__dialog.apply_translated_text(translated_text)
 
     def __on_api_translate_selection_requested(
         self, excerpt: TranslationExcerpt, sync_identical: bool
@@ -784,11 +781,9 @@ class EditorTab(QWidget):
         if translated_text is None:
             return
 
-        # The dialog writes the complete text back to the string.
+        # The dialog writes the complete text back, which also marks the string as
+        # incomplete.
         self.__dialog.replace_selected_part(translated_text)
-        self.__editor.set_string_status(
-            current_string, StringStatus.TranslationIncomplete, sync_identical
-        )
 
     def __request_api_translation(
         self, string: EditorString, excerpt: Optional[TranslationExcerpt] = None
