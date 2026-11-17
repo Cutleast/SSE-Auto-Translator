@@ -10,6 +10,7 @@ from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.core.utilities.pydantic_utils import ImmutableValue
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.column_config import TreeItem
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
@@ -78,12 +79,12 @@ class TranslationsWidget(QTreeWidget):
     Context menu.
     """
 
-    __translation_items: dict[Translation, TreeItem[Translation]]
+    __translation_items: ReferenceDict[Translation, TreeItem[Translation]]
     """
     Mapping of loaded translations and their tree items.
     """
 
-    __file_items: dict[Translation, dict[Path, TreeItem[ImmutableValue[Path]]]]
+    __file_items: ReferenceDict[Translation, dict[Path, TreeItem[ImmutableValue[Path]]]]
     """
     Mapping of loaded translations to their file tree items.
     """
@@ -135,9 +136,7 @@ class TranslationsWidget(QTreeWidget):
 
         self.__database.add_signal.connect(self.__on_translations_added)
         self.__database.remove_signal.connect(self.__on_translations_removed)
-        self.__database.rename_signal.connect(
-            lambda translation: self.__translation_items[translation].update()
-        )
+        self.__database.rename_signal.connect(self.__on_translation_renamed)
         self.__database.changed_signal.connect(self.__on_translation_changed)
 
         ThemeManager.get().theme_changed.connect(lambda _: self.__on_theme_changed())
@@ -190,8 +189,8 @@ class TranslationsWidget(QTreeWidget):
         self.scrollToItem(tree_item, QTreeWidget.ScrollHint.PositionAtCenter)
 
     def __load_translations(self) -> None:
-        self.__translation_items = {}
-        self.__file_items = {}
+        self.__translation_items = ReferenceDict()
+        self.__file_items = ReferenceDict()
 
         self.clear()
 
@@ -258,6 +257,10 @@ class TranslationsWidget(QTreeWidget):
             item: QTreeWidgetItem = self.__translation_items.pop(translation)
             self.takeTopLevelItem(self.indexOfTopLevelItem(item))
             self.__file_items.pop(translation, None)
+
+    def __on_translation_renamed(self, translation: Translation) -> None:
+        item: TreeItem[Translation] = self.__translation_items[translation]
+        item.update()
 
     def __on_translation_changed(self, translation: Translation) -> None:
         if translation not in self.__translation_items:
