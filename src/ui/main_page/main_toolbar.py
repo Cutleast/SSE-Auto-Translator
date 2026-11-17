@@ -8,7 +8,7 @@ from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
 from cutleast_core_lib.ui.widgets.menu import Menu
 from cutleast_core_lib.ui.widgets.menu_checkbox import MenuCheckBox
-from PySide6.QtCore import QByteArray, Qt, Signal
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QAction, QActionEvent, QResizeEvent
 from PySide6.QtWidgets import QCheckBox, QToolBar, QToolButton, QWidget, QWidgetAction
 
@@ -234,19 +234,13 @@ class MainToolBar(QToolBar):
         self.addAction(self.__filter_action)
 
         for file_type, checkbox in self.__type_filter_items.items():
-            WidgetStateManager.get().register_custom(
-                f"filter_type_{file_type.name}",
-                lambda c=checkbox: QByteArray(bytes(c.isChecked())),
-                lambda state, c=checkbox: c.setChecked(bool(state.data())),
-                checkbox,
+            WidgetStateManager.get().register_checkbox(
+                f"filter_type_{file_type.name}", checkbox
             )
 
         for status, checkbox in self.__state_filter_items.items():
-            WidgetStateManager.get().register_custom(
-                f"filter_state_{status.name}",
-                lambda c=checkbox: QByteArray(bytes(c.isChecked())),
-                lambda state, c=checkbox: c.setChecked(bool(state.data())),
-                checkbox,
+            WidgetStateManager.get().register_checkbox(
+                f"filter_state_{status.name}", checkbox
             )
 
     def __on_filter_action_triggered(self) -> None:
