@@ -4097,42 +4097,42 @@ Click on &quot;Show details&quot; to view used filter.</source>
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="462"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="465"/>
         <source>Rename translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="463"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="466"/>
         <source>Enter new translation name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="466"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="469"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="467"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="470"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="507"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="510"/>
         <source>Export translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="525"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="528"/>
         <source>Export successful!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="526"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="529"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="537"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="540"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation type="unfinished">
@@ -4142,7 +4142,7 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="544"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="547"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation type="unfinished">
@@ -4152,12 +4152,12 @@ Click on &quot;Show details&quot; to view used filter.</source>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="553"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="556"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="554"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="557"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
