@@ -73,7 +73,7 @@ class ContextWidget(QWidget):
         )
         Source = ColumnConfig[SimilarString](
             title_supplier=lambda: QApplication.translate("ContextWidget", "Source"),
-            display_text_getter=lambda item: item.translation.name,
+            display_text_getter=lambda item: item.translation_name,
             foreground_color_getter=lambda item: item.string.status.get_fg_color(),
             initial_width=150,
         )

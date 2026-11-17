@@ -84,22 +84,22 @@
 <context>
     <name>AlertDetailsWidget</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="96"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="98"/>
         <source>Dismiss alert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="108"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="110"/>
         <source>Details (e.g. traceback)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="122"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="124"/>
         <source>Copy details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="135"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/details_widget.py" line="137"/>
         <source>Additional context</source>
         <translation type="unfinished"></translation>
     </message>
