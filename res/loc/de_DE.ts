@@ -2307,6 +2307,39 @@ Auf &quot;Mehr Details&quot; klicken, um den verwendeten Filter anzusehen.</tran
     </message>
 </context>
 <context>
+    <name>NexusModsApi</name>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="605"/>
+        <source>Failed to get file contents of &apos;{file_name}&apos;</source>
+        <translation>Abruf des Dateiinhalts von &quot;{file_name}&quot; ist fehlgeschlagen.</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="609"/>
+        <source>The file content preview of &apos;{file_name}&apos; from the Nexus Mods mod {mod_id} could not be retrieved. Available translations contained in this file may have been missed.</source>
+        <translation>Die Vorschau des Dateiinhalts von &quot;{file_name}&quot; aus der Nexus Mods-Mod {mod_id} konnte nicht abgerufen werden. Möglicherweise wurden dadurch in dieser Datei enthaltene Übersetzungen übersehen.</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="615"/>
+        <source>Mod id</source>
+        <translation>Mod-ID</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="616"/>
+        <source>File id</source>
+        <translation>File-ID</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="617"/>
+        <source>File name</source>
+        <translation>Dateiname</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="618"/>
+        <source>URL</source>
+        <translation>URL</translation>
+    </message>
+</context>
+<context>
     <name>Page</name>
     <message>
         <location filename="src/ui/startup_dialog/page.py" line="95"/>

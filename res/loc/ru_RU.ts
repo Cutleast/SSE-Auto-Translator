@@ -2292,6 +2292,39 @@ Click on &quot;Show details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>NexusModsApi</name>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="605"/>
+        <source>Failed to get file contents of &apos;{file_name}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="609"/>
+        <source>The file content preview of &apos;{file_name}&apos; from the Nexus Mods mod {mod_id} could not be retrieved. Available translations contained in this file may have been missed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="615"/>
+        <source>Mod id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="616"/>
+        <source>File id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="617"/>
+        <source>File name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/nm_api/nm_api.py" line="618"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page</name>
     <message>
         <location filename="src/ui/startup_dialog/page.py" line="95"/>

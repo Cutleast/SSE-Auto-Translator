@@ -19,8 +19,11 @@ import jstyleson as json
 import requests as req
 import websocket
 from curl_cffi import requests as curl_requests
+from cutleast_core_lib.core.alerts.alert import Alert
+from cutleast_core_lib.core.alerts.manager import AlertManager
 from cutleast_core_lib.core.cache.cache import Cache
 from cutleast_core_lib.core.filesystem.utils import norm
+from cutleast_core_lib.core.utilities.exceptions import format_exception
 from pydantic import BaseModel, ValidationError
 
 from core.translation_provider.nm_api.models.file_manifest import FileManifest
@@ -542,7 +545,22 @@ class NexusModsApi(ProviderApi):
         path = f"games/{game_id}/mods/{mod_id}/files.json?category=main%2Cupdate%2Coptional%2Cold_version%2Cmiscellaneous"
         return self.__request_with_model(path, NmFiles)
 
-    def __get_file_contents(self, url: str) -> Optional[list[str]]:
+    def __get_file_contents(self, mod_id: int, mod_file: NmFile) -> Optional[list[str]]:
+        """
+        Requests the content preview of the specified mod file and extracts the paths of
+        the files contained in it.
+
+        Args:
+            mod_id (int): Nexus Mods id of the mod the file belongs to.
+            mod_file (NmFile): Mod file whose content preview to request.
+
+        Returns:
+            Optional[list[str]]:
+                The normalized paths of the contained files or None if the content
+                preview is not available or could not be processed.
+        """
+
+        url: str = mod_file.content_preview_link
         res: req.Response
         try:
             old_content_url_match: Optional[re.Match[str]] = (
@@ -581,6 +599,26 @@ class NexusModsApi(ProviderApi):
         except Exception as ex:
             self.log.error(f"Failed to get file contents: {ex}", exc_info=ex)
             self.log.debug(f"Request URL: {url}")
+            AlertManager.get().add_alert(
+                Alert(
+                    severity=Alert.Severity.Warning,
+                    title=self.tr("Failed to get file contents of '{file_name}'").format(
+                        file_name=mod_file.file_name
+                    ),
+                    summary=self.tr(
+                        "The file content preview of '{file_name}' from the Nexus Mods "
+                        "mod {mod_id} could not be retrieved. Available translations "
+                        "contained in this file may have been missed."
+                    ).format(file_name=mod_file.file_name, mod_id=mod_id),
+                    details=format_exception(ex),
+                    context={
+                        self.tr("Mod id"): str(mod_id),
+                        self.tr("File id"): str(mod_file.file_id),
+                        self.tr("File name"): mod_file.file_name,
+                        self.tr("URL"): url,
+                    },
+                )
+            )
             return None
 
     def __scan_mod_for_filename(
@@ -604,11 +642,9 @@ class NexusModsApi(ProviderApi):
                     )
                     continue
 
-                futures[
-                    executor.submit(
-                        self.__get_file_contents, mod_file.content_preview_link
-                    )
-                ] = mod_file
+                futures[executor.submit(self.__get_file_contents, mod_id, mod_file)] = (
+                    mod_file
+                )
 
             for future in as_completed(futures):
                 mod_file: NmFile = futures[future]
