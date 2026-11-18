@@ -107,17 +107,17 @@
 <context>
     <name>AlertWidget</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="195"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="196"/>
         <source>Here you can find all notices, warnings and errors that occured in batch or background operations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="144"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="145"/>
         <source>Current alerts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="156"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="157"/>
         <source>Number of alerts</source>
         <translation type="unfinished"></translation>
     </message>
@@ -125,17 +125,17 @@
 <context>
     <name>AlertWidget.Columns</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="51"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="52"/>
         <source>Timestamp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="59"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="60"/>
         <source>Severity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="73"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/alerts/widget.py" line="74"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
